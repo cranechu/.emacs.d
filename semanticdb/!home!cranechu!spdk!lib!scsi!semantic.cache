@@ -1,0 +1,24 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "scsi_bdev.c"
+      :pointmax 201
+      :fsize 50583
+      :lastmodtime '(22711 54335 43217 933000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "task.c"
+      :pointmax 201
+      :fsize 6452
+      :lastmodtime '(22711 54335 43217 933000)
+      :unmatched-syntax nil))
+  :file "!home!cranechu!spdk!lib!scsi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

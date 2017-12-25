@@ -1,0 +1,6 @@
+/root/.emacs
+/root/#.emacs#
+/root/spdk/lib/log/log.c
+/root/spdk/lib/log/#log.c#
+/root/spdk/Makefile
+/root/spdk/#Makefile#

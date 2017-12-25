@@ -1,0 +1,873 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_RTE_RING_H_" variable (:constant-flag t) nil [3279 3291])
+            ("rte_ring_dequeue_burst" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35428 35447])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [35448 35465])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [35468 35483])
+                    ("available" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [35484 35508]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [35351 35620])
+            ("rte_ring_sc_dequeue_burst" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34528 34547])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [34548 34565])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [34568 34583])
+                    ("available" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [34584 34608]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [34448 34708])
+            ("rte_ring_mc_dequeue_burst" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33656 33675])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [33676 33693])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [33696 33711])
+                    ("available" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [33712 33736]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [33576 33836])
+            ("rte_ring_enqueue_burst" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32666 32685])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [32686 32710])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [32719 32734])
+                    ("free_space" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [32735 32760]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [32589 32868])
+            ("rte_ring_sp_enqueue_burst" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31791 31810])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [31811 31835])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [31840 31855])
+                    ("free_space" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [31856 31881]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [31711 31982])
+            ("rte_ring_mp_enqueue_burst" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31056 31075])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [31076 31100])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [31105 31120])
+                    ("free_space" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [31121 31146]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [30976 31247])
+            ("rte_ring_lookup" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rte_ring" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30397 30414]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [30364 30415])
+            ("rte_ring_list_dump" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30057 30065]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [30033 30066])
+            ("rte_ring_get_size" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29879 29904]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [29834 29925])
+            ("rte_ring_free_count" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29519 29544]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [29476 29667])
+            ("rte_ring_count" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29165 29190]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [29127 29309])
+            ("rte_ring_empty" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28833 28858]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [28800 28970])
+            ("rte_ring_full" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28481 28506]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [28449 28636])
+            ("rte_ring_dequeue" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28187 28206])
+                    ("obj_p" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28207 28220]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [28121 28288])
+            ("rte_ring_sc_dequeue" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27528 27547])
+                    ("obj_p" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27548 27561]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [27459 27633])
+            ("rte_ring_mc_dequeue" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27010 27029])
+                    ("obj_p" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27030 27043]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [26941 27116])
+            ("rte_ring_dequeue_bulk" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26318 26337])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [26338 26355])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [26356 26371])
+                    ("available" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [26374 26398]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [26238 26503])
+            ("rte_ring_sc_dequeue_bulk" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25425 25444])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [25445 25462])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [25465 25480])
+                    ("available" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [25481 25505]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [25342 25602])
+            ("rte_ring_mc_dequeue_bulk" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24643 24662])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24663 24680])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [24683 24698])
+                    ("available" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [24699 24723]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [24560 24820])
+            ("rte_ring_enqueue" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23877 23896])
+                    ("obj" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23897 23907]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [23811 23975])
+            ("rte_ring_sp_enqueue" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23258 23277])
+                    ("obj" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23278 23288]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [23189 23359])
+            ("rte_ring_mp_enqueue" function
+               (:type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22781 22800])
+                    ("obj" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22801 22811]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [22712 22882])
+            ("rte_ring_enqueue_bulk" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22111 22130])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22131 22155])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [22164 22179])
+                    ("free_space" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [22180 22205]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [22031 22310])
+            ("rte_ring_sp_enqueue_bulk" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21230 21249])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21250 21274])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [21279 21294])
+                    ("free_space" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [21295 21320]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [21147 21418])
+            ("rte_ring_mp_enqueue_bulk" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20489 20508])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20509 20533])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [20538 20553])
+                    ("free_space" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [20554 20579]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [20406 20677])
+            ("__rte_ring_do_dequeue" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19334 19353])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19354 19371])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [19375 19390])
+                    ("behavior" variable (:type ("rte_ring_queue_behavior" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [19391 19429])
+                    ("is_sc" variable (:type "int") (reparse-symbol arg-sub-list) [19433 19443])
+                    ("available" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [19444 19468]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [19254 19839])
+            ("__rte_ring_move_cons_head" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17538 17557])
+                    ("is_sc" variable (:type "int") (reparse-symbol arg-sub-list) [17558 17568])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [17571 17586])
+                    ("behavior" variable (:type ("rte_ring_queue_behavior" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [17587 17625])
+                    ("old_head" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17628 17647])
+                    ("new_head" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17648 17667])
+                    ("entries" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17670 17688]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [17454 18519])
+            ("__rte_ring_do_enqueue" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16054 16073])
+                    ("obj_table" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16074 16098])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [16102 16117])
+                    ("behavior" variable (:type ("rte_ring_queue_behavior" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [16118 16156])
+                    ("is_sp" variable (:type "int") (reparse-symbol arg-sub-list) [16160 16170])
+                    ("free_space" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [16171 16196]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [15974 16583])
+            ("__rte_ring_move_prod_head" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14216 14235])
+                    ("is_sp" variable (:type "int") (reparse-symbol arg-sub-list) [14236 14246])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14249 14264])
+                    ("behavior" variable (:type ("rte_ring_queue_behavior" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [14265 14303])
+                    ("old_head" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14306 14325])
+                    ("new_head" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14326 14345])
+                    ("free_entries" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14348 14371]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [14132 15234])
+            ("update_tail" function
+               (:type "void"
+                :arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("rte_ring_headtail" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12956 12985])
+                    ("old_val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12986 13003])
+                    ("new_val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13004 13021])
+                    ("single" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13024 13040]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [12894 13257])
+            ("DEQUEUE_PTRS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [12075 12087])
+            ("ENQUEUE_PTRS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [11088 11100])
+            ("rte_ring_dump" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10895 10903])
+                    ("r" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10904 10929]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10876 10930])
+            ("rte_ring_free" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10703 10722]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10684 10723])
+            ("rte_ring_create" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("rte_ring" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10528 10545])
+                    ("count" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10546 10561])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [10567 10581])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10582 10597]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10495 10598])
+            ("rte_ring_init" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rte_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8634 8653])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8654 8671])
+                    ("count" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8672 8687])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8689 8704]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8616 8705])
+            ("rte_ring_get_memsize" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("count" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7227 7242]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7198 7243])
+            ("__IS_MC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6664 6671])
+            ("__IS_SC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6646 6653])
+            ("__IS_MP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6628 6635])
+            ("__IS_SP" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6610 6617])
+            ("RTE_RING_SZ_MASK" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6461 6477])
+            ("RING_F_SC_DEQ" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6382 6395])
+            ("RING_F_SP_ENQ" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6303 6316])
+            ("rte_ring" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("__rte_cache_aligned" variable (:type "int") (reparse-symbol classsubparts) [5811 5831])
+                    ("flags" variable (:type "int") (reparse-symbol classsubparts) [5859 5869])
+                    ("memzone" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_memzone" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5921 5955])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6009 6023])
+                    ("mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6057 6071])
+                    ("__rte_aligned" function
+                       (:prototype-flag t
+                        :type ("prod" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6170 6201])
+                    ("__rte_aligned" function
+                       (:prototype-flag t
+                        :type ("cons" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6259 6290]))                  )
+                (reparse-symbol extern-c-contents) [5581 6293])
+            ("rte_ring_headtail" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("head" variable
+                       (:typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4967 4990])
+                    ("tail" variable
+                       (:typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5021 5044])
+                    ("single" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5075 5091]))                  )
+                (reparse-symbol extern-c-contents) [4939 5135])
+            ("CONS_ALIGN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4740 4750])
+            ("PROD_ALIGN" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4695 4705])
+            ("rte_memzone" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :prototype t)
+                (reparse-symbol extern-c-contents) [4578 4597])
+            ("RTE_RING_NAMESIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4495 4512])
+            ("RTE_RING_MZ_PREFIX" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4419 4437])
+            ("rte_ring_queue_behavior" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("RTE_RING_QUEUE_FIXED" variable
+                       (:constant-flag t
+                        :default-value (4277 4278)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4254 4278])
+                    ("RTE_RING_QUEUE_VARIABLE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4331 4408]))                  )
+                (reparse-symbol extern-c-contents) [4222 4409])
+            ("RTE_TAILQ_RING_NAME" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4190 4209])
+            ("rte_memzone.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4156 4180])
+            ("rte_branch_prediction.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4121 4155])
+            ("rte_atomic.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4097 4120])
+            ("rte_lcore.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4074 4096])
+            ("rte_memory.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4050 4073])
+            ("rte_common.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4026 4049])
+            ("errno.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [4007 4025])
+            ("sys/queue.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3984 4006])
+            ("stdint.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3964 3983])
+            ("stdio.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3945 3963]))          
+      :file "rte_ring.h"
+      :pointmax 35677
+      :fsize 35676
+      :lastmodtime '(22857 53585 575049 102000)
+      :unmatched-syntax '((semantic-list "(RTE_CACHE_LINE_SIZE * 2)" 6278 . 6288) (symbol 6241 . 6258) (STRUCT 6234 . 6240) (semantic-list "(RTE_CACHE_LINE_SIZE * 2)" 6189 . 6199) (symbol 6152 . 6169) (STRUCT 6145 . 6151) (semantic-list 5788 . 5810) (symbol 5784 . 5788) (CHAR 5779 . 5783))
+      :lexical-table 
+        '(("RTE_TAILQ_RING_NAME" . ((string "\"RTE_RING\"" 4210 . 4220)))
+          ("RTE_RING_NAMESIZE" . ((semantic-list "(RTE_MEMZONE_NAMESIZE - \\
+			   sizeof(RTE_RING_MZ_PREFIX) + 1)" 4513 . 4576)))
+          ("RING_F_SC_DEQ" . ((number "0x0002" 6396 . 6402)))
+          ("__IS_MP" . ((number "0" 6636 . 6637)))
+          ("__IS_MC" . ((number "0" 6672 . 6673)))
+          ("RTE_RING_SZ_MASK" . ((semantic-list "(unsigned)" 6479 . 6489) (semantic-list "(0x0fffffff)" 6489 . 6501)))
+          ("RTE_RING_MZ_PREFIX" . ((string "\"RG_\"" 4438 . 4443)))
+          ("__IS_SP" . ((number "1" 6618 . 6619)))
+          ("__IS_SC" . ((number "1" 6654 . 6655)))
+          ("ENQUEUE_PTRS" (spp-arg-list ("r" "ring_start" "prod_head" "obj_table" "n" "obj_type") 11100 . 11150) . 
+              ((DO "do" 11151 . 11153) (semantic-list "{ \\
+	unsigned int i; \\
+	const uint32_t size = (r)->size; \\
+	uint32_t idx = prod_head & (r)->mask; \\
+	obj_type *ring = (obj_type *)ring_start; \\
+	if (likely(idx + n < size)) { \\
+		for (i = 0; i < (n & ((~(unsigned)0x3))); i+=4, idx+=4) { \\
+			ring[idx] = obj_table[i]; \\
+			ring[idx+1] = obj_table[i+1]; \\
+			ring[idx+2] = obj_table[i+2]; \\
+			ring[idx+3] = obj_table[i+3]; \\
+		} \\
+		switch (n & 0x3) { \\
+		case 3: \\
+			ring[idx++] = obj_table[i++]; /* fallthrough */ \\
+		case 2: \\
+			ring[idx++] = obj_table[i++]; /* fallthrough */ \\
+		case 1: \\
+			ring[idx++] = obj_table[i++]; \\
+		} \\
+	} else { \\
+		for (i = 0; idx < size; i++, idx++)\\
+			ring[idx] = obj_table[i]; \\
+		for (idx = 0; i < n; i++, idx++) \\
+			ring[idx] = obj_table[i]; \\
+	} \\
+}" 11154 . 11897) (WHILE "while" 11898 . 11903) (semantic-list "(0)" 11904 . 11907)))
+          ("CONS_ALIGN" . ((semantic-list "(RTE_CACHE_LINE_SIZE * 2)" 4751 . 4776)))
+          ("RING_F_SP_ENQ" . ((number "0x0001" 6317 . 6323)))
+          ("_RTE_RING_H_")
+          ("DEQUEUE_PTRS" (spp-arg-list ("r" "ring_start" "cons_head" "obj_table" "n" "obj_type") 12087 . 12137) . 
+              ((DO "do" 12138 . 12140) (semantic-list "{ \\
+	unsigned int i; \\
+	uint32_t idx = cons_head & (r)->mask; \\
+	const uint32_t size = (r)->size; \\
+	obj_type *ring = (obj_type *)ring_start; \\
+	if (likely(idx + n < size)) { \\
+		for (i = 0; i < (n & (~(unsigned)0x3)); i+=4, idx+=4) {\\
+			obj_table[i] = ring[idx]; \\
+			obj_table[i+1] = ring[idx+1]; \\
+			obj_table[i+2] = ring[idx+2]; \\
+			obj_table[i+3] = ring[idx+3]; \\
+		} \\
+		switch (n & 0x3) { \\
+		case 3: \\
+			obj_table[i++] = ring[idx++]; /* fallthrough */ \\
+		case 2: \\
+			obj_table[i++] = ring[idx++]; /* fallthrough */ \\
+		case 1: \\
+			obj_table[i++] = ring[idx++]; \\
+		} \\
+	} else { \\
+		for (i = 0; idx < size; i++, idx++) \\
+			obj_table[i] = ring[idx]; \\
+		for (idx = 0; i < n; i++, idx++) \\
+			obj_table[i] = ring[idx]; \\
+	} \\
+}" 12141 . 12882) (WHILE "while" 12883 . 12888) (semantic-list "(0)" 12889 . 12892)))
+          ("PROD_ALIGN" . ((semantic-list "(RTE_CACHE_LINE_SIZE * 2)" 4706 . 4731)))
+          )
+))
+  :file "!root!spdk!dpdk!lib!librte_ring!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

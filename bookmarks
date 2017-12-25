@@ -1,0 +1,25 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("pci.c"
+ (filename . "~/spdk/lib/env_sim/pci.c")
+ (front-context-string . "	*size = (uint64")
+ (rear-context-string . "bar].phys_addr;\n")
+ (position . 5183))
+("nvme_init_controllers"
+ (filename . "~/spdk/lib/nvme/nvme.c")
+ (front-context-string . "		TAILQ_FOREACH_")
+ (rear-context-string . "init_ctrlrs)) {\n")
+ (position . 9324))
+("nvme.c"
+ (filename . "~/spdk/lib/nvme/nvme.c")
+ (front-context-string . "nvme_init_contro")
+ (rear-context-string . ";\n}\n\nstatic int\n")
+ (position . 8996))
+("hello_world.c"
+ (filename . "~/spdk/examples/nvme/hello_world/hello_world.c")
+ (front-context-string . "dk_nvme_probe(NU")
+ (rear-context-string . "h.\n	 */\n	rc = sp")
+ (position . 11093))
+)

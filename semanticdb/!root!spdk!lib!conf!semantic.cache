@@ -1,0 +1,555 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1731 1755])
+            ("spdk/conf.h" include nil nil [1757 1779])
+            ("spdk/string.h" include nil nil [1780 1804])
+            ("spdk/log.h" include nil nil [1805 1826])
+            ("spdk_conf_value" type
+               (:members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("spdk_conf_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1854 1883])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1885 1897]))                  
+                :type "struct")
+                nil [1828 1900])
+            ("spdk_conf_item" type
+               (:members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("spdk_conf_item" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1927 1955])
+                    ("key" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1957 1967])
+                    ("val" variable
+                       (:pointer 1
+                        :type ("spdk_conf_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1969 1997]))                  
+                :type "struct")
+                nil [1902 2000])
+            ("spdk_conf_section" type
+               (:members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2030 2061])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2063 2074])
+                    ("num" variable (:type "int") (reparse-symbol classsubparts) [2076 2084])
+                    ("item" variable
+                       (:pointer 1
+                        :type ("spdk_conf_item" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2086 2114]))                  
+                :type "struct")
+                nil [2002 2117])
+            ("spdk_conf" type
+               (:members 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2139 2150])
+                    ("current_section" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2152 2194])
+                    ("section" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2196 2230]))                  
+                :type "struct")
+                nil [2119 2233])
+            ("CF_DELIM" variable (:constant-flag t) nil [2243 2251])
+            ("LIB_MAX_TMPBUF" variable (:constant-flag t) nil [2267 2281])
+            ("default_config" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("spdk_conf" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2288 2335])
+            ("spdk_conf_allocate" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2375 2380]))                  
+                :type ("spdk_conf" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2337 2429])
+            ("free_conf_value" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2459 2486]))                  
+                :type "void")
+                nil [2431 2575])
+            ("free_all_conf_value" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("vp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2609 2636]))                  
+                :type "void")
+                nil [2577 2785])
+            ("free_conf_item" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ip" variable
+                       (:pointer 1
+                        :type ("spdk_conf_item" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2814 2840]))                  
+                :type "void")
+                nil [2787 2993])
+            ("free_all_conf_item" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ip" variable
+                       (:pointer 1
+                        :type ("spdk_conf_item" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3026 3052]))                  
+                :type "void")
+                nil [2995 3199])
+            ("free_conf_section" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3231 3260]))                  
+                :type "void")
+                nil [3201 3400])
+            ("free_all_conf_section" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3436 3465]))                  
+                :type "void")
+                nil [3402 3618])
+            ("spdk_conf_free" function
+               (:arguments 
+                  ( ("cp" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3640 3661]))                  
+                :type "void")
+                nil [3620 3826])
+            ("allocate_cf_section" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3882 3887]))                  
+                :type ("spdk_conf_section" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3828 3944])
+            ("allocate_cf_item" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3994 3999]))                  
+                :type ("spdk_conf_item" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3946 4053])
+            ("allocate_cf_value" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4105 4110]))                  
+                :type ("spdk_conf_value" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4055 4165])
+            ("CHECK_CP_OR_USE_DEFAULT" variable (:constant-flag t) nil [4176 4199])
+            ("spdk_conf_find_section" function
+               (:pointer 1
+                :arguments 
+                  ( ("cp" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4324 4345])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4346 4363]))                  
+                :type ("spdk_conf_section" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4274 4713])
+            ("spdk_conf_first_section" function
+               (:pointer 1
+                :arguments 
+                  ( ("cp" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4766 4787]))                  
+                :type ("spdk_conf_section" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4715 4885])
+            ("spdk_conf_next_section" function
+               (:pointer 1
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4937 4966]))                  
+                :type ("spdk_conf_section" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4887 5026])
+            ("append_cf_section" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cp" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5058 5079])
+                    ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5080 5109]))                  
+                :type "void")
+                nil [5028 5395])
+            ("find_cf_nitem" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5442 5471])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5472 5488])
+                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [5489 5497]))                  
+                :type ("spdk_conf_item" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5397 5810])
+            ("append_cf_item" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5839 5868])
+                    ("ip" variable
+                       (:pointer 1
+                        :type ("spdk_conf_item" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5869 5895]))                  
+                :type "void")
+                nil [5812 6103])
+            ("append_cf_value" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ip" variable
+                       (:pointer 1
+                        :type ("spdk_conf_item" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6133 6159])
+                    ("vp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_value" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6160 6187]))                  
+                :type "void")
+                nil [6105 6393])
+            ("spdk_conf_section_match_prefix" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6431 6466])
+                    ("name_prefix" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6467 6491]))                  
+                :type "bool")
+                nil [6395 6565])
+            ("spdk_conf_section_get_name" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6607 6642]))                  
+                :type "char")
+                nil [6567 6664])
+            ("spdk_conf_section_get_num" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6696 6731]))                  
+                :type "int")
+                nil [6666 6752])
+            ("spdk_conf_section_get_nmval" function
+               (:pointer 1
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6789 6818])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6819 6835])
+                    ("idx1" variable (:type "int") (reparse-symbol arg-sub-list) [6836 6845])
+                    ("idx2" variable (:type "int") (reparse-symbol arg-sub-list) [6846 6855]))                  
+                :type "char")
+                nil [6754 7161])
+            ("spdk_conf_section_get_nval" function
+               (:pointer 1
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7197 7226])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7227 7243])
+                    ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [7244 7252]))                  
+                :type "char")
+                nil [7163 7459])
+            ("spdk_conf_section_get_val" function
+               (:pointer 1
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7494 7523])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7524 7540]))                  
+                :type "char")
+                nil [7461 7592])
+            ("spdk_conf_section_get_intval" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7627 7656])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7657 7673]))                  
+                :type "int")
+                nil [7594 7836])
+            ("spdk_conf_section_get_boolval" function
+               (:arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7873 7902])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7903 7919])
+                    ("default_val" variable (:type "bool") (reparse-symbol arg-sub-list) [7920 7937]))                  
+                :type "bool")
+                nil [7838 8265])
+            ("parse_line" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cp" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8289 8310])
+                    ("lp" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8311 8320]))                  
+                :type "int")
+                nil [8267 10073])
+            ("fgets_line" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10100 10109]))                  
+                :type "char")
+                nil [10075 10896])
+            ("spdk_conf_read" function
+               (:arguments 
+                  ( ("cp" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10917 10938])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10939 10956]))                  
+                :type "int")
+                nil [10898 12227])
+            ("spdk_conf_set_as_default" function
+               (:arguments 
+                  ( ("cp" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12259 12280]))                  
+                :type "void")
+                nil [12229 12306]))          
+      :file "conf.c"
+      :pointmax 12307
+      :fsize 12306
+      :lastmodtime '(22910 40989 217425 843000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CF_DELIM" . ((string "\" \\t\"" 2252 . 2257)))
+          ("LIB_MAX_TMPBUF" . ((number "1024" 2282 . 2286)))
+          ("CHECK_CP_OR_USE_DEFAULT" (spp-arg-list ("cp") 4199 . 4203) . 
+              ((semantic-list "(((cp) == NULL) && (default_config != NULL))" 4204 . 4248) (punctuation "?" 4249 . 4250) (symbol "default_config" 4251 . 4265) (punctuation ":" 4266 . 4267) (semantic-list "(cp)" 4268 . 4272)))
+          )
+))
+  :file "!root!spdk!lib!conf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

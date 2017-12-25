@@ -1,0 +1,36 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("__STDC_FORMAT_MACROS" variable (:constant-flag t) nil [558 578])
+            ("cstdio" include (:system-flag t) nil [602 619])
+            ("main" function (:type "int") nil [620 713]))          
+      :file "db_bench.cc"
+      :pointmax 852
+      :fsize 851
+      :lastmodtime '(22857 53510 288076 837000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__STDC_FORMAT_MACROS")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("__STDC_FORMAT_MACROS" variable (:constant-flag t) nil [558 578]))          
+      :file "db_bench_tool.cc"
+      :pointmax 178065
+      :fsize 178064
+      :lastmodtime '(22857 53510 289076 842000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__STDC_FORMAT_MACROS")
+          )
+))
+  :file "!root!rocksdb!tools!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

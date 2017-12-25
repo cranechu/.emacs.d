@@ -1,0 +1,345 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk_internal/copy_engine.h" include nil nil [1691 1729])
+            ("spdk/env.h" include nil nil [1731 1752])
+            ("spdk/log.h" include nil nil [1753 1774])
+            ("spdk/io_channel.h" include nil nil [1775 1803])
+            ("g_max_copy_module_size" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1805 1846])
+            ("hw_copy_engine" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("spdk_copy_engine" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1848 1902])
+            ("mem_copy_engine" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("spdk_copy_engine" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1936 1991])
+            ("spdk_copy_module_list" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(spdk_copy_module_list)"
+                :type "int")
+                nil [2027 2098])
+            ("copy_io_channel" type
+               (:members 
+                  ( ("engine" variable
+                       (:pointer 1
+                        :type ("spdk_copy_engine" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2126 2158])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2160 2187]))                  
+                :type "struct")
+                nil [2100 2190])
+            ("spdk_copy_engine_register" function
+               (:arguments 
+                  ( ("copy_engine" variable
+                       (:pointer 1
+                        :type ("spdk_copy_engine" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2223 2260]))                  
+                :type "void")
+                nil [2192 2328])
+            ("spdk_memcpy_register" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("copy_engine" variable
+                       (:pointer 1
+                        :type ("spdk_copy_engine" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2363 2400]))                  
+                :type "void")
+                nil [2330 2470])
+            ("copy_engine_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ref" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2501 2511])
+                    ("status" variable (:type "int") (reparse-symbol arg-sub-list) [2512 2523]))                  
+                :type "void")
+                nil [2472 2611])
+            ("spdk_copy_submit" function
+               (:arguments 
+                  ( ("copy_req" variable
+                       (:pointer 1
+                        :type ("spdk_copy_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2638 2670])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2671 2698])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2702 2712])
+                    ("src" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2713 2723])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2724 2740])
+                    ("cb" variable (:type ("spdk_copy_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2741 2768]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [2613 2999])
+            ("spdk_copy_submit_fill" function
+               (:arguments 
+                  ( ("copy_req" variable
+                       (:pointer 1
+                        :type ("spdk_copy_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3031 3063])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3064 3091])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3100 3110])
+                    ("fill" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3111 3124])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3125 3141])
+                    ("cb" variable (:type ("spdk_copy_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3142 3169]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [3001 3401])
+            ("mem_copy_submit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3467 3480])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3481 3508])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3509 3519])
+                    ("src" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3520 3530])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3531 3547])
+                    ("cb" variable (:type ("spdk_copy_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3550 3577]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [3436 3801])
+            ("mem_copy_fill" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3832 3845])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3846 3873])
+                    ("dst" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3874 3884])
+                    ("fill" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3885 3898])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3899 3915])
+                    ("cb" variable (:type ("spdk_copy_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3923 3950]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [3803 4167])
+            ("mem_get_io_channel" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4219 4224]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4169 4225])
+            ("memcpy_copy_engine" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.copy		= mem_copy_submit,
+	.fill		= mem_copy_fill,
+	.get_io_channel	= mem_get_io_channel,
+}"
+                :type ("spdk_copy_engine" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4227 4374])
+            ("memcpy_create_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4404 4420])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4421 4435]))                  
+                :type "int")
+                nil [4376 4450])
+            ("memcpy_destroy_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4482 4498])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4499 4513]))                  
+                :type "void")
+                nil [4452 4517])
+            ("mem_get_io_channel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4569 4574]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4519 4628])
+            ("copy_engine_mem_get_ctx_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4673 4678]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [4630 4721])
+            ("spdk_copy_task_size" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4750 4755]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [4723 4791])
+            ("spdk_copy_module_list_add" function
+               (:arguments 
+                  ( ("copy_module" variable
+                       (:pointer 1
+                        :type ("spdk_copy_module_if" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4824 4864]))                  
+                :type "void")
+                nil [4793 5081])
+            ("copy_create_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5109 5125])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5126 5140]))                  
+                :type "int")
+                nil [5083 5484])
+            ("copy_destroy_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5514 5530])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5531 5545]))                  
+                :type "void")
+                nil [5486 5629])
+            ("spdk_copy_engine_get_io_channel" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5688 5693]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5631 5750])
+            ("copy_engine_mem_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5784 5789]))                  
+                :type "int")
+                nil [5752 5936])
+            ("spdk_copy_engine_module_initialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5985 5990]))                  
+                :type "void")
+                nil [5938 6152])
+            ("spdk_copy_engine_module_finish" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6197 6202]))                  
+                :type "void")
+                nil [6154 6404])
+            ("spdk_copy_engine_initialize" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6438 6443]))                  
+                :type "int")
+                nil [6406 6753])
+            ("spdk_copy_engine_finish" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6783 6788]))                  
+                :type "int")
+                nil [6755 6838]))          
+      :file "copy_engine.c"
+      :pointmax 6930
+      :fsize 6929
+      :lastmodtime '(22925 57199 694694 491000)
+      :unmatched-syntax '((semantic-list 6865 . 6929) (symbol 6840 . 6865) (semantic-list 2003 . 2026) (symbol 1993 . 2003))))
+  :file "!root!spdk!lib!copy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,347 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/log.h" include nil nil [1691 1712])
+            ("spdk/nvme.h" include nil nil [1713 1735])
+            ("spdk/env.h" include nil nil [1736 1757])
+            ("MAX_DEVS" variable (:constant-flag t) nil [1767 1775])
+            ("dev" type
+               (:members 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1794 1827])
+                    ("health_page" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_health_information_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1829 1883])
+                    ("orig_temp_threshold" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1885 1918])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1920 1966]))                  
+                :type "struct")
+                nil [1780 1969])
+            ("get_feature_test" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2000 2016]))                  
+                :type "void")
+                nil [1971 2017])
+            ("devs" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2019 2052])
+            ("num_devs" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [2053 2077])
+            ("foreach_dev" variable (:constant-flag t) nil [2087 2098])
+            ("outstanding_commands" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [2159 2195])
+            ("aer_done" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [2196 2220])
+            ("temperature_done" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [2221 2253])
+            ("failed" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [2254 2276])
+            ("g_trid" variable
+               (:typemodifiers ("static")
+                :type ("spdk_nvme_transport_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2277 2321])
+            ("set_temp_completion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2355 2368])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2369 2401]))                  
+                :type "void")
+                nil [2323 2733])
+            ("set_temp_threshold" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2765 2781])
+                    ("temp" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2782 2796]))                  
+                :type "int")
+                nil [2735 3100])
+            ("get_temp_completion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3134 3147])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3148 3180]))                  
+                :type "void")
+                nil [3102 3579])
+            ("get_temp_threshold" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3611 3627]))                  
+                :type "int")
+                nil [3581 3912])
+            ("print_health_page" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3944 3960])
+                    ("hip" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_health_information_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3961 4007]))                  
+                :type "void")
+                nil [3914 4142])
+            ("get_log_page_completion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4180 4193])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4194 4226]))                  
+                :type "void")
+                nil [4144 4455])
+            ("get_health_log_page" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4488 4504]))                  
+                :type "int")
+                nil [4457 4787])
+            ("cleanup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4809 4814]))                  
+                :type "void")
+                nil [4789 4926])
+            ("aer_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4947 4957])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4958 4990]))                  
+                :type "void")
+                nil [4928 5428])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("program_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5448 5473]))                  
+                :type "void")
+                nil [5430 6268])
+            ("parse_args" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6292 6301])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6302 6314]))                  
+                :type "int")
+                nil [6270 7114])
+            ("probe_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7137 7150])
+                    ("trid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_transport_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7151 7193])
+                    ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7196 7230]))                  
+                :type "bool")
+                nil [7116 7293])
+            ("attach_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7317 7330])
+                    ("trid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_transport_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7331 7373])
+                    ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7377 7407])
+                    ("opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_ctrlr_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7408 7448]))                  
+                :type "void")
+                nil [7295 7822])
+            ("get_feature_test_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7856 7869])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7870 7902]))                  
+                :type "void")
+                nil [7824 8248])
+            ("get_feature_test" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8279 8295]))                  
+                :type "void")
+                nil [8250 8666])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8677 8686])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8687 8699]))                  
+                :type "int")
+                nil [8668 10497]))          
+      :file "aer.c"
+      :pointmax 10498
+      :fsize 10497
+      :lastmodtime '(22925 57199 723693 835000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("foreach_dev" (spp-arg-list ("iter") 2098 . 2104) . ((FOR "for" 2108 . 2111) (semantic-list "(iter = devs; iter - devs < num_devs; iter++)" 2112 . 2157)))
+          ("MAX_DEVS" . ((number "64" 1776 . 1778)))
+          )
+))
+  :file "!root!spdk!test!lib!nvme!aer!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

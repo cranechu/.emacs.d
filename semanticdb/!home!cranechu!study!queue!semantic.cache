@@ -1,0 +1,32 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("sys/queue.h" include (:system-flag t) nil [20 42])
+            ("foo" type
+               (:members 
+                  ( ("tailq" variable (:type "int") (reparse-symbol classsubparts) [78 84])
+                    ("datum" variable (:type "int") (reparse-symbol classsubparts) [89 99]))                  
+                :type "struct")
+                nil [44 102])
+            ("TAILQ_HEAD" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("fooq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115 120])
+                    ("" variable (:type ("foo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [121 125]))                  
+                :type "int")
+                nil [104 126])
+            ("main" function (:type "int") nil [128 838]))          
+      :file "queue.c"
+      :pointmax 839
+      :fsize 838
+      :lastmodtime '(22718 28315 344788 30000)
+      :unmatched-syntax nil))
+  :file "!home!cranechu!study!queue!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

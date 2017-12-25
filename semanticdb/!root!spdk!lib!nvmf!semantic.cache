@@ -1,0 +1,1005 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+
+    (semanticdb-table "semanticdb-table"
+      :file "subsystem.h"
+      :fsize 2145
+      :lastmodtime '(22914 62598 433370 728000))
+    (semanticdb-table "semanticdb-table"
+      :file "session.h"
+      :fsize 4915
+      :lastmodtime '(22914 62598 432370 728000))
+    (semanticdb-table "semanticdb-table"
+      :file "request.h"
+      :fsize 2921
+      :lastmodtime '(22914 62598 432370 728000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("infiniband/verbs.h" include (:system-flag t) nil [1691 1720])
+            ("rdma/rdma_cma.h" include (:system-flag t) nil [1721 1747])
+            ("rdma/rdma_verbs.h" include (:system-flag t) nil [1748 1776])
+            ("nvmf_internal.h" include nil nil [1778 1804])
+            ("request.h" include nil nil [1805 1825])
+            ("session.h" include nil nil [1826 1846])
+            ("subsystem.h" include nil nil [1847 1869])
+            ("transport.h" include nil nil [1870 1892])
+            ("spdk/assert.h" include nil nil [1894 1918])
+            ("spdk/nvmf.h" include nil nil [1919 1941])
+            ("spdk/nvmf_spec.h" include nil nil [1942 1969])
+            ("spdk/string.h" include nil nil [1970 1994])
+            ("spdk/trace.h" include nil nil [1995 2018])
+            ("spdk/util.h" include nil nil [2019 2041])
+            ("spdk/likely.h" include nil nil [2042 2066])
+            ("spdk_internal/log.h" include nil nil [2068 2098])
+            ("NVMF_DEFAULT_TX_SGE" variable (:constant-flag t) nil [2149 2168])
+            ("NVMF_DEFAULT_RX_SGE" variable (:constant-flag t) nil [2180 2199])
+            ("spdk_nvmf_rdma_buf" type
+               (:members 
+                  ( ("link" variable (:type "int") (reparse-symbol classsubparts) [2265 2270]))                  
+                :type "struct")
+                nil [2204 2273])
+            ("spdk_nvmf_rdma_recv" type
+               (:members 
+                  ( ("wr" variable (:type ("ibv_recv_wr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2672 2695])
+                    ("sgl" variable
+                       (:dereference 1
+                        :type ("ibv_sge" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2697 2739])
+                    ("buf" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2772 2788])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [2824 2829]))                  
+                :type "struct")
+                nil [2642 2870])
+            ("spdk_nvmf_rdma_request" type
+               (:members 
+                  ( ("req" variable (:type ("spdk_nvmf_request" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2905 2935])
+                    ("data_from_pool" variable (:type "bool") (reparse-symbol classsubparts) [2937 2961])
+                    ("recv" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_recv" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2964 2998])
+                    ("rsp" variable (:type ("" type
+                         (:members 
+                            ( ("wr" variable (:type ("ibv_send_wr" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [3012 3035])
+                              ("sgl" variable
+                                 (:dereference 1
+                                  :type ("ibv_sge" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [3038 3080]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3001 3088])
+                    ("data" variable (:type ("" type
+                         (:members 
+                            ( ("wr" variable (:type ("ibv_send_wr" type
+                                   (:prototype t
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [3102 3125])
+                              ("sgl" variable
+                                 (:dereference 1
+                                  :type ("ibv_sge" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [3128 3170]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3091 3179])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [3218 3223]))                  
+                :type "struct")
+                nil [2872 3226])
+            ("spdk_nvmf_rdma_conn" type
+               (:members 
+                  ( ("conn" variable (:type ("spdk_nvmf_conn" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3258 3287])
+                    ("cm_id" variable
+                       (:pointer 1
+                        :type ("rdma_cm_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3290 3317])
+                    ("cq" variable
+                       (:pointer 1
+                        :type ("ibv_cq" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3319 3340])
+                    ("max_queue_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3419 3447])
+                    ("max_rw_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3529 3554])
+                    ("cur_queue_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3728 3756])
+                    ("cur_rdma_rw_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3830 3860])
+                    ("incoming_queue" variable (:type "int") (reparse-symbol classsubparts) [3951 3966])
+                    ("free_queue" variable (:type "int") (reparse-symbol classsubparts) [4042 4053])
+                    ("pending_data_buf_queue" variable (:type "int") (reparse-symbol classsubparts) [4150 4173])
+                    ("pending_rdma_rw_queue" variable (:type "int") (reparse-symbol classsubparts) [4279 4301])
+                    ("reqs" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4369 4406])
+                    ("recvs" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_recv" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4471 4506])
+                    ("cmds" variable
+                       (:pointer 1
+                        :type ("nvmf_h2c_msg" type (:type "union") nil nil))
+                        (reparse-symbol classsubparts) [4600 4627])
+                    ("cmds_mr" variable
+                       (:pointer 1
+                        :type ("ibv_mr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4629 4655])
+                    ("cpls" variable
+                       (:pointer 1
+                        :type ("nvmf_c2h_msg" type (:type "union") nil nil))
+                        (reparse-symbol classsubparts) [4763 4790])
+                    ("cpls_mr" variable
+                       (:pointer 1
+                        :type ("ibv_mr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4792 4818])
+                    ("bufs" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [4937 4952])
+                    ("bufs_mr" variable
+                       (:pointer 1
+                        :type ("ibv_mr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4954 4980])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [5016 5021]))                  
+                :type "struct")
+                nil [3228 5024])
+            ("g_pending_conns" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_pending_conns)"
+                :type "int")
+                nil [5143 5201])
+            ("spdk_nvmf_rdma_session" type
+               (:members 
+                  ( ("session" variable (:type ("spdk_nvmf_session" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5236 5270])
+                    ("data_buf_pool" variable (:type "int") (reparse-symbol classsubparts) [5306 5320])
+                    ("verbs" variable
+                       (:pointer 1
+                        :type ("ibv_context" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5323 5351])
+                    ("buf" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5354 5371])
+                    ("buf_mr" variable
+                       (:pointer 1
+                        :type ("ibv_mr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5373 5398]))                  
+                :type "struct")
+                nil [5203 5401])
+            ("spdk_nvmf_rdma_listen_addr" type
+               (:members 
+                  ( ("traddr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5440 5457])
+                    ("trsvcid" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5459 5477])
+                    ("id" variable
+                       (:pointer 1
+                        :type ("rdma_cm_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5479 5503])
+                    ("attr" variable (:type ("ibv_device_attr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5505 5536])
+                    ("comp_channel" variable
+                       (:pointer 1
+                        :type ("ibv_comp_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5538 5578])
+                    ("ref" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5580 5596])
+                    ("is_listened" variable (:type "bool") (reparse-symbol classsubparts) [5598 5619])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [5661 5666]))                  
+                :type "struct")
+                nil [5403 5669])
+            ("spdk_nvmf_rdma" type
+               (:members 
+                  ( ("event_channel" variable
+                       (:pointer 1
+                        :type ("rdma_event_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5696 5737])
+                    ("lock" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5740 5763])
+                    ("max_queue_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5766 5794])
+                    ("max_io_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5796 5820])
+                    ("in_capsule_data_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5822 5855])
+                    ("listen_addrs" variable (:type "int") (reparse-symbol classsubparts) [5899 5912]))                  
+                :type "struct")
+                nil [5671 5915])
+            ("g_rdma" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.lock = PTHREAD_MUTEX_INITIALIZER,
+	.listen_addrs = TAILQ_HEAD_INITIALIZER(g_rdma.listen_addrs),
+}"
+                :type ("spdk_nvmf_rdma" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5917 6057])
+            ("get_rdma_conn" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6116 6144]))                  
+                :type ("spdk_nvmf_rdma_conn" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6059 6250])
+            ("get_rdma_req" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6311 6341]))                  
+                :type ("spdk_nvmf_rdma_request" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6252 6454])
+            ("get_rdma_sess" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sess" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_session" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6516 6547]))                  
+                :type ("spdk_nvmf_rdma_session" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6456 6665])
+            ("spdk_nvmf_rdma_conn_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rdma_conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6707 6745]))                  
+                :type "void")
+                nil [6667 7276])
+            ("spdk_nvmf_rdma_conn_create" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("id" variable
+                       (:pointer 1
+                        :type ("rdma_cm_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7341 7363])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("ibv_comp_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7364 7397])
+                    ("max_queue_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7404 7429])
+                    ("max_rw_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7430 7452])
+                    ("subsystem_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7453 7475]))                  
+                :type ("spdk_nvmf_rdma_conn" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7278 13207])
+            ("request_transfer_in" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13240 13270]))                  
+                :type "int")
+                nil [13209 14001])
+            ("request_transfer_out" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14035 14065]))                  
+                :type "int")
+                nil [14003 15952])
+            ("spdk_nvmf_rdma_request_transfer_data" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16002 16032]))                  
+                :type "int")
+                nil [15954 16695])
+            ("nvmf_rdma_connect" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("rdma_cm_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16726 16754]))                  
+                :type "int")
+                nil [16697 21129])
+            ("nvmf_rdma_disconnect" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("evt" variable
+                       (:pointer 1
+                        :type ("rdma_cm_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21163 21189]))                  
+                :type "int")
+                nil [21131 22050])
+            ("_spdk_nvmf_request_prep_type" type
+               (:members 
+                  ( ("SPDK_NVMF_REQUEST_PREP_ERROR" variable
+                       (:constant-flag t
+                        :default-value (22706 22708)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [22675 22708])
+                    ("SPDK_NVMF_REQUEST_PREP_READY" variable
+                       (:constant-flag t
+                        :default-value (22742 22743)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [22711 22743])
+                    ("SPDK_NVMF_REQUEST_PREP_PENDING_BUFFER" variable
+                       (:constant-flag t
+                        :default-value (22786 22787)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [22746 22787])
+                    ("SPDK_NVMF_REQUEST_PREP_PENDING_DATA" variable
+                       (:constant-flag t
+                        :default-value (22828 22829)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [22790 22829]))                  
+                :type "enum")
+                nil [22630 22861])
+            ("spdk_nvmf_request_prep_type" type
+               (:typedef ("_spdk_nvmf_request_prep_type" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [22630 22861])
+            ("spdk_nvmf_request_prep_data" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22926 22956]))                  
+                :type ("spdk_nvmf_request_prep_type" type (:type "class") nil nil))
+                nil [22863 27565])
+            ("spdk_nvmf_rdma_handle_pending_rdma_rw" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27616 27644]))                  
+                :type "int")
+                nil [27567 29178])
+            ("spdk_nvmf_rdma_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("max_queue_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29250 29275])
+                    ("max_io_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29276 29297])
+                    ("in_capsule_data_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29304 29334]))                  
+                :type "int")
+                nil [29219 30024])
+            ("spdk_nvmf_rdma_listen_addr_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_listen_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30070 30110]))                  
+                :type "void")
+                nil [30026 30198])
+            ("spdk_nvmf_rdma_fini" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [30230 30235]))                  
+                :type "int")
+                nil [30199 30460])
+            ("spdk_nvmf_rdma_listen_remove" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("listen_addr" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_listen_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30502 30544]))                  
+                :type "int")
+                nil [30462 31121])
+            ("spdk_nvmf_rdma_poll" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31154 31182]))                  
+                :type "int")
+                nil [31123 31183])
+            ("spdk_nvmf_rdma_addr_listen_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_listen_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31229 31269]))                  
+                :type "void")
+                nil [31185 31767])
+            ("spdk_nvmf_rdma_acceptor_poll" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [31810 31815]))                  
+                :type "void")
+                nil [31769 33794])
+            ("spdk_nvmf_rdma_listen" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("listen_addr" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_listen_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33829 33871]))                  
+                :type "int")
+                nil [33796 36523])
+            ("spdk_nvmf_rdma_discover" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("listen_addr" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_listen_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36561 36603])
+                    ("entry" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_discovery_log_page_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36607 36656]))                  
+                :type "void")
+                nil [36525 37173])
+            ("spdk_nvmf_rdma_session_init" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [37237 37242]))                  
+                :type ("spdk_nvmf_session" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [37175 38148])
+            ("spdk_nvmf_rdma_session_fini" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("session" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_session" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38190 38224]))                  
+                :type "void")
+                nil [38150 38414])
+            ("spdk_nvmf_rdma_session_add_conn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("session" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_session" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38459 38493])
+                    ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38498 38526]))                  
+                :type "int")
+                nil [38416 39575])
+            ("spdk_nvmf_rdma_session_remove_conn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("session" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_session" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39623 39657])
+                    ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39665 39693]))                  
+                :type "int")
+                nil [39577 39708])
+            ("spdk_nvmf_rdma_request_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39753 39783]))                  
+                :type "int")
+                nil [39710 40059])
+            ("request_release_buffer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40096 40126]))                  
+                :type "void")
+                nil [40061 40583])
+            ("spdk_nvmf_rdma_close_conn" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40623 40651]))                  
+                :type "void")
+                nil [40585 40706])
+            ("process_incoming_queue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rdma_conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40742 40780]))                  
+                :type "int")
+                nil [40708 42463])
+            ("get_rdma_req_from_wc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("rdma_conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [42525 42563])
+                    ("wc" variable
+                       (:pointer 1
+                        :type ("ibv_wc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [42571 42589]))                  
+                :type ("spdk_nvmf_rdma_request" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [42465 42857])
+            ("get_rdma_recv_from_wc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("rdma_conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_rdma_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [42917 42955])
+                    ("wc" variable
+                       (:pointer 1
+                        :type ("ibv_wc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [42964 42982]))                  
+                :type ("spdk_nvmf_rdma_recv" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [42859 43400])
+            ("spdk_nvmf_rdma_poll" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [43527 43555]))                  
+                :type "int")
+                nil [43496 47172])
+            ("spdk_nvmf_rdma_conn_is_idle" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47214 47242]))                  
+                :type "bool")
+                nil [47174 47419])
+            ("spdk_nvmf_transport_rdma" variable
+               (:constant-flag t
+                :default-value "{
+	.name = \"rdma\",
+	.transport_init = spdk_nvmf_rdma_init,
+	.transport_fini = spdk_nvmf_rdma_fini,
+
+	.acceptor_poll = spdk_nvmf_rdma_acceptor_poll,
+
+	.listen_addr_add = spdk_nvmf_rdma_listen,
+	.listen_addr_remove = spdk_nvmf_rdma_listen_remove,
+	.listen_addr_discover = spdk_nvmf_rdma_discover,
+
+	.session_init = spdk_nvmf_rdma_session_init,
+	.session_fini = spdk_nvmf_rdma_session_fini,
+	.session_add_conn = spdk_nvmf_rdma_session_add_conn,
+	.session_remove_conn = spdk_nvmf_rdma_session_remove_conn,
+
+	.req_complete = spdk_nvmf_rdma_request_complete,
+
+	.conn_fini = spdk_nvmf_rdma_close_conn,
+	.conn_poll = spdk_nvmf_rdma_poll,
+	.conn_is_idle = spdk_nvmf_rdma_conn_is_idle,
+
+}"
+                :type ("spdk_nvmf_transport" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [47421 48160]))          
+      :file "rdma.c"
+      :pointmax 48216
+      :fsize 48215
+      :lastmodtime '(22915 1424 583248 187000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NVMF_DEFAULT_RX_SGE" . ((number "2" 2201 . 2202)))
+          ("NVMF_DEFAULT_TX_SGE" . ((number "1" 2170 . 2171)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__NVMF_INTERNAL_H__" variable (:constant-flag t) nil [1701 1720])
+            ("spdk/stdinc.h" include nil nil [1722 1746])
+            ("spdk/nvmf.h" include nil nil [1748 1770])
+            ("spdk/nvmf_spec.h" include nil nil [1771 1798])
+            ("spdk/assert.h" include nil nil [1799 1823])
+            ("spdk/queue.h" include nil nil [1824 1847])
+            ("spdk/util.h" include nil nil [1848 1870])
+            ("SPDK_NVMF_DEFAULT_NUM_SESSIONS_PER_LCORE" variable (:constant-flag t) nil [1880 1920])
+            ("spdk_nvmf_ctrlr_ops" type
+               (:members 
+                  ( ("attach" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("subsystem" variable
+                               (:pointer 1
+                                :type ("spdk_nvmf_subsystem" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2009 2047]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1995 2048])
+                    ("ctrlr_get_data" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("session" variable
+                               (:pointer 1
+                                :type ("spdk_nvmf_session" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2123 2157]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2100 2158])
+                    ("process_admin_cmd" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("req" variable
+                               (:pointer 1
+                                :type ("spdk_nvmf_request" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2223 2253]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2198 2254])
+                    ("process_io_cmd" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("req" variable
+                               (:pointer 1
+                                :type ("spdk_nvmf_request" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2313 2343]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2291 2344])
+                    ("poll_for_completions" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("subsystem" variable
+                               (:pointer 1
+                                :type ("spdk_nvmf_subsystem" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2412 2450]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2383 2451])
+                    ("detach" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("subsystem" variable
+                               (:pointer 1
+                                :type ("spdk_nvmf_subsystem" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2506 2544]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2491 2545]))                  
+                :type "struct")
+                nil [1924 2548])
+            ("spdk_nvmf_tgt" type
+               (:members 
+                  ( ("max_queue_depth" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2574 2602])
+                    ("max_queues_per_session" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2604 2639])
+                    ("in_capsule_data_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2641 2674])
+                    ("max_io_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2676 2700])
+                    ("discovery_genctr" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2702 2731])
+                    ("subsystems" variable (:type "int") (reparse-symbol classsubparts) [2767 2778])
+                    ("discovery_log_page" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_discovery_log_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2780 2836])
+                    ("discovery_log_page_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2838 2873])
+                    ("listen_addrs" variable (:type "int") (reparse-symbol classsubparts) [2911 2924])
+                    ("current_subsystem_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2926 2959]))                  
+                :type "struct")
+                nil [2550 2962])
+            ("g_nvmf_tgt" variable
+               (:typemodifiers ("extern")
+                :type ("spdk_nvmf_tgt" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2964 3003])
+            ("spdk_nvmf_listen_addr_create" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("trname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3064 3083])
+                    ("adrfam" variable (:type ("spdk_nvmf_adrfam" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [3086 3115])
+                    ("traddr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3116 3135])
+                    ("trsvcid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3136 3156]))                  
+                :type ("spdk_nvmf_listen_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3005 3157])
+            ("spdk_nvmf_listen_addr_destroy" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_listen_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3193 3228]))                  
+                :type "void")
+                nil [3158 3229])
+            ("spdk_nvmf_listen_addr_cleanup" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("spdk_nvmf_listen_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3265 3300]))                  
+                :type "void")
+                nil [3230 3301])
+            ("OBJECT_NVMF_IO" variable (:constant-flag t) nil [3311 3325])
+            ("TRACE_GROUP_NVMF" variable (:constant-flag t) nil [3343 3359])
+            ("TRACE_NVMF_IO_START" variable (:constant-flag t) nil [3374 3393])
+            ("TRACE_RDMA_READ_START" variable (:constant-flag t) nil [3442 3463])
+            ("TRACE_RDMA_WRITE_START" variable (:constant-flag t) nil [3512 3534])
+            ("TRACE_RDMA_READ_COMPLETE" variable (:constant-flag t) nil [3583 3607])
+            ("TRACE_RDMA_WRITE_COMPLETE" variable (:constant-flag t) nil [3661 3686])
+            ("TRACE_NVMF_LIB_READ_START" variable (:constant-flag t) nil [3734 3759])
+            ("TRACE_NVMF_LIB_WRITE_START" variable (:constant-flag t) nil [3807 3833])
+            ("TRACE_NVMF_LIB_COMPLETE" variable (:constant-flag t) nil [3881 3904])
+            ("TRACE_NVMF_IO_COMPLETE" variable (:constant-flag t) nil [3953 3975]))          
+      :file "nvmf_internal.h"
+      :pointmax 4050
+      :fsize 4049
+      :lastmodtime '(22914 62598 431370 729000)
+      :unmatched-syntax '((semantic-list 2885 . 2910) (symbol 2875 . 2885) (semantic-list 2743 . 2766) (symbol 2733 . 2743))
+      :lexical-table 
+        '(("OBJECT_NVMF_IO" . ((number "0x30" 3329 . 3333)))
+          ("TRACE_RDMA_READ_COMPLETE" . ((symbol "SPDK_TPOINT_ID" 3615 . 3629) (semantic-list "(TRACE_GROUP_NVMF, 0x3)" 3629 . 3652)))
+          ("TRACE_RDMA_READ_START" . ((symbol "SPDK_TPOINT_ID" 3466 . 3480) (semantic-list "(TRACE_GROUP_NVMF, 0x1)" 3480 . 3503)))
+          ("TRACE_RDMA_WRITE_START" . ((symbol "SPDK_TPOINT_ID" 3537 . 3551) (semantic-list "(TRACE_GROUP_NVMF, 0x2)" 3551 . 3574)))
+          ("TRACE_RDMA_WRITE_COMPLETE" . ((symbol "SPDK_TPOINT_ID" 3688 . 3702) (semantic-list "(TRACE_GROUP_NVMF, 0x4)" 3702 . 3725)))
+          ("TRACE_GROUP_NVMF" . ((number "0x3" 3362 . 3365)))
+          ("TRACE_NVMF_IO_START" . ((symbol "SPDK_TPOINT_ID" 3396 . 3410) (semantic-list "(TRACE_GROUP_NVMF, 0x0)" 3410 . 3433)))
+          ("TRACE_NVMF_LIB_COMPLETE" . ((symbol "SPDK_TPOINT_ID" 3907 . 3921) (semantic-list "(TRACE_GROUP_NVMF, 0x7)" 3921 . 3944)))
+          ("SPDK_NVMF_DEFAULT_NUM_SESSIONS_PER_LCORE" . ((number "1" 1921 . 1922)))
+          ("TRACE_NVMF_IO_COMPLETE" . ((symbol "SPDK_TPOINT_ID" 3978 . 3992) (semantic-list "(TRACE_GROUP_NVMF, 0x8)" 3992 . 4015)))
+          ("TRACE_NVMF_LIB_READ_START" . ((symbol "SPDK_TPOINT_ID" 3761 . 3775) (semantic-list "(TRACE_GROUP_NVMF, 0x5)" 3775 . 3798)))
+          ("TRACE_NVMF_LIB_WRITE_START" . ((symbol "SPDK_TPOINT_ID" 3835 . 3849) (semantic-list "(TRACE_GROUP_NVMF, 0x6)" 3849 . 3872)))
+          ("__NVMF_INTERNAL_H__")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "transport.h"
+      :fsize 3913
+      :lastmodtime '(22914 62598 433370 728000)))
+  :file "!root!spdk!lib!nvmf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

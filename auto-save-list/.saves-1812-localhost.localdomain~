@@ -1,0 +1,4 @@
+/root/spdk/lib/env_dpdk/init.c
+/root/spdk/lib/env_dpdk/#init.c#
+/root/spdk/examples/nvme/hello_world/hello_world.c
+/root/spdk/examples/nvme/hello_world/#hello_world.c#

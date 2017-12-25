@@ -1,0 +1,667 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1731 1755])
+            ("spdk/string.h" include nil nil [1757 1781])
+            ("iscsi/iscsi.h" include nil nil [1782 1806])
+            ("iscsi/param.h" include nil nil [1807 1831])
+            ("iscsi/conn.h" include nil nil [1832 1855])
+            ("spdk/string.h" include nil nil [1856 1880])
+            ("spdk_internal/log.h" include nil nil [1882 1912])
+            ("MAX_TMPBUF" variable (:constant-flag t) nil [1922 1932])
+            ("non_simple_value_params" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	\"CHAP_C\",
+	\"CHAP_R\",
+	NULL,
+}"
+                :type "char")
+                nil [1980 2060])
+            ("spdk_iscsi_param_free" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2089 2116]))                  
+                :type "void")
+                nil [2062 2379])
+            ("spdk_iscsi_find_key_in_array" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2421 2437])
+                    ("array" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2438 2458]))                  
+                :type "int")
+                nil [2381 2574])
+            ("spdk_iscsi_param_find" function
+               (:pointer 1
+                :arguments 
+                  ( ("params" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2619 2646])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2647 2663]))                  
+                :type ("iscsi_param" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2576 2942])
+            ("spdk_iscsi_param_del" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2969 2997])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2998 3014]))                  
+                :type "int")
+                nil [2944 3543])
+            ("spdk_iscsi_param_add" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3570 3598])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3599 3615])
+                    ("val" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3623 3639])
+                    ("list" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3640 3657])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [3658 3667]))                  
+                :type "int")
+                nil [3545 4398])
+            ("spdk_iscsi_param_set" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4425 4452])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4453 4469])
+                    ("val" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4477 4493]))                  
+                :type "int")
+                nil [4400 4764])
+            ("spdk_iscsi_param_set_int" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4795 4822])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4823 4839])
+                    ("val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4840 4853]))                  
+                :type "int")
+                nil [4766 5185])
+            ("spdk_iscsi_parse_param" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5288 5316])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5317 5337]))                  
+                :type "int")
+                nil [5254 6982])
+            ("spdk_iscsi_parse_params" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7144 7172])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7173 7193])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [7197 7205])
+                    ("cbit_enabled" variable (:type "bool") (reparse-symbol arg-sub-list) [7206 7224])
+                    ("partial_parameter" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7225 7250]))                  
+                :type "int")
+                nil [7116 8387])
+            ("spdk_iscsi_param_get_val" function
+               (:pointer 1
+                :arguments 
+                  ( ("params" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8421 8448])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8449 8465]))                  
+                :type "char")
+                nil [8389 8598])
+            ("spdk_iscsi_param_eq_val" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8628 8655])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8656 8672])
+                    ("val" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8676 8692]))                  
+                :type "int")
+                nil [8600 8864])
+            ("iscsi_param_table" type
+               (:members 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [8894 8910])
+                    ("val" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [8912 8928])
+                    ("list" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [8930 8947])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [8949 8958]))                  
+                :type "struct")
+                nil [8866 8961])
+            ("conn_param_table" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{ \"HeaderDigest\", \"None\", \"CRC32C,None\", ISPT_LIST },
+	{ \"DataDigest\", \"None\", \"CRC32C,None\", ISPT_LIST },
+	{ \"MaxRecvDataSegmentLength\", \"8192\", \"512,16777215\", ISPT_NUMERICAL_DECLARATIVE },
+	{ \"OFMarker\", \"No\", \"Yes,No\", ISPT_BOOLEAN_AND },
+	{ \"IFMarker\", \"No\", \"Yes,No\", ISPT_BOOLEAN_AND },
+	{ \"OFMarkInt\", \"1\", \"1,65535\", ISPT_NUMERICAL_MIN },
+	{ \"IFMarkInt\", \"1\", \"1,65535\", ISPT_NUMERICAL_MIN },
+	{ \"AuthMethod\", \"None\", \"CHAP,None\", ISPT_LIST },
+	{ \"CHAP_A\", \"5\", \"5\", ISPT_LIST },
+	{ \"CHAP_N\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"CHAP_R\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"CHAP_I\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"CHAP_C\", \"\", \"\", ISPT_DECLARATIVE },
+	{ NULL, NULL, NULL, ISPT_INVALID },
+}"
+                :type ("iscsi_param_table" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [8963 9717])
+            ("sess_param_table" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{ \"MaxConnections\", \"1\", \"1,65535\", ISPT_NUMERICAL_MIN },
+#if 0
+	/* need special handling */
+	{ \"SendTargets\", \"\", \"\", ISPT_DECLARATIVE },
+#endif
+	{ \"TargetName\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"InitiatorName\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"TargetAlias\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"InitiatorAlias\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"TargetAddress\", \"\", \"\", ISPT_DECLARATIVE },
+	{ \"TargetPortalGroupTag\", \"1\", \"1,65535\", ISPT_NUMERICAL_DECLARATIVE },
+	{ \"InitialR2T\", \"Yes\", \"Yes,No\", ISPT_BOOLEAN_OR },
+	{ \"ImmediateData\", \"Yes\", \"Yes,No\", ISPT_BOOLEAN_AND },
+	{ \"MaxBurstLength\", \"262144\", \"512,16777215\", ISPT_NUMERICAL_MIN },
+	{ \"FirstBurstLength\", \"65536\", \"512,16777215\", ISPT_NUMERICAL_MIN },
+	{ \"DefaultTime2Wait\", \"2\", \"0,3600\", ISPT_NUMERICAL_MAX },
+	{ \"DefaultTime2Retain\", \"20\", \"0,3600\", ISPT_NUMERICAL_MIN },
+	{ \"MaxOutstandingR2T\", \"1\", \"1,65536\", ISPT_NUMERICAL_MIN },
+	{ \"DataPDUInOrder\", \"Yes\", \"Yes,No\", ISPT_BOOLEAN_OR },
+	{ \"DataSequenceInOrder\", \"Yes\", \"Yes,No\", ISPT_BOOLEAN_OR },
+	{ \"ErrorRecoveryLevel\", \"0\", \"0,2\", ISPT_NUMERICAL_MIN },
+	{ \"SessionType\", \"Normal\", \"Normal,Discovery\", ISPT_DECLARATIVE },
+	{ NULL, NULL, NULL, ISPT_INVALID },
+}"
+                :type ("iscsi_param_table" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9719 10955])
+            ("spdk_iscsi_params_init_internal" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11000 11028])
+                    ("table" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("iscsi_param_table" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11033 11071]))                  
+                :type "int")
+                nil [10957 11547])
+            ("spdk_iscsi_conn_params_init" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11581 11609]))                  
+                :type "int")
+                nil [11549 11684])
+            ("spdk_iscsi_sess_params_init" function
+               (:arguments 
+                  ( ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11718 11746]))                  
+                :type "int")
+                nil [11686 11821])
+            ("chap_type" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	\"CHAP_A\",
+	\"CHAP_N\",
+	\"CHAP_R\",
+	\"CHAP_I\",
+	\"CHAP_C\",
+	NULL,
+}"
+                :type "char")
+                nil [11823 11922])
+            ("discovery_ignored_param" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	\"MaxConnections\",
+	\"InitialR2T\",
+	\"ImmediateData\",
+	\"MaxBurstLength\",
+	\"FirstBurstLength\"
+	\"MaxOutstandingR2T\",
+	\"DataPDUInOrder\",
+	NULL,
+}"
+                :type "char")
+                nil [11924 12114])
+            ("multi_negot_conn_params" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	\"MaxRecvDataSegmentLength\",
+	NULL,
+}"
+                :type "char")
+                nil [12116 12203])
+            ("target_declarative_params" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	\"TargetAlias\",
+	\"TargetAddress\",
+	\"TargetPortalGroupTag\",
+	NULL,
+}"
+                :type "char")
+                nil [12261 12380])
+            ("spdk_iscsi_special_param_construction" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_iscsi_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12601 12630])
+                    ("param" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12641 12667])
+                    ("FirstBurstLength_flag" variable (:type "bool") (reparse-symbol arg-sub-list) [12678 12705])
+                    ("data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12706 12717])
+                    ("alloc_len" variable (:type "int") (reparse-symbol arg-sub-list) [12728 12742])
+                    ("total" variable (:type "int") (reparse-symbol arg-sub-list) [12743 12753]))                  
+                :type "int")
+                nil [12552 14981])
+            ("spdk_iscsi_construct_data_from_param" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("param" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15208 15234])
+                    ("new_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15235 15249])
+                    ("data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15259 15270])
+                    ("alloc_len" variable (:type "int") (reparse-symbol arg-sub-list) [15271 15285])
+                    ("total" variable (:type "int") (reparse-symbol arg-sub-list) [15286 15296]))                  
+                :type "int")
+                nil [15160 15729])
+            ("spdk_iscsi_negotiate_param_list" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("add_param_value" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [15874 15895])
+                    ("param" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15898 15924])
+                    ("valid_list" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15927 15944])
+                    ("in_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15945 15958])
+                    ("cur_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15961 15975]))                  
+                :type "char")
+                nil [15829 16698])
+            ("spdk_iscsi_negotiate_param_numerical" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("add_param_value" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [16889 16910])
+                    ("param" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16913 16939])
+                    ("valid_list" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16942 16959])
+                    ("in_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16960 16973])
+                    ("cur_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16976 16990]))                  
+                :type "char")
+                nil [16839 18120])
+            ("spdk_iscsi_negotiate_param_boolean" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("add_param_value" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [18292 18313])
+                    ("param" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18316 18342])
+                    ("in_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18345 18358])
+                    ("cur_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18359 18373])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18376 18394]))                  
+                :type "char")
+                nil [18244 18915])
+            ("spdk_iscsi_negotiate_param_all" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("add_param_value" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [19067 19088])
+                    ("param" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19089 19115])
+                    ("valid_list" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19126 19143])
+                    ("in_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19144 19157])
+                    ("cur_val" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19158 19172]))                  
+                :type "char")
+                nil [19022 19987])
+            ("spdk_iscsi_negotiate_param_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_iscsi_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20141 20170])
+                    ("cur_param_p" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20175 20208])
+                    ("params_dst_p" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20213 20247])
+                    ("param" variable
+                       (:pointer 1
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20252 20278]))                  
+                :type "int")
+                nil [20098 21419])
+            ("spdk_iscsi_negotiate_params" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_iscsi_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21453 21482])
+                    ("params" variable
+                       (:pointer 2
+                        :type ("iscsi_param" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21490 21518])
+                    ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21519 21533])
+                    ("alloc_len" variable (:type "int") (reparse-symbol arg-sub-list) [21534 21548])
+                    ("data_len" variable (:type "int") (reparse-symbol arg-sub-list) [21556 21569]))                  
+                :type "int")
+                nil [21421 26706])
+            ("spdk_iscsi_copy_param2var" function
+               (:arguments 
+                  ( ("conn" variable
+                       (:pointer 1
+                        :type ("spdk_iscsi_conn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26738 26767]))                  
+                :type "int")
+                nil [26708 29936]))          
+      :file "param.c"
+      :pointmax 29937
+      :fsize 29936
+      :lastmodtime '(22913 15257 557080 372000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_TMPBUF" . ((number "1024" 1933 . 1937)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "iscsi.h"
+      :fsize 12059
+      :lastmodtime '(22910 40989 225425 979000))
+    (semanticdb-table "semanticdb-table"
+      :file "param.h"
+      :fsize 3006
+      :lastmodtime '(22910 40989 227426 13000))
+    (semanticdb-table "semanticdb-table"
+      :file "conn.h"
+      :fsize 6198
+      :lastmodtime '(22910 40989 224425 962000)))
+  :file "!root!spdk!lib!iscsi!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

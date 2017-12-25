@@ -1,0 +1,291 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/io_channel.h" include nil nil [1691 1719])
+            ("spdk/log.h" include nil nil [1720 1741])
+            ("g_devlist_mutex" variable
+               (:typemodifiers ("static")
+                :default-value "PTHREAD_MUTEX_INITIALIZER"
+                :type ("pthread_mutex_t" type (:type "class") nil nil))
+                nil [1743 1810])
+            ("io_device" type
+               (:members 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1832 1850])
+                    ("create_cb" variable (:type ("spdk_io_channel_create_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1852 1888])
+                    ("destroy_cb" variable (:type ("spdk_io_channel_destroy_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1890 1928])
+                    ("unregister_cb" variable (:type ("spdk_io_device_unregister_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1930 1973])
+                    ("ctx_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1975 1994])
+                    ("tailq" variable (:type "int") (reparse-symbol classsubparts) [2019 2025])
+                    ("unregistered" variable (:type "bool") (reparse-symbol classsubparts) [2028 2048]))                  
+                :type "struct")
+                nil [1812 2051])
+            ("g_io_devices" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_io_devices)"
+                :type "int")
+                nil [2084 2136])
+            ("spdk_io_channel" type
+               (:members 
+                  ( ("thread" variable
+                       (:pointer 1
+                        :type ("spdk_thread" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2164 2192])
+                    ("dev" variable
+                       (:pointer 1
+                        :type ("io_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2194 2217])
+                    ("ref" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2219 2234])
+                    ("tailq" variable (:type "int") (reparse-symbol classsubparts) [2265 2271])
+                    ("destroy_cb" variable (:type ("spdk_io_channel_destroy_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2273 2311]))                  
+                :type "struct")
+                nil [2138 2553])
+            ("spdk_thread" type
+               (:members 
+                  ( ("thread_id" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2577 2597])
+                    ("fn" variable (:type ("spdk_thread_pass_msg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2599 2623])
+                    ("thread_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2625 2642])
+                    ("io_channels" variable (:type "int") (reparse-symbol classsubparts) [2674 2686])
+                    ("tailq" variable (:type "int") (reparse-symbol classsubparts) [2713 2719]))                  
+                :type "struct")
+                nil [2555 2722])
+            ("g_threads" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_threads)"
+                :type "int")
+                nil [2757 2803])
+            ("_get_thread" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2845 2850]))                  
+                :type ("spdk_thread" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2805 3076])
+            ("spdk_allocate_thread" function
+               (:pointer 1
+                :arguments 
+                  ( ("fn" variable (:type ("spdk_thread_pass_msg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3120 3144])
+                    ("thread_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3145 3162]))                  
+                :type ("spdk_thread" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3078 3788])
+            ("spdk_free_thread" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3812 3817]))                  
+                :type "void")
+                nil [3790 4127])
+            ("spdk_get_thread" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4166 4171]))                  
+                :type ("spdk_thread" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4129 4388])
+            ("spdk_thread_send_msg" function
+               (:arguments 
+                  ( ("thread" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_thread" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4416 4449])
+                    ("fn" variable (:type ("spdk_thread_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4450 4468])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4469 4479]))                  
+                :type "void")
+                nil [4390 4525])
+            ("spdk_io_device_register" function
+               (:arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4556 4572])
+                    ("create_cb" variable (:type ("spdk_io_channel_create_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4573 4609])
+                    ("destroy_cb" variable (:type ("spdk_io_channel_destroy_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4613 4651])
+                    ("ctx_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4652 4670]))                  
+                :type "void")
+                nil [4527 5352])
+            ("_spdk_io_device_attempt_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("io_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5395 5417]))                  
+                :type "void")
+                nil [5354 5827])
+            ("spdk_io_device_unregister" function
+               (:arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5860 5876])
+                    ("unregister_cb" variable (:type ("spdk_io_device_unregister_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5877 5920]))                  
+                :type "void")
+                nil [5829 6394])
+            ("spdk_get_io_channel" function
+               (:pointer 1
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6441 6457]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6396 7846])
+            ("_spdk_put_io_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7881 7891]))                  
+                :type "void")
+                nil [7848 8337])
+            ("spdk_put_io_channel" function
+               (:arguments 
+                  ( ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8364 8391]))                  
+                :type "void")
+                nil [8339 8456])
+            ("spdk_io_channel_get_ctx" function
+               (:pointer 1
+                :arguments 
+                  ( ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8489 8516]))                  
+                :type "void")
+                nil [8458 8557])
+            ("spdk_io_channel_get_thread" function
+               (:pointer 1
+                :arguments 
+                  ( ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8607 8634]))                  
+                :type ("spdk_thread" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [8559 8658])
+            ("call_channel" type
+               (:members 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [8683 8699])
+                    ("fn" variable (:type ("spdk_channel_msg" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8701 8721])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [8723 8733])
+                    ("cur_thread" variable
+                       (:pointer 1
+                        :type ("spdk_thread" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [8736 8767])
+                    ("cur_ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [8769 8800])
+                    ("orig_thread" variable
+                       (:pointer 1
+                        :type ("spdk_thread" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [8803 8835])
+                    ("cpl" variable (:type ("spdk_channel_for_each_cpl" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8837 8867]))                  
+                :type "struct")
+                nil [8660 8870])
+            ("_call_completion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8901 8911]))                  
+                :type "void")
+                nil [8872 9013])
+            ("_call_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9041 9051]))                  
+                :type "void")
+                nil [9015 9782])
+            ("spdk_for_each_channel" function
+               (:arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9811 9827])
+                    ("fn" variable (:type ("spdk_channel_msg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9828 9848])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9849 9859])
+                    ("cpl" variable (:type ("spdk_channel_for_each_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9868 9898]))                  
+                :type "void")
+                nil [9784 10676]))          
+      :file "io_channel.c"
+      :pointmax 10677
+      :fsize 10676
+      :lastmodtime '(22925 57199 712694 84000)
+      :unmatched-syntax '((semantic-list 2741 . 2756) (symbol 2731 . 2741) (STATIC 2724 . 2730) (semantic-list 2699 . 2712) (symbol 2688 . 2699) (semantic-list 2654 . 2673) (symbol 2644 . 2654) (semantic-list 2247 . 2264) (symbol 2236 . 2247) (semantic-list 2070 . 2083) (symbol 2060 . 2070) (STATIC 2053 . 2059) (semantic-list 2007 . 2018) (symbol 1996 . 2007))))
+  :file "!root!spdk!lib!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

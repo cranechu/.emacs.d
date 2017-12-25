@@ -1,0 +1,225 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk_cunit.h" include nil nil [1691 1714])
+            ("spdk/blob.h" include nil nil [1715 1737])
+            ("lib/test_env.c" include nil nil [1739 1764])
+            ("../bs_dev_common.c" include nil nil [1765 1794])
+            ("blobstore.c" include nil nil [1795 1817])
+            ("request.c" include nil nil [1818 1838])
+            ("g_bs" variable
+               (:pointer 1
+                :type ("spdk_blob_store" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1840 1869])
+            ("g_blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) nil [1870 1892])
+            ("g_blob" variable
+               (:pointer 1
+                :type ("spdk_blob" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1893 1918])
+            ("g_bserrno" variable (:type "int") nil [1919 1933])
+            ("g_names" variable
+               (:pointer 1
+                :type ("spdk_xattr_names" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1934 1967])
+            ("g_done" variable (:type "int") nil [1968 1979])
+            ("_bs_send_msg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fn" variable (:type ("spdk_thread_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2006 2024])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2025 2035])
+                    ("thread_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2036 2053]))                  
+                :type "void")
+                nil [1981 2067])
+            ("bs_op_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2096 2109])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2110 2122]))                  
+                :type "void")
+                nil [2069 2148])
+            ("bs_op_with_handle_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2189 2202])
+                    ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2203 2230])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2237 2249]))                  
+                :type "void")
+                nil [2150 2287])
+            ("blob_op_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2318 2331])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2332 2344]))                  
+                :type "void")
+                nil [2289 2370])
+            ("blob_op_with_id_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2409 2422])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2423 2443])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2444 2456]))                  
+                :type "void")
+                nil [2372 2502])
+            ("blob_op_with_handle_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2545 2558])
+                    ("blb" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2559 2581])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2582 2594]))                  
+                :type "void")
+                nil [2504 2635])
+            ("blob_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2659 2664]))                  
+                :type "void")
+                nil [2637 2926])
+            ("blob_super" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2951 2956]))                  
+                :type "void")
+                nil [2928 3919])
+            ("blob_open" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3943 3948]))                  
+                :type "void")
+                nil [3921 5538])
+            ("blob_delete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5564 5569]))                  
+                :type "void")
+                nil [5540 6295])
+            ("blob_resize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6321 6326]))                  
+                :type "void")
+                nil [6297 8171])
+            ("channel_ops" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8197 8202]))                  
+                :type "void")
+                nil [8173 8646])
+            ("blob_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8671 8676]))                  
+                :type "void")
+                nil [8648 10466])
+            ("blob_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10490 10495]))                  
+                :type "void")
+                nil [10468 12279])
+            ("blob_rw_verify" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12308 12313]))                  
+                :type "void")
+                nil [12281 13721])
+            ("blob_iter" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13745 13750]))                  
+                :type "void")
+                nil [13723 14698])
+            ("blob_xattr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14723 14728]))                  
+                :type "void")
+                nil [14700 16906])
+            ("bs_load" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16928 16933]))                  
+                :type "void")
+                nil [16908 19116])
+            ("bs_cluster_sz" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19253 19258]))                  
+                :type "void")
+                nil [19227 20108])
+            ("bs_resize_md" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [20438 20443]))                  
+                :type "void")
+                nil [20413 22027])
+            ("blob_serialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [22144 22149]))                  
+                :type "void")
+                nil [22117 24594])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [24605 24614])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24615 24627]))                  
+                :type "int")
+                nil [24596 26110]))          
+      :file "blob_ut.c"
+      :pointmax 26111
+      :fsize 26110
+      :lastmodtime '(22828 41326 971960 973000)
+      :unmatched-syntax nil))
+  :file "!home!cranechu!spdk!test!lib!blob!blob_ut!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

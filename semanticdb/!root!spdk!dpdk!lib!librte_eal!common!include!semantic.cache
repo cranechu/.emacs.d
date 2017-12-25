@@ -1,0 +1,1173 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_RTE_MALLOC_H_" variable (:constant-flag t) nil [1726 1740])
+            ("stdio.h" include (:system-flag t) nil [1858 1876])
+            ("stddef.h" include (:system-flag t) nil [1877 1896])
+            ("rte_memory.h" include (:system-flag t) nil [1897 1920])
+            ("rte_malloc_virt2phy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("phys_addr_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12331 12348]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [12299 12349])
+            ("rte_malloc_set_limit" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12022 12039])
+                    ("max" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12040 12051]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11997 12052])
+            ("rte_malloc_dump_stats" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11668 11676])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11677 11694]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11641 11695])
+            ("rte_malloc_get_socket_stats" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [11285 11296])
+                    ("socket_stats" variable
+                       (:pointer 1
+                        :type ("rte_malloc_socket_stats" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11299 11344]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11253 11345])
+            ("rte_malloc_validate" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10903 10919])
+                    ("size" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10920 10933]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10879 10934])
+            ("rte_free" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10253 10263]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10239 10264])
+            ("rte_calloc_socket" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9762 9779])
+                    ("num" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9780 9791])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9792 9804])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9805 9820])
+                    ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [9821 9832]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9737 9833])
+            ("rte_zmalloc_socket" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8637 8654])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8655 8667])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8668 8683])
+                    ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [8684 8695]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8611 8696])
+            ("rte_malloc_socket" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7540 7557])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7558 7570])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7571 7586])
+                    ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [7587 7598]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7515 7599])
+            ("rte_realloc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6508 6518])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6519 6531])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6532 6547]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6489 6548])
+            ("rte_calloc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5572 5589])
+                    ("num" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5590 5601])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5602 5614])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5615 5630]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5554 5631])
+            ("rte_zmalloc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4495 4512])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4513 4525])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4526 4541]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4476 4542])
+            ("rte_malloc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3447 3464])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3465 3477])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3478 3493]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3429 3494])
+            ("rte_malloc_socket_stats" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("heap_totalsz_bytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2094 2120])
+                    ("heap_freesz_bytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2150 2175])
+                    ("greatest_free_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2211 2237])
+                    ("free_count" variable (:type "unsigned int") (reparse-symbol classsubparts) [2283 2303])
+                    ("alloc_count" variable (:type "unsigned int") (reparse-symbol classsubparts) [2351 2372])
+                    ("heap_allocsz_bytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2424 2450]))                  )
+                (reparse-symbol extern-c-contents) [2060 2491]))          
+      :file "rte_malloc.h"
+      :pointmax 12408
+      :fsize 12407
+      :lastmodtime '(22925 57285 619775 536000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_RTE_MALLOC_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "rte_memory.h"
+      :fsize 7428
+      :lastmodtime '(22925 57285 619775 536000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_RTE_PCI_H_" variable (:constant-flag t) nil [3347 3358])
+            ("rte_pci_ioport_write" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("rte_pci_ioport" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19161 19186])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19189 19206])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19207 19218])
+                    ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19219 19232]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19135 19233])
+            ("rte_pci_ioport_read" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("rte_pci_ioport" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18776 18801])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18804 18815])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18816 18827])
+                    ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18828 18841]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18751 18842])
+            ("rte_pci_ioport_unmap" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("rte_pci_ioport" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18430 18455]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18405 18456])
+            ("rte_pci_ioport_map" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18157 18184])
+                    ("bar" variable (:type "int") (reparse-symbol arg-sub-list) [18185 18193])
+                    ("p" variable
+                       (:pointer 1
+                        :type ("rte_pci_ioport" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18196 18221]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [18134 18222])
+            ("rte_pci_ioport" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [17598 17625])
+                    ("base" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17627 17641])
+                    ("len" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17643 17656]))                  )
+                (reparse-symbol extern-c-contents) [17573 17701])
+            ("rte_pci_write_config" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17319 17355])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17358 17374])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17375 17386])
+                    ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17387 17400]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17294 17401])
+            ("rte_pci_read_config" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16905 16941])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16944 16954])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16955 16966])
+                    ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16967 16980]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16881 16981])
+            ("rte_pci_unregister" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("driver" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16541 16571]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16517 16572])
+            ("RTE_PMD_REGISTER_PCI" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [16153 16173])
+            ("rte_pci_register" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("driver" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16035 16065]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16013 16066])
+            ("rte_pci_dump" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15858 15866]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15840 15867])
+            ("rte_pci_detach" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15710 15742]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15691 15743])
+            ("rte_pci_probe_one" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15277 15309]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [15255 15310])
+            ("pci_unmap_resource" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("requested_addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14840 14861])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14862 14874]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14816 14875])
+            ("pci_map_resource" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("requested_addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14550 14571])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [14572 14579])
+                    ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14580 14593])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14596 14608])
+                    ("additional_flags" variable (:type "int") (reparse-symbol arg-sub-list) [14609 14630]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [14527 14631])
+            ("rte_pci_unmap_device" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13983 14010]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13957 14011])
+            ("rte_pci_map_device" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13802 13829]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13779 13830])
+            ("rte_pci_probe" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13347 13352]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13329 13353])
+            ("rte_pci_scan" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13237 13242]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [13220 13243])
+            ("rte_eal_compare_pci_addr" function
+               (:type "int"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12625 12657])
+                    ("addr2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12662 12695]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [12582 13085])
+            ("rte_pci_device_name" function
+               (:type "void"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11983 12015])
+                    ("output" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12018 12031])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12032 12044]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [11944 12210])
+            ("eal_parse_pci_DomBDF" function
+               (:type "int"
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11294 11312])
+                    ("dev_addr" variable
+                       (:pointer 1
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11313 11343]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [11255 11599])
+            ("eal_parse_pci_BDF" function
+               (:type "int"
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10609 10627])
+                    ("dev_addr" variable
+                       (:pointer 1
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10628 10658]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [10573 10875])
+            ("GET_PCIADDR_FIELD" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [9526 9543])
+            ("TAILQ_HEAD" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("mapped_pci_res_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9404 9424])
+                    ("" variable (:type ("mapped_pci_resource" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9425 9445]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9393 9446])
+            ("mapped_pci_resource" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("next" variable (:type "int") (reparse-symbol classsubparts) [9245 9250])
+                    ("pci_addr" variable (:type ("rte_pci_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [9253 9282])
+                    ("path" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [9284 9304])
+                    ("nb_maps" variable (:type "int") (reparse-symbol classsubparts) [9306 9318])
+                    ("maps" variable
+                       (:dereference 1
+                        :type ("pci_map" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [9320 9358]))                  )
+                (reparse-symbol extern-c-contents) [9182 9361])
+            ("pci_map" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [8933 8944])
+                    ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [8946 8957])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8959 8975])
+                    ("size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8977 8991])
+                    ("phaddr" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8993 9009]))                  )
+                (reparse-symbol extern-c-contents) [8915 9012])
+            ("RTE_PCI_DRV_INTR_RMV" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8837 8857])
+            ("RTE_PCI_DRV_INTR_LSC" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8746 8766])
+            ("RTE_PCI_DRV_NEED_MAPPING" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [8655 8679])
+            ("rte_pci_bus" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("bus" variable (:type ("rte_bus" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8364 8383])
+                    ("device_list" variable (:type ("rte_pci_device_list" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8433 8472])
+                    ("driver_list" variable (:type ("rte_pci_driver_list" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8503 8542]))                  )
+                (reparse-symbol extern-c-contents) [8342 8574])
+            ("rte_pci_driver" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("next" variable (:type "int") (reparse-symbol classsubparts) [7820 7825])
+                    ("driver" variable (:type ("rte_driver" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [7855 7880])
+                    ("bus" variable
+                       (:pointer 1
+                        :type ("rte_pci_bus" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [7925 7949])
+                    ("probe" variable
+                       (:pointer 1
+                        :type ("pci_probe_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7993 8012])
+                    ("remove" variable
+                       (:pointer 1
+                        :type ("pci_remove_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8065 8086])
+                    ("id_table" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [8138 8172])
+                    ("drv_flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8209 8228]))                  )
+                (reparse-symbol extern-c-contents) [7767 8296])
+            ("pci_remove_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7692 7716]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7673 7717])
+            ("pci_probe_t" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7534 7558])
+                    ("" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7559 7583]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7516 7584])
+            ("RTE_PCI_DEVICE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6970 6984])
+            ("RTE_CLASS_ANY_ID" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6851 6867])
+            ("PCI_ANY_ID" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6823 6833])
+            ("RTE_DEV_TO_PCI" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6690 6704])
+            ("rte_pci_device" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("next" variable (:type "int") (reparse-symbol classsubparts) [5906 5911])
+                    ("device" variable (:type ("rte_device" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5951 5976])
+                    ("addr" variable (:type ("rte_pci_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [6020 6045])
+                    ("id" variable (:type ("rte_pci_id" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [6083 6104])
+                    ("mem_resource" variable
+                       (:dereference 1
+                        :type ("rte_mem_resource" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6140 6195])
+                    ("intr_handle" variable (:type ("rte_intr_handle" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [6231 6266])
+                    ("driver" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6297 6327])
+                    ("max_vfs" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6364 6381])
+                    ("kdrv" variable (:type ("rte_kernel_driver" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [6438 6466])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [6513 6543]))                  )
+                (reparse-symbol extern-c-contents) [5853 6584])
+            ("rte_kernel_driver" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("RTE_KDRV_UNKNOWN" variable
+                       (:constant-flag t
+                        :default-value (5705 5706)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5686 5706])
+                    ("RTE_KDRV_IGB_UIO" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5709 5726])
+                    ("RTE_KDRV_VFIO" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5728 5742])
+                    ("RTE_KDRV_UIO_GENERIC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5744 5765])
+                    ("RTE_KDRV_NIC_UIO" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5767 5784])
+                    ("RTE_KDRV_NONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5786 5800]))                  )
+                (reparse-symbol extern-c-contents) [5660 5803])
+            ("rte_devargs" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :prototype t)
+                (reparse-symbol extern-c-contents) [5639 5658])
+            ("rte_pci_addr" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("domain" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5420 5436])
+                    ("bus" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5475 5487])
+                    ("devid" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5527 5541])
+                    ("function" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5578 5595]))                  )
+                (reparse-symbol extern-c-contents) [5397 5637])
+            ("rte_pci_id" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("class_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4963 4981])
+                    ("vendor_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5054 5073])
+                    ("device_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5118 5137])
+                    ("subsystem_vendor_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5182 5211])
+                    ("subsystem_device_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5256 5285]))                  )
+                (reparse-symbol extern-c-contents) [4942 5331])
+            ("FOREACH_DRIVER_ON_PCIBUS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4721 4745])
+            ("FOREACH_DEVICE_ON_PCIBUS" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4629 4653])
+            ("TAILQ_HEAD" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("rte_pci_driver_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4558 4578])
+                    ("" variable (:type ("rte_pci_driver" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4579 4594]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4547 4595])
+            ("TAILQ_HEAD" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("rte_pci_device_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4482 4502])
+                    ("" variable (:type ("rte_pci_device" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4503 4518]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4471 4519])
+            ("rte_pci_driver" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :prototype t)
+                (reparse-symbol extern-c-contents) [4420 4442])
+            ("rte_pci_device" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :prototype t)
+                (reparse-symbol extern-c-contents) [4397 4419])
+            ("PCI_BUS_NAME" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4350 4362])
+            ("PCI_MAX_RESOURCE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4299 4315])
+            ("PCI_RESOURCE_FMT_NVAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4226 4247])
+            ("PCI_FMT_NVAL" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4157 4169])
+            ("PCI_SHORT_PRI_FMT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [4033 4050])
+            ("PCI_PRI_STR_SIZE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3908 3924])
+            ("PCI_PRI_FMT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3838 3849])
+            ("pci_get_sysfs_path" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3753 3758]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3722 3759])
+            ("rte_bus.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3658 3678])
+            ("rte_dev.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3637 3657])
+            ("rte_interrupts.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3609 3636])
+            ("rte_debug.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3586 3608])
+            ("inttypes.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3563 3584])
+            ("stdint.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3543 3562])
+            ("sys/queue.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3520 3542])
+            ("errno.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3501 3519])
+            ("limits.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3481 3500])
+            ("stdlib.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3461 3480])
+            ("stdio.h" include
+               (:typemodifiers ("extern" "\"C\"")
+                :system-flag t)
+                (reparse-symbol extern-c-contents) [3442 3460]))          
+      :file "rte_pci.h"
+      :pointmax 19289
+      :fsize 19288
+      :lastmodtime '(22925 57285 619775 536000)
+      :unmatched-syntax '((semantic-list 9223 . 9244) (symbol 9212 . 9223) (semantic-list 7803 . 7819) (symbol 7792 . 7803) (TYPEDEF 7665 . 7672) (TYPEDEF 7508 . 7515) (semantic-list 5889 . 5905) (symbol 5878 . 5889))
+      :lexical-table 
+        '(("RTE_PCI_DRV_NEED_MAPPING" . ((number "0x0001" 8680 . 8686)))
+          ("PCI_RESOURCE_FMT_NVAL" . ((number "3" 4248 . 4249)))
+          ("RTE_PCI_DRV_INTR_LSC" . ((number "0x0008" 8767 . 8773)))
+          ("RTE_PMD_REGISTER_PCI" (spp-arg-list ("nm" "pci_drv") 16173 . 16186) . 
+              ((symbol "RTE_INIT" 16189 . 16197) (semantic-list "(pciinitfn_ ##nm)" 16197 . 16214) (punctuation ";" 16214 . 16215) (STATIC "static" 16218 . 16224) (VOID "void" 16225 . 16229) (spp-symbol-merge ((symbol "pciinitfn_" 16230 . 16240) (symbol "nm" 16243 . 16245)) 16230 . 16245) (semantic-list "(void)" 16245 . 16251) (semantic-list "{\\
+	(pci_drv).driver.name = RTE_STR(nm);\\
+	rte_pci_register(&pci_drv); \\
+}" 16254 . 16328) (symbol "RTE_PMD_EXPORT_NAME" 16331 . 16350) (semantic-list "(nm, __COUNTER__)" 16350 . 16367)))
+          ("FOREACH_DRIVER_ON_PCIBUS" (spp-arg-list ("p") 4745 . 4748) . ((symbol "TAILQ_FOREACH" 4753 . 4766) (semantic-list "(p, &(rte_pci_bus.driver_list), next)" 4766 . 4803)))
+          ("RTE_DEV_TO_PCI" (spp-arg-list ("ptr") 6704 . 6709) . ((symbol "container_of" 6710 . 6722) (semantic-list "(ptr, struct rte_pci_device, device)" 6722 . 6758)))
+          ("PCI_ANY_ID" . ((semantic-list "(0xffff)" 6834 . 6842)))
+          ("RTE_PCI_DRV_INTR_RMV" . ((number "0x0010" 8858 . 8864)))
+          ("PCI_BUS_NAME" . ((string "\"PCI\"" 4363 . 4368)))
+          ("RTE_CLASS_ANY_ID" . ((semantic-list "(0xffffff)" 6868 . 6878)))
+          ("RTE_PCI_DEVICE" (spp-arg-list ("vend" "dev") 6984 . 6995) . 
+              ((symbol "RTE_CLASS_ANY_ID" 6999 . 7015) (punctuation "," 7015 . 7016) (semantic-list "(vend)" 7028 . 7034) (punctuation "," 7034 . 7035) (semantic-list "(dev)" 7057 . 7062) (punctuation "," 7062 . 7063) (symbol "PCI_ANY_ID" 7086 . 7096) (punctuation "," 7096 . 7097) (symbol "PCI_ANY_ID" 7115 . 7125)))
+          ("_RTE_PCI_H_")
+          ("PCI_SHORT_PRI_FMT" . 
+              ((string "\"%.2\"" 4051 . 4056) (symbol "PRIx8" 4057 . 4062) (string "\":%.2\"" 4063 . 4069) (symbol "PRIx8" 4070 . 4075) (string "\".%\"" 4076 . 4080) (symbol "PRIx8" 4081 . 4086)))
+          ("PCI_FMT_NVAL" . ((number "4" 4170 . 4171)))
+          ("PCI_MAX_RESOURCE" . ((number "6" 4316 . 4317)))
+          ("PCI_PRI_FMT" . 
+              ((string "\"%.4\"" 3850 . 3855) (symbol "PRIx16" 3856 . 3862) (string "\":%.2\"" 3863 . 3869) (symbol "PRIx8" 3870 . 3875) (string "\":%.2\"" 3876 . 3882) (symbol "PRIx8" 3883 . 3888) (string "\".%\"" 3889 . 3893) (symbol "PRIx8" 3894 . 3899)))
+          ("FOREACH_DEVICE_ON_PCIBUS" (spp-arg-list ("p") 4653 . 4656) . ((symbol "TAILQ_FOREACH" 4661 . 4674) (semantic-list "(p, &(rte_pci_bus.device_list), next)" 4674 . 4711)))
+          ("PCI_PRI_STR_SIZE" . ((SIZEOF "sizeof" 3925 . 3931) (semantic-list "(\"XXXX:XX:XX.X\")" 3931 . 3947)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "rte_bus.h"
+      :fsize 4327
+      :lastmodtime '(22925 57285 618775 558000))
+    (semanticdb-table "semanticdb-table"
+      :file "rte_dev.h"
+      :fsize 7219
+      :lastmodtime '(22925 57285 618775 558000))
+    (semanticdb-table "semanticdb-table"
+      :file "rte_interrupts.h"
+      :fsize 3734
+      :lastmodtime '(22925 57285 618775 558000))
+    (semanticdb-table "semanticdb-table"
+      :file "rte_debug.h"
+      :fsize 3675
+      :lastmodtime '(22925 57285 618775 558000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_RTE_LCORE_H_" variable (:constant-flag t) nil [1725 1738])
+            ("rte_per_lcore.h" include (:system-flag t) nil [1804 1830])
+            ("rte_eal.h" include (:system-flag t) nil [1831 1851])
+            ("rte_launch.h" include (:system-flag t) nil [1852 1875])
+            ("rte_thread_setname" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("id" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7226 7239])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7240 7257]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7203 7258])
+            ("rte_thread_get_affinity" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("cpusetp" variable
+                       (:pointer 1
+                        :type ("rte_cpuset_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6964 6986]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6935 6987])
+            ("rte_thread_set_affinity" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("cpusetp" variable
+                       (:pointer 1
+                        :type ("rte_cpuset_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6706 6728]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6678 6729])
+            ("RTE_LCORE_FOREACH_SLAVE" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6282 6305])
+            ("RTE_LCORE_FOREACH" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6060 6077])
+            ("rte_get_next_lcore" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("i" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5718 5729])
+                    ("skip_master" variable (:type "int") (reparse-symbol arg-sub-list) [5730 5746])
+                    ("wrap" variable (:type "int") (reparse-symbol arg-sub-list) [5747 5756]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [5676 6004])
+            ("rte_lcore_is_enabled" function
+               (:type "int"
+                :arguments 
+                  ( ("lcore_id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5159 5177]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [5120 5327])
+            ("rte_lcore_to_socket_id" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("lcore_id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4839 4857]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [4793 4903])
+            ("rte_socket_id" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "unsigned int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4573 4578]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [4550 4579])
+            ("rte_lcore_index" function
+               (:type "int"
+                :arguments 
+                  ( ("lcore_id" variable (:type "int") (reparse-symbol arg-sub-list) [4245 4258]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [4211 4398])
+            ("rte_lcore_count" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3857 3862]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [3818 3953])
+            ("rte_get_master_lcore" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3611 3616]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [3567 3671])
+            ("rte_lcore_id" function
+               (:type "unsigned int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3434 3439]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [3398 3477])
+            ("RTE_DECLARE_PER_LCORE" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("rte_cpuset_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3195 3208])
+                    ("" variable (:type ("_cpuset" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3209 3217]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3173 3218])
+            ("RTE_DECLARE_PER_LCORE" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3119 3128])
+                    ("" variable (:type ("_lcore_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3129 3139]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3097 3140])
+            ("lcore_config" variable
+               (:type ("lcore_config" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :dereference 1)
+                (reparse-symbol extern-c-contents) [3040 3095])
+            ("lcore_config" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("detected" variable (:type "unsigned int") (reparse-symbol classsubparts) [2213 2231])
+                    ("thread_id" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2276 2296])
+                    ("pipe_master2slave" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2331 2356])
+                    ("pipe_slave2master" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2398 2423])
+                    ("f" variable
+                       (:typemodifiers ("volatile")
+                        :type "int")
+                        (reparse-symbol classsubparts) [2484 2495])
+                    ("arg" variable
+                       (:typemodifiers ("volatile")
+                        :type "int")
+                        (reparse-symbol classsubparts) [2537 2550])
+                    ("ret" variable
+                       (:typemodifiers ("volatile")
+                        :type "int")
+                        (reparse-symbol classsubparts) [2587 2604])
+                    ("state" variable
+                       (:typemodifiers ("volatile")
+                        :type ("rte_lcore_state_t" type (:type "enum") nil nil))
+                        (reparse-symbol classsubparts) [2648 2686])
+                    ("socket_id" variable (:type "unsigned int") (reparse-symbol classsubparts) [2708 2727])
+                    ("core_id" variable (:type "unsigned int") (reparse-symbol classsubparts) [2778 2795])
+                    ("core_index" variable (:type "int") (reparse-symbol classsubparts) [2851 2866])
+                    ("cpuset" variable (:type ("rte_cpuset_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2919 2939]))                  )
+                (reparse-symbol extern-c-contents) [2190 2992])
+            ("rte_cpuset_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("cpu_set_t" type (:type "class") nil nil))
+                (reparse-symbol extern-c-contents) [2003 2034])
+            ("LCORE_ID_ANY" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1925 1937]))          
+      :file "rte_lcore.h"
+      :pointmax 7317
+      :fsize 7316
+      :lastmodtime '(22925 57285 618775 558000)
+      :unmatched-syntax '((punctuation 2535 . 2536) (VOID 2530 . 2534) (punctuation 2482 . 2483) (symbol 2465 . 2481))
+      :lexical-table 
+        '(("RTE_LCORE_FOREACH_SLAVE" (spp-arg-list ("i") 6305 . 6308) . ((FOR "for" 6316 . 6319) (semantic-list "(i = rte_get_next_lcore(-1, 1, 0);				\\
+	     i<RTE_MAX_LCORE;						\\
+	     i = rte_get_next_lcore(i, 1, 0))" 6320 . 6428)))
+          ("RTE_LCORE_FOREACH" (spp-arg-list ("i") 6077 . 6080) . ((FOR "for" 6089 . 6092) (semantic-list "(i = rte_get_next_lcore(-1, 0, 0);				\\
+	     i<RTE_MAX_LCORE;						\\
+	     i = rte_get_next_lcore(i, 0, 0))" 6093 . 6201)))
+          ("LCORE_ID_ANY" . ((symbol "UINT32_MAX" 1942 . 1952)))
+          ("_RTE_LCORE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "rte_per_lcore.h"
+      :fsize 2718
+      :lastmodtime '(22925 57285 620775 514000))
+    (semanticdb-table "semanticdb-table"
+      :file "rte_eal.h"
+      :fsize 9320
+      :lastmodtime '(22925 57285 618775 558000))
+    (semanticdb-table "semanticdb-table"
+      :file "rte_launch.h"
+      :fsize 6016
+      :lastmodtime '(22925 57285 618775 558000)))
+  :file "!root!spdk!dpdk!lib!librte_eal!common!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

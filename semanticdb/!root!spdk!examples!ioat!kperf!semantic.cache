@@ -1,0 +1,110 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("ioat_max" variable (:constant-flag t) nil [1699 1707])
+            ("check_modules" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("driver_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1759 1777]))                  
+                :type "int")
+                nil [1734 2084])
+            ("get_u32_from_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sysfs_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2115 2138])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2139 2155]))                  
+                :type "int")
+                nil [2086 2359])
+            ("get_str_from_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sysfs_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2390 2413])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2414 2424])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [2425 2433]))                  
+                :type "int")
+                nil [2361 2600])
+            ("put_u32_to_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sysfs_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2629 2652])
+                    ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2653 2668]))                  
+                :type "int")
+                nil [2602 2981])
+            ("get_u64_from_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sysfs_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3012 3035])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3036 3052]))                  
+                :type "int")
+                nil [2983 3257])
+            ("get_dma_channel_count" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3292 3297]))                  
+                :type "int")
+                nil [3259 3580])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("program_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3600 3619]))                  
+                :type "void")
+                nil [3582 3906])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3917 3926])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3927 3940]))                  
+                :type "int")
+                nil [3908 8799]))          
+      :file "ioat_kperf.c"
+      :pointmax 8800
+      :fsize 8799
+      :lastmodtime '(22914 62598 401370 752000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ioat_max" (spp-arg-list ("a" "b") 1707 . 1712) . ((semantic-list "(((a)>(b))?(a):(b))" 1713 . 1732)))
+          )
+))
+  :file "!root!spdk!examples!ioat!kperf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

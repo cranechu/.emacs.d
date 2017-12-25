@@ -1,0 +1,12 @@
+/root/spdk/dpdk/lib/librte_eal/linuxapp/eal/eal_pci_uio.c
+/root/spdk/dpdk/lib/librte_eal/linuxapp/eal/#eal_pci_uio.c#
+/root/spdk/examples/nvme/hello_world/hello_world.c
+/root/spdk/examples/nvme/hello_world/#hello_world.c#
+/root/spdk/dpdk/lib/librte_eal/common/eal_common_pci_uio.c
+/root/spdk/dpdk/lib/librte_eal/common/#eal_common_pci_uio.c#
+/root/spdk/dpdk/lib/librte_eal/linuxapp/eal/eal_pci.c
+/root/spdk/dpdk/lib/librte_eal/linuxapp/eal/#eal_pci.c#
+/root/spdk/dpdk/lib/librte_eal/common/eal_common_pci.c
+/root/spdk/dpdk/lib/librte_eal/common/#eal_common_pci.c#
+/root/spdk/lib/env_dpdk/pci.c
+/root/spdk/lib/env_dpdk/#pci.c#

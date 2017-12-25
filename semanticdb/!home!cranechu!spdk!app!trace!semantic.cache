@@ -1,0 +1,270 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("map" include (:system-flag t) nil [1691 1705])
+            ("spdk/trace.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [1720 1743])
+            ("g_histories" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("spdk_trace_histories" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1747 1795])
+            ("usage" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1815 1820]))                  
+                :type "void")
+                nil [1797 1821])
+            ("entry_key" type
+               (:members 
+                  ( ("entry_key" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("_lcore" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1853 1869])
+                            ("_tsc" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1870 1884]))                          
+                        :type ("entry_key" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1843 1914])
+                    ("lcore" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1916 1931])
+                    ("tsc" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1933 1946]))                  
+                :type "struct")
+                nil [1823 1949])
+            ("compare_entry_key" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1977 1984])
+                    ("()" function
+                       (:methodconst-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("first" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("entry_key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2002 2025])
+                            ("second" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("entry_key" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2026 2050]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1986 2182]))                  
+                :type "class")
+                nil [1951 2185])
+            ("entry_map" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("entry_key" type nil nil nil)
+                          ("spdk_trace_entry" type (:pointer 1) nil nil)
+                          ("compare_entry_key" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :type "typedef")
+                nil [2187 2264])
+            ("g_entry_map" variable (:type ("entry_map" type (:type "class") nil nil)) nil [2266 2288])
+            ("object_stats" type
+               (:members 
+                  ( ("start" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil)
+                              ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2314 2349])
+                    ("index" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil)
+                              ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2351 2386])
+                    ("size" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil)
+                              ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2388 2422])
+                    ("tpoint_id" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil)
+                              ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2424 2463])
+                    ("counter" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2465 2482])
+                    ("object_stats" function
+                       (:constructor-flag t
+                        :type ("object_stats" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [2485 2554]))                  
+                :type "struct")
+                nil [2290 2557])
+            ("g_stats" variable
+               (:dereference 1
+                :type ("object_stats" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2559 2610])
+            ("exe_name" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2612 2634])
+            ("verbose" variable
+               (:typemodifiers ("static")
+                :default-value "1"
+                :type "int")
+                nil [2635 2658])
+            ("g_fudge_factor" variable
+               (:typemodifiers ("static")
+                :default-value "20"
+                :type "int")
+                nil [2659 2690])
+            ("tsc_rate" variable
+               (:typemodifiers ("static")
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [2692 2717])
+            ("first_tsc" variable
+               (:typemodifiers ("static")
+                :default-value "0x0"
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [2718 2750])
+            ("last_tsc" variable
+               (:typemodifiers ("static")
+                :default-value "-1ULL"
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [2751 2784])
+            ("get_us_from_tsc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tsc" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2815 2828])
+                    ("tsc_rate" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2829 2847]))                  
+                :type "float")
+                nil [2786 2898])
+            ("print_ptr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg_string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2922 2945])
+                    ("arg" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2946 2959]))                  
+                :type "void")
+                nil [2900 3008])
+            ("print_uint64" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg_string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3035 3058])
+                    ("arg" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3059 3072]))                  
+                :type "void")
+                nil [3010 3272])
+            ("print_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3297 3311]))                  
+                :type "void")
+                nil [3274 3398])
+            ("print_object_id" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3428 3441])
+                    ("id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3442 3454]))                  
+                :type "void")
+                nil [3400 3528])
+            ("print_float" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg_string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3554 3577])
+                    ("arg" variable (:type "float") (reparse-symbol arg-sub-list) [3578 3588]))                  
+                :type "void")
+                nil [3530 3634])
+            ("print_arg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg_is_ptr" variable (:type "bool") (reparse-symbol arg-sub-list) [3658 3674])
+                    ("arg_string" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3675 3698])
+                    ("arg" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3699 3712]))                  
+                :type "void")
+                nil [3636 3838])
+            ("print_event" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("spdk_trace_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3864 3891])
+                    ("tsc_rate" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3892 3910])
+                    ("tsc_offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3916 3936])
+                    ("lcore" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3937 3952]))                  
+                :type "void")
+                nil [3840 5631])
+            ("process_event" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("spdk_trace_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5659 5686])
+                    ("tsc_rate" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5687 5705])
+                    ("tsc_offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5713 5733])
+                    ("lcore" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5734 5749]))                  
+                :type "void")
+                nil [5633 5819])
+            ("populate_events" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("history" variable
+                       (:pointer 1
+                        :type ("spdk_trace_history" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5848 5883]))                  
+                :type "int")
+                nil [5821 7312])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7332 7337]))                  
+                :type "void")
+                nil [7314 8045])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8056 8065])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8066 8078]))                  
+                :type "int")
+                nil [8047 10650]))          
+      :file "trace.cpp"
+      :pointmax 10651
+      :fsize 10650
+      :lastmodtime '(22815 40186 553500 344000)
+      :unmatched-syntax nil))
+  :file "!home!cranechu!spdk!app!trace!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

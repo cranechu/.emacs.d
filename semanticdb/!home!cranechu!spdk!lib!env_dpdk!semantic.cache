@@ -1,0 +1,235 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "pci.c"
+      :pointmax 201
+      :fsize 13453
+      :lastmodtime '(22815 40186 568514 428000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "env_internal.h"
+      :fsize 2627
+      :lastmodtime '(22815 40186 568514 428000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("env_internal.h" include nil nil [1665 1690])
+            ("spdk/pci_ids.h" include nil nil [1692 1717])
+            ("nvme_pci_driver_id" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+#if RTE_VERSION >= RTE_VERSION_NUM(16, 7, 0, 1)
+	{
+		.class_id = SPDK_PCI_CLASS_NVME,
+		.vendor_id = PCI_ANY_ID,
+		.device_id = PCI_ANY_ID,
+		.subsystem_vendor_id = PCI_ANY_ID,
+		.subsystem_device_id = PCI_ANY_ID,
+	},
+#else
+	{RTE_PCI_DEVICE(0x8086, 0x0953)},
+#endif
+	{ .vendor_id = 0, /* sentinel */ },
+}"
+                :type ("rte_pci_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1719 2074])
+            ("g_nvme_pci_drv" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.driver = {
+		.drv_flags	= RTE_PCI_DRV_NEED_MAPPING,
+		.id_table	= nvme_pci_driver_id,
+#if RTE_VERSION >= RTE_VERSION_NUM(16, 11, 0, 0)
+		.probe		= spdk_pci_device_init,
+		.remove		= spdk_pci_device_fini,
+#else
+		.devinit	= spdk_pci_device_init,
+		.devuninit	= spdk_pci_device_fini,
+		.name		= \"spdk_nvme\",
+#endif
+	},
+
+	.cb_fn = NULL,
+	.cb_arg = NULL,
+	.mtx = PTHREAD_MUTEX_INITIALIZER,
+}"
+                :type ("spdk_pci_enum_ctx" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2076 2517])
+            ("RTE_PMD_REGISTER_PCI" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("spdk_nvme" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2589 2599])
+                    ("" variable (:type ("g_nvme_pci_drv" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2600 2615])
+                    ("" variable (:type ("driver" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2615 2622]))                  
+                :type "int")
+                nil [2568 2623])
+            ("spdk_pci_nvme_device_attach" function
+               (:arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3066 3091])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3099 3114])
+                    ("pci_address" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3115 3149]))                  
+                :type "int")
+                nil [3034 3234])
+            ("spdk_pci_nvme_enumerate" function
+               (:arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3264 3289])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3290 3305]))                  
+                :type "int")
+                nil [3236 3373]))          
+      :file "pci_nvme.c"
+      :pointmax 3374
+      :fsize 2913
+      :lastmodtime '(22762 63405 366082 686000)
+      :unmatched-syntax '((punctuation 2614 . 2615)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "pci_ioat.c"
+      :pointmax 201
+      :fsize 5420
+      :lastmodtime '(22762 63405 366082 686000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "env.c"
+      :pointmax 201
+      :fsize 7184
+      :lastmodtime '(22843 59012 504468 710000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("env_internal.h" include nil nil [1691 1716])
+            ("rte_config.h" include (:system-flag t) nil [1718 1741])
+            ("rte_eal.h" include (:system-flag t) nil [1742 1762])
+            ("SPDK_ENV_DPDK_DEFAULT_NAME" variable (:constant-flag t) nil [1772 1798])
+            ("SPDK_ENV_DPDK_DEFAULT_SHM_ID" variable (:constant-flag t) nil [1815 1843])
+            ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" variable (:constant-flag t) nil [1856 1886])
+            ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" variable (:constant-flag t) nil [1899 1932])
+            ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" variable (:constant-flag t) nil [1944 1977])
+            ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" variable (:constant-flag t) nil [1989 2020])
+            ("_sprintf_alloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2058 2077])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2078 2082]))                  
+                :type "char")
+                nil [2029 3142])
+            ("spdk_env_opts_init" function
+               (:arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_env_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3168 3195]))                  
+                :type "void")
+                nil [3144 3578])
+            ("spdk_free_args" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3607 3619])
+                    ("argcount" variable (:type "int") (reparse-symbol arg-sub-list) [3620 3633]))                  
+                :type "void")
+                nil [3580 3765])
+            ("spdk_push_arg" function
+               (:pointer 2
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3796 3809])
+                    ("argcount" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3810 3824])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3825 3835]))                  
+                :type "char")
+                nil [3767 4075])
+            ("spdk_build_eal_cmdline" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_env_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4111 4144])
+                    ("out" variable
+                       (:pointer 2
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4145 4158]))                  
+                :type "int")
+                nil [4077 5857])
+            ("spdk_env_init" function
+               (:arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_env_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5878 5911]))                  
+                :type "void")
+                nil [5859 6873]))          
+      :file "init.c"
+      :pointmax 6874
+      :fsize 6873
+      :lastmodtime '(22815 40186 568514 428000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_ENV_DPDK_DEFAULT_SHM_ID" . ((punctuation "-" 1845 . 1846) (number "1" 1846 . 1847)))
+          ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" . ((punctuation "-" 1888 . 1889) (number "1" 1889 . 1890)))
+          ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" . ((punctuation "-" 1933 . 1934) (number "1" 1934 . 1935)))
+          ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" . ((punctuation "-" 1978 . 1979) (number "1" 1979 . 1980)))
+          ("SPDK_ENV_DPDK_DEFAULT_NAME" . ((string "\"spdk\"" 1800 . 1806)))
+          ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" . ((string "\"0x1\"" 2022 . 2027)))
+          )
+))
+  :file "!home!cranechu!spdk!lib!env_dpdk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

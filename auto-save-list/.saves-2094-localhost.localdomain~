@@ -1,0 +1,10 @@
+/root/spdk/test/lib/bdev/bdevperf/bdevperf.c
+/root/spdk/test/lib/bdev/bdevperf/#bdevperf.c#
+/root/.emacs
+/root/#.emacs#
+/root/spdk/lib/bdev/bdev.c
+/root/spdk/lib/bdev/#bdev.c#
+/root/spdk/TAGS
+/root/spdk/#TAGS#
+/root/spdk/lib/event/reactor.c
+/root/spdk/lib/event/#reactor.c#

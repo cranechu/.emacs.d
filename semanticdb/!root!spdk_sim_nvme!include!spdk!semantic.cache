@@ -1,0 +1,89 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("SPDK_MMIO_H" variable (:constant-flag t) nil [1747 1758])
+            ("spdk/stdinc.h" include nil nil [1760 1784])
+            ("spdk_mmio_write_8" function
+               (:type "void"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2900 2924])
+                    ("val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2925 2938]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [2863 3238])
+            ("spdk_mmio_read_8" function
+               (:type ("uint64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2430 2454]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [2390 2861])
+            ("spdk_mmio_write_4" function
+               (:type "void"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2211 2235])
+                    ("val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2236 2249]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [2174 2388])
+            ("spdk_mmio_read_4" function
+               (:type ("uint32_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2097 2127]))                  
+                :typemodifiers ("extern" "\"C\"" "static" "inline"))
+                (reparse-symbol extern-c-contents) [2057 2172])
+            ("SPDK_NVME_DEV_SIMULATED" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2025 2048])
+            ("SPDK_MMIO_64BIT" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1902 1917])
+            ("spdk/env.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [1853 1874])
+            ("spdk/barrier.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [1826 1851]))          
+      :file "mmio.h"
+      :pointmax 3276
+      :fsize 3275
+      :lastmodtime '(22904 22836 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_MMIO_64BIT" . ((number "1" 1918 . 1919)))
+          ("SPDK_NVME_DEV_SIMULATED" . ((semantic-list "(true)" 2049 . 2055)))
+          ("SPDK_MMIO_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "stdinc.h"
+      :fsize 2744
+      :lastmodtime '(22904 22836 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "env.h"
+      :fsize 14416
+      :lastmodtime '(22904 22836 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "barrier.h"
+      :fsize 2124
+      :lastmodtime '(22904 22836 0 0)))
+  :file "!root!spdk_sim_nvme!include!spdk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

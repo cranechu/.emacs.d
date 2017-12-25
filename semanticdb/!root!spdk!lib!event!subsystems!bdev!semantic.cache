@@ -1,0 +1,72 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/bdev.h" include nil nil [1691 1713])
+            ("spdk_internal/event.h" include nil nil [1715 1747])
+            ("spdk_bdev_initialize_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1791 1804])
+                    ("rc" variable (:type "int") (reparse-symbol arg-sub-list) [1805 1812]))                  
+                :type "void")
+                nil [1749 1847])
+            ("spdk_bdev_subsystem_start_poller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_bdev_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1894 1928])
+                    ("fn" variable (:type ("spdk_bdev_poller_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1934 1957])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1963 1973])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1979 1994])
+                    ("period_microseconds" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2000 2029]))                  
+                :type "void")
+                nil [1849 2157])
+            ("spdk_bdev_subsystem_stop_poller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_bdev_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2203 2237]))                  
+                :type "void")
+                nil [2159 2304])
+            ("spdk_bdev_subsystem_initialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2349 2354]))                  
+                :type "void")
+                nil [2306 2501])
+            ("spdk_bdev_subsystem_finish" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2541 2546]))                  
+                :type "int")
+                nil [2503 2578]))          
+      :file "bdev.c"
+      :pointmax 2730
+      :fsize 2729
+      :lastmodtime '(22910 40989 221425 911000)
+      :unmatched-syntax '((semantic-list 2717 . 2729) (symbol 2696 . 2717) (semantic-list 2603 . 2695) (symbol 2580 . 2603))))
+  :file "!root!spdk!lib!event!subsystems!bdev!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

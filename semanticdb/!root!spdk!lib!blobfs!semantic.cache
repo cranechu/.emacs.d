@@ -1,0 +1,2019 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/blobfs.h" include nil nil [1691 1715])
+            ("blobfs_internal.h" include nil nil [1716 1744])
+            ("spdk/queue.h" include nil nil [1746 1769])
+            ("spdk/io_channel.h" include nil nil [1770 1798])
+            ("spdk/assert.h" include nil nil [1799 1823])
+            ("spdk/env.h" include nil nil [1824 1845])
+            ("spdk/util.h" include nil nil [1846 1868])
+            ("spdk_internal/log.h" include nil nil [1869 1899])
+            ("BLOBFS_TRACE" variable (:constant-flag t) nil [1909 1921])
+            ("BLOBFS_TRACE_RW" variable (:constant-flag t) nil [2023 2038])
+            ("BLOBFS_CACHE_SIZE" variable (:constant-flag t) nil [2143 2160])
+            ("g_fs_cache_size" variable
+               (:typemodifiers ("static")
+                :default-value "BLOBFS_CACHE_SIZE"
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [2190 2242])
+            ("g_cache_pool" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("spdk_mempool" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2243 2284])
+            ("g_caches" variable (:type "int") nil [2316 2325])
+            ("g_fs_count" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [2326 2352])
+            ("g_cache_init_lock" variable
+               (:typemodifiers ("static")
+                :default-value "PTHREAD_MUTEX_INITIALIZER"
+                :type ("pthread_mutex_t" type (:type "class") nil nil))
+                nil [2353 2422])
+            ("g_caches_lock" variable
+               (:typemodifiers ("static")
+                :type ("pthread_spinlock_t" type (:type "class") nil nil))
+                nil [2423 2463])
+            ("__sem_post" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2488 2498])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2499 2511]))                  
+                :type "void")
+                nil [2465 2551])
+            ("spdk_cache_buffer_free" function
+               (:arguments 
+                  ( ("cache_buffer" variable
+                       (:pointer 1
+                        :type ("cache_buffer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2581 2615]))                  
+                :type "void")
+                nil [2553 2692])
+            ("CACHE_READAHEAD_THRESHOLD" variable (:constant-flag t) nil [2702 2727])
+            ("spdk_file" type
+               (:members 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2762 2789])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2791 2814])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2816 2829])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2831 2848])
+                    ("open_for_writing" variable (:type "bool") (reparse-symbol classsubparts) [2850 2874])
+                    ("length_flushed" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2876 2901])
+                    ("append_pos" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2903 2924])
+                    ("seq_byte_count" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2926 2951])
+                    ("next_seq_offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2953 2979])
+                    ("priority" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2981 3000])
+                    ("tailq" variable (:type "int") (reparse-symbol classsubparts) [3025 3031])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3033 3054])
+                    ("ref_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3056 3076])
+                    ("lock" variable (:type ("pthread_spinlock_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3078 3102])
+                    ("last" variable
+                       (:pointer 1
+                        :type ("cache_buffer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3104 3130])
+                    ("tree" variable
+                       (:pointer 1
+                        :type ("cache_tree" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3132 3156])
+                    ("open_requests" variable (:type "int") (reparse-symbol classsubparts) [3206 3220])
+                    ("sync_requests" variable (:type "int") (reparse-symbol classsubparts) [3270 3284])
+                    ("cache_tailq" variable (:type "int") (reparse-symbol classsubparts) [3309 3321]))                  
+                :type "struct")
+                nil [2742 3324])
+            ("spdk_filesystem" type
+               (:members 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3352 3379])
+                    ("files" variable (:type "int") (reparse-symbol classsubparts) [3405 3411])
+                    ("bs_opts" variable (:type ("spdk_bs_opts" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3413 3441])
+                    ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3443 3468])
+                    ("send_request" variable (:type ("fs_send_request_fn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3470 3502])
+                    ("sync_target" variable (:type ("" type
+                         (:members 
+                            ( ("max_ops" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3516 3534])
+                              ("sync_io_channel" variable
+                                 (:pointer 1
+                                  :type ("spdk_io_channel" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [3537 3577])
+                              ("sync_fs_channel" variable
+                                 (:pointer 1
+                                  :type ("spdk_fs_channel" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [3580 3620]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3505 3636])
+                    ("md_target" variable (:type ("" type
+                         (:members 
+                            ( ("max_ops" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3650 3668])
+                              ("md_io_channel" variable
+                                 (:pointer 1
+                                  :type ("spdk_io_channel" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [3671 3709])
+                              ("md_fs_channel" variable
+                                 (:pointer 1
+                                  :type ("spdk_fs_channel" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [3712 3750]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3639 3764])
+                    ("io_target" variable (:type ("" type
+                         (:members 
+                            ( ("max_ops" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3778 3796]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3767 3810]))                  
+                :type "struct")
+                nil [3326 3813])
+            ("spdk_fs_cb_args" type
+               (:members 
+                  ( ("fn" variable (:type ("" type
+                         (:members 
+                            ( ("fs_op_with_handle" variable (:type ("spdk_fs_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3851 3902])
+                              ("fs_op" variable (:type ("spdk_fs_op_complete" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3905 3933])
+                              ("file_op_with_handle" variable (:type ("spdk_file_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3936 3990])
+                              ("file_op" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3993 4025])
+                              ("stat_op" variable (:type ("spdk_file_stat_op_complete" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4028 4064]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [3841 4071])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [4073 4083])
+                    ("sem" variable
+                       (:pointer 1
+                        :type ("sem_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4085 4096])
+                    ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4098 4125])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4127 4150])
+                    ("rc" variable (:type "int") (reparse-symbol classsubparts) [4152 4159])
+                    ("from_request" variable (:type "bool") (reparse-symbol classsubparts) [4161 4179])
+                    ("op" variable (:type ("" type
+                         (:members 
+                            ( ("truncate" variable (:type ("" type
+                                   (:members 
+                                      ( ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4203 4219]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4191 4233])
+                              ("rw" variable (:type ("" type
+                                   (:members 
+                                      ( ("channel" variable
+                                           (:pointer 1
+                                            :type ("spdk_io_channel" type
+                                                 (:prototype t
+                                                  :type "struct")
+                                                  nil nil))
+                                            (reparse-symbol classsubparts) [4248 4280])
+                                        ("user_buf" variable
+                                           (:pointer 1
+                                            :type "void")
+                                            (reparse-symbol classsubparts) [4284 4300])
+                                        ("pin_buf" variable
+                                           (:pointer 1
+                                            :type "void")
+                                            (reparse-symbol classsubparts) [4304 4319])
+                                        ("is_read" variable (:type "int") (reparse-symbol classsubparts) [4323 4336])
+                                        ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4340 4354])
+                                        ("length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4358 4373])
+                                        ("start_page" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4377 4397])
+                                        ("num_pages" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4401 4420])
+                                        ("blocklen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4424 4442]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4236 4450])
+                              ("rename" variable (:type ("" type
+                                   (:members 
+                                      ( ("old_name" variable
+                                           (:pointer 1
+                                            :constant-flag t
+                                            :type "char")
+                                            (reparse-symbol classsubparts) [4465 4486])
+                                        ("new_name" variable
+                                           (:pointer 1
+                                            :constant-flag t
+                                            :type "char")
+                                            (reparse-symbol classsubparts) [4490 4511]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4453 4523])
+                              ("flush" variable (:type ("" type
+                                   (:members 
+                                      ( ("cache_buffer" variable
+                                           (:pointer 1
+                                            :type ("cache_buffer" type
+                                                 (:prototype t
+                                                  :type "struct")
+                                                  nil nil))
+                                            (reparse-symbol classsubparts) [4538 4572])
+                                        ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4576 4593]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4526 4604])
+                              ("readahead" variable (:type ("" type
+                                   (:members 
+                                      ( ("cache_buffer" variable
+                                           (:pointer 1
+                                            :type ("cache_buffer" type
+                                                 (:prototype t
+                                                  :type "struct")
+                                                  nil nil))
+                                            (reparse-symbol classsubparts) [4619 4653])
+                                        ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4657 4674])
+                                        ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4678 4695]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4607 4710])
+                              ("sync" variable (:type ("" type
+                                   (:members 
+                                      ( ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4725 4743])
+                                        ("tailq" variable (:type "int") (reparse-symbol classsubparts) [4776 4782])
+                                        ("xattr_in_progress" variable (:type "bool") (reparse-symbol classsubparts) [4786 4812]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4713 4822])
+                              ("resize" variable (:type ("" type
+                                   (:members 
+                                      ( ("num_clusters" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4837 4861]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4825 4873])
+                              ("open" variable (:type ("" type
+                                   (:members 
+                                      ( ("name" variable
+                                           (:pointer 1
+                                            :constant-flag t
+                                            :type "char")
+                                            (reparse-symbol classsubparts) [4888 4905])
+                                        ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4909 4924])
+                                        ("tailq" variable (:type "int") (reparse-symbol classsubparts) [4957 4963]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4876 4973])
+                              ("create" variable (:type ("" type
+                                   (:members 
+                                      ( ("name" variable
+                                           (:pointer 1
+                                            :constant-flag t
+                                            :type "char")
+                                            (reparse-symbol classsubparts) [4988 5005]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [4976 5017])
+                              ("stat" variable (:type ("" type
+                                   (:members 
+                                      ( ("name" variable
+                                           (:pointer 1
+                                            :constant-flag t
+                                            :type "char")
+                                            (reparse-symbol classsubparts) [5076 5093]))                                      
+                                    :type "struct")
+                                    nil nil)) (reparse-symbol classsubparts) [5064 5103]))                            
+                          :type "union")
+                          nil nil)) (reparse-symbol classsubparts) [4181 5110]))                  
+                :type "struct")
+                nil [3815 5113])
+            ("cache_free_buffers" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5146 5169]))                  
+                :type "void")
+                nil [5115 5170])
+            ("__initialize_cache" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5203 5208]))                  
+                :type "void")
+                nil [5172 5506])
+            ("__free_cache" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5533 5538]))                  
+                :type "void")
+                nil [5508 5630])
+            ("__file_get_blob_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5669 5692]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [5632 5824])
+            ("spdk_fs_request" type
+               (:members 
+                  ( ("args" variable (:type ("spdk_fs_cb_args" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5852 5881])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [5912 5917])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_fs_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5919 5952]))                  
+                :type "struct")
+                nil [5826 5955])
+            ("spdk_fs_channel" type
+               (:members 
+                  ( ("req_mem" variable
+                       (:pointer 1
+                        :type ("spdk_fs_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5983 6016])
+                    ("reqs" variable (:type "int") (reparse-symbol classsubparts) [6048 6053])
+                    ("sem" variable (:type ("sem_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6055 6068])
+                    ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6070 6098])
+                    ("bs_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6100 6136])
+                    ("send_request" variable (:type ("fs_send_request_fn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6138 6171])
+                    ("sync" variable (:type "bool") (reparse-symbol classsubparts) [6173 6186])
+                    ("lock" variable (:type ("pthread_spinlock_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6188 6213]))                  
+                :type "struct")
+                nil [5957 6216])
+            ("alloc_fs_request" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_fs_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6267 6299]))                  
+                :type ("spdk_fs_request" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6218 6697])
+            ("free_fs_request" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_fs_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6727 6755]))                  
+                :type "void")
+                nil [6699 6989])
+            ("_spdk_fs_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7026 7053])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_fs_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7054 7086])
+                    ("max_ops" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7090 7107]))                  
+                :type "int")
+                nil [6991 7432])
+            ("_spdk_fs_md_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7472 7488])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7489 7503]))                  
+                :type "int")
+                nil [7434 7723])
+            ("_spdk_fs_sync_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7765 7781])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7782 7796]))                  
+                :type "int")
+                nil [7725 8020])
+            ("_spdk_fs_io_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8060 8076])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8077 8091]))                  
+                :type "int")
+                nil [8022 8311])
+            ("_spdk_fs_channel_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8350 8366])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8367 8381]))                  
+                :type "void")
+                nil [8313 8542])
+            ("__send_request_direct" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fn" variable (:type ("fs_request_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8578 8595])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8596 8606]))                  
+                :type "void")
+                nil [8544 8620])
+            ("common_fs_bs_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8652 8679])
+                    ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8680 8707]))                  
+                :type "void")
+                nil [8622 9230])
+            ("init_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9252 9262])
+                    ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9263 9290])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [9291 9303]))                  
+                :type "void")
+                nil [9232 9593])
+            ("fs_alloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9636 9660])
+                    ("send_request_fn" variable (:type ("fs_send_request_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9661 9696]))                  
+                :type ("spdk_filesystem" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9595 10705])
+            ("spdk_fs_init" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10725 10749])
+                    ("send_request_fn" variable (:type ("fs_send_request_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10750 10785])
+                    ("cb_fn" variable (:type ("spdk_fs_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10792 10830])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10831 10844]))                  
+                :type "void")
+                nil [10707 11572])
+            ("file_alloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11611 11638]))                  
+                :type ("spdk_file" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [11574 12071])
+            ("iter_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12093 12103])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12104 12127])
+                    ("rc" variable (:type "int") (reparse-symbol arg-sub-list) [12128 12135]))                  
+                :type "void")
+                nil [12073 13385])
+            ("load_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13407 13417])
+                    ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13418 13445])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [13446 13458]))                  
+                :type "void")
+                nil [13387 13784])
+            ("spdk_fs_load" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13804 13828])
+                    ("send_request_fn" variable (:type ("fs_send_request_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13829 13864])
+                    ("cb_fn" variable (:type ("spdk_fs_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13871 13909])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13910 13923]))                  
+                :type "void")
+                nil [13786 14645])
+            ("unload_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14669 14679])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [14680 14692]))                  
+                :type "void")
+                nil [14647 15176])
+            ("spdk_fs_unload" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15198 15225])
+                    ("cb_fn" variable (:type ("spdk_fs_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15226 15252])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15253 15266]))                  
+                :type "void")
+                nil [15178 15793])
+            ("fs_find_file" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15834 15861])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15862 15879]))                  
+                :type ("spdk_file" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [15795 16045])
+            ("spdk_fs_file_stat_async" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16076 16103])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16104 16121])
+                    ("cb_fn" variable (:type ("spdk_file_stat_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16125 16158])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16159 16172]))                  
+                :type "void")
+                nil [16047 16530])
+            ("__copy_stat" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16556 16566])
+                    ("stat" variable
+                       (:pointer 1
+                        :type ("spdk_file_stat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16567 16595])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [16596 16608]))                  
+                :type "void")
+                nil [16532 16802])
+            ("__file_stat" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16828 16838]))                  
+                :type "void")
+                nil [16804 17006])
+            ("spdk_fs_file_stat" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17030 17057])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17058 17091])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17096 17113])
+                    ("stat" variable
+                       (:pointer 1
+                        :type ("spdk_file_stat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17114 17142]))                  
+                :type "int")
+                nil [17008 17582])
+            ("fs_create_blob_close_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17620 17630])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [17631 17643]))                  
+                :type "void")
+                nil [17584 17790])
+            ("fs_create_blob_open_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17827 17837])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17838 17861])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [17862 17874]))                  
+                :type "void")
+                nil [17792 18268])
+            ("fs_create_blob_create_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18307 18317])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18318 18338])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [18339 18351]))                  
+                :type "void")
+                nil [18270 18563])
+            ("spdk_fs_create_file_async" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18596 18623])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18624 18641])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18647 18675])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18676 18689]))                  
+                :type "void")
+                nil [18565 19372])
+            ("__fs_create_file_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19408 19418])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [19419 19431]))                  
+                :type "void")
+                nil [19374 19629])
+            ("__fs_create_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19660 19670]))                  
+                :type "void")
+                nil [19631 19913])
+            ("spdk_fs_create_file" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19939 19966])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19967 20000])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20001 20018]))                  
+                :type "int")
+                nil [19915 20489])
+            ("fs_open_blob_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20521 20531])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20532 20555])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [20556 20568]))                  
+                :type "void")
+                nil [20491 20951])
+            ("fs_open_blob_create_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20988 20998])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [20999 21011]))                  
+                :type "void")
+                nil [20953 21920])
+            ("spdk_fs_open_file_async" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21951 21978])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21979 21996])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21997 22012])
+                    ("cb_fn" variable (:type ("spdk_file_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22016 22056])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22057 22070]))                  
+                :type "void")
+                nil [21922 22815])
+            ("__fs_open_file_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22849 22859])
+                    ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22860 22883])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [22884 22896]))                  
+                :type "void")
+                nil [22817 23112])
+            ("__fs_open_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23141 23151]))                  
+                :type "void")
+                nil [23114 23411])
+            ("spdk_fs_open_file" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23435 23462])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23463 23496])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23501 23518])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23519 23534])
+                    ("file" variable
+                       (:pointer 2
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23535 23559]))                  
+                :type "int")
+                nil [23413 24123])
+            ("fs_rename_blob_close_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24161 24171])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [24172 24184]))                  
+                :type "void")
+                nil [24125 24329])
+            ("fs_rename_blob_open_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24366 24376])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24377 24400])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [24401 24413]))                  
+                :type "void")
+                nil [24331 24735])
+            ("__spdk_fs_md_rename_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("spdk_fs_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24774 24802]))                  
+                :type "void")
+                nil [24737 25177])
+            ("fs_rename_delete_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [25213 25223])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [25224 25236]))                  
+                :type "void")
+                nil [25179 25272])
+            ("spdk_fs_rename_file_async" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25305 25332])
+                    ("old_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25338 25359])
+                    ("new_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25360 25381])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25387 25415])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [25416 25429]))                  
+                :type "void")
+                nil [25274 26269])
+            ("__fs_rename_file_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [26305 26315])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [26316 26328]))                  
+                :type "void")
+                nil [26271 26456])
+            ("__fs_rename_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [26487 26497]))                  
+                :type "void")
+                nil [26458 26706])
+            ("spdk_fs_rename_file" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26732 26759])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26760 26793])
+                    ("old_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26800 26821])
+                    ("new_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26822 26843]))                  
+                :type "int")
+                nil [26708 27305])
+            ("blob_delete_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27334 27344])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [27345 27357]))                  
+                :type "void")
+                nil [27307 27504])
+            ("spdk_fs_delete_file_async" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27537 27564])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27565 27582])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27588 27616])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27617 27630]))                  
+                :type "void")
+                nil [27506 28503])
+            ("__fs_delete_file_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28539 28549])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [28550 28562]))                  
+                :type "void")
+                nil [28505 28690])
+            ("__fs_delete_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28721 28731]))                  
+                :type "void")
+                nil [28692 28904])
+            ("spdk_fs_delete_file" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28930 28957])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28958 28991])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28998 29015]))                  
+                :type "int")
+                nil [28906 29431])
+            ("spdk_fs_iter_first" function
+               (:arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29465 29492]))                  
+                :type ("spdk_fs_iter" type (:type "class") nil nil))
+                nil [29433 29560])
+            ("spdk_fs_iter_next" function
+               (:arguments 
+                  ( ("iter" variable (:type ("spdk_fs_iter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29593 29611]))                  
+                :type ("spdk_fs_iter" type (:type "class") nil nil))
+                nil [29562 29720])
+            ("spdk_file_get_name" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29754 29777]))                  
+                :type "char")
+                nil [29722 29801])
+            ("spdk_file_get_length" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29833 29856]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [29803 29992])
+            ("fs_truncate_complete_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30030 30040])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [30041 30053]))                  
+                :type "void")
+                nil [29994 30200])
+            ("__bytes_to_clusters" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30238 30254])
+                    ("cluster_sz" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30255 30275]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [30202 30327])
+            ("spdk_file_truncate_async" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30359 30382])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30383 30399])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30404 30432])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30433 30446]))                  
+                :type "void")
+                nil [30329 31318])
+            ("__truncate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [31343 31353]))                  
+                :type "void")
+                nil [31320 31537])
+            ("spdk_file_truncate" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31563 31586])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31587 31620])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31626 31642]))                  
+                :type "void")
+                nil [31539 32063])
+            ("__rw_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [32087 32097])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [32098 32110]))                  
+                :type "void")
+                nil [32065 32294])
+            ("__read_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [32320 32330])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [32331 32343]))                  
+                :type "void")
+                nil [32296 32912])
+            ("__do_blob_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [32941 32951])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [32952 32964]))                  
+                :type "void")
+                nil [32914 33221])
+            ("__get_page_parameters" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33257 33280])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33281 33297])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33298 33314])
+                    ("start_page" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33323 33344])
+                    ("page_size" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33345 33365])
+                    ("num_pages" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33366 33386]))                  
+                :type "void")
+                nil [33223 33590])
+            ("__readwrite" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33616 33639])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33640 33673])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [33679 33693])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33694 33710])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33711 33727])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33733 33761])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [33762 33775])
+                    ("is_read" variable (:type "int") (reparse-symbol arg-sub-list) [33776 33788]))                  
+                :type "void")
+                nil [33592 34866])
+            ("spdk_file_write_async" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34895 34918])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34919 34951])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [34960 34974])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34975 34991])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34992 35008])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35017 35045])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [35046 35059]))                  
+                :type "void")
+                nil [34868 35135])
+            ("spdk_file_read_async" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35163 35186])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35187 35219])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [35227 35241])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35242 35258])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35259 35275])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35283 35311])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [35312 35325]))                  
+                :type "void")
+                nil [35137 35507])
+            ("spdk_fs_alloc_io_channel" function
+               (:pointer 1
+                :arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35559 35586]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [35509 35899])
+            ("spdk_fs_alloc_io_channel_sync" function
+               (:pointer 1
+                :arguments 
+                  ( ("fs" variable
+                       (:pointer 1
+                        :type ("spdk_filesystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35956 35983]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [35901 36296])
+            ("spdk_fs_free_io_channel" function
+               (:arguments 
+                  ( ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36327 36359]))                  
+                :type "void")
+                nil [36298 36394])
+            ("spdk_fs_set_cache_size" function
+               (:arguments 
+                  ( ("size_in_mb" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36424 36444]))                  
+                :type "void")
+                nil [36396 36493])
+            ("spdk_fs_get_cache_size" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36527 36532]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [36495 36577])
+            ("__file_flush" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("_args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [36604 36616]))                  
+                :type "void")
+                nil [36579 36617])
+            ("alloc_cache_memory_buffer" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36659 36685]))                  
+                :type "void")
+                nil [36619 37816])
+            ("cache_insert_buffer" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [37867 37890])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37891 37907]))                  
+                :type ("cache_buffer" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [37818 38955])
+            ("cache_append_buffer" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39006 39029]))                  
+                :type ("cache_buffer" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [38957 39394])
+            ("__wake_caller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("spdk_fs_cb_args" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39422 39451]))                  
+                :type "void")
+                nil [39396 39477])
+            ("__check_sync_reqs" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39509 39532]))                  
+                :type "void")
+                nil [39479 39533])
+            ("__file_cache_finish_sync" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39572 39595]))                  
+                :type "void")
+                nil [39535 40184])
+            ("__file_cache_finish_sync_bs_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [40229 40239])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [40240 40252]))                  
+                :type "void")
+                nil [40186 40321])
+            ("__free_args" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :type ("spdk_fs_cb_args" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40347 40376]))                  
+                :type "void")
+                nil [40323 40607])
+            ("__check_sync_reqs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40639 40662]))                  
+                :type "void")
+                nil [40609 41351])
+            ("__file_flush_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [41383 41393])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [41394 41406]))                  
+                :type "void")
+                nil [41353 42337])
+            ("__file_flush" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("_args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [42364 42376]))                  
+                :type "void")
+                nil [42339 43709])
+            ("__file_extend_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43742 43752])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [43753 43765]))                  
+                :type "void")
+                nil [43711 43829])
+            ("__file_extend_blob" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("_args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43862 43874]))                  
+                :type "void")
+                nil [43831 44085])
+            ("__rw_from_file_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44119 44129])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [44130 44142]))                  
+                :type "void")
+                nil [44087 44226])
+            ("__rw_from_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("_args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44255 44267]))                  
+                :type "void")
+                nil [44228 44745])
+            ("__send_rw_from_file" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44778 44801])
+                    ("sem" variable
+                       (:pointer 1
+                        :type ("sem_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44802 44813])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44814 44828])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44835 44851])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44852 44868])
+                    ("is_read" variable (:type "bool") (reparse-symbol arg-sub-list) [44869 44882]))                  
+                :type "int")
+                nil [44747 45233])
+            ("spdk_file_write" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [45255 45278])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [45279 45312])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [45315 45329])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45330 45346])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45347 45363]))                  
+                :type "int")
+                nil [45235 47866])
+            ("__readahead_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [47897 47907])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [47908 47920]))                  
+                :type "void")
+                nil [47868 48370])
+            ("__readahead" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("_args" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [48396 48408]))                  
+                :type "void")
+                nil [48372 49052])
+            ("__next_cache_buffer_offset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49097 49113]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [49054 49185])
+            ("check_readahead" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49215 49238])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49239 49255]))                  
+                :type "void")
+                nil [49187 49959])
+            ("__file_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49984 50007])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50008 50022])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50023 50039])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50040 50056])
+                    ("sem" variable
+                       (:pointer 1
+                        :type ("sem_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50057 50068]))                  
+                :type "int")
+                nil [49961 50893])
+            ("spdk_file_read" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50918 50941])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50942 50975])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50984 50998])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50999 51015])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51016 51032]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [50895 52371])
+            ("_file_sync" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52396 52419])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_fs_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52420 52452])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52457 52485])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [52486 52499]))                  
+                :type "void")
+                nil [52373 53488])
+            ("spdk_file_sync" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53509 53532])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53533 53566]))                  
+                :type "int")
+                nil [53490 53734])
+            ("spdk_file_sync_async" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53762 53785])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53786 53819])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53827 53855])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53856 53869]))                  
+                :type "void")
+                nil [53736 53987])
+            ("spdk_file_set_priority" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54017 54040])
+                    ("priority" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54041 54059]))                  
+                :type "void")
+                nil [53989 54140])
+            ("__file_close_async_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [54204 54214])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [54215 54227]))                  
+                :type "void")
+                nil [54168 54374])
+            ("__file_close_async" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54407 54430])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("spdk_fs_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54431 54459]))                  
+                :type "void")
+                nil [54376 54851])
+            ("__file_close_async__sync_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [54895 54905])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [54906 54918]))                  
+                :type "void")
+                nil [54853 55041])
+            ("spdk_file_close_async" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55070 55093])
+                    ("cb_fn" variable (:type ("spdk_file_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55094 55122])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55123 55136]))                  
+                :type "void")
+                nil [55043 55511])
+            ("__file_close_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55543 55553])
+                    ("fserrno" variable (:type "int") (reparse-symbol arg-sub-list) [55554 55566]))                  
+                :type "void")
+                nil [55513 55651])
+            ("__file_close" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55678 55688]))                  
+                :type "void")
+                nil [55653 55843])
+            ("spdk_file_close" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55865 55888])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55889 55922]))                  
+                :type "int")
+                nil [55845 56408])
+            ("cache_free_buffers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :type ("spdk_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56441 56464]))                  
+                :type "void")
+                nil [56410 57029])
+            ("SPDK_LOG_REGISTER_TRACE_FLAG" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("SPDK_TRACE_BLOBFS" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57070 57088]))                  
+                :type "int")
+                nil [57031 57089])
+            ("SPDK_LOG_REGISTER_TRACE_FLAG" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("SPDK_TRACE_BLOBFS_RW" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57132 57153]))                  
+                :type "int")
+                nil [57090 57154]))          
+      :file "blobfs.c"
+      :pointmax 57155
+      :fsize 57154
+      :lastmodtime '(22934 53510 721384 81000)
+      :unmatched-syntax '((string 57119 . 57130) (string 57060 . 57068) (semantic-list 6028 . 6047) (symbol 6018 . 6028) (semantic-list 5894 . 5911) (symbol 5883 . 5894) (punctuation 5060 . 5061) (DELETE 5054 . 5060) (semantic-list 5027 . 5053) (STRUCT 5020 . 5026) (semantic-list 4939 . 4956) (symbol 4928 . 4939) (semantic-list 4758 . 4775) (symbol 4747 . 4758) (semantic-list 3391 . 3404) (symbol 3381 . 3391) (semantic-list 3297 . 3308) (symbol 3286 . 3297) (semantic-list 3232 . 3269) (symbol 3222 . 3232) (semantic-list 3168 . 3205) (symbol 3158 . 3168) (semantic-list 3013 . 3024) (symbol 3002 . 3013) (semantic-list 2302 . 2315) (symbol 2292 . 2302) (STATIC 2285 . 2291))
+      :lexical-table 
+        '(("BLOBFS_TRACE_RW" (spp-arg-list ("file" "str" "args...") 2038 . 2058) . ((symbol "SPDK_TRACELOG" 2062 . 2075) (semantic-list "(SPDK_TRACE_BLOBFS_RW, \"file=%s \" str, file->name, ##args)" 2075 . 2133)))
+          ("BLOBFS_CACHE_SIZE" . ((semantic-list "(4ULL * 1024 * 1024 * 1024)" 2161 . 2188)))
+          ("BLOBFS_TRACE" (spp-arg-list ("file" "str" "args...") 1921 . 1941) . ((symbol "SPDK_TRACELOG" 1945 . 1958) (semantic-list "(SPDK_TRACE_BLOBFS, \"file=%s \" str, file->name, ##args)" 1958 . 2013)))
+          ("CACHE_READAHEAD_THRESHOLD" . ((semantic-list "(128 * 1024)" 2728 . 2740)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "blobfs_internal.h"
+      :fsize 3575
+      :lastmodtime '(22925 57199 693694 513000)))
+  :file "!root!spdk!lib!blobfs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

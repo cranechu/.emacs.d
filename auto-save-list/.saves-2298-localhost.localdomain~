@@ -1,0 +1,8 @@
+/root/spdk/lib/rocksdb/env_spdk.cc
+/root/spdk/lib/rocksdb/#env_spdk.cc#
+/root/spdk/lib/blobfs/blobfs.c
+/root/spdk/lib/blobfs/#blobfs.c#
+/root/spdk/lib/event/app.c
+/root/spdk/lib/event/#app.c#
+/root/spdk/TAGS
+/root/spdk/#TAGS#

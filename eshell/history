@@ -1,0 +1,128 @@
+e Makefile 
+ls
+cat hello_world.c 
+ls
+make
+cd ..
+cd ..
+ls
+cd nvme
+ls
+make
+cd ..
+ls
+make
+cd ..
+ls
+make
+make example
+make examples
+make lib
+make
+ls
+cd examples/nvme/
+ls
+cd test
+ks
+ls
+mv hello_world.c test.c
+ls
+ls
+cd
+ls
+cd spdk
+ls
+make
+make
+ls
+cd examples/nvme/test
+ls
+./test 
+./test 
+./test 
+ls
+make
+make clean
+ls
+make
+ls
+cd 
+cd spdk/
+ls
+make
+ls
+./examples/nvme/test/test 
+./examples/nvme/test/test 
+ls ./examples/nvme/test
+./examples/nvme/test/test 
+make[3]: Nothing to be done for 'all'.
+make
+make
+pwd
+pwd
+make
+make
+./examples/nvme/test/test 
+ls
+cd scripts/
+ls
+./setup.sh 
+su
+ls
+sudo ./setup.sh 
+cd ..
+ls
+sudo ./examples/nvme/test/test 
+make
+sudo ./examples/nvme/test/test 
+sudo ./examples/nvme/test/test 
+sudo ./examples/nvme/test/test 
+sudo ./examples/nvme/test/test 
+make
+sudo ./examples/nvme/test/test 
+sudo nemiver ./examples/nvme/test/test 
+sudo nemiver
+su
+ls
+ls
+make
+sudo ./examples/nvme/test/test 
+make
+make
+sudo ./examples/nvme/hello_world/hello_world
+make
+sudo ./examples/nvme/hello_world/hello_world
+make
+sudo ./examples/nvme/hello_world/hello_world
+make
+sudo ./examples/nvme/hello_world/hello_world
+cd
+cd spdk/
+ls
+make
+sudo examples/nvme/hello_world/hello_world
+make
+sudo examples/nvme/hello_world/hello_world
+sudo examples/nvme/hello_world/hello_world
+sudo examples/nvme/hello_world/hello_world
+make
+sudo examples/nvme/hello_world/hello_world
+make
+sudo examples/nvme/hello_world/hello_world
+make
+sudo examples/nvme/hello_world/hello_world
+cd
+cd spdk/
+make
+sudo ./examples/nvme/test/test
+up
+up
+ipython3
+exit
+cd ..
+cd ..
+cd rocksdb/
+make db_bench SPDK_DIR=/root/spdk
+exit
+ipython
+python

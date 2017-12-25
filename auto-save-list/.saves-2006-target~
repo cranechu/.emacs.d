@@ -1,0 +1,16 @@
+/home/cranechu/spdk/include/spdk/nvme_spec.h
+/home/cranechu/spdk/include/spdk/#nvme_spec.h#
+/home/cranechu/spdk/lib/nvme/nvme_internal.h
+/home/cranechu/spdk/lib/nvme/#nvme_internal.h#
+/home/cranechu/spdk/examples/nvme/hello_world/hello_world.c
+/home/cranechu/spdk/examples/nvme/hello_world/#hello_world.c#
+/home/cranechu/.config/kupfer/kupfer.cfg
+/home/cranechu/.config/kupfer/#kupfer.cfg#
+/home/cranechu/spdk/lib/nvme/nvme.c
+/home/cranechu/spdk/lib/nvme/#nvme.c#
+/home/cranechu/spdk/examples/nvme/perf/perf.c
+/home/cranechu/spdk/examples/nvme/perf/#perf.c#
+/home/cranechu/spdk/examples/nvme/arbitration/arbitration.c
+/home/cranechu/spdk/examples/nvme/arbitration/#arbitration.c#
+/home/cranechu/spdk/TAGS
+/home/cranechu/spdk/#TAGS#

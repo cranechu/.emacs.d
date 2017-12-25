@@ -1,0 +1,111 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "reactor.c"
+      :pointmax 201
+      :fsize 20084
+      :lastmodtime '(22711 54335 25217 895000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk_internal/event.h" include nil nil [1665 1697])
+            ("stddef.h" include (:system-flag t) nil [1699 1718])
+            ("stdbool.h" include (:system-flag t) nil [1719 1739])
+            ("string.h" include (:system-flag t) nil [1740 1759])
+            ("g_subsystems" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_subsystems)"
+                :type "int")
+                nil [1816 1869])
+            ("g_depends" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_depends)"
+                :type "int")
+                nil [1929 1976])
+            ("spdk_add_subsystem" function
+               (:arguments 
+                  ( ("subsystem" variable
+                       (:pointer 1
+                        :type ("spdk_subsystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2002 2035]))                  
+                :type "void")
+                nil [1978 2092])
+            ("spdk_add_subsystem_depend" function
+               (:arguments 
+                  ( ("depend" variable
+                       (:pointer 1
+                        :type ("spdk_subsystem_depend" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2125 2162]))                  
+                :type "void")
+                nil [2094 2213])
+            ("spdk_subsystem_find" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("list" variable
+                       (:pointer 1
+                        :type ("spdk_subsystem_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2266 2299])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2300 2317]))                  
+                :type ("spdk_subsystem" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2215 2465])
+            ("subsystem_sort" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2494 2499]))                  
+                :type "void")
+                nil [2467 3660])
+            ("spdk_subsystem_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3686 3691]))                  
+                :type "int")
+                nil [3662 4381])
+            ("spdk_subsystem_fini" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4407 4412]))                  
+                :type "int")
+                nil [4383 4669])
+            ("spdk_subsystem_config" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4698 4707]))                  
+                :type "void")
+                nil [4671 4851]))          
+      :file "subsystem.c"
+      :pointmax 4852
+      :fsize 4851
+      :lastmodtime '(22711 54335 25217 895000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "app.c"
+      :pointmax 201
+      :fsize 12150
+      :lastmodtime '(22711 54335 25217 895000)
+      :unmatched-syntax nil))
+  :file "!home!cranechu!spdk!lib!event!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

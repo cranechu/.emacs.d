@@ -1,0 +1,803 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("rte_byteorder.h" include (:system-flag t) nil [1666 1692])
+            ("rte_common.h" include (:system-flag t) nil [1693 1716])
+            ("rte_cycles.h" include (:system-flag t) nil [1717 1740])
+            ("rte_malloc.h" include (:system-flag t) nil [1741 1764])
+            ("rte_memzone.h" include (:system-flag t) nil [1765 1789])
+            ("rte_version.h" include (:system-flag t) nil [1790 1814])
+            ("bnxt.h" include nil nil [1816 1833])
+            ("bnxt_cpr.h" include nil nil [1834 1855])
+            ("bnxt_filter.h" include nil nil [1856 1880])
+            ("bnxt_hwrm.h" include nil nil [1881 1903])
+            ("bnxt_rxq.h" include nil nil [1904 1925])
+            ("bnxt_rxr.h" include nil nil [1926 1947])
+            ("bnxt_ring.h" include nil nil [1948 1970])
+            ("bnxt_txq.h" include nil nil [1971 1992])
+            ("bnxt_txr.h" include nil nil [1993 2014])
+            ("bnxt_vnic.h" include nil nil [2015 2037])
+            ("hsi_struct_def_dpdk.h" include nil nil [2038 2070])
+            ("rte_io.h" include (:system-flag t) nil [2072 2091])
+            ("HWRM_CMD_TIMEOUT" variable (:constant-flag t) nil [2101 2117])
+            ("bnxt_hwrm_send_message_locked" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2396 2412])
+                    ("msg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2413 2423])
+                    ("msg_len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2429 2446]))                  
+                :type "int")
+                nil [2355 3494])
+            ("bnxt_hwrm_send_message" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3530 3546])
+                    ("msg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3547 3557])
+                    ("msg_len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3558 3575]))                  
+                :type "int")
+                nil [3496 3730])
+            ("HWRM_PREP" variable (:constant-flag t) nil [3740 3749])
+            ("HWRM_CHECK_RESULT" variable (:constant-flag t) nil [4089 4106])
+            ("bnxt_hwrm_cfa_l2_clear_rx_mask" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4405 4421])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4422 4450]))                  
+                :type "int")
+                nil [4370 4802])
+            ("bnxt_hwrm_cfa_l2_set_rx_mask" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4837 4853])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4854 4882]))                  
+                :type "int")
+                nil [4804 5620])
+            ("bnxt_hwrm_clear_filter" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5649 5665])
+                    ("filter" variable
+                       (:pointer 1
+                        :type ("bnxt_filter_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5672 5704]))                  
+                :type "int")
+                nil [5622 6085])
+            ("bnxt_hwrm_set_filter" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6112 6128])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6133 6161])
+                    ("filter" variable
+                       (:pointer 1
+                        :type ("bnxt_filter_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6166 6198]))                  
+                :type "int")
+                nil [6087 7305])
+            ("bnxt_hwrm_exec_fwd_resp" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7335 7351])
+                    ("fwd_cmd" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7352 7366]))                  
+                :type "int")
+                nil [7307 7706])
+            ("bnxt_hwrm_func_qcaps" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7733 7749]))                  
+                :type "int")
+                nil [7708 9268])
+            ("bnxt_hwrm_func_reset" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9295 9311]))                  
+                :type "int")
+                nil [9270 9610])
+            ("bnxt_hwrm_func_driver_register" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9647 9663])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9664 9679])
+                    ("vf_req_fwd" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9687 9708]))                  
+                :type "int")
+                nil [9612 10417])
+            ("bnxt_hwrm_ver_get" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10441 10457]))                  
+                :type "int")
+                nil [10419 12885])
+            ("bnxt_hwrm_func_driver_unregister" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12924 12940])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12941 12956]))                  
+                :type "int")
+                nil [12887 13342])
+            ("bnxt_hwrm_port_phy_cfg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13378 13394])
+                    ("conf" variable
+                       (:pointer 1
+                        :type ("bnxt_link_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13395 13423]))                  
+                :type "int")
+                nil [13344 14905])
+            ("bnxt_hwrm_port_phy_qcfg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14942 14958])
+                    ("link_info" variable
+                       (:pointer 1
+                        :type ("bnxt_link_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14966 14999]))                  
+                :type "int")
+                nil [14907 16054])
+            ("bnxt_hwrm_queue_qportcfg" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16085 16101]))                  
+                :type "int")
+                nil [16056 16673])
+            ("bnxt_hwrm_ring_alloc" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16700 16716])
+                    ("ring" variable
+                       (:pointer 1
+                        :type ("bnxt_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16721 16744])
+                    ("ring_type" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16749 16768])
+                    ("map_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16769 16788])
+                    ("stats_ctx_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16793 16815]))                  
+                :type "int")
+                nil [16675 18807])
+            ("bnxt_hwrm_ring_free" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18833 18849])
+                    ("ring" variable
+                       (:pointer 1
+                        :type ("bnxt_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18853 18876])
+                    ("ring_type" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18877 18896]))                  
+                :type "int")
+                nil [18809 19797])
+            ("bnxt_hwrm_ring_grp_alloc" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19828 19844])
+                    ("idx" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [19845 19862]))                  
+                :type "int")
+                nil [19799 20456])
+            ("bnxt_hwrm_ring_grp_free" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20486 20502])
+                    ("idx" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [20503 20520]))                  
+                :type "int")
+                nil [20458 20907])
+            ("bnxt_hwrm_stat_clear" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20934 20950])
+                    ("cpr" variable
+                       (:pointer 1
+                        :type ("bnxt_cp_ring_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20951 20981]))                  
+                :type "int")
+                nil [20909 21451])
+            ("bnxt_hwrm_stat_ctx_alloc" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21482 21498])
+                    ("cpr" variable
+                       (:pointer 1
+                        :type ("bnxt_cp_ring_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21507 21537])
+                    ("idx" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [21538 21555]))                  
+                :type "int")
+                nil [21453 22109])
+            ("bnxt_hwrm_stat_ctx_free" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22139 22155])
+                    ("cpr" variable
+                       (:pointer 1
+                        :type ("bnxt_cp_ring_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22163 22193])
+                    ("idx" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [22194 22211]))                  
+                :type "int")
+                nil [22111 22690])
+            ("bnxt_hwrm_vnic_alloc" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22717 22733])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22734 22762]))                  
+                :type "int")
+                nil [22692 23538])
+            ("bnxt_hwrm_vnic_cfg" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23563 23579])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23580 23608]))                  
+                :type "int")
+                nil [23540 24614])
+            ("bnxt_hwrm_vnic_ctx_alloc" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24645 24661])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24662 24690]))                  
+                :type "int")
+                nil [24616 25074])
+            ("bnxt_hwrm_vnic_ctx_free" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25104 25120])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25121 25149]))                  
+                :type "int")
+                nil [25076 25576])
+            ("bnxt_hwrm_vnic_free" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25602 25618])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25619 25647]))                  
+                :type "int")
+                nil [25578 26057])
+            ("bnxt_hwrm_vnic_rss_cfg" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26086 26102])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26109 26137]))                  
+                :type "int")
+                nil [26059 26672])
+            ("bnxt_clear_all_hwrm_stat_ctxs" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26742 26758]))                  
+                :type "int")
+                nil [26708 27196])
+            ("bnxt_free_all_hwrm_stat_ctxs" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27231 27247]))                  
+                :type "int")
+                nil [27198 27677])
+            ("bnxt_alloc_all_hwrm_stat_ctxs" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27713 27729]))                  
+                :type "int")
+                nil [27679 28206])
+            ("bnxt_free_all_hwrm_ring_grps" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28241 28257]))                  
+                :type "int")
+                nil [28208 28602])
+            ("bnxt_free_cp_ring" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28634 28650])
+                    ("cpr" variable
+                       (:pointer 1
+                        :type ("bnxt_cp_ring_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28660 28690])
+                    ("idx" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [28691 28708]))                  
+                :type "void")
+                nil [28604 29054])
+            ("bnxt_free_all_hwrm_rings" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29085 29101]))                  
+                :type "int")
+                nil [29056 30954])
+            ("bnxt_alloc_all_hwrm_ring_grps" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30990 31006]))                  
+                :type "int")
+                nil [30956 31335])
+            ("bnxt_free_hwrm_resources" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31367 31383]))                  
+                :type "void")
+                nil [31337 31510])
+            ("bnxt_alloc_hwrm_resources" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31542 31558]))                  
+                :type "int")
+                nil [31512 32084])
+            ("bnxt_clear_hwrm_vnic_filters" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32119 32135])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32136 32164]))                  
+                :type "int")
+                nil [32086 32341])
+            ("bnxt_set_hwrm_vnic_filters" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32374 32390])
+                    ("vnic" variable
+                       (:pointer 1
+                        :type ("bnxt_vnic_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32391 32419]))                  
+                :type "int")
+                nil [32343 32600])
+            ("bnxt_free_all_hwrm_resources" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32636 32652]))                  
+                :type "void")
+                nil [32602 33165])
+            ("bnxt_parse_eth_link_duplex" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conf_link_speed" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33210 33235]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [33167 33598])
+            ("bnxt_parse_eth_link_speed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("conf_link_speed" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33642 33667]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [33600 34833])
+            ("BNXT_SUPPORTED_SPEEDS" variable (:constant-flag t) nil [34843 34864])
+            ("bnxt_valid_link_speed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("link_speed" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35105 35125])
+                    ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35126 35142]))                  
+                :type "int")
+                nil [35072 35856])
+            ("bnxt_parse_eth_link_speed_mask" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("link_speed" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35905 35925]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [35858 36933])
+            ("bnxt_parse_hw_link_speed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("hw_link_speed" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36976 36999]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [36935 38016])
+            ("bnxt_parse_hw_link_duplex" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("hw_link_duplex" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38060 38084]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [38018 38536])
+            ("bnxt_get_hwrm_link_config" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38568 38584])
+                    ("link" variable
+                       (:pointer 1
+                        :type ("rte_eth_link" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38585 38611]))                  
+                :type "int")
+                nil [38538 39232])
+            ("bnxt_set_hwrm_link_config" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39264 39280])
+                    ("link_up" variable (:type "bool") (reparse-symbol arg-sub-list) [39281 39294]))                  
+                :type "int")
+                nil [39234 40599])
+            ("bnxt_hwrm_func_qcfg" function
+               (:arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("bnxt" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40642 40658]))                  
+                :type "int")
+                nil [40618 41421]))          
+      :file "bnxt_hwrm.c"
+      :pointmax 41422
+      :fsize 41421
+      :lastmodtime '(22914 63283 461386 665000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("HWRM_CMD_TIMEOUT" . ((number "2000" 2119 . 2123)))
+          ("HWRM_PREP" (spp-arg-list ("req" "type" "cr" "resp") 3749 . 3770) . 
+              ((symbol "memset" 3774 . 3780) (semantic-list "(bp->hwrm_cmd_resp_addr, 0, bp->max_resp_len)" 3780 . 3825) (punctuation ";" 3825 . 3826) (symbol "req" 3830 . 3833) (punctuation "." 3833 . 3834) (symbol "req_type" 3834 . 3842) (punctuation "=" 3843 . 3844) (symbol "rte_cpu_to_le_16" 3845 . 3861) (semantic-list "(HWRM_##type)" 3861 . 3874) (punctuation ";" 3874 . 3875) (symbol "req" 3879 . 3882) (punctuation "." 3882 . 3883) (symbol "cmpl_ring" 3883 . 3892) (punctuation "=" 3893 . 3894) (symbol "rte_cpu_to_le_16" 3895 . 3911) (semantic-list "(cr)" 3911 . 3915) (punctuation ";" 3915 . 3916) (symbol "req" 3920 . 3923) (punctuation "." 3923 . 3924) (symbol "seq_id" 3924 . 3930) (punctuation "=" 3931 . 3932) (symbol "rte_cpu_to_le_16" 3933 . 3949) (semantic-list "(bp->hwrm_cmd_seq++)" 3949 . 3969) (punctuation ";" 3969 . 3970) (symbol "req" 3974 . 3977) (punctuation "." 3977 . 3978) (symbol "target_id" 3978 . 3987) (punctuation "=" 3988 . 3989) (symbol "rte_cpu_to_le_16" 3990 . 4006) (semantic-list "(0xffff)" 4006 . 4014) (punctuation ";" 4014 . 4015) (symbol "req" 4019 . 4022) (punctuation "." 4022 . 4023) (symbol "resp_addr" 4023 . 4032) (punctuation "=" 4033 . 4034) (symbol "rte_cpu_to_le_64" 4035 . 4051) (semantic-list "(bp->hwrm_cmd_resp_dma_addr)" 4051 . 4079)))
+          ("HWRM_CHECK_RESULT" . ((semantic-list "{ \\
+		if (rc) { \\
+			RTE_LOG(ERR, PMD, \"%s failed rc:%d\\n\", \\
+				__func__, rc); \\
+			return rc; \\
+		} \\
+		if (resp->error_code) { \\
+			rc = rte_le_to_cpu_16(resp->error_code); \\
+			RTE_LOG(ERR, PMD, \"%s error %d\\n\", __func__, rc); \\
+			return rc; \\
+		} \\
+	}" 4110 . 4368)))
+          ("BNXT_SUPPORTED_SPEEDS" . ((semantic-list "(ETH_LINK_SPEED_100M | ETH_LINK_SPEED_100M_HD | \\
+		ETH_LINK_SPEED_1G | ETH_LINK_SPEED_2_5G | \\
+		ETH_LINK_SPEED_10G | ETH_LINK_SPEED_20G | ETH_LINK_SPEED_25G | \\
+		ETH_LINK_SPEED_40G | ETH_LINK_SPEED_50G)" 34865 . 35070)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt.h"
+      :fsize 5260
+      :lastmodtime '(22914 63283 460386 673000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_cpr.h"
+      :fsize 3264
+      :lastmodtime '(22914 63283 460386 673000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_filter.h"
+      :fsize 2694
+      :lastmodtime '(22914 63283 460386 673000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_hwrm.h"
+      :fsize 4511
+      :lastmodtime '(22914 63283 461386 665000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_rxq.h"
+      :fsize 3042
+      :lastmodtime '(22914 63283 461386 665000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_rxr.h"
+      :fsize 2387
+      :lastmodtime '(22914 63283 461386 665000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_ring.h"
+      :fsize 3370
+      :lastmodtime '(22914 63283 461386 665000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_txq.h"
+      :fsize 3128
+      :lastmodtime '(22914 63283 461386 665000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_txr.h"
+      :fsize 2558
+      :lastmodtime '(22914 63283 461386 665000))
+    (semanticdb-table "semanticdb-table"
+      :file "bnxt_vnic.h"
+      :fsize 2970
+      :lastmodtime '(22914 63283 462386 658000))
+    (semanticdb-table "semanticdb-table"
+      :file "hsi_struct_def_dpdk.h"
+      :fsize 224562
+      :lastmodtime '(22914 63283 463386 650000)))
+  :file "!root!spdk!dpdk!drivers!net!bnxt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

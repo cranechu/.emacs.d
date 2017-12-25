@@ -1,0 +1,98 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("linux/nbd.h" include (:system-flag t) nil [1691 1713])
+            ("spdk/nbd.h" include nil nil [1715 1736])
+            ("spdk/bdev.h" include nil nil [1737 1759])
+            ("spdk/env.h" include nil nil [1760 1781])
+            ("spdk/event.h" include nil nil [1782 1805])
+            ("spdk/log.h" include nil nil [1806 1827])
+            ("spdk/util.h" include nil nil [1828 1850])
+            ("g_nbd_poller" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("spdk_poller" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1852 1892])
+            ("g_nbd_disk" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("spdk_nbd_disk" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1893 1933])
+            ("g_bdev_name" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1934 1959])
+            ("g_nbd_name" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "\"/dev/nbd0\""
+                :type "char")
+                nil [1960 1998])
+            ("../common.c" include nil nil [2000 2022])
+            ("nbd_shutdown" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2049 2054]))                  
+                :type "void")
+                nil [2024 2151])
+            ("nbd_poll" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2174 2184]))                  
+                :type "void")
+                nil [2153 2335])
+            ("nbd_start" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2359 2370])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2371 2382]))                  
+                :type "void")
+                nil [2337 2759])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("program_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2779 2798]))                  
+                :type "void")
+                nil [2761 3222])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3233 3242])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3243 3255]))                  
+                :type "int")
+                nil [3224 4305]))          
+      :file "nbd.c"
+      :pointmax 4306
+      :fsize 4305
+      :lastmodtime '(22931 51286 969337 278000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!test!lib!bdev!nbd!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

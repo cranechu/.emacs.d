@@ -1,0 +1,8 @@
+/root/spdk/examples/nvme/hello_world/hello_world.c
+/root/spdk/examples/nvme/hello_world/#hello_world.c#
+/root/spdk/lib/nvme/nvme.c
+/root/spdk/lib/nvme/#nvme.c#
+/root/spdk/lib/nvme/nvme_ctrlr.c
+/root/spdk/lib/nvme/#nvme_ctrlr.c#
+/root/spdk/TAGS
+/root/spdk/#TAGS#

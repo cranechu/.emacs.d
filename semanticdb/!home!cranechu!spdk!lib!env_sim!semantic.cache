@@ -1,0 +1,1639 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("env_internal.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c") nil [1665 1690])
+            ("spdk/env.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c") nil [1692 1713])
+            ("spdk/log.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c") nil [1714 1735])
+            ("SYSFS_PCI_DRIVERS" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :constant-flag t)
+                nil [1745 1762])
+            ("PCI_CFG_SIZE" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :constant-flag t)
+                nil [1795 1807])
+            ("PCI_EXT_CAP_ID_SN" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :constant-flag t)
+                nil [1821 1838])
+            ("spdk_pci_device_init" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("driver" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1870 1900])
+                    ("device" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1908 1938]))                  )
+                nil [1845 2567])
+            ("spdk_pci_device_fini" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2594 2624]))                  )
+                nil [2569 2639])
+            ("spdk_pci_device_detach" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "void"
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2669 2700]))                  )
+                nil [2641 3173])
+            ("spdk_pci_device_attach" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("spdk_pci_enum_ctx" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3202 3232])
+                    ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3242 3267])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3277 3292])
+                    ("pci_address" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3293 3327]))                  )
+                nil [3175 3801])
+            ("spdk_pci_enumerate" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("spdk_pci_enum_ctx" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4014 4044])
+                    ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4050 4075])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4081 4096]))                  )
+                nil [3991 4397])
+            ("spdk_pci_get_device" function
+               (:pointer 1
+                :arguments 
+                  ( ("pci_addr" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4444 4475]))                  
+                :type ("spdk_pci_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :truefile "/home/cranechu/spdk/lib/env_sim/pci.c")
+                nil [4399 4903])
+            ("spdk_pci_device_map_bar" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4933 4964])
+                    ("bar" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4965 4978])
+                    ("mapped_addr" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4982 5001])
+                    ("phys_addr" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5002 5022])
+                    ("size" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5023 5038]))                  )
+                nil [4905 5243])
+            ("spdk_pci_device_unmap_bar" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5275 5306])
+                    ("bar" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5307 5320])
+                    ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5321 5332]))                  )
+                nil [5245 5347])
+            ("spdk_pci_device_get_domain" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint16_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5385 5413]))                  )
+                nil [5349 5443])
+            ("spdk_pci_device_get_bus" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint8_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5477 5505]))                  )
+                nil [5445 5532])
+            ("spdk_pci_device_get_dev" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint8_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5566 5594]))                  )
+                nil [5534 5623])
+            ("spdk_pci_device_get_func" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint8_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5658 5686]))                  )
+                nil [5625 5718])
+            ("spdk_pci_device_get_vendor_id" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint16_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5759 5787]))                  )
+                nil [5720 5818])
+            ("spdk_pci_device_get_device_id" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint16_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5859 5887]))                  )
+                nil [5820 5918])
+            ("spdk_pci_device_get_subvendor_id" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint16_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5962 5990]))                  )
+                nil [5920 6031])
+            ("spdk_pci_device_get_subdevice_id" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("uint16_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6075 6103]))                  )
+                nil [6033 6144])
+            ("spdk_pci_device_get_id" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("spdk_pci_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("pci_dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6188 6220]))                  )
+                nil [6146 6522])
+            ("spdk_pci_device_get_socket_id" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("pci_dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6558 6590]))                  )
+                nil [6524 6719])
+            ("stdio.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :system-flag t)
+                nil [6721 6739])
+            ("assert.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :system-flag t)
+                nil [6740 6759])
+            ("SPDK_NOTICELOG" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :constant-flag t)
+                nil [6790 6804])
+            ("spdk_pci_device_cfg_read8" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6843 6871])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6872 6887])
+                    ("offset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6888 6904]))                  )
+                nil [6813 7120])
+            ("spdk_pci_device_cfg_write8" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7153 7181])
+                    ("value" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7182 7196])
+                    ("offset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7197 7213]))                  )
+                nil [7122 7402])
+            ("spdk_pci_device_cfg_read16" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7435 7463])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7464 7480])
+                    ("offset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7481 7497]))                  )
+                nil [7404 7713])
+            ("spdk_pci_device_cfg_write16" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7747 7775])
+                    ("value" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7776 7791])
+                    ("offset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7792 7808]))                  )
+                nil [7715 7997])
+            ("spdk_pci_device_cfg_read32" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8030 8058])
+                    ("value" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8059 8075])
+                    ("offset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8076 8092]))                  )
+                nil [7999 8308])
+            ("spdk_pci_device_cfg_write32" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8342 8370])
+                    ("value" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8371 8386])
+                    ("offset" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8387 8403]))                  )
+                nil [8310 8592])
+            ("spdk_pci_device_get_serial_number" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8632 8660])
+                    ("sn" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8661 8670])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8671 8682]))                  )
+                nil [8594 9410])
+            ("spdk_pci_device_get_addr" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type ("spdk_pci_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("pci_dev" variable
+                       (:pointer 1
+                        :type ("spdk_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9458 9490]))                  )
+                nil [9412 9754])
+            ("spdk_pci_addr_compare" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("a1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9782 9813])
+                    ("a2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9814 9845]))                  )
+                nil [9756 10237])
+            ("spdk_pci_device_claim" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("pci_addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10282 10319]))                  )
+                nil [10256 11458])
+            ("spdk_pci_addr_parse" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11643 11670])
+                    ("bdf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11671 11687]))                  )
+                nil [11619 12358])
+            ("spdk_pci_addr_fmt" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci.c"
+                :type "int"
+                :arguments 
+                  ( ("bdf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12382 12392])
+                    ("sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12393 12403])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12404 12437]))                  )
+                nil [12360 12616]))          
+      :file "pci.c"
+      :pointmax 12617
+      :fsize 12616
+      :lastmodtime '(22724 10452 911518 421000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("SPDK_ENV_INTERNAL_H" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :constant-flag t)
+                nil [1701 1720])
+            ("spdk_pci_device" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :constant-flag t)
+                nil [1730 1745])
+            ("spdk/env.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h") nil [1762 1783])
+            ("stdio.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1785 1803])
+            ("unistd.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1804 1823])
+            ("stdlib.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1824 1843])
+            ("string.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1844 1863])
+            ("fcntl.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1864 1882])
+            ("dirent.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1883 1902])
+            ("sys/mman.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1903 1924])
+            ("sys/stat.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1925 1946])
+            ("sys/types.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1947 1969])
+            ("pthread.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1970 1990])
+            ("stdbool.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [1991 2011])
+            ("rte_config.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [2013 2036])
+            ("rte_eal.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [2037 2057])
+            ("rte_pci.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [2058 2078])
+            ("rte_version.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [2079 2103])
+            ("rte_dev.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :system-flag t)
+                nil [2104 2124])
+            ("spdk_pci_enum_ctx" type
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :type "struct"
+                :members 
+                  ( ("driver" variable
+                       (:depth 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h")
+                        (reparse-symbol classsubparts) [2154 2183])
+                    ("cb_fn" variable
+                       (:depth 1
+                        :type ("spdk_pci_enum_cb" type (:type "class") nil nil)
+                        :truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h")
+                        (reparse-symbol classsubparts) [2185 2208])
+                    ("cb_arg" variable
+                       (:depth 1
+                        :pointer 1
+                        :type "void"
+                        :truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h")
+                        (reparse-symbol classsubparts) [2210 2226])
+                    ("mtx" variable
+                       (:depth 1
+                        :type ("pthread_mutex_t" type (:type "class") nil nil)
+                        :truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h")
+                        (reparse-symbol classsubparts) [2228 2249]))                  )
+                nil [2126 2252])
+            ("spdk_pci_device_init" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :type "int"
+                :arguments 
+                  ( ("driver" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2279 2309])
+                    ("device" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2310 2340]))                  
+                :prototype-flag t)
+                nil [2254 2341])
+            ("spdk_pci_device_fini" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :type "int"
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2367 2397]))                  
+                :prototype-flag t)
+                nil [2342 2398])
+            ("spdk_pci_enumerate" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :type "int"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("spdk_pci_enum_ctx" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2423 2453])
+                    ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2454 2479])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2480 2495]))                  
+                :prototype-flag t)
+                nil [2400 2496])
+            ("spdk_pci_device_attach" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :type "int"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("spdk_pci_enum_ctx" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2524 2554])
+                    ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2555 2580])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2581 2596])
+                    ("pci_address" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2603 2637]))                  
+                :prototype-flag t)
+                nil [2497 2638])
+            ("spdk_vtophys_register_dpdk_mem" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env_internal.h"
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2676 2681]))                  
+                :prototype-flag t)
+                nil [2640 2682]))          
+      :file "env_internal.h"
+      :pointmax 2691
+      :fsize 2690
+      :lastmodtime '(22718 17330 383149 285000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_ENV_INTERNAL_H")
+          ("spdk_pci_device" . ((symbol "rte_pci_device" 1746 . 1760)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("env_internal.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/init.c") nil [1665 1690])
+            ("assert.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1692 1711])
+            ("errno.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1712 1730])
+            ("limits.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1731 1750])
+            ("stdarg.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1751 1770])
+            ("stdbool.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1771 1791])
+            ("stddef.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1792 1811])
+            ("stdint.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1812 1831])
+            ("stdio.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1832 1850])
+            ("stdlib.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1851 1870])
+            ("string.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1871 1890])
+            ("sys/types.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1891 1913])
+            ("sys/stat.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1914 1935])
+            ("unistd.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1936 1955])
+            ("rte_config.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1957 1980])
+            ("rte_eal.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :system-flag t)
+                nil [1981 2001])
+            ("SPDK_ENV_DPDK_DEFAULT_NAME" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :constant-flag t)
+                nil [2011 2037])
+            ("SPDK_ENV_DPDK_DEFAULT_NAME" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :constant-flag t)
+                nil [2011 2037])
+            ("SPDK_ENV_DPDK_DEFAULT_SHM_ID" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :constant-flag t)
+                nil [2054 2082])
+            ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :constant-flag t)
+                nil [2095 2125])
+            ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :constant-flag t)
+                nil [2138 2171])
+            ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :constant-flag t)
+                nil [2183 2216])
+            ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :constant-flag t)
+                nil [2228 2259])
+            ("_sprintf_alloc" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :type "char"
+                :arguments 
+                  ( ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2297 2316])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2317 2321]))                  
+                :typemodifiers ("static")
+                :pointer 1)
+                nil [2268 3381])
+            ("spdk_env_opts_init" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :type "void"
+                :arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_env_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3407 3434]))                  )
+                nil [3383 3817])
+            ("spdk_free_args" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :type "void"
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3846 3858])
+                    ("argcount" variable (:type "int") (reparse-symbol arg-sub-list) [3859 3872]))                  
+                :typemodifiers ("static"))
+                nil [3819 4004])
+            ("spdk_push_arg" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :type "char"
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4035 4048])
+                    ("argcount" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4049 4063])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4064 4074]))                  
+                :typemodifiers ("static")
+                :pointer 2)
+                nil [4006 4314])
+            ("spdk_get_coremask" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :type "unsigned long long"
+                :arguments 
+                  ( ("coremask" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4360 4381]))                  
+                :typemodifiers ("static"))
+                nil [4316 4838])
+            ("spdk_build_eal_cmdline" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :type "int"
+                :arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_env_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4874 4907])
+                    ("out" variable
+                       (:pointer 2
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4908 4921]))                  
+                :typemodifiers ("static"))
+                nil [4840 6759])
+            ("spdk_env_init" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/init.c"
+                :type "void"
+                :arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_env_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6780 6813]))                  )
+                nil [6761 7679]))          
+      :file "init.c"
+      :pointmax 7680
+      :fsize 7679
+      :lastmodtime '(22718 17330 384149 281000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_ENV_DPDK_DEFAULT_SHM_ID" . ((punctuation "-" 2084 . 2085) (number "1" 2085 . 2086)))
+          ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" . ((punctuation "-" 2127 . 2128) (number "1" 2128 . 2129)))
+          ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" . ((punctuation "-" 2172 . 2173) (number "1" 2173 . 2174)))
+          ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" . ((punctuation "-" 2217 . 2218) (number "1" 2218 . 2219)))
+          ("SPDK_ENV_DPDK_DEFAULT_NAME" . ((string "\"spdk\"" 2039 . 2045)))
+          ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" . ((string "\"0x1\"" 2261 . 2266)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("env_internal.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/pci_nvme.c") nil [1665 1690])
+            ("spdk/pci_ids.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/pci_nvme.c") nil [1692 1717])
+            ("nvme_pci_driver_id" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_nvme.c"
+                :type ("rte_pci_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :default-value "{
+#if RTE_VERSION >= RTE_VERSION_NUM(16, 7, 0, 1)
+	{
+		.class_id = SPDK_PCI_CLASS_NVME,
+		.vendor_id = PCI_ANY_ID,
+		.device_id = PCI_ANY_ID,
+		.subsystem_vendor_id = PCI_ANY_ID,
+		.subsystem_device_id = PCI_ANY_ID,
+	},
+#else
+	{RTE_PCI_DEVICE(0x8086, 0x0953)},
+#endif
+	{ .vendor_id = 0, /* sentinel */ },
+}"
+                :typemodifiers ("static")
+                :dereference 1)
+                nil [1719 2074])
+            ("g_nvme_pci_drv" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_nvme.c"
+                :type ("spdk_pci_enum_ctx" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :default-value "{
+	.driver = {
+		.drv_flags	= RTE_PCI_DRV_NEED_MAPPING,
+		.id_table	= nvme_pci_driver_id,
+#if RTE_VERSION >= RTE_VERSION_NUM(16, 11, 0, 0)
+		.probe		= spdk_pci_device_init,
+		.remove		= spdk_pci_device_fini,
+#else
+		.devinit	= spdk_pci_device_init,
+		.devuninit	= spdk_pci_device_fini,
+		.name		= \"spdk_nvme\",
+#endif
+	},
+
+	.cb_fn = NULL,
+	.cb_arg = NULL,
+	.mtx = PTHREAD_MUTEX_INITIALIZER,
+}"
+                :typemodifiers ("static"))
+                nil [2076 2517])
+            ("RTE_PMD_REGISTER_PCI" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_nvme.c"
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("spdk_nvme" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2589 2599])
+                    ("" variable (:type ("g_nvme_pci_drv" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2600 2615])
+                    ("" variable (:type ("driver" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2615 2622]))                  
+                :prototype-flag t)
+                nil [2568 2623])
+            ("spdk_pci_nvme_device_attach" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_nvme.c"
+                :type "int"
+                :arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3066 3091])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3099 3114])
+                    ("pci_address" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3115 3149]))                  )
+                nil [3034 3234])
+            ("spdk_pci_nvme_enumerate" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_nvme.c"
+                :type "int"
+                :arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3264 3289])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3290 3305]))                  )
+                nil [3236 3373]))          
+      :file "pci_nvme.c"
+      :pointmax 3374
+      :fsize 3373
+      :lastmodtime '(22718 17330 385149 277000)
+      :unmatched-syntax '((punctuation 2614 . 2615)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("DPDK_INC" variable (:default-value ("-I$(DPDK_ABS_DIR)/include")) nil [2067 2104])
+            ("DPDK_INC" variable (:default-value ("-I$(DPDK_ABS_DIR)/include/dpdk")) nil [2109 2151])
+            ("DPDK_LIB_EXT" variable (:default-value (".a")) nil [2213 2231])
+            ("DPDK_LIB_EXT" variable (:default-value (".so")) nil [2236 2255])
+            ("DPDK_LIB_LIST" variable (:default-value ("rte_eal" "rte_mempool" "rte_ring")) nil [2262 2307])
+            ("DPDK_LIB_LIST" variable (:default-value ("rte_malloc")) nil [2504 2532])
+            ("DPDK_LIB" variable (:default-value ("$(DPDK_LIB_LIST:%=$(DPDK_ABS_DIR)/lib/lib%$(DPDK_LIB_EXT))")) nil [2539 2609])
+            ("ENV_CFLAGS" variable (:default-value ("$(DPDK_INC)")) nil [2610 2635])
+            ("ENV_CXXFLAGS" variable (:default-value ("$(ENV_CFLAGS)")) nil [2635 2664])
+            ("ENV_DPDK_FILE" variable (:default-value ("$(call spdk_lib_list_to_files,env_dpdk)")) nil [2664 2720])
+            ("ENV_LIBS" variable (:default-value ("$(ENV_DPDK_FILE)" "$(DPDK_LIB)")) nil [2720 2760])
+            ("ENV_LINKER_ARGS" variable (:default-value ("$(ENV_DPDK_FILE)" "-Wl,--start-group" "-Wl,--whole-archive" "$(DPDK_LIB)" "-Wl,--end-group" "-Wl,--no-whole-archive")) nil [2760 2884])
+            ("ENV_LINKER_ARGS" variable (:default-value ("-ldl")) nil [2904 2928])
+            ("ENV_LINKER_ARGS" variable (:default-value ("-lexecinfo")) nil [2955 2985]))          
+      :file "env.mk"
+      :pointmax 2991
+      :fsize 2990
+      :lastmodtime '(22718 17330 383149 285000)
+      :unmatched-syntax '((semantic-list 1979 . 2000) (punctuation 1978 . 1979) (punctuation 1976 . 1977) (symbol 1963 . 1975) (symbol 1956 . 1962) (bol 1956 . 1956) (symbol 1896 . 1944) (punctuation 1894 . 1895) (symbol 1881 . 1893) (symbol 1874 . 1880) (bol 1874 . 1874) (symbol 1816 . 1868) (punctuation 1814 . 1815) (symbol 1801 . 1813) (symbol 1794 . 1800) (bol 1794 . 1794) (semantic-list 1733 . 1750) (punctuation 1732 . 1733) (punctuation 1730 . 1731) (punctuation 1729 . 1730) (symbol 1720 . 1728) (bol 1720 . 1720)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/env.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/env.c") nil [1665 1686])
+            ("string.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1688 1707])
+            ("unistd.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1708 1727])
+            ("rte_config.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1729 1752])
+            ("rte_cycles.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1753 1776])
+            ("rte_malloc.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1777 1800])
+            ("rte_mempool.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1801 1825])
+            ("rte_memzone.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1826 1850])
+            ("rte_version.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :system-flag t)
+                nil [1851 1875])
+            ("spdk_malloc" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1896 1908])
+                    ("align" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1909 1922])
+                    ("phys_addr" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1923 1943]))                  
+                :pointer 1)
+                nil [1877 2073])
+            ("spdk_zmalloc" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2095 2107])
+                    ("align" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2108 2121])
+                    ("phys_addr" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2122 2142]))                  
+                :pointer 1)
+                nil [2075 2248])
+            ("spdk_realloc" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2270 2280])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2281 2293])
+                    ("align" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2294 2307])
+                    ("phys_addr" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2308 2328]))                  
+                :pointer 1)
+                nil [2250 2474])
+            ("spdk_free" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2491 2501]))                  )
+                nil [2476 2521])
+            ("spdk_memzone_reserve" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2551 2568])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2569 2580])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [2581 2595])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2596 2611]))                  
+                :pointer 1)
+                nil [2523 2875])
+            ("spdk_memzone_lookup" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2904 2921]))                  
+                :pointer 1)
+                nil [2877 3050])
+            ("spdk_memzone_free" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "int"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3074 3091]))                  )
+                nil [3052 3220])
+            ("spdk_memzone_dump" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3245 3253]))                  )
+                nil [3222 3279])
+            ("spdk_mempool_create" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type ("spdk_mempool" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3323 3340])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3341 3354])
+                    ("ele_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3361 3377])
+                    ("cache_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3378 3396])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [3397 3411]))                  
+                :pointer 1)
+                nil [3281 3918])
+            ("spdk_mempool_free" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("mp" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3943 3967]))                  )
+                nil [3920 4071])
+            ("spdk_mempool_get" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("mp" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4097 4121]))                  
+                :pointer 1)
+                nil [4073 4209])
+            ("spdk_mempool_put" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("mp" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4233 4257])
+                    ("ele" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4258 4268]))                  )
+                nil [4211 4321])
+            ("spdk_mempool_put_bulk" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("mp" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4350 4374])
+                    ("ele_arr" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4375 4396])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4397 4410]))                  )
+                nil [4323 4479])
+            ("spdk_process_is_primary" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "bool"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4510 4515]))                  )
+                nil [4481 4573])
+            ("spdk_get_ticks" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type ("uint64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4599 4604]))                  )
+                nil [4575 4640])
+            ("spdk_get_ticks_hz" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type ("uint64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4669 4674]))                  )
+                nil [4642 4706])
+            ("spdk_delay_us" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("us" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4727 4743]))                  )
+                nil [4708 4766])
+            ("spdk_call_unaffinitized" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/env.c"
+                :type "void"
+                :arguments 
+                  ( ("cb" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4799 4818])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4820 4830]))                  
+                :pointer 1)
+                nil [4768 5273]))          
+      :file "env.c"
+      :pointmax 5274
+      :fsize 5273
+      :lastmodtime '(22718 17330 383149 285000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("env_internal.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c") nil [1665 1690])
+            ("spdk/pci_ids.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c") nil [1692 1717])
+            ("SPDK_IOAT_PCI_DEVICE" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c"
+                :constant-flag t)
+                nil [1727 1747])
+            ("ioat_driver_id" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c"
+                :type ("rte_pci_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :default-value "{
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB0)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB1)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB2)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB3)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB4)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB5)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB6)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB7)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SNB8)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB0)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB1)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB2)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB3)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB4)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB5)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB6)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB7)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB8)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_IVB9)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW0)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW1)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW2)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW3)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW4)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW5)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW6)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW7)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW8)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_HSW9)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BWD0)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BWD1)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BWD2)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BWD3)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDXDE0)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDXDE1)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDXDE2)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDXDE3)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX0)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX1)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX2)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX3)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX4)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX5)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX6)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX7)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX8)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_BDX9)},
+	{SPDK_IOAT_PCI_DEVICE(PCI_DEVICE_ID_INTEL_IOAT_SKX)},
+	{ .vendor_id = 0, /* sentinel */ },
+}"
+                :typemodifiers ("static")
+                :dereference 1)
+                nil [1805 4585])
+            ("g_ioat_pci_drv" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c"
+                :type ("spdk_pci_enum_ctx" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :default-value "{
+	.driver = {
+		.drv_flags	= RTE_PCI_DRV_NEED_MAPPING,
+		.id_table	= ioat_driver_id,
+#if RTE_VERSION >= RTE_VERSION_NUM(16, 11, 0, 0)
+		.probe		= spdk_pci_device_init,
+		.remove		= spdk_pci_device_fini,
+#else
+		.devinit	= spdk_pci_device_init,
+		.devuninit	= spdk_pci_device_fini,
+		.name		= \"spdk_ioat\",
+#endif
+	},
+
+	.cb_fn = NULL,
+	.cb_arg = NULL,
+	.mtx = PTHREAD_MUTEX_INITIALIZER,
+}"
+                :typemodifiers ("static"))
+                nil [4587 5024])
+            ("RTE_PMD_REGISTER_PCI" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c"
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("spdk_ioat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5096 5106])
+                    ("" variable (:type ("g_ioat_pci_drv" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5107 5122])
+                    ("" variable (:type ("driver" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5122 5129]))                  
+                :prototype-flag t)
+                nil [5075 5130])
+            ("spdk_pci_ioat_device_attach" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c"
+                :type "int"
+                :arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5573 5598])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5599 5614])
+                    ("pci_address" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5622 5656]))                  )
+                nil [5541 5741])
+            ("spdk_pci_ioat_enumerate" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/pci_ioat.c"
+                :type "int"
+                :arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5771 5796])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5797 5812]))                  )
+                nil [5743 5880]))          
+      :file "pci_ioat.c"
+      :pointmax 5881
+      :fsize 5880
+      :lastmodtime '(22718 17330 385149 277000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("env_internal.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c") nil [1665 1690])
+            ("inttypes.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1692 1713])
+            ("stdlib.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1714 1733])
+            ("unistd.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1734 1753])
+            ("stdio.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1754 1772])
+            ("string.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1773 1792])
+            ("pthread.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1793 1813])
+            ("rte_config.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1815 1838])
+            ("rte_eal_memconfig.h" include
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :system-flag t)
+                nil [1839 1869])
+            ("spdk/assert.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c") nil [1871 1895])
+            ("spdk/likely.h" include (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c") nil [1896 1920])
+            ("SHIFT_128TB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2042 2053])
+            ("MASK_128TB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2091 2101])
+            ("SHIFT_1GB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2139 2148])
+            ("MASK_1GB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2184 2192])
+            ("SHIFT_2MB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2228 2237])
+            ("MASK_2MB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2272 2280])
+            ("SHIFT_4KB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2316 2325])
+            ("MASK_4KB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2360 2368])
+            ("FN_2MB_TO_4KB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2404 2417])
+            ("FN_4KB_TO_2MB" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2462 2475])
+            ("MAP_128TB_IDX" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2521 2534])
+            ("MAP_1GB_IDX" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2591 2602])
+            ("VTOPHYS_MAX_REF_COUNT" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :constant-flag t)
+                nil [2719 2740])
+            ("map_2mb" type
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "struct"
+                :members 
+                  ( ("paddr_2mb" variable
+                       (:depth 1
+                        :type ("uint64_t" type (:type "class") nil nil)
+                        :truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c")
+                        (reparse-symbol classsubparts) [2814 2833]))                  )
+                nil [2796 2836])
+            ("map_1gb" type
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "struct"
+                :members 
+                  ( ("map" variable
+                       (:depth 1
+                        :dereference 1
+                        :type ("map_2mb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c")
+                        (reparse-symbol classsubparts) [3053 3109])
+                    ("ref_count" variable
+                       (:depth 1
+                        :dereference 1
+                        :type ("uint16_t" type (:type "class") nil nil)
+                        :truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c")
+                        (reparse-symbol classsubparts) [3111 3167]))                  )
+                nil [3035 3170])
+            ("map_128tb" type
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "struct"
+                :members 
+                  ( ("map" variable
+                       (:depth 1
+                        :pointer 1
+                        :dereference 1
+                        :type ("map_1gb" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c")
+                        (reparse-symbol classsubparts) [3326 3385]))                  )
+                nil [3306 3388])
+            ("vtophys_map_128tb" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type ("map_128tb" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :default-value "{}"
+                :typemodifiers ("static"))
+                nil [3390 3437])
+            ("vtophys_mutex" variable
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type ("pthread_mutex_t" type (:type "class") nil nil)
+                :default-value "PTHREAD_MUTEX_INITIALIZER"
+                :typemodifiers ("static"))
+                nil [3438 3503])
+            ("vtophys_get_map_1gb" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type ("map_1gb" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :arguments 
+                  ( ("vfn_2mb" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3549 3566]))                  
+                :typemodifiers ("static")
+                :pointer 1)
+                nil [3505 4329])
+            ("vtophys_get_dpdk_paddr" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type ("uint64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("vaddr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4370 4382]))                  
+                :typemodifiers ("static"))
+                nil [4331 4714])
+            ("vtophys_get_paddr" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type ("uint64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("vaddr" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4750 4765]))                  
+                :typemodifiers ("static"))
+                nil [4716 5465])
+            ("_spdk_vtophys_register_one" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "void"
+                :arguments 
+                  ( ("vfn_2mb" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5506 5523])
+                    ("paddr" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5524 5539]))                  
+                :typemodifiers ("static"))
+                nil [5467 6279])
+            ("_spdk_vtophys_unregister_one" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "void"
+                :arguments 
+                  ( ("vfn_2mb" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6322 6339]))                  
+                :typemodifiers ("static"))
+                nil [6281 6970])
+            ("spdk_vtophys_register" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "void"
+                :arguments 
+                  ( ("vaddr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6999 7011])
+                    ("len" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7012 7025]))                  )
+                nil [6972 7752])
+            ("spdk_vtophys_unregister" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "void"
+                :arguments 
+                  ( ("vaddr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7783 7795])
+                    ("len" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7796 7809]))                  )
+                nil [7754 8298])
+            ("spdk_vtophys_register_dpdk_mem" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8336 8341]))                  )
+                nil [8300 8644])
+            ("spdk_vtophys" function
+               (:truefile "/home/cranechu/spdk/lib/env_sim/vtophys.c"
+                :type ("uint64_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8668 8678]))                  )
+                nil [8646 9622]))          
+      :file "vtophys.c"
+      :pointmax 9623
+      :fsize 9622
+      :lastmodtime '(22718 17330 385149 277000)
+      :unmatched-syntax nil))
+  :file "!home!cranechu!spdk!lib!env_sim!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

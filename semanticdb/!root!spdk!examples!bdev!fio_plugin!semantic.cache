@@ -1,0 +1,571 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/bdev.h" include nil nil [1691 1713])
+            ("spdk/copy_engine.h" include nil nil [1714 1743])
+            ("spdk/conf.h" include nil nil [1744 1766])
+            ("spdk/env.h" include nil nil [1767 1788])
+            ("spdk/io_channel.h" include nil nil [1789 1817])
+            ("spdk/log.h" include nil nil [1818 1839])
+            ("spdk/string.h" include nil nil [1840 1864])
+            ("spdk/queue.h" include nil nil [1865 1888])
+            ("config-host.h" include nil nil [1890 1914])
+            ("fio.h" include nil nil [1915 1931])
+            ("optgroup.h" include nil nil [1932 1953])
+            ("spdk_fio_options" type
+               (:members 
+                  ( ("pad" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1982 1992])
+                    ("conf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1994 2005]))                  
+                :type "struct")
+                nil [1955 2008])
+            ("spdk_fio_msg" type
+               (:members 
+                  ( ("cb_fn" variable (:type ("spdk_thread_fn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2081 2102])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2104 2118]))                  
+                :type "struct")
+                nil [2058 2121])
+            ("spdk_fio_poller" type
+               (:members 
+                  ( ("cb_fn" variable (:type ("spdk_bdev_poller_fn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2174 2200])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2202 2217])
+                    ("period_microseconds" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2219 2249])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [2281 2286]))                  
+                :type "struct")
+                nil [2148 2289])
+            ("spdk_fio_request" type
+               (:members 
+                  ( ("io" variable
+                       (:pointer 1
+                        :type ("io_u" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2318 2335])
+                    ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2337 2360]))                  
+                :type "struct")
+                nil [2291 2363])
+            ("spdk_fio_target" type
+               (:members 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2391 2414])
+                    ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2416 2444])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2446 2473])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [2505 2510]))                  
+                :type "struct")
+                nil [2365 2513])
+            ("spdk_fio_thread" type
+               (:members 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2541 2565])
+                    ("thread" variable
+                       (:pointer 1
+                        :type ("spdk_thread" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2592 2620])
+                    ("ring" variable
+                       (:pointer 1
+                        :type ("spdk_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2648 2672])
+                    ("pollers" variable (:type "int") (reparse-symbol classsubparts) [2751 2759])
+                    ("targets" variable (:type "int") (reparse-symbol classsubparts) [2840 2848])
+                    ("iocq" variable
+                       (:pointer 2
+                        :type ("io_u" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2851 2871])
+                    ("iocq_count" variable (:type "unsigned int") (reparse-symbol classsubparts) [2897 2922])
+                    ("iocq_size" variable (:type "unsigned int") (reparse-symbol classsubparts) [2975 2999]))                  
+                :type "struct")
+                nil [2515 3038])
+            ("g_thread" variable
+               (:pointer 1
+                :type ("spdk_fio_thread" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3056 3089])
+            ("spdk_fio_init" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3116 3139]))                  
+                :type "int")
+                nil [3091 3140])
+            ("spdk_fio_cleanup" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3170 3193]))                  
+                :type "void")
+                nil [3141 3194])
+            ("spdk_fio_getevents" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3225 3248])
+                    ("min" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3249 3266])
+                    ("max" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3276 3293])
+                    ("t" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3294 3319]))                  
+                :type "int")
+                nil [3195 3320])
+            ("spdk_fio_send_msg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fn" variable (:type ("spdk_thread_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3352 3370])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3371 3381])
+                    ("thread_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3382 3399]))                  
+                :type "void")
+                nil [3322 3748])
+            ("spdk_fio_bdev_init_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3786 3799])
+                    ("rc" variable (:type "int") (reparse-symbol arg-sub-list) [3800 3807]))                  
+                :type "void")
+                nil [3750 3836])
+            ("spdk_fio_start_poller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_bdev_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3872 3906])
+                    ("fn" variable (:type ("spdk_bdev_poller_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3915 3938])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3947 3957])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3966 3981])
+                    ("period_microseconds" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3990 4019]))                  
+                :type "void")
+                nil [3838 4580])
+            ("spdk_fio_stop_poller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_bdev_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4615 4649]))                  
+                :type "void")
+                nil [4582 5008])
+            ("spdk_fio_init_thread" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5042 5065]))                  
+                :type "int")
+                nil [5010 6047])
+            ("spdk_fio_init_env" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6078 6101]))                  
+                :type "int")
+                nil [6049 7506])
+            ("spdk_fio_setup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7900 7923]))                  
+                :type "int")
+                nil [7874 8568])
+            ("spdk_fio_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8678 8701]))                  
+                :type "int")
+                nil [8653 9710])
+            ("spdk_fio_cleanup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9741 9764]))                  
+                :type "void")
+                nil [9712 10186])
+            ("spdk_fio_open" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10213 10236])
+                    ("f" variable
+                       (:pointer 1
+                        :type ("fio_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10237 10256]))                  
+                :type "int")
+                nil [10188 10272])
+            ("spdk_fio_close" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10300 10323])
+                    ("f" variable
+                       (:pointer 1
+                        :type ("fio_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10324 10343]))                  
+                :type "int")
+                nil [10274 10358])
+            ("spdk_fio_iomem_alloc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10392 10415])
+                    ("total_mem" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10416 10433]))                  
+                :type "int")
+                nil [10360 10532])
+            ("spdk_fio_iomem_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10566 10589]))                  
+                :type "void")
+                nil [10534 10626])
+            ("spdk_fio_io_u_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10658 10681])
+                    ("io_u" variable
+                       (:pointer 1
+                        :type ("io_u" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10682 10700]))                  
+                :type "int")
+                nil [10628 10902])
+            ("spdk_fio_io_u_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10935 10958])
+                    ("io_u" variable
+                       (:pointer 1
+                        :type ("io_u" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10959 10977]))                  
+                :type "void")
+                nil [10904 11132])
+            ("spdk_fio_completion_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11169 11198])
+                    ("success" variable (:type "bool") (reparse-symbol arg-sub-list) [11208 11221])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11231 11244]))                  
+                :type "void")
+                nil [11134 11536])
+            ("spdk_fio_queue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11564 11587])
+                    ("io_u" variable
+                       (:pointer 1
+                        :type ("io_u" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11588 11606]))                  
+                :type "int")
+                nil [11538 12529])
+            ("spdk_fio_event" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12567 12590])
+                    ("event" variable (:type "int") (reparse-symbol arg-sub-list) [12591 12601]))                  
+                :type ("io_u" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [12531 12766])
+            ("spdk_fio_getevents" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12798 12821])
+                    ("min" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12822 12839])
+                    ("max" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12845 12862])
+                    ("t" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12863 12888]))                  
+                :type "int")
+                nil [12768 13803])
+            ("spdk_fio_invalidate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("td" variable
+                       (:pointer 1
+                        :type ("thread_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13836 13859])
+                    ("f" variable
+                       (:pointer 1
+                        :type ("fio_file" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13860 13879]))                  
+                :type "int")
+                nil [13805 13992])
+            ("options" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+	{
+		.name		= \"spdk_conf\",
+		.lname		= \"SPDK configuration file\",
+		.type		= FIO_OPT_STR_STORE,
+		.off1		= offsetof(struct spdk_fio_options, conf),
+		.help 		= \"An SPDK configuration file\",
+		.category	= FIO_OPT_C_ENGINE,
+		.group		= FIO_OPT_G_INVALID,
+	},
+	{
+		.name		= NULL,
+	},
+}"
+                :type ("fio_option" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [13994 14316])
+            ("ioengine" variable
+               (:default-value "{
+	.name			= \"spdk_bdev\",
+	.version		= FIO_IOOPS_VERSION,
+	.flags			= FIO_RAWIO | FIO_NOEXTEND | FIO_NODISKUTIL | FIO_MEMALIGN,
+	.setup			= spdk_fio_setup,
+	.init			= spdk_fio_init,
+	//.prep			= unused,
+	.queue			= spdk_fio_queue,
+	//.commit		= unused,
+	.getevents		= spdk_fio_getevents,
+	.event			= spdk_fio_event,
+	//.errdetails		= unused,
+	//.cancel		= unused,
+	.cleanup		= spdk_fio_cleanup,
+	.open_file		= spdk_fio_open,
+	.close_file		= spdk_fio_close,
+	.invalidate		= spdk_fio_invalidate,
+	//.unlink_file		= unused,
+	//.get_file_size	= unused,
+	//.terminate		= unused,
+	.iomem_alloc		= spdk_fio_iomem_alloc,
+	.iomem_free		= spdk_fio_iomem_free,
+	.io_u_init		= spdk_fio_io_u_init,
+	.io_u_free		= spdk_fio_io_u_free,
+	.option_struct_size	= sizeof(struct spdk_fio_options),
+	.options		= options,
+}"
+                :type ("ioengine_ops" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [14363 15194])
+            ("spdk_fio_register" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15235 15240]))                  
+                :type ("fio_init" type (:type "class") nil nil))
+                nil [15208 15275])
+            ("spdk_fio_unregister" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15318 15323]))                  
+                :type ("fio_exit" type (:type "class") nil nil))
+                nil [15289 15360]))          
+      :file "fio_plugin.c"
+      :pointmax 15361
+      :fsize 15360
+      :lastmodtime '(22926 45281 447064 421000)
+      :unmatched-syntax '((VOID 15284 . 15288) (STATIC 15277 . 15283) (VOID 15203 . 15207) (STATIC 15196 . 15202) (symbol 3047 . 3055) (STATIC 3040 . 3046) (semantic-list 2820 . 2839) (symbol 2810 . 2820) (semantic-list 2731 . 2750) (symbol 2721 . 2731) (semantic-list 2487 . 2504) (symbol 2476 . 2487) (semantic-list 2263 . 2280) (symbol 2252 . 2263))))
+  :file "!root!spdk!examples!bdev!fio_plugin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

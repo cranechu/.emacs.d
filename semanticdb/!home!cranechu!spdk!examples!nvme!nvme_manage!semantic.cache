@@ -1,0 +1,428 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include (:truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c") nil [1665 1689])
+            ("spdk/nvme.h" include (:truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c") nil [1691 1713])
+            ("spdk/env.h" include (:truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c") nil [1714 1735])
+            ("spdk/util.h" include (:truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c") nil [1736 1758])
+            ("MAX_DEVS" variable
+               (:constant-flag t
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [1768 1776])
+            ("dev" type
+               (:members 
+                  ( ("pci_addr" variable
+                       (:depth 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                        (reparse-symbol classsubparts) [1795 1827])
+                    ("ctrlr" variable
+                       (:depth 1
+                        :pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                        (reparse-symbol classsubparts) [1829 1862])
+                    ("cdata" variable
+                       (:depth 1
+                        :pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_ctrlr_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                        (reparse-symbol classsubparts) [1864 1905])
+                    ("common_ns_data" variable
+                       (:depth 1
+                        :pointer 1
+                        :type ("spdk_nvme_ns_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                        (reparse-symbol classsubparts) [1907 1949])
+                    ("outstanding_admin_cmds" variable
+                       (:depth 1
+                        :type "int"
+                        :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                        (reparse-symbol classsubparts) [1951 1982]))                  
+                :type "struct"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [1781 1985])
+            ("devs" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [1987 2020])
+            ("num_devs" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [2021 2045])
+            ("foreach_dev" variable
+               (:constant-flag t
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [2055 2066])
+            ("controller_display_model" type
+               (:members 
+                  ( ("CONTROLLER_DISPLAY_ALL" variable
+                       (:depth 1
+                        :constant-flag t
+                        :default-value (2187 2190)
+                        :type "int"
+                        :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                        (reparse-symbol enumsubparts) [2160 2190])
+                    ("CONTROLLER_DISPLAY_SIMPLISTIC" variable
+                       (:depth 1
+                        :constant-flag t
+                        :default-value (2226 2229)
+                        :type "int"
+                        :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                        (reparse-symbol enumsubparts) [2193 2229]))                  
+                :type "enum"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [2127 2233])
+            ("cmp_devs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ap" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2255 2270])
+                    ("bp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2271 2286]))                  
+                :type "int"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [2235 2386])
+            ("probe_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2409 2422])
+                    ("trid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_transport_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2423 2465])
+                    ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2468 2502]))                  
+                :type "bool"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [2388 2520])
+            ("identify_common_ns_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2556 2569])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2570 2602]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [2522 2871])
+            ("attach_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2895 2908])
+                    ("trid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_transport_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2909 2951])
+                    ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2955 2985])
+                    ("opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_ctrlr_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2986 3026]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [2873 4102])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4122 4127]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [4104 4517])
+            ("display_namespace_dpc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("nsdata" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_ns_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4553 4592]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [4519 5127])
+            ("display_namespace" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ns" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5159 5183]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [5129 6785])
+            ("display_controller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6818 6834])
+                    ("model" variable (:type "int") (reparse-symbol arg-sub-list) [6835 6845]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [6787 8601])
+            ("display_controller_list" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8639 8644]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [8603 8746])
+            ("get_controller" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8783 8788]))                  
+                :type ("dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil)
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [8748 9423])
+            ("get_lba_format" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ns_data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_ns_data" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9451 9491]))                  
+                :type "int"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [9425 9921])
+            ("identify_allocated_ns_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9960 9973])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9974 10006]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [9923 10070])
+            ("get_allocated_nsid" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10107 10123]))                  
+                :type ("uint32_t" type (:type "class") nil nil)
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [10072 11139])
+            ("ns_attach" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11163 11182])
+                    ("attachment_op" variable (:type "int") (reparse-symbol arg-sub-list) [11183 11201])
+                    ("ctrlr_id" variable (:type "int") (reparse-symbol arg-sub-list) [11202 11215])
+                    ("ns_id" variable (:type "int") (reparse-symbol arg-sub-list) [11216 11226]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [11141 11877])
+            ("ns_manage_add" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11905 11924])
+                    ("ns_size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11925 11942])
+                    ("ns_capacity" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11943 11964])
+                    ("ns_lbasize" variable (:type "int") (reparse-symbol arg-sub-list) [11965 11980])
+                    ("ns_dps_type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11988 12008])
+                    ("ns_dps_location" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12009 12033])
+                    ("ns_nmic" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12034 12050]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [11879 12720])
+            ("ns_manage_delete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12751 12770])
+                    ("ns_id" variable (:type "int") (reparse-symbol arg-sub-list) [12771 12781]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [12722 12923])
+            ("nvme_manage_format" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("device" variable
+                       (:pointer 1
+                        :type ("dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12956 12975])
+                    ("ns_id" variable (:type "int") (reparse-symbol arg-sub-list) [12976 12986])
+                    ("ses" variable (:type "int") (reparse-symbol arg-sub-list) [12987 12995])
+                    ("pi" variable (:type "int") (reparse-symbol arg-sub-list) [12996 13003])
+                    ("pil" variable (:type "int") (reparse-symbol arg-sub-list) [13004 13012])
+                    ("ms" variable (:type "int") (reparse-symbol arg-sub-list) [13013 13020])
+                    ("lbaf" variable (:type "int") (reparse-symbol arg-sub-list) [13021 13030]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [12925 13311])
+            ("attach_and_detach_ns" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("attachment_op" variable (:type "int") (reparse-symbol arg-sub-list) [13346 13364]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [13313 13789])
+            ("add_ns" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13810 13815]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [13791 15597])
+            ("delete_ns" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15621 15626]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [15599 16073])
+            ("format_nvm" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16098 16103]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [16075 19344])
+            ("update_firmware_image" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19380 19385]))                  
+                :type "void"
+                :truefile "/home/cranechu/spdk/examples/nvme/nvme_manage/nvme_manage.c")
+                nil [19346 21035])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [21046 21055])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21056 21068]))                  
+                :type "int")
+                nil [21037 22326]))          
+      :file "nvme_manage.c"
+      :pointmax 22327
+      :fsize 22326
+      :lastmodtime '(22843 59012 498468 690000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("foreach_dev" (spp-arg-list ("iter") 2066 . 2072) . ((FOR "for" 2076 . 2079) (semantic-list "(iter = devs; iter - devs < num_devs; iter++)" 2080 . 2125)))
+          ("MAX_DEVS" . ((number "64" 1777 . 1779)))
+          )
+))
+  :file "!home!cranechu!spdk!examples!nvme!nvme_manage!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

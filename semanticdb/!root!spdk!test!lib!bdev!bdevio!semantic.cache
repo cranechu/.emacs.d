@@ -1,0 +1,439 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1731 1755])
+            ("spdk/bdev.h" include nil nil [1757 1779])
+            ("spdk/copy_engine.h" include nil nil [1780 1809])
+            ("spdk/env.h" include nil nil [1810 1831])
+            ("spdk/log.h" include nil nil [1832 1853])
+            ("spdk/io_channel.h" include nil nil [1854 1882])
+            ("CUnit/Basic.h" include nil nil [1884 1908])
+            ("BUFFER_IOVS" variable (:constant-flag t) nil [1918 1929])
+            ("BUFFER_SIZE" variable (:constant-flag t) nil [1944 1955])
+            ("BDEV_TASK_ARRAY_SIZE" variable (:constant-flag t) nil [1977 1997])
+            ("../common.c" include nil nil [2005 2027])
+            ("g_test_mutex" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) nil [2029 2058])
+            ("g_test_cond" variable (:type ("pthread_cond_t" type (:type "class") nil nil)) nil [2059 2086])
+            ("g_start_timer" variable
+               (:pointer 1
+                :type ("spdk_poller" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2087 2121])
+            ("io_target" type
+               (:members 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2143 2166])
+                    ("bdev_desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2168 2201])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2203 2230])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("io_target" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2232 2255]))                  
+                :type "struct")
+                nil [2123 2258])
+            ("bdevio_request" type
+               (:members 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2285 2295])
+                    ("data_len" variable (:type "int") (reparse-symbol classsubparts) [2297 2310])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2312 2328])
+                    ("iov" variable
+                       (:dereference 1
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2330 2360])
+                    ("iovcnt" variable (:type "int") (reparse-symbol classsubparts) [2362 2373])
+                    ("target" variable
+                       (:pointer 1
+                        :type ("io_target" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2375 2400]))                  
+                :type "struct")
+                nil [2260 2403])
+            ("g_io_targets" variable
+               (:pointer 1
+                :default-value "NULL"
+                :type ("io_target" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2405 2443])
+            ("execute_spdk_function" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fn" variable (:type ("spdk_event_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2479 2496])
+                    ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2497 2508])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2509 2520]))                  
+                :type "void")
+                nil [2445 2749])
+            ("wake_ut_thread" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2778 2783]))                  
+                :type "void")
+                nil [2751 2897])
+            ("__get_io_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2928 2939])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2940 2951]))                  
+                :type "void")
+                nil [2899 3068])
+            ("bdevio_construct_targets" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3106 3111]))                  
+                :type "int")
+                nil [3070 4118])
+            ("__put_io_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4149 4160])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4161 4172]))                  
+                :type "void")
+                nil [4120 4264])
+            ("bdevio_cleanup_targets" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4301 4306]))                  
+                :type "void")
+                nil [4266 4558])
+            ("g_completion_success" variable
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [4560 4593])
+            ("initialize_buffer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4625 4636])
+                    ("pattern" variable (:type "int") (reparse-symbol arg-sub-list) [4637 4649])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [4650 4659]))                  
+                :type "void")
+                nil [4595 4739])
+            ("quick_test_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4773 4802])
+                    ("success" variable (:type "bool") (reparse-symbol arg-sub-list) [4803 4816])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4817 4827]))                  
+                :type "void")
+                nil [4741 4912])
+            ("__blockdev_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4943 4954])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4955 4966]))                  
+                :type "void")
+                nil [4914 5430])
+            ("sgl_chop_buffer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("bdevio_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5460 5487])
+                    ("iov_len" variable (:type "int") (reparse-symbol arg-sub-list) [5488 5500]))                  
+                :type "void")
+                nil [5432 5887])
+            ("blockdev_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :type ("io_target" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5916 5941])
+                    ("tx_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5942 5955])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5964 5980])
+                    ("data_len" variable (:type "int") (reparse-symbol arg-sub-list) [5981 5994])
+                    ("iov_len" variable (:type "int") (reparse-symbol arg-sub-list) [5995 6007]))                  
+                :type "void")
+                nil [5889 6249])
+            ("__blockdev_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6279 6290])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6291 6302]))                  
+                :type "void")
+                nil [6251 6762])
+            ("blockdev_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :type ("io_target" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6790 6815])
+                    ("rx_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6816 6829])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6837 6853])
+                    ("data_len" variable (:type "int") (reparse-symbol arg-sub-list) [6854 6867])
+                    ("iov_len" variable (:type "int") (reparse-symbol arg-sub-list) [6868 6880]))                  
+                :type "void")
+                nil [6764 7138])
+            ("blockdev_write_read_data_match" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rx_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7182 7195])
+                    ("tx_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7196 7209])
+                    ("data_length" variable (:type "int") (reparse-symbol arg-sub-list) [7210 7226]))                  
+                :type "int")
+                nil [7140 7344])
+            ("blockdev_write_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("data_length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7378 7399])
+                    ("iov_len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7400 7417])
+                    ("pattern" variable (:type "int") (reparse-symbol arg-sub-list) [7418 7430])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7431 7447])
+                    ("expected_rc" variable (:type "int") (reparse-symbol arg-sub-list) [7454 7470]))                  
+                :type "void")
+                nil [7346 8460])
+            ("blockdev_write_read_4k" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8497 8502]))                  
+                :type "void")
+                nil [8462 8887])
+            ("blockdev_writev_readv_4k" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8926 8931]))                  
+                :type "void")
+                nil [8889 9348])
+            ("blockdev_writev_readv_30x4k" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9390 9395]))                  
+                :type "void")
+                nil [9350 9817])
+            ("blockdev_write_read_512Bytes" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9860 9865]))                  
+                :type "void")
+                nil [9819 10253])
+            ("blockdev_writev_readv_512Bytes" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10298 10303]))                  
+                :type "void")
+                nil [10255 10722])
+            ("blockdev_write_read_size_gt_128k" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10769 10774]))                  
+                :type "void")
+                nil [10724 11166])
+            ("blockdev_writev_readv_size_gt_128k" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11215 11220]))                  
+                :type "void")
+                nil [11168 11646])
+            ("blockdev_writev_readv_size_gt_128k_two_iov" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11703 11708]))                  
+                :type "void")
+                nil [11648 12138])
+            ("blockdev_write_read_invalid_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12185 12190]))                  
+                :type "void")
+                nil [12140 12615])
+            ("blockdev_write_read_offset_plus_nbytes_equals_bdev_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12685 12690]))                  
+                :type "void")
+                nil [12617 13655])
+            ("blockdev_write_read_offset_plus_nbytes_gt_bdev_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13721 13726]))                  
+                :type "void")
+                nil [13657 14671])
+            ("blockdev_write_read_max_offset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [14716 14721]))                  
+                :type "void")
+                nil [14673 15218])
+            ("blockdev_overlapped_write_read_8k" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15266 15271]))                  
+                :type "void")
+                nil [15220 16235])
+            ("__blockdev_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16266 16277])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16278 16289]))                  
+                :type "void")
+                nil [16237 16531])
+            ("blockdev_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 1
+                        :type ("io_target" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16560 16585]))                  
+                :type "void")
+                nil [16533 16727])
+            ("blockdev_test_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16761 16766]))                  
+                :type "void")
+                nil [16729 16950])
+            ("test_main" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16974 16985]))                  
+                :type "void")
+                nil [16952 19348])
+            ("start_timer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19374 19385])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19386 19397]))                  
+                :type "void")
+                nil [19350 19499])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [19510 19519])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19520 19532]))                  
+                :type "int")
+                nil [19501 19873]))          
+      :file "bdevio.c"
+      :pointmax 19874
+      :fsize 19873
+      :lastmodtime '(22910 40989 251426 420000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BUFFER_SIZE" . 
+              ((number "260" 1958 . 1961) (punctuation "*" 1962 . 1963) (number "1024" 1964 . 1968)))
+          ("BDEV_TASK_ARRAY_SIZE" . ((number "2048" 1998 . 2002)))
+          ("BUFFER_IOVS" . ((number "1024" 1931 . 1935)))
+          )
+))
+  :file "!root!spdk!test!lib!bdev!bdevio!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

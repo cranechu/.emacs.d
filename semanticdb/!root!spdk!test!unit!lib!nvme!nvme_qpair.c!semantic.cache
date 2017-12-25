@@ -1,0 +1,319 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk_cunit.h" include nil nil [1691 1714])
+            ("lib/test_env.c" include nil nil [1716 1741])
+            ("trace_flag" variable
+               (:default-value "false"
+                :type "bool")
+                nil [1743 1767])
+            ("SPDK_TRACE_NVME" variable (:constant-flag t) nil [1776 1791])
+            ("nvme/nvme_qpair.c" include nil nil [1804 1832])
+            ("_g_nvme_driver" variable
+               (:default-value "{
+	.lock = PTHREAD_MUTEX_INITIALIZER,
+}"
+                :type ("nvme_driver" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1834 1910])
+            ("nvme_allocate_request" function
+               (:pointer 1
+                :arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1956 1986])
+                    ("payload" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("nvme_payload" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1995 2030])
+                    ("payload_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2031 2053])
+                    ("cb_fn" variable (:type ("spdk_nvme_cmd_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2062 2085])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2094 2107]))                  
+                :type ("nvme_request" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1912 2795])
+            ("nvme_allocate_request_contig" function
+               (:pointer 1
+                :arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2848 2878])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2879 2892])
+                    ("payload_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2893 2915])
+                    ("cb_fn" variable (:type ("spdk_nvme_cmd_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2924 2947])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2948 2961]))                  
+                :type ("nvme_request" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2797 3144])
+            ("nvme_allocate_request_null" function
+               (:pointer 1
+                :arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3195 3225])
+                    ("cb_fn" variable (:type ("spdk_nvme_cmd_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3226 3249])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3250 3263]))                  
+                :type ("nvme_request" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3146 3336])
+            ("nvme_free_request" function
+               (:arguments 
+                  ( ("req" variable
+                       (:pointer 1
+                        :type ("nvme_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3361 3386]))                  
+                :type "void")
+                nil [3338 3526])
+            ("nvme_request_remove_child" function
+               (:arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("nvme_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3559 3587])
+                    ("child" variable
+                       (:pointer 1
+                        :type ("nvme_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3593 3620]))                  
+                :type "void")
+                nil [3528 3703])
+            ("nvme_transport_qpair_enable" function
+               (:arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3737 3767]))                  
+                :type "int")
+                nil [3705 3782])
+            ("nvme_transport_qpair_disable" function
+               (:arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3817 3847]))                  
+                :type "int")
+                nil [3784 3862])
+            ("nvme_transport_qpair_fail" function
+               (:arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3894 3924]))                  
+                :type "int")
+                nil [3864 3939])
+            ("nvme_transport_qpair_submit_request" function
+               (:arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3981 4011])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("nvme_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4012 4037]))                  
+                :type "int")
+                nil [3941 4061])
+            ("nvme_transport_qpair_process_completions" function
+               (:arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4112 4142])
+                    ("max_completions" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4143 4168]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [4063 4192])
+            ("spdk_nvme_ctrlr_free_io_qpair" function
+               (:arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4228 4258]))                  
+                :type "int")
+                nil [4194 4273])
+            ("prepare_submit_request_test" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4315 4345])
+                    ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4353 4383]))                  
+                :type "void")
+                nil [4275 4567])
+            ("cleanup_submit_request_test" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("qpair" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_qpair" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4609 4639]))                  
+                :type "void")
+                nil [4569 4666])
+            ("expected_success_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4706 4716])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4717 4749]))                  
+                :type "void")
+                nil [4668 4795])
+            ("expected_failure_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4835 4845])
+                    ("cpl" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4846 4878]))                  
+                :type "void")
+                nil [4797 4923])
+            ("test3" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4943 4948]))                  
+                :type "void")
+                nil [4925 5337])
+            ("test_ctrlr_failed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5369 5374]))                  
+                :type "void")
+                nil [5339 5966])
+            ("struct_packing" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5995 6000]))                  
+                :type "void")
+                nil [5968 6228])
+            ("test_nvme_qpair_process_completions" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6278 6283]))                  
+                :type "void")
+                nil [6230 6531])
+            ("test_nvme_completion_is_retry" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6575 6580]))                  
+                :type "void")
+                nil [6533 9707])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [10522 10531])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10532 10544]))                  
+                :type "int")
+                nil [10513 11514]))          
+      :file "nvme_qpair_ut.c"
+      :pointmax 11515
+      :fsize 11514
+      :lastmodtime '(22925 57199 731693 655000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_TRACE_NVME" . ((symbol "trace_flag" 1792 . 1802)))
+          )
+))
+  :file "!root!spdk!test!unit!lib!nvme!nvme_qpair.c!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

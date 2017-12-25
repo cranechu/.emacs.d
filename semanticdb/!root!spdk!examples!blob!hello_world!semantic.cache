@@ -1,0 +1,251 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/bdev.h" include nil nil [1691 1713])
+            ("spdk/env.h" include nil nil [1714 1735])
+            ("spdk/event.h" include nil nil [1736 1759])
+            ("spdk/blob_bdev.h" include nil nil [1760 1787])
+            ("spdk/blob.h" include nil nil [1788 1810])
+            ("spdk/log.h" include nil nil [1811 1832])
+            ("hello_context_t" type
+               (:members 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1974 2001])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2003 2026])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2028 2048])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2050 2082])
+                    ("read_buff" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2084 2103])
+                    ("write_buff" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2105 2125])
+                    ("page_size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2127 2146])
+                    ("rc" variable (:type "int") (reparse-symbol classsubparts) [2148 2155]))                  
+                :type "struct")
+                nil [1948 2158])
+            ("hello_cleanup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("hello_context" variable
+                       (:pointer 1
+                        :type ("hello_context_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2230 2268]))                  
+                :type "void")
+                nil [2204 2480])
+            ("unload_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2563 2576])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2577 2589]))                  
+                :type "void")
+                nil [2535 2818])
+            ("unload_bs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("hello_context" variable
+                       (:pointer 1
+                        :type ("hello_context_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2897 2935])
+                    ("msg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2936 2946])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [2947 2959]))                  
+                :type "void")
+                nil [2875 3281])
+            ("delete_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3366 3377])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [3378 3390]))                  
+                :type "void")
+                nil [3338 3658])
+            ("delete_blob" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3724 3735])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [3736 3748]))                  
+                :type "void")
+                nil [3700 4038])
+            ("read_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4114 4125])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [4126 4138]))                  
+                :type "void")
+                nil [4088 4785])
+            ("read_blob" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("hello_context" variable
+                       (:pointer 1
+                        :type ("hello_context_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4848 4886]))                  
+                :type "void")
+                nil [4826 5347])
+            ("write_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5424 5435])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [5436 5448]))                  
+                :type "void")
+                nil [5397 5723])
+            ("blob_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("hello_context" variable
+                       (:pointer 1
+                        :type ("hello_context_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5790 5828]))                  
+                :type "void")
+                nil [5767 6734])
+            ("sync_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6813 6824])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [6825 6837]))                  
+                :type "void")
+                nil [6787 7112])
+            ("open_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7188 7201])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7202 7225])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [7226 7238]))                  
+                :type "void")
+                nil [7162 8713])
+            ("blob_create_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8797 8808])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8809 8829])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [8830 8842]))                  
+                :type "void")
+                nil [8764 9302])
+            ("create_blob" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("hello_context" variable
+                       (:pointer 1
+                        :type ("hello_context_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9368 9406]))                  
+                :type "void")
+                nil [9344 9529])
+            ("bs_init_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9620 9633])
+                    ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9634 9661])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [9665 9677]))                  
+                :type "void")
+                nil [9591 10431])
+            ("hello_start" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10524 10535])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10536 10547]))                  
+                :type "void")
+                nil [10500 11871])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [11882 11891])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11892 11904]))                  
+                :type "int")
+                nil [11873 13495]))          
+      :file "hello_blob.c"
+      :pointmax 13496
+      :fsize 13495
+      :lastmodtime '(22926 45281 447064 421000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!examples!blob!hello_world!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

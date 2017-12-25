@@ -1,0 +1,738 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk_internal/event.h" include nil nil [1691 1723])
+            ("spdk/env.h" include nil nil [1725 1746])
+            ("spdk/log.h" include nil nil [1747 1768])
+            ("spdk/conf.h" include nil nil [1769 1791])
+            ("spdk/trace.h" include nil nil [1792 1815])
+            ("SPDK_APP_DEFAULT_LOG_PRIORITY" variable (:constant-flag t) nil [1825 1854])
+            ("SPDK_APP_DPDK_DEFAULT_MEM_SIZE" variable (:constant-flag t) nil [1878 1908])
+            ("SPDK_APP_DPDK_DEFAULT_MASTER_CORE" variable (:constant-flag t) nil [1921 1954])
+            ("SPDK_APP_DPDK_DEFAULT_MEM_CHANNEL" variable (:constant-flag t) nil [1966 1999])
+            ("SPDK_APP_DPDK_DEFAULT_CORE_MASK" variable (:constant-flag t) nil [2011 2042])
+            ("spdk_app" type
+               (:members 
+                  ( ("config" variable
+                       (:pointer 1
+                        :type ("spdk_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2070 2096])
+                    ("shm_id" variable (:type "int") (reparse-symbol classsubparts) [2098 2112])
+                    ("shutdown_cb" variable (:type ("spdk_app_shutdown_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2114 2148])
+                    ("rc" variable (:type "int") (reparse-symbol classsubparts) [2150 2160]))                  
+                :type "struct")
+                nil [2051 2163])
+            ("g_spdk_app" variable
+               (:typemodifiers ("static")
+                :type ("spdk_app" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2165 2199])
+            ("g_shutdown_event" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("spdk_event" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2200 2250])
+            ("spdk_app_get_shm_id" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2276 2281]))                  
+                :type "int")
+                nil [2252 2312])
+            ("GLOBAL_CONFIG_TMPL" variable (:constant-flag t) nil [2343 2361])
+            ("spdk_app_config_dump_global_section" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3601 3610]))                  
+                :type "void")
+                nil [3553 3740])
+            ("spdk_app_get_running_config" function
+               (:arguments 
+                  ( ("config_str" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3774 3792])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3793 3804]))                  
+                :type "int")
+                nil [3742 4694])
+            ("spdk_app_start_shutdown" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4725 4730]))                  
+                :type "void")
+                nil [4696 4864])
+            ("__shutdown_signal" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signo" variable (:type "int") (reparse-symbol arg-sub-list) [4896 4906]))                  
+                :type "void")
+                nil [4866 4938])
+            ("__shutdown_event_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4972 4983])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4984 4995]))                  
+                :type "void")
+                nil [4940 5026])
+            ("spdk_app_opts_init" function
+               (:arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_app_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5052 5079]))                  
+                :type "void")
+                nil [5028 5406])
+            ("spdk_app_setup_signal_handlers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_app_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5450 5477]))                  
+                :type "int")
+                nil [5408 6702])
+            ("spdk_app_start" function
+               (:arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_app_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6723 6750])
+                    ("start_fn" variable (:type ("spdk_event_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6751 6774])
+                    ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6783 6794])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6795 6806]))                  
+                :type "int")
+                nil [6704 10736])
+            ("spdk_app_fini" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10756 10761]))                  
+                :type "int")
+                nil [10738 10918])
+            ("spdk_app_stop" function
+               (:arguments 
+                  ( ("rc" variable (:type "int") (reparse-symbol arg-sub-list) [10939 10946]))                  
+                :type "void")
+                nil [10920 10994]))          
+      :file "app.c"
+      :pointmax 10995
+      :fsize 10994
+      :lastmodtime '(22931 51286 958337 302000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GLOBAL_CONFIG_TMPL" . 
+              ((string "\"# Configuration file\\n\"" 2364 . 2388) (string "\"#\\n\"" 2391 . 2396) (string "\"# Please write all parameters using ASCII.\\n\"" 2399 . 2445) (string "\"# The parameter must be quoted if it includes whitespace.\\n\"" 2448 . 2509) (string "\"#\\n\"" 2512 . 2517) (string "\"# Configuration syntax:\\n\"" 2520 . 2547) (string "\"# Spaces at head of line are deleted, other spaces are as separator\\n\"" 2550 . 2621) (string "\"# Lines starting with '#' are comments and not evaluated.\\n\"" 2624 . 2685) (string "\"# Lines ending with '\\\\' are concatenated with the next line.\\n\"" 2688 . 2753) (string "\"# Bracketed keys are section keys grouping the following value keys.\\n\"" 2756 . 2828) (string "\"# Number of section key is used as a tag number.\\n\"" 2831 . 2883) (string "\"#  Ex. [TargetNode1] = TargetNode section key with tag number 1\\n\"" 2886 . 2953) (string "\"[Global]\\n\"" 2956 . 2968) (string "\"  Comment \\\"Global section\\\"\\n\"" 2971 . 3003) (string "\"\\n\"" 3006 . 3010) (string "\"  # Users can restrict work items to only run on certain cores by\\n\"" 3013 . 3082) (string "\"  #  specifying a ReactorMask.  Default is to allow work items to run\\n\"" 3085 . 3158) (string "\"  #  on all cores.  Core 0 must be set in the mask if one is specified.\\n\"" 3161 . 3236) (string "\"  # Default: 0xFFFF (cores 0-15)\\n\"" 3239 . 3275) (string "\"  ReactorMask \\\"0x%\"" 3278 . 3299) (symbol "PRIX64" 3300 . 3306) (string "\"\\\"\\n\"" 3307 . 3313) (string "\"\\n\"" 3316 . 3320) (string "\"  # Tracepoint group mask for spdk trace buffers\\n\"" 3323 . 3375) (string "\"  # Default: 0x0 (all tracepoint groups disabled)\\n\"" 3378 . 3431) (string "\"  # Set to 0xFFFFFFFFFFFFFFFF to enable all tracepoint groups.\\n\"" 3434 . 3500) (string "\"  TpointGroupMask \\\"0x%\"" 3503 . 3528) (symbol "PRIX64" 3529 . 3535) (string "\"\\\"\\n\"" 3536 . 3542) (string "\"\\n\"" 3545 . 3549)))
+          ("SPDK_APP_DEFAULT_LOG_PRIORITY" . ((symbol "SPDK_LOG_INFO" 1855 . 1868)))
+          ("SPDK_APP_DPDK_DEFAULT_MEM_SIZE" . ((punctuation "-" 1910 . 1911) (number "1" 1911 . 1912)))
+          ("SPDK_APP_DPDK_DEFAULT_MASTER_CORE" . ((punctuation "-" 1955 . 1956) (number "1" 1956 . 1957)))
+          ("SPDK_APP_DPDK_DEFAULT_CORE_MASK" . ((string "\"0x1\"" 2044 . 2049)))
+          ("SPDK_APP_DPDK_DEFAULT_MEM_CHANNEL" . ((punctuation "-" 2000 . 2001) (number "1" 2001 . 2002)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk_internal/event.h" include nil nil [1691 1723])
+            ("sys/prctl.h" include (:system-flag t) nil [1742 1764])
+            ("spdk/log.h" include nil nil [1824 1845])
+            ("spdk/io_channel.h" include nil nil [1846 1874])
+            ("spdk/env.h" include nil nil [1875 1896])
+            ("SPDK_MAX_SOCKET" variable (:constant-flag t) nil [1906 1921])
+            ("SPDK_MAX_REACTORS" variable (:constant-flag t) nil [1935 1952])
+            ("SPDK_REACTOR_SPIN_TIME_US" variable (:constant-flag t) nil [1966 1991])
+            ("SPDK_TIMER_POLL_ITERATIONS" variable (:constant-flag t) nil [2005 2031])
+            ("SPDK_EVENT_BATCH_SIZE" variable (:constant-flag t) nil [2042 2063])
+            ("spdk_poller_state" type
+               (:members 
+                  ( ("SPDK_POLLER_STATE_WAITING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2177 2203])
+                    ("SPDK_POLLER_STATE_RUNNING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2253 2279])
+                    ("SPDK_POLLER_STATE_UNREGISTERED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2349 2380]))                  
+                :type "enum")
+                nil [2068 2383])
+            ("spdk_poller" type
+               (:members 
+                  ( ("tailq" variable (:type "int") (reparse-symbol classsubparts) [2432 2438])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2440 2457])
+                    ("state" variable (:type ("spdk_poller_state" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [2546 2576])
+                    ("period_ticks" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2579 2603])
+                    ("next_run_tick" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2605 2630])
+                    ("fn" variable (:type ("spdk_poller_fn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2632 2652])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2654 2667])
+                    ("unregister_complete_event" variable
+                       (:pointer 1
+                        :type ("spdk_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2670 2716]))                  
+                :type "struct")
+                nil [2385 2719])
+            ("spdk_reactor_state" type
+               (:members 
+                  ( ("SPDK_REACTOR_STATE_INVALID" variable
+                       (:constant-flag t
+                        :default-value (2777 2778)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2748 2778])
+                    ("SPDK_REACTOR_STATE_INITIALIZED" variable
+                       (:constant-flag t
+                        :default-value (2814 2815)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2781 2815])
+                    ("SPDK_REACTOR_STATE_RUNNING" variable
+                       (:constant-flag t
+                        :default-value (2847 2848)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2818 2848])
+                    ("SPDK_REACTOR_STATE_EXITING" variable
+                       (:constant-flag t
+                        :default-value (2880 2881)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2851 2881])
+                    ("SPDK_REACTOR_STATE_SHUTDOWN" variable
+                       (:constant-flag t
+                        :default-value (2914 2915)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2884 2915]))                  
+                :type "enum")
+                nil [2721 2919])
+            ("spdk_reactor" type
+               (:members 
+                  ( ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2989 3008])
+                    ("socket_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3046 3069])
+                    ("active_pollers" variable (:type "int") (reparse-symbol classsubparts) [3321 3336])
+                    ("timer_pollers" variable (:type "int") (reparse-symbol classsubparts) [3461 3475])
+                    ("events" variable
+                       (:pointer 1
+                        :type ("spdk_ring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3478 3506])
+                    ("event_mempool" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3581 3619])
+                    ("max_delay_us" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3622 3648]))                  
+                :type "struct")
+                nil [2921 3680])
+            ("g_reactors" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("spdk_reactor" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3682 3739])
+            ("g_reactor_state" variable
+               (:typemodifiers ("static")
+                :default-value "SPDK_REACTOR_STATE_INVALID"
+                :type ("spdk_reactor_state" type (:type "enum") nil nil))
+                nil [3741 3817])
+            ("spdk_reactor_construct" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("w" variable
+                       (:pointer 1
+                        :type ("spdk_reactor" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3854 3877])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3878 3893])
+                    ("max_delay_us" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3901 3923]))                  
+                :type "void")
+                nil [3819 3924])
+            ("g_spdk_event_mempool" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :type ("spdk_mempool" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3926 3992])
+            ("spdk_reactor_get" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4040 4055]))                  
+                :type ("spdk_reactor" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3994 4138])
+            ("spdk_event_allocate" function
+               (:pointer 1
+                :arguments 
+                  ( ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4180 4195])
+                    ("fn" variable (:type ("spdk_event_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4196 4213])
+                    ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4214 4225])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4226 4237]))                  
+                :type ("spdk_event" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4140 4540])
+            ("spdk_event_call" function
+               (:arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("spdk_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4563 4588]))                  
+                :type "void")
+                nil [4542 4809])
+            ("_spdk_event_queue_run_batch" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("reactor" variable
+                       (:pointer 1
+                        :type ("spdk_reactor" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4862 4891]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [4811 5607])
+            ("set_reactor_thread_name" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5789 5804]))                  
+                :type "void")
+                nil [5753 6104])
+            ("spdk_poller_insert_timer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reactor" variable
+                       (:pointer 1
+                        :type ("spdk_reactor" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6143 6172])
+                    ("poller" variable
+                       (:pointer 1
+                        :type ("spdk_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6173 6200])
+                    ("now" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6201 6214]))                  
+                :type "void")
+                nil [6106 6819])
+            ("_spdk_poller_unregister_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("poller" variable
+                       (:pointer 1
+                        :type ("spdk_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6866 6893]))                  
+                :type "void")
+                nil [6821 7012])
+            ("_spdk_reactor_msg_passed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7051 7062])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7063 7074]))                  
+                :type "void")
+                nil [7014 7117])
+            ("_spdk_reactor_send_msg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fn" variable (:type ("spdk_thread_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7154 7172])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7173 7183])
+                    ("thread_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7184 7201]))                  
+                :type "void")
+                nil [7119 7380])
+            ("_spdk_reactor_run" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7890 7900]))                  
+                :type "int")
+                nil [7861 10915])
+            ("spdk_reactor_construct" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reactor" variable
+                       (:pointer 1
+                        :type ("spdk_reactor" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10952 10981])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10982 10997])
+                    ("max_delay_us" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10998 11020]))                  
+                :type "void")
+                nil [10917 11456])
+            ("spdk_app_get_core_count" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11486 11491]))                  
+                :type "int")
+                nil [11458 11530])
+            ("spdk_app_get_current_core" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11567 11572]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [11532 11613])
+            ("spdk_app_parse_core_mask" function
+               (:arguments 
+                  ( ("mask" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11644 11661])
+                    ("cpumask" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11662 11680]))                  
+                :type "int")
+                nil [11615 12026])
+            ("spdk_app_get_core_mask" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12060 12065]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [12028 12170])
+            ("spdk_reactor_get_socket_mask" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12218 12223]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [12173 12421])
+            ("spdk_reactors_start" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12448 12453]))                  
+                :type "void")
+                nil [12423 13114])
+            ("spdk_reactors_stop" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [13140 13145]))                  
+                :type "void")
+                nil [13116 13196])
+            ("spdk_reactors_init" function
+               (:arguments 
+                  ( ("max_delay_us" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [13221 13247]))                  
+                :type "int")
+                nil [13198 15044])
+            ("spdk_reactors_fini" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [15069 15074]))                  
+                :type "int")
+                nil [15046 15409])
+            ("_spdk_poller_register" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reactor" variable
+                       (:pointer 1
+                        :type ("spdk_reactor" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15445 15474])
+                    ("poller" variable
+                       (:pointer 1
+                        :type ("spdk_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15475 15502]))                  
+                :type "void")
+                nil [15411 15673])
+            ("_spdk_event_add_poller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15710 15721])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15722 15733]))                  
+                :type "void")
+                nil [15675 15853])
+            ("spdk_poller_register" function
+               (:arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15881 15910])
+                    ("fn" variable (:type ("spdk_poller_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15911 15929])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15930 15940])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15948 15963])
+                    ("period_microseconds" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15964 15993]))                  
+                :type "void")
+                nil [15855 17207])
+            ("_spdk_poller_unregister" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reactor" variable
+                       (:pointer 1
+                        :type ("spdk_reactor" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17245 17274])
+                    ("poller" variable
+                       (:pointer 1
+                        :type ("spdk_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17275 17302])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("spdk_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17306 17330]))                  
+                :type "void")
+                nil [17209 17989])
+            ("_spdk_event_remove_poller" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18029 18040])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18041 18052]))                  
+                :type "void")
+                nil [17991 18240])
+            ("spdk_poller_unregister" function
+               (:arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18270 18299])
+                    ("complete" variable
+                       (:pointer 1
+                        :type ("spdk_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18309 18337]))                  
+                :type "void")
+                nil [18242 19009]))          
+      :file "reactor.c"
+      :pointmax 19010
+      :fsize 20175
+      :lastmodtime '(22938 48409 505281 287000)
+      :unmatched-syntax '((semantic-list 3427 . 3460) (symbol 3417 . 3427) (semantic-list 3303 . 3318) (symbol 3293 . 3303) (semantic-list 2418 . 2431) (symbol 2407 . 2418))
+      :lexical-table 
+        '(("SPDK_TIMER_POLL_ITERATIONS" . ((number "5" 2032 . 2033)))
+          ("SPDK_REACTOR_SPIN_TIME_US" . ((number "1000" 1992 . 1996)))
+          ("SPDK_MAX_REACTORS" . ((number "128" 1954 . 1957)))
+          ("SPDK_EVENT_BATCH_SIZE" . ((number "8" 2065 . 2066)))
+          ("SPDK_MAX_SOCKET" . ((number "64" 1923 . 1925)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/log.h" include nil nil [1691 1712])
+            ("spdk_internal/event.h" include nil nil [1714 1746])
+            ("g_subsystems" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_subsystems)"
+                :type "int")
+                nil [1803 1856])
+            ("g_depends" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_depends)"
+                :type "int")
+                nil [1916 1963])
+            ("g_next_subsystem" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("spdk_subsystem" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1964 2011])
+            ("g_app_start_event" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("spdk_event" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2012 2056])
+            ("spdk_add_subsystem" function
+               (:arguments 
+                  ( ("subsystem" variable
+                       (:pointer 1
+                        :type ("spdk_subsystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2082 2115]))                  
+                :type "void")
+                nil [2058 2172])
+            ("spdk_add_subsystem_depend" function
+               (:arguments 
+                  ( ("depend" variable
+                       (:pointer 1
+                        :type ("spdk_subsystem_depend" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2205 2242]))                  
+                :type "void")
+                nil [2174 2293])
+            ("spdk_subsystem_find" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("list" variable
+                       (:pointer 1
+                        :type ("spdk_subsystem_list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2346 2379])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2380 2397]))                  
+                :type ("spdk_subsystem" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2295 2545])
+            ("subsystem_sort" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2574 2579]))                  
+                :type "void")
+                nil [2547 3740])
+            ("spdk_subsystem_init_next" function
+               (:arguments 
+                  ( ("rc" variable (:type "int") (reparse-symbol arg-sub-list) [3772 3779]))                  
+                :type "void")
+                nil [3742 4262])
+            ("spdk_subsystem_init" function
+               (:arguments 
+                  ( ("arg1" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4289 4300])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4301 4312]))                  
+                :type "void")
+                nil [4264 4920])
+            ("spdk_subsystem_fini" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4946 4951]))                  
+                :type "int")
+                nil [4922 5208])
+            ("spdk_subsystem_config" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5237 5246]))                  
+                :type "void")
+                nil [5210 5390]))          
+      :file "subsystem.c"
+      :pointmax 5391
+      :fsize 5390
+      :lastmodtime '(22925 57199 696694 445000)
+      :unmatched-syntax '((semantic-list 1874 . 1915) (symbol 1864 . 1874) (STATIC 1857 . 1863) (semantic-list 1765 . 1802) (symbol 1755 . 1765) (STATIC 1748 . 1754))))
+  :file "!root!spdk!lib!event!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,454 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1731 1755])
+            ("bdev_malloc.h" include nil nil [1757 1781])
+            ("spdk/bdev.h" include nil nil [1782 1804])
+            ("spdk/conf.h" include nil nil [1805 1827])
+            ("spdk/endian.h" include nil nil [1828 1852])
+            ("spdk/env.h" include nil nil [1853 1874])
+            ("spdk/copy_engine.h" include nil nil [1875 1904])
+            ("spdk/io_channel.h" include nil nil [1905 1933])
+            ("spdk/string.h" include nil nil [1934 1958])
+            ("spdk_internal/bdev.h" include nil nil [1960 1991])
+            ("spdk_internal/log.h" include nil nil [1992 2022])
+            ("malloc_disk" type
+               (:members 
+                  ( ("disk" variable (:type ("spdk_bdev" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2046 2068])
+                    ("malloc_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2070 2090])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2092 2117]))                  
+                :type "struct")
+                nil [2024 2120])
+            ("malloc_task" type
+               (:members 
+                  ( ("num_outstanding" variable (:type "int") (reparse-symbol classsubparts) [2144 2167])
+                    ("status" variable (:type ("spdk_bdev_io_status" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [2169 2201]))                  
+                :type "struct")
+                nil [2122 2204])
+            ("__malloc_task_from_copy_task" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ct" variable
+                       (:pointer 1
+                        :type ("spdk_copy_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2263 2289]))                  
+                :type ("malloc_task" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2206 2369])
+            ("__copy_task_from_malloc_task" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("mt" variable
+                       (:pointer 1
+                        :type ("malloc_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2431 2454]))                  
+                :type ("spdk_copy_task" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2371 2537])
+            ("malloc_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ref" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2563 2573])
+                    ("status" variable (:type "int") (reparse-symbol arg-sub-list) [2574 2585]))                  
+                :type "void")
+                nil [2539 2830])
+            ("g_malloc_disk_head" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("malloc_disk" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2832 2885])
+            ("malloc_disk_count" variable
+               (:default-value "0"
+                :type "int")
+                nil [2887 2913])
+            ("bdev_malloc_initialize" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2949 2954]))                  
+                :type "int")
+                nil [2915 2955])
+            ("bdev_malloc_finish" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2987 2992]))                  
+                :type "void")
+                nil [2956 2993])
+            ("bdev_malloc_get_spdk_running_config" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3042 3051]))                  
+                :type "void")
+                nil [2994 3052])
+            ("bdev_malloc_get_ctx_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3090 3095]))                  
+                :type "int")
+                nil [3054 3159])
+            ("bdev_malloc_delete_from_list" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("malloc_disk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3355 3387]))                  
+                :type "void")
+                nil [3314 3737])
+            ("malloc_disk_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("malloc_disk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3768 3800]))                  
+                :type "void")
+                nil [3739 3940])
+            ("bdev_malloc_destruct" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3974 3984]))                  
+                :type "int")
+                nil [3942 4115])
+            ("bdev_malloc_check_iov_len" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("iovs" variable
+                       (:pointer 1
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4154 4173])
+                    ("iovcnt" variable (:type "int") (reparse-symbol arg-sub-list) [4174 4185])
+                    ("nbytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4186 4200]))                  
+                :type "int")
+                nil [4117 4345])
+            ("bdev_malloc_readv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mdisk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4377 4403])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4404 4431])
+                    ("task" variable
+                       (:pointer 1
+                        :type ("malloc_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4436 4461])
+                    ("iov" variable
+                       (:pointer 1
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4466 4484])
+                    ("iovcnt" variable (:type "int") (reparse-symbol arg-sub-list) [4485 4496])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4497 4508])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4509 4525]))                  
+                :type "void")
+                nil [4347 5254])
+            ("bdev_malloc_writev" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mdisk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5287 5313])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5314 5341])
+                    ("task" variable
+                       (:pointer 1
+                        :type ("malloc_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5347 5372])
+                    ("iov" variable
+                       (:pointer 1
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5378 5396])
+                    ("iovcnt" variable (:type "int") (reparse-symbol arg-sub-list) [5397 5408])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5409 5420])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5421 5437]))                  
+                :type "void")
+                nil [5256 6165])
+            ("bdev_malloc_unmap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mdisk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6196 6222])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6227 6254])
+                    ("task" variable
+                       (:pointer 1
+                        :type ("malloc_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6259 6284])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6289 6305])
+                    ("byte_count" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6310 6330]))                  
+                :type "int")
+                nil [6167 6769])
+            ("bdev_malloc_flush" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mdisk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6804 6830])
+                    ("task" variable
+                       (:pointer 1
+                        :type ("malloc_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6831 6856])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6861 6877])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6878 6894]))                  
+                :type ("int64_t" type (:type "class") nil nil))
+                nil [6771 6992])
+            ("bdev_malloc_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mdisk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7023 7049])
+                    ("task" variable
+                       (:pointer 1
+                        :type ("malloc_task" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7050 7075]))                  
+                :type "int")
+                nil [6994 7173])
+            ("_bdev_malloc_submit_request" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7214 7241])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7242 7271]))                  
+                :type "int")
+                nil [7175 8902])
+            ("bdev_malloc_submit_request" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8943 8970])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8971 9000]))                  
+                :type "void")
+                nil [8904 9122])
+            ("bdev_malloc_io_type_supported" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9166 9176])
+                    ("io_type" variable (:type ("spdk_bdev_io_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [9177 9208]))                  
+                :type "bool")
+                nil [9124 9431])
+            ("bdev_malloc_get_io_channel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9492 9502]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9433 9549])
+            ("malloc_fn_table" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	.destruct		= bdev_malloc_destruct,
+	.submit_request		= bdev_malloc_submit_request,
+	.io_type_supported	= bdev_malloc_io_type_supported,
+	.get_io_channel		= bdev_malloc_get_io_channel,
+}"
+                :type ("spdk_bdev_fn_table" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9551 9797])
+            ("create_malloc_disk" function
+               (:pointer 1
+                :arguments 
+                  ( ("num_blocks" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9836 9856])
+                    ("block_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9857 9877]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9799 11170])
+            ("free_malloc_disk" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mdisk" variable
+                       (:pointer 1
+                        :type ("malloc_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11201 11227]))                  
+                :type "void")
+                nil [11172 11314])
+            ("bdev_malloc_initialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11350 11355]))                  
+                :type "int")
+                nil [11316 12247])
+            ("bdev_malloc_finish" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12280 12285]))                  
+                :type "void")
+                nil [12249 12452])
+            ("bdev_malloc_get_spdk_running_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12502 12511]))                  
+                :type "void")
+                nil [12454 13486]))          
+      :file "bdev_malloc.c"
+      :pointmax 13546
+      :fsize 13545
+      :lastmodtime '(22931 51286 956337 307000)
+      :unmatched-syntax '((semantic-list 13516 . 13545) (symbol 13488 . 13516) (string 13517 . 13525) (semantic-list 3186 . 3312) (symbol 3161 . 3186)))
+    (semanticdb-table "semanticdb-table"
+      :file "bdev_malloc.h"
+      :fsize 1882
+      :lastmodtime '(22925 57199 691694 558000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "bdev_malloc_rpc.c"
+      :pointmax 201
+      :fsize 3098
+      :lastmodtime '(22925 57199 691694 558000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!lib!bdev!malloc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

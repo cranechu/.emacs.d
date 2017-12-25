@@ -1,0 +1,10 @@
+/root/.emacs
+/root/#.emacs#
+/root/spdk/lib/bdev/bdev.c
+/root/spdk/lib/bdev/#bdev.c#
+/root/spdk/Makefile
+/root/spdk/#Makefile#
+/root/spdk/LICENSE
+/root/spdk/#LICENSE#
+/root/spdk/config.h
+/root/spdk/#config.h#

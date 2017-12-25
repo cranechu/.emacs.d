@@ -1,0 +1,4 @@
+/root/spdk_sim_nvme/dpdk/lib/librte_eal/common/eal_common_pci.c
+/root/spdk_sim_nvme/dpdk/lib/librte_eal/common/#eal_common_pci.c#
+/root/spdk_sim_nvme/examples/nvme/hello_world/hello_world.c
+/root/spdk_sim_nvme/examples/nvme/hello_world/#hello_world.c#

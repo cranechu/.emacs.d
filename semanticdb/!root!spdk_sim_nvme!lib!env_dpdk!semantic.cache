@@ -1,0 +1,101 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("env_internal.h" include nil nil [1861 1886])
+            ("spdk/pci_ids.h" include nil nil [1888 1913])
+            ("SPDK_NVME_DEV_SIMULATED" variable (:constant-flag t) nil [1923 1946])
+            ("nvme_pci_driver_id" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+#if RTE_VERSION >= RTE_VERSION_NUM(16, 7, 0, 1)
+	{
+		.class_id = SPDK_PCI_CLASS_NVME,
+		.vendor_id = PCI_ANY_ID,
+		.device_id = PCI_ANY_ID,
+		.subsystem_vendor_id = PCI_ANY_ID,
+		.subsystem_device_id = PCI_ANY_ID,
+	},
+#else
+	{RTE_PCI_DEVICE(0x8086, 0x0953)},
+#endif
+	{ .vendor_id = 0, /* sentinel */ },
+}"
+                :type ("rte_pci_id" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1986 2341])
+            ("g_nvme_pci_drv" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.driver = {
+		.drv_flags	= RTE_PCI_DRV_NEED_MAPPING,
+		.id_table	= nvme_pci_driver_id,
+#if RTE_VERSION >= RTE_VERSION_NUM(16, 11, 0, 0)
+		.probe		= spdk_pci_device_init,
+		.remove		= spdk_pci_device_fini,
+		.driver.name	= \"spdk_nvme\",
+#else
+		.devinit	= spdk_pci_device_init,
+		.devuninit	= spdk_pci_device_fini,
+		.name		= \"spdk_nvme\",
+#endif
+	},
+
+	.cb_fn = NULL,
+	.cb_arg = NULL,
+	.mtx = PTHREAD_MUTEX_INITIALIZER,
+	.is_registered = false,
+}"
+                :type ("spdk_pci_enum_ctx" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2343 2839])
+            ("spdk_pci_nvme_device_attach" function
+               (:arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2873 2898])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2906 2921])
+                    ("pci_address" variable
+                       (:pointer 1
+                        :type ("spdk_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2922 2956]))                  
+                :type "int")
+                nil [2841 3041])
+            ("spdk_pci_nvme_enumerate" function
+               (:arguments 
+                  ( ("enum_cb" variable (:type ("spdk_pci_enum_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3071 3096])
+                    ("enum_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3097 3112]))                  
+                :type "int")
+                nil [3043 3180]))          
+      :file "pci_nvme.c"
+      :pointmax 21239
+      :fsize 21238
+      :lastmodtime '(22904 22836 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_NVME_DEV_SIMULATED" . ((semantic-list "(true)" 1948 . 1954)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "env_internal.h"
+      :fsize 2627
+      :lastmodtime '(22904 22836 0 0)))
+  :file "!root!spdk_sim_nvme!lib!env_dpdk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,918 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("time.h" include (:system-flag t) nil [1695 1712])
+            ("stdio.h" include (:system-flag t) nil [1713 1731])
+            ("stdlib.h" include (:system-flag t) nil [1732 1751])
+            ("string.h" include (:system-flag t) nil [1752 1771])
+            ("stdint.h" include (:system-flag t) nil [1772 1791])
+            ("inttypes.h" include (:system-flag t) nil [1792 1813])
+            ("sys/types.h" include (:system-flag t) nil [1814 1836])
+            ("sys/queue.h" include (:system-flag t) nil [1837 1859])
+            ("netinet/in.h" include (:system-flag t) nil [1860 1883])
+            ("setjmp.h" include (:system-flag t) nil [1884 1903])
+            ("stdarg.h" include (:system-flag t) nil [1904 1923])
+            ("ctype.h" include (:system-flag t) nil [1924 1942])
+            ("errno.h" include (:system-flag t) nil [1943 1961])
+            ("getopt.h" include (:system-flag t) nil [1962 1981])
+            ("fcntl.h" include (:system-flag t) nil [1982 2000])
+            ("unistd.h" include (:system-flag t) nil [2001 2020])
+            ("rte_atomic.h" include (:system-flag t) nil [2022 2045])
+            ("rte_branch_prediction.h" include (:system-flag t) nil [2046 2080])
+            ("rte_common.h" include (:system-flag t) nil [2081 2104])
+            ("rte_cryptodev.h" include (:system-flag t) nil [2105 2131])
+            ("rte_cycles.h" include (:system-flag t) nil [2132 2155])
+            ("rte_debug.h" include (:system-flag t) nil [2156 2178])
+            ("rte_eal.h" include (:system-flag t) nil [2179 2199])
+            ("rte_ether.h" include (:system-flag t) nil [2200 2222])
+            ("rte_ethdev.h" include (:system-flag t) nil [2223 2246])
+            ("rte_interrupts.h" include (:system-flag t) nil [2247 2274])
+            ("rte_ip.h" include (:system-flag t) nil [2275 2294])
+            ("rte_launch.h" include (:system-flag t) nil [2295 2318])
+            ("rte_lcore.h" include (:system-flag t) nil [2319 2341])
+            ("rte_log.h" include (:system-flag t) nil [2342 2362])
+            ("rte_malloc.h" include (:system-flag t) nil [2363 2386])
+            ("rte_mbuf.h" include (:system-flag t) nil [2387 2408])
+            ("rte_memcpy.h" include (:system-flag t) nil [2409 2432])
+            ("rte_memory.h" include (:system-flag t) nil [2433 2456])
+            ("rte_mempool.h" include (:system-flag t) nil [2457 2481])
+            ("rte_memzone.h" include (:system-flag t) nil [2482 2506])
+            ("rte_pci.h" include (:system-flag t) nil [2507 2527])
+            ("rte_per_lcore.h" include (:system-flag t) nil [2528 2554])
+            ("rte_prefetch.h" include (:system-flag t) nil [2555 2580])
+            ("rte_random.h" include (:system-flag t) nil [2581 2604])
+            ("rte_hexdump.h" include (:system-flag t) nil [2605 2629])
+            ("cdev_type" type
+               (:members 
+                  ( ("CDEV_TYPE_ANY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2649 2663])
+                    ("CDEV_TYPE_HW" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2665 2678])
+                    ("CDEV_TYPE_SW" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2680 2694]))                  
+                :type "enum")
+                nil [2631 2695])
+            ("RTE_LOGTYPE_L2FWD" variable (:constant-flag t) nil [2705 2722])
+            ("NB_MBUF" variable (:constant-flag t) nil [2750 2757])
+            ("MAX_STR_LEN" variable (:constant-flag t) nil [2774 2785])
+            ("MAX_KEY_SIZE" variable (:constant-flag t) nil [2797 2809])
+            ("MAX_PKT_BURST" variable (:constant-flag t) nil [2822 2835])
+            ("BURST_TX_DRAIN_US" variable (:constant-flag t) nil [2847 2864])
+            ("RTE_TEST_RX_DESC_DEFAULT" variable (:constant-flag t) nil [2962 2986])
+            ("RTE_TEST_TX_DESC_DEFAULT" variable (:constant-flag t) nil [2999 3023])
+            ("nb_rxd" variable
+               (:typemodifiers ("static")
+                :default-value "RTE_TEST_RX_DESC_DEFAULT"
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [3029 3079])
+            ("nb_txd" variable
+               (:typemodifiers ("static")
+                :default-value "RTE_TEST_TX_DESC_DEFAULT"
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [3080 3130])
+            ("l2fwd_ports_eth_addr" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("ether_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3166 3230])
+            ("l2fwd_enabled_port_mask" variable
+               (:typemodifiers ("static")
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [3260 3300])
+            ("l2fwd_enabled_crypto_mask" variable
+               (:typemodifiers ("static")
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [3301 3343])
+            ("l2fwd_dst_ports" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [3373 3423])
+            ("pkt_buffer" type
+               (:members 
+                  ( ("len" variable (:type "unsigned int") (reparse-symbol classsubparts) [3447 3460])
+                    ("buffer" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3462 3501]))                  
+                :type "struct")
+                nil [3426 3504])
+            ("op_buffer" type
+               (:members 
+                  ( ("len" variable (:type "unsigned int") (reparse-symbol classsubparts) [3526 3539])
+                    ("buffer" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("rte_crypto_op" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3541 3585]))                  
+                :type "struct")
+                nil [3506 3588])
+            ("MAX_RX_QUEUE_PER_LCORE" variable (:constant-flag t) nil [3598 3620])
+            ("MAX_TX_QUEUE_PER_PORT" variable (:constant-flag t) nil [3632 3653])
+            ("l2fwd_crypto_xform_chain" type
+               (:members 
+                  ( ("L2FWD_CRYPTO_CIPHER_HASH" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3691 3716])
+                    ("L2FWD_CRYPTO_HASH_CIPHER" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3718 3743])
+                    ("L2FWD_CRYPTO_CIPHER_ONLY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3745 3770])
+                    ("L2FWD_CRYPTO_HASH_ONLY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3772 3796]))                  
+                :type "enum")
+                nil [3658 3797])
+            ("l2fwd_key" type
+               (:members 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3819 3833])
+                    ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3835 3851])
+                    ("phys_addr" variable (:type ("phys_addr_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3853 3875]))                  
+                :type "struct")
+                nil [3799 3878])
+            ("l2fwd_crypto_options" type
+               (:members 
+                  ( ("portmask" variable (:type "unsigned int") (reparse-symbol classsubparts) [3964 3982])
+                    ("nb_ports_per_lcore" variable (:type "unsigned int") (reparse-symbol classsubparts) [3984 4012])
+                    ("refresh_period" variable (:type "unsigned int") (reparse-symbol classsubparts) [4014 4038])
+                    ("single_lcore" variable
+                       (:suffix ":1"
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [4040 4064])
+                    ("type" variable (:type ("cdev_type" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [4067 4087])
+                    ("sessionless" variable
+                       (:suffix ":1"
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [4089 4112])
+                    ("xform_chain" variable (:type ("l2fwd_crypto_xform_chain" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [4115 4157])
+                    ("cipher_xform" variable (:type ("rte_crypto_sym_xform" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4160 4201])
+                    ("ckey_param" variable (:type "unsigned int") (reparse-symbol classsubparts) [4203 4223])
+                    ("ckey_random_size" variable (:type "int") (reparse-symbol classsubparts) [4225 4246])
+                    ("iv" variable (:type ("l2fwd_key" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4249 4269])
+                    ("iv_param" variable (:type "unsigned int") (reparse-symbol classsubparts) [4271 4289])
+                    ("iv_random_size" variable (:type "int") (reparse-symbol classsubparts) [4291 4310])
+                    ("auth_xform" variable (:type ("rte_crypto_sym_xform" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4313 4352])
+                    ("akey_param" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4354 4373])
+                    ("akey_random_size" variable (:type "int") (reparse-symbol classsubparts) [4375 4396])
+                    ("aad" variable (:type ("l2fwd_key" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4399 4420])
+                    ("aad_param" variable (:type "unsigned int") (reparse-symbol classsubparts) [4422 4441])
+                    ("aad_random_size" variable (:type "int") (reparse-symbol classsubparts) [4443 4463])
+                    ("digest_size" variable (:type "int") (reparse-symbol classsubparts) [4466 4482])
+                    ("block_size" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4485 4505])
+                    ("string_type" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4507 4537])
+                    ("cryptodev_mask" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4540 4564]))                  
+                :type "struct")
+                nil [3933 4567])
+            ("l2fwd_crypto_params" type
+               (:members 
+                  ( ("dev_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4632 4647])
+                    ("qp_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4649 4663])
+                    ("digest_length" variable (:type "unsigned int") (reparse-symbol classsubparts) [4666 4689])
+                    ("block_size" variable (:type "unsigned int") (reparse-symbol classsubparts) [4691 4711])
+                    ("iv" variable (:type ("l2fwd_key" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4714 4734])
+                    ("aad" variable (:type ("l2fwd_key" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4736 4757])
+                    ("session" variable
+                       (:pointer 1
+                        :type ("rte_cryptodev_sym_session" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4759 4801])
+                    ("do_cipher" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4804 4822])
+                    ("do_hash" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4824 4840])
+                    ("hash_verify" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4842 4862])
+                    ("cipher_algo" variable (:type ("rte_crypto_cipher_algorithm" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [4865 4910])
+                    ("auth_algo" variable (:type ("rte_crypto_auth_algorithm" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [4912 4953]))                  
+                :type "struct")
+                nil [4602 4956])
+            ("__rte_cache_aligned" variable (:type ("lcore_queue_conf" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [4985 5275])
+            ("lcore_queue_conf" type
+               (:members 
+                  ( ("nb_rx_ports" variable (:type "unsigned int") (reparse-symbol classsubparts) [5012 5033])
+                    ("rx_port_list" variable
+                       (:dereference 1
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5035 5081])
+                    ("nb_crypto_devs" variable (:type "unsigned int") (reparse-symbol classsubparts) [5084 5108])
+                    ("cryptodev_list" variable
+                       (:dereference 1
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5110 5158])
+                    ("op_buf" variable
+                       (:dereference 1
+                        :type ("op_buffer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5161 5206])
+                    ("pkt_buf" variable
+                       (:dereference 1
+                        :type ("pkt_buffer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5208 5252]))                  
+                :type "struct")
+                nil [4985 5275])
+            ("lcore_queue_conf" variable
+               (:dereference 1
+                :type ("lcore_queue_conf" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5277 5333])
+            ("port_conf" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	.rxmode = {
+		.mq_mode = ETH_MQ_RX_NONE,
+		.max_rx_pkt_len = ETHER_MAX_LEN,
+		.split_hdr_size = 0,
+		.header_split   = 0, /**< Header Split disabled */
+		.hw_ip_checksum = 0, /**< IP checksum offload disabled */
+		.hw_vlan_filter = 0, /**< VLAN filtering disabled */
+		.jumbo_frame    = 0, /**< Jumbo Frame Support disabled */
+		.hw_strip_crc   = 1, /**< CRC stripped by hardware */
+	},
+	.txmode = {
+		.mq_mode = ETH_MQ_TX_NONE,
+	},
+}"
+                :type ("rte_eth_conf" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5335 5818])
+            ("l2fwd_pktmbuf_pool" variable
+               (:pointer 1
+                :type ("rte_mempool" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5820 5859])
+            ("l2fwd_crypto_op_pool" variable
+               (:pointer 1
+                :type ("rte_mempool" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5860 5901])
+            ("__rte_cache_aligned" variable (:type ("l2fwd_port_statistics" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [5936 6092])
+            ("l2fwd_port_statistics" type
+               (:members 
+                  ( ("tx" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5968 5980])
+                    ("rx" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5982 5994])
+                    ("crypto_enqueued" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5997 6022])
+                    ("crypto_dequeued" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6024 6049])
+                    ("dropped" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6052 6069]))                  
+                :type "struct")
+                nil [5936 6092])
+            ("__rte_cache_aligned" variable (:type ("l2fwd_crypto_statistics" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [6094 6208])
+            ("l2fwd_crypto_statistics" type
+               (:members 
+                  ( ("enqueued" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6128 6146])
+                    ("dequeued" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6148 6166])
+                    ("errors" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6169 6185]))                  
+                :type "struct")
+                nil [6094 6208])
+            ("port_statistics" variable
+               (:dereference 1
+                :type ("l2fwd_port_statistics" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6210 6273])
+            ("crypto_statistics" variable
+               (:dereference 1
+                :type ("l2fwd_crypto_statistics" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6274 6344])
+            ("TIMER_MILLISECOND" variable (:constant-flag t) nil [6425 6442])
+            ("MAX_TIMER_PERIOD" variable (:constant-flag t) nil [6488 6504])
+            ("print_stats" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6697 6702]))                  
+                :type "void")
+                nil [6673 9237])
+            ("l2fwd_crypto_send_burst" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("qconf" variable
+                       (:pointer 1
+                        :type ("lcore_queue_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9274 9305])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9306 9317])
+                    ("cparams" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_params" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9320 9356]))                  
+                :type "int")
+                nil [9239 9861])
+            ("l2fwd_crypto_enqueue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("op" variable
+                       (:pointer 1
+                        :type ("rte_crypto_op" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9895 9920])
+                    ("cparams" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_params" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9923 9959]))                  
+                :type "int")
+                nil [9863 10376])
+            ("l2fwd_simple_crypto_enqueue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("m" variable
+                       (:pointer 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10417 10436])
+                    ("op" variable
+                       (:pointer 1
+                        :type ("rte_crypto_op" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10439 10464])
+                    ("cparams" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_params" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10467 10503]))                  
+                :type "int")
+                nil [10378 13854])
+            ("l2fwd_send_burst" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("qconf" variable
+                       (:pointer 1
+                        :type ("lcore_queue_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13940 13971])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [13972 13983])
+                    ("port" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13986 13999]))                  
+                :type "int")
+                nil [13912 14362])
+            ("l2fwd_send_packet" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("m" variable
+                       (:pointer 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14450 14469])
+                    ("port" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14470 14483]))                  
+                :type "int")
+                nil [14421 14870])
+            ("l2fwd_simple_forward" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("m" variable
+                       (:pointer 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14905 14924])
+                    ("portid" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14925 14941]))                  
+                :type "void")
+                nil [14872 15341])
+            ("generate_random_key" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15402 15415])
+                    ("length" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15416 15432]))                  
+                :type "void")
+                nil [15370 15701])
+            ("initialize_crypto_session" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15771 15808])
+                    ("cdev_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15811 15827]))                  
+                :type ("rte_cryptodev_sym_session" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [15703 16415])
+            ("l2fwd_crypto_options_print" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16456 16493]))                  
+                :type "void")
+                nil [16417 16494])
+            ("l2fwd_main_loop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16551 16588]))                  
+                :type "void")
+                nil [16523 22124])
+            ("l2fwd_launch_one_lcore" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22160 22170]))                  
+                :type "int")
+                nil [22126 22239])
+            ("l2fwd_crypto_usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("prgname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22315 22335]))                  
+                :type "void")
+                nil [22284 23549])
+            ("parse_cryptodev_type" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :type ("cdev_type" type (:type "enum") nil nil))
+                        (reparse-symbol arg-sub-list) [23637 23658])
+                    ("optarg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23659 23672]))                  
+                :type "int")
+                nil [23605 23918])
+            ("parse_crypto_opt_chain" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24008 24045])
+                    ("optarg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24046 24059]))                  
+                :type "int")
+                nil [23974 24520])
+            ("parse_cipher_algo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("algo" variable
+                       (:pointer 1
+                        :type ("rte_crypto_cipher_algorithm" type (:type "enum") nil nil))
+                        (reparse-symbol arg-sub-list) [24612 24651])
+                    ("optarg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24652 24665]))                  
+                :type "int")
+                nil [24583 24836])
+            ("parse_cipher_op" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("op" variable
+                       (:pointer 1
+                        :type ("rte_crypto_cipher_operation" type (:type "enum") nil nil))
+                        (reparse-symbol arg-sub-list) [24924 24961])
+                    ("optarg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24962 24975]))                  
+                :type "int")
+                nil [24897 25226])
+            ("parse_key" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25295 25309])
+                    ("input_arg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25310 25326]))                  
+                :type "int")
+                nil [25274 25689])
+            ("parse_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [25736 25746])
+                    ("q_arg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25747 25765]))                  
+                :type "int")
+                nil [25714 26023])
+            ("parse_auth_algo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("algo" variable
+                       (:pointer 1
+                        :type ("rte_crypto_auth_algorithm" type (:type "enum") nil nil))
+                        (reparse-symbol arg-sub-list) [26111 26148])
+                    ("optarg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26149 26162]))                  
+                :type "int")
+                nil [26084 26338])
+            ("parse_auth_op" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("op" variable
+                       (:pointer 1
+                        :type ("rte_crypto_auth_operation" type (:type "enum") nil nil))
+                        (reparse-symbol arg-sub-list) [26365 26400])
+                    ("optarg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26401 26414]))                  
+                :type "int")
+                nil [26340 26679])
+            ("parse_cryptodev_mask" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26713 26750])
+                    ("q_arg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26753 26771]))                  
+                :type "int")
+                nil [26681 27082])
+            ("l2fwd_crypto_parse_args_long_options" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27158 27195])
+                    ("lgopts" variable
+                       (:pointer 1
+                        :type ("option" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27198 27220])
+                    ("option_index" variable (:type "int") (reparse-symbol arg-sub-list) [27221 27238]))                  
+                :type "int")
+                nil [27110 30068])
+            ("l2fwd_crypto_parse_portmask" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30132 30169])
+                    ("q_arg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30172 30190]))                  
+                :type "int")
+                nil [30093 30489])
+            ("l2fwd_crypto_parse_nqueue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30558 30595])
+                    ("q_arg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30598 30616]))                  
+                :type "int")
+                nil [30521 30990])
+            ("l2fwd_crypto_parse_timer_period" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31061 31098])
+                    ("q_arg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31101 31119]))                  
+                :type "int")
+                nil [31018 31554])
+            ("l2fwd_crypto_default_options" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31645 31682]))                  
+                :type "void")
+                nil [31604 32845])
+            ("display_cipher_info" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32879 32916]))                  
+                :type "void")
+                nil [32847 33256])
+            ("display_auth_info" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33288 33325]))                  
+                :type "void")
+                nil [33258 33662])
+            ("l2fwd_crypto_options_print" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33703 33740]))                  
+                :type "void")
+                nil [33664 35791])
+            ("l2fwd_crypto_parse_args" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35898 35935])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [35938 35947])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [35948 35960]))                  
+                :type "int")
+                nil [35863 38065])
+            ("check_all_ports_link_status" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("port_num" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38184 38201])
+                    ("port_mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38202 38221]))                  
+                :type "void")
+                nil [38144 39581])
+            ("check_type" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39650 39687])
+                    ("dev_info" variable
+                       (:pointer 1
+                        :type ("rte_cryptodev_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39688 39724]))                  
+                :type "int")
+                nil [39628 40019])
+            ("check_cryptodev_mask" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40108 40145])
+                    ("cdev_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40148 40164]))                  
+                :type "int")
+                nil [40076 40240])
+            ("check_supported_size" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("length" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40281 40297])
+                    ("min" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40298 40311])
+                    ("max" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40312 40325])
+                    ("increment" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40328 40347]))                  
+                :type "int")
+                nil [40242 40621])
+            ("initialize_cryptodevs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40655 40692])
+                    ("nb_ports" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [40693 40711])
+                    ("enabled_cdevs" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40714 40737]))                  
+                :type "int")
+                nil [40622 49071])
+            ("initialize_ports" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49101 49138]))                  
+                :type "int")
+                nil [49073 51779])
+            ("reserve_key_memory" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("options" variable
+                       (:pointer 1
+                        :type ("l2fwd_crypto_options" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51812 51849]))                  
+                :type "void")
+                nil [51781 52699])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [52710 52719])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52720 52732]))                  
+                :type "int")
+                nil [52701 57150]))          
+      :file "main.c"
+      :pointmax 57151
+      :fsize 57150
+      :lastmodtime '(22914 63283 564385 864000)
+      :unmatched-syntax '((punctuation 6624 . 6625) (number 6620 . 6624) (punctuation 6618 . 6619) (symbol "2000000ULL" 6600 . 6617) (punctuation 6598 . 6599) (number 6595 . 6597) (punctuation 6593 . 6594) (symbol 6580 . 6592) (symbol 6572 . 6579) (STATIC 6565 . 6571))
+      :lexical-table 
+        '(("MAX_KEY_SIZE" . ((number "128" 2810 . 2813)))
+          ("MAX_RX_QUEUE_PER_LCORE" . ((number "16" 3621 . 3623)))
+          ("NB_MBUF" . ((number "8192" 2760 . 2764)))
+          ("MAX_TX_QUEUE_PER_PORT" . ((number "16" 3654 . 3656)))
+          ("MAX_TIMER_PERIOD" . ((symbol "86400UL" 6505 . 6512)))
+          ("RTE_LOGTYPE_L2FWD" . ((symbol "RTE_LOGTYPE_USER1" 2723 . 2740)))
+          ("RTE_TEST_RX_DESC_DEFAULT" . ((number "128" 2987 . 2990)))
+          ("TIMER_MILLISECOND" . ((symbol "2000000ULL" 6443 . 6453)))
+          ("BURST_TX_DRAIN_US" . ((number "100" 2865 . 2868)))
+          ("MAX_PKT_BURST" . ((number "32" 2836 . 2838)))
+          ("RTE_TEST_TX_DESC_DEFAULT" . ((number "512" 3024 . 3027)))
+          ("MAX_STR_LEN" . ((number "32" 2786 . 2788)))
+          )
+))
+  :file "!root!spdk!dpdk!examples!l2fwd-crypto!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

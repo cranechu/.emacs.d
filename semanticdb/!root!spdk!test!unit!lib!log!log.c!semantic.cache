@@ -1,0 +1,35 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk_cunit.h" include nil nil [1691 1714])
+            ("spdk/log.h" include nil nil [1715 1736])
+            ("log.c" include nil nil [1738 1754])
+            ("log_test" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1777 1782]))                  
+                :type "void")
+                nil [1756 2808])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2819 2828])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2829 2841]))                  
+                :type "int")
+                nil [2810 3356]))          
+      :file "log_ut.c"
+      :pointmax 3357
+      :fsize 3356
+      :lastmodtime '(22925 57199 729693 700000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!test!unit!lib!log!log.c!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

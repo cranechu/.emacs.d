@@ -1,0 +1,389 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk_internal/log.h" include nil nil [1665 1695])
+            ("stdarg.h" include (:system-flag t) nil [1697 1716])
+            ("stdio.h" include (:system-flag t) nil [1717 1735])
+            ("stdlib.h" include (:system-flag t) nil [1736 1755])
+            ("string.h" include (:system-flag t) nil [1756 1775])
+            ("strings.h" include (:system-flag t) nil [1776 1796])
+            ("syslog.h" include (:system-flag t) nil [1797 1816])
+            ("ctype.h" include (:system-flag t) nil [1817 1835])
+            ("errno.h" include (:system-flag t) nil [1836 1854])
+            ("g_trace_flags" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_trace_flags)"
+                :type "int")
+                nil [1893 1947])
+            ("spdk_g_notice_stderr_flag" variable
+               (:default-value "1"
+                :type "unsigned int")
+                nil [1949 1992])
+            ("spdk_g_log_facility" variable
+               (:default-value "LOG_DAEMON"
+                :type "int")
+                nil [1993 2030])
+            ("spdk_g_log_priority" variable
+               (:default-value "LOG_NOTICE"
+                :type "unsigned int")
+                nil [2031 2077])
+            ("MAX_TMPBUF" variable (:constant-flag t) nil [2144 2154])
+            ("syslog_code" type
+               (:members 
+                  ( ("c_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [2183 2202])
+                    ("c_val" variable (:type "int") (reparse-symbol classsubparts) [2204 2214]))                  
+                :type "struct")
+                nil [2161 2217])
+            ("facilitynames" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{ \"auth\",	LOG_AUTH,	},
+	{ \"authpriv\",	LOG_AUTHPRIV,	},
+	{ \"cron\",	LOG_CRON,	},
+	{ \"daemon\",	LOG_DAEMON,	},
+	{ \"ftp\",	LOG_FTP,	},
+	{ \"kern\",	LOG_KERN,	},
+	{ \"lpr\",	LOG_LPR,	},
+	{ \"mail\",	LOG_MAIL,	},
+	{ \"news\",	LOG_NEWS,	},
+	{ \"syslog\",	LOG_SYSLOG,	},
+	{ \"user\",	LOG_USER,	},
+	{ \"uucp\",	LOG_UUCP,	},
+	{ \"local0\",	LOG_LOCAL0,	},
+	{ \"local1\",	LOG_LOCAL1,	},
+	{ \"local2\",	LOG_LOCAL2,	},
+	{ \"local3\",	LOG_LOCAL3,	},
+	{ \"local4\",	LOG_LOCAL4,	},
+	{ \"local5\",	LOG_LOCAL5,	},
+	{ \"local6\",	LOG_LOCAL6,	},
+	{ \"local7\",	LOG_LOCAL7,	},
+#ifdef __FreeBSD__
+	{ \"console\",	LOG_CONSOLE,	},
+	{ \"ntp\",	LOG_NTP,	},
+	{ \"security\",	LOG_SECURITY,	},
+#endif
+	{ NULL,		-1,		}
+}"
+                :type ("syslog_code" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2219 2924])
+            ("prioritynames" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{ \"alert\",	LOG_ALERT,	},
+	{ \"crit\",	LOG_CRIT,	},
+	{ \"debug\",	LOG_DEBUG,	},
+	{ \"emerg\",	LOG_EMERG,	},
+	{ \"err\",	LOG_ERR,	},
+	{ \"info\",	LOG_INFO,	},
+	{ \"notice\",	LOG_NOTICE,	},
+	{ \"warning\",	LOG_WARNING,	},
+	{ NULL,		-1,		}
+}"
+                :type ("syslog_code" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2926 3203])
+            ("spdk_set_log_facility" function
+               (:arguments 
+                  ( ("facility" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3231 3252]))                  
+                :type "int")
+                nil [3205 3495])
+            ("spdk_get_log_facility" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3532 3537]))                  
+                :type "char")
+                nil [3497 3841])
+            ("spdk_set_log_priority" function
+               (:arguments 
+                  ( ("priority" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3869 3890]))                  
+                :type "int")
+                nil [3843 4133])
+            ("spdk_noticelog" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4155 4172])
+                    ("line" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4173 4188])
+                    ("func" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4189 4206])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4215 4234])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4235 4239]))                  
+                :type "void")
+                nil [4135 4843])
+            ("spdk_warnlog" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4863 4880])
+                    ("line" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4881 4896])
+                    ("func" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4897 4914])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4921 4940])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [4941 4945]))                  
+                :type "void")
+                nil [4845 5439])
+            ("spdk_tracelog" function
+               (:arguments 
+                  ( ("flag" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5460 5477])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5478 5495])
+                    ("line" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5496 5511])
+                    ("func" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5512 5529])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5537 5556])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [5557 5561]))                  
+                :type "void")
+                nil [5441 5981])
+            ("spdk_errlog" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6000 6017])
+                    ("line" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6018 6033])
+                    ("func" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6034 6051])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6057 6076])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [6077 6081]))                  
+                :type "void")
+                nil [5983 6499])
+            ("fdump" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6519 6528])
+                    ("label" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6529 6547])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6548 6567])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6568 6579]))                  
+                :type "void")
+                nil [6501 7532])
+            ("spdk_trace_dump" function
+               (:arguments 
+                  ( ("label" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7555 7573])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7574 7593])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7594 7605]))                  
+                :type "void")
+                nil [7534 7642])
+            ("get_trace_flag" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7691 7708]))                  
+                :type ("spdk_trace_flag" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7644 7871])
+            ("spdk_log_register_trace_flag" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7907 7924])
+                    ("flag" variable
+                       (:pointer 1
+                        :type ("spdk_trace_flag" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7925 7954]))                  
+                :type "void")
+                nil [7873 8411])
+            ("spdk_log_get_trace_flag" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8442 8459]))                  
+                :type "bool")
+                nil [8413 8582])
+            ("set_trace_flag" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8610 8627])
+                    ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [8628 8639]))                  
+                :type "int")
+                nil [8584 8909])
+            ("spdk_log_set_trace_flag" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8939 8956]))                  
+                :type "int")
+                nil [8911 8996])
+            ("spdk_log_clear_trace_flag" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9028 9045]))                  
+                :type "int")
+                nil [8998 9086])
+            ("spdk_log_get_first_trace_flag" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9143 9148]))                  
+                :type ("spdk_trace_flag" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9088 9189])
+            ("spdk_log_get_next_trace_flag" function
+               (:pointer 1
+                :arguments 
+                  ( ("flag" variable
+                       (:pointer 1
+                        :type ("spdk_trace_flag" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9245 9274]))                  
+                :type ("spdk_trace_flag" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9191 9311])
+            ("spdk_open_log" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9332 9337]))                  
+                :type "void")
+                nil [9313 9476])
+            ("spdk_close_log" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9498 9503]))                  
+                :type "void")
+                nil [9478 9520])
+            ("spdk_tracelog_usage" function
+               (:arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9547 9555])
+                    ("trace_arg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9556 9578]))                  
+                :type "void")
+                nil [9522 9919]))          
+      :file "log.c"
+      :pointmax 9920
+      :fsize 9919
+      :lastmodtime '(22711 54335 38217 922000)
+      :unmatched-syntax '((semantic-list 2107 . 2134) (symbol 2079 . 2107) (string 2108 . 2115) (semantic-list 1873 . 1892) (symbol 1863 . 1873) (STATIC 1856 . 1862))
+      :lexical-table 
+        '(("MAX_TMPBUF" . ((number "1024" 2155 . 2159)))
+          )
+))
+  :file "!home!cranechu!spdk!lib!log!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

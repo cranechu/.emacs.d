@@ -1,0 +1,141 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/env.h" include nil nil [1691 1712])
+            ("spdk/trace.h" include nil nil [1713 1736])
+            ("rte_config.h" include (:system-flag t) nil [1738 1761])
+            ("rte_lcore.h" include (:system-flag t) nil [1762 1784])
+            ("g_shm_name" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1786 1813])
+            ("g_trace_histories" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("spdk_trace_histories" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1815 1869])
+            ("g_reg_fn_head" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("spdk_trace_register_fn" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1870 1929])
+            ("spdk_trace_record" function
+               (:arguments 
+                  ( ("tpoint_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1954 1973])
+                    ("poller_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1974 1993])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1994 2008])
+                    ("object_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2013 2032])
+                    ("arg1" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2033 2047]))                  
+                :type "void")
+                nil [1931 3115])
+            ("spdk_trace_get_tpoint_mask" function
+               (:arguments 
+                  ( ("group_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3153 3171]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [3117 3356])
+            ("spdk_trace_set_tpoints" function
+               (:arguments 
+                  ( ("group_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3386 3404])
+                    ("tpoint_mask" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3405 3426]))                  
+                :type "void")
+                nil [3358 3614])
+            ("spdk_trace_clear_tpoints" function
+               (:arguments 
+                  ( ("group_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3646 3664])
+                    ("tpoint_mask" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3665 3686]))                  
+                :type "void")
+                nil [3616 3875])
+            ("spdk_trace_get_tpoint_group_mask" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3919 3924]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [3877 4077])
+            ("spdk_trace_set_tpoint_group_mask" function
+               (:arguments 
+                  ( ("tpoint_group_mask" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4117 4144]))                  
+                :type "void")
+                nil [4079 4270])
+            ("spdk_trace_init" function
+               (:arguments 
+                  ( ("shm_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4293 4314]))                  
+                :type "void")
+                nil [4272 5324])
+            ("spdk_trace_cleanup" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5350 5355]))                  
+                :type "void")
+                nil [5326 5449])
+            ("spdk_trace_register_owner" function
+               (:arguments 
+                  ( ("type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5482 5495])
+                    ("id_prefix" variable (:type "char") (reparse-symbol arg-sub-list) [5496 5511]))                  
+                :type "void")
+                nil [5451 5797])
+            ("spdk_trace_register_object" function
+               (:arguments 
+                  ( ("type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5831 5844])
+                    ("id_prefix" variable (:type "char") (reparse-symbol arg-sub-list) [5845 5860]))                  
+                :type "void")
+                nil [5799 6155])
+            ("spdk_trace_register_description" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6194 6211])
+                    ("short_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6212 6235])
+                    ("tpoint_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6240 6259])
+                    ("owner_type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6260 6279])
+                    ("object_type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6284 6304])
+                    ("new_object" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6305 6324])
+                    ("arg1_is_ptr" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6329 6349])
+                    ("arg1_is_alias" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6350 6372])
+                    ("arg1_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6377 6399]))                  
+                :type "void")
+                nil [6157 7017])
+            ("spdk_trace_add_register_fn" function
+               (:arguments 
+                  ( ("reg_fn" variable
+                       (:pointer 1
+                        :type ("spdk_trace_register_fn" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7051 7089]))                  
+                :type "void")
+                nil [7019 7149]))          
+      :file "trace.c"
+      :pointmax 7150
+      :fsize 7149
+      :lastmodtime '(22914 62598 435370 726000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!lib!trace!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,101 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1666 1684])
+            ("stdlib.h" include (:system-flag t) nil [1685 1704])
+            ("string.h" include (:system-flag t) nil [1705 1724])
+            ("unistd.h" include (:system-flag t) nil [1725 1744])
+            ("rte_config.h" include (:system-flag t) nil [1746 1769])
+            ("rte_eal.h" include (:system-flag t) nil [1770 1790])
+            ("spdk/nvme.h" include nil nil [1792 1814])
+            ("spdk/env.h" include nil nil [1815 1836])
+            ("probe_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1860 1873])
+                    ("trid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_transport_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1874 1916])
+                    ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1919 1953]))                  
+                :type "bool")
+                nil [1839 1974])
+            ("attach_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1998 2011])
+                    ("trid" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_transport_id" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2012 2054])
+                    ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2058 2088])
+                    ("opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_ctrlr_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2089 2129]))                  
+                :type "void")
+                nil [1976 2133])
+            ("ealargs" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    \"test\",
+    \"-c 0x1\",
+    \"-n 4\",
+    \"--proc-type=auto\",
+}"
+                :type "char")
+                nil [2135 2226])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2237 2246])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2247 2259]))                  
+                :type "int")
+                nil [2228 2468]))          
+      :file "test.c"
+      :pointmax 2469
+      :fsize 2468
+      :lastmodtime '(22718 32719 15530 503000)
+      :unmatched-syntax nil))
+  :file "!home!cranechu!spdk!examples!nvme!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

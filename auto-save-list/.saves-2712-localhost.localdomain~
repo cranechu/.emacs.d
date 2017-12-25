@@ -1,0 +1,14 @@
+/root/spdk/lib/env_dpdk/pci.c
+/root/spdk/lib/env_dpdk/#pci.c#
+/root/spdk/dpdk/lib/librte_eal/common/eal_common_pci.c
+/root/spdk/dpdk/lib/librte_eal/common/#eal_common_pci.c#
+/root/spdk/lib/nvme/nvme.c
+/root/spdk/lib/nvme/#nvme.c#
+/root/spdk/examples/nvme/perf/perf.c
+/root/spdk/examples/nvme/perf/#perf.c#
+/root/spdk/lib/nvme/nvme_pcie.c
+/root/spdk/lib/nvme/#nvme_pcie.c#
+/root/spdk/lib/nvme/nvme_transport.c
+/root/spdk/lib/nvme/#nvme_transport.c#
+/root/spdk/lib/env_dpdk/pci_nvme.c
+/root/spdk/lib/env_dpdk/#pci_nvme.c#

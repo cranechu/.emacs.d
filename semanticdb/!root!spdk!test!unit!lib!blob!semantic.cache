@@ -1,0 +1,206 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("DEV_BUFFER_SIZE" variable (:constant-flag t) nil [1673 1688])
+            ("DEV_BUFFER_BLOCKLEN" variable (:constant-flag t) nil [1716 1735])
+            ("DEV_BUFFER_BLOCKCNT" variable (:constant-flag t) nil [1751 1770])
+            ("g_dev_buffer" variable
+               (:pointer 1
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [1811 1833])
+            ("dev_create_channel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1886 1910]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1835 1928])
+            ("dev_destroy_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1962 1986])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1987 2019]))                  
+                :type "void")
+                nil [1930 2023])
+            ("dev_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2049 2073]))                  
+                :type "void")
+                nil [2025 2077])
+            ("dev_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2100 2124])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2125 2157])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2158 2172])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2175 2188])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2189 2208])
+                    ("cb_args" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev_cb_args" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2211 2247]))                  
+                :type "void")
+                nil [2079 2521])
+            ("dev_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2545 2569])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2570 2602])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2603 2617])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2621 2634])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2635 2654])
+                    ("cb_args" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev_cb_args" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2658 2694]))                  
+                :type "void")
+                nil [2523 2968])
+            ("dev_flush" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2992 3016])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3017 3049])
+                    ("cb_args" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev_cb_args" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3053 3089]))                  
+                :type "void")
+                nil [2970 3148])
+            ("dev_unmap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3172 3196])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3197 3229])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3233 3246])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3247 3266])
+                    ("cb_args" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev_cb_args" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3270 3306]))                  
+                :type "void")
+                nil [3150 3574])
+            ("init_dev" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3597 3621]))                  
+                :type "void")
+                nil [3576 3916]))          
+      :file "bs_dev_common.c"
+      :pointmax 3917
+      :fsize 3916
+      :lastmodtime '(22925 57199 727693 745000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEV_BUFFER_BLOCKCNT" . ((semantic-list "(DEV_BUFFER_SIZE / DEV_BUFFER_BLOCKLEN)" 1771 . 1810)))
+          ("DEV_BUFFER_BLOCKLEN" . ((semantic-list "(4096)" 1736 . 1742)))
+          ("DEV_BUFFER_SIZE" . ((semantic-list "(64 * 1024 * 1024)" 1689 . 1707)))
+          )
+))
+  :file "!root!spdk!test!unit!lib!blob!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

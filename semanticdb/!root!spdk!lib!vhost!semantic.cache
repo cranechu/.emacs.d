@@ -1,0 +1,441 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("SPDK_VHOST_INTERNAL_H" variable (:constant-flag t) nil [1703 1724])
+            ("spdk/stdinc.h" include nil nil [1726 1750])
+            ("rte_vhost.h" include (:system-flag t) nil [1752 1774])
+            ("spdk_internal/log.h" include nil nil [1776 1806])
+            ("spdk/event.h" include nil nil [1807 1830])
+            ("SPDK_CACHE_LINE_SIZE" variable (:constant-flag t) nil [1840 1860])
+            ("VHOST_USER_F_PROTOCOL_FEATURES" variable (:constant-flag t) nil [1929 1959])
+            ("VIRTIO_F_VERSION_1" variable (:constant-flag t) nil [2006 2024])
+            ("VIRTIO_BLK_F_CONFIG_WCE" variable (:constant-flag t) nil [2076 2099])
+            ("SPDK_VHOST_MAX_VQUEUES" variable (:constant-flag t) nil [2119 2141])
+            ("SPDK_VHOST_SCSI_CTRLR_MAX_DEVS" variable (:constant-flag t) nil [2155 2185])
+            ("SPDK_VHOST_IOVS_MAX" variable (:constant-flag t) nil [2197 2216])
+            ("spdk_vhost_dev_type" type
+               (:members 
+                  ( ("SPDK_VHOST_DEV_T_SCSI" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2250 2272])
+                    ("SPDK_VHOST_DEV_T_BLK" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2274 2295]))                  
+                :type "enum")
+                nil [2222 2298])
+            ("spdk_vhost_dev" type
+               (:members 
+                  ( ("mem" variable
+                       (:pointer 1
+                        :type ("rte_vhost_memory" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2325 2354])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2356 2367])
+                    ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2369 2380])
+                    ("vid" variable (:type "int") (reparse-symbol classsubparts) [2383 2391])
+                    ("task_cnt" variable (:type "int") (reparse-symbol classsubparts) [2393 2406])
+                    ("lcore" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2408 2422])
+                    ("cpumask" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2424 2441])
+                    ("type" variable (:type ("spdk_vhost_dev_type" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [2444 2474])
+                    ("num_queues" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2477 2497])
+                    ("negotiated_features" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2499 2528])
+                    ("__attribute" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2587 2637]))                  
+                :type "struct")
+                nil [2300 2640])
+            ("spdk_vhost_dev_backend" type
+               (:members 
+                  ( ("virtio_features" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2676 2701])
+                    ("disabled_features" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2703 2730])
+                    ("ops" variable
+                       (:constant-flag t
+                        :type ("vhost_device_ops" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2732 2766]))                  
+                :type "struct")
+                nil [2643 2769])
+            ("spdk_vhost_dev_mem_register" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2804 2832]))                  
+                :type "void")
+                nil [2771 2833])
+            ("spdk_vhost_dev_mem_unregister" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2869 2897]))                  
+                :type "void")
+                nil [2834 2898])
+            ("spdk_vhost_gpa_to_vva" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2928 2956])
+                    ("addr" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2957 2971]))                  
+                :type "void")
+                nil [2900 2972])
+            ("spdk_vhost_vq_avail_ring_get" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vq" variable
+                       (:pointer 1
+                        :type ("rte_vhost_vring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3012 3039])
+                    ("reqs" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3040 3055])
+                    ("reqs_len" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3066 3084]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [2974 3085])
+            ("spdk_vhost_vq_should_notify" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3119 3147])
+                    ("vq" variable
+                       (:pointer 1
+                        :type ("rte_vhost_vring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3148 3175]))                  
+                :type "bool")
+                nil [3086 3176])
+            ("spdk_vhost_vq_get_desc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("vq" variable
+                       (:pointer 1
+                        :type ("rte_vhost_vring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3220 3247])
+                    ("req_idx" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3248 3265]))                  
+                :type ("vring_desc" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3178 3266])
+            ("spdk_vhost_vq_used_ring_enqueue" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3305 3333])
+                    ("vq" variable
+                       (:pointer 1
+                        :type ("rte_vhost_vring" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3334 3361])
+                    ("id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3371 3383])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3384 3397]))                  
+                :type "void")
+                nil [3268 3398])
+            ("spdk_vhost_vring_desc_has_next" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cur_desc" variable
+                       (:pointer 1
+                        :type ("vring_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3435 3463]))                  
+                :type "bool")
+                nil [3399 3464])
+            ("spdk_vhost_vring_desc_get_next" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("vq_desc" variable
+                       (:pointer 1
+                        :type ("vring_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3515 3542])
+                    ("cur_desc" variable
+                       (:pointer 1
+                        :type ("vring_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3545 3573]))                  
+                :type ("vring_desc" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3465 3574])
+            ("spdk_vhost_vring_desc_is_wr" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("cur_desc" variable
+                       (:pointer 1
+                        :type ("vring_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3608 3636]))                  
+                :type "bool")
+                nil [3575 3637])
+            ("spdk_vhost_vring_desc_to_iov" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3672 3700])
+                    ("iov" variable
+                       (:pointer 1
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3701 3719])
+                    ("iov_index" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3725 3745])
+                    ("desc" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("vring_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3746 3776]))                  
+                :type "int")
+                nil [3639 3777])
+            ("spdk_vhost_dev_find_by_vid" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("vid" variable (:type "int") (reparse-symbol arg-sub-list) [3829 3837]))                  
+                :type ("spdk_vhost_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3779 3838])
+            ("spdk_vhost_dev_construct" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3869 3897])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3898 3915])
+                    ("cpumask" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3916 3933])
+                    ("type" variable (:type ("spdk_vhost_dev_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [3942 3972])
+                    ("backend" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_vhost_dev_backend" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3973 4018]))                  
+                :type "int")
+                nil [3840 4019])
+            ("spdk_vhost_dev_remove" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("vdev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4046 4074]))                  
+                :type "int")
+                nil [4020 4075])
+            ("spdk_vhost_dev_load" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("vid" variable (:type "int") (reparse-symbol arg-sub-list) [4120 4128]))                  
+                :type ("spdk_vhost_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4077 4129])
+            ("spdk_vhost_dev_unload" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4157 4184]))                  
+                :type "void")
+                nil [4130 4185])
+            ("spdk_vhost_timed_event_fn" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4229 4236]))                  
+                :type "void")
+                nil [4195 4237])
+            ("spdk_vhost_timed_event" type
+               (:members 
+                  ( ("cb_fn" variable (:type ("spdk_vhost_timed_event_fn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4334 4366])
+                    ("sem" variable (:type ("sem_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4422 4432])
+                    ("timeout" variable (:type ("timespec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4483 4507])
+                    ("spdk_event" variable
+                       (:pointer 1
+                        :type ("spdk_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4574 4604]))                  
+                :type "struct")
+                nil [4239 4607])
+            ("spdk_vhost_timed_event_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("ev" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_timed_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4642 4676])
+                    ("lcore" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4677 4691])
+                    ("cb_fn" variable (:type ("spdk_vhost_timed_event_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4697 4729])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4730 4740])
+                    ("timeout_sec" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4741 4762]))                  
+                :type "void")
+                nil [4609 4763])
+            ("spdk_vhost_timed_event_send" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lcore" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4798 4812])
+                    ("cn_fn" variable (:type ("spdk_vhost_timed_event_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4813 4845])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4846 4856])
+                    ("timeout_sec" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4862 4883])
+                    ("errmsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4884 4903]))                  
+                :type "void")
+                nil [4765 4904])
+            ("spdk_vhost_timed_event_wait" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("event" variable
+                       (:pointer 1
+                        :type ("spdk_vhost_timed_event" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4938 4975])
+                    ("errmsg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4976 4995]))                  
+                :type "void")
+                nil [4905 4996])
+            ("spdk_vhost_blk_controller_construct" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5038 5043]))                  
+                :type "int")
+                nil [4998 5044]))          
+      :file "vhost_internal.h"
+      :pointmax 5081
+      :fsize 5080
+      :lastmodtime '(22911 56174 336491 475000)
+      :unmatched-syntax '((TYPEDEF 4187 . 4194) (semantic-list 2599 . 2635) (semantic-list 2562 . 2586) (symbol 2553 . 2562) (symbol 2537 . 2552) (STRUCT 2530 . 2536))
+      :lexical-table 
+        '(("SPDK_VHOST_MAX_VQUEUES" . ((number "256" 2142 . 2145)))
+          ("VIRTIO_F_VERSION_1" . ((number "32" 2025 . 2027)))
+          ("VIRTIO_BLK_F_CONFIG_WCE" . ((number "11" 2100 . 2102)))
+          ("SPDK_CACHE_LINE_SIZE" . ((symbol "RTE_CACHE_LINE_SIZE" 1861 . 1880)))
+          ("VHOST_USER_F_PROTOCOL_FEATURES" . ((number "30" 1960 . 1962)))
+          ("SPDK_VHOST_IOVS_MAX" . ((number "128" 2217 . 2220)))
+          ("SPDK_VHOST_INTERNAL_H")
+          ("SPDK_VHOST_SCSI_CTRLR_MAX_DEVS" . ((number "8" 2186 . 2187)))
+          )
+))
+  :file "!root!spdk!lib!vhost!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

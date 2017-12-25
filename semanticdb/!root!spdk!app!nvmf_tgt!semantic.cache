@@ -1,0 +1,191 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("nvmf_tgt.h" include nil nil [1691 1712])
+            ("spdk/conf.h" include nil nil [1714 1736])
+            ("spdk/log.h" include nil nil [1737 1758])
+            ("spdk/bdev.h" include nil nil [1759 1781])
+            ("spdk/nvme.h" include nil nil [1782 1804])
+            ("spdk/nvmf.h" include nil nil [1805 1827])
+            ("spdk/string.h" include nil nil [1828 1852])
+            ("spdk/util.h" include nil nil [1853 1875])
+            ("MAX_LISTEN_ADDRESSES" variable (:constant-flag t) nil [1885 1905])
+            ("MAX_HOSTS" variable (:constant-flag t) nil [1918 1927])
+            ("PORTNUMSTRLEN" variable (:constant-flag t) nil [1940 1953])
+            ("SPDK_NVMF_DEFAULT_SIN_PORT" variable (:constant-flag t) nil [1965 1991])
+            ("ACCEPT_TIMEOUT_US" variable (:constant-flag t) nil [2018 2035])
+            ("spdk_nvmf_probe_ctx" type
+               (:members 
+                  ( ("app_subsystem" variable
+                       (:pointer 1
+                        :type ("nvmf_tgt_subsystem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2085 2126])
+                    ("any" variable (:type "bool") (reparse-symbol classsubparts) [2128 2140])
+                    ("found" variable (:type "bool") (reparse-symbol classsubparts) [2142 2156])
+                    ("trid" variable (:type ("spdk_nvme_transport_id" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2158 2193]))                  
+                :type "struct")
+                nil [2055 2196])
+            ("MAX_STRING_LEN" variable (:constant-flag t) nil [2206 2220])
+            ("SPDK_NVMF_CONFIG_QUEUES_PER_SESSION_DEFAULT" variable (:constant-flag t) nil [2234 2277])
+            ("SPDK_NVMF_CONFIG_QUEUES_PER_SESSION_MIN" variable (:constant-flag t) nil [2288 2327])
+            ("SPDK_NVMF_CONFIG_QUEUES_PER_SESSION_MAX" variable (:constant-flag t) nil [2338 2377])
+            ("SPDK_NVMF_CONFIG_QUEUE_DEPTH_DEFAULT" variable (:constant-flag t) nil [2392 2428])
+            ("SPDK_NVMF_CONFIG_QUEUE_DEPTH_MIN" variable (:constant-flag t) nil [2441 2473])
+            ("SPDK_NVMF_CONFIG_QUEUE_DEPTH_MAX" variable (:constant-flag t) nil [2485 2517])
+            ("SPDK_NVMF_CONFIG_IN_CAPSULE_DATA_SIZE_DEFAULT" variable (:constant-flag t) nil [2532 2577])
+            ("SPDK_NVMF_CONFIG_IN_CAPSULE_DATA_SIZE_MIN" variable (:constant-flag t) nil [2591 2632])
+            ("SPDK_NVMF_CONFIG_IN_CAPSULE_DATA_SIZE_MAX" variable (:constant-flag t) nil [2646 2687])
+            ("SPDK_NVMF_CONFIG_MAX_IO_SIZE_DEFAULT" variable (:constant-flag t) nil [2704 2740])
+            ("SPDK_NVMF_CONFIG_MAX_IO_SIZE_MIN" variable (:constant-flag t) nil [2756 2788])
+            ("SPDK_NVMF_CONFIG_MAX_IO_SIZE_MAX" variable (:constant-flag t) nil [2802 2834])
+            ("g_spdk_nvmf_tgt_conf" variable (:type ("spdk_nvmf_tgt_conf" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [2843 2890])
+            ("g_last_core" variable
+               (:typemodifiers ("static")
+                :default-value "-1"
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [2891 2923])
+            ("spdk_get_numa_node_value" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2961 2978]))                  
+                :type "int")
+                nil [2925 3213])
+            ("spdk_get_ifaddr_numa_node" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("if_addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3252 3272]))                  
+                :type "int")
+                nil [3215 3894])
+            ("spdk_add_nvmf_discovery_subsystem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3941 3946]))                  
+                :type "int")
+                nil [3896 4299])
+            ("spdk_nvmf_parse_nvmf_tgt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4337 4342]))                  
+                :type "int")
+                nil [4301 7015])
+            ("spdk_nvmf_allocate_lcore" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mask" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7053 7067])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7068 7083]))                  
+                :type "int")
+                nil [7017 7293])
+            ("spdk_nvmf_parse_subsystem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("spdk_conf_section" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7332 7361]))                  
+                :type "int")
+                nil [7295 9775])
+            ("spdk_nvmf_parse_subsystems" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9815 9820]))                  
+                :type "int")
+                nil [9777 10114])
+            ("spdk_nvmf_parse_conf" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10141 10146]))                  
+                :type "int")
+                nil [10116 10351])
+            ("spdk_nvmf_construct_subsystem" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10387 10404])
+                    ("lcore" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10405 10419])
+                    ("num_listen_addresses" variable (:type "int") (reparse-symbol arg-sub-list) [10429 10454])
+                    ("addresses" variable
+                       (:pointer 1
+                        :type ("rpc_listen_address" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10455 10492])
+                    ("num_hosts" variable (:type "int") (reparse-symbol arg-sub-list) [10502 10516])
+                    ("hosts" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10517 10531])
+                    ("sn" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10541 10556])
+                    ("num_devs" variable (:type "int") (reparse-symbol arg-sub-list) [10557 10570])
+                    ("dev_list" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10571 10588]))                  
+                :type "int")
+                nil [10353 14073]))          
+      :file "conf.c"
+      :pointmax 14074
+      :fsize 14073
+      :lastmodtime '(22914 62598 396370 755000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_NVMF_CONFIG_IN_CAPSULE_DATA_SIZE_MIN" . ((number "4096" 2633 . 2637)))
+          ("SPDK_NVMF_CONFIG_QUEUES_PER_SESSION_DEFAULT" . ((number "4" 2278 . 2279)))
+          ("SPDK_NVMF_CONFIG_QUEUES_PER_SESSION_MAX" . ((number "1024" 2378 . 2382)))
+          ("SPDK_NVMF_CONFIG_MAX_IO_SIZE_MAX" . ((number "131072" 2835 . 2841)))
+          ("SPDK_NVMF_CONFIG_QUEUES_PER_SESSION_MIN" . ((number "2" 2328 . 2329)))
+          ("SPDK_NVMF_CONFIG_QUEUE_DEPTH_DEFAULT" . ((number "128" 2429 . 2432)))
+          ("SPDK_NVMF_CONFIG_MAX_IO_SIZE_MIN" . ((number "4096" 2789 . 2793)))
+          ("PORTNUMSTRLEN" . ((number "32" 1954 . 1956)))
+          ("SPDK_NVMF_DEFAULT_SIN_PORT" . ((semantic-list "((uint16_t)4420)" 1992 . 2008)))
+          ("MAX_LISTEN_ADDRESSES" . ((number "255" 1906 . 1909)))
+          ("ACCEPT_TIMEOUT_US" . ((number "10000" 2037 . 2042)))
+          ("SPDK_NVMF_CONFIG_MAX_IO_SIZE_DEFAULT" . ((number "131072" 2741 . 2747)))
+          ("MAX_HOSTS" . ((number "255" 1928 . 1931)))
+          ("SPDK_NVMF_CONFIG_QUEUE_DEPTH_MAX" . ((number "1024" 2518 . 2522)))
+          ("SPDK_NVMF_CONFIG_QUEUE_DEPTH_MIN" . ((number "16" 2474 . 2476)))
+          ("SPDK_NVMF_CONFIG_IN_CAPSULE_DATA_SIZE_DEFAULT" . ((number "4096" 2578 . 2582)))
+          ("MAX_STRING_LEN" . ((number "255" 2221 . 2224)))
+          ("SPDK_NVMF_CONFIG_IN_CAPSULE_DATA_SIZE_MAX" . ((number "131072" 2688 . 2694)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "nvmf_tgt.h"
+      :fsize 2948
+      :lastmodtime '(22914 62598 396370 755000)))
+  :file "!root!spdk!app!nvmf_tgt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

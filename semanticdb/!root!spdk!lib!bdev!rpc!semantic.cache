@@ -1,0 +1,91 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/log.h" include nil nil [1665 1686])
+            ("spdk/rpc.h" include nil nil [1687 1708])
+            ("spdk_internal/bdev.h" include nil nil [1710 1741])
+            ("spdk_rpc_get_bdevs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("request" variable
+                       (:pointer 1
+                        :type ("spdk_jsonrpc_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1774 1811])
+                    ("params" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_json_val" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1817 1852]))                  
+                :type "void")
+                nil [1743 3067])
+            ("rpc_delete_bdev" type
+               (:members 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3147 3158]))                  
+                :type "struct")
+                nil [3121 3161])
+            ("free_rpc_delete_bdev" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("rpc_delete_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3196 3222]))                  
+                :type "void")
+                nil [3163 3242])
+            ("rpc_delete_bdev_decoders" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{\"name\", offsetof(struct rpc_delete_bdev, name), spdk_json_decode_string},
+}"
+                :type ("spdk_json_object_decoder" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3244 3398])
+            ("spdk_rpc_delete_bdev" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("request" variable
+                       (:pointer 1
+                        :type ("spdk_jsonrpc_request" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3433 3470])
+                    ("params" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_json_val" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3478 3513]))                  
+                :type "void")
+                nil [3400 4411]))          
+      :file "bdev_rpc.c"
+      :pointmax 4467
+      :fsize 4466
+      :lastmodtime '(22910 40989 214425 792000)
+      :unmatched-syntax '((semantic-list 4429 . 4466) (symbol 4412 . 4429) (string 4430 . 4443) (semantic-list 3085 . 3118) (symbol 3068 . 3085) (string 3086 . 3097))))
+  :file "!root!spdk!lib!bdev!rpc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

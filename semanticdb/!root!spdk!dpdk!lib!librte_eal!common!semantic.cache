@@ -1,0 +1,805 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [3319 3338])
+            ("inttypes.h" include (:system-flag t) nil [3339 3360])
+            ("stdint.h" include (:system-flag t) nil [3361 3380])
+            ("stdlib.h" include (:system-flag t) nil [3381 3400])
+            ("stdio.h" include (:system-flag t) nil [3401 3419])
+            ("sys/queue.h" include (:system-flag t) nil [3420 3442])
+            ("sys/mman.h" include (:system-flag t) nil [3443 3464])
+            ("rte_errno.h" include (:system-flag t) nil [3466 3488])
+            ("rte_interrupts.h" include (:system-flag t) nil [3489 3516])
+            ("rte_log.h" include (:system-flag t) nil [3517 3537])
+            ("rte_bus.h" include (:system-flag t) nil [3538 3558])
+            ("rte_pci.h" include (:system-flag t) nil [3559 3579])
+            ("rte_per_lcore.h" include (:system-flag t) nil [3580 3606])
+            ("rte_memory.h" include (:system-flag t) nil [3607 3630])
+            ("rte_memzone.h" include (:system-flag t) nil [3631 3655])
+            ("rte_eal.h" include (:system-flag t) nil [3656 3676])
+            ("rte_string_fns.h" include (:system-flag t) nil [3677 3704])
+            ("rte_common.h" include (:system-flag t) nil [3705 3728])
+            ("rte_devargs.h" include (:system-flag t) nil [3729 3753])
+            ("eal_private.h" include nil nil [3755 3779])
+            ("rte_pci_bus" variable
+               (:typemodifiers ("extern")
+                :type ("rte_pci_bus" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3781 3819])
+            ("SYSFS_PCI_DEVICES" variable (:constant-flag t) nil [3829 3846])
+            ("pci_get_sysfs_path" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3902 3907]))                  
+                :type "char")
+                nil [3871 4037])
+            ("pci_devargs_lookup" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4085 4112]))                  
+                :type ("rte_devargs" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4039 4411])
+            ("pci_map_resource" function
+               (:pointer 1
+                :arguments 
+                  ( ("requested_addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4481 4502])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [4503 4510])
+                    ("offset" variable (:type ("off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4511 4524])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4525 4537])
+                    ("additional_flags" variable (:type "int") (reparse-symbol arg-sub-list) [4541 4562]))                  
+                :type "void")
+                nil [4457 5040])
+            ("pci_unmap_resource" function
+               (:arguments 
+                  ( ("requested_addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5100 5121])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5122 5134]))                  
+                :type "void")
+                nil [5076 5477])
+            ("rte_pci_match" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pci_drv" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5764 5801])
+                    ("pci_dev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5809 5846]))                  
+                :type "int")
+                nil [5739 6668])
+            ("rte_pci_probe_one_driver" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dr" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6787 6813])
+                    ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6818 6845]))                  
+                :type "int")
+                nil [6751 8170])
+            ("rte_pci_detach_dev" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8284 8311]))                  
+                :type "int")
+                nil [8254 8991])
+            ("pci_probe_all_drivers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9226 9253]))                  
+                :type "int")
+                nil [9193 9667])
+            ("rte_pci_probe_one" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9806 9838]))                  
+                :type "int")
+                nil [9784 10455])
+            ("rte_pci_detach" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_pci_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10530 10562]))                  
+                :type "int")
+                nil [10511 11184])
+            ("rte_pci_probe" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11377 11382]))                  
+                :type "int")
+                nil [11359 12272])
+            ("pci_dump_one_device" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12327 12335])
+                    ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12336 12363]))                  
+                :type "int")
+                nil [12296 12783])
+            ("rte_pci_dump" function
+               (:arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12833 12841]))                  
+                :type "void")
+                nil [12815 12949])
+            ("rte_pci_register" function
+               (:arguments 
+                  ( ("driver" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12997 13027]))                  
+                :type "void")
+                nil [12975 13120])
+            ("rte_pci_unregister" function
+               (:arguments 
+                  ( ("driver" variable
+                       (:pointer 1
+                        :type ("rte_pci_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13172 13202]))                  
+                :type "void")
+                nil [13148 13282])
+            ("rte_pci_add_device" function
+               (:arguments 
+                  ( ("pci_dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13338 13369]))                  
+                :type "void")
+                nil [13314 13434])
+            ("rte_pci_insert_device" function
+               (:arguments 
+                  ( ("exist_pci_dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13523 13560])
+                    ("new_pci_dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13569 13604]))                  
+                :type "void")
+                nil [13496 13664])
+            ("rte_pci_remove_device" function
+               (:arguments 
+                  ( ("pci_dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13728 13759]))                  
+                :type "void")
+                nil [13701 13819])
+            ("rte_pci_bus" variable
+               (:default-value "{
+	.bus = {
+		.scan = rte_pci_scan,
+		.probe = rte_pci_probe,
+	},
+	.device_list = TAILQ_HEAD_INITIALIZER(rte_pci_bus.device_list),
+	.driver_list = TAILQ_HEAD_INITIALIZER(rte_pci_bus.driver_list),
+}"
+                :type ("rte_pci_bus" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [13821 14052])
+            ("RTE_REGISTER_BUS" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("PCI_BUS_NAME" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14071 14084])
+                    ("" variable (:type ("rte_pci_bus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14085 14097])
+                    ("" variable (:type ("bus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14097 14101]))                  
+                :type "int")
+                nil [14054 14102]))          
+      :file "eal_common_pci.c"
+      :pointmax 14103
+      :fsize 14102
+      :lastmodtime '(22914 63283 593385 638000)
+      :unmatched-syntax '((punctuation 14096 . 14097))
+      :lexical-table 
+        '(("SYSFS_PCI_DEVICES" . ((string "\"/sys/bus/pci/devices\"" 3847 . 3869)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "eal_private.h"
+      :fsize 8690
+      :lastmodtime '(22914 63283 594385 630000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1695 1714])
+            ("stdio.h" include (:system-flag t) nil [1715 1733])
+            ("stdint.h" include (:system-flag t) nil [1734 1753])
+            ("stdarg.h" include (:system-flag t) nil [1754 1773])
+            ("inttypes.h" include (:system-flag t) nil [1774 1795])
+            ("string.h" include (:system-flag t) nil [1796 1815])
+            ("errno.h" include (:system-flag t) nil [1816 1834])
+            ("sys/queue.h" include (:system-flag t) nil [1835 1857])
+            ("rte_log.h" include (:system-flag t) nil [1859 1879])
+            ("rte_memory.h" include (:system-flag t) nil [1880 1903])
+            ("rte_memzone.h" include (:system-flag t) nil [1904 1928])
+            ("rte_eal.h" include (:system-flag t) nil [1929 1949])
+            ("rte_eal_memconfig.h" include (:system-flag t) nil [1950 1980])
+            ("rte_per_lcore.h" include (:system-flag t) nil [1981 2007])
+            ("rte_errno.h" include (:system-flag t) nil [2008 2030])
+            ("rte_string_fns.h" include (:system-flag t) nil [2031 2058])
+            ("rte_common.h" include (:system-flag t) nil [2059 2082])
+            ("malloc_heap.h" include nil nil [2084 2108])
+            ("malloc_elem.h" include nil nil [2109 2133])
+            ("eal_private.h" include nil nil [2134 2158])
+            ("memzone_lookup_thread_unsafe" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2230 2247]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2160 2745])
+            ("get_next_free_memzone" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2804 2809]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2747 3079])
+            ("find_heap_max_free_elem" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3327 3334])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3335 3350]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [3289 3912])
+            ("memzone_reserve_aligned_thread_unsafe" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3986 4003])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4004 4015])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [4018 4032])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4033 4048])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4049 4064])
+                    ("bound" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4065 4080]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3914 7356])
+            ("rte_memzone_reserve_thread_safe" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7424 7441])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7442 7453])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [7458 7472])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7473 7488])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7489 7504])
+                    ("bound" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7509 7524]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7358 7874])
+            ("rte_memzone_reserve_bounded" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8095 8112])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8113 8124])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [8125 8139])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8147 8162])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8163 8178])
+                    ("bound" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8179 8194]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [8040 8294])
+            ("rte_memzone_reserve_aligned" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8499 8516])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8517 8528])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [8529 8543])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8551 8566])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8567 8582]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [8444 8678])
+            ("rte_memzone_reserve" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8846 8863])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8864 8875])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [8876 8890])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8897 8912]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [8799 9022])
+            ("rte_memzone_free" function
+               (:arguments 
+                  ( ("mz" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_memzone" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9045 9074]))                  
+                :type "int")
+                nil [9024 9730])
+            ("rte_memzone_lookup" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9840 9857]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9794 10128])
+            ("rte_memzone_dump" function
+               (:arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10200 10208]))                  
+                :type "void")
+                nil [10178 10869])
+            ("rte_eal_memzone_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10933 10938]))                  
+                :type "int")
+                nil [10908 11589])
+            ("rte_memzone_walk" function
+               (:arguments 
+                  ( ("func" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("rte_memzone" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11663 11690])
+                            ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [11691 11698]))                          
+                        :type "void")
+                        nil nil)
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11708 11718]))                  
+                :type "void")
+                nil [11628 12005]))          
+      :file "eal_common_memzone.c"
+      :pointmax 12006
+      :fsize 12005
+      :lastmodtime '(22914 63283 592385 646000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "malloc_heap.h"
+      :fsize 2339
+      :lastmodtime '(22914 63283 600385 583000))
+    (semanticdb-table "semanticdb-table"
+      :file "malloc_elem.h"
+      :fsize 6096
+      :lastmodtime '(22914 63283 600385 583000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdint.h" include (:system-flag t) nil [1695 1714])
+            ("stddef.h" include (:system-flag t) nil [1715 1734])
+            ("stdio.h" include (:system-flag t) nil [1735 1753])
+            ("string.h" include (:system-flag t) nil [1754 1773])
+            ("sys/queue.h" include (:system-flag t) nil [1774 1796])
+            ("rte_memcpy.h" include (:system-flag t) nil [1798 1821])
+            ("rte_memory.h" include (:system-flag t) nil [1822 1845])
+            ("rte_eal.h" include (:system-flag t) nil [1846 1866])
+            ("rte_eal_memconfig.h" include (:system-flag t) nil [1867 1897])
+            ("rte_branch_prediction.h" include (:system-flag t) nil [1898 1932])
+            ("rte_debug.h" include (:system-flag t) nil [1933 1955])
+            ("rte_launch.h" include (:system-flag t) nil [1956 1979])
+            ("rte_per_lcore.h" include (:system-flag t) nil [1980 2006])
+            ("rte_lcore.h" include (:system-flag t) nil [2007 2029])
+            ("rte_common.h" include (:system-flag t) nil [2030 2053])
+            ("rte_spinlock.h" include (:system-flag t) nil [2054 2079])
+            ("rte_malloc.h" include (:system-flag t) nil [2081 2104])
+            ("malloc_elem.h" include nil nil [2105 2129])
+            ("malloc_heap.h" include nil nil [2130 2154])
+            ("rte_free" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2212 2223]))                  
+                :type "void")
+                nil [2198 2356])
+            ("rte_malloc_socket" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2428 2445])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2446 2458])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2459 2474])
+                    ("socket_arg" variable (:type "int") (reparse-symbol arg-sub-list) [2475 2490]))                  
+                :type "void")
+                nil [2403 3423])
+            ("rte_malloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3486 3503])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3504 3516])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3517 3532]))                  
+                :type "void")
+                nil [3468 3597])
+            ("rte_zmalloc_socket" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3677 3694])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3695 3707])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3708 3723])
+                    ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [3724 3735]))                  
+                :type "void")
+                nil [3651 3793])
+            ("rte_zmalloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3864 3881])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3882 3894])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3895 3910]))                  
+                :type "void")
+                nil [3845 3976])
+            ("rte_calloc_socket" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4055 4072])
+                    ("num" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4073 4084])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4085 4097])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4098 4113])
+                    ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [4114 4125]))                  
+                :type "void")
+                nil [4030 4190])
+            ("rte_calloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4260 4277])
+                    ("num" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4278 4289])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4290 4302])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4303 4318]))                  
+                :type "void")
+                nil [4242 4368])
+            ("rte_realloc" function
+               (:pointer 1
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4424 4434])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4435 4447])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4448 4463]))                  
+                :type "void")
+                nil [4405 5231])
+            ("rte_malloc_validate" function
+               (:arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5257 5273])
+                    ("size" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5274 5287]))                  
+                :type "int")
+                nil [5233 5489])
+            ("rte_malloc_get_socket_stats" function
+               (:arguments 
+                  ( ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [5584 5595])
+                    ("socket_stats" variable
+                       (:pointer 1
+                        :type ("rte_malloc_socket_stats" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5598 5643]))                  
+                :type "int")
+                nil [5552 5857])
+            ("rte_malloc_dump_stats" function
+               (:arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5970 5978])
+                    ("" variable
+                       (:constant-flag t
+                        :type ("__rte_unused" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5979 6002])
+                    ("type" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5998 6009]))                  
+                :type "void")
+                nil [5943 6705])
+            ("rte_malloc_set_limit" function
+               (:arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("__rte_unused" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6805 6828])
+                    ("type" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6824 6835])
+                    ("size_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6838 6861])
+                    ("" variable (:type ("max" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6858 6862]))                  
+                :type "int")
+                nil [6780 6877])
+            ("rte_malloc_virt2phy" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6998 7015]))                  
+                :type ("phys_addr_t" type (:type "class") nil nil))
+                nil [6966 7190]))          
+      :file "rte_malloc.c"
+      :pointmax 7191
+      :fsize 7190
+      :lastmodtime '(22914 63283 600385 583000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("fcntl.h" include (:system-flag t) nil [1695 1713])
+            ("string.h" include (:system-flag t) nil [1714 1733])
+            ("unistd.h" include (:system-flag t) nil [1734 1753])
+            ("sys/types.h" include (:system-flag t) nil [1754 1776])
+            ("sys/stat.h" include (:system-flag t) nil [1777 1798])
+            ("sys/mman.h" include (:system-flag t) nil [1799 1820])
+            ("rte_eal.h" include (:system-flag t) nil [1822 1842])
+            ("rte_tailq.h" include (:system-flag t) nil [1843 1865])
+            ("rte_log.h" include (:system-flag t) nil [1866 1886])
+            ("rte_malloc.h" include (:system-flag t) nil [1887 1910])
+            ("eal_private.h" include nil nil [1912 1936])
+            ("rte_uio_tailq" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.name = \"UIO_RESOURCE_LIST\",
+}"
+                :type ("rte_tailq_elem" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1938 2017])
+            ("pci_uio_map_secondary" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2086 2113]))                  
+                :type "int")
+                nil [2053 3534])
+            ("pci_uio_map_resource" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3622 3649]))                  
+                :type "int")
+                nil [3597 4778])
+            ("pci_uio_unmap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("uio_res" variable
+                       (:pointer 1
+                        :type ("mapped_pci_resource" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4806 4842]))                  
+                :type "void")
+                nil [4780 5100])
+            ("pci_uio_find_resource" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5160 5187]))                  
+                :type ("mapped_pci_resource" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5102 5578])
+            ("pci_uio_unmap_resource" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_pci_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5671 5698]))                  
+                :type "void")
+                nil [5643 6516]))          
+      :file "eal_common_pci_uio.c"
+      :pointmax 6517
+      :fsize 6516
+      :lastmodtime '(22914 63283 593385 638000)
+      :unmatched-syntax '((semantic-list 2036 . 2051) (symbol 2018 . 2036))))
+  :file "!root!spdk!dpdk!lib!librte_eal!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

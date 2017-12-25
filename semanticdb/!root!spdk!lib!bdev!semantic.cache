@@ -1,0 +1,1361 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1731 1755])
+            ("spdk/bdev.h" include nil nil [1757 1779])
+            ("spdk/env.h" include nil nil [1781 1802])
+            ("spdk/io_channel.h" include nil nil [1803 1831])
+            ("spdk/likely.h" include nil nil [1832 1856])
+            ("spdk/queue.h" include nil nil [1857 1880])
+            ("spdk/nvme_spec.h" include nil nil [1881 1908])
+            ("spdk/scsi_spec.h" include nil nil [1909 1936])
+            ("spdk_internal/bdev.h" include nil nil [1938 1969])
+            ("spdk_internal/log.h" include nil nil [1970 2000])
+            ("spdk/string.h" include nil nil [2001 2025])
+            ("SPDK_BDEV_IO_POOL_SIZE" variable (:constant-flag t) nil [2173 2195])
+            ("BUF_SMALL_POOL_SIZE" variable (:constant-flag t) nil [2216 2235])
+            ("BUF_LARGE_POOL_SIZE" variable (:constant-flag t) nil [2249 2268])
+            ("need_buf_tailq_t" variable (:type "int") nil [2310 2327])
+            ("spdk_bdev_mgr" type
+               (:members 
+                  ( ("bdev_io_pool" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2353 2387])
+                    ("buf_small_pool" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2390 2426])
+                    ("buf_large_pool" variable
+                       (:pointer 1
+                        :type ("spdk_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2428 2464])
+                    ("bdev_modules" variable (:type "int") (reparse-symbol classsubparts) [2501 2514])
+                    ("bdevs" variable (:type "int") (reparse-symbol classsubparts) [2541 2547])
+                    ("start_poller_fn" variable (:type ("spdk_bdev_poller_start_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2550 2592])
+                    ("stop_poller_fn" variable (:type ("spdk_bdev_poller_stop_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2594 2634])
+                    ("init_complete" variable (:type "bool") (reparse-symbol classsubparts) [2637 2656])
+                    ("module_init_complete" variable (:type "bool") (reparse-symbol classsubparts) [2658 2684]))                  
+                :type "struct")
+                nil [2329 2743])
+            ("g_bdev_mgr" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.bdev_modules = TAILQ_HEAD_INITIALIZER(g_bdev_mgr.bdev_modules),
+	.bdevs = TAILQ_HEAD_INITIALIZER(g_bdev_mgr.bdevs),
+	.start_poller_fn = NULL,
+	.stop_poller_fn = NULL,
+	.init_complete = false,
+	.module_init_complete = false,
+}"
+                :type ("spdk_bdev_mgr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2745 3016])
+            ("g_cb_fn" variable
+               (:typemodifiers ("static")
+                :default-value "NULL"
+                :type ("spdk_bdev_init_cb" type (:type "class") nil nil))
+                nil [3018 3058])
+            ("g_cb_arg" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type "void")
+                nil [3059 3090])
+            ("spdk_bdev_mgmt_channel" type
+               (:members 
+                  ( ("need_buf_small" variable (:type ("need_buf_tailq_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3126 3158])
+                    ("need_buf_large" variable (:type ("need_buf_tailq_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3160 3192]))                  
+                :type "struct")
+                nil [3093 3195])
+            ("spdk_bdev_desc" type
+               (:members 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3222 3246])
+                    ("remove_cb" variable (:type ("spdk_bdev_remove_cb_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3248 3281])
+                    ("remove_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [3283 3303])
+                    ("write" variable (:type "bool") (reparse-symbol classsubparts) [3305 3319])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [3349 3354]))                  
+                :type "struct")
+                nil [3197 3357])
+            ("spdk_bdev_channel" type
+               (:members 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3387 3410])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3458 3490])
+                    ("mgmt_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3529 3566])
+                    ("stat" variable (:type ("spdk_bdev_io_stat" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3569 3599])
+                    ("io_outstanding" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3751 3776]))                  
+                :type "struct")
+                nil [3359 3890])
+            ("spdk_bdev_first" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3927 3932]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3892 4115])
+            ("spdk_bdev_next" function
+               (:pointer 1
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4151 4174]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4117 4351])
+            ("_bdev_next_leaf" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4395 4418]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4353 4565])
+            ("spdk_bdev_first_leaf" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4607 4612]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4567 4813])
+            ("spdk_bdev_next_leaf" function
+               (:pointer 1
+                :arguments 
+                  ( ("prev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4854 4877]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4815 5072])
+            ("spdk_bdev_get_by_name" function
+               (:pointer 1
+                :arguments 
+                  ( ("bdev_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5115 5137]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5074 5324])
+            ("spdk_bdev_io_set_buf" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5359 5388])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5389 5399]))                  
+                :type "void")
+                nil [5326 5724])
+            ("spdk_bdev_io_put_buf" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5759 5788]))                  
+                :type "void")
+                nil [5726 6457])
+            ("spdk_bdev_io_get_buf" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6485 6514])
+                    ("cb" variable (:type ("spdk_bdev_io_get_buf_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6515 6542]))                  
+                :type "void")
+                nil [6459 7321])
+            ("spdk_bdev_module_get_max_ctx_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [7368 7373]))                  
+                :type "int")
+                nil [7323 7696])
+            ("spdk_bdev_config_text" function
+               (:arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7725 7734]))                  
+                :type "void")
+                nil [7698 7918])
+            ("spdk_bdev_mgmt_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7961 7977])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7978 7992]))                  
+                :type "int")
+                nil [7920 8123])
+            ("spdk_bdev_mgmt_channel_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8168 8184])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8185 8199]))                  
+                :type "void")
+                nil [8125 8405])
+            ("spdk_bdev_init_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rc" variable (:type "int") (reparse-symbol arg-sub-list) [8443 8450]))                  
+                :type "void")
+                nil [8407 8607])
+            ("spdk_bdev_module_init_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rc" variable (:type "int") (reparse-symbol arg-sub-list) [8652 8659]))                  
+                :type "void")
+                nil [8609 9115])
+            ("spdk_bdev_modules_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9151 9156]))                  
+                :type "int")
+                nil [9117 9345])
+            ("spdk_bdev_poller_start" function
+               (:arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_bdev_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9375 9409])
+                    ("fn" variable (:type ("spdk_bdev_poller_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9419 9442])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9452 9462])
+                    ("lcore" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9472 9487])
+                    ("period_microseconds" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9497 9526]))                  
+                :type "void")
+                nil [9347 9605])
+            ("spdk_bdev_poller_stop" function
+               (:arguments 
+                  ( ("ppoller" variable
+                       (:pointer 2
+                        :type ("spdk_bdev_poller" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9634 9668]))                  
+                :type "void")
+                nil [9607 9709])
+            ("spdk_bdev_initialize" function
+               (:arguments 
+                  ( ("cb_fn" variable (:type ("spdk_bdev_init_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9737 9761])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9762 9775])
+                    ("start_poller_fn" variable (:type ("spdk_bdev_poller_start_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9783 9825])
+                    ("stop_poller_fn" variable (:type ("spdk_bdev_poller_stop_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9833 9873]))                  
+                :type "void")
+                nil [9711 11713])
+            ("spdk_bdev_finish" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11736 11741]))                  
+                :type "int")
+                nil [11715 12847])
+            ("spdk_bdev_get_io" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12888 12893]))                  
+                :type ("spdk_bdev_io" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [12849 13119])
+            ("spdk_bdev_put_io" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13150 13179]))                  
+                :type "void")
+                nil [13121 13341])
+            ("__submit_request" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13372 13395])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13396 13425]))                  
+                :type "void")
+                nil [13343 13697])
+            ("spdk_bdev_io_submit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13730 13759]))                  
+                :type "int")
+                nil [13699 13850])
+            ("spdk_bdev_io_resubmit" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13879 13908])
+                    ("new_bdev_desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13909 13946]))                  
+                :type "void")
+                nil [13852 14500])
+            ("spdk_bdev_io_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14532 14561])
+                    ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14566 14589])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14590 14603])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14608 14638]))                  
+                :type "void")
+                nil [14502 14833])
+            ("spdk_bdev_io_type_supported" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14868 14891])
+                    ("io_type" variable (:type ("spdk_bdev_io_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [14892 14923]))                  
+                :type "bool")
+                nil [14835 14991])
+            ("spdk_bdev_dump_config_json" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15024 15047])
+                    ("w" variable
+                       (:pointer 1
+                        :type ("spdk_json_write_ctx" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15048 15078]))                  
+                :type "int")
+                nil [14993 15196])
+            ("spdk_bdev_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15234 15250])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15251 15265]))                  
+                :type "int")
+                nil [15198 15894])
+            ("_spdk_bdev_abort_io" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("need_buf_tailq_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15928 15952])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15953 15982]))                  
+                :type "void")
+                nil [15896 16217])
+            ("spdk_bdev_channel_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16257 16273])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16274 16288]))                  
+                :type "void")
+                nil [16219 16664])
+            ("spdk_bdev_get_io_channel" function
+               (:pointer 1
+                :arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16716 16744]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [16666 16789])
+            ("spdk_bdev_get_name" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16823 16852]))                  
+                :type "char")
+                nil [16791 16876])
+            ("spdk_bdev_get_product_name" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16918 16947]))                  
+                :type "char")
+                nil [16878 16979])
+            ("spdk_bdev_get_block_size" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17015 17044]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [16981 17072])
+            ("spdk_bdev_get_num_blocks" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17108 17137]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [17074 17165])
+            ("spdk_bdev_get_buf_align" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17198 17227]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [17167 17359])
+            ("spdk_bdev_has_write_cache" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17392 17421]))                  
+                :type "bool")
+                nil [17361 17452])
+            ("spdk_bdev_io_valid" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17485 17508])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17509 17525])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17526 17542]))                  
+                :type "bool")
+                nil [17454 18149])
+            ("spdk_bdev_read" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18170 18198])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18199 18226])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18235 18245])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18246 18262])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18263 18279])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18288 18318])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18319 18332]))                  
+                :type "int")
+                nil [18151 19129])
+            ("spdk_bdev_readv" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19151 19179])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19180 19207])
+                    ("iov" variable
+                       (:pointer 1
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19210 19228])
+                    ("iovcnt" variable (:type "int") (reparse-symbol arg-sub-list) [19229 19240])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19243 19259])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19260 19276])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19279 19309])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19310 19323]))                  
+                :type "int")
+                nil [19131 20032])
+            ("spdk_bdev_write" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20054 20082])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20083 20110])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20113 20123])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20124 20140])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20141 20157])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20160 20190])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20191 20204]))                  
+                :type "int")
+                nil [20034 21047])
+            ("spdk_bdev_writev" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21070 21098])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21099 21126])
+                    ("iov" variable
+                       (:pointer 1
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21130 21148])
+                    ("iovcnt" variable (:type "int") (reparse-symbol arg-sub-list) [21149 21160])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21164 21180])
+                    ("len" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21181 21194])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21198 21228])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21229 21242]))                  
+                :type "int")
+                nil [21049 21989])
+            ("spdk_bdev_write_zeroes" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22018 22046])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22047 22074])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22084 22100])
+                    ("len" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22101 22114])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22124 22154])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22155 22168]))                  
+                :type "int")
+                nil [21991 22822])
+            ("spdk_bdev_unmap" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22844 22872])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22873 22900])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22903 22919])
+                    ("nbytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22920 22936])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22939 22969])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22970 22983]))                  
+                :type "int")
+                nil [22824 23752])
+            ("spdk_bdev_flush" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23774 23802])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23803 23830])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23833 23849])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23850 23866])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23869 23899])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [23900 23913]))                  
+                :type "int")
+                nil [23754 24531])
+            ("_spdk_bdev_reset_dev" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24566 24582])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24583 24593]))                  
+                :type "void")
+                nil [24533 24822])
+            ("_spdk_bdev_reset_abort_channel" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24867 24883])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24884 24911])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24922 24932]))                  
+                :type "void")
+                nil [24824 25248])
+            ("_spdk_bdev_start_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [25285 25295]))                  
+                :type "void")
+                nil [25250 25448])
+            ("_spdk_bdev_start_next_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25490 25513]))                  
+                :type "void")
+                nil [25450 26042])
+            ("spdk_bdev_reset" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26064 26092])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26093 26120])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26123 26153])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [26154 26167]))                  
+                :type "int")
+                nil [26044 26735])
+            ("spdk_bdev_get_io_stat" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26764 26787])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26788 26815])
+                    ("stat" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io_stat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26824 26855]))                  
+                :type "void")
+                nil [26737 27175])
+            ("spdk_bdev_nvme_admin_passthru" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27211 27239])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27240 27267])
+                    ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cmd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27277 27309])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27310 27320])
+                    ("nbytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27321 27335])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27345 27375])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27376 27389]))                  
+                :type "int")
+                nil [27177 28076])
+            ("spdk_bdev_nvme_io_passthru" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28109 28137])
+                    ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28138 28165])
+                    ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_cmd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28172 28204])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28205 28215])
+                    ("nbytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28216 28230])
+                    ("cb" variable (:type ("spdk_bdev_io_completion_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28237 28267])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [28268 28281]))                  
+                :type "int")
+                nil [28078 29196])
+            ("spdk_bdev_free_io" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29220 29249]))                  
+                :type "int")
+                nil [29198 29500])
+            ("_spdk_bdev_io_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29537 29547]))                  
+                :type "void")
+                nil [29502 29711])
+            ("spdk_bdev_io_complete" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29740 29769])
+                    ("status" variable (:type ("spdk_bdev_io_status" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [29770 29802]))                  
+                :type "void")
+                nil [29713 31976])
+            ("spdk_bdev_io_complete_scsi_status" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32017 32046])
+                    ("sc" variable (:type ("spdk_scsi_status" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [32047 32072])
+                    ("sk" variable (:type ("spdk_scsi_sense" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [32079 32103])
+                    ("asc" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32104 32116])
+                    ("ascq" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32117 32130]))                  
+                :type "void")
+                nil [31978 32465])
+            ("spdk_bdev_io_get_scsi_status" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32501 32536])
+                    ("sc" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [32545 32553])
+                    ("sk" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [32554 32562])
+                    ("asc" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [32563 32572])
+                    ("ascq" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [32573 32583]))                  
+                :type "void")
+                nil [32467 33383])
+            ("spdk_bdev_io_complete_nvme_status" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33424 33453])
+                    ("sct" variable (:type "int") (reparse-symbol arg-sub-list) [33454 33462])
+                    ("sc" variable (:type "int") (reparse-symbol arg-sub-list) [33463 33470]))                  
+                :type "void")
+                nil [33385 33770])
+            ("spdk_bdev_io_get_nvme_status" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33806 33841])
+                    ("sct" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [33842 33851])
+                    ("sc" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [33852 33860]))                  
+                :type "void")
+                nil [33772 34245])
+            ("_spdk_bdev_register" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34279 34302]))                  
+                :type "void")
+                nil [34247 35137])
+            ("spdk_bdev_register" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35163 35186]))                  
+                :type "void")
+                nil [35139 35218])
+            ("spdk_vbdev_register" function
+               (:arguments 
+                  ( ("vbdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35245 35269])
+                    ("base_bdevs" variable
+                       (:pointer 2
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35270 35300])
+                    ("base_bdev_count" variable (:type "int") (reparse-symbol arg-sub-list) [35301 35321]))                  
+                :type "void")
+                nil [35220 35576])
+            ("spdk_bdev_unregister" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35604 35627]))                  
+                :type "void")
+                nil [35578 36430])
+            ("spdk_vbdev_unregister" function
+               (:arguments 
+                  ( ("vbdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36459 36483]))                  
+                :type "void")
+                nil [36432 36713])
+            ("spdk_bdev_module_examine_done" function
+               (:arguments 
+                  ( ("module" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_module_if" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36750 36785]))                  
+                :type "void")
+                nil [36715 37493])
+            ("spdk_bdev_open" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [37514 37537])
+                    ("write" variable (:type "bool") (reparse-symbol arg-sub-list) [37538 37549])
+                    ("remove_cb" variable (:type ("spdk_bdev_remove_cb_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37550 37582])
+                    ("remove_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [37591 37608])
+                    ("_desc" variable
+                       (:pointer 2
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [37609 37639]))                  
+                :type "int")
+                nil [37495 38286])
+            ("spdk_bdev_close" function
+               (:arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38309 38337]))                  
+                :type "void")
+                nil [38288 38819])
+            ("spdk_bdev_module_claim_bdev" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38853 38876])
+                    ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38877 38905])
+                    ("module" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_module_if" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [38913 38948]))                  
+                :type "int")
+                nil [38821 39401])
+            ("spdk_bdev_module_release_bdev" function
+               (:arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39438 39461]))                  
+                :type "void")
+                nil [39403 39530])
+            ("spdk_bdev_desc_get_bdev" function
+               (:pointer 1
+                :arguments 
+                  ( ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39575 39603]))                  
+                :type ("spdk_bdev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [39532 39627])
+            ("spdk_bdev_io_get_iovec" function
+               (:arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39657 39686])
+                    ("iovp" variable
+                       (:pointer 2
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39687 39707])
+                    ("iovcntp" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [39708 39721]))                  
+                :type "void")
+                nil [39629 40161])
+            ("spdk_bdev_module_list_add" function
+               (:arguments 
+                  ( ("bdev_module" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_module_if" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40194 40234]))                  
+                :type "void")
+                nil [40163 40603]))          
+      :file "bdev.c"
+      :pointmax 40604
+      :fsize 40603
+      :lastmodtime '(22931 44931 815550 313000)
+      :unmatched-syntax '((semantic-list 3332 . 3348) (symbol 3321 . 3332) (semantic-list 2527 . 2540) (symbol 2517 . 2527) (semantic-list 2477 . 2500) (symbol 2467 . 2477) (semantic-list 2293 . 2309) (symbol 2283 . 2293) (TYPEDEF 2275 . 2282))
+      :lexical-table 
+        '(("BUF_SMALL_POOL_SIZE" . ((number "8192" 2236 . 2240)))
+          ("BUF_LARGE_POOL_SIZE" . ((number "1024" 2269 . 2273)))
+          ("SPDK_BDEV_IO_POOL_SIZE" . ((semantic-list "(64 * 1024)" 2196 . 2207)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk_internal/bdev.h" include (:truefile "/root/spdk/lib/bdev/scsi_nvme.c") nil [1666 1697])
+            ("spdk/nvme_spec.h" include (:truefile "/root/spdk/lib/bdev/scsi_nvme.c") nil [1699 1726])
+            ("spdk_scsi_nvme_translate" function
+               (:truefile "/root/spdk/lib/bdev/scsi_nvme.c"
+                :type "void"
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1758 1793])
+                    ("sc" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1794 1802])
+                    ("sk" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1803 1811])
+                    ("asc" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1816 1825])
+                    ("ascq" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [1826 1836]))                  )
+                nil [1728 10328]))          
+      :file "scsi_nvme.c"
+      :pointmax 10329
+      :fsize 10328
+      :lastmodtime '(22925 57199 692694 536000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "vtune.c"
+      :pointmax 1939
+      :fsize 1938
+      :lastmodtime '(22925 57199 692694 536000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!lib!bdev!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

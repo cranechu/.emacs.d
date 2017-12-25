@@ -1,0 +1,6 @@
+/root/spdk/test/lib/bdev/bdevperf/bdev.conf
+/root/spdk/test/lib/bdev/bdevperf/#bdev.conf#
+/root/spdk/doc/blobfs.md
+/root/spdk/doc/#blobfs.md#
+/usr/local/etc/spdk/rocksdb.conf
+/usr/local/etc/spdk/#rocksdb.conf#

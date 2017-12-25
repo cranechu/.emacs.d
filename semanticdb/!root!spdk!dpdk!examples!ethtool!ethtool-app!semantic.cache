@@ -1,0 +1,807 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("cmdline_parse.h" include (:system-flag t) nil [1690 1716])
+            ("cmdline_parse_num.h" include (:system-flag t) nil [1717 1747])
+            ("cmdline_parse_string.h" include (:system-flag t) nil [1748 1781])
+            ("cmdline_parse_etheraddr.h" include (:system-flag t) nil [1782 1818])
+            ("cmdline_socket.h" include (:system-flag t) nil [1819 1846])
+            ("cmdline.h" include (:system-flag t) nil [1847 1867])
+            ("rte_ethtool.h" include nil nil [1869 1893])
+            ("ethapp.h" include nil nil [1894 1913])
+            ("EEPROM_DUMP_CHUNKSIZE" variable (:constant-flag t) nil [1923 1944])
+            ("pcmd_get_params" type
+               (:members 
+                  ( ("cmd" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1978 2005]))                  
+                :type "struct")
+                nil [1952 2008])
+            ("pcmd_int_params" type
+               (:members 
+                  ( ("cmd" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2035 2062])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2064 2078]))                  
+                :type "struct")
+                nil [2009 2081])
+            ("pcmd_intstr_params" type
+               (:members 
+                  ( ("cmd" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2111 2138])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2140 2154])
+                    ("opt" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2156 2183]))                  
+                :type "struct")
+                nil [2082 2186])
+            ("pcmd_intmac_params" type
+               (:members 
+                  ( ("cmd" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2216 2243])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2245 2259])
+                    ("mac" variable (:type ("ether_addr" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2261 2283]))                  
+                :type "struct")
+                nil [2187 2286])
+            ("pcmd_str_params" type
+               (:members 
+                  ( ("cmd" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2313 2340])
+                    ("opt" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2342 2369]))                  
+                :type "struct")
+                nil [2287 2372])
+            ("pcmd_vlan_params" type
+               (:members 
+                  ( ("cmd" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2400 2427])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2429 2443])
+                    ("mode" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2445 2473])
+                    ("vid" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2475 2488]))                  
+                :type "struct")
+                nil [2373 2491])
+            ("pcmd_intintint_params" type
+               (:members 
+                  ( ("cmd" variable (:type ("cmdline_fixed_string_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2524 2551])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2553 2567])
+                    ("tx" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2569 2581])
+                    ("rx" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2583 2595]))                  
+                :type "struct")
+                nil [2492 2598])
+            ("pcmd_quit_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_get_params, cmd, \"quit\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [2631 2745])
+            ("pcmd_stats_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_get_params, cmd, \"stats\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [2746 2862])
+            ("pcmd_drvinfo_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_get_params, cmd, \"drvinfo\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [2863 2983])
+            ("pcmd_link_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_get_params, cmd, \"link\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [2984 3098])
+            ("pcmd_open_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_int_params, cmd, \"open\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [3135 3249])
+            ("pcmd_stop_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_int_params, cmd, \"stop\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [3250 3364])
+            ("pcmd_rxmode_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_int_params, cmd, \"rxmode\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [3365 3483])
+            ("pcmd_portstats_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_int_params, cmd, \"portstats\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [3484 3608])
+            ("pcmd_int_token_port" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_int_params, port, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [3609 3718])
+            ("pcmd_eeprom_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intstr_params, cmd, \"eeprom\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [3761 3882])
+            ("pcmd_mtu_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intstr_params, cmd, \"mtu\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [3883 3998])
+            ("pcmd_regs_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intstr_params, cmd, \"regs\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [3999 4116])
+            ("pcmd_intstr_token_port" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_intstr_params, port, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [4118 4233])
+            ("pcmd_intstr_token_opt" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intstr_params, opt, NULL)"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [4234 4351])
+            ("pcmd_macaddr_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intmac_params, cmd, \"macaddr\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [4408 4531])
+            ("pcmd_intmac_token_port" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_intmac_params, port, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [4532 4647])
+            ("pcmd_intmac_token_mac" variable
+               (:default-value "TOKEN_ETHERADDR_INITIALIZER(struct pcmd_intmac_params, mac)"
+                :type ("cmdline_parse_token_etheraddr_t" type (:type "class") nil nil))
+                nil [4648 4765])
+            ("pcmd_validate_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intmac_params, cmd, \"validate\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [4807 4932])
+            ("pcmd_ringparam_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intintint_params, cmd,
+		\"ringparam\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [4982 5114])
+            ("pcmd_intintint_token_port" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_intintint_params, port, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [5115 5236])
+            ("pcmd_intintint_token_tx" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_intintint_params, tx, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [5237 5354])
+            ("pcmd_intintint_token_rx" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_intintint_params, rx, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [5355 5472])
+            ("pcmd_pause_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intstr_params, cmd, \"pause\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [5496 5615])
+            ("pcmd_pause_token_port" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_intstr_params, port, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [5616 5730])
+            ("pcmd_pause_token_opt" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_intstr_params,
+		opt, \"all#tx#rx#none\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [5731 5861])
+            ("pcmd_vlan_token_cmd" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_vlan_params, cmd, \"vlan\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [5883 5998])
+            ("pcmd_vlan_token_port" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_vlan_params, port, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [5999 6110])
+            ("pcmd_vlan_token_mode" variable
+               (:default-value "TOKEN_STRING_INITIALIZER(struct pcmd_vlan_params, mode, \"add#del\")"
+                :type ("cmdline_parse_token_string_t" type (:type "class") nil nil))
+                nil [6111 6231])
+            ("pcmd_vlan_token_vid" variable
+               (:default-value "TOKEN_NUM_INITIALIZER(struct pcmd_vlan_params, vid, UINT16)"
+                :type ("cmdline_parse_token_num_t" type (:type "class") nil nil))
+                nil [6232 6341])
+            ("pcmd_quit_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6375 6392])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6388 6405])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6407 6427])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6429 6446])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6442 6457]))                  
+                :type "void")
+                nil [6344 6481])
+            ("pcmd_drvinfo_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6518 6535])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6531 6548])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6550 6569])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6563 6583])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6585 6602])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6598 6613]))                  
+                :type "void")
+                nil [6484 7070])
+            ("pcmd_link_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7104 7121])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7117 7134])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7136 7155])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7149 7169])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7171 7188])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7184 7199]))                  
+                :type "void")
+                nil [7073 7672])
+            ("pcmd_regs_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7706 7723])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7725 7744])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7738 7758])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7760 7777])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7773 7788]))                  
+                :type "void")
+                nil [7675 8866])
+            ("pcmd_eeprom_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8902 8919])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8921 8940])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8934 8954])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8956 8973])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8969 8984]))                  
+                :type "void")
+                nil [8869 10525])
+            ("pcmd_pause_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10560 10577])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10579 10598])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10592 10612])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10614 10629]))                  
+                :type "void")
+                nil [10528 11909])
+            ("pcmd_open_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11943 11960])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11956 11973])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11975 11994])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11988 12008])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12010 12027])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12023 12038]))                  
+                :type "void")
+                nil [11912 12533])
+            ("pcmd_stop_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12566 12583])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12579 12596])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12598 12617])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12611 12631])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12633 12650])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12646 12661]))                  
+                :type "void")
+                nil [12535 13159])
+            ("pcmd_rxmode_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13195 13212])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13214 13233])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13227 13247])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13249 13266])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13262 13277]))                  
+                :type "void")
+                nil [13162 13696])
+            ("pcmd_macaddr_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13733 13750])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13752 13771])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13765 13785])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13787 13802]))                  
+                :type "void")
+                nil [13699 14724])
+            ("pcmd_mtu_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14756 14773])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14775 14794])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14788 14808])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14810 14827])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14823 14838]))                  
+                :type "void")
+                nil [14726 15603])
+            ("pcmd_portstats_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15643 15660])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15656 15673])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15675 15694])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15688 15708])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15710 15727])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15723 15738]))                  
+                :type "void")
+                nil [15607 16498])
+            ("pcmd_ringparam_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16536 16553])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16549 16566])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16568 16587])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16581 16601])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16603 16618]))                  
+                :type "void")
+                nil [16500 17788])
+            ("pcmd_validate_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17825 17842])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17844 17863])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17857 17877])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17879 17896])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17892 17907]))                  
+                :type "void")
+                nil [17790 18092])
+            ("pcmd_vlan_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18126 18143])
+                    ("ptr_params" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18139 18156])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18158 18177])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("cmdline" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18171 18191])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18193 18210])
+                    ("ptr_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18206 18221]))                  
+                :type "void")
+                nil [18095 19167])
+            ("pcmd_quit" variable
+               (:default-value "{
+	.f = pcmd_quit_callback,
+	.data = NULL,
+	.help_str = \"quit\\n     Exit program\",
+	.tokens = {(void *)&pcmd_quit_token_cmd, NULL},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [19170 19337])
+            ("pcmd_drvinfo" variable
+               (:default-value "{
+	.f = pcmd_drvinfo_callback,
+	.data = NULL,
+	.help_str = \"drvinfo\\n     Print driver info\",
+	.tokens = {(void *)&pcmd_drvinfo_token_cmd, NULL},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [19338 19522])
+            ("pcmd_link" variable
+               (:default-value "{
+	.f = pcmd_link_callback,
+	.data = NULL,
+	.help_str = \"link\\n     Print port link states\",
+	.tokens = {(void *)&pcmd_link_token_cmd, NULL},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [19523 19700])
+            ("pcmd_regs" variable
+               (:default-value "{
+	.f = pcmd_regs_callback,
+	.data = NULL,
+	.help_str = \"regs <port_id> <filename>\\n\"
+		\"     Dump port register(s) to file\",
+	.tokens = {
+		(void *)&pcmd_regs_token_cmd,
+		(void *)&pcmd_intstr_token_port,
+		(void *)&pcmd_intstr_token_opt,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [19701 19987])
+            ("pcmd_eeprom" variable
+               (:default-value "{
+	.f = pcmd_eeprom_callback,
+	.data = NULL,
+	.help_str = \"eeprom <port_id> <filename>\\n    Dump EEPROM to file\",
+	.tokens = {
+		(void *)&pcmd_eeprom_token_cmd,
+		(void *)&pcmd_intstr_token_port,
+		(void *)&pcmd_intstr_token_opt,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [19988 20266])
+            ("pcmd_pause_noopt" variable
+               (:default-value "{
+	.f = pcmd_pause_callback,
+	.data = (void *)0x01,
+	.help_str = \"pause <port_id>\\n     Print port pause state\",
+	.tokens = {
+		(void *)&pcmd_pause_token_cmd,
+		(void *)&pcmd_pause_token_port,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [20267 20513])
+            ("pcmd_pause" variable
+               (:default-value "{
+	.f = pcmd_pause_callback,
+	.data = NULL,
+	.help_str =
+		\"pause <port_id> <all|tx|rx|none>\\n     Pause/unpause port\",
+	.tokens = {
+		(void *)&pcmd_pause_token_cmd,
+		(void *)&pcmd_pause_token_port,
+		(void *)&pcmd_pause_token_opt,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [20514 20794])
+            ("pcmd_open" variable
+               (:default-value "{
+	.f = pcmd_open_callback,
+	.data = NULL,
+	.help_str = \"open <port_id>\\n     Open port\",
+	.tokens = {
+		(void *)&pcmd_open_token_cmd,
+		(void *)&pcmd_int_token_port,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [20795 21008])
+            ("pcmd_stop" variable
+               (:default-value "{
+	.f = pcmd_stop_callback,
+	.data = NULL,
+	.help_str = \"stop <port_id>\\n     Stop port\",
+	.tokens = {
+		(void *)&pcmd_stop_token_cmd,
+		(void *)&pcmd_int_token_port,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [21009 21222])
+            ("pcmd_rxmode" variable
+               (:default-value "{
+	.f = pcmd_rxmode_callback,
+	.data = NULL,
+	.help_str = \"rxmode <port_id>\\n     Toggle port Rx mode\",
+	.tokens = {
+		(void *)&pcmd_rxmode_token_cmd,
+		(void *)&pcmd_int_token_port,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [21223 21454])
+            ("pcmd_macaddr_get" variable
+               (:default-value "{
+	.f = pcmd_macaddr_callback,
+	.data = NULL,
+	.help_str = \"macaddr <port_id>\\n\"
+		\"     Get MAC address\",
+	.tokens = {
+		(void *)&pcmd_macaddr_token_cmd,
+		(void *)&pcmd_intstr_token_port,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [21455 21698])
+            ("pcmd_macaddr" variable
+               (:default-value "{
+	.f = pcmd_macaddr_callback,
+	.data = (void *)0x01,
+	.help_str =
+		\"macaddr <port_id> <mac_addr>\\n\"
+		\"     Set MAC address\",
+	.tokens = {
+		(void *)&pcmd_macaddr_token_cmd,
+		(void *)&pcmd_intmac_token_port,
+		(void *)&pcmd_intmac_token_mac,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [21699 21993])
+            ("pcmd_mtu" variable
+               (:default-value "{
+	.f = pcmd_mtu_callback,
+	.data = NULL,
+	.help_str = \"mtu <port_id> <mtu_value>\\n\"
+		\"     Change MTU\",
+	.tokens = {
+		(void *)&pcmd_mtu_token_cmd,
+		(void *)&pcmd_intstr_token_port,
+		(void *)&pcmd_intstr_token_opt,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [21994 22258])
+            ("pcmd_portstats" variable
+               (:default-value "{
+	.f = pcmd_portstats_callback,
+	.data = NULL,
+	.help_str = \"portstats <port_id>\\n\"
+		\"     Print port eth statistics\",
+	.tokens = {
+		(void *)&pcmd_portstats_token_cmd,
+		(void *)&pcmd_int_token_port,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [22259 22513])
+            ("pcmd_ringparam" variable
+               (:default-value "{
+	.f = pcmd_ringparam_callback,
+	.data = NULL,
+	.help_str = \"ringparam <port_id>\\n\"
+		\"     Print ring parameters\",
+	.tokens = {
+		(void *)&pcmd_ringparam_token_cmd,
+		(void *)&pcmd_intintint_token_port,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [22514 22770])
+            ("pcmd_ringparam_set" variable
+               (:default-value "{
+	.f = pcmd_ringparam_callback,
+	.data = (void *)1,
+	.help_str = \"ringparam <port_id> <tx_param> <rx_param>\\n\"
+		\"     Set ring parameters\",
+	.tokens = {
+		(void *)&pcmd_ringparam_token_cmd,
+		(void *)&pcmd_intintint_token_port,
+		(void *)&pcmd_intintint_token_tx,
+		(void *)&pcmd_intintint_token_rx,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [22771 23128])
+            ("pcmd_validate" variable
+               (:default-value "{
+	.f = pcmd_validate_callback,
+	.data = NULL,
+	.help_str = \"validate <mac_addr>\\n\"
+		\"     Check that MAC address is valid unicast address\",
+	.tokens = {
+		(void *)&pcmd_validate_token_cmd,
+		(void *)&pcmd_intmac_token_mac,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [23129 23404])
+            ("pcmd_vlan" variable
+               (:default-value "{
+	.f = pcmd_vlan_callback,
+	.data = NULL,
+	.help_str = \"vlan <port_id> <add|del> <vlan_id>\\n\"
+		\"     Add/remove VLAN id\",
+	.tokens = {
+		(void *)&pcmd_vlan_token_cmd,
+		(void *)&pcmd_vlan_token_port,
+		(void *)&pcmd_vlan_token_mode,
+		(void *)&pcmd_vlan_token_vid,
+		NULL
+	},
+}"
+                :type ("cmdline_parse_inst_t" type (:type "class") nil nil))
+                nil [23405 23718])
+            ("list_prompt_commands" variable
+               (:dereference 1
+                :default-value "{
+	(cmdline_parse_inst_t *)&pcmd_drvinfo,
+	(cmdline_parse_inst_t *)&pcmd_eeprom,
+	(cmdline_parse_inst_t *)&pcmd_link,
+	(cmdline_parse_inst_t *)&pcmd_macaddr_get,
+	(cmdline_parse_inst_t *)&pcmd_macaddr,
+	(cmdline_parse_inst_t *)&pcmd_mtu,
+	(cmdline_parse_inst_t *)&pcmd_open,
+	(cmdline_parse_inst_t *)&pcmd_pause_noopt,
+	(cmdline_parse_inst_t *)&pcmd_pause,
+	(cmdline_parse_inst_t *)&pcmd_portstats,
+	(cmdline_parse_inst_t *)&pcmd_regs,
+	(cmdline_parse_inst_t *)&pcmd_ringparam,
+	(cmdline_parse_inst_t *)&pcmd_ringparam_set,
+	(cmdline_parse_inst_t *)&pcmd_rxmode,
+	(cmdline_parse_inst_t *)&pcmd_stop,
+	(cmdline_parse_inst_t *)&pcmd_validate,
+	(cmdline_parse_inst_t *)&pcmd_vlan,
+	(cmdline_parse_inst_t *)&pcmd_quit,
+	NULL
+}"
+                :type ("cmdline_parse_ctx_t" type (:type "class") nil nil))
+                nil [23721 24489])
+            ("ethapp_main" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [24509 24514]))                  
+                :type "void")
+                nil [24492 24683]))          
+      :file "ethapp.c"
+      :pointmax 24684
+      :fsize 24683
+      :lastmodtime '(22857 53585 507047 947000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("EEPROM_DUMP_CHUNKSIZE" . ((number "1024" 1945 . 1949)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "ethapp.h"
+      :fsize 1913
+      :lastmodtime '(22857 53585 507047 947000)))
+  :file "!root!spdk!dpdk!examples!ethtool!ethtool-app!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

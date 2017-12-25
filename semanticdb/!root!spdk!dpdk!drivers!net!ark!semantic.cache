@@ -1,0 +1,466 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("unistd.h" include (:system-flag t) nil [1590 1609])
+            ("ark_ethdev_rx.h" include nil nil [1611 1637])
+            ("ark_global.h" include nil nil [1638 1661])
+            ("ark_logs.h" include nil nil [1662 1683])
+            ("ark_ethdev.h" include nil nil [1684 1707])
+            ("ark_mpu.h" include nil nil [1708 1728])
+            ("ark_udm.h" include nil nil [1729 1749])
+            ("ARK_RX_META_SIZE" variable (:constant-flag t) nil [1759 1775])
+            ("ARK_RX_META_OFFSET" variable (:constant-flag t) nil [1787 1805])
+            ("ARK_RX_MAX_NOCHAIN" variable (:constant-flag t) nil [1856 1874])
+            ("ark_rx_queue" type
+               (:prototype t
+                :type "struct")
+                nil [1931 1951])
+            ("ark_rx_meta" type
+               (:prototype t
+                :type "struct")
+                nil [1952 1971])
+            ("dump_mbuf_data" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("mbuf" variable
+                       (:pointer 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2000 2022])
+                    ("lo" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2023 2035])
+                    ("hi" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2036 2048]))                  
+                :type "void")
+                nil [1973 2049])
+            ("ark_ethdev_rx_dump" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2081 2098])
+                    ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2099 2126]))                  
+                :type "void")
+                nil [2050 2127])
+            ("eth_ark_rx_jumbo" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2161 2188])
+                    ("meta" variable
+                       (:pointer 1
+                        :type ("ark_rx_meta" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2194 2219])
+                    ("mbuf0" variable
+                       (:pointer 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2225 2248])
+                    ("cons_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2254 2274]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [2128 2275])
+            ("eth_ark_rx_seed_mbufs" function
+               (:prototype-flag t
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2316 2343]))                  
+                :type "int")
+                nil [2276 2344])
+            ("__rte_cache_aligned" variable (:type ("ark_rx_queue" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [2426 3260])
+            ("ark_rx_queue" type
+               (:members 
+                  ( ("reserve_q" variable
+                       (:pointer 2
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2483 2511])
+                    ("paddress_q" variable
+                       (:pointer 1
+                        :type ("phys_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2612 2636])
+                    ("mb_pool" variable
+                       (:pointer 1
+                        :type ("rte_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2638 2666])
+                    ("udm" variable
+                       (:pointer 1
+                        :type ("ark_udm_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2669 2691])
+                    ("mpu" variable
+                       (:pointer 1
+                        :type ("ark_mpu_t" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2693 2715])
+                    ("queue_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2718 2738])
+                    ("queue_mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2740 2760])
+                    ("seed_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2763 2783])
+                    ("cons_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2819 2839])
+                    ("phys_qid" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2924 2942])
+                    ("queue_index" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3010 3031])
+                    ("pad1" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3034 3048])
+                    ("__rte_cache_min_aligned" variable (:type ("cacheline1" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3142 3177])
+                    ("prod_index" variable
+                       (:typemodifiers ("volatile")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3180 3209]))                  
+                :type "struct")
+                nil [2426 3260])
+            ("eth_ark_rx_hw_setup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3374 3398])
+                    ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3405 3432])
+                    ("rx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3439 3472])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3460 3473])
+                    ("rx_queue_idx" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3474 3496]))                  
+                :type "int")
+                nil [3343 4388])
+            ("eth_ark_rx_update_cons_index" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4438 4465])
+                    ("cons_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4466 4486]))                  
+                :type "void")
+                nil [4390 4608])
+            ("eth_ark_dev_rx_queue_setup" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4721 4745])
+                    ("queue_idx" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4752 4771])
+                    ("nb_desc" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4778 4795])
+                    ("socket_id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4802 4825])
+                    ("rx_conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_eth_rxconf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4832 4869])
+                    ("mb_pool" variable
+                       (:pointer 1
+                        :type ("rte_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4876 4904]))                  
+                :type "int")
+                nil [4690 7677])
+            ("eth_ark_recv_pkts_noop" function
+               (:arguments 
+                  ( ("rx_queue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7791 7818])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7806 7819])
+                    ("rx_pkts" variable
+                       (:pointer 2
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7829 7867])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7855 7868])
+                    ("nb_pkts" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7878 7907])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7895 7908]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [7759 7923])
+            ("eth_ark_recv_pkts" function
+               (:arguments 
+                  ( ("rx_queue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8032 8047])
+                    ("rx_pkts" variable
+                       (:pointer 2
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8052 8078])
+                    ("nb_pkts" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8083 8100]))                  
+                :type ("uint16_t" type (:type "class") nil nil))
+                nil [8005 10000])
+            ("eth_ark_rx_jumbo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10115 10142])
+                    ("meta" variable
+                       (:pointer 1
+                        :type ("ark_rx_meta" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10146 10171])
+                    ("mbuf0" variable
+                       (:pointer 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10175 10198])
+                    ("cons_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10202 10222]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [10082 11072])
+            ("eth_ark_rx_queue_drain" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11166 11193]))                  
+                :type "void")
+                nil [11131 11570])
+            ("eth_ark_dev_rx_queue_count" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11608 11632])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11633 11651]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [11572 11791])
+            ("eth_ark_rx_start_queue" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11900 11924])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11925 11943]))                  
+                :type "int")
+                nil [11873 12251])
+            ("eth_ark_rx_stop_queue" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12406 12430])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12431 12449]))                  
+                :type "int")
+                nil [12380 12674])
+            ("eth_ark_rx_seed_mbufs" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12796 12823]))                  
+                :type "int")
+                nil [12756 14309])
+            ("eth_ark_rx_dump_queue" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14338 14362])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14363 14381])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14390 14406]))                  
+                :type "void")
+                nil [14311 14515])
+            ("eth_ark_dev_rx_queue_release" function
+               (:arguments 
+                  ( ("vqueue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14689 14702]))                  
+                :type "void")
+                nil [14655 15193])
+            ("eth_rx_queue_stats_get" function
+               (:arguments 
+                  ( ("vqueue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15223 15236])
+                    ("stats" variable
+                       (:pointer 1
+                        :type ("rte_eth_stats" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15237 15265]))                  
+                :type "void")
+                nil [15195 15752])
+            ("eth_rx_queue_stats_reset" function
+               (:arguments 
+                  ( ("vqueue" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15784 15797]))                  
+                :type "void")
+                nil [15754 15950])
+            ("eth_ark_udm_force_close" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15981 16005]))                  
+                :type "void")
+                nil [15952 16738])
+            ("ark_ethdev_rx_dump" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16771 16788])
+                    ("queue" variable
+                       (:pointer 1
+                        :type ("ark_rx_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16789 16816]))                  
+                :type "void")
+                nil [16740 17310])
+            ("dump_mbuf_data" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mbuf" variable
+                       (:pointer 1
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17688 17710])
+                    ("lo" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17711 17723])
+                    ("hi" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17724 17736]))                  
+                :type "void")
+                nil [17661 18091]))          
+      :file "ark_ethdev_rx.c"
+      :pointmax 18092
+      :fsize 18091
+      :lastmodtime '(22914 63283 447386 774000)
+      :unmatched-syntax '((symbol 3135 . 3141) (symbol 3135 . 3141))
+      :lexical-table 
+        '(("ARK_RX_META_OFFSET" . ((semantic-list "(RTE_PKTMBUF_HEADROOM - ARK_RX_META_SIZE)" 1806 . 1847)))
+          ("ARK_RX_MAX_NOCHAIN" . ((semantic-list "(RTE_MBUF_DEFAULT_DATAROOM)" 1875 . 1902)))
+          ("ARK_RX_META_SIZE" . ((number "32" 1776 . 1778)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "ark_ethdev_rx.h"
+      :fsize 2721
+      :lastmodtime '(22914 63283 447386 774000))
+    (semanticdb-table "semanticdb-table"
+      :file "ark_global.h"
+      :fsize 4770
+      :lastmodtime '(22914 63283 447386 774000))
+    (semanticdb-table "semanticdb-table"
+      :file "ark_logs.h"
+      :fsize 4122
+      :lastmodtime '(22914 63283 447386 774000))
+    (semanticdb-table "semanticdb-table"
+      :file "ark_ethdev.h"
+      :fsize 1716
+      :lastmodtime '(22914 63283 447386 774000))
+    (semanticdb-table "semanticdb-table"
+      :file "ark_mpu.h"
+      :fsize 4624
+      :lastmodtime '(22914 63283 447386 774000))
+    (semanticdb-table "semanticdb-table"
+      :file "ark_udm.h"
+      :fsize 6003
+      :lastmodtime '(22914 63283 448386 767000)))
+  :file "!root!spdk!dpdk!drivers!net!ark!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,91 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/conf.h" include nil nil [1691 1713])
+            ("spdk/env.h" include nil nil [1714 1735])
+            ("spdk/log.h" include nil nil [1736 1757])
+            ("spdk/rpc.h" include nil nil [1758 1779])
+            ("spdk_internal/event.h" include nil nil [1781 1813])
+            ("RPC_SELECT_INTERVAL" variable (:constant-flag t) nil [1823 1842])
+            ("RPC_DEFAULT_LISTEN_ADDR" variable (:constant-flag t) nil [1866 1889])
+            ("g_rpc_poller" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL"
+                :type ("spdk_poller" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1908 1955])
+            ("enable_rpc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1979 1984]))                  
+                :type "int")
+                nil [1957 2158])
+            ("rpc_get_listen_addr" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2200 2205]))                  
+                :type "char")
+                nil [2160 2477])
+            ("spdk_rpc_subsystem_poll" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2515 2525]))                  
+                :type "void")
+                nil [2479 2549])
+            ("spdk_rpc_subsystem_setup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2588 2598]))                  
+                :type "void")
+                nil [2551 3216])
+            ("spdk_rpc_subsystem_initialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3260 3265]))                  
+                :type "void")
+                nil [3218 3668])
+            ("spdk_rpc_subsystem_finish" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3707 3712]))                  
+                :type "int")
+                nil [3670 3747])
+            ("spdk_rpc_subsystem_config_text" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fp" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3792 3801]))                  
+                :type "void")
+                nil [3749 4280]))          
+      :file "rpc.c"
+      :pointmax 4412
+      :fsize 4411
+      :lastmodtime '(22910 40989 222425 928000)
+      :unmatched-syntax '((semantic-list 4305 . 4411) (symbol 4282 . 4305))
+      :lexical-table 
+        '(("RPC_SELECT_INTERVAL" . ((number "4000" 1843 . 1847)))
+          ("RPC_DEFAULT_LISTEN_ADDR" . ((string "\"127.0.0.1:5260\"" 1890 . 1906)))
+          )
+))
+  :file "!root!spdk!lib!event!subsystems!rpc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

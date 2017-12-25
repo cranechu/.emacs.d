@@ -1,0 +1,360 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1798 1822])
+            ("spdk/rpc.h" include nil nil [1824 1845])
+            ("spdk/conf.h" include nil nil [1846 1868])
+            ("spdk/endian.h" include nil nil [1869 1893])
+            ("spdk/string.h" include nil nil [1894 1918])
+            ("spdk/io_channel.h" include nil nil [1919 1947])
+            ("spdk_internal/bdev.h" include nil nil [1949 1980])
+            ("spdk_internal/log.h" include nil nil [1981 2011])
+            ("SPDK_DECLARE_BDEV_MODULE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("split" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2038 2044]))                  
+                :type "int")
+                nil [2013 2045])
+            ("split_base" type
+               (:members 
+                  ( ("base_bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2106 2134])
+                    ("desc" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_desc" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2136 2164])
+                    ("ref" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2166 2180]))                  
+                :type "struct")
+                nil [2085 2183])
+            ("split_disk" type
+               (:members 
+                  ( ("disk" variable (:type ("spdk_bdev" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2248 2270])
+                    ("base_bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2272 2300])
+                    ("split_base" variable
+                       (:pointer 1
+                        :type ("split_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2302 2332])
+                    ("offset_blocks" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2334 2358])
+                    ("offset_bytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2360 2383])
+                    ("tailq" variable (:type "int") (reparse-symbol classsubparts) [2409 2415]))                  
+                :type "struct")
+                nil [2227 2418])
+            ("g_split_disks" variable
+               (:default-value "TAILQ_HEAD_INITIALIZER(g_split_disks)"
+                :type "int")
+                nil [2452 2506])
+            ("split_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_disk" variable
+                       (:pointer 1
+                        :type ("split_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2531 2561])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2562 2591]))                  
+                :type "void")
+                nil [2508 2648])
+            ("split_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_disk" variable
+                       (:pointer 1
+                        :type ("split_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2674 2704])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2705 2734]))                  
+                :type "void")
+                nil [2650 2792])
+            ("split_unmap" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_disk" variable
+                       (:pointer 1
+                        :type ("split_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2818 2848])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2849 2878]))                  
+                :type "void")
+                nil [2794 2936])
+            ("split_flush" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_disk" variable
+                       (:pointer 1
+                        :type ("split_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2962 2992])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2993 3022]))                  
+                :type "void")
+                nil [2938 3080])
+            ("_vbdev_split_complete_reset" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3122 3151])
+                    ("success" variable (:type "bool") (reparse-symbol arg-sub-list) [3152 3165])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3166 3179]))                  
+                :type "void")
+                nil [3082 3413])
+            ("vbdev_split_submit_request" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ch" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3454 3481])
+                    ("bdev_io" variable
+                       (:pointer 1
+                        :type ("spdk_bdev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3482 3511]))                  
+                :type "void")
+                nil [3415 4525])
+            ("vbdev_split_base_get_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_base" variable
+                       (:pointer 1
+                        :type ("split_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4564 4594])
+                    ("split_disk" variable
+                       (:pointer 1
+                        :type ("split_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4595 4625]))                  
+                :type "void")
+                nil [4527 4711])
+            ("vbdev_split_base_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_base" variable
+                       (:pointer 1
+                        :type ("split_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4747 4777]))                  
+                :type "void")
+                nil [4713 4950])
+            ("vbdev_split_base_put_ref" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_base" variable
+                       (:pointer 1
+                        :type ("split_base" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4989 5019]))                  
+                :type "void")
+                nil [4952 5118])
+            ("vbdev_split_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("split_disk" variable
+                       (:pointer 1
+                        :type ("split_disk" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5149 5179]))                  
+                :type "void")
+                nil [5120 5451])
+            ("vbdev_split_destruct" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5485 5495]))                  
+                :type "int")
+                nil [5453 5580])
+            ("vbdev_split_base_bdev_hotremove_cb" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("remove_ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5629 5646]))                  
+                :type "void")
+                nil [5582 5889])
+            ("vbdev_split_io_type_supported" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5933 5943])
+                    ("io_type" variable (:type ("spdk_bdev_io_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [5944 5975]))                  
+                :type "bool")
+                nil [5891 6110])
+            ("vbdev_split_get_io_channel" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6171 6181]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6112 6304])
+            ("vbdev_split_dump_config_json" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6346 6356])
+                    ("w" variable
+                       (:pointer 1
+                        :type ("spdk_json_write_ctx" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6357 6387]))                  
+                :type "int")
+                nil [6306 6753])
+            ("vbdev_split_fn_table" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.destruct		= vbdev_split_destruct,
+	.io_type_supported	= vbdev_split_io_type_supported,
+	.submit_request		= vbdev_split_submit_request,
+	.get_io_channel		= vbdev_split_get_io_channel,
+	.dump_config_json	= vbdev_split_dump_config_json,
+}"
+                :type ("spdk_bdev_fn_table" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6755 7051])
+            ("vbdev_split_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("base_bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7083 7111])
+                    ("split_count" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7112 7133])
+                    ("split_size_mb" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7134 7157]))                  
+                :type "int")
+                nil [7053 10728])
+            ("vbdev_split_init" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10758 10763]))                  
+                :type "int")
+                nil [10730 10778])
+            ("vbdev_split_examine" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bdev" variable
+                       (:pointer 1
+                        :type ("spdk_bdev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10812 10835]))                  
+                :type "void")
+                nil [10780 12240])
+            ("vbdev_split_fini" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12271 12276]))                  
+                :type "void")
+                nil [12242 12416])
+            ("vbdev_split_get_ctx_size" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12454 12459]))                  
+                :type "int")
+                nil [12418 12653]))          
+      :file "vbdev_split.c"
+      :pointmax 12850
+      :fsize 12849
+      :lastmodtime '(22925 57199 692694 536000)
+      :unmatched-syntax '((semantic-list 12810 . 12849) (symbol 12782 . 12810) (string 12811 . 12824) (semantic-list 12680 . 12781) (symbol 12655 . 12680) (semantic-list 2437 . 2451) (symbol 2427 . 2437) (STATIC 2420 . 2426) (semantic-list 2396 . 2408) (symbol 2385 . 2396))))
+  :file "!root!spdk!lib!bdev!split!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,14 @@
+/root/.emacs
+/root/#.emacs#
+/root/spdk/lib/nvme/nvme_ctrlr.c
+/root/spdk/lib/nvme/#nvme_ctrlr.c#
+/root/spdk/lib/nvme/nvme_transport.c
+/root/spdk/lib/nvme/#nvme_transport.c#
+/root/spdk/include/spdk/log.h
+/root/spdk/include/spdk/#log.h#
+/root/spdk/examples/nvme/hello_world/hello_world.c
+/root/spdk/examples/nvme/hello_world/#hello_world.c#
+/root/spdk/examples/nvme/perf/perf.c
+/root/spdk/examples/nvme/perf/#perf.c#
+/root/spdk/TAGS
+/root/spdk/#TAGS#

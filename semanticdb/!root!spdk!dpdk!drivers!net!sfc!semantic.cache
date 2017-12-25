@@ -1,0 +1,690 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("rte_debug.h" include (:system-flag t) nil [1548 1570])
+            ("rte_cycles.h" include (:system-flag t) nil [1571 1594])
+            ("rte_alarm.h" include (:system-flag t) nil [1595 1617])
+            ("rte_branch_prediction.h" include (:system-flag t) nil [1618 1652])
+            ("efx.h" include nil nil [1654 1670])
+            ("sfc.h" include nil nil [1672 1688])
+            ("sfc_debug.h" include nil nil [1689 1711])
+            ("sfc_log.h" include nil nil [1712 1732])
+            ("sfc_ev.h" include nil nil [1733 1752])
+            ("sfc_rx.h" include nil nil [1753 1772])
+            ("sfc_tx.h" include nil nil [1773 1792])
+            ("sfc_kvargs.h" include nil nil [1793 1816])
+            ("SFC_EVQ_INIT_BACKOFF_START_US" variable (:constant-flag t) nil [1896 1925])
+            ("SFC_EVQ_INIT_BACKOFF_MAX_US" variable (:constant-flag t) nil [1995 2022])
+            ("SFC_EVQ_INIT_TIMEOUT_US" variable (:constant-flag t) nil [2081 2104])
+            ("SFC_MGMT_EV_QPOLL_PERIOD_US" variable (:constant-flag t) nil [2190 2217])
+            ("sfc_evq_type2str" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("type" variable (:type ("sfc_evq_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [2267 2290]))                  
+                :type "char")
+                nil [2230 2492])
+            ("sfc_ev_initialized" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2530 2540]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [2494 2790])
+            ("sfc_ev_nop_rx" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2823 2833])
+                    ("label" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2834 2849])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2850 2862])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2870 2884])
+                    ("flags" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2885 2900]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [2792 3076])
+            ("sfc_ev_efx_rx" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3109 3119])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3120 3147])
+                    ("" variable (:type ("label" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3142 3148])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3149 3161])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3169 3183])
+                    ("flags" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3184 3199]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [3078 4853])
+            ("sfc_ev_dp_rx" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4885 4895])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4896 4923])
+                    ("" variable (:type ("label" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4918 4924])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4925 4937])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4944 4970])
+                    ("" variable (:type ("size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4966 4971])
+                    ("uint16_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4972 4999])
+                    ("" variable (:type ("flags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4994 5000]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [4855 5203])
+            ("sfc_ev_nop_tx" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5236 5246])
+                    ("label" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5247 5262])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5263 5275]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [5205 5418])
+            ("sfc_ev_tx" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5447 5457])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5458 5485])
+                    ("" variable (:type ("label" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5480 5486])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5487 5499]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [5420 6015])
+            ("sfc_ev_dp_tx" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6047 6057])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6058 6085])
+                    ("" variable (:type ("label" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6080 6086])
+                    ("id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6087 6099]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [6017 6302])
+            ("sfc_ev_exception" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6338 6348])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6349 6375])
+                    ("" variable (:type ("code" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6371 6376])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6380 6406])
+                    ("" variable (:type ("data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6402 6407]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [6304 7145])
+            ("sfc_ev_nop_rxq_flush_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7190 7200])
+                    ("rxq_hw_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7201 7223]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [7147 7362])
+            ("sfc_ev_rxq_flush_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7403 7413])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7414 7448])
+                    ("" variable (:type ("rxq_hw_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7436 7449]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [7364 7763])
+            ("sfc_ev_nop_rxq_flush_failed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7810 7820])
+                    ("rxq_hw_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7821 7843]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [7765 7984])
+            ("sfc_ev_rxq_flush_failed" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8027 8037])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8038 8072])
+                    ("" variable (:type ("rxq_hw_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8060 8073]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [7986 8389])
+            ("sfc_ev_nop_txq_flush_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8434 8444])
+                    ("txq_hw_index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8445 8467]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [8391 8606])
+            ("sfc_ev_txq_flush_done" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8647 8657])
+                    ("uint32_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8658 8692])
+                    ("" variable (:type ("txq_hw_index" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8680 8693]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [8608 9007])
+            ("sfc_ev_software" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9042 9052])
+                    ("magic" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9053 9068]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [9009 9209])
+            ("sfc_ev_sram" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9240 9250])
+                    ("code" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9251 9265]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [9211 9397])
+            ("sfc_ev_wake_up" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9431 9441])
+                    ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9442 9457]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [9399 9594])
+            ("sfc_ev_timer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9626 9636])
+                    ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9637 9652]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [9596 9787])
+            ("sfc_ev_nop_link_change" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9829 9839])
+                    ("efx_link_mode_t" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9840 9878])
+                    ("" variable (:type ("link_mode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9869 9879]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [9789 10004])
+            ("sfc_ev_link_change" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10042 10052])
+                    ("link_mode" variable (:type ("efx_link_mode_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10053 10079]))                  
+                :type ("boolean_t" type (:type "class") nil nil))
+                nil [10006 10736])
+            ("sfc_ev_callbacks" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	.eec_initialized	= sfc_ev_initialized,
+	.eec_rx			= sfc_ev_nop_rx,
+	.eec_tx			= sfc_ev_nop_tx,
+	.eec_exception		= sfc_ev_exception,
+	.eec_rxq_flush_done	= sfc_ev_nop_rxq_flush_done,
+	.eec_rxq_flush_failed	= sfc_ev_nop_rxq_flush_failed,
+	.eec_txq_flush_done	= sfc_ev_nop_txq_flush_done,
+	.eec_software		= sfc_ev_software,
+	.eec_sram		= sfc_ev_sram,
+	.eec_wake_up		= sfc_ev_wake_up,
+	.eec_timer		= sfc_ev_timer,
+	.eec_link_change	= sfc_ev_link_change,
+}"
+                :type ("efx_ev_callbacks_t" type (:type "class") nil nil))
+                nil [10738 11244])
+            ("sfc_ev_callbacks_efx_rx" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	.eec_initialized	= sfc_ev_initialized,
+	.eec_rx			= sfc_ev_efx_rx,
+	.eec_tx			= sfc_ev_nop_tx,
+	.eec_exception		= sfc_ev_exception,
+	.eec_rxq_flush_done	= sfc_ev_rxq_flush_done,
+	.eec_rxq_flush_failed	= sfc_ev_rxq_flush_failed,
+	.eec_txq_flush_done	= sfc_ev_nop_txq_flush_done,
+	.eec_software		= sfc_ev_software,
+	.eec_sram		= sfc_ev_sram,
+	.eec_wake_up		= sfc_ev_wake_up,
+	.eec_timer		= sfc_ev_timer,
+	.eec_link_change	= sfc_ev_nop_link_change,
+}"
+                :type ("efx_ev_callbacks_t" type (:type "class") nil nil))
+                nil [11246 11755])
+            ("sfc_ev_callbacks_dp_rx" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	.eec_initialized	= sfc_ev_initialized,
+	.eec_rx			= sfc_ev_dp_rx,
+	.eec_tx			= sfc_ev_nop_tx,
+	.eec_exception		= sfc_ev_exception,
+	.eec_rxq_flush_done	= sfc_ev_rxq_flush_done,
+	.eec_rxq_flush_failed	= sfc_ev_rxq_flush_failed,
+	.eec_txq_flush_done	= sfc_ev_nop_txq_flush_done,
+	.eec_software		= sfc_ev_software,
+	.eec_sram		= sfc_ev_sram,
+	.eec_wake_up		= sfc_ev_wake_up,
+	.eec_timer		= sfc_ev_timer,
+	.eec_link_change	= sfc_ev_nop_link_change,
+}"
+                :type ("efx_ev_callbacks_t" type (:type "class") nil nil))
+                nil [11757 12264])
+            ("sfc_ev_callbacks_efx_tx" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	.eec_initialized	= sfc_ev_initialized,
+	.eec_rx			= sfc_ev_nop_rx,
+	.eec_tx			= sfc_ev_tx,
+	.eec_exception		= sfc_ev_exception,
+	.eec_rxq_flush_done	= sfc_ev_nop_rxq_flush_done,
+	.eec_rxq_flush_failed	= sfc_ev_nop_rxq_flush_failed,
+	.eec_txq_flush_done	= sfc_ev_txq_flush_done,
+	.eec_software		= sfc_ev_software,
+	.eec_sram		= sfc_ev_sram,
+	.eec_wake_up		= sfc_ev_wake_up,
+	.eec_timer		= sfc_ev_timer,
+	.eec_link_change	= sfc_ev_nop_link_change,
+}"
+                :type ("efx_ev_callbacks_t" type (:type "class") nil nil))
+                nil [12266 12775])
+            ("sfc_ev_callbacks_dp_tx" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	.eec_initialized	= sfc_ev_initialized,
+	.eec_rx			= sfc_ev_nop_rx,
+	.eec_tx			= sfc_ev_dp_tx,
+	.eec_exception		= sfc_ev_exception,
+	.eec_rxq_flush_done	= sfc_ev_nop_rxq_flush_done,
+	.eec_rxq_flush_failed	= sfc_ev_nop_rxq_flush_failed,
+	.eec_txq_flush_done	= sfc_ev_txq_flush_done,
+	.eec_software		= sfc_ev_software,
+	.eec_sram		= sfc_ev_sram,
+	.eec_wake_up		= sfc_ev_wake_up,
+	.eec_timer		= sfc_ev_timer,
+	.eec_link_change	= sfc_ev_nop_link_change,
+}"
+                :type ("efx_ev_callbacks_t" type (:type "class") nil nil))
+                nil [12777 13288])
+            ("sfc_ev_qpoll" function
+               (:arguments 
+                  ( ("evq" variable
+                       (:pointer 1
+                        :type ("sfc_evq" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13309 13329]))                  
+                :type "void")
+                nil [13291 14618])
+            ("sfc_ev_mgmt_qpoll" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14643 14666]))                  
+                :type "void")
+                nil [14620 14884])
+            ("sfc_ev_qprime" function
+               (:arguments 
+                  ( ("evq" variable
+                       (:pointer 1
+                        :type ("sfc_evq" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14904 14924]))                  
+                :type "int")
+                nil [14886 15028])
+            ("sfc_ev_qstart" function
+               (:arguments 
+                  ( ("evq" variable
+                       (:pointer 1
+                        :type ("sfc_evq" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15119 15139])
+                    ("hw_index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15140 15162]))                  
+                :type "int")
+                nil [15101 17196])
+            ("sfc_ev_qstop" function
+               (:arguments 
+                  ( ("evq" variable
+                       (:pointer 1
+                        :type ("sfc_evq" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17216 17236]))                  
+                :type "void")
+                nil [17198 17542])
+            ("sfc_ev_mgmt_periodic_qpoll" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17583 17593]))                  
+                :type "void")
+                nil [17544 18023])
+            ("sfc_ev_mgmt_periodic_qpoll_start" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18070 18093]))                  
+                :type "void")
+                nil [18025 18130])
+            ("sfc_ev_mgmt_periodic_qpoll_stop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18176 18199]))                  
+                :type "void")
+                nil [18132 18258])
+            ("sfc_ev_start" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18277 18300]))                  
+                :type "int")
+                nil [18260 19334])
+            ("sfc_ev_stop" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19353 19376]))                  
+                :type "void")
+                nil [19336 19583])
+            ("sfc_ev_qinit" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19602 19625])
+                    ("type" variable (:type ("sfc_evq_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [19632 19655])
+                    ("type_index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [19656 19680])
+                    ("entries" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [19687 19708])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [19709 19723])
+                    ("evqp" variable
+                       (:pointer 2
+                        :type ("sfc_evq" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19724 19746]))                  
+                :type "int")
+                nil [19585 20483])
+            ("sfc_ev_qfini" function
+               (:arguments 
+                  ( ("evq" variable
+                       (:pointer 1
+                        :type ("sfc_evq" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [20503 20523]))                  
+                :type "void")
+                nil [20485 20715])
+            ("sfc_kvarg_perf_profile_handler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("__rte_unused" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20759 20782])
+                    ("key" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20778 20788])
+                    ("value_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20799 20821])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20822 20835]))                  
+                :type "int")
+                nil [20717 21233])
+            ("sfc_ev_attach" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21253 21276]))                  
+                :type "int")
+                nil [21235 22030])
+            ("sfc_ev_detach" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22051 22074]))                  
+                :type "void")
+                nil [22032 22238]))          
+      :file "sfc_ev.c"
+      :pointmax 22239
+      :fsize 22238
+      :lastmodtime '(22857 53585 497047 777000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SFC_EVQ_INIT_BACKOFF_MAX_US" . ((semantic-list "(10 * 1000)" 2023 . 2034)))
+          ("SFC_MGMT_EV_QPOLL_PERIOD_US" . ((semantic-list "(US_PER_S)" 2218 . 2228)))
+          ("SFC_EVQ_INIT_TIMEOUT_US" . ((semantic-list "(2 * US_PER_S)" 2106 . 2120)))
+          ("SFC_EVQ_INIT_BACKOFF_START_US" . ((semantic-list "(1)" 1926 . 1929)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdbool.h" include (:system-flag t) nil [1548 1568])
+            ("strings.h" include (:system-flag t) nil [1569 1589])
+            ("rte_devargs.h" include (:system-flag t) nil [1591 1615])
+            ("rte_kvargs.h" include (:system-flag t) nil [1616 1639])
+            ("sfc.h" include nil nil [1641 1657])
+            ("sfc_kvargs.h" include nil nil [1658 1681])
+            ("sfc_kvargs_parse" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1704 1727]))                  
+                :type "int")
+                nil [1683 2194])
+            ("sfc_kvargs_cleanup" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2220 2243]))                  
+                :type "void")
+                nil [2196 2277])
+            ("sfc_kvarg_match_value" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2312 2330])
+                    ("values" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2331 2358])
+                    ("n_values" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2367 2389]))                  
+                :type "int")
+                nil [2279 2509])
+            ("sfc_kvargs_process" function
+               (:arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :type ("sfc_adapter" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2534 2557])
+                    ("key_match" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2558 2580])
+                    ("handler" variable (:type ("arg_handler_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2586 2608])
+                    ("opaque_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2609 2626]))                  
+                :type "int")
+                nil [2511 2741])
+            ("sfc_kvarg_bool_handler" function
+               (:arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("__rte_unused" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2770 2793])
+                    ("key" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2789 2799])
+                    ("value_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2809 2831])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2832 2845]))                  
+                :type "int")
+                nil [2743 3254])
+            ("sfc_kvarg_long_handler" function
+               (:arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("__rte_unused" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3283 3306])
+                    ("key" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3302 3312])
+                    ("value_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3322 3344])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3345 3358]))                  
+                :type "int")
+                nil [3256 3561])
+            ("sfc_kvarg_string_handler" function
+               (:arguments 
+                  ( ("" variable
+                       (:constant-flag t
+                        :type ("__rte_unused" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3592 3615])
+                    ("key" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3611 3621])
+                    ("value_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3626 3648])
+                    ("opaque" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3649 3662]))                  
+                :type "int")
+                nil [3563 3715]))          
+      :file "sfc_kvargs.c"
+      :pointmax 3716
+      :fsize 3715
+      :lastmodtime '(22857 53585 497047 777000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!dpdk!drivers!net!sfc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

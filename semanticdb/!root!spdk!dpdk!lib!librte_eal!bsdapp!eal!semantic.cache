@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "eal_pci.c"
+      :pointmax 201
+      :fsize 14827
+      :lastmodtime '(22914 63283 590385 661000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!dpdk!lib!librte_eal!bsdapp!eal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1475 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [1695 1717])
+            ("sys/queue.h" include (:system-flag t) nil [1718 1740])
+            ("ctype.h" include (:system-flag t) nil [1741 1759])
+            ("stdio.h" include (:system-flag t) nil [1760 1778])
+            ("stdlib.h" include (:system-flag t) nil [1779 1798])
+            ("string.h" include (:system-flag t) nil [1799 1818])
+            ("stdarg.h" include (:system-flag t) nil [1819 1838])
+            ("errno.h" include (:system-flag t) nil [1839 1857])
+            ("stdint.h" include (:system-flag t) nil [1858 1877])
+            ("inttypes.h" include (:system-flag t) nil [1878 1899])
+            ("netinet/in.h" include (:system-flag t) nil [1900 1923])
+            ("rte_byteorder.h" include (:system-flag t) nil [1925 1951])
+            ("rte_log.h" include (:system-flag t) nil [1952 1972])
+            ("rte_debug.h" include (:system-flag t) nil [1973 1995])
+            ("rte_interrupts.h" include (:system-flag t) nil [1996 2023])
+            ("rte_pci.h" include (:system-flag t) nil [2024 2044])
+            ("rte_memory.h" include (:system-flag t) nil [2045 2068])
+            ("rte_memcpy.h" include (:system-flag t) nil [2069 2092])
+            ("rte_memzone.h" include (:system-flag t) nil [2093 2117])
+            ("rte_launch.h" include (:system-flag t) nil [2118 2141])
+            ("rte_eal.h" include (:system-flag t) nil [2142 2162])
+            ("rte_per_lcore.h" include (:system-flag t) nil [2163 2189])
+            ("rte_lcore.h" include (:system-flag t) nil [2190 2212])
+            ("rte_atomic.h" include (:system-flag t) nil [2213 2236])
+            ("rte_branch_prediction.h" include (:system-flag t) nil [2237 2271])
+            ("rte_common.h" include (:system-flag t) nil [2272 2295])
+            ("rte_mempool.h" include (:system-flag t) nil [2296 2320])
+            ("rte_malloc.h" include (:system-flag t) nil [2321 2344])
+            ("rte_mbuf.h" include (:system-flag t) nil [2345 2366])
+            ("rte_errno.h" include (:system-flag t) nil [2367 2389])
+            ("rte_spinlock.h" include (:system-flag t) nil [2390 2415])
+            ("rte_string_fns.h" include (:system-flag t) nil [2416 2443])
+            ("rte_ether.h" include nil nil [2445 2467])
+            ("rte_ethdev.h" include nil nil [2468 2491])
+            ("MZ_RTE_ETH_DEV_DATA" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"rte_eth_dev_data\""
+                :type "char")
+                nil [2493 2553])
+            ("rte_eth_devices" variable
+               (:dereference 1
+                :type ("rte_eth_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2554 2607])
+            ("rte_eth_dev_data" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("rte_eth_dev_data" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2608 2657])
+            ("eth_dev_last_created_port" variable
+               (:typemodifiers ("static")
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [2658 2699])
+            ("nb_ports" variable
+               (:typemodifiers ("static")
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [2700 2724])
+            ("rte_eth_dev_cb_lock" variable
+               (:typemodifiers ("static")
+                :default-value "RTE_SPINLOCK_INITIALIZER"
+                :type ("rte_spinlock_t" type (:type "class") nil nil))
+                nil [2766 2835])
+            ("rte_eth_rx_cb_lock" variable
+               (:typemodifiers ("static")
+                :default-value "RTE_SPINLOCK_INITIALIZER"
+                :type ("rte_spinlock_t" type (:type "class") nil nil))
+                nil [2880 2948])
+            ("rte_eth_tx_cb_lock" variable
+               (:typemodifiers ("static")
+                :default-value "RTE_SPINLOCK_INITIALIZER"
+                :type ("rte_spinlock_t" type (:type "class") nil nil))
+                nil [2993 3061])
+            ("rte_eth_xstats_name_off" type
+               (:members 
+                  ( ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3161 3197])
+                    ("offset" variable (:type "unsigned int") (reparse-symbol classsubparts) [3199 3215]))                  
+                :type "struct")
+                nil [3127 3218])
+            ("rte_stats_strings" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{\"rx_good_packets\", offsetof(struct rte_eth_stats, ipackets)},
+	{\"tx_good_packets\", offsetof(struct rte_eth_stats, opackets)},
+	{\"rx_good_bytes\", offsetof(struct rte_eth_stats, ibytes)},
+	{\"tx_good_bytes\", offsetof(struct rte_eth_stats, obytes)},
+	{\"rx_errors\", offsetof(struct rte_eth_stats, ierrors)},
+	{\"tx_errors\", offsetof(struct rte_eth_stats, oerrors)},
+	{\"rx_mbuf_allocation_errors\", offsetof(struct rte_eth_stats,
+		rx_nombuf)},
+}"
+                :type ("rte_eth_xstats_name_off" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3220 3729])
+            ("RTE_NB_STATS" variable (:constant-flag t) nil [3739 3751])
+            ("rte_rxq_stats_strings" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{\"packets\", offsetof(struct rte_eth_stats, q_ipackets)},
+	{\"bytes\", offsetof(struct rte_eth_stats, q_ibytes)},
+	{\"errors\", offsetof(struct rte_eth_stats, q_errors)},
+}"
+                :type ("rte_eth_xstats_name_off" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3812 4053])
+            ("RTE_NB_RXQ_STATS" variable (:constant-flag t) nil [4063 4079])
+            ("rte_txq_stats_strings" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	{\"packets\", offsetof(struct rte_eth_stats, q_opackets)},
+	{\"bytes\", offsetof(struct rte_eth_stats, q_obytes)},
+}"
+                :type ("rte_eth_xstats_name_off" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [4152 4338])
+            ("RTE_NB_TXQ_STATS" variable (:constant-flag t) nil [4347 4363])
+            ("rte_eth_dev_callback" type
+               (:members 
+                  ( ("next" variable (:type "int") (reparse-symbol classsubparts) [4696 4701])
+                    ("cb_fn" variable (:type ("rte_eth_dev_cb_fn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4726 4750])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [4792 4805])
+                    ("event" variable (:type ("rte_eth_event_type" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [4864 4894])
+                    ("active" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4934 4950]))                  
+                :type "struct")
+                nil [4631 5006])
+            ("" type
+               (:members 
+                  ( ("STAT_QMAP_TX" variable
+                       (:constant-flag t
+                        :default-value (5031 5032)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5016 5032])
+                    ("STAT_QMAP_RX" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5035 5049]))                  
+                :type "enum")
+                nil [5008 5050])
+            ("rte_eth_find_next" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5078 5094]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [5052 5293])
+            ("rte_eth_dev_data_alloc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5330 5335]))                  
+                :type "void")
+                nil [5295 5875])
+            ("rte_eth_dev_allocated" function
+               (:pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5920 5937]))                  
+                :type ("rte_eth_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5877 6161])
+            ("rte_eth_dev_find_free_port" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6205 6210]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [6163 6366])
+            ("eth_dev_get" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6408 6424]))                  
+                :type ("rte_eth_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6368 6682])
+            ("rte_eth_dev_allocate" function
+               (:pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6726 6743]))                  
+                :type ("rte_eth_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6684 7435])
+            ("rte_eth_dev_attach_secondary" function
+               (:pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7672 7689]))                  
+                :type ("rte_eth_dev" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7622 8126])
+            ("rte_eth_dev_release_port" function
+               (:arguments 
+                  ( ("eth_dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8157 8185]))                  
+                :type "int")
+                nil [8128 8292])
+            ("rte_eth_dev_is_valid_port" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8324 8340]))                  
+                :type "int")
+                nil [8294 8471])
+            ("rte_eth_dev_socket_id" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8499 8515]))                  
+                :type "int")
+                nil [8473 8616])
+            ("rte_eth_dev_count" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [8644 8649]))                  
+                :type ("uint8_t" type (:type "class") nil nil))
+                nil [8618 8671])
+            ("rte_eth_dev_get_name_by_port" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8706 8722])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8723 8734]))                  
+                :type "int")
+                nil [8673 9069])
+            ("rte_eth_dev_get_port_by_name" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9104 9121])
+                    ("port_id" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9122 9139]))                  
+                :type "int")
+                nil [9071 9463])
+            ("rte_eth_dev_is_detachable" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9502 9518]))                  
+                :type "int")
+                nil [9465 9979])
+            ("rte_eth_dev_attach" function
+               (:arguments 
+                  ( ("devargs" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10066 10086])
+                    ("port_id" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10087 10104]))                  
+                :type "int")
+                nil [10043 10943])
+            ("rte_eth_dev_detach" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11027 11043])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11044 11055]))                  
+                :type "int")
+                nil [11004 11451])
+            ("rte_eth_dev_rx_queue_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11492 11516])
+                    ("nb_queues" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11517 11536]))                  
+                :type "int")
+                nil [11453 12884])
+            ("rte_eth_dev_rx_queue_start" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12917 12933])
+                    ("rx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12934 12955]))                  
+                :type "int")
+                nil [12886 13548])
+            ("rte_eth_dev_rx_queue_stop" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13580 13596])
+                    ("rx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13597 13618]))                  
+                :type "int")
+                nil [13550 14209])
+            ("rte_eth_dev_tx_queue_start" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14242 14258])
+                    ("tx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14259 14280]))                  
+                :type "int")
+                nil [14211 14873])
+            ("rte_eth_dev_tx_queue_stop" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14905 14921])
+                    ("tx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14922 14943]))                  
+                :type "int")
+                nil [14875 15534])
+            ("rte_eth_dev_tx_queue_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15575 15599])
+                    ("nb_queues" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15600 15619]))                  
+                :type "int")
+                nil [15536 16983])
+            ("rte_eth_speed_bitflag" function
+               (:arguments 
+                  ( ("speed" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17016 17031])
+                    ("duplex" variable (:type "int") (reparse-symbol arg-sub-list) [17032 17043]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [16985 17807])
+            ("rte_eth_dev_configure" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17835 17851])
+                    ("nb_rx_q" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17852 17869])
+                    ("nb_tx_q" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17870 17887])
+                    ("dev_conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_eth_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17896 17932]))                  
+                :type "int")
+                nil [17809 21721])
+            ("_rte_eth_dev_reset" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [21747 21771]))                  
+                :type "void")
+                nil [21723 22054])
+            ("rte_eth_dev_config_restore" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22095 22111]))                  
+                :type "void")
+                nil [22056 23473])
+            ("rte_eth_dev_start" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23497 23513]))                  
+                :type "int")
+                nil [23475 24162])
+            ("rte_eth_dev_stop" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24186 24202]))                  
+                :type "void")
+                nil [24164 24557])
+            ("rte_eth_dev_set_link_up" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24587 24603]))                  
+                :type "int")
+                nil [24559 24837])
+            ("rte_eth_dev_set_link_down" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24869 24885]))                  
+                :type "int")
+                nil [24839 25123])
+            ("rte_eth_dev_close" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25148 25164]))                  
+                :type "void")
+                nil [25125 25567])
+            ("rte_eth_rx_queue_setup" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25596 25612])
+                    ("rx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25613 25634])
+                    ("nb_rx_desc" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25644 25664])
+                    ("socket_id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [25665 25688])
+                    ("rx_conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_eth_rxconf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25698 25735])
+                    ("mp" variable
+                       (:pointer 1
+                        :type ("rte_mempool" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [25745 25768]))                  
+                :type "int")
+                nil [25569 28237])
+            ("rte_eth_tx_queue_setup" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28266 28282])
+                    ("tx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28283 28304])
+                    ("nb_tx_desc" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28314 28334])
+                    ("socket_id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [28335 28358])
+                    ("tx_conf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_eth_txconf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28368 28405]))                  
+                :type "int")
+                nil [28239 29815])
+            ("rte_eth_tx_buffer_drop_callback" function
+               (:arguments 
+                  ( ("pkts" variable
+                       (:pointer 2
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29854 29877])
+                    ("unsent" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29878 29894])
+                    ("userdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29897 29924])
+                    ("" variable (:type ("__rte_unused" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29912 29925]))                  
+                :type "void")
+                nil [29817 30002])
+            ("rte_eth_tx_buffer_count_callback" function
+               (:arguments 
+                  ( ("pkts" variable
+                       (:pointer 2
+                        :type ("rte_mbuf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30042 30065])
+                    ("unsent" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30066 30082])
+                    ("userdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30085 30100]))                  
+                :type "void")
+                nil [30004 30226])
+            ("rte_eth_tx_buffer_set_err_callback" function
+               (:arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev_tx_buffer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30267 30304])
+                    ("cbfn" variable (:type ("buffer_tx_error_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30307 30331])
+                    ("userdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30332 30347]))                  
+                :type "int")
+                nil [30228 30430])
+            ("rte_eth_tx_buffer_init" function
+               (:arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev_tx_buffer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30459 30496])
+                    ("size" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30497 30511]))                  
+                :type "int")
+                nil [30432 30743])
+            ("rte_eth_tx_done_cleanup" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30773 30789])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30790 30808])
+                    ("free_cnt" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30809 30827]))                  
+                :type "int")
+                nil [30745 31200])
+            ("rte_eth_promiscuous_enable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31234 31250]))                  
+                :type "void")
+                nil [31202 31484])
+            ("rte_eth_promiscuous_disable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31519 31535]))                  
+                :type "void")
+                nil [31486 31771])
+            ("rte_eth_promiscuous_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31801 31817]))                  
+                :type "int")
+                nil [31773 31967])
+            ("rte_eth_allmulticast_enable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32002 32018]))                  
+                :type "void")
+                nil [31969 32256])
+            ("rte_eth_allmulticast_disable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32292 32308]))                  
+                :type "void")
+                nil [32258 32548])
+            ("rte_eth_allmulticast_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32579 32595]))                  
+                :type "int")
+                nil [32550 32747])
+            ("rte_eth_dev_atomic_read_link_status" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32803 32827])
+                    ("link" variable
+                       (:pointer 1
+                        :type ("rte_eth_link" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [32832 32858]))                  
+                :type "int")
+                nil [32749 33063])
+            ("rte_eth_link_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33087 33103])
+                    ("eth_link" variable
+                       (:pointer 1
+                        :type ("rte_eth_link" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33104 33134]))                  
+                :type "void")
+                nil [33065 33475])
+            ("rte_eth_link_get_nowait" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33506 33522])
+                    ("eth_link" variable
+                       (:pointer 1
+                        :type ("rte_eth_link" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33523 33553]))                  
+                :type "void")
+                nil [33477 33894])
+            ("rte_eth_stats_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33918 33934])
+                    ("stats" variable
+                       (:pointer 1
+                        :type ("rte_eth_stats" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33935 33963]))                  
+                :type "int")
+                nil [33896 34284])
+            ("rte_eth_stats_reset" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34311 34327]))                  
+                :type "void")
+                nil [34286 34556])
+            ("get_xstats_count" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34586 34602]))                  
+                :type "int")
+                nil [34558 35287])
+            ("rte_eth_xstats_get_id_by_name" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35323 35339])
+                    ("xstat_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [35340 35363])
+                    ("id" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35366 35379]))                  
+                :type "int")
+                nil [35289 36291])
+            ("rte_eth_xstats_get_names_by_id" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36328 36344])
+                    ("xstats_names" variable
+                       (:pointer 1
+                        :type ("rte_eth_xstat_name" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [36346 36386])
+                    ("size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [36387 36405])
+                    ("ids" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36407 36421]))                  
+                :type "int")
+                nil [36293 39399])
+            ("rte_eth_xstats_get_names" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39430 39446])
+                    ("xstats_names" variable
+                       (:pointer 1
+                        :type ("rte_eth_xstat_name" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39448 39488])
+                    ("size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [39490 39508]))                  
+                :type "int")
+                nil [39401 41222])
+            ("rte_eth_xstats_get_by_id" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41295 41311])
+                    ("ids" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41312 41332])
+                    ("values" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41333 41350])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [41352 41367]))                  
+                :type "int")
+                nil [41266 44436])
+            ("rte_eth_xstats_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44461 44477])
+                    ("xstats" variable
+                       (:pointer 1
+                        :type ("rte_eth_xstat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44478 44507])
+                    ("n" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [44509 44524]))                  
+                :type "int")
+                nil [44438 46433])
+            ("rte_eth_xstats_reset" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46500 46516]))                  
+                :type "void")
+                nil [46474 46807])
+            ("set_queue_stats_mapping" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46844 46860])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46861 46879])
+                    ("stat_idx" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46880 46897])
+                    ("is_rx" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46900 46914]))                  
+                :type "int")
+                nil [46809 47195])
+            ("rte_eth_dev_set_tx_queue_stats_mapping" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47241 47257])
+                    ("tx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47258 47279])
+                    ("stat_idx" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47282 47299]))                  
+                :type "int")
+                nil [47198 47385])
+            ("rte_eth_dev_set_rx_queue_stats_mapping" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47431 47447])
+                    ("rx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47448 47469])
+                    ("stat_idx" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47472 47489]))                  
+                :type "int")
+                nil [47388 47575])
+            ("rte_eth_dev_fw_version_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47608 47624])
+                    ("fw_version" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [47625 47642])
+                    ("fw_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47643 47658]))                  
+                :type "int")
+                nil [47577 47910])
+            ("rte_eth_dev_info_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47938 47954])
+                    ("dev_info" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47955 47989]))                  
+                :type "void")
+                nil [47912 48557])
+            ("rte_eth_dev_get_supported_ptypes" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48596 48612])
+                    ("ptype_mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48613 48633])
+                    ("ptypes" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48639 48656])
+                    ("num" variable (:type "int") (reparse-symbol arg-sub-list) [48657 48665]))                  
+                :type "int")
+                nil [48559 49154])
+            ("rte_eth_macaddr_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49181 49197])
+                    ("mac_addr" variable
+                       (:pointer 1
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49198 49226]))                  
+                :type "void")
+                nil [49156 49384])
+            ("rte_eth_dev_get_mtu" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49411 49427])
+                    ("mtu" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49428 49442]))                  
+                :type "int")
+                nil [49387 49595])
+            ("rte_eth_dev_set_mtu" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49621 49637])
+                    ("mtu" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49638 49651]))                  
+                :type "int")
+                nil [49597 49931])
+            ("rte_eth_dev_vlan_filter" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49961 49977])
+                    ("vlan_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49978 49995])
+                    ("on" variable (:type "int") (reparse-symbol arg-sub-list) [49996 50003]))                  
+                :type "int")
+                nil [49933 50538])
+            ("rte_eth_dev_set_vlan_strip_on_queue" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50580 50596])
+                    ("rx_queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50597 50618])
+                    ("on" variable (:type "int") (reparse-symbol arg-sub-list) [50619 50626]))                  
+                :type "int")
+                nil [50540 51019])
+            ("rte_eth_dev_set_vlan_ether_type" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51057 51073])
+                    ("vlan_type" variable (:type ("rte_vlan_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [51078 51107])
+                    ("tpid" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51112 51126]))                  
+                :type "int")
+                nil [51021 51372])
+            ("rte_eth_dev_set_vlan_offload" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51407 51423])
+                    ("offload_mask" variable (:type "int") (reparse-symbol arg-sub-list) [51424 51441]))                  
+                :type "int")
+                nil [51374 52486])
+            ("rte_eth_dev_get_vlan_offload" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52521 52537]))                  
+                :type "int")
+                nil [52488 52929])
+            ("rte_eth_dev_set_vlan_pvid" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52961 52977])
+                    ("pvid" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52978 52992])
+                    ("on" variable (:type "int") (reparse-symbol arg-sub-list) [52993 53000]))                  
+                :type "int")
+                nil [52931 53243])
+            ("rte_eth_dev_flow_ctrl_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53275 53291])
+                    ("fc_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_fc_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53292 53324]))                  
+                :type "int")
+                nil [53245 53600])
+            ("rte_eth_dev_flow_ctrl_set" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53632 53648])
+                    ("fc_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_fc_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53649 53681]))                  
+                :type "int")
+                nil [53602 54064])
+            ("rte_eth_dev_priority_flow_ctrl_set" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54105 54121])
+                    ("pfc_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_pfc_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54122 54156]))                  
+                :type "int")
+                nil [54066 54609])
+            ("rte_eth_check_reta_mask" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reta_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_rss_reta_entry64" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54646 54689])
+                    ("reta_size" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54693 54712]))                  
+                :type "int")
+                nil [54611 54927])
+            ("rte_eth_check_reta_entry" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("reta_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_rss_reta_entry64" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54965 55008])
+                    ("reta_size" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55013 55032])
+                    ("max_rxq" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55037 55054]))                  
+                :type "int")
+                nil [54929 55608])
+            ("rte_eth_dev_rss_reta_update" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55642 55658])
+                    ("reta_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_rss_reta_entry64" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55666 55709])
+                    ("reta_size" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55717 55736]))                  
+                :type "int")
+                nil [55610 56237])
+            ("rte_eth_dev_rss_reta_query" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56270 56286])
+                    ("reta_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_rss_reta_entry64" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56293 56336])
+                    ("reta_size" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56343 56362]))                  
+                :type "int")
+                nil [56239 56723])
+            ("rte_eth_dev_rss_hash_update" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56757 56773])
+                    ("rss_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_rss_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56774 56808]))                  
+                :type "int")
+                nil [56725 57298])
+            ("rte_eth_dev_rss_hash_conf_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57334 57350])
+                    ("rss_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_rss_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [57360 57394]))                  
+                :type "int")
+                nil [57300 57640])
+            ("rte_eth_dev_udp_tunnel_port_add" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57678 57694])
+                    ("udp_tunnel" variable
+                       (:pointer 1
+                        :type ("rte_eth_udp_tunnel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [57699 57737]))                  
+                :type "int")
+                nil [57642 58218])
+            ("rte_eth_dev_udp_tunnel_port_delete" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58259 58275])
+                    ("udp_tunnel" variable
+                       (:pointer 1
+                        :type ("rte_eth_udp_tunnel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [58283 58321]))                  
+                :type "int")
+                nil [58220 58803])
+            ("rte_eth_led_on" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58824 58840]))                  
+                :type "int")
+                nil [58805 59062])
+            ("rte_eth_led_off" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59084 59100]))                  
+                :type "int")
+                nil [59064 59324])
+            ("get_mac_addr_index" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59460 59476])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59477 59507]))                  
+                :type "int")
+                nil [59430 59797])
+            ("null_mac_addr" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("ether_addr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [59799 59844])
+            ("rte_eth_dev_mac_addr_add" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59875 59891])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59892 59916])
+                    ("pool" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59920 59934]))                  
+                :type "int")
+                nil [59846 61143])
+            ("rte_eth_dev_mac_addr_remove" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61177 61193])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61194 61218]))                  
+                :type "int")
+                nil [61145 61908])
+            ("rte_eth_dev_default_mac_addr_set" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61947 61963])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61964 61988]))                  
+                :type "int")
+                nil [61910 62391])
+            ("get_hash_mac_addr_index" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62533 62549])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62550 62580]))                  
+                :type "int")
+                nil [62498 62929])
+            ("rte_eth_dev_uc_hash_table_set" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62965 62981])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [62982 63006])
+                    ("on" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63011 63022]))                  
+                :type "int")
+                nil [62931 64125])
+            ("rte_eth_dev_uc_all_hash_table_set" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64165 64181])
+                    ("on" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64182 64193]))                  
+                :type "int")
+                nil [64127 64443])
+            ("rte_eth_set_queue_rate_limit" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64478 64494])
+                    ("queue_idx" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64495 64514])
+                    ("tx_rate" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64520 64537]))                  
+                :type "int")
+                nil [64445 65293])
+            ("rte_eth_mirror_rule_set" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65323 65339])
+                    ("mirror_conf" variable
+                       (:pointer 1
+                        :type ("rte_eth_mirror_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [65343 65383])
+                    ("rule_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65387 65403])
+                    ("on" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65404 65415]))                  
+                :type "int")
+                nil [65295 66367])
+            ("rte_eth_mirror_rule_reset" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [66399 66415])
+                    ("rule_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [66416 66432]))                  
+                :type "int")
+                nil [66369 66679])
+            ("rte_eth_dev_callback_register" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [66715 66731])
+                    ("event" variable (:type ("rte_eth_event_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [66735 66765])
+                    ("cb_fn" variable (:type ("rte_eth_dev_cb_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [66769 66793])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [66794 66807]))                  
+                :type "int")
+                nil [66681 67614])
+            ("rte_eth_dev_callback_unregister" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67652 67668])
+                    ("event" variable (:type ("rte_eth_event_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [67672 67702])
+                    ("cb_fn" variable (:type ("rte_eth_dev_cb_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67706 67730])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [67731 67744]))                  
+                :type "int")
+                nil [67616 68493])
+            ("_rte_eth_dev_callback_process" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [68530 68554])
+                    ("event" variable (:type ("rte_eth_event_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [68556 68586])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [68587 68600]))                  
+                :type "void")
+                nil [68495 69164])
+            ("rte_eth_dev_rx_intr_ctl" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [69194 69210])
+                    ("epfd" variable (:type "int") (reparse-symbol arg-sub-list) [69211 69220])
+                    ("op" variable (:type "int") (reparse-symbol arg-sub-list) [69221 69228])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [69229 69240]))                  
+                :type "int")
+                nil [69166 69980])
+            ("rte_eth_dma_zone_reserve" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("rte_eth_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [70034 70064])
+                    ("ring_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [70065 70087])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70092 70110])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70111 70123])
+                    ("align" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [70124 70139])
+                    ("socket_id" variable (:type "int") (reparse-symbol arg-sub-list) [70144 70158]))                  
+                :type ("rte_memzone" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [69982 70622])
+            ("rte_eth_dev_rx_intr_ctl_q" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70654 70670])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [70671 70689])
+                    ("epfd" variable (:type "int") (reparse-symbol arg-sub-list) [70695 70704])
+                    ("op" variable (:type "int") (reparse-symbol arg-sub-list) [70705 70712])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [70713 70724]))                  
+                :type "int")
+                nil [70624 71533])
+            ("rte_eth_dev_rx_intr_enable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [71566 71582])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [71589 71607]))                  
+                :type "int")
+                nil [71535 71861])
+            ("rte_eth_dev_rx_intr_disable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [71895 71911])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [71919 71937]))                  
+                :type "int")
+                nil [71863 72193])
+            ("rte_eth_dev_filter_supported" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [75117 75133])
+                    ("filter_type" variable (:type ("rte_filter_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [75134 75167]))                  
+                :type "int")
+                nil [75084 75435])
+            ("rte_eth_dev_filter_ctrl" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [75465 75481])
+                    ("filter_type" variable (:type ("rte_filter_type" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [75482 75515])
+                    ("filter_op" variable (:type ("rte_filter_op" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [75525 75554])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [75555 75565]))                  
+                :type "int")
+                nil [75437 75819])
+            ("rte_eth_add_rx_callback" function
+               (:pointer 1
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [75852 75868])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [75869 75887])
+                    ("fn" variable (:type ("rte_rx_callback_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [75890 75912])
+                    ("user_param" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [75913 75930]))                  
+                :type "void")
+                nil [75821 76762])
+            ("rte_eth_add_first_rx_callback" function
+               (:pointer 1
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [76801 76817])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [76818 76836])
+                    ("fn" variable (:type ("rte_rx_callback_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [76839 76861])
+                    ("user_param" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [76862 76879]))                  
+                :type "void")
+                nil [76764 77606])
+            ("rte_eth_add_tx_callback" function
+               (:pointer 1
+                :arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [77639 77655])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [77656 77674])
+                    ("fn" variable (:type ("rte_tx_callback_fn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [77677 77699])
+                    ("user_param" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [77700 77717]))                  
+                :type "void")
+                nil [77608 78548])
+            ("rte_eth_remove_rx_callback" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78581 78597])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78598 78616])
+                    ("user_cb" variable
+                       (:pointer 1
+                        :type ("rte_eth_rxtx_callback" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [78619 78657]))                  
+                :type "int")
+                nil [78550 79395])
+            ("rte_eth_remove_tx_callback" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79428 79444])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79445 79463])
+                    ("user_cb" variable
+                       (:pointer 1
+                        :type ("rte_eth_rxtx_callback" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [79466 79504]))                  
+                :type "int")
+                nil [79397 80241])
+            ("rte_eth_rx_queue_info_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [80273 80289])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [80290 80308])
+                    ("qinfo" variable
+                       (:pointer 1
+                        :type ("rte_eth_rxq_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [80310 80341]))                  
+                :type "int")
+                nil [80243 80788])
+            ("rte_eth_tx_queue_info_get" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [80820 80836])
+                    ("queue_id" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [80837 80855])
+                    ("qinfo" variable
+                       (:pointer 1
+                        :type ("rte_eth_txq_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [80857 80888]))                  
+                :type "int")
+                nil [80790 81335])
+            ("rte_eth_dev_set_mc_addr_list" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81370 81386])
+                    ("mc_addr_set" variable
+                       (:pointer 1
+                        :type ("ether_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [81395 81426])
+                    ("nb_mc_addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81435 81455]))                  
+                :type "int")
+                nil [81337 81712])
+            ("rte_eth_timesync_enable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81742 81758]))                  
+                :type "int")
+                nil [81714 81991])
+            ("rte_eth_timesync_disable" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82022 82038]))                  
+                :type "int")
+                nil [81993 82273])
+            ("rte_eth_timesync_read_rx_timestamp" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82314 82330])
+                    ("timestamp" variable
+                       (:pointer 1
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [82331 82358])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82366 82381]))                  
+                :type "int")
+                nil [82275 82654])
+            ("rte_eth_timesync_read_tx_timestamp" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82695 82711])
+                    ("timestamp" variable
+                       (:pointer 1
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [82712 82739]))                  
+                :type "int")
+                nil [82656 83005])
+            ("rte_eth_timesync_adjust_time" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83040 83056])
+                    ("delta" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83057 83071]))                  
+                :type "int")
+                nil [83007 83321])
+            ("rte_eth_timesync_read_time" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83354 83370])
+                    ("timestamp" variable
+                       (:pointer 1
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [83371 83398]))                  
+                :type "int")
+                nil [83323 83648])
+            ("rte_eth_timesync_write_time" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83682 83698])
+                    ("timestamp" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("timespec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [83699 83732]))                  
+                :type "int")
+                nil [83650 83984])
+            ("rte_eth_dev_get_reg_info" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84015 84031])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("rte_dev_reg_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84032 84062]))                  
+                :type "int")
+                nil [83986 84285])
+            ("rte_eth_dev_get_eeprom_length" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84321 84337]))                  
+                :type "int")
+                nil [84287 84574])
+            ("rte_eth_dev_get_eeprom" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84603 84619])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("rte_dev_eeprom_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84620 84653]))                  
+                :type "int")
+                nil [84576 84882])
+            ("rte_eth_dev_set_eeprom" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [84911 84927])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("rte_dev_eeprom_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [84928 84961]))                  
+                :type "int")
+                nil [84884 85190])
+            ("rte_eth_dev_get_dcb_info" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85221 85237])
+                    ("dcb_info" variable
+                       (:pointer 1
+                        :type ("rte_eth_dcb_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [85246 85280]))                  
+                :type "int")
+                nil [85192 85573])
+            ("rte_eth_dev_l2_tunnel_eth_type_conf" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85615 85631])
+                    ("l2_tunnel" variable
+                       (:pointer 1
+                        :type ("rte_eth_l2_tunnel_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [85640 85681]))                  
+                :type "int")
+                nil [85575 86175])
+            ("rte_eth_dev_l2_tunnel_offload_set" function
+               (:arguments 
+                  ( ("port_id" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86215 86231])
+                    ("l2_tunnel" variable
+                       (:pointer 1
+                        :type ("rte_eth_l2_tunnel_conf" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [86238 86279])
+                    ("mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86286 86300])
+                    ("en" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86307 86318]))                  
+                :type "int")
+                nil [86177 86914]))          
+      :file "rte_ethdev.c"
+      :pointmax 86915
+      :fsize 86914
+      :lastmodtime '(22914 63283 614385 474000)
+      :unmatched-syntax '((semantic-list 4673 . 4695) (symbol 4662 . 4673))
+      :lexical-table 
+        '(("RTE_NB_TXQ_STATS" . ((semantic-list "(sizeof(rte_txq_stats_strings) /	\\
+		sizeof(rte_txq_stats_strings[0]))" 4364 . 4434)))
+          ("RTE_NB_STATS" . ((semantic-list "(sizeof(rte_stats_strings) / sizeof(rte_stats_strings[0]))" 3752 . 3810)))
+          ("RTE_NB_RXQ_STATS" . ((semantic-list "(sizeof(rte_rxq_stats_strings) /	\\
+		sizeof(rte_rxq_stats_strings[0]))" 4080 . 4150)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "rte_ethdev.h"
+      :fsize 168217
+      :lastmodtime '(22914 63283 615385 467000)))
+  :file "!root!spdk!dpdk!lib!librte_ether!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

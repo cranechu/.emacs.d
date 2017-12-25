@@ -1,0 +1,14 @@
+/root/spdk/lib/nvmf/rdma.c
+/root/spdk/lib/nvmf/#rdma.c#
+/root/spdk/app/nvmf_tgt/conf.c
+/root/spdk/app/nvmf_tgt/#conf.c#
+/root/spdk/include/spdk/log.h
+/root/spdk/include/spdk/#log.h#
+/root/spdk/lib/conf/conf.c
+/root/spdk/lib/conf/#conf.c#
+/root/spdk/lib/log/log.c
+/root/spdk/lib/log/#log.c#
+/root/spdk/TAGS
+/root/spdk/#TAGS#
+/root/spdk/lib/nvmf/nvmf_internal.h
+/root/spdk/lib/nvmf/#nvmf_internal.h#

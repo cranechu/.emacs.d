@@ -1,0 +1,2157 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/blob.h" include nil nil [1691 1713])
+            ("spdk/env.h" include nil nil [1714 1735])
+            ("spdk/queue.h" include nil nil [1736 1759])
+            ("spdk/io_channel.h" include nil nil [1760 1788])
+            ("spdk/bit_array.h" include nil nil [1789 1816])
+            ("spdk_internal/log.h" include nil nil [1818 1848])
+            ("blobstore.h" include nil nil [1850 1872])
+            ("request.h" include nil nil [1873 1893])
+            ("divide_round_up" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("num" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1932 1943])
+                    ("divisor" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1944 1959]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1895 2002])
+            ("_spdk_bs_claim_cluster" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2039 2066])
+                    ("cluster_num" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2067 2088]))                  
+                :type "void")
+                nil [2004 2417])
+            ("_spdk_bs_release_cluster" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2456 2483])
+                    ("cluster_num" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2484 2505]))                  
+                :type "void")
+                nil [2419 2853])
+            ("_spdk_blob_alloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2898 2925])
+                    ("id" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2926 2942]))                  
+                :type ("spdk_blob" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2855 3360])
+            ("_spdk_blob_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3390 3413]))                  
+                :type "void")
+                nil [3362 3775])
+            ("_spdk_blob_mark_clean" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3810 3833]))                  
+                :type "int")
+                nil [3777 4923])
+            ("_spdk_blob_parse_page" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("page" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_blob_md_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4959 4996])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4997 5020]))                  
+                :type "void")
+                nil [4925 7780])
+            ("_spdk_blob_parse" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pages" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_blob_md_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7810 7848])
+                    ("page_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7849 7869])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7873 7896]))                  
+                :type "int")
+                nil [7782 8388])
+            ("_spdk_blob_serialize_add_page" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8431 8460])
+                    ("pages" variable
+                       (:pointer 2
+                        :type ("spdk_blob_md_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8470 8503])
+                    ("page_count" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8513 8534])
+                    ("last_page" variable
+                       (:pointer 2
+                        :type ("spdk_blob_md_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8544 8581]))                  
+                :type "int")
+                nil [8390 9347])
+            ("_spdk_blob_serialize_xattr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("xattr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_xattr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9529 9560])
+                    ("buf" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9567 9580])
+                    ("buf_sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9581 9595])
+                    ("required_sz" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9602 9622]))                  
+                :type "int")
+                nil [9491 10340])
+            ("_spdk_blob_serialize_extent" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10382 10411])
+                    ("start_cluster" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10419 10442])
+                    ("next_cluster" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10443 10466])
+                    ("buf" variable
+                       (:pointer 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10474 10487])
+                    ("buf_sz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10488 10502]))                  
+                :type "void")
+                nil [10342 11951])
+            ("_spdk_blob_serialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11985 12014])
+                    ("pages" variable
+                       (:pointer 2
+                        :type ("spdk_blob_md_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12015 12048])
+                    ("page_count" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12056 12077]))                  
+                :type "int")
+                nil [11953 13970])
+            ("spdk_blob_load_ctx" type
+               (:members 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [14001 14026])
+                    ("pages" variable
+                       (:pointer 1
+                        :type ("spdk_blob_md_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [14029 14061])
+                    ("num_pages" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14063 14084])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14087 14115])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [14117 14133]))                  
+                :type "struct")
+                nil [13972 14136])
+            ("_spdk_blob_load_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14170 14194])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [14195 14208])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [14209 14221]))                  
+                :type "void")
+                nil [14138 15284])
+            ("_spdk_blob_load" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15357 15381])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15382 15405])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15408 15435])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [15436 15449]))                  
+                :type "void")
+                nil [15329 16374])
+            ("spdk_blob_persist_ctx" type
+               (:members 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [16408 16433])
+                    ("pages" variable
+                       (:pointer 1
+                        :type ("spdk_blob_md_page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [16436 16468])
+                    ("idx" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16471 16486])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol classsubparts) [16489 16517])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [16519 16535]))                  
+                :type "struct")
+                nil [16376 16538])
+            ("_spdk_blob_persist_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16580 16604])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16605 16618])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [16619 16631]))                  
+                :type "void")
+                nil [16540 16907])
+            ("_spdk_blob_persist_unmap_clusters_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16959 16983])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16984 16997])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [16998 17010]))                  
+                :type "void")
+                nil [16909 17836])
+            ("_spdk_blob_persist_unmap_clusters" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17884 17908])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17909 17922])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [17923 17935]))                  
+                :type "void")
+                nil [17838 19260])
+            ("_spdk_blob_persist_unmap_pages_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19309 19333])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19334 19347])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [19348 19360]))                  
+                :type "void")
+                nil [19262 20067])
+            ("_spdk_blob_persist_unmap_pages" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20112 20136])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [20137 20150])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [20151 20163]))                  
+                :type "void")
+                nil [20069 21280])
+            ("_spdk_blob_persist_write_page_root" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21329 21353])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [21354 21367])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [21368 21380]))                  
+                :type "void")
+                nil [21282 22044])
+            ("_spdk_blob_persist_write_page_chain" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22094 22118])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [22119 22132])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [22133 22145]))                  
+                :type "void")
+                nil [22046 23035])
+            ("_spdk_resize_blob" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23066 23089])
+                    ("sz" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23090 23102]))                  
+                :type "int")
+                nil [23037 24854])
+            ("_spdk_blob_persist" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24914 24938])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [24939 24962])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24968 24995])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [24996 25009]))                  
+                :type "void")
+                nil [24883 27440])
+            ("_spdk_blob_request_submit_rw" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27483 27506])
+                    ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [27507 27540])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27549 27563])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27564 27580])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27581 27597])
+                    ("cb_fn" variable (:type ("spdk_blob_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27606 27634])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [27635 27648])
+                    ("read" variable (:type "bool") (reparse-symbol arg-sub-list) [27649 27659]))                  
+                :type "void")
+                nil [27442 28731])
+            ("_spdk_blob_lookup" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28777 28804])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28805 28825]))                  
+                :type ("spdk_blob" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [28733 28962])
+            ("_spdk_bs_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28999 29026])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_bs_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [29027 29059])
+                    ("max_ops" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29063 29080]))                  
+                :type "int")
+                nil [28964 29494])
+            ("_spdk_bs_md_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29534 29550])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29551 29565]))                  
+                :type "int")
+                nil [29496 29788])
+            ("_spdk_bs_io_channel_create" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29828 29844])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29845 29859]))                  
+                :type "int")
+                nil [29790 30087])
+            ("_spdk_bs_channel_destroy" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("io_device" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30127 30143])
+                    ("ctx_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30144 30158]))                  
+                :type "void")
+                nil [30090 30300])
+            ("_spdk_bs_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30328 30355]))                  
+                :type "void")
+                nil [30302 30781])
+            ("spdk_bs_opts_init" function
+               (:arguments 
+                  ( ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_bs_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30806 30832]))                  
+                :type "void")
+                nil [30783 31038])
+            ("_spdk_bs_alloc" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31087 31111])
+                    ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_bs_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [31112 31138]))                  
+                :type ("spdk_blob_store" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [31040 32339])
+            ("spdk_bs_load_ctx" type
+               (:members 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [32394 32422])
+                    ("super" variable
+                       (:pointer 1
+                        :type ("spdk_bs_super_block" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [32424 32458])
+                    ("mask" variable
+                       (:pointer 1
+                        :type ("spdk_bs_md_mask" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [32461 32491]))                  
+                :type "struct")
+                nil [32367 32494])
+            ("_spdk_bs_load_used_clusters_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32540 32564])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [32565 32578])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [32579 32591]))                  
+                :type "void")
+                nil [32496 33854])
+            ("_spdk_bs_load_used_pages_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33897 33921])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [33922 33935])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [33936 33948]))                  
+                :type "void")
+                nil [33856 35602])
+            ("_spdk_bs_load_super_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35640 35664])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [35665 35678])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [35679 35691]))                  
+                :type "void")
+                nil [35604 37488])
+            ("spdk_bs_load" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [37508 37532])
+                    ("cb_fn" variable (:type ("spdk_bs_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37539 37577])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [37578 37591]))                  
+                :type "void")
+                nil [37490 38750])
+            ("spdk_bs_init_ctx" type
+               (:members 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [38829 38857])
+                    ("super" variable
+                       (:pointer 1
+                        :type ("spdk_bs_super_block" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [38859 38893]))                  
+                :type "struct")
+                nil [38802 38896])
+            ("_spdk_bs_init_persist_super_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38942 38966])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [38967 38980])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [38981 38993]))                  
+                :type "void")
+                nil [38898 39119])
+            ("_spdk_bs_init_trim_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39156 39180])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [39181 39194])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [39195 39207]))                  
+                :type "void")
+                nil [39121 39463])
+            ("spdk_bs_init" function
+               (:arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39483 39507])
+                    ("o" variable
+                       (:pointer 1
+                        :type ("spdk_bs_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [39508 39531])
+                    ("cb_fn" variable (:type ("spdk_bs_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39538 39576])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [39577 39590]))                  
+                :type "void")
+                nil [39465 42803])
+            ("spdk_bs_unload_ctx" type
+               (:members 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [42886 42914])
+                    ("super" variable
+                       (:pointer 1
+                        :type ("spdk_bs_super_block" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [42916 42950])
+                    ("mask" variable
+                       (:pointer 1
+                        :type ("spdk_bs_md_mask" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [42953 42983]))                  
+                :type "struct")
+                nil [42857 42986])
+            ("_spdk_bs_unload_write_super_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43032 43056])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43057 43070])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [43071 43083]))                  
+                :type "void")
+                nil [42988 43237])
+            ("_spdk_bs_unload_write_used_clusters_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43291 43315])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43316 43329])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [43330 43342]))                  
+                :type "void")
+                nil [43239 43719])
+            ("_spdk_bs_unload_write_used_pages_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43770 43794])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [43795 43808])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [43809 43821]))                  
+                :type "void")
+                nil [43721 44877])
+            ("_spdk_bs_unload_read_super_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44922 44946])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [44947 44960])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [44961 44973]))                  
+                :type "void")
+                nil [44879 45977])
+            ("spdk_bs_unload" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [45999 46026])
+                    ("cb_fn" variable (:type ("spdk_bs_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46027 46053])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [46054 46067]))                  
+                :type "void")
+                nil [45979 46947])
+            ("spdk_bs_set_super" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [46998 47025])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47026 47046])
+                    ("cb_fn" variable (:type ("spdk_bs_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47051 47077])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [47078 47091]))                  
+                :type "void")
+                nil [46975 47140])
+            ("spdk_bs_get_super" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47165 47192])
+                    ("cb_fn" variable (:type ("spdk_blob_op_with_id_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47197 47233])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [47234 47247]))                  
+                :type "void")
+                nil [47142 47393])
+            ("spdk_bs_get_cluster_size" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47429 47456]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [47395 47484])
+            ("spdk_bs_get_page_size" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47517 47544]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [47486 47590])
+            ("spdk_bs_free_cluster_count" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47628 47655]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [47592 47690])
+            ("spdk_bs_register_md_thread" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47723 47750]))                  
+                :type "int")
+                nil [47692 47831])
+            ("spdk_bs_unregister_md_thread" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47866 47893]))                  
+                :type "int")
+                nil [47833 47957])
+            ("spdk_blob_get_id" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [47989 48012]))                  
+                :type ("spdk_blob_id" type (:type "class") nil nil))
+                nil [47959 48058])
+            ("spdk_blob_get_num_pages" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48093 48116]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [48060 48215])
+            ("spdk_blob_get_num_clusters" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48253 48276]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [48217 48339])
+            ("_spdk_bs_md_create_blob_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48417 48441])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [48442 48455])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [48456 48468]))                  
+                :type "void")
+                nil [48377 48572])
+            ("spdk_bs_md_create_blob" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [48602 48629])
+                    ("cb_fn" variable (:type ("spdk_blob_op_with_id_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48637 48673])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [48674 48687]))                  
+                :type "void")
+                nil [48574 49793])
+            ("spdk_bs_md_resize_blob" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49891 49914])
+                    ("sz" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49915 49927]))                  
+                :type "int")
+                nil [49864 50188])
+            ("_spdk_bs_md_delete_blob_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50301 50325])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50326 50339])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [50340 50352]))                  
+                :type "void")
+                nil [50261 50456])
+            ("_spdk_bs_md_delete_open_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50498 50522])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50523 50536])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [50537 50549]))                  
+                :type "void")
+                nil [50458 50752])
+            ("spdk_bs_md_delete_blob" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50782 50809])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50810 50830])
+                    ("cb_fn" variable (:type ("spdk_blob_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50840 50868])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [50869 50882]))                  
+                :type "void")
+                nil [50754 51558])
+            ("_spdk_bs_md_open_blob_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51666 51690])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [51691 51704])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [51705 51717]))                  
+                :type "void")
+                nil [51628 51867])
+            ("spdk_bs_md_open_blob" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51895 51922])
+                    ("blobid" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51923 51943])
+                    ("cb_fn" variable (:type ("spdk_blob_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51949 51989])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [51990 52003]))                  
+                :type "void")
+                nil [51869 52916])
+            ("_spdk_blob_sync_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52983 53007])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53008 53021])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [53022 53034]))                  
+                :type "void")
+                nil [52951 53078])
+            ("spdk_bs_md_sync_blob" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53106 53129])
+                    ("cb_fn" variable (:type ("spdk_blob_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53135 53163])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53164 53177]))                  
+                :type "void")
+                nil [53080 53793])
+            ("_spdk_blob_close_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53895 53919])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53920 53933])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [53934 53946]))                  
+                :type "void")
+                nil [53862 54157])
+            ("spdk_bs_md_close_blob" function
+               (:arguments 
+                  ( ("b" variable
+                       (:pointer 2
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [54186 54207])
+                    ("cb_fn" variable (:type ("spdk_blob_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54214 54242])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [54243 54256]))                  
+                :type "void")
+                nil [54159 55050])
+            ("spdk_bs_alloc_io_channel" function
+               (:pointer 1
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55134 55161]))                  
+                :type ("spdk_io_channel" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [55085 55210])
+            ("spdk_bs_free_io_channel" function
+               (:arguments 
+                  ( ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55241 55273]))                  
+                :type "void")
+                nil [55212 55308])
+            ("spdk_bs_io_flush_channel" function
+               (:arguments 
+                  ( ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55340 55372])
+                    ("cb_fn" variable (:type ("spdk_blob_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55382 55410])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55411 55424]))                  
+                :type "void")
+                nil [55310 55485])
+            ("spdk_bs_io_write_blob" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55514 55537])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55538 55570])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55577 55591])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55592 55608])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55609 55625])
+                    ("cb_fn" variable (:type ("spdk_blob_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55632 55660])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55661 55674]))                  
+                :type "void")
+                nil [55487 55771])
+            ("spdk_bs_io_read_blob" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55799 55822])
+                    ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [55823 55855])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55861 55875])
+                    ("offset" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55876 55892])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55893 55909])
+                    ("cb_fn" variable (:type ("spdk_blob_op_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55915 55943])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [55944 55957]))                  
+                :type "void")
+                nil [55773 56053])
+            ("spdk_bs_iter_ctx" type
+               (:members 
+                  ( ("page_num" variable (:type ("int64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [56082 56099])
+                    ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [56101 56128])
+                    ("cb_fn" variable (:type ("spdk_blob_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol classsubparts) [56131 56171])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [56173 56186]))                  
+                :type "struct")
+                nil [56055 56189])
+            ("_spdk_bs_iter_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [56221 56234])
+                    ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56235 56258])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [56259 56271]))                  
+                :type "void")
+                nil [56191 56923])
+            ("spdk_bs_md_iter_first" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [56952 56979])
+                    ("cb_fn" variable (:type ("spdk_blob_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56988 57028])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [57029 57042]))                  
+                :type "void")
+                nil [56925 57285])
+            ("_spdk_bs_iter_close_cpl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [57323 57336])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [57337 57349]))                  
+                :type "void")
+                nil [57287 57429])
+            ("spdk_bs_md_iter_next" function
+               (:arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [57457 57484])
+                    ("b" variable
+                       (:pointer 2
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [57485 57506])
+                    ("cb_fn" variable (:type ("spdk_blob_op_with_handle_complete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57514 57554])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [57555 57568]))                  
+                :type "void")
+                nil [57431 57976])
+            ("spdk_blob_md_set_xattr" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [58005 58028])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [58029 58046])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [58047 58065])
+                    ("value_len" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58075 58094]))                  
+                :type "int")
+                nil [57978 58833])
+            ("spdk_blob_md_remove_xattr" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [58865 58888])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [58889 58906]))                  
+                :type "int")
+                nil [58835 59329])
+            ("spdk_bs_md_get_xattr_value" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59362 59385])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [59386 59403])
+                    ("value" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [59410 59429])
+                    ("value_len" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59430 59448]))                  
+                :type "int")
+                nil [59331 59659])
+            ("spdk_xattr_names" type
+               (:members 
+                  ( ("count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [59688 59703])
+                    ("names" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [59705 59726]))                  
+                :type "struct")
+                nil [59661 59729])
+            ("spdk_bs_md_get_xattr_names" function
+               (:arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59762 59785])
+                    ("names" variable
+                       (:pointer 2
+                        :type ("spdk_xattr_names" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [59792 59824]))                  
+                :type "int")
+                nil [59731 60170])
+            ("spdk_xattr_names_get_count" function
+               (:arguments 
+                  ( ("names" variable
+                       (:pointer 1
+                        :type ("spdk_xattr_names" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60208 60239]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [60172 60290])
+            ("spdk_xattr_names_get_name" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("names" variable
+                       (:pointer 1
+                        :type ("spdk_xattr_names" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60331 60362])
+                    ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [60363 60378]))                  
+                :type "char")
+                nil [60292 60460])
+            ("spdk_xattr_names_free" function
+               (:arguments 
+                  ( ("names" variable
+                       (:pointer 1
+                        :type ("spdk_xattr_names" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [60489 60520]))                  
+                :type "void")
+                nil [60462 60538])
+            ("SPDK_LOG_REGISTER_TRACE_FLAG" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("SPDK_TRACE_BLOB" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [60577 60593]))                  
+                :type "int")
+                nil [60540 60594]))          
+      :file "blobstore.c"
+      :pointmax 60595
+      :fsize 60594
+      :lastmodtime '(22926 45281 448063 946000)
+      :unmatched-syntax '((string 60569 . 60575)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("SPDK_BLOBSTORE_H" variable (:constant-flag t) nil [1698 1714])
+            ("spdk/assert.h" include nil nil [1716 1740])
+            ("spdk/blob.h" include nil nil [1741 1763])
+            ("spdk/queue.h" include nil nil [1764 1787])
+            ("spdk/util.h" include nil nil [1788 1810])
+            ("SPDK_BLOB_OPTS_CLUSTER_SZ" variable (:constant-flag t) nil [1912 1937])
+            ("SPDK_BLOB_OPTS_NUM_MD_PAGES" variable (:constant-flag t) nil [1960 1987])
+            ("SPDK_BLOB_OPTS_MAX_MD_OPS" variable (:constant-flag t) nil [2007 2032])
+            ("SPDK_BLOB_OPTS_MAX_CHANNEL_OPS" variable (:constant-flag t) nil [2044 2074])
+            ("spdk_xattr" type
+               (:members 
+                  ( ("index" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2139 2154])
+                    ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2156 2168])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2170 2183])
+                    ("value_len" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2185 2204])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [2230 2235]))                  
+                :type "struct")
+                nil [2080 2238])
+            ("spdk_blob_mut_data" type
+               (:members 
+                  ( ("num_clusters" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2429 2451])
+                    ("clusters" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2553 2572])
+                    ("cluster_array_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2669 2696])
+                    ("num_pages" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2731 2750])
+                    ("pages" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2858 2874]))                  
+                :type "struct")
+                nil [2357 2877])
+            ("spdk_blob_state" type
+               (:members 
+                  ( ("SPDK_BLOB_STATE_DIRTY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2979 3001])
+                    ("SPDK_BLOB_STATE_CLEAN" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3085 3107])
+                    ("SPDK_BLOB_STATE_LOADING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3189 3213])
+                    ("SPDK_BLOB_STATE_SYNCING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3295 3319]))                  
+                :type "enum")
+                nil [2879 3322])
+            ("spdk_blob" type
+               (:members 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [3344 3371])
+                    ("open_ref" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3374 3392])
+                    ("id" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3395 3411])
+                    ("state" variable (:type ("spdk_blob_state" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [3414 3442])
+                    ("clean" variable (:type ("spdk_blob_mut_data" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3654 3686])
+                    ("active" variable (:type ("spdk_blob_mut_data" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [3688 3721])
+                    ("xattrs" variable (:type "int") (reparse-symbol classsubparts) [3860 3867])
+                    ("link" variable (:type "int") (reparse-symbol classsubparts) [3893 3898]))                  
+                :type "struct")
+                nil [3324 3901])
+            ("spdk_blob_store" type
+               (:members 
+                  ( ("md_start" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3929 3949])
+                    ("md_len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3997 4015])
+                    ("md_target" variable (:type ("" type
+                         (:members 
+                            ( ("max_md_ops" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4051 4072])
+                              ("md_channel" variable
+                                 (:pointer 1
+                                  :type ("spdk_io_channel" type
+                                       (:prototype t
+                                        :type "struct")
+                                        nil nil))
+                                  (reparse-symbol classsubparts) [4075 4110]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4040 4124])
+                    ("io_target" variable (:type ("" type
+                         (:members 
+                            ( ("max_channel_ops" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4138 4164]))                            
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [4127 4178])
+                    ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4182 4207])
+                    ("used_md_pages" variable
+                       (:pointer 1
+                        :type ("spdk_bit_array" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4210 4248])
+                    ("used_clusters" variable
+                       (:pointer 1
+                        :type ("spdk_bit_array" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4250 4288])
+                    ("cluster_sz" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4291 4313])
+                    ("total_clusters" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4315 4341])
+                    ("num_free_clusters" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4343 4372])
+                    ("pages_per_cluster" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4374 4403])
+                    ("super_blob" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4406 4432])
+                    ("blobs" variable (:type "int") (reparse-symbol classsubparts) [4460 4466]))                  
+                :type "struct")
+                nil [3903 4469])
+            ("spdk_bs_channel" type
+               (:members 
+                  ( ("req_mem" variable
+                       (:pointer 1
+                        :type ("spdk_bs_request_set" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4497 4533])
+                    ("reqs" variable (:type "int") (reparse-symbol classsubparts) [4569 4574])
+                    ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4577 4605])
+                    ("dev" variable
+                       (:pointer 1
+                        :type ("spdk_bs_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4608 4633])
+                    ("dev_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4635 4672]))                  
+                :type "struct")
+                nil [4471 4675])
+            ("SPDK_BS_VERSION" variable (:constant-flag t) nil [4767 4782])
+            ("SPDK_MD_MASK_TYPE_USED_PAGES" variable (:constant-flag t) nil [4817 4845])
+            ("SPDK_MD_MASK_TYPE_USED_CLUSTERS" variable (:constant-flag t) nil [4856 4887])
+            ("spdk_bs_md_mask" type
+               (:members 
+                  ( ("type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4917 4931])
+                    ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4933 4949])
+                    ("mask" variable
+                       (:dereference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4965 4982]))                  
+                :type "struct")
+                nil [4891 4985])
+            ("SPDK_MD_DESCRIPTOR_TYPE_PADDING" variable (:constant-flag t) nil [4995 5026])
+            ("SPDK_MD_DESCRIPTOR_TYPE_EXTENT" variable (:constant-flag t) nil [5037 5067])
+            ("SPDK_MD_DESCRIPTOR_TYPE_XATTR" variable (:constant-flag t) nil [5078 5107])
+            ("spdk_blob_md_descriptor_xattr" type
+               (:members 
+                  ( ("type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5151 5165])
+                    ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5167 5183])
+                    ("name_length" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5186 5207])
+                    ("value_length" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5209 5231])
+                    ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5234 5248]))                  
+                :type "struct")
+                nil [5111 5308])
+            ("spdk_blob_md_descriptor_extent" type
+               (:members 
+                  ( ("type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5351 5365])
+                    ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5367 5383])
+                    ("extents" variable
+                       (:dereference 1
+                        :type ("" type
+                             (:members 
+                                ( ("cluster_idx" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5397 5425])
+                                  ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5428 5451]))                                
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5386 5493]))                  
+                :type "struct")
+                nil [5310 5496])
+            ("spdk_blob_md_descriptor" type
+               (:members 
+                  ( ("type" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5532 5546])
+                    ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5548 5564]))                  
+                :type "struct")
+                nil [5498 5567])
+            ("SPDK_INVALID_MD_PAGE" variable (:constant-flag t) nil [5577 5597])
+            ("spdk_blob_md_page" type
+               (:members 
+                  ( ("id" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5638 5658])
+                    ("sequence_num" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5661 5690])
+                    ("reserved0" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5692 5711])
+                    ("descriptors" variable
+                       (:dereference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5738 5765])
+                    ("next" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5768 5782])
+                    ("crc" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5784 5797]))                  
+                :type "struct")
+                nil [5610 5800])
+            ("SPDK_STATIC_ASSERT" function
+               (:prototype-flag t
+                :type "int")
+                nil [5801 5888])
+            ("SPDK_BS_SUPER_BLOCK_SIG" variable (:constant-flag t) nil [5898 5921])
+            ("spdk_bs_super_block" type
+               (:members 
+                  ( ("signature" variable
+                       (:dereference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5964 5986])
+                    ("version" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5988 6012])
+                    ("length" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6014 6037])
+                    ("clean" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6039 6054])
+                    ("super_blob" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6104 6128])
+                    ("cluster_size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6131 6153])
+                    ("used_page_mask_start" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6171 6201])
+                    ("used_page_mask_len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6249 6277])
+                    ("used_cluster_mask_start" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6302 6335])
+                    ("used_cluster_mask_len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6383 6414])
+                    ("md_start" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6439 6457])
+                    ("md_len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6505 6521])
+                    ("reserved" variable
+                       (:dereference 1
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6546 6570]))                  
+                :type "struct")
+                nil [5934 6573])
+            ("SPDK_STATIC_ASSERT" function
+               (:prototype-flag t
+                :type "int")
+                nil [6574 6667])
+            ("_spdk_bs_byte_to_lba" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7549 7576])
+                    ("length" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7577 7593]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [7505 7676])
+            ("_spdk_bs_lba_to_byte" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7722 7749])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7750 7763]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [7678 7800])
+            ("_spdk_bs_page_to_lba" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7846 7873])
+                    ("page" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7874 7888]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [7802 7961])
+            ("_spdk_bs_lba_to_page" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8007 8034])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8035 8048]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [7963 8215])
+            ("_spdk_bs_cluster_to_page" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8265 8292])
+                    ("cluster" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8293 8310]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [8217 8355])
+            ("_spdk_bs_page_to_cluster" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8405 8432])
+                    ("page" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8433 8447]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [8357 8534])
+            ("_spdk_bs_cluster_to_lba" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8583 8610])
+                    ("cluster" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8611 8628]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [8536 8688])
+            ("_spdk_bs_lba_to_cluster" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("bs" variable
+                       (:pointer 1
+                        :type ("spdk_blob_store" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8737 8764])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8765 8778]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [8690 8893])
+            ("_spdk_bs_blobid_to_page" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("id" variable (:type ("spdk_blob_id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8971 8987]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [8924 9016])
+            ("_spdk_bs_blob_page_to_lba" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9154 9177])
+                    ("page" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9178 9192]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [9105 9492])
+            ("_spdk_bs_num_pages_to_cluster_boundary" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("blob" variable
+                       (:pointer 1
+                        :type ("spdk_blob" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9660 9683])
+                    ("page" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9684 9698]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [9598 9839]))          
+      :file "blobstore.h"
+      :pointmax 9848
+      :fsize 9847
+      :lastmodtime '(22925 57199 693694 513000)
+      :unmatched-syntax '((semantic-list 6681 . 6686) (symbol 6677 . 6681) (symbol 6670 . 6676) (punctuation 6669 . 6670) (string 6639 . 6665) (number 6631 . 6637) (punctuation 6629 . 6630) (punctuation 6628 . 6629) (semantic-list 6599 . 6627) (SIZEOF 6593 . 6599) (string 5864 . 5886) (number 5856 . 5862) (punctuation 5854 . 5855) (punctuation 5853 . 5854) (semantic-list 5826 . 5852) (SIZEOF 5820 . 5826) (semantic-list 4798 . 4807) (symbol 4794 . 4798) (number 4805 . 4806) (symbol 4787 . 4793) (number 4805 . 4806) (punctuation 4786 . 4787) (semantic-list 4545 . 4568) (symbol 4535 . 4545) (semantic-list 4445 . 4458) (symbol 4435 . 4445) (semantic-list 3881 . 3892) (symbol 3870 . 3881) (semantic-list 3845 . 3859) (symbol 3835 . 3845) (semantic-list 2217 . 2229) (symbol 2206 . 2217))
+      :lexical-table 
+        '(("SPDK_BLOB_OPTS_NUM_MD_PAGES" . ((symbol "UINT32_MAX" 1988 . 1998)))
+          ("SPDK_MD_DESCRIPTOR_TYPE_EXTENT" . ((number "1" 5068 . 5069)))
+          ("SPDK_MD_DESCRIPTOR_TYPE_PADDING" . ((number "0" 5027 . 5028)))
+          ("SPDK_MD_DESCRIPTOR_TYPE_XATTR" . ((number "2" 5108 . 5109)))
+          ("SPDK_BS_SUPER_BLOCK_SIG" . ((string "\"SPDKBLOB\"" 5922 . 5932)))
+          ("SPDK_BLOB_OPTS_CLUSTER_SZ" . ((semantic-list "(1024 * 1024)" 1938 . 1951)))
+          ("SPDK_BLOBSTORE_H")
+          ("SPDK_BLOB_OPTS_MAX_CHANNEL_OPS" . ((number "512" 2075 . 2078)))
+          ("SPDK_MD_MASK_TYPE_USED_PAGES" . ((number "0" 4846 . 4847)))
+          ("SPDK_MD_MASK_TYPE_USED_CLUSTERS" . ((number "1" 4888 . 4889)))
+          ("SPDK_INVALID_MD_PAGE" . ((symbol "UINT32_MAX" 5598 . 5608)))
+          ("SPDK_BLOB_OPTS_MAX_MD_OPS" . ((number "32" 2033 . 2035)))
+          ("SPDK_BS_VERSION" . ((number "1" 4783 . 4784)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "request.h"
+      :fsize 5256
+      :lastmodtime '(22925 57199 693694 513000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("blobstore.h" include nil nil [1691 1713])
+            ("request.h" include nil nil [1714 1734])
+            ("spdk/io_channel.h" include nil nil [1736 1764])
+            ("spdk/queue.h" include nil nil [1765 1788])
+            ("spdk_internal/log.h" include nil nil [1790 1820])
+            ("spdk_bs_call_cpl" function
+               (:arguments 
+                  ( ("cpl" variable
+                       (:pointer 1
+                        :type ("spdk_bs_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1844 1868])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [1869 1881]))                  
+                :type "void")
+                nil [1822 2702])
+            ("spdk_bs_request_set_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("set" variable
+                       (:pointer 1
+                        :type ("spdk_bs_request_set" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2745 2777]))                  
+                :type "void")
+                nil [2704 2934])
+            ("spdk_bs_sequence_completion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2976 3008])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3009 3022])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [3023 3035]))                  
+                :type "void")
+                nil [2936 3192])
+            ("spdk_bs_sequence_start" function
+               (:pointer 1
+                :arguments 
+                  ( ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3238 3271])
+                    ("cpl" variable
+                       (:pointer 1
+                        :type ("spdk_bs_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3281 3305]))                  
+                :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                nil [3194 3760])
+            ("spdk_bs_sequence_read" function
+               (:arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3789 3813])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3814 3828])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3837 3850])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3851 3870])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3879 3906])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3907 3920]))                  
+                :type "void")
+                nil [3762 4314])
+            ("spdk_bs_sequence_write" function
+               (:arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4344 4368])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4369 4383])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4393 4406])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4407 4426])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4436 4463])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4464 4477]))                  
+                :type "void")
+                nil [4316 4871])
+            ("spdk_bs_sequence_flush" function
+               (:arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4901 4925])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4935 4962])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4963 4976]))                  
+                :type "void")
+                nil [4873 5309])
+            ("spdk_bs_sequence_unmap" function
+               (:arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5339 5363])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5373 5386])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5387 5406])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5416 5443])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5444 5457]))                  
+                :type "void")
+                nil [5311 5844])
+            ("spdk_bs_sequence_finish" function
+               (:arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5875 5899])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [5900 5912]))                  
+                :type "void")
+                nil [5846 6032])
+            ("spdk_bs_batch_completion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6071 6104])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6109 6122])
+                    ("bserrno" variable (:type "int") (reparse-symbol arg-sub-list) [6123 6135]))                  
+                :type "void")
+                nil [6034 6555])
+            ("spdk_bs_batch_open" function
+               (:pointer 1
+                :arguments 
+                  ( ("_channel" variable
+                       (:pointer 1
+                        :type ("spdk_io_channel" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6594 6627])
+                    ("cpl" variable
+                       (:pointer 1
+                        :type ("spdk_bs_cpl" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6633 6657]))                  
+                :type ("spdk_bs_batch_t" type (:type "class") nil nil))
+                nil [6557 7231])
+            ("spdk_bs_batch_read" function
+               (:arguments 
+                  ( ("batch" variable
+                       (:pointer 1
+                        :type ("spdk_bs_batch_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7257 7280])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7281 7295])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7301 7314])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7315 7334]))                  
+                :type "void")
+                nil [7233 7686])
+            ("spdk_bs_batch_write" function
+               (:arguments 
+                  ( ("batch" variable
+                       (:pointer 1
+                        :type ("spdk_bs_batch_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7713 7736])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7737 7751])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7758 7771])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7772 7791]))                  
+                :type "void")
+                nil [7688 8143])
+            ("spdk_bs_batch_flush" function
+               (:arguments 
+                  ( ("batch" variable
+                       (:pointer 1
+                        :type ("spdk_bs_batch_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8170 8193]))                  
+                :type "void")
+                nil [8145 8484])
+            ("spdk_bs_batch_unmap" function
+               (:arguments 
+                  ( ("batch" variable
+                       (:pointer 1
+                        :type ("spdk_bs_batch_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8511 8534])
+                    ("lba" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8541 8554])
+                    ("lba_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8555 8574]))                  
+                :type "void")
+                nil [8486 8919])
+            ("spdk_bs_batch_close" function
+               (:arguments 
+                  ( ("batch" variable
+                       (:pointer 1
+                        :type ("spdk_bs_batch_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8946 8969]))                  
+                :type "void")
+                nil [8921 9343])
+            ("spdk_bs_sequence_to_batch" function
+               (:pointer 1
+                :arguments 
+                  ( ("seq" variable
+                       (:pointer 1
+                        :type ("spdk_bs_sequence_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9389 9413])
+                    ("cb_fn" variable (:type ("spdk_bs_sequence_cpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9414 9441])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9442 9455]))                  
+                :type ("spdk_bs_batch_t" type (:type "class") nil nil))
+                nil [9345 9720])
+            ("SPDK_LOG_REGISTER_TRACE_FLAG" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("SPDK_TRACE_BLOB_RW" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9762 9781]))                  
+                :type "int")
+                nil [9722 9782]))          
+      :file "request.c"
+      :pointmax 9783
+      :fsize 9782
+      :lastmodtime '(22925 57199 693694 513000)
+      :unmatched-syntax '((string 9751 . 9760))))
+  :file "!root!spdk!lib!blob!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

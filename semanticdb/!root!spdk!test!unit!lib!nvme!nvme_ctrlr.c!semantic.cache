@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "nvme_ctrlr_ut.c"
+      :pointmax 201
+      :fsize 46198
+      :lastmodtime '(22931 51286 971337 273000)
+      :unmatched-syntax nil))
+  :file "!root!spdk!test!unit!lib!nvme!nvme_ctrlr.c!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

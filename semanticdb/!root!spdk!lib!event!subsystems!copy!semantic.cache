@@ -1,0 +1,31 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("spdk/copy_engine.h" include nil nil [1691 1720])
+            ("spdk_internal/event.h" include nil nil [1722 1754])
+            ("spdk_copy_engine_subsystem_initialize" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1806 1811]))                  
+                :type "void")
+                nil [1756 1894])
+            ("spdk_copy_engine_subsystem_finish" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1941 1946]))                  
+                :type "int")
+                nil [1896 1985]))          
+      :file "copy.c"
+      :pointmax 2134
+      :fsize 2133
+      :lastmodtime '(22910 40989 221425 911000)
+      :unmatched-syntax '((semantic-list 2121 . 2133) (symbol 2100 . 2121) (semantic-list 2010 . 2099) (symbol 1987 . 2010))))
+  :file "!root!spdk!lib!event!subsystems!copy!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,14 @@
+/root/spdk/lib/event/app.c
+/root/spdk/lib/event/#app.c#
+/root/spdk/test/lib/bdev/bdevperf/bdevperf.c
+/root/spdk/test/lib/bdev/bdevperf/#bdevperf.c#
+/root/spdk/lib/event/reactor.c
+/root/spdk/lib/event/#reactor.c#
+/root/spdk/lib/log/log.c
+/root/spdk/lib/log/#log.c#
+/root/spdk/test/lib/bdev/common.c
+/root/spdk/test/lib/bdev/#common.c#
+/root/spdk/lib/conf/conf.c
+/root/spdk/lib/conf/#conf.c#
+/root/spdk/TAGS
+/root/spdk/#TAGS#

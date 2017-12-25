@@ -1,0 +1,57 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("SPDK_CONFIG_DEBUG" variable (:constant-flag t) nil [9 26])
+            ("SPDK_CONFIG_ENV" variable (:constant-flag t) nil [37 52])
+            ("SPDK_FIO_SOURCE_DIR" variable (:constant-flag t) nil [114 133])
+            ("SPDK_CONFIG_VHOST" variable (:constant-flag t) nil [179 196])
+            ("SPDK_CONFIG_DPDK_DIR" variable (:constant-flag t) nil [363 383]))          
+      :file "config.h"
+      :pointmax 430
+      :fsize 429
+      :lastmodtime '(22912 5394 930625 968000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SPDK_FIO_SOURCE_DIR" . 
+              ((punctuation "/" 134 . 135) (symbol "usr" 135 . 138) (punctuation "/" 138 . 139) (symbol "src" 139 . 142) (punctuation "/" 142 . 143) (symbol "fio" 143 . 146)))
+          ("SPDK_CONFIG_VHOST" . ((number "1" 197 . 198)))
+          ("SPDK_CONFIG_DEBUG" . ((number "1" 27 . 28)))
+          ("SPDK_CONFIG_DPDK_DIR" . 
+              ((punctuation "/" 384 . 385) (symbol "root" 385 . 389) (punctuation "/" 389 . 390) (symbol "spdk" 390 . 394) (punctuation "/" 394 . 395) (symbol "dpdk" 395 . 399) (punctuation "/" 399 . 400) (symbol "build" 400 . 405)))
+          ("SPDK_CONFIG_ENV" . 
+              ((symbol "$" 53 . 54) (semantic-list "(SPDK_ROOT_DIR)" 54 . 69) (punctuation "/" 69 . 70) (symbol "lib" 70 . 73) (punctuation "/" 73 . 74) (symbol "env_dpdk" 74 . 82)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
+      :tags 
+        '( ("S" variable nil nil [1605 1610])
+            ("SPDK_ROOT_DIR" variable (:default-value ("$(CURDIR)")) nil [1611 1638])
+            ("$(SPDK_ROOT_DIR)/mk/spdk.common.mk" include nil nil [1638 1681])
+            ("DIRS-y" variable (:default-value ("lib" "test" "examples" "app")) nil [1682 1714])
+            (".PHONY" function (:arguments ("all" "clean" "$(DIRS-y)" "config.h" "CONFIG.local" "mk/cc.mk")) nil [1715 1774])
+            ("DPDKBUILD" variable (:default-value ("dpdkbuild")) nil [1822 1844])
+            ("DIRS-y" variable (:default-value ("dpdkbuild")) nil [1844 1864])
+            ("all" function (:arguments ("$(DIRS-y)")) nil [1871 1886])
+            ("clean" function (:arguments ("$(DIRS-y)")) nil [1886 1943])
+            ("lib" function (:arguments ("$(DPDKBUILD)")) nil [1944 1962])
+            ("app" function (:arguments ("lib")) nil [1962 1971])
+            ("test" function (:arguments ("lib")) nil [1971 1981])
+            ("examples" function (:arguments ("lib")) nil [1981 1995])
+            ("$(DIRS-y)" function (:arguments ("mk/cc.mk" "config.h")) nil [1996 2025])
+            ("mk/cc.mk" function nil nil [2026 2170])
+            ("config.h" function (:arguments ("CONFIG" "CONFIG.local" "scripts/genconfig.py")) nil [2171 2332])
+            ("$(SPDK_ROOT_DIR)/mk/spdk.subdirs.mk" include nil nil [2333 2377]))          
+      :file "Makefile"
+      :pointmax 2377
+      :fsize 2376
+      :lastmodtime '(22910 40989 182425 248000)
+      :unmatched-syntax '((symbol 1991 . 1994) (punctuation 1989 . 1990) (symbol 1981 . 1989) (bol 1981 . 1981))))
+  :file "!root!spdk!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
