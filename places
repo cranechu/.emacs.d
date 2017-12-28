@@ -1,6 +1,9 @@
 ;;; -*- coding: utf-8 -*-
-(("/root/datascience/Week5-Visualization/matplot.py" . 1991)
- ("/root/.emacs.d/recentf" . 1403)
+(("/root/spdk/TAGS" . 399428)
+ ("/root/spdk/lib/nvme/nvme.c" . 13049)
+ ("/root/.emacs" . 4510)
+ ("/root/.emacs.d/recentf" . 1376)
+ ("/root/datascience/Week5-Visualization/matplot.py" . 1991)
  ("/root/datascience/"
   (dired-filename . "/root/datascience/Week5-Visualization"))
  ("/root/datascience/Week5-Visualization/"
@@ -8,7 +11,6 @@
  ("/root/datascience/Week-7-MachineLearning/"
   (dired-filename . "/root/datascience/Week-7-MachineLearning/European Soccer Regression Analysis using scikit-learn.ipynb"))
  ("/root/.bashrc" . 612)
- ("/root/.emacs" . 7361)
  ("/root/.emacs.d/elpa/cargo-0.4.1/cargo-autoloads.el" . 4770)
  ("/root/.emacs.d/elpa/company-0.9.4/company-autoloads.el" . 8768)
  ("/root/.emacs.d/elpa/dashboard-1.2.4/dashboard-autoloads.el" . 621)
@@ -31,7 +33,6 @@
  ("/root/spdk/dpdk/examples/ethtool/ethtool-app/ethapp.c" . 18615)
  ("/root/spdk/include/spdk/nvmf_spec.h" . 4195)
  ("/root/spdk/test/unit/lib/nvme/nvme.c/nvme_ut.c" . 12923)
- ("/root/spdk/lib/nvme/nvme.c" . 13455)
  ("/root/spdk/lib/bdev/bdev.c" . 105)
  ("/root/spdk/lib/rocksdb/env_spdk.cc" . 13477)
  ("/root/spdk/lib/bdev/nvme/bdev_nvme.c" . 9578)

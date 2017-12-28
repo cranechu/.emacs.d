@@ -61,7 +61,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -122,9 +122,14 @@
 ;;(yas-global-mode 1)
 ;;(add-to-list 'ac-sources 'ac-source-yasnippet)
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
-;;(fa-config-default)
 ;;(require 'company)
 ;;(add-hook 'after-init-hook 'global-company-mode)
+
+;;function-arg
+(ivy-mode 1)
+(fa-config-default)
+;;(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+;;(set-default 'semantic-case-fold t)
 
 ;;semantic
 ;; (require 'cc-mode)
