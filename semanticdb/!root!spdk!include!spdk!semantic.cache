@@ -266,8 +266,8 @@
                 nil [5370 5464]))          
       :file "event.h"
       :pointmax 5473
-      :fsize 5445
-      :lastmodtime '(22925 57199 684694 717000)
+      :fsize 6396
+      :lastmodtime '(23094 7225 658588 730000)
       :unmatched-syntax '((TYPEDEF 2237 . 2244) (TYPEDEF 2193 . 2200) (TYPEDEF 2048 . 2055) (TYPEDEF 1889 . 1896))
       :lexical-table 
         '(("SPDK_EVENT_H")
@@ -1764,8 +1764,8 @@
             ("spdk/env.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [1813 1834]))          
       :file "nvme.h"
       :pointmax 49008
-      :fsize 55759
-      :lastmodtime '(22931 51286 954337 312000)
+      :fsize 60005
+      :lastmodtime '(23005 56351 88991 907000)
       :unmatched-syntax '((TYPEDEF 33345 . 33352) (TYPEDEF 32920 . 32927) (TYPEDEF 15823 . 15830) (TYPEDEF 15266 . 15273) (TYPEDEF 14856 . 14863) (TYPEDEF 10167 . 10174) (TYPEDEF 9432 . 9439) (TYPEDEF 8987 . 8994))
       :lexical-table 
         '(("SPDK_NVME_H")
@@ -2496,8 +2496,8 @@
                 nil [11830 12287]))          
       :file "nvmf_spec.h"
       :pointmax 12337
-      :fsize 12336
-      :lastmodtime '(22925 57199 687694 649000)
+      :fsize 12284
+      :lastmodtime '(23094 7225 660588 730000)
       :unmatched-syntax '((semantic-list 12301 . 12306) (symbol 12297 . 12301) (symbol 12290 . 12296) (punctuation 12289 . 12290) (string 11810 . 11826) (number 11806 . 11808) (punctuation 11804 . 11805) (punctuation 11803 . 11804) (semantic-list 11767 . 11802) (SIZEOF 11761 . 11767) (string 11519 . 11535) (number 11516 . 11517) (punctuation 11514 . 11515) (punctuation 11513 . 11514) (semantic-list 11469 . 11512) (SIZEOF 11463 . 11469) (string 11306 . 11322) (number 11302 . 11304) (punctuation 11300 . 11301) (punctuation 11299 . 11300) (semantic-list 11255 . 11298) (SIZEOF 11249 . 11255) (string 11046 . 11062) (number 11042 . 11044) (punctuation 11040 . 11041) (punctuation 11039 . 11040) (semantic-list 10994 . 11038) (SIZEOF 10988 . 10994) (string 10578 . 10594) (number 10572 . 10576) (punctuation 10570 . 10571) (punctuation 10569 . 10570) (semantic-list 10531 . 10568) (SIZEOF 10525 . 10531) (string 10309 . 10325) (number 10303 . 10307) (punctuation 10301 . 10302) (punctuation 10300 . 10301) (semantic-list 10256 . 10299) (SIZEOF 10250 . 10256) (string 9244 . 9260) (number 9234 . 9237) (punctuation 9232 . 9233) (punctuation 9231 . 9232) (semantic-list 9178 . 9230) (SIZEOF 9172 . 9178) (string 8938 . 8954) (number 8928 . 8931) (punctuation 8926 . 8927) (punctuation 8925 . 8926) (semantic-list 8866 . 8924) (SIZEOF 8860 . 8866) (string 8169 . 8185) (number 8165 . 8167) (punctuation 8163 . 8164) (punctuation 8162 . 8163) (semantic-list 8123 . 8161) (SIZEOF 8117 . 8123) (string 7717 . 7733) (number 7713 . 7715) (punctuation 7711 . 7712) (punctuation 7710 . 7711) (semantic-list 7671 . 7709) (SIZEOF 7665 . 7671) (string 7408 . 7424) (number 7404 . 7406) (punctuation 7402 . 7403) (punctuation 7401 . 7402) (semantic-list 7362 . 7400) (SIZEOF 7356 . 7362) (string 6982 . 6998) (number 6978 . 6980) (punctuation 6976 . 6977) (punctuation 6975 . 6976) (semantic-list 6937 . 6974) (SIZEOF 6931 . 6937) (string 6545 . 6561) (number 6541 . 6543) (punctuation 6539 . 6540) (punctuation 6538 . 6539) (semantic-list 6500 . 6537) (SIZEOF 6494 . 6500) (string 6021 . 6037) (number 6015 . 6019) (punctuation 6013 . 6014) (punctuation 6012 . 6013) (semantic-list 5973 . 6011) (SIZEOF 5967 . 5973) (string 5747 . 5763) (number 5743 . 5745) (punctuation 5741 . 5742) (punctuation 5740 . 5741) (semantic-list 5700 . 5739) (SIZEOF 5694 . 5700) (string 5313 . 5329) (number 5309 . 5311) (punctuation 5307 . 5308) (punctuation 5306 . 5307) (semantic-list 5266 . 5305) (SIZEOF 5260 . 5266) (string 2233 . 2249) (number 2229 . 2231) (punctuation 2227 . 2228) (punctuation 2226 . 2227) (semantic-list 2195 . 2225) (SIZEOF 2189 . 2195) (semantic-list 1873 . 1882) (symbol 1869 . 1873) (number 1880 . 1881) (symbol 1862 . 1868) (number 1880 . 1881) (punctuation 1861 . 1862))
       :lexical-table 
         '(("SPDK_NVMF_PROP_SIZE_8" . ((number "1" 7064 . 7065)))
@@ -2514,12 +2514,12 @@
 )
     (semanticdb-table "semanticdb-table"
       :file "nvme_spec.h"
-      :fsize 48873
-      :lastmodtime '(22925 57199 687694 649000))
+      :fsize 52281
+      :lastmodtime '(23054 40808 26375 268000))
     (semanticdb-table "semanticdb-table"
       :file "env.h"
-      :fsize 14287
-      :lastmodtime '(22931 51286 953337 314000))
+      :fsize 16903
+      :lastmodtime '(23104 44840 600262 535000))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -2575,8 +2575,8 @@
             ("spdk/barrier.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [1826 1851]))          
       :file "mmio.h"
       :pointmax 3024
-      :fsize 3023
-      :lastmodtime '(22925 57199 685694 694000)
+      :fsize 3495
+      :lastmodtime '(23034 59672 792362 858000)
       :unmatched-syntax nil
       :lexical-table 
         '(("SPDK_MMIO_64BIT" . ((number "1" 1895 . 1896)))
@@ -2585,8 +2585,8 @@
 )
     (semanticdb-table "semanticdb-table"
       :file "barrier.h"
-      :fsize 2124
-      :lastmodtime '(22925 57199 683694 739000))
+      :fsize 3728
+      :lastmodtime '(23079 28654 148032 466000))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -3430,8 +3430,8 @@
                 nil [18330 18423]))          
       :file "bdev.h"
       :pointmax 18451
-      :fsize 19328
-      :lastmodtime '(22931 51286 953337 314000)
+      :fsize 30046
+      :lastmodtime '(23094 7225 656588 731000)
       :unmatched-syntax '((TYPEDEF 3791 . 3798) (TYPEDEF 3624 . 3631) (TYPEDEF 3576 . 3583) (TYPEDEF 3518 . 3525) (TYPEDEF 3258 . 3265) (TYPEDEF 1998 . 2005))
       :lexical-table 
         '(("SPDK_BDEV_LARGE_BUF_MAX_SIZE" . ((semantic-list "(64 * 1024)" 1985 . 1996)))
@@ -3441,8 +3441,8 @@
 )
     (semanticdb-table "semanticdb-table"
       :file "scsi_spec.h"
-      :fsize 15141
-      :lastmodtime '(22925 57199 688694 626000))
+      :fsize 15481
+      :lastmodtime '(23079 28654 150032 464000))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -4336,8 +4336,8 @@
                 nil [11323 11382]))          
       :file "blob.h"
       :pointmax 11410
-      :fsize 11185
-      :lastmodtime '(22931 51286 953337 314000)
+      :fsize 12818
+      :lastmodtime '(23100 57586 986323 28000)
       :unmatched-syntax '((TYPEDEF 4125 . 4132) (TYPEDEF 3829 . 3836) (TYPEDEF 3734 . 3741) (TYPEDEF 3668 . 3675) (TYPEDEF 3562 . 3569) (TYPEDEF 3498 . 3505))
       :lexical-table 
         '(("SPDK_BLOB_H")
@@ -4354,165 +4354,191 @@
       :tags 
         '( ("SPDK_LOG_H" variable (:constant-flag t) nil [1732 1742])
             ("spdk/stdinc.h" include nil nil [1744 1768])
-            ("spdk_log_open" function
-               (:prototype-flag t
+            ("spdk_tracelog_usage" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1879 1884]))                  
-                :type "void")
-                nil [1860 1885])
-            ("spdk_log_close" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1995 2000]))                  
-                :type "void")
-                nil [1975 2001])
-            ("spdk_log_level" type
-               (:members 
-                  ( ("SPDK_LOG_ERROR" variable
-                       (:constant-flag t
-                        :type "int")
-                        (reparse-symbol enumsubparts) [2026 2041])
-                    ("SPDK_LOG_WARN" variable
-                       (:constant-flag t
-                        :type "int")
-                        (reparse-symbol enumsubparts) [2043 2057])
-                    ("SPDK_LOG_NOTICE" variable
-                       (:constant-flag t
-                        :type "int")
-                        (reparse-symbol enumsubparts) [2059 2075])
-                    ("SPDK_LOG_INFO" variable
-                       (:constant-flag t
-                        :type "int")
-                        (reparse-symbol enumsubparts) [2077 2091])
-                    ("SPDK_LOG_DEBUG" variable
-                       (:constant-flag t
-                        :type "int")
-                        (reparse-symbol enumsubparts) [2093 2108]))                  
-                :type "enum")
-                nil [2003 2111])
-            ("spdk_log_set_level" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("level" variable (:type ("spdk_log_level" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [2238 2264]))                  
-                :type "void")
-                nil [2214 2265])
-            ("spdk_log_get_level" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2348 2353]))                  
-                :type ("spdk_log_level" type (:type "enum") nil nil))
-                nil [2309 2354])
-            ("spdk_log_set_print_level" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("level" variable (:type ("spdk_log_level" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [2546 2572]))                  
-                :type "void")
-                nil [2516 2573])
-            ("spdk_log_get_print_level" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2674 2679]))                  
-                :type ("spdk_log_level" type (:type "enum") nil nil))
-                nil [2629 2680])
-            ("SPDK_NOTICELOG" variable (:constant-flag t) nil [2690 2704])
-            ("SPDK_WARNLOG" variable (:constant-flag t) nil [2790 2802])
-            ("SPDK_ERRLOG" variable (:constant-flag t) nil [2886 2897])
-            ("spdk_log" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("level" variable (:type ("spdk_log_level" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [2989 3015])
-                    ("file" variable
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3439 3447])
+                    ("trace_arg" variable
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [3016 3033])
-                    ("line" variable
-                       (:constant-flag t
-                        :type "int")
-                        (reparse-symbol arg-sub-list) [3034 3049])
-                    ("func" variable
-                       (:pointer 1
-                        :constant-flag t
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [3050 3067])
-                    ("format" variable
-                       (:pointer 1
-                        :constant-flag t
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [3075 3094])
-                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3095 3099]))                  
-                :type "void")
-                nil [2975 3146])
-            ("spdk_trace_dump" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("label" variable
-                       (:pointer 1
-                        :constant-flag t
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [3169 3187])
-                    ("buf" variable
-                       (:pointer 1
-                        :constant-flag t
-                        :type ("uint8_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [3188 3207])
-                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3208 3219]))                  
-                :type "void")
-                nil [3148 3220])
-            ("spdk_log_get_trace_flag" function
-               (:prototype-flag t
+                        (reparse-symbol arg-sub-list) [3448 3470]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3414 3471])
+            ("spdk_log_clear_trace_flag" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
                 :arguments 
                   ( ("flag" variable
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [3251 3268]))                  
-                :type "bool")
-                nil [3222 3269])
+                        (reparse-symbol arg-sub-list) [3394 3411]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3364 3412])
             ("spdk_log_set_trace_flag" function
-               (:prototype-flag t
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("flag" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3345 3362]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3317 3363])
+            ("spdk_log_get_trace_flag" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
                 :arguments 
                   ( ("flag" variable
                        (:pointer 1
                         :constant-flag t
                         :type "char")
                         (reparse-symbol arg-sub-list) [3298 3315]))                  
-                :type "int")
-                nil [3270 3316])
-            ("spdk_log_clear_trace_flag" function
-               (:prototype-flag t
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3269 3316])
+            ("spdk_trace_dump" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
                 :arguments 
-                  ( ("flag" variable
-                       (:pointer 1
-                        :constant-flag t
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [3347 3364]))                  
-                :type "int")
-                nil [3317 3365])
-            ("spdk_tracelog_usage" function
-               (:prototype-flag t
-                :arguments 
-                  ( ("f" variable
+                  ( ("fp" variable
                        (:pointer 1
                         :type ("FILE" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [3392 3400])
-                    ("trace_arg" variable
+                        (reparse-symbol arg-sub-list) [3209 3218])
+                    ("label" variable
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [3401 3423]))                  
-                :type "void")
-                nil [3367 3424]))          
+                        (reparse-symbol arg-sub-list) [3219 3237])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3238 3254])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3255 3266]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3188 3267])
+            ("spdk_log" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("level" variable (:type ("spdk_log_level" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [3029 3055])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3056 3073])
+                    ("line" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3074 3089])
+                    ("func" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3090 3107])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3115 3134])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3135 3139]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3015 3186])
+            ("SPDK_ERRLOG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2926 2937])
+            ("SPDK_WARNLOG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2830 2842])
+            ("SPDK_NOTICELOG" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [2730 2744])
+            ("spdk_log_get_print_level" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("spdk_log_level" type (:type "enum") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2714 2719]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2669 2720])
+            ("spdk_log_set_print_level" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("level" variable (:type ("spdk_log_level" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [2586 2612]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2556 2613])
+            ("spdk_log_get_level" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("spdk_log_level" type (:type "enum") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2388 2393]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2349 2394])
+            ("spdk_log_set_level" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("level" variable (:type ("spdk_log_level" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [2278 2304]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2254 2305])
+            ("spdk_log_level" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "enum"
+                :members 
+                  ( ("SPDK_LOG_ERROR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2066 2081])
+                    ("SPDK_LOG_WARN" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2083 2097])
+                    ("SPDK_LOG_NOTICE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2099 2115])
+                    ("SPDK_LOG_INFO" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2117 2131])
+                    ("SPDK_LOG_DEBUG" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2133 2148]))                  )
+                (reparse-symbol extern-c-contents) [2043 2151])
+            ("spdk_log_close" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2035 2040]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2015 2041])
+            ("spdk_log_open" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1919 1924]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1900 1925]))          
       :file "log.h"
-      :pointmax 3450
-      :fsize 3449
-      :lastmodtime '(22925 57199 685694 694000)
+      :pointmax 3526
+      :fsize 3525
+      :lastmodtime '(23094 7225 659588 730000)
       :unmatched-syntax nil
       :lexical-table 
         '(("SPDK_LOG_H")
-          ("SPDK_NOTICELOG" (spp-arg-list ("...") 2704 . 2709) . ((symbol "spdk_log" 2713 . 2721) (semantic-list "(SPDK_LOG_NOTICE, __FILE__, __LINE__, __func__, __VA_ARGS__)" 2721 . 2781)))
-          ("SPDK_ERRLOG" (spp-arg-list ("...") 2897 . 2902) . ((symbol "spdk_log" 2906 . 2914) (semantic-list "(SPDK_LOG_ERROR, __FILE__, __LINE__, __func__, __VA_ARGS__)" 2914 . 2973)))
-          ("SPDK_WARNLOG" (spp-arg-list ("...") 2802 . 2807) . ((symbol "spdk_log" 2811 . 2819) (semantic-list "(SPDK_LOG_WARN, __FILE__, __LINE__, __func__, __VA_ARGS__)" 2819 . 2877)))
+          ("SPDK_NOTICELOG" (spp-arg-list ("...") 2744 . 2749) . ((symbol "spdk_log" 2753 . 2761) (semantic-list "(SPDK_LOG_NOTICE, __FILE__, __LINE__, __func__, __VA_ARGS__)" 2761 . 2821)))
+          ("SPDK_ERRLOG" (spp-arg-list ("...") 2937 . 2942) . ((symbol "spdk_log" 2946 . 2954) (semantic-list "(SPDK_LOG_ERROR, __FILE__, __LINE__, __func__, __VA_ARGS__)" 2954 . 3013)))
+          ("SPDK_WARNLOG" (spp-arg-list ("...") 2842 . 2847) . ((symbol "spdk_log" 2851 . 2859) (semantic-list "(SPDK_LOG_WARN, __FILE__, __LINE__, __func__, __VA_ARGS__)" 2859 . 2917)))
           )
 ))
   :file "!root!spdk!include!spdk!semantic.cache"

@@ -1,5 +1,8 @@
 ;;; -*- coding: utf-8 -*-
-(("/root/spdk/TAGS" . 399428)
+(("/root/.zshrc" . 3147)
+ ("/root/.bashrc" . 176)
+ ("/root/spdk/README.md" . 177)
+ ("/root/spdk/TAGS" . 399428)
  ("/root/spdk/lib/nvme/nvme.c" . 13049)
  ("/root/.emacs" . 4510)
  ("/root/.emacs.d/recentf" . 1376)
@@ -10,7 +13,6 @@
   (dired-filename . "/root/datascience/Week5-Visualization/matplot.py"))
  ("/root/datascience/Week-7-MachineLearning/"
   (dired-filename . "/root/datascience/Week-7-MachineLearning/European Soccer Regression Analysis using scikit-learn.ipynb"))
- ("/root/.bashrc" . 612)
  ("/root/.emacs.d/elpa/cargo-0.4.1/cargo-autoloads.el" . 4770)
  ("/root/.emacs.d/elpa/company-0.9.4/company-autoloads.el" . 8768)
  ("/root/.emacs.d/elpa/dashboard-1.2.4/dashboard-autoloads.el" . 621)
@@ -47,7 +49,6 @@
  ("/root/spdk/lib/rocksdb/"
   (dired-filename . "/root/spdk/lib/rocksdb/env_spdk.cc"))
  ("/root/spdk/test/blobfs/rocksdb/run_tests.sh" . 4132)
- ("/root/spdk/README.md" . 177)
  ("/root/spdk/examples/nvme/arbitration/arbitration.c" . 3260)
  ("/root/spdk/examples/nvme/perf/perf.c" . 3527)
  ("/root/spdk/lib/event/app.c" . 2160)
