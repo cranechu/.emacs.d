@@ -1,4 +1,6 @@
-((("auto-mode-alist" .
+((("rtags-location-stack-back" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("auto-mode-alist" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
   ("add-to-list" .
    [0 0 0 0 0 0 1 0 0 0 0])

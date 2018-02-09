@@ -53,7 +53,7 @@
       :file "features.h"
       :pointmax 15570
       :fsize 15569
-      :lastmodtime '(23080 9888 0 0)
+      :lastmodtime '(23132 52303 0 0)
       :unmatched-syntax '((close-paren 11150 . 11151) (number "700" 11137 . 11150) (symbol 11129 . 11136) (punctuation 11127 . 11128) (punctuation 11126 . 11127) (close-paren 11117 . 11118) (number 11116 . 11117) (punctuation 11114 . 11115) (punctuation 11113 . 11114) (number "200809L" 11097 . 11112) (punctuation 11095 . 11096) (punctuation 11094 . 11095) (number "200809L" 11078 . 11093) (symbol 11070 . 11077) (open-paren 11069 . 11070) (punctuation 11067 . 11068) (punctuation 11066 . 11067) (close-paren 8511 . 8512) (semantic-list 8360 . 8511) (punctuation 8358 . 8359) (punctuation 8357 . 8358))
       :lexical-table 
         '(("__glibc_clang_prereq" (spp-arg-list ("maj" "min") 7028 . 7038) . ((number "0" 7039 . 7040)))
@@ -102,7 +102,7 @@
       :file "stdc-predef.h"
       :pointmax 2402
       :fsize 2363
-      :lastmodtime '(23080 9888 0 0)
+      :lastmodtime '(23132 52303 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -1552,7 +1552,7 @@
       :file "stdio.h"
       :pointmax 31495
       :fsize 29660
-      :lastmodtime '(23080 9900 0 0)
+      :lastmodtime '(23132 52314 0 0)
       :unmatched-syntax '((semantic-list 19800 . 19847) (punctuation 19798 . 19799) (punctuation 19797 . 19798) (number "1" 1586 . 1598) (symbol 1578 . 1585) (punctuation 1576 . 1577) (punctuation 1575 . 1576) (number "1" 1557 . 1568) (symbol 1549 . 1556) (punctuation 1547 . 1548) (punctuation 1546 . 1547) (number "1" 1533 . 1545) (symbol 1525 . 1532) (punctuation 1523 . 1524) (punctuation 1522 . 1523))
       :lexical-table 
         '(("putc" (spp-arg-list ("_ch" "_fp") 19071 . 19081) . ((symbol "_IO_putc" 19082 . 19090) (semantic-list "(_ch, _fp)" 19091 . 19101)))
@@ -1747,7 +1747,7 @@
       :file "stdint.h"
       :pointmax 8095
       :fsize 8626
-      :lastmodtime '(23080 9900 0 0)
+      :lastmodtime '(23132 52313 0 0)
       :unmatched-syntax '((LONG 3342 . 3346) (UNSIGNED 3333 . 3341) (TYPEDEF 3325 . 3332) (LONG 3286 . 3290) (TYPEDEF 3278 . 3285) (LONG 2779 . 2783) (UNSIGNED 2770 . 2778) (TYPEDEF 2762 . 2769) (LONG 2433 . 2437) (TYPEDEF 2425 . 2432) (LONG 2124 . 2128) (UNSIGNED 2115 . 2123) (TYPEDEF 2107 . 2114) (LONG 1850 . 1854) (TYPEDEF 1842 . 1849) (LONG 1601 . 1605) (UNSIGNED 1592 . 1600) (TYPEDEF 1584 . 1591) (LONG 1287 . 1291) (TYPEDEF 1279 . 1286))
       :lexical-table 
         '(("__int8_t_defined")
@@ -3500,7 +3500,7 @@
       :file "stdlib.h"
       :pointmax 32665
       :fsize 32422
-      :lastmodtime '(23080 9900 0 0)
+      :lastmodtime '(23132 52313 0 0)
       :unmatched-syntax '((number "1" 26288 . 26298) (symbol 26280 . 26287) (punctuation 26278 . 26279) (punctuation 26277 . 26278) (LONG 25515 . 25519) (EXTERN 25508 . 25514) (TYPEDEF 24426 . 24433) (TYPEDEF 24277 . 24284) (semantic-list 19482 . 19539) (punctuation 19480 . 19481) (punctuation 19479 . 19480) (number "1" 15779 . 15789) (symbol 15771 . 15778) (punctuation 15769 . 15770) (punctuation 15768 . 15769) (LONG 12846 . 12850) (UNSIGNED 12837 . 12845) (LONG 6998 . 7002) (UNSIGNED 6989 . 6997) (EXTERN 6982 . 6988) (LONG 6812 . 6816) (EXTERN 6805 . 6811) (LONG 5501 . 5505) (UNSIGNED 5492 . 5500) (EXTERN 5485 . 5491) (LONG 5281 . 5285) (EXTERN 5274 . 5280) (LONG 5011 . 5015) (UNSIGNED 5002 . 5010) (EXTERN 4995 . 5001) (LONG 4793 . 4797) (EXTERN 4786 . 4792) (LONG 3575 . 3579) (EXTERN 3568 . 3574) (LONG 2398 . 2402) (LONG 2356 . 2360))
       :lexical-table 
         '(("RAND_MAX" . ((number "2147483647" 2586 . 2596)))
@@ -4464,7 +4464,7 @@
       :file "string.h"
       :pointmax 22618
       :fsize 17545
-      :lastmodtime '(23080 9901 0 0)
+      :lastmodtime '(23132 52314 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("strdupa" (spp-arg-list ("s") 6693 . 6696) . ((semantic-list "(__extension__							      \\
@@ -4492,6 +4492,17 @@
       :tags 
         '( ("_UNISTD_H" variable (:constant-flag t) nil [879 888])
             ("features.h" include (:system-flag t) nil [892 913])
+            ("getentropy" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("__buffer" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [42346 42361])
+                    ("__length" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42362 42378]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [42330 42385])
             ("swab" function
                (:type "void"
                 :arguments 
@@ -4499,26 +4510,26 @@
                        (:pointer 1
                         :constant-flag t
                         :type "void")
-                        (reparse-symbol arg-sub-list) [41483 41513])
+                        (reparse-symbol arg-sub-list) [41439 41469])
                     ("__to" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [41514 41536])
-                    ("__n" variable (:type ("ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41541 41553]))                  
+                        (reparse-symbol arg-sub-list) [41470 41492])
+                    ("__n" variable (:type ("ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41497 41509]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [41465 41581])
+                (reparse-symbol extern-c-contents) [41421 41537])
             ("encrypt" function
                (:type "void"
                 :arguments 
                   ( ("__glibc_block" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [41162 41182])
-                    ("__edflag" variable (:type "int") (reparse-symbol arg-sub-list) [41183 41196]))                  
+                        (reparse-symbol arg-sub-list) [41118 41138])
+                    ("__edflag" variable (:type "int") (reparse-symbol arg-sub-list) [41139 41152]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [41141 41226])
+                (reparse-symbol extern-c-contents) [41097 41182])
             ("crypt" function
                (:type "char"
                 :arguments 
@@ -4526,103 +4537,103 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [40974 40992])
+                        (reparse-symbol arg-sub-list) [40930 40948])
                     ("__salt" variable
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [40993 41012]))                  
+                        (reparse-symbol arg-sub-list) [40949 40968]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :pointer 1
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [40954 41045])
+                (reparse-symbol extern-c-contents) [40910 41001])
             ("fdatasync" function
                (:type "int"
                 :arguments 
-                  ( ("__fildes" variable (:type "int") (reparse-symbol arg-sub-list) [40723 40736]))                  
+                  ( ("__fildes" variable (:type "int") (reparse-symbol arg-sub-list) [40679 40692]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [40701 40737])
+                (reparse-symbol extern-c-contents) [40657 40693])
             ("TEMP_FAILURE_RETRY" variable
                (:typemodifiers ("extern" "\"C\"")
                 :constant-flag t)
-                (reparse-symbol extern-c-contents) [40316 40334])
+                (reparse-symbol extern-c-contents) [40272 40290])
             ("lockf64" function
                (:type "int"
                 :arguments 
-                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [40084 40093])
-                    ("__cmd" variable (:type "int") (reparse-symbol arg-sub-list) [40094 40104])
-                    ("__len" variable (:type ("__off64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40105 40121]))                  
+                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [40040 40049])
+                    ("__cmd" variable (:type "int") (reparse-symbol arg-sub-list) [40050 40060])
+                    ("__len" variable (:type ("__off64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40061 40077]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [40064 40128])
+                (reparse-symbol extern-c-contents) [40020 40084])
             ("lockf" function
                (:type "int"
                 :arguments 
-                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [39823 39832])
-                    ("__cmd" variable (:type "int") (reparse-symbol arg-sub-list) [39833 39843])
-                    ("__len" variable (:type ("__off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39844 39858]))                  
+                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [39779 39788])
+                    ("__cmd" variable (:type "int") (reparse-symbol arg-sub-list) [39789 39799])
+                    ("__len" variable (:type ("__off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39800 39814]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [39805 39865])
+                (reparse-symbol extern-c-contents) [39761 39821])
             ("F_TEST" variable
                (:typemodifiers ("extern" "\"C\"")
                 :constant-flag t)
-                (reparse-symbol extern-c-contents) [39717 39723])
+                (reparse-symbol extern-c-contents) [39673 39679])
             ("F_TLOCK" variable
                (:typemodifiers ("extern" "\"C\"")
                 :constant-flag t)
-                (reparse-symbol extern-c-contents) [39649 39656])
+                (reparse-symbol extern-c-contents) [39605 39612])
             ("F_LOCK" variable
                (:typemodifiers ("extern" "\"C\"")
                 :constant-flag t)
-                (reparse-symbol extern-c-contents) [39590 39596])
+                (reparse-symbol extern-c-contents) [39546 39552])
             ("F_ULOCK" variable
                (:typemodifiers ("extern" "\"C\"")
                 :constant-flag t)
-                (reparse-symbol extern-c-contents) [39529 39536])
+                (reparse-symbol extern-c-contents) [39485 39492])
             ("syscall" function
                (:type "long int"
                 :arguments 
-                  ( ("__sysno" variable (:type "long int") (reparse-symbol arg-sub-list) [38896 38913])
-                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [38914 38918]))                  
+                  ( ("__sysno" variable (:type "long int") (reparse-symbol arg-sub-list) [38852 38869])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [38870 38874]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [38871 38927])
+                (reparse-symbol extern-c-contents) [38827 38883])
             ("sbrk" function
                (:type "void"
                 :arguments 
-                  ( ("__delta" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38335 38352]))                  
+                  ( ("__delta" variable (:type ("intptr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38291 38308]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :pointer 1
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [38316 38361])
+                (reparse-symbol extern-c-contents) [38272 38317])
             ("brk" function
                (:type "int"
                 :arguments 
                   ( ("__addr" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [38032 38045]))                  
+                        (reparse-symbol arg-sub-list) [37988 38001]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [38016 38060])
+                (reparse-symbol extern-c-contents) [37972 38016])
             ("ftruncate64" function
                (:type "int"
                 :arguments 
-                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [37685 37694])
-                    ("__length" variable (:type ("__off64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37695 37714]))                  
+                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [37641 37650])
+                    ("__length" variable (:type ("__off64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37651 37670]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [37661 37729])
+                (reparse-symbol extern-c-contents) [37617 37685])
             ("ftruncate" function
                (:type "int"
                 :arguments 
-                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [37407 37416])
-                    ("__length" variable (:type ("__off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37417 37434]))                  
+                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [37363 37372])
+                    ("__length" variable (:type ("__off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37373 37390]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [37385 37449])
+                (reparse-symbol extern-c-contents) [37341 37405])
             ("truncate64" function
                (:type "int"
                 :arguments 
@@ -4630,11 +4641,11 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [37075 37094])
-                    ("__length" variable (:type ("__off64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37095 37114]))                  
+                        (reparse-symbol arg-sub-list) [37031 37050])
+                    ("__length" variable (:type ("__off64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37051 37070]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [37052 37150])
+                (reparse-symbol extern-c-contents) [37008 37106])
             ("truncate" function
                (:type "int"
                 :arguments 
@@ -4642,53 +4653,53 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [36739 36758])
-                    ("__length" variable (:type ("__off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36759 36776]))                  
+                        (reparse-symbol arg-sub-list) [36695 36714])
+                    ("__length" variable (:type ("__off_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36715 36732]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [36718 36812])
+                (reparse-symbol extern-c-contents) [36674 36768])
             ("getdtablesize" function
                (:type "int"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36526 36531]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36482 36487]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [36500 36540])
+                (reparse-symbol extern-c-contents) [36456 36496])
             ("getpagesize" function
                (:type "int"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36357 36362]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36313 36318]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [36333 36400])
+                (reparse-symbol extern-c-contents) [36289 36356])
             ("sync" function
                (:type "void"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36124 36129]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36080 36085]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [36106 36138])
+                (reparse-symbol extern-c-contents) [36062 36094])
             ("gethostid" function
                (:type "long int"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36031 36036]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [35987 35992]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [36004 36037])
+                (reparse-symbol extern-c-contents) [35960 35993])
             ("syncfs" function
                (:type "int"
                 :arguments 
-                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [35873 35882]))                  
+                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [35829 35838]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [35854 35891])
+                (reparse-symbol extern-c-contents) [35810 35847])
             ("fsync" function
                (:type "int"
                 :arguments 
-                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [35716 35725]))                  
+                  ( ("__fd" variable (:type "int") (reparse-symbol arg-sub-list) [35672 35681]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [35698 35726])
+                (reparse-symbol extern-c-contents) [35654 35682])
             ("getpass" function
                (:type "char"
                 :arguments 
@@ -4696,11 +4707,11 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [35479 35500]))                  
+                        (reparse-symbol arg-sub-list) [35435 35456]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :pointer 1
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [35457 35517])
+                (reparse-symbol extern-c-contents) [35413 35473])
             ("chroot" function
                (:type "int"
                 :arguments 
@@ -4708,40 +4719,40 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [35268 35287]))                  
+                        (reparse-symbol arg-sub-list) [35224 35243]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [35249 35318])
+                (reparse-symbol extern-c-contents) [35205 35274])
             ("daemon" function
                (:type "int"
                 :arguments 
-                  ( ("__nochdir" variable (:type "int") (reparse-symbol arg-sub-list) [34978 34992])
-                    ("__noclose" variable (:type "int") (reparse-symbol arg-sub-list) [34993 35007]))                  
+                  ( ("__nochdir" variable (:type "int") (reparse-symbol arg-sub-list) [34934 34948])
+                    ("__noclose" variable (:type "int") (reparse-symbol arg-sub-list) [34949 34963]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [34959 35022])
+                (reparse-symbol extern-c-contents) [34915 34978])
             ("setusershell" function
                (:type "void"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [34702 34707]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [34658 34663]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [34676 34716])
+                (reparse-symbol extern-c-contents) [34632 34672])
             ("endusershell" function
                (:type "void"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [34633 34638]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [34589 34594]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [34607 34647])
+                (reparse-symbol extern-c-contents) [34563 34603])
             ("getusershell" function
                (:type "char"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [34592 34597]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [34548 34553]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :pointer 1
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [34565 34606])
+                (reparse-symbol extern-c-contents) [34521 34562])
             ("acct" function
                (:type "int"
                 :arguments 
@@ -4749,23 +4760,23 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [34467 34486]))                  
+                        (reparse-symbol arg-sub-list) [34423 34442]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [34450 34495])
+                (reparse-symbol extern-c-contents) [34406 34451])
             ("profil" function
                (:type "int"
                 :arguments 
                   ( ("__sample_buffer" variable
                        (:pointer 1
                         :type "unsigned short int")
-                        (reparse-symbol arg-sub-list) [34092 34128])
-                    ("__size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34129 34143])
-                    ("__offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34149 34165])
-                    ("__scale" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [34166 34187]))                  
+                        (reparse-symbol arg-sub-list) [34048 34084])
+                    ("__size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34085 34099])
+                    ("__offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34105 34121])
+                    ("__scale" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [34122 34143]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [34073 34217])
+                (reparse-symbol extern-c-contents) [34029 34173])
             ("revoke" function
                (:type "int"
                 :arguments 
@@ -4773,17 +4784,17 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [33672 33691]))                  
+                        (reparse-symbol arg-sub-list) [33628 33647]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [33653 33722])
+                (reparse-symbol extern-c-contents) [33609 33678])
             ("vhangup" function
                (:type "int"
                 :arguments 
-                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [33569 33574]))                  
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [33525 33530]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [33549 33583])
+                (reparse-symbol extern-c-contents) [33505 33539])
             ("setdomainname" function
                (:type "int"
                 :arguments 
@@ -4791,29 +4802,29 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [33294 33313])
-                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33314 33327]))                  
+                        (reparse-symbol arg-sub-list) [33250 33269])
+                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33270 33283]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [33268 33363])
+                (reparse-symbol extern-c-contents) [33224 33319])
             ("getdomainname" function
                (:type "int"
                 :arguments 
                   ( ("__name" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [33204 33217])
-                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33218 33231]))                  
+                        (reparse-symbol arg-sub-list) [33160 33173])
+                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33174 33187]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [33178 33267])
+                (reparse-symbol extern-c-contents) [33134 33223])
             ("sethostid" function
                (:type "int"
                 :arguments 
-                  ( ("__id" variable (:type "long int") (reparse-symbol arg-sub-list) [32965 32979]))                  
+                  ( ("__id" variable (:type "long int") (reparse-symbol arg-sub-list) [32921 32935]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [32943 32994])
+                (reparse-symbol extern-c-contents) [32899 32950])
             ("sethostname" function
                (:type "int"
                 :arguments 
@@ -4821,30 +4832,26 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [32770 32789])
-                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32790 32803]))                  
+                        (reparse-symbol arg-sub-list) [32726 32745])
+                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32746 32759]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [32746 32839])
+                (reparse-symbol extern-c-contents) [32702 32795])
             ("gethostname" function
                (:type "int"
                 :arguments 
                   ( ("__name" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [32541 32554])
-                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32555 32568]))                  
+                        (reparse-symbol arg-sub-list) [32497 32510])
+                    ("__len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32511 32524]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [32517 32593])
-            ("getopt.h" include
+                (reparse-symbol extern-c-contents) [32473 32549])
+            ("bits/getopt_posix.h" include
                (:typemodifiers ("extern" "\"C\"")
                 :system-flag t)
-                (reparse-symbol extern-c-contents) [32257 32277])
-            ("__need_getopt" variable
-               (:typemodifiers ("extern" "\"C\"")
-                :constant-flag t)
-                (reparse-symbol extern-c-contents) [32243 32256])
+                (reparse-symbol extern-c-contents) [32202 32233])
             ("setlogin" function
                (:type "int"
                 :arguments 
@@ -4852,10 +4859,10 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [32003 32022]))                  
+                        (reparse-symbol arg-sub-list) [31971 31990]))                  
                 :typemodifiers ("extern" "\"C\"" "extern")
                 :prototype-flag t)
-                (reparse-symbol extern-c-contents) [31982 32047])
+                (reparse-symbol extern-c-contents) [31950 32015])
             ("getlogin" function
                (:type "char"
                 :arguments 
@@ -6072,10 +6079,10 @@
                 :constant-flag t)
                 (reparse-symbol extern-c-contents) [1176 1190]))          
       :file "unistd.h"
-      :pointmax 42446
+      :pointmax 42583
       :fsize 42582
-      :lastmodtime '(23080 9902 0 0)
-      :unmatched-syntax '((number "1" 37870 . 37880) (symbol 37862 . 37869) (punctuation 37860 . 37861) (punctuation 37859 . 37860) (number "1" 37285 . 37298) (symbol 37277 . 37284) (punctuation 37275 . 37276) (punctuation 37274 . 37275) (number "1" 37253 . 37273) (symbol 37245 . 37252) (punctuation 37243 . 37244) (punctuation 37242 . 37243) (number "1" 28238 . 28248) (symbol 28230 . 28237) (punctuation 28228 . 28229) (punctuation 28227 . 28228) (number "1" 19247 . 19257) (symbol 19239 . 19246) (punctuation 19237 . 19238) (punctuation 19236 . 19237) (number "1" 16482 . 16492) (symbol 16474 . 16481) (punctuation 16472 . 16473) (punctuation 16471 . 16472))
+      :lastmodtime '(23132 52315 0 0)
+      :unmatched-syntax '((number "1" 37826 . 37836) (symbol 37818 . 37825) (punctuation 37816 . 37817) (punctuation 37815 . 37816) (number "1" 37241 . 37254) (symbol 37233 . 37240) (punctuation 37231 . 37232) (punctuation 37230 . 37231) (number "1" 37209 . 37229) (symbol 37201 . 37208) (punctuation 37199 . 37200) (punctuation 37198 . 37199) (number "1" 28238 . 28248) (symbol 28230 . 28237) (punctuation 28228 . 28229) (punctuation 28227 . 28228) (number "1" 19247 . 19257) (symbol 19239 . 19246) (punctuation 19237 . 19238) (punctuation 19236 . 19237) (number "1" 16482 . 16492) (symbol 16474 . 16481) (punctuation 16472 . 16473) (punctuation 16471 . 16472))
       :lexical-table 
         '(("_XOPEN_LEGACY" . ((number "1" 3958 . 3959)))
           ("__pid_t_defined")
@@ -6087,20 +6094,20 @@
           ("F_OK" . ((number "0" 10402 . 10403)))
           ("SEEK_CUR" . ((number "1" 11453 . 11454)))
           ("SEEK_DATA" . ((number "3" 11578 . 11579)))
-          ("F_LOCK" . ((number "1" 39598 . 39599)))
+          ("F_LOCK" . ((number "1" 39554 . 39555)))
           ("__POSIX2_THIS_VERSION" . ((number "199209L" 2335 . 2342)))
           ("_XOPEN_UNIX" . ((number "1" 3713 . 3714)))
           ("__off64_t_defined")
-          ("F_TEST" . ((number "3" 39725 . 39726)))
-          ("TEMP_FAILURE_RETRY" (spp-arg-list ("expression") 40334 . 40346) . ((semantic-list "(__extension__							      \\
+          ("F_TEST" . ((number "3" 39681 . 39682)))
+          ("TEMP_FAILURE_RETRY" (spp-arg-list ("expression") 40290 . 40302) . ((semantic-list "(__extension__							      \\
     ({ long int __result;						      \\
        do __result = (long int) (expression);				      \\
        while (__result == -1L && errno == EINTR);			      \\
-       __result; }))" 40351 . 40556)))
+       __result; }))" 40307 . 40512)))
           ("__gid_t_defined")
           ("__off_t_defined")
           ("__intptr_t_defined")
-          ("F_TLOCK" . ((number "2" 39657 . 39658)))
+          ("F_TLOCK" . ((number "2" 39613 . 39614)))
           ("_POSIX2_VERSION" . ((symbol "__POSIX2_THIS_VERSION" 2444 . 2465)))
           ("_XOPEN_ENH_I18N" . ((number "1" 3884 . 3885)))
           ("__uid_t_defined")
@@ -6113,7 +6120,7 @@
           ("STDERR_FILENO" . ((number "2" 8791 . 8792)))
           ("__need_size_t")
           ("X_OK" . ((number "1" 10350 . 10351)))
-          ("F_ULOCK" . ((number "0" 39537 . 39538)))
+          ("F_ULOCK" . ((number "0" 39493 . 39494)))
           ("_XOPEN_XPG4" . ((number "1" 3641 . 3642)))
           ("__ssize_t_defined")
           ("SEEK_HOLE" . ((number "4" 11626 . 11627)))
@@ -6121,7 +6128,6 @@
           ("SEEK_SET" . ((number "0" 11397 . 11398)))
           ("L_SET" . ((symbol "SEEK_SET" 11796 . 11804)))
           ("L_XTND" . ((symbol "SEEK_END" 11848 . 11856)))
-          ("__need_getopt")
           ("_POSIX2_SW_DEV" . ((symbol "__POSIX2_THIS_VERSION" 2965 . 2986)))
           ("_XOPEN_XCU_VERSION" . ((number "4" 3507 . 3508)))
           ("__socklen_t_defined")
@@ -6751,7 +6757,7 @@
       :file "libio.h"
       :pointmax 17180
       :fsize 17085
-      :lastmodtime '(23080 9900 0 0)
+      :lastmodtime '(23132 52314 0 0)
       :unmatched-syntax '((TYPEDEF 11127 . 11134) (TYPEDEF 11033 . 11040) (TYPEDEF 10668 . 10675) (TYPEDEF 10203 . 10210) (semantic-list 2228 . 2284))
       :lexical-table 
         '(("_IO_fpos64_t" . ((symbol "_G_fpos64_t" 1499 . 1510)))
@@ -6866,7 +6872,7 @@
       :file "alloca.h"
       :pointmax 1204
       :fsize 1203
-      :lastmodtime '(23080 9900 0 0)
+      :lastmodtime '(23132 52313 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ALLOCA_H" . ((number "1" 826 . 827)))
@@ -6874,7 +6880,6 @@
           ("alloca" (spp-arg-list ("size") 1118 . 1124) . ((symbol "__builtin_alloca" 1125 . 1141) (semantic-list "(size)" 1142 . 1148)))
           )
 )
-
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -6999,7 +7004,7 @@
       :file "getopt.h"
       :pointmax 6645
       :fsize 1468
-      :lastmodtime '(23080 9902 0 0)
+      :lastmodtime '(23132 52315 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_GETOPT_H" . ((number "1" 878 . 879)))
@@ -7045,7 +7050,7 @@
       :file "_G_config.h"
       :pointmax 1288
       :fsize 1290
-      :lastmodtime '(23080 9900 0 0)
+      :lastmodtime '(23132 52314 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_G_va_list" . ((symbol "__gnuc_va_list" 1013 . 1027)))
@@ -7090,7 +7095,7 @@
       :file "endian.h"
       :pointmax 2940
       :fsize 3189
-      :lastmodtime '(23080 9901 0 0)
+      :lastmodtime '(23132 52314 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("BYTE_ORDER" . ((symbol "__BYTE_ORDER" 1830 . 1842)))
@@ -8611,7 +8616,7 @@
       :file "wchar.h"
       :pointmax 32125
       :fsize 29179
-      :lastmodtime '(23080 9901 0 0)
+      :lastmodtime '(23132 52315 0 0)
       :unmatched-syntax '((LONG 19003 . 19007) (UNSIGNED 18994 . 19002) (EXTERN 18987 . 18993) (LONG 18835 . 18839) (EXTERN 18828 . 18834) (LONG 17549 . 17553) (UNSIGNED 17540 . 17548) (EXTERN 17533 . 17539) (LONG 17299 . 17303) (EXTERN 17292 . 17298) (LONG 17008 . 17012) (UNSIGNED 16999 . 17007) (EXTERN 16992 . 16998) (LONG 16756 . 16760) (EXTERN 16749 . 16755))
       :lexical-table 
         '(("__need___FILE")
@@ -8936,7 +8941,7 @@
       :file "fcntl.h"
       :pointmax 10568
       :fsize 10564
-      :lastmodtime '(23080 9902 0 0)
+      :lastmodtime '(23132 52315 0 0)
       :unmatched-syntax '((punctuation 10326 . 10327) (symbol 10320 . 10325) (symbol 10312 . 10319) (punctuation 10310 . 10311) (symbol 10302 . 10310) (symbol 10294 . 10301) (punctuation 10292 . 10293) (symbol 10288 . 10292) (INT 10284 . 10287) (symbol 10265 . 10282) (INT 10261 . 10264) (EXTERN 10254 . 10260) (punctuation 10005 . 10006) (symbol 9999 . 10004) (symbol 9993 . 9998) (punctuation 9991 . 9992) (symbol 9983 . 9991) (symbol 9977 . 9982) (punctuation 9975 . 9976) (symbol 9971 . 9975) (INT 9967 . 9970) (symbol 9950 . 9965) (INT 9946 . 9949) (EXTERN 9939 . 9945) (punctuation 9737 . 9738) (symbol 9720 . 9728) (INT 9716 . 9719) (punctuation 9707 . 9708) (symbol 9702 . 9707) (symbol 9694 . 9701) (punctuation 9692 . 9693) (symbol 9684 . 9692) (symbol 9676 . 9683) (punctuation 9674 . 9675) (symbol 9670 . 9674) (INT 9666 . 9669) (symbol 9649 . 9664) (INT 9645 . 9648) (EXTERN 9638 . 9644) (punctuation 9376 . 9377) (symbol 9359 . 9367) (INT 9355 . 9358) (punctuation 9348 . 9349) (symbol 9343 . 9348) (symbol 9337 . 9342) (punctuation 9335 . 9336) (symbol 9327 . 9335) (symbol 9321 . 9326) (punctuation 9319 . 9320) (symbol 9315 . 9319) (INT 9311 . 9314) (symbol 9296 . 9309) (INT 9292 . 9295) (EXTERN 9285 . 9291) (punctuation 9096 . 9097) (symbol 9090 . 9095) (symbol 9082 . 9089) (punctuation 9080 . 9081) (symbol 9075 . 9080) (INT 9071 . 9074) (punctuation 9069 . 9070) (symbol 9065 . 9069) (INT 9061 . 9064) (symbol 9052 . 9059) (INT 9048 . 9051) (EXTERN 9041 . 9047) (punctuation 8856 . 8857) (symbol 8850 . 8855) (symbol 8844 . 8849) (punctuation 8842 . 8843) (symbol 8837 . 8842) (INT 8833 . 8836) (punctuation 8831 . 8832) (symbol 8827 . 8831) (INT 8823 . 8826) (symbol 8816 . 8821) (INT 8812 . 8815) (EXTERN 8805 . 8811) (number "1" 8100 . 8111) (symbol 8092 . 8099) (punctuation 8091 . 8092) (punctuation 8089 . 8090) (punctuation 8088 . 8089))
       :lexical-table 
         '(("__OPEN_NEEDS_MODE" (spp-arg-list ("oflag") 1453 . 1460) . ((semantic-list "(((oflag) & O_CREAT) != 0)" 1461 . 1487)))
@@ -8989,11 +8994,55 @@
     (semanticdb-table "semanticdb-table"
       :file "netdb.h"
       :fsize 28051
-      :lastmodtime '(23080 9929 0 0))
+      :lastmodtime '(23132 52341 0 0))
     (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_ERRNO_H" variable (:constant-flag t) nil [865 873])
+            ("features.h" include (:system-flag t) nil [877 898])
+            ("bits/errno.h" include (:system-flag t) nil [971 994])
+            ("error_t" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("int"))
+                (reparse-symbol extern-c-contents) [1715 1735])
+            ("__error_t_defined" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1695 1712])
+            ("program_invocation_short_name" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [1514 1557])
+            ("program_invocation_name" variable
+               (:type "char"
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [1476 1513])
+            ("errno" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [1256 1261])
+            ("__errno_location" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1212 1217]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1182 1246]))          
       :file "errno.h"
+      :pointmax 1833
       :fsize 1832
-      :lastmodtime '(23080 9900 0 0))
+      :lastmodtime '(23132 52313 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_ERRNO_H" . ((number "1" 874 . 875)))
+          ("__error_t_defined" . ((number "1" 1713 . 1714)))
+          ("errno" . ((semantic-list "(*__errno_location ())" 1262 . 1284)))
+          )
+)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -10804,7 +10853,7 @@
       :file "pthread.h"
       :pointmax 41226
       :fsize 41269
-      :lastmodtime '(23080 9927 0 0)
+      :lastmodtime '(23132 52339 0 0)
       :unmatched-syntax '((semantic-list 6671 . 6679) (semantic-list 6652 . 6670) (spp-macro-def 5921 . 5948) (spp-macro-def 5835 . 5858) (spp-macro-def 5743 . 5765) (spp-macro-def 5664 . 5685) (spp-macro-def 5097 . 5119) (spp-macro-def 5016 . 5039) (spp-macro-def 4884 . 4905) (spp-macro-def 4807 . 4827) (spp-macro-def 4693 . 4715) (spp-macro-def 4614 . 4635) (spp-macro-def 1141 . 1164) (spp-macro-def 1059 . 1082))
       :lexical-table 
         '(("PTHREAD_ADAPTIVE_MUTEX_INITIALIZER_NP" . ((semantic-list "{ { 0, 0, 0, PTHREAD_MUTEX_ADAPTIVE_NP, 0, { __PTHREAD_SPINS } } }" 3036 . 3102)))
@@ -11317,7 +11366,7 @@
       :file "time.h"
       :pointmax 13544
       :fsize 10363
-      :lastmodtime '(23080 9901 0 0)
+      :lastmodtime '(23132 52315 0 0)
       :unmatched-syntax '((close-paren 955 . 956) (symbol 940 . 955) (symbol 932 . 939) (punctuation 930 . 931))
       :lexical-table 
         '(("__pid_t_defined")
@@ -11332,23 +11381,23 @@
     (semanticdb-table "semanticdb-table"
       :file "signal.h"
       :fsize 12183
-      :lastmodtime '(23080 9899 0 0))
+      :lastmodtime '(23132 52313 0 0))
     (semanticdb-table "semanticdb-table"
       :file "assert.h"
       :fsize 4561
-      :lastmodtime '(23080 9897 0 0))
+      :lastmodtime '(23132 52311 0 0))
     (semanticdb-table "semanticdb-table"
       :file "strings.h"
       :fsize 4751
-      :lastmodtime '(23080 9901 0 0))
+      :lastmodtime '(23132 52314 0 0))
     (semanticdb-table "semanticdb-table"
       :file "syslog.h"
       :fsize 24
-      :lastmodtime '(23080 9903 0 0))
+      :lastmodtime '(23132 52316 0 0))
     (semanticdb-table "semanticdb-table"
       :file "ctype.h"
       :fsize 10963
-      :lastmodtime '(23080 9897 0 0))
+      :lastmodtime '(23132 52311 0 0))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -11958,7 +12007,7 @@
       :file "dirent.h"
       :pointmax 12485
       :fsize 12484
-      :lastmodtime '(23080 9901 0 0)
+      :lastmodtime '(23132 52315 0 0)
       :unmatched-syntax '((spp-macro-def 3488 . 3494) (spp-macro-def 3447 . 3454) (spp-macro-def 3405 . 3411) (spp-macro-def 3364 . 3370) (spp-macro-def 3324 . 3330) (spp-macro-def 3284 . 3290) (spp-macro-def 3244 . 3250) (spp-macro-def 3203 . 3210) (spp-macro-def 3155 . 3165))
       :lexical-table 
         '(("d_ino" . ((symbol "d_fileno" 1895 . 1903)))
@@ -12204,7 +12253,7 @@
       :file "sched.h"
       :pointmax 4660
       :fsize 4732
-      :lastmodtime '(23080 9902 0 0)
+      :lastmodtime '(23132 52315 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__pid_t_defined")
@@ -12495,7 +12544,7 @@
       :file "inttypes.h"
       :pointmax 11893
       :fsize 11892
-      :lastmodtime '(23080 9900 0 0)
+      :lastmodtime '(23132 52313 0 0)
       :unmatched-syntax '((LONG 7249 . 7253) (LONG 7194 . 7198) (punctuation 1199 . 1200) (WCHAR "wchar_t" 1189 . 1199) (INT "int" 1174 . 1188) (TYPEDEF 1166 . 1173))
       :lexical-table 
         '(("PRIdLEAST16" . ((string "\"d\"" 1700 . 1703)))
@@ -12658,7 +12707,23 @@
           ("SCNiMAX" . ((symbol "__PRI64_PREFIX" 6510 . 6524) (string "\"i\"" 6525 . 6528)))
           ("SCNiPTR" . ((symbol "__PRIPTR_PREFIX" 6746 . 6761) (string "\"i\"" 6762 . 6765)))
           )
-))
+)
+    (semanticdb-table "semanticdb-table"
+      :file "limits.h"
+      :fsize 5412
+      :lastmodtime '(23132 52303 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "fuse.h"
+      :fsize 246
+      :lastmodtime '(22376 18976 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "poll.h"
+      :fsize 22
+      :lastmodtime '(23132 52315 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "libudev.h"
+      :fsize 10282
+      :lastmodtime '(22886 11174 0 0)))
   :file "!usr!include!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

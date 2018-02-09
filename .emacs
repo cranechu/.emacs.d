@@ -34,7 +34,21 @@
 (load-theme 'manoj-dark t)
 
 ;;TAGS
-(setq tags-table-list '("~/spdk/TAGS"))
+;;(setq tags-table-list '("~/ceph/TAGS"))
+;;use RTags
+;; only run this if rtags is installed
+(when (require 'rtags nil :noerror)
+  (define-key c-mode-base-map (kbd "M-.")
+    (function rtags-find-symbol-at-point))
+  (define-key c-mode-base-map (kbd "M-,")
+    (function rtags-location-stack-back))
+
+  ;; install standard rtags keybindings. Do M-. on the symbol below to
+  ;; jump to definition and see the keybindings.
+  (rtags-enable-standard-keybindings)
+  ;; comment this out if you don't have or don't use helm
+  (setq rtags-use-helm t)
+)
 
 ;; replace tabs with spaces
 (setq c-basic-indent 8)
@@ -61,7 +75,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -113,36 +127,9 @@
 (require 'xcscope)
 (require 'column-marker)
 (require 'sr-speedbar)
-;;(require 'projectile-speedbar)
-;;(require 'sublimity)
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
-;;(require 'yasnippet)
-;;(yas-global-mode 1)
-;;(add-to-list 'ac-sources 'ac-source-yasnippet)
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
-;;(require 'company)
-;;(add-hook 'after-init-hook 'global-company-mode)
-
-;;function-arg
-(ivy-mode 1)
-(fa-config-default)
-;;(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-;;(set-default 'semantic-case-fold t)
-
-;;semantic
-;; (require 'cc-mode)
-;; (require 'semantic)
-;; (global-semanticdb-minor-mode 1)
-;; (global-semantic-idle-scheduler-mode 1)
-;; (semantic-mode 1)
-;; (require 'semantic/sb)
-;; (defun my:add-semantic-to-autocomplete()
-;;   (add-to-list 'ac-sources 'ac-source-semantic))
-;; (add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete)
-;; (semantic-add-system-include "~/spdk/include/spdk")
-;; (semantic-add-system-include "~/spdk/include/spdk_internal")
 
 ;;helm
 (require 'helm)
@@ -211,20 +198,6 @@
 
 ;;window switch
 (global-set-key (kbd "C-q") 'other-window)
-
-;;rust
-;;(require 'company)
-;;(require 'racer)
-;;(require 'rust-mode)
-(setq racer-cmd "~/.cargo/bin/racer") ;; Rustup binaries PATH
-(setq racer-rust-src-path "~/rust/rust/src") ;; Rust source code PATH
-(add-hook 'rust-mode-hook #'racer-mode)
-(add-hook 'racer-mode-hook #'eldoc-mode)
-(add-hook 'racer-mode-hook #'company-mode)
-(add-hook 'rust-mode-hook 'cargo-minor-mode)
-(require 'rust-mode)
-(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
-(setq company-tooltip-align-annotations t)
 
 ;;dashboard on startup
 (require 'dashboard)
