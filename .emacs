@@ -37,11 +37,18 @@
 ;;(setq tags-table-list '("~/ceph/TAGS"))
 ;;use RTags
 ;; only run this if rtags is installed
+(add-hook 'c-mode-hook 'rtags-start-process-unless-running)
+(add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
+(add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
 (when (require 'rtags nil :noerror)
   (define-key c-mode-base-map (kbd "M-.")
     (function rtags-find-symbol-at-point))
   (define-key c-mode-base-map (kbd "M-,")
     (function rtags-location-stack-back))
+  (define-key c-mode-base-map (kbd "M-<")
+    (function rtags-location-stack-forward))
+  (define-key c-mode-base-map (kbd "M-/")
+    (function rtags-find-references-at-point))
 
   ;; install standard rtags keybindings. Do M-. on the symbol below to
   ;; jump to definition and see the keybindings.
@@ -89,12 +96,6 @@
       (delete-other-windows)
       (set-window-buffer (split-window-horizontally) (cadr buffers)))))
 (add-hook 'emacs-startup-hook '2-windows-vertical-to-horizontal)
-
-;;keybind
-(global-set-key (kbd "M-/") 'xref-find-references)
-(global-set-key (kbd "C-M-.") 'find-tag-other-window)
-(global-set-key (kbd "M-c") 'compile)
-(global-set-key (kbd "C-x p") 'switch-to-completions)
 
 ;;indent
 (setq-default c-basic-offset 4)
@@ -202,12 +203,6 @@
 ;;dashboard on startup
 (require 'dashboard)
 (dashboard-setup-startup-hook)
-
-;;EIN
-(require 'ein)
-(require 'ein-loaddefs)
-(require 'ein-notebook)
-(require 'ein-subpackages)
 
 (setq x-select-enable-clipboard t)
 (put 'upcase-region 'disabled nil)
