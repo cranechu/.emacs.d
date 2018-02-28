@@ -99,3 +99,4 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=emacs
 export ALTERNATE_EDITOR=""
+export VAGRANT_DEFAULT_PROVIDER=virtualbox

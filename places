@@ -1,5 +1,13 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs" . 2928)
+(("/home/cranechu/ceph/src/googletest/googlemock/src/gmock.cc" . 6678)
+ ("/home/cranechu/ceph/src/googletest/googletest/include/gtest/gtest.h" . 85408)
+ ("/home/cranechu/ceph/src/googletest/googletest/src/gtest.cc" . 149581)
+ ("/home/cranechu/ceph/src/googletest/googlemock/src/gmock_main.cc" . 2566)
+ ("/usr/src/debug/glibc-2.26-137-g247c1ddd30/sysdeps/unix/sysv/linux/futex-internal.h" . 2959)
+ ("/home/cranechu/.emacs.d/recentf" . 1394)
+ ("/home/cranechu/.emacs" . 842)
+ ("/home/cranechu/ceph/build/out/osd.0.log" . 1945859)
+ ("/home/cranechu/ceph/src/ceph_osd.cc" . 4038)
  ("/home/cranechu/ceph/src/crush/"
   (dired-filename . "/home/cranechu/ceph/src/crush/CrushLocation.cc"))
  ("/home/cranechu/ceph/src/common/SubProcess.h" . 3692)
@@ -9,7 +17,6 @@
  ("/home/cranechu/ceph/src/include/buffer_fwd.h" . 175)
  ("/home/cranechu/ceph/src/common/config.h" . 9691)
  ("/home/cranechu/ceph/src/crush/CrushLocation.cc" . 1111)
- ("/home/cranechu/.emacs.d/recentf" . 1250)
  ("/home/cranechu/ceph/src/osd/osd_types.cc" . 159014)
  ("/home/cranechu/ceph/src/osd/PrimaryLogPG.cc" . 163847)
  ("/home/cranechu/ceph/src/librados/IoCtxImpl.cc" . 18994)

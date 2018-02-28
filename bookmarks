@@ -2,41 +2,11 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("RTags_6"
- (filename . "~/ceph/src/crush/CrushLocation.cc")
- (front-context-string . "crush_location_h")
- (rear-context-string . " << cct->_conf->")
- (position . 2137))
-("RTags_5"
- (filename . "~/ceph/src/crush/CrushLocation.cc")
- (front-context-string . "crush_location_h")
- (rear-context-string . " << cct->_conf->")
- (position . 1896))
-("RTags_4"
- (filename . "~/ceph/src/crush/CrushLocation.cc")
- (front-context-string . "crush_location_h")
- (rear-context-string . "    cct->_conf->")
- (position . 1492))
-("RTags_3"
- (filename . "~/ceph/src/crush/CrushLocation.cc")
- (front-context-string . "crush_location_h")
- (rear-context-string . " << cct->_conf->")
- (position . 1343))
-("RTags_2"
- (filename . "~/ceph/src/crush/CrushLocation.cc")
- (front-context-string . "crush_location_h")
- (rear-context-string . "ess(cct->_conf->")
- (position . 1232))
-("RTags_1"
- (filename . "~/ceph/src/crush/CrushLocation.cc")
- (front-context-string . "crush_location_h")
- (rear-context-string . "if (cct->_conf->")
- (position . 1151))
-("RTags_0"
- (filename . "~/ceph/src/crush/CrushLocation.cc")
- (front-context-string . "crush_location_h")
- (rear-context-string . "if (cct->_conf->")
- (position . 2751))
+(("RTags_0"
+ (filename . "~/ceph/src/googletest/googletest/include/gtest/gtest.h")
+ (front-context-string . "testing {\n\n// De")
+ (rear-context-string . "lly.\n\nnamespace ")
+ (position . 3474))
 ("pci.c"
  (filename . "~/spdk/lib/env_sim/pci.c")
  (front-context-string . "	*size = (uint64")

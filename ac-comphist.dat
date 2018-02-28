@@ -55,4 +55,16 @@
   ("auto-mode-alist" .
    [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
   ("rtags-location-stack-back" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])))
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("rtags" .
+   [1 0 0 0 0])
+  ("rtags-find-symbol-at-point" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("rtags-location-stack-forward" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("rtags-find-all-references-at-point" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
