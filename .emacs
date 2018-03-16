@@ -88,9 +88,9 @@
 (add-hook 'emacs-startup-hook '2-windows-vertical-to-horizontal)
 
 ;;indent
-(setq-default c-basic-offset 4)
+(setq-default c-basic-offset 2)
 (setq c-default-style "linux"
-      c-basic-offset 4)
+      c-basic-offset 2)
 
 ;;mode line
 (sml/setup)
@@ -101,7 +101,7 @@
 (global-linum-mode t)
 (defun linum-format-func (line)
   (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-    (propertize (format (format "%%%dd " 3) line) 'face 'linum)))
+    (propertize (format (format "%%%dd " 4) line) 'face 'linum)))
 (setq linum-format 'linum-format-func)
 (add-hook 'speedbar-mode-hook '(lambda () (linum-mode -1)))
 
@@ -148,7 +148,7 @@
 (provide 'init-helm)
 
 ;;delete trailing spaces
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; no startup buffer
 (setq inhibit-startup-message t)
@@ -193,6 +193,17 @@
 ;;dashboard on startup
 (require 'dashboard)
 (dashboard-setup-startup-hook)
+
+;;google c style
+(require 'cc-mode)
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+(add-hook 'c-mode-common-hook 'follow-mode)
+(defun cpplint ()
+  "check source code format according to Google Style Guide, command: next-error, previous-error"
+  (interactive)
+  (compilation-start (concat "cpplint " (buffer-file-name))))
 
 (setq x-select-enable-clipboard t)
 (put 'upcase-region 'disabled nil)
