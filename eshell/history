@@ -1,5 +1,3 @@
-e Makefile 
-ls
 cat hello_world.c 
 ls
 make
@@ -126,3 +124,5 @@ make db_bench SPDK_DIR=/root/spdk
 exit
 ipython
 python
+history | grep vstart
+history

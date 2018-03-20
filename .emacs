@@ -99,11 +99,12 @@
 
 ;;line number
 (global-linum-mode t)
-(defun linum-format-func (line)
-  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-    (propertize (format (format "%%%dd " 4) line) 'face 'linum)))
-(setq linum-format 'linum-format-func)
-(add-hook 'speedbar-mode-hook '(lambda () (linum-mode -1)))
+;(defun linum-format-func (line)
+;  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+;    (propertize (format (format "%%%dd " w) line) 'face 'linum)))
+;(setq linum-format 'linum-format-func)
+;(add-hook 'speedbar-mode-hook '(lambda () (linum-mode -1)))
+(setq linum-format "%4d ")
 
 ;;shell
 (ansi-color-for-comint-mode-on)
@@ -204,6 +205,9 @@
   "check source code format according to Google Style Guide, command: next-error, previous-error"
   (interactive)
   (compilation-start (concat "cpplint " (buffer-file-name))))
+
+;; no exit by accident
+(global-set-key (kbd "C-x C-c") 'save-some-buffers)
 
 (setq x-select-enable-clipboard t)
 (put 'upcase-region 'disabled nil)
