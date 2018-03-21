@@ -210,7 +210,7 @@
 (global-set-key (kbd "C-x C-c") 'save-some-buffers)
 
 ;;magit
-;(setq magit-refresh-status-buffer nil)
+(setq magit-refresh-status-buffer nil)
 (global-set-key (kbd "C-x g") 'magit-status)
  
 (setq x-select-enable-clipboard t)
