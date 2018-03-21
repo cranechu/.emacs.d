@@ -3,10 +3,10 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("RTags_0"
- (filename . "~/ceph/src/googletest/googletest/include/gtest/gtest.h")
- (front-context-string . "testing {\n\n// De")
- (rear-context-string . "lly.\n\nnamespace ")
- (position . 3474))
+ (filename . "~/ceph/src/objclass/class_api.cc")
+ (front-context-string . "cls_register_cxx")
+ (rear-context-string . "eturn 1;\n}\n\nint ")
+ (position . 2015))
 ("pci.c"
  (filename . "~/spdk/lib/env_sim/pci.c")
  (front-context-string . "	*size = (uint64")
