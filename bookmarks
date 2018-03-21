@@ -2,11 +2,36 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("RTags_0"
- (filename . "~/ceph/src/objclass/class_api.cc")
- (front-context-string . "cls_register_cxx")
- (rear-context-string . "eturn 1;\n}\n\nint ")
- (position . 2015))
+(("RTags_5"
+ (filename . "~/ceph/src/osd/ClassHandler.cc")
+ (front-context-string . "classes.find(cna")
+ (rear-context-string . "iterator iter = ")
+ (position . 2944))
+("RTags_4"
+ (filename . "~/ceph/src/osd/ClassHandler.cc")
+ (front-context-string . "classes.clear();")
+ (rear-context-string . "e);\n    }\n  }\n  ")
+ (position . 2161))
+("RTags_3"
+ (filename . "~/ceph/src/osd/ClassHandler.cc")
+ (front-context-string . "classes) {\n    i")
+ (rear-context-string . "or (auto& cls : ")
+ (position . 2075))
+("RTags_2"
+ (filename . "~/ceph/src/osd/ClassHandler.h")
+ (front-context-string . "classes;\n\n  Clas")
+ (rear-context-string . "ing, ClassData> ")
+ (position . 2646))
+("RTags_1"
+ (filename . "~/ceph/src/osd/ClassHandler.cc")
+ (front-context-string . "classes[cname];\n")
+ (rear-context-string . "   }\n    cls = &")
+ (position . 3230))
+("RTags_0"
+ (filename . "~/ceph/src/osd/ClassHandler.cc")
+ (front-context-string . "classes.end()) {")
+ (rear-context-string . "\n\n  if (iter != ")
+ (position . 2980))
 ("pci.c"
  (filename . "~/spdk/lib/env_sim/pci.c")
  (front-context-string . "	*size = (uint64")
