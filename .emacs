@@ -67,7 +67,7 @@
  '(column-number-mode t)
  '(custom-safe-themes
    (quote
-    ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default)))
+    ("84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default)))
  '(ede-project-directories (quote ("~/work")))
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
@@ -77,15 +77,7 @@
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
- '(zoom-window-mode-line-color "DarkGreen"))
-
-;;start with 2 vertical windows
-(defun 2-windows-vertical-to-horizontal ()
-  (let ((buffers (mapcar 'window-buffer (window-list))))
-    (when (= 2 (length buffers))
-      (delete-other-windows)
-      (set-window-buffer (split-window-horizontally) (cadr buffers)))))
-(add-hook 'emacs-startup-hook '2-windows-vertical-to-horizontal)
+ '(zoom-window-mode-line-color "LightCyan"))
 
 ;;indent
 (setq-default c-basic-offset 2)
@@ -94,8 +86,10 @@
 
 ;;mode line
 (sml/setup)
+(setq sml/shorten-modes t)
 (display-time-mode 1)
 (display-battery-mode 1)
+(which-function-mode 1)
 
 ;;line number
 (global-linum-mode t)
@@ -217,11 +211,8 @@
 (setq magit-refresh-status-buffer nil)
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; auto generated
 (setq x-select-enable-clipboard t)
 (put 'upcase-region 'disabled nil)
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+ '(sml/filename ((t (:inherit sml/global :foreground "black" :weight bold)))))

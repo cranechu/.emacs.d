@@ -2,11 +2,21 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("RTags_0"
- (filename . "~/ceph/src/objclass/class_api.cc")
- (front-context-string . "cls_register_cxx")
- (rear-context-string . "eturn 1;\n}\n\nint ")
- (position . 2015))
+(("RTags_2"
+ (filename . "~/ceph/src/osd/ClassHandler.h")
+ (front-context-string . "open_class(const")
+ (rear-context-string . "& cname);\n  int ")
+ (position . 3032))
+("RTags_1"
+ (filename . "~/ceph/src/osd/ClassHandler.cc")
+ (front-context-string . "open_class(const")
+ (rear-context-string . "t ClassHandler::")
+ (position . 754))
+("RTags_0"
+ (filename . "~/ceph/src/osd/ClassHandler.cc")
+ (front-context-string . "open_class(cname")
+ (rear-context-string . "list'\n      r = ")
+ (position . 1908))
 ("pci.c"
  (filename . "~/spdk/lib/env_sim/pci.c")
  (front-context-string . "	*size = (uint64")
