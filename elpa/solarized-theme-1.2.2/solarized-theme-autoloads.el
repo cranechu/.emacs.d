@@ -3,19 +3,9 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "solarized" "solarized.el" (22693 19257 405180
-;;;;;;  221000))
+;;;### (autoloads nil "solarized" "solarized.el" (23220 21568 97687
+;;;;;;  623000))
 ;;; Generated autoloads from solarized.el
-
-(autoload 'solarized-color-blend "solarized" "\
-Blends COLOR1 onto COLOR2 with ALPHA.
-
-COLOR1 and COLOR2 should be color names (e.g. \"white\") or RGB
-triplet strings (e.g. \"#ff12ec\").
-
-Alpha should be a float between 0 and 1.
-
-\(fn COLOR1 COLOR2 ALPHA)" nil nil)
 
 (when (and (boundp 'custom-theme-load-path) load-file-name) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
@@ -23,7 +13,7 @@ Alpha should be a float between 0 and 1.
 
 ;;;### (autoloads nil nil ("solarized-dark-theme.el" "solarized-light-theme.el"
 ;;;;;;  "solarized-theme-pkg.el" "solarized-theme-utils.el" "solarized-theme.el")
-;;;;;;  (22693 19257 426180 261000))
+;;;;;;  (23220 21568 105687 614000))
 
 ;;;***
 

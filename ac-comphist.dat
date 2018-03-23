@@ -1,4 +1,12 @@
-((("save-buffers-kill-terminal" .
+((("rm-whitelist" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("sml/discharging" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("wombat" .
+   [1 0 0 0 0 0])
+  ("load-theme" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("save-buffers-kill-terminal" .
    [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("winner-mode" .
    [0 0 0 0 0 0 0 0 0 1 0])

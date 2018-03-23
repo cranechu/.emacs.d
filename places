@@ -1,7 +1,9 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs.d/recentf" . 1479)
- ("/home/cranechu/.emacs.d/.emacs" . 7520)
- ("/home/cranechu/.emacs" . 7574)
+(("/home/cranechu/ceph/src/cls/hello/cls_hello.cc" . 6534)
+ ("/home/cranechu/.emacs.d/recentf" . 1331)
+ ("/home/cranechu/.emacs.d/elpa/solarized-theme-1.2.2/solarized-theme-autoloads.el" . 686)
+ ("/home/cranechu/ceph/src/cls/sdk/cls_sdk.cc" . 155)
+ ("/home/cranechu/log/objclass_unload.org" . 95)
  ("/home/cranechu/ceph/src/objclass/class_api.cc" . 11011)
  ("/home/cranechu/ceph/src/objclass/objclass.h" . 477)
  ("/home/cranechu/ceph/src/osd/ClassHandler.h" . 3032)
@@ -10,7 +12,6 @@
  ("/home/cranechu/.emacs.d/"
   (dired-filename . "/home/cranechu/.emacs.d/.emacs"))
  ("/home/cranechu/ceph/src/include/Distribution.h" . 432)
- ("/home/cranechu/ceph/src/cls/hello/cls_hello.cc" . 1345)
  ("/home/cranechu/.emacs.d/elpa/ace-window-0.9.0/ace-window-autoloads.el" . 1620)
  ("/home/cranechu/.emacs.d/elpa/avy-0.4.0/avy-autoloads.el" . 3133)
  ("/home/cranechu/ceph/build/out/osd.0.log" . 1385939)
@@ -32,7 +33,6 @@
  ("/home/cranechu/ceph/src/librados/librados.cc" . 65085)
  ("/home/cranechu/ceph/src/test/librados_test_stub/LibradosTestStub.cc" . 44128)
  ("/home/cranechu/ceph/src/cls/user/cls_user.cc" . 8929)
- ("/home/cranechu/ceph/src/cls/sdk/cls_sdk.cc" . 2645)
  ("/home/cranechu/ceph/src/cls/numops/cls_numops.cc" . 3530)
  ("/home/cranechu/ceph/src/include/rados/objclass.h" . 2063)
  ("/usr/src/debug/gperftools-2.6.1-5.fc27.x86_64/src/tcmalloc.cc" . 66838)
