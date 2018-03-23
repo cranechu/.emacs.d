@@ -1,16 +1,17 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/ceph/src/cls/hello/cls_hello.cc" . 6534)
- ("/home/cranechu/.emacs.d/recentf" . 1331)
+(("/home/cranechu/log/objclass_unload.org" . 57)
+ ("/home/cranechu/.emacs.d/"
+  (dired-filename . "/home/cranechu/.emacs.d/init.el"))
+ ("/home/cranechu/.emacs.d/init.el" . 8028)
+ ("/home/cranechu/.emacs.d/recentf" . 1300)
+ ("/home/cranechu/ceph/src/cls/hello/cls_hello.cc" . 6534)
  ("/home/cranechu/.emacs.d/elpa/solarized-theme-1.2.2/solarized-theme-autoloads.el" . 686)
  ("/home/cranechu/ceph/src/cls/sdk/cls_sdk.cc" . 155)
- ("/home/cranechu/log/objclass_unload.org" . 95)
  ("/home/cranechu/ceph/src/objclass/class_api.cc" . 11011)
  ("/home/cranechu/ceph/src/objclass/objclass.h" . 477)
  ("/home/cranechu/ceph/src/osd/ClassHandler.h" . 3032)
  ("/home/cranechu/ceph/src/osd/OSD.cc" . 292230)
  ("/home/cranechu/ceph/src/osd/ClassHandler.cc" . 2533)
- ("/home/cranechu/.emacs.d/"
-  (dired-filename . "/home/cranechu/.emacs.d/.emacs"))
  ("/home/cranechu/ceph/src/include/Distribution.h" . 432)
  ("/home/cranechu/.emacs.d/elpa/ace-window-0.9.0/ace-window-autoloads.el" . 1620)
  ("/home/cranechu/.emacs.d/elpa/avy-0.4.0/avy-autoloads.el" . 3133)

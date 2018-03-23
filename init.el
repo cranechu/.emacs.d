@@ -220,6 +220,9 @@
 (setq magit-refresh-status-buffer nil)
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; org
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
 ;; auto generated
 (setq x-select-enable-clipboard t)
 (put 'upcase-region 'disabled nil)
