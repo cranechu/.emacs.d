@@ -1,4 +1,6 @@
-((("rm-whitelist" .
+((("go-dlv" .
+   [0 0 0 0 1 0])
+  ("rm-whitelist" .
    [0 0 0 0 0 0 0 0 1 0 0 0])
   ("sml/discharging" .
    [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
@@ -77,7 +79,7 @@
   ("global-flycheck-mode" .
    [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
   ("require" .
-   [3 0 1 1 0 2 0])
+   [3 0 2 1 0 2 0])
   ("eshell" .
    [1 0 0 0 0 0])
   ("eshell-up" .

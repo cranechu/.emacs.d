@@ -95,8 +95,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. ~/.alias
 
 export EDITOR=emacs
 export ALTERNATE_EDITOR=""
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export GOPATH=~/go
+export PATH=${PATH}:${GOPATH}/bin
+
+# User specific aliases and functions
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias l='ls'
+alias e='emacsclient -t'

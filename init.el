@@ -55,15 +55,6 @@
 '(rtags-track-container t)
 '(rtags-skippedline ((t (:background "dim gray"))))
 
-;; replace tabs with spaces
-(setq c-basic-indent 8)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 8)
-(setq indent-line-function 'insert-tab)
-(setq-default c-basic-offset 8
-              tab-width 8
-              indent-tabs-mode t)
-
 ;;zoom window
 (require 'zoom-window)
 (global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
@@ -88,9 +79,11 @@
  '(zoom-window-mode-line-color "Blue"))
 
 ;;indent
+(setq c-default-style "linux")
+(setq c-basic-indent 2)
 (setq-default c-basic-offset 2)
-(setq c-default-style "linux"
-      c-basic-offset 2)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
 
 ;;mode line
 (setq sml/name-width 31)
@@ -232,6 +225,10 @@
 
 ;; golang
 (add-hook 'before-save-hook 'gofmt-before-save)
+(add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
+(require 'go-flycheck)
+;(add-to-list 'load-path "~/go/src/github.com/benma/go-dlv")
+(require 'go-dlv)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)
