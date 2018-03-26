@@ -47,6 +47,13 @@
 (global-set-key (kbd "M-/") 'rtags-find-all-references-at-point)
 (rtags-enable-standard-keybindings)
 (setq rtags-use-helm t)
+'(rtags-autostart-diagnostics t)
+'(rtags-completions-enabled t)
+'(rtags-container-timer-interval 2)
+'(rtags-display-summary-as-tooltip t)
+'(rtags-reparse-timeout 3000)
+'(rtags-track-container t)
+'(rtags-skippedline ((t (:background "dim gray"))))
 
 ;; replace tabs with spaces
 (setq c-basic-indent 8)
@@ -73,7 +80,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -223,6 +230,9 @@
 ;; org
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
+;; golang
+(add-hook 'before-save-hook 'gofmt-before-save)
+
 ;; auto generated
 (setq x-select-enable-clipboard t)
 (put 'upcase-region 'disabled nil)
@@ -231,9 +241,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml/global ((t (:foreground "white" :inverse-video nil))))
- '(sml/filename ((t (:inherit sml/global :foreground "white" :weight bold))))
  '(sml/battery ((t (:inherit sml/global :foreground "white"))) t)
- '(sml/discharging ((t (:inherit sml/global :foreground "white"))) t)
+ '(sml/discharging ((t (:inherit sml/global :foreground "white"))))
+ '(sml/filename ((t (:inherit sml/global :foreground "white" :weight bold))))
+ '(sml/global ((t (:foreground "white" :inverse-video nil))))
  '(which-func ((t (:foreground "white")))))
 
