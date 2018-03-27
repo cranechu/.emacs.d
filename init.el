@@ -113,7 +113,6 @@
 			    (yas-minor-mode -1)))
 (require 'yasnippet)
 (add-to-list 'yas/snippet-dirs "snippets")
-(add-to-list 'yas-snippet-dirs "snippets/yasnippet-go")
 (yas/global-mode 1)
 
 ;; auto complete

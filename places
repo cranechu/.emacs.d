@@ -1,5 +1,7 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs.d/init.el" . 8980)
+(("/home/cranechu/.emacs.d/test.go" . 130)
+ ("/home/cranechu/.emacs.d/recentf" . 1151)
+ ("/home/cranechu/.emacs.d/init.el" . 4843)
  ("/home/cranechu/go/src/gopl.io/ch11/storage1/storage.go" . 220)
  ("/home/cranechu/ceph/src/osd/ClassHandler.h" . 1264)
  ("/home/cranechu/ceph/src/osd/ClassHandler.cc" . 7240)
@@ -13,7 +15,6 @@
  ("/home/cranechu/.emacs.d/elpa/neotree-0.5.2/neotree-autoloads.el" . 1276)
  ("/home/cranechu/.emacs.d/elpa/exec-path-from-shell-1.11/exec-path-from-shell-autoloads.el" . 1284)
  ("/home/cranechu/go/src/local/hello/hello.go" . 89)
- ("/home/cranechu/.emacs.d/recentf" . 1109)
  ("/home/cranechu/.emacs.d/elpa/helm-go-package-0.3.0/helm-go-package-autoloads.el" . 760)
  ("/usr/lib/golang/src/database/sql/sql.go" . 5031)
  ("/home/cranechu/go/src/github.com/derekparker/delve/pkg/dwarf/line/line_parser.go" . 835)
