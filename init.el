@@ -64,7 +64,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -96,6 +96,7 @@
 ;;line number
 (global-linum-mode t)
 (setq linum-format "%4d ")
+(global-set-key "\M-g" 'goto-line)
 
 ;;shell
 (ansi-color-for-comint-mode-on)
@@ -112,6 +113,7 @@
 			    (yas-minor-mode -1)))
 (require 'yasnippet)
 (add-to-list 'yas/snippet-dirs "snippets")
+(add-to-list 'yas-snippet-dirs "snippets/yasnippet-go")
 (yas/global-mode 1)
 
 ;; auto complete
@@ -150,6 +152,10 @@
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
+(go-guru-hl-identifier-mode)
+(eval-after-load 'go-mode
+  '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
+(require 'go-guru)
 
 ;; execute commands by hitting two keys simultaneously.
 (require 'key-chord)
@@ -231,6 +237,15 @@
 (global-set-key (kbd "C-c C-c C-q") 'winner-redo)
 (global-set-key (kbd "C-q") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+
+;; neotree
+;(require 'neotree)
+;(setq neo-autorefresh nil)
+;(setq neo-toggle-window-keep-p t)
+;(setq neo-click-changes-root nil)
+;(setq neo-window-fixed-size t)
+;(setq neo-buffer--start-node "~/")
+;(setq neo-global--do-autorefresh nil)
 
 ;;dashboard on startup
 (require 'dashboard)
