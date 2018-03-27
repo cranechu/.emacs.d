@@ -1,7 +1,8 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs.d/hello.go" . 75)
- ("/home/cranechu/.emacs.d/init.el" . 5386)
- ("/home/cranechu/.emacs.d/recentf" . 989)
+(("/home/cranechu/.emacs.d/init.el" . 9951)
+ ("/home/cranechu/go/src/github.com/derekparker/delve/pkg/dwarf/line/line_parser.go" . 835)
+ ("/home/cranechu/go/src/local/echo/echo.go" . 134)
+ ("/home/cranechu/.emacs.d/recentf" . 997)
  ("/home/cranechu/.emacs.d/elpa/multiple-cursors-1.4.0/multiple-cursors-autoloads.el" . 8824)
  ("/home/cranechu/.emacs.d/elpa/key-chord-0.6/key-chord-autoloads.el" . 2120)
  ("/home/cranechu/go/src/local/hello/"

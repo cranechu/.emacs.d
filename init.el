@@ -1,8 +1,5 @@
 ;; .emacs
 
-;;; uncomment this line to disable loading of "default.el" at startup
-;; (setq inhibit-default-init t)
-
 ;; enable visual feedback on selections
 (setq transient-mark-mode t)
 
@@ -11,10 +8,6 @@
 ;;(tool-bar-mode -1)
 ;;(scroll-bar-mode -1)
 (set-frame-parameter nil 'fullscreen 'fullboth)
-
-;; default to better frame titles
-(setq frame-title-format
-      (concat  "%b - emacs@" (system-name)))
 
 ;; default to unified diffs
 (setq diff-switches "-u")
@@ -30,7 +23,7 @@
 (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-;;dark color theme
+;; color theme
 ;(load-theme 'manoj-dark t)
 (load-theme 'wombat t)
 
@@ -142,8 +135,6 @@
 (setq fci-rule-color "darkblue")
 (setq fill-column 80)
 (add-hook 'c-mode-hook 'fci-mode)
-(add-hook 'cc-mode-hook 'fci-mode)
-(add-hook 'go-mode-hook 'fci-mode)
 
 ;; golang
 (require 'go-mode)
@@ -152,6 +143,8 @@
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
 (add-to-list 'load-path "~/go/src/github.com/benma/go-dlv")
+(add-hook 'go-mode-hook 'fci-mode)
+(add-hook 'go-mode-hook 'follow-mode)
 (require 'go-flycheck)
 (require 'go-dlv)
 (require 'go-autocomplete)
@@ -175,14 +168,12 @@
 (require 'helm-config)
 (helm-mode 1)
 (helm-autoresize-mode 1)
-
 (global-set-key (kbd "C-o") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-set-key (kbd "C-i") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
-
 (setq helm-split-window-in-side-p           t
       helm-move-to-line-cycle-in-source     t
       helm-ff-search-library-in-sexp        t
@@ -192,7 +183,6 @@
       helm-recentf-fuzzy-match              t
       helm-scroll-amount                    8
       helm-ff-file-name-history-use-recentf t)
-
 (provide 'init-helm)
 
 ;;delete trailing spaces
