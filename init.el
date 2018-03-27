@@ -43,7 +43,7 @@
 (add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
 (global-set-key (kbd "M-.") 'rtags-find-symbol-at-point)
 (global-set-key (kbd "M-,") 'rtags-location-stack-back)
-(global-set-key (kbd "M-<") 'rtags-location-stack-forward)
+(global-set-key (kbd "M-m") 'rtags-location-stack-forward)
 (global-set-key (kbd "M-/") 'rtags-find-all-references-at-point)
 (rtags-enable-standard-keybindings)
 (setq rtags-use-helm t)
@@ -71,7 +71,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -102,29 +102,73 @@
 
 ;;line number
 (global-linum-mode t)
-;(defun linum-format-func (line)
-;  (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-;    (propertize (format (format "%%%dd " w) line) 'face 'linum)))
-;(setq linum-format 'linum-format-func)
-;(add-hook 'speedbar-mode-hook '(lambda () (linum-mode -1)))
 (setq linum-format "%4d ")
 
 ;;shell
 (ansi-color-for-comint-mode-on)
 (remove-hook 'comint-output-filter-functions
 	     'comint-postoutput-scroll-to-bottom)
-;;(require 'eshell-up)
+
+;;ace-jump-mode
+(require 'ace-jump-mode)
+(define-key global-map (kbd "M-j") 'ace-jump-mode)
+(setq ace-jump-mode-scope 'window)
+
+;; yasnippet
+(add-hook 'term-mode-hook (lambda()
+			    (yas-minor-mode -1)))
+(require 'yasnippet)
+(add-to-list 'yas/snippet-dirs "snippets")
+(yas/global-mode 1)
+
+;; auto complete
+(require 'auto-complete)
+(require 'auto-complete-config)
+(setq ac-auto-show-menu 0.0)
+(global-auto-complete-mode t)
+(setq-default ac-sources '(ac-source-dictionary ac-source-words-in-same-mode-buffers))
+(ac-config-default)
+
+;; multiple-cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "M-S-<up>") 'mc/mark-previous-like-this)
+(global-set-key (kbd "M-S-<down>") 'mc/mark-next-like-this)
 
 ;;python
 (elpy-enable)
 
-;;coding enhancements
-(require 'xcscope)
-(require 'column-marker)
-(require 'sr-speedbar)
-(require 'auto-complete)
+;;column bondary
+(require 'fill-column-indicator)
+(setq fci-rule-color "darkblue")
+(setq fill-column 80)
+(add-hook 'c-mode-hook 'fci-mode)
+(add-hook 'cc-mode-hook 'fci-mode)
+(add-hook 'go-mode-hook 'fci-mode)
+
+;; golang
+(require 'go-mode)
+(setq gofmt-command "goimports")
+(setq gofmt-is-goimports t)
+(add-hook 'before-save-hook 'gofmt-before-save)
+(add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
+(add-to-list 'load-path "~/go/src/github.com/benma/go-dlv")
+(require 'go-flycheck)
+(require 'go-dlv)
+(require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
+
+;; execute commands by hitting two keys simultaneously.
+(require 'key-chord)
+;; reduce delay times s.t. you don't accidentally trigger a key-chord
+;; during normal typing.
+(setq key-chord-two-keys-delay .030
+      key-chord-one-key-delay .020)
+(key-chord-mode 1)
+(key-chord-define-global "j1" 'delete-other-windows)
+(key-chord-define-global "j2" 'split-window-vertically)
+(key-chord-define-global "j3" 'split-window-horizontally)
+(key-chord-define-global "j0" 'delete-windows)
 
 ;;helm
 (require 'helm)
@@ -222,13 +266,6 @@
 
 ;; org
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-
-;; golang
-(add-hook 'before-save-hook 'gofmt-before-save)
-(add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
-(require 'go-flycheck)
-;(add-to-list 'load-path "~/go/src/github.com/benma/go-dlv")
-(require 'go-dlv)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)
