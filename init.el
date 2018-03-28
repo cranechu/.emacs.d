@@ -177,6 +177,7 @@
 (global-set-key (kbd "C-i") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+(define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
 (setq helm-split-window-in-side-p           t
       helm-move-to-line-cycle-in-source     t
       helm-ff-search-library-in-sexp        t

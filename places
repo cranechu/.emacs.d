@@ -1,12 +1,15 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs.d/init.el" . 4021)
+(("/home/cranechu/ceph/src/btrfs_ioc_test.c" . 2410)
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Behavioral/Iterator/"
+  (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Behavioral/Iterator/iterator_test.go"))
+ ("/home/cranechu/.emacs.d/recentf" . 1583)
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Creational/FactoryMethod/factory_method.go" . 932)
+ ("/home/cranechu/.emacs.d/init.el" . 4021)
  ("/home/cranechu/.emacs.d/"
   (dired-filename . "/home/cranechu/.emacs.d/init.el"))
- ("/home/cranechu/ceph/src/btrfs_ioc_test.c" . 2540)
  ("/home/cranechu/ceph/src/include/"
   (dired-filename . "/home/cranechu/ceph/src/include/elist.h"))
  ("/home/cranechu/ceph/src/include/elist.h" . 3160)
- ("/home/cranechu/.emacs.d/recentf" . 1456)
  ("/usr/lib/golang/src/testing/testing.go" . 25787)
  ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/Adapter/"
   (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/Adapter/adapter.go"))
