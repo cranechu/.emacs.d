@@ -1,4 +1,6 @@
-((("package" .
+((("go-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("package" .
    [0 0 0 0 0 1 0])
   ("neo-global--do-autorefresh" .
    [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
@@ -99,7 +101,7 @@
   ("after-init-hook" .
    [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
   ("add-hook" .
-   [1 0 0 0 0 0 0 1])
+   [2 0 0 0 0 0 0 1])
   ("a" .
    [2])
   ("ac-source-semantic" .

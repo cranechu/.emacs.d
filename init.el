@@ -86,6 +86,13 @@
 (display-battery-mode 1)
 (sml/setup)
 
+;; which function in the header line
+(which-function-mode 1)
+(let ((which-func '(which-func-mode ("" which-func-format " "))))
+  (setq-default mode-line-format (remove which-func mode-line-format))
+  (setq-default mode-line-misc-info (remove which-func mode-line-misc-info))
+  (setq-default header-line-format which-func))
+
 ;; sticky function at head
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 (semantic-mode 1)
