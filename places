@@ -1,7 +1,26 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs.d/test.go" . 130)
- ("/home/cranechu/.emacs.d/recentf" . 1151)
- ("/home/cranechu/.emacs.d/init.el" . 4843)
+(("/home/cranechu/.emacs.d/init.el" . 4021)
+ ("/home/cranechu/.emacs.d/"
+  (dired-filename . "/home/cranechu/.emacs.d/init.el"))
+ ("/home/cranechu/ceph/src/btrfs_ioc_test.c" . 2540)
+ ("/home/cranechu/ceph/src/include/"
+  (dired-filename . "/home/cranechu/ceph/src/include/elist.h"))
+ ("/home/cranechu/ceph/src/include/elist.h" . 3160)
+ ("/home/cranechu/.emacs.d/recentf" . 1456)
+ ("/usr/lib/golang/src/testing/testing.go" . 25787)
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/Adapter/"
+  (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/Adapter/adapter.go"))
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/Adapter/adapter_test.go" . 213)
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/Adapter/adapter.go" . 51)
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/"
+  (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Structural/.."))
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/"
+  (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Creational"))
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Creational/"
+  (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Creational/Builder"))
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Creational/Builder/"
+  (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Creational/Builder/builder.go"))
+ ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/Creational/Builder/builder.go" . 275)
  ("/home/cranechu/go/src/gopl.io/ch11/storage1/storage.go" . 220)
  ("/home/cranechu/ceph/src/osd/ClassHandler.h" . 1264)
  ("/home/cranechu/ceph/src/osd/ClassHandler.cc" . 7240)
@@ -30,8 +49,6 @@
  ("/home/cranechu/go/src/gopl.io/ch1/helloworld/main.go" . 238)
  ("/home/cranechu/ceph/src/cls/hello/cls_hello.cc" . 9519)
  ("/home/cranechu/ceph/src/include/rados/objclass.h" . 1228)
- ("/home/cranechu/.emacs.d/"
-  (dired-filename . "/home/cranechu/.emacs.d/init.el"))
  ("/home/cranechu/ceph/src/objclass/class_api.cc" . 1450)
  ("/home/cranechu/.emacs.d/elpa/go-autocomplete-20170907/go-autocomplete-autoloads.el" . 273)
  ("/home/cranechu/.emacs.d/elpa/go-direx-0.4/go-direx-autoloads.el" . 439)
@@ -118,7 +135,6 @@
  ("/home/cranechu/ceph/build/src/cls/CMakeFiles/cls_sdk.dir/cmake_clean.cmake" . 169)
  ("/home/cranechu/ceph/build/src/cls/CMakeFiles/cls_sdk.dir/DependInfo.cmake" . 1111)
  ("/home/cranechu/ceph/build/src/cls/cmake_install.cmake" . 2148)
- ("/home/cranechu/ceph/src/btrfs_ioc_test.c" . 40)
  ("/usr/include/c++/7/bits/stringfwd.h" . 2132)
  ("/home/cranechu/ceph/src/googletest/googlemock/src/gmock.cc" . 6678)
  ("/home/cranechu/ceph/src/googletest/googletest/include/gtest/gtest.h" . 85408)
