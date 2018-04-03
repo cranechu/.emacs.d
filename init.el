@@ -181,7 +181,6 @@
 (global-set-key (kbd "C-o") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
-(global-set-key (kbd "C-i") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)

@@ -1,8 +1,9 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs.d/recentf" . 1631)
+(("/home/cranechu/.emacs.d/init.el" . 6899)
+ ("/home/cranechu/.emacs.d/recentf" . 1619)
+ ("/home/cranechu/ceph/COPYING" . 173)
  ("/home/cranechu/go/src/golang.org/x/tools/go/ast/astutil/enclosing.go" . 7517)
  ("/home/cranechu/log/objclass.org" . 1966)
- ("/home/cranechu/.emacs.d/init.el" . 5657)
  ("/home/cranechu/go/src/github.com/AlexanderGrom/"
   (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns"))
  ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/"
