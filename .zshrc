@@ -93,6 +93,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+. ~/.emacs.d/z.sh
+
 PROMPT=$'\n''%{$fg[green]%}%(5~|%-2~/…/%3~|%~)%{$fg[yellow]%}▶%{$reset_color%} '
 
 export EDITOR=emacs
@@ -107,3 +109,5 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias l='ls'
 alias e='emacsclient -t'
+alias j='z'
+
