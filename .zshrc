@@ -107,7 +107,7 @@ export PATH=${PATH}:${GOPATH}/bin
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias l='ls'
+alias s='ls'
 alias e='emacsclient -t'
 alias j='z'
 

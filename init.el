@@ -64,7 +64,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (use-package go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf flycheck-rtags helm-rtags rtags async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -107,11 +107,6 @@
 (ansi-color-for-comint-mode-on)
 (remove-hook 'comint-output-filter-functions
 	     'comint-postoutput-scroll-to-bottom)
-
-;;ace-jump-mode
-(require 'ace-jump-mode)
-(define-key global-map (kbd "M-j") 'ace-jump-mode)
-(setq ace-jump-mode-scope 'window)
 
 ;; yasnippet
 (add-hook 'term-mode-hook (lambda()
@@ -275,6 +270,12 @@
 
 ;; org
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
+;;ace-jump-mode
+(require 'ace-jump-mode)
+(setq ace-jump-mode-scope 'frame)
+;(global-set-key (kbd "M-j") 'ace-jump-mode)
+(bind-key* "M-j" 'ace-jump-mode)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)

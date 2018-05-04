@@ -1,10 +1,9 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.emacs.d/recentf" . 1452)
- ("/home/cranechu/ceph_deploy/build_ceph.sh" . 30)
- ("/home/cranechu/build_ceph.sh" . 392)
+(("/home/cranechu/cpp/code/static_address.cc" . 62)
+ ("/home/cranechu/.emacs.d/recentf" . 1365)
+ ("/home/cranechu/ceph/src/osd/OSD.cc" . 299814)
  ("/home/cranechu/.emacs.d/init.el" . 6899)
  ("/home/cranechu/go/src/golang.org/x/tools/go/ast/astutil/enclosing.go" . 7517)
- ("/home/cranechu/log/objclass.org" . 1966)
  ("/home/cranechu/go/src/github.com/AlexanderGrom/"
   (dired-filename . "/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns"))
  ("/home/cranechu/go/src/github.com/AlexanderGrom/go-patterns/"
