@@ -160,8 +160,9 @@
 (require 'key-chord)
 ;; reduce delay times s.t. you don't accidentally trigger a key-chord
 ;; during normal typing.
-(setq key-chord-two-keys-delay .030
-      key-chord-one-key-delay .020)
+(setq key-chord-two-keys-delay .040
+      key-chord-one-key-delay .050)
+key-chord-one
 (key-chord-mode 1)
 (key-chord-define-global "j1" 'delete-other-windows)
 (key-chord-define-global "j2" 'split-window-vertically)
@@ -236,6 +237,7 @@
 (global-set-key (kbd "C-c C-c C-q") 'winner-redo)
 (global-set-key (kbd "C-q") 'ace-window)
 (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+(setq aw-scope 'frame)
 
 ;; neotree
 ;(require 'neotree)
