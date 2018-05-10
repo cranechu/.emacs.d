@@ -1,7 +1,7 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/cpp/code/static_address.cc" . 62)
+(("/home/cranechu/ceph/src/osd/OSD.cc" . 299814)
  ("/home/cranechu/.emacs.d/recentf" . 1365)
- ("/home/cranechu/ceph/src/osd/OSD.cc" . 299814)
+ ("/home/cranechu/cpp/code/static_address.cc" . 62)
  ("/home/cranechu/.emacs.d/init.el" . 6899)
  ("/home/cranechu/go/src/golang.org/x/tools/go/ast/astutil/enclosing.go" . 7517)
  ("/home/cranechu/go/src/github.com/AlexanderGrom/"
