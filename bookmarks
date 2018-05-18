@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("pci.c"
+(("RTags_0"
+ (filename . "~/rtags/src/ClassHierarchyJob.cpp")
+ (front-context-string . "title,\n         ")
+ (rear-context-string . "    const char *")
+ (position . 1592))
+("pci.c"
  (filename . "~/spdk/lib/env_sim/pci.c")
  (front-context-string . "	*size = (uint64")
  (rear-context-string . "bar].phys_addr;\n")

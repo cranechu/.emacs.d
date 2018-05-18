@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "rtags" "rtags.el" (23165 5294 14633 548000))
+;;;### (autoloads nil "rtags" "rtags.el" (23295 2066 396356 335000))
 ;;; Generated autoloads from rtags.el
 
 (autoload 'rtags-set-periodic-reparse-timeout "rtags" "\
