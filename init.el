@@ -137,24 +137,24 @@
 (setq fill-column 80)
 (add-hook 'c-mode-hook 'fci-mode)
 
-;; golang
-(require 'go-mode)
-(setq gofmt-command "goimports")
-(setq gofmt-is-goimports t)
-(add-hook 'before-save-hook 'gofmt-before-save)
-(add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
-(add-to-list 'load-path "~/go/src/github.com/benma/go-dlv")
-(add-hook 'go-mode-hook 'fci-mode)
-(add-hook 'go-mode-hook 'follow-mode)
-(require 'go-flycheck)
-(require 'go-dlv)
-(require 'go-autocomplete)
-(require 'auto-complete-config)
-(ac-config-default)
-(go-guru-hl-identifier-mode)
-(eval-after-load 'go-mode
-  '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
-(require 'go-guru)
+;; golang not use for now
+;; (require 'go-mode)
+;; (setq gofmt-command "goimports")
+;; (setq gofmt-is-goimports t)
+;; (add-hook 'before-save-hook 'gofmt-before-save)
+;; (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
+;; (add-to-list 'load-path "~/go/src/github.com/benma/go-dlv")
+;; (add-hook 'go-mode-hook 'fci-mode)
+;; (add-hook 'go-mode-hook 'follow-mode)
+;; (require 'go-flycheck)
+;; (require 'go-dlv)
+;; (require 'go-autocomplete)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
+;; (go-guru-hl-identifier-mode)
+;; (eval-after-load 'go-mode
+;;   '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
+;; (require 'go-guru)
 
 ;; execute commands by hitting two keys simultaneously.
 (require 'key-chord)
