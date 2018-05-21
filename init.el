@@ -275,7 +275,6 @@
 ;;ace-jump-mode
 (require 'ace-jump-mode)
 (setq ace-jump-mode-scope 'frame)
-;(global-set-key (kbd "M-j") 'ace-jump-mode)
 (bind-key* "M-j" 'ace-jump-mode)
 
 ;; auto generated
