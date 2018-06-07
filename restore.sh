@@ -1,5 +1,7 @@
-sudo dnf install redhat-rpm-config
-sudo dnf install emacs-nox
+sudo dnf install -y redhat-rpm-config
+sudo dnf install -y python3-devel
+sudo dnf install -y emacs-nox
+sudo dnf install -y gnome-tweak-tool
 
 sudo dnf install zsh
 cp .zshrc ~/
