@@ -1,6 +1,10 @@
 ;;; -*- coding: utf-8 -*-
-(("/home/cranechu/.gitconfig" . 150)
- ("/home/cranechu/.emacs.d/recentf" . 595)
+(("/home/cranechu/ssdmeter/TAGS" . 756933)
+ ("/home/cranechu/ssdmeter/driver/driver.c" . 11155)
+ ("/home/cranechu/ssdmeter/spdk/lib/nvme/nvme.c" . 7344)
+ ("/home/cranechu/ssdmeter/spdk/lib/nvme/nvme_internal.h" . 18657)
+ ("/home/cranechu/.emacs.d/recentf" . 662)
+ ("/home/cranechu/.gitconfig" . 150)
  ("/home/cranechu/.emacs.d/init.el" . 1422)
  ("/home/cranechu/.emacs.d/elpa/rtags-2.18/rtags-autoloads.el" . 10680)
  ("/home/cranechu/.emacs.d/"
