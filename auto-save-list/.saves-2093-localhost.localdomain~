@@ -1,4 +1,10 @@
-/root/rocksdb/ROCKSDB_LITE.md
-/root/rocksdb/#ROCKSDB_LITE.md#
-/root/spdk/TAGS
-/root/spdk/#TAGS#
+/home/cranechu/.emacs.d/init.el
+/home/cranechu/.emacs.d/#init.el#
+/home/cranechu/ssdmeter/driver/cdriver.pxd
+/home/cranechu/ssdmeter/driver/#cdriver.pxd#
+/home/cranechu/ssdmeter/driver/driver.h
+/home/cranechu/ssdmeter/driver/#driver.h#
+/home/cranechu/ssdmeter/driver/driver.c
+/home/cranechu/ssdmeter/driver/#driver.c#
+/home/cranechu/ssdmeter/driver/driver_wrap.pyx
+/home/cranechu/ssdmeter/driver/#driver_wrap.pyx#
