@@ -1016,8 +1016,8 @@
                 nil [36657 36779]))          
       :file "nvme_rdma.c"
       :pointmax 36780
-      :fsize 41968
-      :lastmodtime '(23319 21734 262902 56000)
+      :fsize 42012
+      :lastmodtime '(23325 63592 580848 761000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -2999,18 +2999,19 @@
                 nil [19700 19799]))          
       :file "nvme_internal.h"
       :pointmax 19834
-      :fsize 24828
-      :lastmodtime '(23319 21734 261902 130000)
+      :fsize 21702
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
-        '( ("spdk/stdinc.h" include (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c") nil [1665 1689])
-            ("nvme_internal.h" include (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c") nil [1691 1717])
-            ("spdk/env.h" include (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c") nil [1719 1740])
+        '( ("spdk/stdinc.h" include nil nil [1665 1689])
+            ("nvme_internal.h" include nil nil [1691 1717])
+            ("spdk/env.h" include nil nil [1719 1740])
+            ("spdk/string.h" include nil nil [1741 1765])
             ("nvme_ctrlr_construct_and_submit_aer" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:prototype-flag t
+                :typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3018,20 +3019,18 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [1789 1819])
+                        (reparse-symbol arg-sub-list) [1814 1844])
                     ("aer" variable
                        (:pointer 1
                         :type ("nvme_async_event_request" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [1822 1859]))                  
-                :typemodifiers ("static")
-                :prototype-flag t)
-                nil [1742 1860])
+                        (reparse-symbol arg-sub-list) [1847 1884]))                  
+                :type "int")
+                nil [1767 1885])
             ("nvme_ctrlr_get_cc" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3039,16 +3038,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [1891 1921])
+                        (reparse-symbol arg-sub-list) [1916 1946])
                     ("cc" variable
                        (:pointer 1
                         :type ("spdk_nvme_cc_register" type (:type "union") nil nil))
-                        (reparse-symbol arg-sub-list) [1922 1954]))                  
-                :typemodifiers ("static"))
-                nil [1862 2072])
+                        (reparse-symbol arg-sub-list) [1947 1979]))                  
+                :type "int")
+                nil [1887 2097])
             ("nvme_ctrlr_get_csts" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3056,32 +3054,30 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [2105 2135])
+                        (reparse-symbol arg-sub-list) [2130 2160])
                     ("csts" variable
                        (:pointer 1
                         :type ("spdk_nvme_csts_register" type (:type "union") nil nil))
-                        (reparse-symbol arg-sub-list) [2136 2172]))                  
-                :typemodifiers ("static"))
-                nil [2074 2294])
+                        (reparse-symbol arg-sub-list) [2161 2197]))                  
+                :type "int")
+                nil [2099 2319])
             ("nvme_ctrlr_get_cap" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [2319 2349])
+                        (reparse-symbol arg-sub-list) [2344 2374])
                     ("cap" variable
                        (:pointer 1
                         :type ("spdk_nvme_cap_register" type (:type "union") nil nil))
-                        (reparse-symbol arg-sub-list) [2350 2384]))                  )
-                nil [2296 2504])
+                        (reparse-symbol arg-sub-list) [2375 2409]))                  
+                :type "int")
+                nil [2321 2529])
             ("nvme_ctrlr_get_vs" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3089,16 +3085,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [2535 2565])
+                        (reparse-symbol arg-sub-list) [2560 2590])
                     ("vs" variable
                        (:pointer 1
                         :type ("spdk_nvme_vs_register" type (:type "union") nil nil))
-                        (reparse-symbol arg-sub-list) [2566 2598]))                  
-                :typemodifiers ("static"))
-                nil [2506 2716])
+                        (reparse-symbol arg-sub-list) [2591 2623]))                  
+                :type "int")
+                nil [2531 2741])
             ("nvme_ctrlr_set_cc" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3106,29 +3101,28 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [2747 2777])
+                        (reparse-symbol arg-sub-list) [2772 2802])
                     ("cc" variable
                        (:pointer 1
                         :constant-flag t
                         :type ("spdk_nvme_cc_register" type (:type "union") nil nil))
-                        (reparse-symbol arg-sub-list) [2778 2816]))                  
-                :typemodifiers ("static"))
-                nil [2718 2933])
-            ("spdk_nvme_ctrlr_opts_set_defaults" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+                        (reparse-symbol arg-sub-list) [2803 2841]))                  
+                :type "int")
+                nil [2743 2958])
+            ("spdk_nvme_ctrlr_get_default_ctrlr_opts" function
+               (:arguments 
                   ( ("opts" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr_opts" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [2974 3008]))                  )
-                nil [2935 3337])
+                        (reparse-symbol arg-sub-list) [3004 3038])
+                    ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3039 3056]))                  
+                :type "void")
+                nil [2960 4414])
             ("nvme_ctrlr_proc_add_io_qpair" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("qpair" variable
                        (:pointer 1
@@ -3136,12 +3130,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [3526 3556]))                  
-                :typemodifiers ("static"))
-                nil [3485 3880])
+                        (reparse-symbol arg-sub-list) [4603 4633]))                  
+                :type "void")
+                nil [4562 4994])
             ("nvme_ctrlr_proc_remove_io_qpair" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("qpair" variable
                        (:pointer 1
@@ -3149,41 +3142,65 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [4068 4098]))                  
-                :typemodifiers ("static"))
-                nil [4024 4736])
+                        (reparse-symbol arg-sub-list) [5182 5212]))                  
+                :type "void")
+                nil [5138 5850])
+            ("spdk_nvme_ctrlr_get_default_io_qpair_opts" function
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5899 5929])
+                    ("opts" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_io_qpair_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5932 5969])
+                    ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5972 5989]))                  
+                :type "void")
+                nil [5852 6437])
             ("spdk_nvme_ctrlr_alloc_io_qpair" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
+               (:pointer 1
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6495 6525])
+                    ("user_opts" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("spdk_nvme_io_qpair_opts" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6536 6584])
+                    ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6595 6612]))                  
                 :type ("spdk_nvme_qpair" type
                      (:prototype t
                       :type "struct")
-                      nil nil)
-                :arguments 
-                  ( ("ctrlr" variable
-                       (:pointer 1
-                        :type ("spdk_nvme_ctrlr" type
-                             (:prototype t
-                              :type "struct")
-                              nil nil))
-                        (reparse-symbol arg-sub-list) [4794 4824])
-                    ("qprio" variable (:type ("spdk_nvme_qprio" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [4835 4862]))                  
-                :pointer 1)
-                nil [4738 6278])
+                      nil nil))
+                nil [6439 8484])
             ("spdk_nvme_ctrlr_free_io_qpair" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("qpair" variable
                        (:pointer 1
                         :type ("spdk_nvme_qpair" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [6314 6344]))                  )
-                nil [6280 7231])
+                        (reparse-symbol arg-sub-list) [8520 8550]))                  
+                :type "int")
+                nil [8486 9478])
             ("nvme_ctrlr_construct_intel_support_log_page_list" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3191,19 +3208,18 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [7294 7324])
+                        (reparse-symbol arg-sub-list) [9541 9571])
                     ("log_page_directory" variable
                        (:pointer 1
                         :type ("spdk_nvme_intel_log_page_directory" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [7327 7389]))                  
-                :typemodifiers ("static"))
-                nil [7233 8317])
+                        (reparse-symbol arg-sub-list) [9574 9636]))                  
+                :type "void")
+                nil [9480 10564])
             ("nvme_ctrlr_set_intel_support_log_pages" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3211,12 +3227,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [8369 8399]))                  
-                :typemodifiers ("static"))
-                nil [8319 9379])
+                        (reparse-symbol arg-sub-list) [10616 10646]))                  
+                :type "int")
+                nil [10566 11642])
             ("nvme_ctrlr_set_supported_log_pages" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3224,12 +3239,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [9428 9458]))                  
-                :typemodifiers ("static"))
-                nil [9381 9951])
+                        (reparse-symbol arg-sub-list) [11691 11721]))                  
+                :type "void")
+                nil [11644 12214])
             ("nvme_ctrlr_set_intel_supported_features" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3237,12 +3251,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [10005 10035]))                  
-                :typemodifiers ("static"))
-                nil [9953 10550])
+                        (reparse-symbol arg-sub-list) [12268 12298]))                  
+                :type "void")
+                nil [12216 12813])
             ("nvme_ctrlr_set_supported_features" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3250,25 +3263,23 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [10598 10628]))                  
-                :typemodifiers ("static"))
-                nil [10552 11812])
+                        (reparse-symbol arg-sub-list) [12861 12891]))                  
+                :type "void")
+                nil [12815 14075])
             ("nvme_ctrlr_fail" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [11835 11865])
-                    ("hot_remove" variable (:type "bool") (reparse-symbol arg-sub-list) [11866 11882]))                  )
-                nil [11814 12076])
+                        (reparse-symbol arg-sub-list) [14098 14128])
+                    ("hot_remove" variable (:type "bool") (reparse-symbol arg-sub-list) [14129 14145]))                  
+                :type "void")
+                nil [14077 14404])
             ("nvme_ctrlr_shutdown" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3276,12 +3287,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [12110 12140]))                  
-                :typemodifiers ("static"))
-                nil [12078 13025])
+                        (reparse-symbol arg-sub-list) [14438 14468]))                  
+                :type "void")
+                nil [14406 15910])
             ("nvme_ctrlr_enable" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3289,12 +3299,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [13056 13086]))                  
-                :typemodifiers ("static"))
-                nil [13027 14176])
+                        (reparse-symbol arg-sub-list) [15941 15971]))                  
+                :type "int")
+                nil [15912 17068])
             ("nvme_ctrlr_set_state" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3302,26 +3311,48 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [14810 14840])
-                    ("state" variable (:type ("nvme_ctrlr_state" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [14841 14869])
-                    ("timeout_in_ms" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14877 14900]))                  
-                :typemodifiers ("static"))
-                nil [14777 15400])
+                        (reparse-symbol arg-sub-list) [17702 17732])
+                    ("state" variable (:type ("nvme_ctrlr_state" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [17733 17761])
+                    ("timeout_in_ms" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17769 17792]))                  
+                :type "void")
+                nil [17669 18288])
+            ("nvme_ctrlr_free_doorbell_buffer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18334 18364]))                  
+                :type "void")
+                nil [18290 18564])
+            ("nvme_ctrlr_set_doorbell_buffer_config" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18615 18645]))                  
+                :type "int")
+                nil [18566 19615])
             ("spdk_nvme_ctrlr_reset" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [15428 15458]))                  )
-                nil [15402 17052])
+                        (reparse-symbol arg-sub-list) [19643 19673]))                  
+                :type "int")
+                nil [19617 21363])
             ("nvme_ctrlr_identify" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3329,12 +3360,22 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [17085 17115]))                  
-                :typemodifiers ("static"))
-                nil [17054 18054])
+                        (reparse-symbol arg-sub-list) [21396 21426]))                  
+                :type "int")
+                nil [21365 22416])
+            ("nvme_ctrlr_identify_active_ns" function
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22453 22483]))                  
+                :type "int")
+                nil [22419 24516])
             ("nvme_ctrlr_set_num_qpairs" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3342,12 +3383,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [18093 18123]))                  
-                :typemodifiers ("static"))
-                nil [18056 19705])
+                        (reparse-symbol arg-sub-list) [24555 24585]))                  
+                :type "int")
+                nil [24518 26886])
             ("nvme_ctrlr_set_keep_alive_timeout" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3355,12 +3395,23 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [19752 19782]))                  
-                :typemodifiers ("static"))
-                nil [19707 21507])
+                        (reparse-symbol arg-sub-list) [26933 26963]))                  
+                :type "int")
+                nil [26888 28682])
+            ("nvme_ctrlr_set_host_id" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [28718 28748]))                  
+                :type "int")
+                nil [28684 30569])
             ("nvme_ctrlr_destruct_namespaces" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3368,12 +3419,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [21552 21582]))                  
-                :typemodifiers ("static"))
-                nil [21509 21863])
+                        (reparse-symbol arg-sub-list) [30614 30644]))                  
+                :type "void")
+                nil [30571 31004])
             ("nvme_ctrlr_construct_namespaces" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3381,17 +3431,16 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [21908 21938]))                  
-                :typemodifiers ("static"))
-                nil [21865 22823])
+                        (reparse-symbol arg-sub-list) [31049 31079]))                  
+                :type "int")
+                nil [31006 32038])
             ("nvme_ctrlr_async_event_cb" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("arg" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [22863 22873])
+                        (reparse-symbol arg-sub-list) [32078 32088])
                     ("cpl" variable
                        (:pointer 1
                         :constant-flag t
@@ -3399,12 +3448,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [22874 22906]))                  
-                :typemodifiers ("static"))
-                nil [22825 23723])
+                        (reparse-symbol arg-sub-list) [32089 32121]))                  
+                :type "void")
+                nil [32040 32938])
             ("nvme_ctrlr_construct_and_submit_aer" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3412,19 +3460,30 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [23772 23802])
+                        (reparse-symbol arg-sub-list) [32987 33017])
                     ("aer" variable
                        (:pointer 1
                         :type ("nvme_async_event_request" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [23811 23848]))                  
-                :typemodifiers ("static"))
-                nil [23725 24141])
+                        (reparse-symbol arg-sub-list) [33026 33063]))                  
+                :type "int")
+                nil [32940 33356])
+            ("_nvme_ctrlr_configure_aer" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [33395 33425]))                  
+                :type "int")
+                nil [33358 34570])
             ("nvme_ctrlr_configure_aer" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3432,28 +3491,26 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [24179 24209]))                  
-                :typemodifiers ("static"))
-                nil [24143 25145])
+                        (reparse-symbol arg-sub-list) [34608 34638]))                  
+                :type "int")
+                nil [34572 35199])
             ("nvme_ctrlr_add_process" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [25486 25516])
+                        (reparse-symbol arg-sub-list) [35540 35570])
                     ("devhandle" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [25517 25533]))                  )
-                nil [25459 26345])
+                        (reparse-symbol arg-sub-list) [35571 35587]))                  
+                :type "int")
+                nil [35513 36403])
             ("nvme_ctrlr_remove_process" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3461,19 +3518,18 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [26532 26562])
+                        (reparse-symbol arg-sub-list) [36590 36620])
                     ("proc" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr_process" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [26568 26605]))                  
-                :typemodifiers ("static"))
-                nil [26494 26898])
+                        (reparse-symbol arg-sub-list) [36626 36663]))                  
+                :type "void")
+                nil [36552 36960])
             ("nvme_ctrlr_cleanup_process" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("proc" variable
                        (:pointer 1
@@ -3481,24 +3537,22 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [27177 27214]))                  
-                :typemodifiers ("static"))
-                nil [27138 27925])
+                        (reparse-symbol arg-sub-list) [37239 37276]))                  
+                :type "void")
+                nil [37200 38039])
             ("nvme_ctrlr_free_processes" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [28171 28201]))                  )
-                nil [28140 28544])
+                        (reparse-symbol arg-sub-list) [38285 38315]))                  
+                :type "void")
+                nil [38254 38662])
             ("nvme_ctrlr_remove_inactive_proc" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3506,36 +3560,44 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [28822 28852]))                  
-                :typemodifiers ("static"))
-                nil [28779 29319])
+                        (reparse-symbol arg-sub-list) [38940 38970]))                  
+                :type "int")
+                nil [38897 39437])
             ("nvme_ctrlr_proc_get_ref" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [29350 29380]))                  )
-                nil [29321 29725])
+                        (reparse-symbol arg-sub-list) [39468 39498]))                  
+                :type "void")
+                nil [39439 39843])
             ("nvme_ctrlr_proc_put_ref" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [29756 29786]))                  )
-                nil [29727 30437])
+                        (reparse-symbol arg-sub-list) [39874 39904]))                  
+                :type "void")
+                nil [39845 40555])
             ("nvme_ctrlr_get_ref_count" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40586 40616]))                  
+                :type "int")
+                nil [40557 40923])
+            ("nvme_ctrlr_proc_get_devhandle" function
+               (:pointer 1
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3543,125 +3605,116 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [30468 30498]))                  )
-                nil [30439 30805])
-            ("nvme_ctrlr_proc_get_devhandle" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
+                        (reparse-symbol arg-sub-list) [41067 41097]))                  
                 :type ("spdk_pci_device" type
                      (:prototype t
                       :type "struct")
-                      nil nil)
-                :arguments 
-                  ( ("ctrlr" variable
-                       (:pointer 1
-                        :type ("spdk_nvme_ctrlr" type
-                             (:prototype t
-                              :type "struct")
-                              nil nil))
-                        (reparse-symbol arg-sub-list) [30949 30979]))                  
-                :pointer 1)
-                nil [30894 31362])
+                      nil nil))
+                nil [41012 41480])
             ("nvme_ctrlr_process_init" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [31496 31526]))                  )
-                nil [31468 36349])
+                        (reparse-symbol arg-sub-list) [41614 41644]))                  
+                :type "int")
+                nil [41586 46537])
             ("nvme_ctrlr_start" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [36372 36402]))                  )
-                nil [36351 37051])
+                        (reparse-symbol arg-sub-list) [46560 46590]))                  
+                :type "int")
+                nil [46539 47525])
             ("nvme_robust_mutex_init_recursive_shared" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("mtx" variable
                        (:pointer 1
                         :type ("pthread_mutex_t" type (:type "class") nil nil))
-                        (reparse-symbol arg-sub-list) [37097 37118]))                  )
-                nil [37053 37543])
+                        (reparse-symbol arg-sub-list) [47571 47592]))                  
+                :type "int")
+                nil [47527 48017])
             ("nvme_ctrlr_construct" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [37570 37600]))                  )
-                nil [37545 38141])
+                        (reparse-symbol arg-sub-list) [48044 48074]))                  
+                :type "int")
+                nil [48019 48527])
             ("nvme_ctrlr_init_cap" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [38265 38295])
+                        (reparse-symbol arg-sub-list) [48651 48681])
                     ("cap" variable
                        (:pointer 1
                         :constant-flag t
                         :type ("spdk_nvme_cap_register" type (:type "union") nil nil))
-                        (reparse-symbol arg-sub-list) [38296 38336]))                  )
-                nil [38240 38883])
+                        (reparse-symbol arg-sub-list) [48682 48722]))                  
+                :type "void")
+                nil [48626 49203])
+            ("nvme_ctrlr_destruct_finish" function
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [49237 49267]))                  
+                :type "void")
+                nil [49205 49315])
             ("nvme_ctrlr_destruct" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [38910 38940]))                  )
-                nil [38885 39294])
+                        (reparse-symbol arg-sub-list) [49342 49372]))                  
+                :type "void")
+                nil [49317 49807])
             ("nvme_ctrlr_submit_admin_request" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [39332 39362])
+                        (reparse-symbol arg-sub-list) [49845 49875])
                     ("req" variable
                        (:pointer 1
                         :type ("nvme_request" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [39367 39392]))                  )
-                nil [39296 39451])
+                        (reparse-symbol arg-sub-list) [49880 49905]))                  
+                :type "int")
+                nil [49809 49964])
             ("nvme_keep_alive_completion" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("cb_ctx" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [39492 39505])
+                        (reparse-symbol arg-sub-list) [50005 50018])
                     ("cpl" variable
                        (:pointer 1
                         :constant-flag t
@@ -3669,12 +3722,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [39506 39538]))                  
-                :typemodifiers ("static"))
-                nil [39453 39560])
+                        (reparse-symbol arg-sub-list) [50019 50051]))                  
+                :type "void")
+                nil [49966 50073])
             ("nvme_ctrlr_keep_alive" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3682,12 +3734,23 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [39692 39722]))                  
-                :typemodifiers ("static"))
-                nil [39658 40253])
+                        (reparse-symbol arg-sub-list) [50205 50235]))                  
+                :type "void")
+                nil [50171 50766])
             ("spdk_nvme_ctrlr_process_admin_completions" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type ("int32_t" type (:type "class") nil nil)
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50818 50848]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [50768 51147])
+            ("spdk_nvme_ctrlr_get_data" function
+               (:pointer 1
+                :constant-flag t
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3695,64 +3758,58 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [40305 40335]))                  )
-                nil [40255 40634])
-            ("spdk_nvme_ctrlr_get_data" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
+                        (reparse-symbol arg-sub-list) [51210 51240]))                  
                 :type ("spdk_nvme_ctrlr_data" type
                      (:prototype t
                       :type "struct")
-                      nil nil)
-                :arguments 
-                  ( ("ctrlr" variable
-                       (:pointer 1
-                        :type ("spdk_nvme_ctrlr" type
-                             (:prototype t
-                              :type "struct")
-                              nil nil))
-                        (reparse-symbol arg-sub-list) [40697 40727]))                  
-                :constant-flag t
-                :pointer 1)
-                nil [40636 40754])
+                      nil nil))
+                nil [51149 51267])
             ("spdk_nvme_ctrlr_get_regs_csts" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type ("spdk_nvme_csts_register" type (:type "union") nil nil)
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [40816 40846]))                  )
-                nil [40756 40963])
+                        (reparse-symbol arg-sub-list) [51329 51359]))                  
+                :type ("spdk_nvme_csts_register" type (:type "union") nil nil))
+                nil [51269 51486])
             ("spdk_nvme_ctrlr_get_regs_cap" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type ("spdk_nvme_cap_register" type (:type "union") nil nil)
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [41023 41053]))                  )
-                nil [40965 41077])
+                        (reparse-symbol arg-sub-list) [51546 51576]))                  
+                :type ("spdk_nvme_cap_register" type (:type "union") nil nil))
+                nil [51488 51600])
             ("spdk_nvme_ctrlr_get_regs_vs" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type ("spdk_nvme_vs_register" type (:type "union") nil nil)
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [41135 41165]))                  )
-                nil [41079 41270])
+                        (reparse-symbol arg-sub-list) [51658 51688]))                  
+                :type ("spdk_nvme_vs_register" type (:type "union") nil nil))
+                nil [51602 51803])
             ("spdk_nvme_ctrlr_get_num_ns" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type ("uint32_t" type (:type "class") nil nil)
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [51841 51871]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [51805 51898])
+            ("spdk_nvme_ctrlr_active_ns_idx" function
+               (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3760,14 +3817,63 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [41308 41338]))                  )
-                nil [41272 41365])
+                        (reparse-symbol arg-sub-list) [51945 51975])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51976 51990]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [51900 52492])
+            ("spdk_nvme_ctrlr_is_active_ns" function
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52528 52558])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52559 52573]))                  
+                :type "bool")
+                nil [52494 52635])
+            ("spdk_nvme_ctrlr_get_first_active_ns" function
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52682 52712]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [52637 52778])
+            ("spdk_nvme_ctrlr_get_next_active_ns" function
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [52824 52854])
+                    ("prev_nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52855 52874]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [52780 53096])
             ("spdk_nvme_ctrlr_get_ns" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
+               (:pointer 1
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [53143 53173])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53174 53188]))                  
                 :type ("spdk_nvme_ns" type
                      (:prototype t
                       :type "struct")
-                      nil nil)
+                      nil nil))
+                nil [53098 53282])
+            ("spdk_nvme_ctrlr_get_pci_device" function
+               (:pointer 1
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3775,166 +3881,183 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [41412 41442])
-                    ("ns_id" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41443 41458]))                  
-                :pointer 1)
-                nil [41367 41555])
+                        (reparse-symbol arg-sub-list) [53340 53370]))                  
+                :type ("spdk_pci_device" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [53284 53535])
             ("spdk_nvme_ctrlr_register_aer_callback" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [41600 41630])
-                    ("aer_cb_fn" variable (:type ("spdk_nvme_aer_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41641 41668])
+                        (reparse-symbol arg-sub-list) [53580 53610])
+                    ("aer_cb_fn" variable (:type ("spdk_nvme_aer_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53621 53648])
                     ("aer_cb_arg" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [41679 41696]))                  )
-                nil [41557 41764])
+                        (reparse-symbol arg-sub-list) [53659 53676]))                  
+                :type "void")
+                nil [53537 53744])
             ("spdk_nvme_ctrlr_register_timeout_callback" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "void"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [41813 41843])
-                    ("nvme_timeout" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41846 41868])
-                    ("cb_fn" variable (:type ("spdk_nvme_timeout_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41869 41896])
+                        (reparse-symbol arg-sub-list) [53793 53823])
+                    ("nvme_timeout" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53826 53848])
+                    ("cb_fn" variable (:type ("spdk_nvme_timeout_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53849 53876])
                     ("cb_arg" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [41897 41910]))                  )
-                nil [41766 42038])
+                        (reparse-symbol arg-sub-list) [53877 53890]))                  
+                :type "void")
+                nil [53746 54257])
             ("spdk_nvme_ctrlr_is_log_page_supported" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "bool"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [42083 42113])
-                    ("log_page" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42114 42131]))                  )
-                nil [42040 42378])
+                        (reparse-symbol arg-sub-list) [54302 54332])
+                    ("log_page" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54333 54350]))                  
+                :type "bool")
+                nil [54259 54597])
             ("spdk_nvme_ctrlr_is_feature_supported" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "bool"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [42422 42452])
-                    ("feature_code" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42453 42474]))                  )
-                nil [42380 42725])
+                        (reparse-symbol arg-sub-list) [54641 54671])
+                    ("feature_code" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54672 54693]))                  
+                :type "bool")
+                nil [54599 54944])
             ("spdk_nvme_ctrlr_attach_ns" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [42757 42787])
-                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [42788 42802])
+                        (reparse-symbol arg-sub-list) [54976 55006])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55007 55021])
                     ("payload" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr_list" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [42808 42845]))                  )
-                nil [42727 43397])
+                        (reparse-symbol arg-sub-list) [55027 55064]))                  
+                :type "int")
+                nil [54946 55621])
             ("spdk_nvme_ctrlr_detach_ns" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [43429 43459])
-                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43460 43474])
+                        (reparse-symbol arg-sub-list) [55653 55683])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55684 55698])
                     ("payload" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr_list" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [43480 43517]))                  )
-                nil [43399 44069])
+                        (reparse-symbol arg-sub-list) [55704 55741]))                  
+                :type "int")
+                nil [55623 56298])
             ("spdk_nvme_ctrlr_create_ns" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type ("uint32_t" type (:type "class") nil nil)
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [44106 44136])
+                        (reparse-symbol arg-sub-list) [56335 56365])
                     ("payload" variable
                        (:pointer 1
                         :type ("spdk_nvme_ns_data" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [44137 44171]))                  )
-                nil [44071 44799])
+                        (reparse-symbol arg-sub-list) [56366 56400]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [56300 57033])
             ("spdk_nvme_ctrlr_delete_ns" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [44831 44861])
-                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44862 44876]))                  )
-                nil [44801 45408])
+                        (reparse-symbol arg-sub-list) [57065 57095])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57096 57110]))                  
+                :type "int")
+                nil [57035 57647])
             ("spdk_nvme_ctrlr_format" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
-                :arguments 
+               (:arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [45437 45467])
-                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45468 45482])
+                        (reparse-symbol arg-sub-list) [57676 57706])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57707 57721])
                     ("format" variable
                        (:pointer 1
                         :type ("spdk_nvme_format" type
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [45492 45524]))                  )
-                nil [45410 46066])
+                        (reparse-symbol arg-sub-list) [57731 57763]))                  
+                :type "int")
+                nil [57649 58310])
             ("spdk_nvme_ctrlr_update_firmware" function
-               (:truefile "/home/cranechu/spdk/lib/nvme/nvme_ctrlr.c"
-                :type "int"
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [58348 58378])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [58379 58393])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58394 58408])
+                    ("slot" variable (:type "int") (reparse-symbol arg-sub-list) [58413 58422])
+                    ("commit_action" variable (:type ("spdk_nvme_fw_commit_action" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [58423 58469])
+                    ("completion_status" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_status" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [58470 58513]))                  
+                :type "int")
+                nil [58312 61114])
+            ("spdk_nvme_ctrlr_alloc_cmb_io_buffer" function
+               (:pointer 1
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3942,18 +4065,30 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [46104 46134])
-                    ("payload" variable
+                        (reparse-symbol arg-sub-list) [61159 61189])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61190 61202]))                  
+                :type "void")
+                nil [61116 61424])
+            ("spdk_nvme_ctrlr_free_cmb_io_buffer" function
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61466 61496])
+                    ("buf" variable
                        (:pointer 1
                         :type "void")
-                        (reparse-symbol arg-sub-list) [46135 46149])
-                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46150 46164])
-                    ("slot" variable (:type "int") (reparse-symbol arg-sub-list) [46169 46178]))                  )
-                nil [46068 47865]))          
+                        (reparse-symbol arg-sub-list) [61497 61507])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61508 61520]))                  
+                :type "void")
+                nil [61426 61702]))          
       :file "nvme_ctrlr.c"
-      :pointmax 47866
-      :fsize 61283
-      :lastmodtime '(23319 21734 259902 279000)
+      :pointmax 61703
+      :fsize 61702
+      :lastmodtime '(23325 63592 578848 721000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -4387,8 +4522,8 @@
                 nil [13378 14074]))          
       :file "nvme_ctrlr_cmd.c"
       :pointmax 14075
-      :fsize 15554
-      :lastmodtime '(23319 21734 259902 279000)
+      :fsize 15552
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -4805,8 +4940,8 @@
                 nil [20309 21275]))          
       :file "nvme.c"
       :pointmax 21328
-      :fsize 21327
-      :lastmodtime '(23319 21734 259902 279000)
+      :fsize 21793
+      :lastmodtime '(23325 63592 578848 721000)
       :unmatched-syntax '((semantic-list 21304 . 21327) (symbol 21277 . 21304) (string 21305 . 21311) (semantic-list 2140 . 2159) (symbol 2130 . 2140) (STATIC 2123 . 2129) (semantic-list 1993 . 2012) (symbol 1983 . 1993) (STATIC 1976 . 1982) (punctuation 1973 . 1974) (number 1969 . 1973) (punctuation 1967 . 1968) (number 1964 . 1966) (punctuation 1962 . 1963) (number 1960 . 1961) (punctuation 1958 . 1959) (symbol 1933 . 1957) (INT 1929 . 1932) (STATIC 1922 . 1928))
       :lexical-table 
         '(("SPDK_NVME_DRIVER_NAME" . ((string "\"spdk_nvme_driver\"" 1751 . 1769)))
@@ -5576,8 +5711,8 @@
                 nil [21686 22296]))          
       :file "nvme_ns_cmd.c"
       :pointmax 22297
-      :fsize 29563
-      :lastmodtime '(23319 21734 261902 130000)
+      :fsize 27896
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -6018,8 +6153,8 @@
                 nil [16016 16443]))          
       :file "nvme_qpair.c"
       :pointmax 16444
-      :fsize 17759
-      :lastmodtime '(23319 21734 262902 56000)
+      :fsize 17780
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -6344,7 +6479,7 @@
       :file "nvme_transport.c"
       :pointmax 6304
       :fsize 6715
-      :lastmodtime '(23319 21734 262902 56000)
+      :lastmodtime '(23325 63575 369504 234000)
       :unmatched-syntax nil
       :lexical-table 
         '(("TRANSPORT_FABRICS_RDMA" (spp-arg-list ("func_name" "args") 2356 . 2373) . 
@@ -7713,8 +7848,8 @@
                 nil [48917 51146]))          
       :file "nvme_pcie.c"
       :pointmax 51147
-      :fsize 56893
-      :lastmodtime '(23319 21734 261902 130000)
+      :fsize 57392
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -7779,7 +7914,7 @@
       :file "nvme_uevent.h"
       :pointmax 2167
       :fsize 2208
-      :lastmodtime '(23319 21734 262902 56000)
+      :lastmodtime '(23325 63575 369504 234000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -7986,8 +8121,8 @@
                 nil [5591 5642]))          
       :file "nvme_ns.c"
       :pointmax 5643
-      :fsize 8480
-      :lastmodtime '(23319 21734 261902 130000)
+      :fsize 8605
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -8070,8 +8205,8 @@
                 nil [2955 3187]))          
       :file "nvme_quirks.c"
       :pointmax 3188
-      :fsize 4826
-      :lastmodtime '(23319 21734 262902 56000)
+      :fsize 4533
+      :lastmodtime '(23325 63592 580848 761000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -8132,7 +8267,7 @@
       :file "nvme_uevent.c"
       :pointmax 5065
       :fsize 5996
-      :lastmodtime '(23319 21734 262902 56000)
+      :lastmodtime '(23325 63575 369504 234000)
       :unmatched-syntax nil))
   :file "!home!cranechu!spdk!lib!nvme!semantic.cache"
   :semantic-tag-version "2.0"
