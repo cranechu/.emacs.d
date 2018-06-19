@@ -1016,8 +1016,8 @@
                 nil [36657 36779]))          
       :file "nvme_rdma.c"
       :pointmax 36780
-      :fsize 41968
-      :lastmodtime '(23319 21734 262902 56000)
+      :fsize 42012
+      :lastmodtime '(23325 63592 580848 761000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -3164,44 +3164,10 @@
                 :type "bool")
                 nil [24675 24794]))          
       :file "nvme_internal.h"
-      :pointmax 24829
-      :fsize 24828
-      :lastmodtime '(23319 21734 261902 130000)
-      :unmatched-syntax '((semantic-list 13873 . 13892) (symbol 13863 . 13873) (semantic-list 13693 . 13709) (symbol 13682 . 13693) (semantic-list 13637 . 13664) (symbol 13627 . 13637) (semantic-list 13386 . 13405) (symbol 13376 . 13386) (semantic-list 12269 . 12286) (symbol 12258 . 12269) (semantic-list 11315 . 11334) (symbol 11305 . 11315) (semantic-list 11075 . 11100) (symbol 11064 . 11075) (semantic-list 11030 . 11046) (symbol 11019 . 11030) (semantic-list 9276 . 9293) (symbol 9265 . 9276) (semantic-list 9171 . 9188) (symbol 9160 . 9171) (semantic-list 8479 . 8495) (symbol 8468 . 8479) (semantic-list 8440 . 8456) (symbol 8429 . 8440) (semantic-list 7445 . 7459) (symbol 7434 . 7445) (semantic-list 7328 . 7344) (symbol 7318 . 7328) (semantic-list 6388 . 6402) (symbol 6376 . 6388))
-      :lexical-table 
-        '(("NVME_PAYLOAD_CONTIG" (spp-arg-list ("contig_" "md_") 5232 . 5246) . ((semantic-list "(struct nvme_payload)" 5250 . 5271) (semantic-list "{ \\
-		.reset_sgl_fn = NULL, \\
-		.next_sge_fn = NULL, \\
-		.contig_or_cb_arg = (contig_), \\
-		.md = (md_), \\
-	}" 5272 . 5381)))
-          ("NVME_PAYLOAD_SGL" (spp-arg-list ("reset_sgl_fn_" "next_sge_fn_" "cb_arg_" "md_") 5407 . 5450) . ((semantic-list "(struct nvme_payload)" 5454 . 5475) (semantic-list "{ \\
-		.reset_sgl_fn = (reset_sgl_fn_), \\
-		.next_sge_fn = (next_sge_fn_), \\
-		.contig_or_cb_arg = (cb_arg_), \\
-		.md = (md_), \\
-	}" 5476 . 5606)))
-          ("NVME_INTEL_QUIRK_READ_LATENCY" . ((number "0x1" 2341 . 2344)))
-          ("NVME_QUIRK_DELAY_AFTER_QUEUE_ALLOC" . ((number "0x10" 2990 . 2994)))
-          ("NVME_QUIRK_OCSSD" . ((number "0x80" 3593 . 3597)))
-          ("nvme_delay" . ((symbol "usleep" 14247 . 14253)))
-          ("NVME_INTEL_QUIRK_STRIPING" . ((number "0x8" 2822 . 2825)))
-          ("NVME_MIN_TIMEOUT_PERIOD" . ((semantic-list "(5)" 3667 . 3670)))
-          ("NVME_MAX_ASYNC_EVENTS" . ((semantic-list "(8)" 3629 . 3632)))
-          ("NVME_MAX_TIMEOUT_PERIOD" . ((semantic-list "(120)" 3704 . 3709)))
-          ("NVME_TIMEOUT_INFINITE" . ((symbol "UINT64_MAX" 10744 . 10754)))
-          ("DEFAULT_ADMIN_QUEUE_REQUESTS" . ((semantic-list "(32)" 4103 . 4107)))
-          ("NVME_QUIRK_IDENTIFY_CNS" . ((number "0x40" 3359 . 3363)))
-          ("NVME_MAX_AER_LOG_SIZE" . ((semantic-list "(4096)" 3789 . 3795)))
-          ("DEFAULT_IO_QUEUE_SIZE" . ((semantic-list "(256)" 4059 . 4064)))
-          ("__NVME_INTERNAL_H__")
-          ("NVME_QUIRK_READ_ZERO_AFTER_DEALLOCATE" . ((number "0x20" 3236 . 3240)))
-          ("NVME_INTEL_QUIRK_WRITE_LATENCY" . ((number "0x2" 2513 . 2516)))
-          ("DEFAULT_IO_QUEUE_REQUESTS" . ((semantic-list "(512)" 4142 . 4147)))
-          ("NVME_QUIRK_DELAY_BEFORE_CHK_RDY" . ((number "0x4" 2693 . 2696)))
-          ("DEFAULT_MAX_IO_QUEUES" . ((semantic-list "(1024)" 4021 . 4027)))
-          )
-)
+      :pointmax 19834
+      :fsize 21702
+      :lastmodtime '(23325 63592 579848 741000)
+      :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -3277,13 +3243,27 @@
                 :type "int")
                 nil [2321 2529])
             ("nvme_ctrlr_get_vs" function
+<<<<<<< HEAD
+               (:typemodifiers ("static")
+                :arguments 
+=======
                (:arguments 
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [2560 2590])
+                    ("vs" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_vs_register" type (:type "union") nil nil))
+                        (reparse-symbol arg-sub-list) [2591 2623]))                  
+                :type "int")
+                nil [2531 2741])
+=======
                         (reparse-symbol arg-sub-list) [2553 2583])
                     ("vs" variable
                        (:pointer 1
@@ -3291,6 +3271,7 @@
                         (reparse-symbol arg-sub-list) [2584 2616]))                  
                 :type "int")
                 nil [2531 2734])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_set_cc" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3300,14 +3281,24 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [2772 2802])
+=======
                         (reparse-symbol arg-sub-list) [2765 2795])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("cc" variable
                        (:pointer 1
                         :constant-flag t
                         :type ("spdk_nvme_cc_register" type (:type "union") nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [2803 2841]))                  
+                :type "int")
+                nil [2743 2958])
+=======
                         (reparse-symbol arg-sub-list) [2796 2834]))                  
                 :type "int")
                 nil [2736 2951])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_default_ctrlr_opts" function
                (:arguments 
                   ( ("opts" variable
@@ -3316,10 +3307,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [3004 3038])
+                    ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3039 3056]))                  
+                :type "void")
+                nil [2960 4414])
+=======
                         (reparse-symbol arg-sub-list) [2997 3031])
                     ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3032 3049]))                  
                 :type "void")
                 nil [2953 4485])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_proc_add_io_qpair" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3329,9 +3327,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [4603 4633]))                  
+                :type "void")
+                nil [4562 4994])
+=======
                         (reparse-symbol arg-sub-list) [4674 4704]))                  
                 :type "void")
                 nil [4633 5003])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_proc_remove_io_qpair" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3341,9 +3345,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [5182 5212]))                  
+                :type "void")
+                nil [5138 5850])
+=======
                         (reparse-symbol arg-sub-list) [5191 5221]))                  
                 :type "void")
                 nil [5147 5724])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_default_io_qpair_opts" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3352,17 +3362,28 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [5899 5929])
+=======
                         (reparse-symbol arg-sub-list) [5773 5803])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("opts" variable
                        (:pointer 1
                         :type ("spdk_nvme_io_qpair_opts" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [5932 5969])
+                    ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5972 5989]))                  
+                :type "void")
+                nil [5852 6437])
+=======
                         (reparse-symbol arg-sub-list) [5806 5843])
                     ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5846 5863]))                  
                 :type "void")
                 nil [5726 6311])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_alloc_io_qpair" function
                (:pointer 1
                 :arguments 
@@ -3372,7 +3393,11 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [6495 6525])
+=======
                         (reparse-symbol arg-sub-list) [6369 6399])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("user_opts" variable
                        (:pointer 1
                         :constant-flag t
@@ -3380,13 +3405,22 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [6536 6584])
+                    ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6595 6612]))                  
+=======
                         (reparse-symbol arg-sub-list) [6410 6458])
                     ("opts_size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6469 6486]))                  
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                 :type ("spdk_nvme_qpair" type
                      (:prototype t
                       :type "struct")
                       nil nil))
+<<<<<<< HEAD
+                nil [6439 8484])
+=======
                 nil [6313 8358])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_free_io_qpair" function
                (:arguments 
                   ( ("qpair" variable
@@ -3395,9 +3429,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [8520 8550]))                  
+                :type "int")
+                nil [8486 9478])
+=======
                         (reparse-symbol arg-sub-list) [8394 8424]))                  
                 :type "int")
                 nil [8360 9352])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_construct_intel_support_log_page_list" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3407,16 +3447,26 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [9541 9571])
+=======
                         (reparse-symbol arg-sub-list) [9415 9445])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("log_page_directory" variable
                        (:pointer 1
                         :type ("spdk_nvme_intel_log_page_directory" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [9574 9636]))                  
+                :type "void")
+                nil [9480 10564])
+=======
                         (reparse-symbol arg-sub-list) [9448 9510]))                  
                 :type "void")
                 nil [9354 10438])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_set_intel_support_log_pages" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3426,9 +3476,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [10616 10646]))                  
+                :type "int")
+                nil [10566 11642])
+=======
                         (reparse-symbol arg-sub-list) [10490 10520]))                  
                 :type "int")
                 nil [10440 11420])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_set_supported_log_pages" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3438,9 +3494,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [11691 11721]))                  
+                :type "void")
+                nil [11644 12214])
+=======
                         (reparse-symbol arg-sub-list) [11469 11499]))                  
                 :type "void")
                 nil [11422 11992])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_set_intel_supported_features" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3450,9 +3512,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [12268 12298]))                  
+                :type "void")
+                nil [12216 12813])
+=======
                         (reparse-symbol arg-sub-list) [12046 12076]))                  
                 :type "void")
                 nil [11994 12591])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_set_supported_features" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3462,9 +3530,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [12861 12891]))                  
+                :type "void")
+                nil [12815 14075])
+=======
                         (reparse-symbol arg-sub-list) [12639 12669]))                  
                 :type "void")
                 nil [12593 13853])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_fail" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3473,10 +3547,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [14098 14128])
+                    ("hot_remove" variable (:type "bool") (reparse-symbol arg-sub-list) [14129 14145]))                  
+                :type "void")
+                nil [14077 14404])
+=======
                         (reparse-symbol arg-sub-list) [13876 13906])
                     ("hot_remove" variable (:type "bool") (reparse-symbol arg-sub-list) [13907 13923]))                  
                 :type "void")
                 nil [13855 14182])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_shutdown" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3486,9 +3567,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [14438 14468]))                  
+                :type "void")
+                nil [14406 15910])
+=======
                         (reparse-symbol arg-sub-list) [14216 14246]))                  
                 :type "void")
                 nil [14184 15688])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_enable" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3498,9 +3585,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [15941 15971]))                  
+                :type "int")
+                nil [15912 17068])
+=======
                         (reparse-symbol arg-sub-list) [15719 15749]))                  
                 :type "int")
                 nil [15690 17318])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_set_state" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3510,11 +3603,12 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [17952 17982])
-                    ("state" variable (:type ("nvme_ctrlr_state" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [17983 18011])
-                    ("timeout_in_ms" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18019 18042]))                  
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [17702 17732])
+                    ("state" variable (:type ("nvme_ctrlr_state" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [17733 17761])
+                    ("timeout_in_ms" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17769 17792]))                  
                 :type "void")
-                nil [17919 18538])
+                nil [17669 18288])
             ("nvme_ctrlr_free_doorbell_buffer" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3524,11 +3618,20 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [18584 18614]))                  
+                        (reparse-symbol arg-sub-list) [18334 18364]))                  
                 :type "void")
-                nil [18540 18814])
+                nil [18290 18564])
             ("nvme_ctrlr_set_doorbell_buffer_config" function
                (:typemodifiers ("static")
+=======
+                        (reparse-symbol arg-sub-list) [17952 17982])
+                    ("state" variable (:type ("nvme_ctrlr_state" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [17983 18011])
+                    ("timeout_in_ms" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18019 18042]))                  
+                :type "void")
+                nil [17919 18538])
+            ("nvme_ctrlr_free_doorbell_buffer" function
+               (:typemodifiers ("static")
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                 :arguments 
                   ( ("ctrlr" variable
                        (:pointer 1
@@ -3536,9 +3639,10 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [18865 18895]))                  
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [18615 18645]))                  
                 :type "int")
-                nil [18816 19769])
+                nil [18566 19615])
             ("spdk_nvme_ctrlr_reset" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3547,10 +3651,16 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [19797 19827]))                  
+                        (reparse-symbol arg-sub-list) [19643 19673]))                  
                 :type "int")
-                nil [19771 21517])
+                nil [19617 21363])
             ("nvme_ctrlr_identify" function
+=======
+                        (reparse-symbol arg-sub-list) [18584 18614]))                  
+                :type "void")
+                nil [18540 18814])
+            ("nvme_ctrlr_set_doorbell_buffer_config" function
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
@@ -3559,9 +3669,10 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [21550 21580]))                  
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [21396 21426]))                  
                 :type "int")
-                nil [21519 22474])
+                nil [21365 22416])
             ("nvme_ctrlr_identify_active_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3570,10 +3681,36 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [22511 22541]))                  
+                        (reparse-symbol arg-sub-list) [22453 22483]))                  
                 :type "int")
-                nil [22477 24401])
+                nil [22419 24516])
             ("nvme_ctrlr_set_num_qpairs" function
+               (:typemodifiers ("static")
+                :arguments 
+=======
+                        (reparse-symbol arg-sub-list) [18865 18895]))                  
+                :type "int")
+                nil [18816 19769])
+            ("spdk_nvme_ctrlr_reset" function
+               (:arguments 
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [24555 24585]))                  
+                :type "int")
+                nil [24518 26886])
+            ("nvme_ctrlr_set_keep_alive_timeout" function
+=======
+                        (reparse-symbol arg-sub-list) [19797 19827]))                  
+                :type "int")
+                nil [19771 21517])
+            ("nvme_ctrlr_identify" function
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                (:typemodifiers ("static")
                 :arguments 
                   ( ("ctrlr" variable
@@ -3582,6 +3719,50 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [26933 26963]))                  
+                :type "int")
+                nil [26888 28682])
+            ("nvme_ctrlr_set_host_id" function
+               (:typemodifiers ("static")
+                :arguments 
+=======
+                        (reparse-symbol arg-sub-list) [21550 21580]))                  
+                :type "int")
+                nil [21519 22474])
+            ("nvme_ctrlr_identify_active_ns" function
+               (:arguments 
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [28718 28748]))                  
+                :type "int")
+                nil [28684 30569])
+            ("nvme_ctrlr_destruct_namespaces" function
+=======
+                        (reparse-symbol arg-sub-list) [22511 22541]))                  
+                :type "int")
+                nil [22477 24401])
+            ("nvme_ctrlr_set_num_qpairs" function
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [30614 30644]))                  
+                :type "void")
+                nil [30571 31004])
+=======
                         (reparse-symbol arg-sub-list) [24440 24470]))                  
                 :type "int")
                 nil [24403 26578])
@@ -3633,6 +3814,7 @@
                         (reparse-symbol arg-sub-list) [30546 30576]))                  
                 :type "int")
                 nil [30506 31110])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_construct_namespaces" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3642,16 +3824,26 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [31049 31079]))                  
+                :type "int")
+                nil [31006 32038])
+=======
                         (reparse-symbol arg-sub-list) [31155 31185]))                  
                 :type "int")
                 nil [31112 31970])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_async_event_cb" function
                (:typemodifiers ("static")
                 :arguments 
                   ( ("arg" variable
                        (:pointer 1
                         :type "void")
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [32078 32088])
+=======
                         (reparse-symbol arg-sub-list) [32010 32020])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("cpl" variable
                        (:pointer 1
                         :constant-flag t
@@ -3659,9 +3851,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [32089 32121]))                  
+                :type "void")
+                nil [32040 32938])
+=======
                         (reparse-symbol arg-sub-list) [32021 32053]))                  
                 :type "void")
                 nil [31972 33268])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_construct_and_submit_aer" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3671,16 +3869,26 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [32987 33017])
+=======
                         (reparse-symbol arg-sub-list) [33317 33347])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("aer" variable
                        (:pointer 1
                         :type ("nvme_async_event_request" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [33026 33063]))                  
+                :type "int")
+                nil [32940 33356])
+=======
                         (reparse-symbol arg-sub-list) [33356 33393]))                  
                 :type "int")
                 nil [33270 33686])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("_nvme_ctrlr_configure_aer" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3690,9 +3898,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [33395 33425]))                  
+                :type "int")
+                nil [33358 34570])
+=======
                         (reparse-symbol arg-sub-list) [33725 33755]))                  
                 :type "int")
                 nil [33688 34721])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_configure_aer" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3702,6 +3916,13 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [34608 34638]))                  
+                :type "int")
+                nil [34572 35199])
+            ("nvme_ctrlr_add_process" function
+               (:arguments 
+=======
                         (reparse-symbol arg-sub-list) [34759 34789]))                  
                 :type "int")
                 nil [34723 35350])
@@ -3724,12 +3945,22 @@
             ("spdk_nvme_ctrlr_get_current_process" function
                (:pointer 1
                 :arguments 
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [35540 35570])
+                    ("devhandle" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [35571 35587]))                  
+                :type "int")
+                nil [35513 36403])
+=======
                         (reparse-symbol arg-sub-list) [35713 35743]))                  
                 :type ("spdk_nvme_ctrlr_process" type
                      (:prototype t
@@ -3751,6 +3982,7 @@
                         (reparse-symbol arg-sub-list) [36173 36189]))                  
                 :type "int")
                 nil [36115 36942])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_remove_process" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3760,16 +3992,26 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [36590 36620])
+=======
                         (reparse-symbol arg-sub-list) [37129 37159])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("proc" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr_process" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [36626 36663]))                  
+                :type "void")
+                nil [36552 36960])
+=======
                         (reparse-symbol arg-sub-list) [37165 37202]))                  
                 :type "void")
                 nil [37091 37499])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_cleanup_process" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3779,9 +4021,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [37239 37276]))                  
+                :type "void")
+                nil [37200 38039])
+=======
                         (reparse-symbol arg-sub-list) [37778 37815]))                  
                 :type "void")
                 nil [37739 38578])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_free_processes" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3790,9 +4038,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [38285 38315]))                  
+                :type "void")
+                nil [38254 38662])
+=======
                         (reparse-symbol arg-sub-list) [38824 38854]))                  
                 :type "void")
                 nil [38793 39201])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_remove_inactive_proc" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3802,9 +4056,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [38940 38970]))                  
+                :type "int")
+                nil [38897 39437])
+=======
                         (reparse-symbol arg-sub-list) [39479 39509]))                  
                 :type "int")
                 nil [39436 39976])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_proc_get_ref" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3813,9 +4073,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [39468 39498]))                  
+                :type "void")
+                nil [39439 39843])
+=======
                         (reparse-symbol arg-sub-list) [40007 40037]))                  
                 :type "void")
                 nil [39978 40328])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_proc_put_ref" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3824,9 +4090,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [39874 39904]))                  
+                :type "void")
+                nil [39845 40555])
+=======
                         (reparse-symbol arg-sub-list) [40359 40389]))                  
                 :type "void")
                 nil [40330 40961])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_get_ref_count" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3835,9 +4107,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [40586 40616]))                  
+                :type "int")
+                nil [40557 40923])
+=======
                         (reparse-symbol arg-sub-list) [40992 41022]))                  
                 :type "int")
                 nil [40963 41329])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_proc_get_devhandle" function
                (:pointer 1
                 :arguments 
@@ -3847,12 +4125,20 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [41067 41097]))                  
+=======
                         (reparse-symbol arg-sub-list) [41473 41503]))                  
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                 :type ("spdk_pci_device" type
                      (:prototype t
                       :type "struct")
                       nil nil))
+<<<<<<< HEAD
+                nil [41012 41480])
+=======
                 nil [41418 41832])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_process_init" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3861,9 +4147,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [41614 41644]))                  
+                :type "int")
+                nil [41586 46537])
+=======
                         (reparse-symbol arg-sub-list) [41966 41996]))                  
                 :type "int")
                 nil [41938 46889])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_start" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3872,17 +4164,29 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [46560 46590]))                  
+                :type "int")
+                nil [46539 47525])
+=======
                         (reparse-symbol arg-sub-list) [46912 46942]))                  
                 :type "int")
                 nil [46891 47877])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_robust_mutex_init_recursive_shared" function
                (:arguments 
                   ( ("mtx" variable
                        (:pointer 1
                         :type ("pthread_mutex_t" type (:type "class") nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [47571 47592]))                  
+                :type "int")
+                nil [47527 48017])
+=======
                         (reparse-symbol arg-sub-list) [47923 47944]))                  
                 :type "int")
                 nil [47879 48369])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_construct" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3891,9 +4195,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [48044 48074]))                  
+                :type "int")
+                nil [48019 48527])
+=======
                         (reparse-symbol arg-sub-list) [48396 48426]))                  
                 :type "int")
                 nil [48371 48879])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_init_cap" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3902,11 +4212,20 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [48651 48681])
+=======
                         (reparse-symbol arg-sub-list) [49003 49033])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("cap" variable
                        (:pointer 1
                         :constant-flag t
                         :type ("spdk_nvme_cap_register" type (:type "union") nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [48682 48722]))                  
+                :type "void")
+                nil [48626 49203])
+=======
                         (reparse-symbol arg-sub-list) [49034 49074])
                     ("vs" variable
                        (:pointer 1
@@ -3915,6 +4234,7 @@
                         (reparse-symbol arg-sub-list) [49081 49119]))                  
                 :type "void")
                 nil [48978 49618])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_destruct_finish" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3923,9 +4243,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [49237 49267]))                  
+                :type "void")
+                nil [49205 49315])
+=======
                         (reparse-symbol arg-sub-list) [49652 49682]))                  
                 :type "void")
                 nil [49620 49730])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_destruct" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3934,9 +4260,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [49342 49372]))                  
+                :type "void")
+                nil [49317 49807])
+=======
                         (reparse-symbol arg-sub-list) [49757 49787]))                  
                 :type "void")
                 nil [49732 50222])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_submit_admin_request" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3945,23 +4277,37 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [49845 49875])
+=======
                         (reparse-symbol arg-sub-list) [50260 50290])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("req" variable
                        (:pointer 1
                         :type ("nvme_request" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [49880 49905]))                  
+                :type "int")
+                nil [49809 49964])
+=======
                         (reparse-symbol arg-sub-list) [50295 50320]))                  
                 :type "int")
                 nil [50224 50379])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_keep_alive_completion" function
                (:typemodifiers ("static")
                 :arguments 
                   ( ("cb_ctx" variable
                        (:pointer 1
                         :type "void")
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [50005 50018])
+=======
                         (reparse-symbol arg-sub-list) [50420 50433])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("cpl" variable
                        (:pointer 1
                         :constant-flag t
@@ -3969,9 +4315,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [50019 50051]))                  
+                :type "void")
+                nil [49966 50073])
+=======
                         (reparse-symbol arg-sub-list) [50434 50466]))                  
                 :type "void")
                 nil [50381 50488])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("nvme_ctrlr_keep_alive" function
                (:typemodifiers ("static")
                 :arguments 
@@ -3981,9 +4333,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [50205 50235]))                  
+                :type "void")
+                nil [50171 50766])
+=======
                         (reparse-symbol arg-sub-list) [50620 50650]))                  
                 :type "void")
                 nil [50586 51181])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_process_admin_completions" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -3992,9 +4350,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [50818 50848]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [50768 51147])
+=======
                         (reparse-symbol arg-sub-list) [51233 51263]))                  
                 :type ("int32_t" type (:type "class") nil nil))
                 nil [51183 51562])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_data" function
                (:pointer 1
                 :constant-flag t
@@ -4005,12 +4369,20 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [51210 51240]))                  
+=======
                         (reparse-symbol arg-sub-list) [51625 51655]))                  
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                 :type ("spdk_nvme_ctrlr_data" type
                      (:prototype t
                       :type "struct")
                       nil nil))
+<<<<<<< HEAD
+                nil [51149 51267])
+=======
                 nil [51564 51682])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_regs_csts" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4019,9 +4391,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [51329 51359]))                  
+                :type ("spdk_nvme_csts_register" type (:type "union") nil nil))
+                nil [51269 51486])
+=======
                         (reparse-symbol arg-sub-list) [51744 51774]))                  
                 :type ("spdk_nvme_csts_register" type (:type "union") nil nil))
                 nil [51684 51901])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_regs_cap" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4030,9 +4408,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [51546 51576]))                  
+                :type ("spdk_nvme_cap_register" type (:type "union") nil nil))
+                nil [51488 51600])
+=======
                         (reparse-symbol arg-sub-list) [51961 51991]))                  
                 :type ("spdk_nvme_cap_register" type (:type "union") nil nil))
                 nil [51903 52015])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_regs_vs" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4041,9 +4425,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [51658 51688]))                  
+                :type ("spdk_nvme_vs_register" type (:type "union") nil nil))
+                nil [51602 51803])
+=======
                         (reparse-symbol arg-sub-list) [52073 52103]))                  
                 :type ("spdk_nvme_vs_register" type (:type "union") nil nil))
                 nil [52017 52126])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_num_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4052,9 +4442,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [51841 51871]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [51805 51898])
+=======
                         (reparse-symbol arg-sub-list) [52164 52194]))                  
                 :type ("uint32_t" type (:type "class") nil nil))
                 nil [52128 52221])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_active_ns_idx" function
                (:typemodifiers ("static")
                 :arguments 
@@ -4064,10 +4460,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [51945 51975])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51976 51990]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [51900 52492])
+=======
                         (reparse-symbol arg-sub-list) [52268 52298])
                     ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52299 52313]))                  
                 :type ("int32_t" type (:type "class") nil nil))
                 nil [52223 52815])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_is_active_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4076,10 +4479,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [52528 52558])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52559 52573]))                  
+                :type "bool")
+                nil [52494 52635])
+=======
                         (reparse-symbol arg-sub-list) [52851 52881])
                     ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52882 52896]))                  
                 :type "bool")
                 nil [52817 52958])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_first_active_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4088,9 +4498,15 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [52682 52712]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [52637 52778])
+=======
                         (reparse-symbol arg-sub-list) [53005 53035]))                  
                 :type ("uint32_t" type (:type "class") nil nil))
                 nil [52960 53101])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_next_active_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4099,10 +4515,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [52824 52854])
+                    ("prev_nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52855 52874]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [52780 53096])
+=======
                         (reparse-symbol arg-sub-list) [53147 53177])
                     ("prev_nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53178 53197]))                  
                 :type ("uint32_t" type (:type "class") nil nil))
                 nil [53103 53419])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_ns" function
                (:pointer 1
                 :arguments 
@@ -4112,13 +4535,22 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [53143 53173])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53174 53188]))                  
+=======
                         (reparse-symbol arg-sub-list) [53466 53496])
                     ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53497 53511]))                  
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                 :type ("spdk_nvme_ns" type
                      (:prototype t
                       :type "struct")
                       nil nil))
+<<<<<<< HEAD
+                nil [53098 53282])
+=======
                 nil [53421 53605])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_get_pci_device" function
                (:pointer 1
                 :arguments 
@@ -4128,11 +4560,18 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [53340 53370]))                  
+=======
                         (reparse-symbol arg-sub-list) [53663 53693]))                  
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                 :type ("spdk_pci_device" type
                      (:prototype t
                       :type "struct")
                       nil nil))
+<<<<<<< HEAD
+                nil [53284 53535])
+=======
                 nil [53607 53858])
             ("spdk_nvme_ctrlr_get_max_xfer_size" function
                (:arguments 
@@ -4146,6 +4585,7 @@
                         (reparse-symbol arg-sub-list) [53903 53939]))                  
                 :type ("uint32_t" type (:type "class") nil nil))
                 nil [53860 53973])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_register_aer_callback" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4154,6 +4594,16 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [53580 53610])
+                    ("aer_cb_fn" variable (:type ("spdk_nvme_aer_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53621 53648])
+                    ("aer_cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53659 53676]))                  
+                :type "void")
+                nil [53537 53744])
+=======
                         (reparse-symbol arg-sub-list) [54018 54048])
                     ("aer_cb_fn" variable (:type ("spdk_nvme_aer_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54059 54086])
                     ("aer_cb_arg" variable
@@ -4162,6 +4612,7 @@
                         (reparse-symbol arg-sub-list) [54097 54114]))                  
                 :type "void")
                 nil [53975 54419])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_register_timeout_callback" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4170,6 +4621,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [53793 53823])
+                    ("nvme_timeout" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53826 53848])
+                    ("cb_fn" variable (:type ("spdk_nvme_timeout_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53849 53876])
+                    ("cb_arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [53877 53890]))                  
+                :type "void")
+                nil [53746 54257])
+=======
                         (reparse-symbol arg-sub-list) [54468 54498])
                     ("nvme_timeout" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54501 54523])
                     ("cb_fn" variable (:type ("spdk_nvme_timeout_cb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54524 54551])
@@ -4179,6 +4641,7 @@
                         (reparse-symbol arg-sub-list) [54552 54565]))                  
                 :type "void")
                 nil [54421 54937])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_is_log_page_supported" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4187,10 +4650,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [54302 54332])
+                    ("log_page" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54333 54350]))                  
+                :type "bool")
+                nil [54259 54597])
+=======
                         (reparse-symbol arg-sub-list) [54982 55012])
                     ("log_page" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55013 55030]))                  
                 :type "bool")
                 nil [54939 55277])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_is_feature_supported" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4199,10 +4669,17 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [54641 54671])
+                    ("feature_code" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54672 54693]))                  
+                :type "bool")
+                nil [54599 54944])
+=======
                         (reparse-symbol arg-sub-list) [55321 55351])
                     ("feature_code" variable (:type ("uint8_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55352 55373]))                  
                 :type "bool")
                 nil [55279 55624])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_attach_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4211,17 +4688,28 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [54976 55006])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55007 55021])
+=======
                         (reparse-symbol arg-sub-list) [55656 55686])
                     ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55687 55701])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("payload" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr_list" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [55027 55064]))                  
+                :type "int")
+                nil [54946 55621])
+=======
                         (reparse-symbol arg-sub-list) [55707 55744]))                  
                 :type "int")
                 nil [55626 56280])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_detach_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4230,17 +4718,28 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [55653 55683])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55684 55698])
+=======
                         (reparse-symbol arg-sub-list) [56312 56342])
                     ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56343 56357])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("payload" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr_list" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [55704 55741]))                  
+                :type "int")
+                nil [55623 56298])
+=======
                         (reparse-symbol arg-sub-list) [56363 56400]))                  
                 :type "int")
                 nil [56282 56946])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_create_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4249,16 +4748,26 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [56335 56365])
+=======
                         (reparse-symbol arg-sub-list) [56983 57013])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                     ("payload" variable
                        (:pointer 1
                         :type ("spdk_nvme_ns_data" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [56366 56400]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [56300 57033])
+=======
                         (reparse-symbol arg-sub-list) [57014 57048]))                  
                 :type ("uint32_t" type (:type "class") nil nil))
                 nil [56948 57637])
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
             ("spdk_nvme_ctrlr_delete_ns" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4267,6 +4776,14 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [57065 57095])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57096 57110]))                  
+                :type "int")
+                nil [57035 57647])
+            ("spdk_nvme_ctrlr_format" function
+               (:arguments 
+=======
                         (reparse-symbol arg-sub-list) [57669 57699])
                     ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57700 57714]))                  
                 :type "int")
@@ -4318,16 +4835,71 @@
             ("spdk_nvme_ctrlr_alloc_cmb_io_buffer" function
                (:pointer 1
                 :arguments 
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
                   ( ("ctrlr" variable
                        (:pointer 1
                         :type ("spdk_nvme_ctrlr" type
                              (:prototype t
                               :type "struct")
                               nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [57676 57706])
+                    ("nsid" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [57707 57721])
+                    ("format" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_format" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [57731 57763]))                  
+                :type "int")
+                nil [57649 58310])
+            ("spdk_nvme_ctrlr_update_firmware" function
+=======
                         (reparse-symbol arg-sub-list) [61266 61296])
                     ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61297 61309]))                  
                 :type "void")
                 nil [61223 61531])
+            ("spdk_nvme_ctrlr_free_cmb_io_buffer" function
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
+               (:arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+<<<<<<< HEAD
+                        (reparse-symbol arg-sub-list) [58348 58378])
+                    ("payload" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [58379 58393])
+                    ("size" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58394 58408])
+                    ("slot" variable (:type "int") (reparse-symbol arg-sub-list) [58413 58422])
+                    ("commit_action" variable (:type ("spdk_nvme_fw_commit_action" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [58423 58469])
+                    ("completion_status" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_status" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [58470 58513]))                  
+                :type "int")
+                nil [58312 61114])
+            ("spdk_nvme_ctrlr_alloc_cmb_io_buffer" function
+               (:pointer 1
+                :arguments 
+                  ( ("ctrlr" variable
+                       (:pointer 1
+                        :type ("spdk_nvme_ctrlr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61159 61189])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61190 61202]))                  
+                :type "void")
+                nil [61116 61424])
             ("spdk_nvme_ctrlr_free_cmb_io_buffer" function
                (:arguments 
                   ( ("ctrlr" variable
@@ -4336,6 +4908,19 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
+                        (reparse-symbol arg-sub-list) [61466 61496])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [61497 61507])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61508 61520]))                  
+                :type "void")
+                nil [61426 61702]))          
+      :file "nvme_ctrlr.c"
+      :pointmax 61703
+      :fsize 61702
+      :lastmodtime '(23325 63592 578848 721000)
+=======
                         (reparse-symbol arg-sub-list) [61573 61603])
                     ("buf" variable
                        (:pointer 1
@@ -4348,6 +4933,7 @@
       :pointmax 61810
       :fsize 61809
       :lastmodtime '(23320 54163 123693 389000)
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -4839,9 +5425,15 @@
                 :type "int")
                 nil [14858 15554]))          
       :file "nvme_ctrlr_cmd.c"
+<<<<<<< HEAD
+      :pointmax 14075
+      :fsize 15552
+      :lastmodtime '(23325 63592 579848 741000)
+=======
       :pointmax 15555
       :fsize 15554
       :lastmodtime '(23319 21734 259902 279000)
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -5258,8 +5850,8 @@
                 nil [20309 21275]))          
       :file "nvme.c"
       :pointmax 21328
-      :fsize 21327
-      :lastmodtime '(23319 21734 259902 279000)
+      :fsize 21793
+      :lastmodtime '(23325 63592 578848 721000)
       :unmatched-syntax '((semantic-list 21304 . 21327) (symbol 21277 . 21304) (string 21305 . 21311) (semantic-list 2140 . 2159) (symbol 2130 . 2140) (STATIC 2123 . 2129) (semantic-list 1993 . 2012) (symbol 1983 . 1993) (STATIC 1976 . 1982) (punctuation 1973 . 1974) (number 1969 . 1973) (punctuation 1967 . 1968) (number 1964 . 1966) (punctuation 1962 . 1963) (number 1960 . 1961) (punctuation 1958 . 1959) (symbol 1933 . 1957) (INT 1929 . 1932) (STATIC 1922 . 1928))
       :lexical-table 
         '(("SPDK_NVME_DRIVER_NAME" . ((string "\"spdk_nvme_driver\"" 1751 . 1769)))
@@ -6029,8 +6621,13 @@
                 nil [21686 22296]))          
       :file "nvme_ns_cmd.c"
       :pointmax 22297
+<<<<<<< HEAD
+      :fsize 27896
+      :lastmodtime '(23325 63592 579848 741000)
+=======
       :fsize 31411
       :lastmodtime '(23320 54163 123693 389000)
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -6471,8 +7068,8 @@
                 nil [16016 16443]))          
       :file "nvme_qpair.c"
       :pointmax 16444
-      :fsize 17759
-      :lastmodtime '(23319 21734 262902 56000)
+      :fsize 17780
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -6803,7 +7400,7 @@
       :file "nvme_transport.c"
       :pointmax 6716
       :fsize 6715
-      :lastmodtime '(23319 21734 262902 56000)
+      :lastmodtime '(23325 63575 369504 234000)
       :unmatched-syntax nil
       :lexical-table 
         '(("TRANSPORT_FABRICS_RDMA" (spp-arg-list ("func_name" "args") 2356 . 2373) . 
@@ -8172,8 +8769,13 @@
                 nil [48917 51146]))          
       :file "nvme_pcie.c"
       :pointmax 51147
+<<<<<<< HEAD
+      :fsize 57392
+      :lastmodtime '(23325 63592 579848 741000)
+=======
       :fsize 56897
       :lastmodtime '(23320 54163 124693 396000)
+>>>>>>> 585fdb78c4319f0d0a0ed1ff4292e6d1d2b30a00
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -8238,7 +8840,7 @@
       :file "nvme_uevent.h"
       :pointmax 2167
       :fsize 2208
-      :lastmodtime '(23319 21734 262902 56000)
+      :lastmodtime '(23325 63575 369504 234000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -8445,8 +9047,8 @@
                 nil [5591 5642]))          
       :file "nvme_ns.c"
       :pointmax 5643
-      :fsize 8480
-      :lastmodtime '(23319 21734 261902 130000)
+      :fsize 8605
+      :lastmodtime '(23325 63592 579848 741000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -8529,8 +9131,8 @@
                 nil [2955 3187]))          
       :file "nvme_quirks.c"
       :pointmax 3188
-      :fsize 4826
-      :lastmodtime '(23319 21734 262902 56000)
+      :fsize 4533
+      :lastmodtime '(23325 63592 580848 761000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -8591,7 +9193,7 @@
       :file "nvme_uevent.c"
       :pointmax 5065
       :fsize 5996
-      :lastmodtime '(23319 21734 262902 56000)
+      :lastmodtime '(23325 63575 369504 234000)
       :unmatched-syntax nil))
   :file "!home!cranechu!spdk!lib!nvme!semantic.cache"
   :semantic-tag-version "2.0"
