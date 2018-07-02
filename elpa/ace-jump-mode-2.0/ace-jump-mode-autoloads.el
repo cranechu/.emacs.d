@@ -1,10 +1,12 @@
 ;;; ace-jump-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory #$) (car load-path))))
+
 
-;;;### (autoloads nil "ace-jump-mode" "ace-jump-mode.el" (23225 37912
-;;;;;;  443667 365000))
+;;;### (autoloads nil "ace-jump-mode" "ace-jump-mode.el" (0 0 0 0))
 ;;; Generated autoloads from ace-jump-mode.el
 
 (autoload 'ace-jump-mode-pop-mark "ace-jump-mode" "\
@@ -53,11 +55,14 @@ You can constrol whether use the case sensitive via
 
 \(fn &optional PREFIX)" t nil)
 
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ace-jump-mode" '("aj-" "ace-jump-")))
+
 ;;;***
 
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; ace-jump-mode-autoloads.el ends here
