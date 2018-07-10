@@ -93,6 +93,9 @@
   (setq-default mode-line-misc-info (remove which-func mode-line-misc-info))
   (setq-default header-line-format which-func))
 
+;; scroll by line
+(setq scroll-conservatively most-positive-fixnum)
+
 ;; sticky function at head
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 (semantic-mode 1)

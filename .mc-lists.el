@@ -4,6 +4,8 @@
 (setq mc/cmds-to-run-for-all
       '(
         electric-newline-and-maybe-indent
+        indent-for-tab-command
+        python-nav-forward-block
         ))
 
 (setq mc/cmds-to-run-once

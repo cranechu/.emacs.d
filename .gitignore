@@ -4,3 +4,4 @@ ac-comphist.dat
 *.cache
 places
 recentf
+auto-save-list/*
