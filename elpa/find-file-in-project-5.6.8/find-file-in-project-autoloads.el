@@ -158,6 +158,12 @@ If OPEN-ANOTHER-WINDOW is not nil, the file will be opened in new window.
 
 \(fn &optional OPEN-ANOTHER-WINDOW)" t nil)
 
+(autoload 'ffip-insert-file "find-file-in-project" "\
+Insert contents of file in current buffer.
+The file name is selected interactively from candidates in project.
+
+\(fn)" t nil)
+
 (autoload 'find-file-with-similar-name "find-file-in-project" "\
 Use base name of current file as keyword which could be further stripped.
 by `ffip-strip-file-name-regex'.

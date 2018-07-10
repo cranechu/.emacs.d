@@ -1,4 +1,12 @@
-;; .emacs
+;; init.el
+
+;; fast startup
+(setq gc-cons-threshold 100000000)
+(add-hook 'emacs-startup-hook 'my/set-gc-threshold)
+(defun my/set-gc-threshold ()
+  "Reset `gc-cons-threshold' to its default value."
+  (setq gc-cons-threshold 800000))
+(setq file-name-handler-alist nil)
 
 ;; enable visual feedback on selections
 (setq transient-mark-mode t)
@@ -51,6 +59,8 @@
 ;;zoom window
 (require 'zoom-window)
 (global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+
+;;custom set variables
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -64,7 +74,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (smooth-scroll jedi py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags use-package go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (use-package smooth-scroll jedi py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -185,6 +195,7 @@
 (global-set-key (kbd "C-o") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
@@ -290,6 +301,7 @@
       scroll-down-aggressively 0.01)
 (setq-default scroll-up-aggressively 0.01
               scroll-down-aggressively 0.01)
+(setq auto-window-vscroll nil)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)

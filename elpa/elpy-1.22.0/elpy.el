@@ -4,7 +4,7 @@
 
 ;; Author: Jorgen Schaefer <contact@jorgenschaefer.de>
 ;; URL: https://github.com/jorgenschaefer/elpy
-;; Version: 1.21.0
+;; Version: 1.22.0
 ;; Keywords: Python, IDE, Languages, Tools
 ;; Package-Requires: ((company "0.9.2") (emacs "24.4") (find-file-in-project "3.3")  (highlight-indentation "0.5.0") (pyvenv "1.3") (yasnippet "0.8.0") (s "1.11.0"))
 
@@ -53,7 +53,7 @@
 (require 'pyvenv)
 (require 'find-file-in-project)
 
-(defconst elpy-version "1.21.0"
+(defconst elpy-version "1.22.0"
   "The version of the Elpy lisp code.")
 
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -690,6 +690,14 @@ except:
     config['yapf_version'] = None
     config['yapf_latest'] = latest('yapf')
 
+try:
+    import black
+    config['black_version'] = black.__version__
+    config['black_latest'] = latest('black', config['black_version'])
+except:
+    config['black_version'] = None
+    config['black_latest'] = latest('black')
+
 json.dump(config, sys.stdout)
 ")
 
@@ -941,6 +949,26 @@ item in another window.\n\n")
                      :package "yapf" :upgrade t)
       (insert "\n\n"))
 
+    ;; No black available
+    (when (not (gethash "black_version" config))
+      (elpy-insert--para
+       "The black package is not available. Commands using this will "
+       "not work.\n")
+      (insert "\n")
+      (widget-create 'elpy-insert--pip-button
+                     :package "black")
+      (insert "\n\n"))
+
+    ;; Newer version of black available
+    (when (and (gethash "black_version" config)
+               (gethash "black_latest" config))
+      (elpy-insert--para
+       "There is a newer version of the black package available.\n")
+      (insert "\n")
+      (widget-create 'elpy-insert--pip-button
+                     :package "black" :upgrade t)
+      (insert "\n\n"))
+
     ;; Syntax checker not available
     (when (not (executable-find elpy-syntax-check-command))
       (elpy-insert--para
@@ -1036,6 +1064,8 @@ virtual_env_short"
         (autopep8-latest (gethash "autopep8_latest" config))
         (yapf-version (gethash "yapf_version" config))
         (yapf-latest (gethash "yapf_latest" config))
+        (black-version (gethash "black_version" config))
+        (black-latest (gethash "black_latest" config))
         (virtual-env (gethash "virtual_env" config))
         (virtual-env-short (gethash "virtual_env_short" config))
         table maxwidth)
@@ -1090,6 +1120,9 @@ virtual_env_short"
             ("Yapf" . ,(elpy-config--package-link "yapf"
                                                   yapf-version
                                                   yapf-latest))
+            ("Black" . ,(elpy-config--package-link "black"
+                                                   black-version
+                                                   black-latest))
             ("Syntax checker" . ,(let ((syntax-checker
                                         (executable-find
                                          elpy-syntax-check-command)))
@@ -2112,6 +2145,8 @@ prefix argument is given, prompt for a symbol from the user."
     (elpy-yapf-fix-code))
    ((elpy-config--package-available-p "autopep8")
     (elpy-autopep8-fix-code))
+   ((elpy-config--package-available-p "black")
+    (elpy-black-fix-code))
    (t
     (message "Install yapf/autopep8 to format code."))))
 
@@ -2130,6 +2165,11 @@ Autopep8 can be configured with a style file placed in the project
 root directory."
   (interactive)
   (elpy--fix-code-with-formatter "fix_code"))
+
+(defun elpy-black-fix-code ()
+  "Automatically formats Python code with black."
+  (interactive)
+  (elpy--fix-code-with-formatter "fix_code_with_black"))
 
 (defun elpy--fix-code-with-formatter (method)
   "Common routine for formatting python code."
@@ -3066,7 +3106,10 @@ Returns a possible multi-line docstring."
 ;;; Xref backend
 (defun elpy--xref-backend ()
   "Return the name of the elpy xref backend."
-  (if elpy-rpc--jedi-available
+  ;; If no rpc available, start one and assume jedi is available
+  (if (or (and (not (elpy-rpc--process-buffer-p elpy-rpc--buffer))
+               (elpy-rpc--get-rpc-buffer))
+          elpy-rpc--jedi-available)
       'elpy
     nil))
 
@@ -3644,12 +3687,15 @@ display the current class and method instead."
     (`global-init
      (require 'flymake)
      (elpy-modules-remove-modeline-lighter 'flymake-mode)
-     ;; Flymake support using flake8, including warning faces.
-     (setq python-check-command elpy-syntax-check-command)
+     ;; Add our initializer function.
+     ;; For emacs > 26.1, python.el natively supports flymake,
+     ;; so we just tell python.el to use flake8
+     (if (version<= "26.1" emacs-version)
+         (setq python-flymake-command '("flake8" "-"))
+       (setq python-check-command elpy-syntax-check-command)
+       (add-to-list 'flymake-allowed-file-name-masks
+                    '("\\.py\\'" elpy-flymake-python-init))))
 
-     ;; Add our initializer function
-     (add-to-list 'flymake-allowed-file-name-masks
-                  '("\\.py\\'" elpy-flymake-python-init)))
     (`buffer-init
      ;; `flymake-no-changes-timeout': The original value of 0.5 is too
      ;; short for Python code, as that will result in the current line
@@ -3667,22 +3713,35 @@ display the current class and method instead."
           nil)
 
      ;; Enable warning faces for flake8 output.
+     ;; Useless for emacs >= 26.1, as warning are handled fine
      ;; COMPAT: Obsolete variable as of 24.4
-     (if (boundp 'flymake-warning-predicate)
-         (set (make-local-variable 'flymake-warning-predicate) "^W[0-9]")
-       (set (make-local-variable 'flymake-warning-re) "^W[0-9]"))
+     (cond
+      ((version<= "26.1" emacs-version) t)
+      ((boundp 'flymake-warning-predicate)
+       (set (make-local-variable 'flymake-warning-predicate) "^W[0-9]"))
+      (t
+       (set (make-local-variable 'flymake-warning-re) "^W[0-9]")))
 
+     ;; for emacs >= 26.1, elpy relies on `python-flymake-command`, and
+     ;; doesn't need `python-check-command` anymore.
      (when (and (buffer-file-name)
-                (executable-find python-check-command))
+                (or (version<= "26.1" emacs-version)
+                    (executable-find python-check-command)))
        (flymake-mode 1)))
     (`buffer-stop
      (flymake-mode -1)
      (kill-local-variable 'flymake-no-changes-timeout)
      (kill-local-variable 'flymake-start-syntax-check-on-newline)
+     ;; Disable warning faces for flake8 output.
+     ;; Useless for emacs >= 26.1, as warning are handled fine
      ;; COMPAT: Obsolete variable as of 24.4
-     (if (boundp 'flymake-warning-predicate)
-         (kill-local-variable 'flymake-warning-predicate)
-       (kill-local-variable 'flymake-warning-re)))))
+     (cond
+      ((version<= "26.1" emacs-version) t)
+      ((boundp 'flymake-warning-predicate)
+       (kill-local-variable 'flymake-warning-predicate))
+      (t
+       (kill-local-variable 'flymake-warning-re))))))
+
 
 (defun elpy-flymake-python-init ()
   ;; Make sure it's not a remote buffer as flymake would not work
@@ -3727,8 +3786,9 @@ description."
                         ", "))))
         ((and (fboundp 'flymake-diagnostic-text)
               (fboundp 'flymake-diagnostics)) ; emacs >= 26
-         (mapconcat #'flymake-diagnostic-text
-                    (flymake-diagnostics (point)) ", "))))
+         (let ((diag (flymake-diagnostics (point))))
+           (when diag
+             (mapconcat #'flymake-diagnostic-text diag ", "))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Module: Highlight Indentation

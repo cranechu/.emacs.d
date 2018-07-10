@@ -3,8 +3,8 @@
 ;; Copyright (C) 2006-2009, 2011-2012, 2015, 2016, 2017
 ;;   Phil Hagelberg, Doug Alcorn, Will Farrington, Chen Bin
 ;;
-;; Version: 5.6.6
-;; Package-Version: 5.6.6
+;; Version: 5.6.8
+;; Package-Version: 5.6.8
 ;; Author: Phil Hagelberg, Doug Alcorn, and Will Farrington
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/technomancy/find-file-in-project
@@ -64,6 +64,8 @@
 ;; For instance, in a Ruby on Rails project, you are interested in all
 ;; .rb files that don't exist in the "vendor" directory.  In that case
 ;; you could set `ffip-find-options' to "-not -regex \".*vendor.*\"".
+
+;; `ffip-insert-file' insert file content into current buffer.
 
 ;; `find-file-with-similar-name' find file with similar name to current
 ;; opened file. The regular expression `ffip-strip-file-name-regex' is
@@ -327,6 +329,12 @@ May be set using .dir-locals.el.  Checks each entry if set to a list.")
 
 Use this to exclude portions of your project: \"-not -regex \\\".*svn.*\\\"\".")
 
+(defcustom ffip-find-pre-path-options ""
+  "Extra options to pass to `find' before path name options when using `find-file-in-project'.
+
+As required by `find', `-H', `-L', `-P', `-D' and `-O' must appear before the first path name, `.' for ffip's case.
+For example, use this to follow symbolic links inside your project: \"-L\".")
+
 (defvar ffip-project-root nil
   "If non-nil, overrides the project root directory location.")
 
@@ -587,8 +595,9 @@ This function returns the selected candidate or nil."
     (ivy-read prompt collection
               :action action))))
 
-(defun ffip-create-shell-command (keyword)
-  "Produce command to search KEYWORD for shell.
+(defun ffip-create-shell-command (keyword is-finding-directory)
+  "Produce command to search KEYWORD.
+If IS-FINDING-DIRECTORY is t, we look up directory instead of file.
 Rust fd use regular expression.
 BSD/GNU Find use glob pattern."
   (let* (cmd fmt tgt)
@@ -611,7 +620,9 @@ BSD/GNU Find use glob pattern."
       (setq tgt
             (if is-finding-directory (format "-iwholename \"*%s\"" keyword)
               (ffip--create-filename-pattern-for-gnufind keyword)))
-      (setq fmt "%s . \\( %s \\) -prune -o -type %s %s %s %s -print")))
+      (setq fmt (concat "%s "
+                        ffip-find-pre-path-options
+                        " . \\( %s \\) -prune -o -type %s %s %s %s -print"))))
 
     (setq cmd (format fmt
                       (ffip--executable-find)
@@ -645,7 +656,7 @@ DIRECTORY-TO-SEARCH specify the root directory to search."
          (root (or directory-to-search
                    (ffip-get-project-root-directory)))
          (default-directory (file-name-as-directory root))
-         (cmd (ffip-create-shell-command keyword))
+         (cmd (ffip-create-shell-command keyword is-finding-directory))
          (collection (split-string (ffip-shell-command-to-string cmd) "[\r\n]+" t)))
 
     (if ffip-debug (message "run command at %s: %s" default-directory cmd))
@@ -861,6 +872,23 @@ If keyword is empty, it behaves same as `find-file-in-project'.
 If OPEN-ANOTHER-WINDOW is not nil, the file will be opened in new window."
   (interactive "P")
   (ffip-find-files (ffip-read-keyword) open-another-window))
+
+;;;###autoload
+(defun ffip-insert-file ()
+  "Insert contents of file in current buffer.
+The file name is selected interactively from candidates in project."
+  (interactive)
+  (let* ((cands (ffip-project-search (ffip-read-keyword) nil))
+         root)
+    (when (> (length cands) 0)
+      (setq root (file-name-nondirectory (directory-file-name (ffip-get-project-root-directory))))
+      (ffip-completing-read
+       (format "Read file in %s/: " root)
+       cands
+       `(lambda (file)
+          ;; only one item in project files
+          (if (listp file) (setq file (cdr file)))
+          (insert-file file))))))
 
 ;;;###autoload
 (defun find-file-with-similar-name (&optional open-another-window)
