@@ -64,7 +64,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (jedi py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags use-package go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (smooth-scroll jedi py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags use-package go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo elpy eshell-up sublimity projectile dashboard smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -92,9 +92,6 @@
   (setq-default mode-line-format (remove which-func mode-line-format))
   (setq-default mode-line-misc-info (remove which-func mode-line-misc-info))
   (setq-default header-line-format which-func))
-
-;; scroll by line
-(setq scroll-conservatively most-positive-fixnum)
 
 ;; sticky function at head
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
@@ -285,6 +282,18 @@
 (require 'ace-jump-mode)
 (setq ace-jump-mode-scope 'frame)
 (bind-key* "M-j" 'ace-jump-mode)
+
+;; smooth scroll
+(require 'smooth-scroll)
+(smooth-scroll-mode 1)
+(global-set-key (kbd "<C-down>") 'scroll-up-1)
+(global-set-key (kbd "<C-up>") 'scroll-down-1)
+(setq scroll-margin 1
+      scroll-conservatively 0
+      scroll-up-aggressively 0.01
+      scroll-down-aggressively 0.01)
+(setq-default scroll-up-aggressively 0.01
+              scroll-down-aggressively 0.01)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)

@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
         electric-newline-and-maybe-indent
+        helm-M-x
         indent-for-tab-command
         python-nav-forward-block
         ))
