@@ -99,8 +99,8 @@
 (require 'stickyfunc-enhance)
 
 ;;line number
-(global-linum-mode t)
 (setq linum-format "%4d ")
+(add-hook 'prog-mode-hook 'linum-mode)
 (global-set-key "\M-g" 'goto-line)
 
 ;;shell
