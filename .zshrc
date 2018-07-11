@@ -108,6 +108,6 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias s='ls'
-alias e='fg'  #'emacsclient -t #'
+alias e='if (( $(pidof emacs) )); then fg; else emacs; fi #' #'emacsclient -t #'
 alias j='z'
 

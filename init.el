@@ -11,6 +11,7 @@
 ;;suspend instead of exit
 (defun my/save-buffer-suspend-terminal ()
   (interactive)
+  (save-buffer)
   (save-some-buffers)
   (suspend-frame))
 (global-set-key (kbd "C-x C-c") 'my/save-buffer-suspend-terminal)
