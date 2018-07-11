@@ -4,7 +4,8 @@ window-maximized=false
 window-size=[786, 447]
 
 [settings-daemon/plugins/power]
-power-button-action='hibernate'
+power-button-action='nothing'
+idle-dim=false
 sleep-inactive-battery-type='suspend'
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
@@ -19,7 +20,7 @@ antialiasing='rgba'
 hinting='none'
 
 [settings-daemon/peripherals/keyboard]
-numlock-state='off'
+numlock-state='on'
 
 [settings-daemon/peripherals/mouse]
 locate-pointer=true
@@ -27,7 +28,7 @@ locate-pointer=true
 [shell]
 app-picker-view=uint32 0
 command-history=['r']
-enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'background-logo@fedorahosted.org']
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'background-logo@fedorahosted.org', 'hidetopbar@mathieu.bidon.ca']
 favorite-apps=@as []
 
 [shell/window-switcher]
@@ -39,6 +40,14 @@ switchmethod='xinput'
 autoswitch-touchpad=true
 first-time=false
 touchpad-enabled=true
+
+[shell/extensions/hidetopbar]
+mouse-triggers-overview=false
+enable-active-window=false
+hot-corner=false
+mouse-sensitive=false
+enable-intellihide=false
+shortcut-toggles=false
 
 [shell/overrides]
 dynamic-workspaces=false
@@ -54,12 +63,12 @@ candidate-encodings=['UTF-8', 'ISO-8859-15', 'UTF-16', 'BIG5', 'GB18030', 'GB231
 show-tabs-mode='auto'
 
 [gedit/plugins/filebrowser]
-virtual-root='file:///home/cranechu/Dropbox'
-tree-view=false
+virtual-root='file:///home/cranechu/.emacs.d'
+tree-view=true
 root='file:///'
 
 [gedit/plugins]
-active-plugins=['time', 'modelines', 'spell', 'docinfo', 'filebrowser']
+active-plugins=['modelines', 'time', 'filebrowser', 'spell', 'docinfo']
 
 [gedit/state/window]
 size=(913, 622)
@@ -73,7 +82,7 @@ target-currency=''
 show-zeroes=false
 source-currency=''
 show-thousands=false
-button-mode='basic'
+button-mode='programming'
 target-units='radian'
 word-size=64
 window-position=(26, 23)
@@ -82,6 +91,11 @@ angle-units='degrees'
 base=10
 source-units='degree'
 accuracy=9
+
+[clocks/state/window]
+size=(870, 690)
+state=87168
+panel-id='stopwatch'
 
 [nautilus/preferences]
 search-view='list-view'
@@ -92,7 +106,7 @@ search-filter-time-type='last_modified'
 sidebar-width=351
 geometry='1101x597+26+23'
 maximized=false
-initial-size=(890, 544)
+initial-size=(890, 534)
 
 [power-manager]
 info-history-type='charge'
@@ -105,7 +119,7 @@ info-history-time=21600
 document-directory=@ms 'file:///home/cranechu/download'
 
 [evince/default]
-window-ratio=(3.2268907563025211, 1.2315914489311164)
+window-ratio=(3.1372549019607843, 1.1578282828282829)
 
 [file-roller/listing]
 sort-method='name'
@@ -128,29 +142,42 @@ network-monitor-gio-name=''
 migrated=true
 
 [desktop/interface]
-text-scaling-factor=1.5800000000000001
+text-scaling-factor=1.0
 gtk-key-theme='Emacs'
 cursor-size=48
-gtk-im-module='ibus'
+font-name='Cantarell 15'
+document-font-name='Sans 15'
 show-battery-percentage=true
+gtk-im-module='ibus'
+toolkit-accessibility=false
 icon-theme='Adwaita'
-enable-animations=false
+monospace-font-name='Monospace 15'
+enable-animations=true
 gtk-theme='Adwaita'
 clock-show-date=true
 
 [desktop/notifications]
-application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser']
+application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome']
 show-banners=false
 show-in-lock-screen=false
 
-[desktop/notifications/application/chromium-browser]
-application-id='chromium-browser.desktop'
+[desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
 
-[desktop/notifications/application/gnome-tweak-tool]
-application-id='gnome-tweak-tool.desktop'
+[desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
+[desktop/notifications/application/abrt-applet]
+application-id='abrt-applet.desktop'
 
 [desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
+
+[desktop/notifications/application/chromium-browser]
+application-id='chromium-browser.desktop'
 
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
@@ -158,11 +185,8 @@ application-id='org.gnome.Software.desktop'
 [desktop/notifications/application/org-gnome-terminal]
 application-id='org.gnome.Terminal.desktop'
 
-[desktop/notifications/application/abrt-applet]
-application-id='abrt-applet.desktop'
-
-[desktop/notifications/application/org-gnome-nautilus]
-application-id='org.gnome.Nautilus.desktop'
+[desktop/notifications/application/gnome-tweak-tool]
+application-id='gnome-tweak-tool.desktop'
 
 [desktop/app-folders]
 folder-children=['Utilities', 'Sundry', 'YaST']
@@ -209,16 +233,17 @@ remove-old-trash-files=true
 
 [desktop/wm/preferences]
 action-right-click-titlebar='menu'
-button-layout='appmenu:minimize,close'
+button-layout='appmenu:minimize,maximize,close'
 theme='Adwaita'
 action-double-click-titlebar='toggle-maximize'
 num-workspaces=3
+titlebar-font='Cantarell Bold 15'
 
 [desktop/wm/keybindings]
 show-desktop=['<Super>d']
 
 [desktop/session]
-idle-delay=uint32 720
+idle-delay=uint32 0
 
 [desktop/a11y/applications]
 screen-magnifier-enabled=false
@@ -233,8 +258,11 @@ automatic-timezone=true
 xkb-options=['ctrl:swapcaps']
 per-window=true
 current=uint32 0
-mru-sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
+mru-sources=[('ibus', 'libpinyin'), ('xkb', 'us')]
 sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
+
+[control-center]
+last-panel='printers'
 
 [system/location]
 enabled=false
@@ -274,6 +302,10 @@ enable-site-specific-quirks=true
 background-color='rgb(0,0,0)'
 use-background-color=true
 
+[login-screen]
+enable-smartcard-authentication=false
+enable-fingerprint-authentication=true
+
 [gnome-session]
 auto-save-session-one-shot=false
 
@@ -282,8 +314,8 @@ foreground-color='rgb(170,170,170)'
 rewrap-on-resize=true
 palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
 scroll-on-output=false
-use-system-font=false
-use-theme-colors=false
+use-system-font=true
+use-theme-colors=true
 use-transparent-background=false
 font='FreeMono 11.5'
 allow-bold=false
@@ -328,7 +360,7 @@ sort-order=0
 
 [gnome-system-monitor/proctree]
 col-24-visible=true
-sort-col=25
+sort-col=8
 columns-order=[0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
 col-0-visible=true
 col-1-width=98
@@ -340,12 +372,12 @@ col-8-width=90
 col-9-width=147
 col-24-width=100
 col-15-visible=true
-sort-order=0
+sort-order=1
 col-15-width=143
 
 [software]
 first-run=false
 show-nonfree-prompt=false
 upgrade-notification-timestamp=int64 1527728410
-check-timestamp=int64 1527728410
+check-timestamp=int64 1531261870
 install-timestamp=int64 1526447489
