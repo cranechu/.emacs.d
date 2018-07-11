@@ -8,6 +8,13 @@
   (setq gc-cons-threshold 800000))
 (setq file-name-handler-alist nil)
 
+;;suspend instead of exit
+(defun my/save-buffer-suspend-terminal ()
+  (interactive)
+  (save-some-buffers)
+  (suspend-frame))
+(global-set-key (kbd "C-x C-c") 'my/save-buffer-suspend-terminal)
+
 ;; enable visual feedback on selections
 (setq transient-mark-mode t)
 
