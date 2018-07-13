@@ -1,14 +1,3 @@
-cat hello_world.c 
-ls
-make
-cd ..
-cd ..
-ls
-cd nvme
-ls
-make
-cd ..
-ls
 make
 cd ..
 ls
@@ -126,3 +115,14 @@ ipython
 python
 history | grep vstart
 history
+cd ..
+ls
+cd hello_world/
+ls
+sudo ./hello_world.d
+ls
+make
+ls
+sudo ./hello_world
+make
+sudo ./hello_world

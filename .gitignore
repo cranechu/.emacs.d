@@ -5,4 +5,4 @@ ac-comphist.dat
 places
 recentf
 auto-save-list/*
-.emacs.desktop
+.emacs.desktop*

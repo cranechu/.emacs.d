@@ -1,6 +1,3 @@
-/home/cranechu/spdk/lib/nvme
-/home/cranechu/spdk/lib/nvme
-/home/cranechu/spdk/lib/nvme
 /home/cranechu/spdk/mk
 /home/cranechu/spdk/include/spdk
 /home/cranechu/spdk/include
@@ -31,3 +28,6 @@
 ~
 /root/spdk/examples/nvme/hello_world
 /home/cranechu
+/home/cranechu/ssdmeter/spdk/examples/nvme/hotplug
+/home/cranechu/ssdmeter/spdk/examples/nvme
+/home/cranechu/ssdmeter/spdk/examples/nvme/hello_world

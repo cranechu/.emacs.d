@@ -152,9 +152,6 @@
 (add-to-list 'auto-mode-alist '("\\.pxd\\'" . python-mode))
 (add-hook 'prog-mode-hook 'follow-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
@@ -203,6 +200,7 @@
 (global-set-key (kbd "C-o") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
+(global-set-key (kbd "C-x j") 'helm-semantic-or-imenu)
 (global-set-key (kbd "C-x C-b") 'switch-to-buffer)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
@@ -274,6 +272,7 @@
 (setq neo-window-fixed-size t)
 (setq neo-buffer--start-node "~/")
 (setq neo-global--do-autorefresh nil)
+(global-set-key (kbd "C-x n") 'neotree-toggle)
 
 ;;google c style
 (require 'cc-mode)
