@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        c-indent-line-or-region
         electric-newline-and-maybe-indent
         helm-M-x
         indent-for-tab-command
