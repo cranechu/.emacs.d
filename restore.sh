@@ -4,11 +4,12 @@ sudo dnf install -y emacs-nox
 sudo dnf install -y gnome-tweak-tool fio nvme-cli util-linux-user
 sudo dnf update -y
 
-#dconf dump / > gnome.dconf.bak
+# dconf dump / > gnome.dconf.bak
 dconf load / < gnome.dconf.bak
 
 sudo dnf install -y zsh
 rm -rf ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# exit zsh and run next commnad line to copy the rc file
 cp .zshrc ~/
 
