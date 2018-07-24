@@ -1,10 +1,12 @@
 ;;; magit-annex-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory #$) (car load-path))))
+
 
-;;;### (autoloads nil "magit-annex" "magit-annex.el" (23298 10204
-;;;;;;  936755 302000))
+;;;### (autoloads nil "magit-annex" "magit-annex.el" (0 0 0 0))
 ;;; Generated autoloads from magit-annex.el
 
 (eval-after-load 'magit '(progn (define-key magit-mode-map "@" 'magit-annex-popup-or-init) (magit-define-popup-action 'magit-dispatch-popup 64 "Annex" 'magit-annex-popup-or-init 33)))
@@ -44,11 +46,14 @@ List annex files in DIRECTORY.
 
 \(fn DIRECTORY &optional ARGS)" t nil)
 
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "magit-annex" '("magit-annex-")))
+
 ;;;***
 
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; magit-annex-autoloads.el ends here
