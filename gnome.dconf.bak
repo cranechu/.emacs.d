@@ -311,10 +311,6 @@ enable-site-specific-quirks=true
 background-color='rgb(0,0,0)'
 use-background-color=true
 
-[org/gnome/login-screen]
-enable-smartcard-authentication=false
-enable-fingerprint-authentication=true
-
 [org/gnome/gnome-session]
 auto-save-session-one-shot=false
 
