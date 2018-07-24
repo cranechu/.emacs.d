@@ -4,8 +4,8 @@ sudo dnf install -y emacs-nox
 sudo dnf install -y gnome-tweak-tool fio nvme-cli util-linux-user
 sudo dnf update -y
 
-#dconf dump /org/gnome/ > gnome.dconf.bak
-dconf load /org/gnome/ < gnome.dconf.bak
+#dconf dump / > gnome.dconf.bak
+dconf load / < gnome.dconf.bak
 
 sudo dnf install -y zsh
 rm -rf ~/.oh-my-zsh
