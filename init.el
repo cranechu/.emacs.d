@@ -113,9 +113,11 @@
   (setq-default header-line-format which-func))
 
 ;; sticky function at head
+(require 'stickyfunc-enhance)
+(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
 (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
 (semantic-mode 1)
-(require 'stickyfunc-enhance)
+(global-set-key (kbd "C-c s") 'semantic-ia-show-summary)
 
 ;;line number
 (setq linum-format "%4d ")
