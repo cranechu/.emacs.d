@@ -1,11 +1,4 @@
 make
-cd ..
-ls
-make
-make example
-make examples
-make lib
-make
 ls
 cd examples/nvme/
 ls
@@ -126,3 +119,10 @@ ls
 sudo ./hello_world
 make
 sudo ./hello_world
+cd ..
+cd ..
+cd bdev
+cd hello_world/
+ls
+sudo ./hello_bdev
+sudo ./hello_bdev

@@ -8,6 +8,7 @@
         helm-M-x
         indent-for-tab-command
         python-nav-forward-block
+        wdired-finish-edit
         ))
 
 (setq mc/cmds-to-run-once
