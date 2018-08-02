@@ -28,7 +28,7 @@ locate-pointer=true
 [org/gnome/shell]
 app-picker-view=uint32 0
 command-history=['r']
-enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'background-logo@fedorahosted.org', 'hidetopbar@mathieu.bidon.ca']
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'background-logo@fedorahosted.org', 'hidetopbar@mathieu.bidon.ca', 'hide-dash@xenatt.github.com']
 favorite-apps=@as []
 
 [org/gnome/shell/window-switcher]
@@ -340,28 +340,12 @@ subtitle-encoding='UTF-8'
 active-plugins=['recent', 'save-file', 'autoload-subtitles', 'apple-trailers', 'movie-properties', 'variable-rate', 'media_player_keys', 'screensaver', 'skipto', 'vimeo', 'screenshot']
 
 [org/gnome/gnome-system-monitor]
-show-dependencies=false
 current-tab='resources'
-maximized=false
-window-state=(1265, 617, 26, 23)
 show-whose-processes='user'
-
-[org/gnome/gnome-system-monitor/disktreenew]
-sort-col=1
-columns-order=[1, 0, 6, 2, 3, 5, 4]
-col-2-visible=true
-col-0-visible=true
-col-0-width=275
-col-3-visible=true
-col-3-width=158
-col-1-visible=true
-col-1-width=169
-col-5-width=1191
-col-2-width=105
-col-6-width=0
-col-6-visible=true
-col-5-visible=true
-sort-order=0
+window-state=(1265, 617, 26, 23)
+maximized=false
+show-dependencies=false
+cpu-colors=[(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'), (4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8'), (8, '#f25915e815e8'), (9, '#f25915e815e8'), (10, '#f25915e815e8'), (11, '#f25915e815e8')]
 
 [org/gnome/gnome-system-monitor/proctree]
 col-24-visible=true
@@ -380,11 +364,28 @@ col-15-visible=true
 sort-order=1
 col-15-width=143
 
+[org/gnome/gnome-system-monitor/disktreenew]
+sort-col=1
+columns-order=[1, 0, 6, 2, 3, 5, 4]
+col-2-visible=true
+col-0-visible=true
+col-0-width=275
+col-3-visible=true
+col-3-width=158
+col-1-visible=true
+col-1-width=169
+col-5-width=1191
+col-2-width=105
+col-6-width=0
+col-6-visible=true
+col-5-visible=true
+sort-order=0
+
 [org/gnome/software]
 first-run=false
 show-nonfree-prompt=false
 upgrade-notification-timestamp=int64 1527728410
-check-timestamp=int64 1532391267
+check-timestamp=int64 1533098390
 install-timestamp=int64 1526447489
 
 [org/gtk/settings/file-chooser]

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+sudo dnf install -y fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
+sudo dnf install -y google-chrome-stable
+sudo dnf remove -y firefox
+
 sudo dnf install -y redhat-rpm-config
 sudo dnf install -y python3-devel
 sudo dnf install -y emacs-nox
