@@ -95,7 +95,6 @@
 (setq-default c-basic-offset 2)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
-(setq-default python-indent-offset 2)
 
 ;;mode line
 (setq sml/name-width 31)
@@ -160,6 +159,8 @@
 (add-to-list 'auto-mode-alist '("\\.pxd\\'" . python-mode))
 ;(require 'py-autopep8)
 ;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+(setq python-indent-offset 4)
+(setq python-indent-guess-indent-offset nil)
 
 ;;column bondary
 (require 'fill-column-indicator)
