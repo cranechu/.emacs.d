@@ -199,6 +199,9 @@
 (key-chord-define-global "j3" 'split-window-horizontally)
 (key-chord-define-global "j0" 'delete-windows)
 
+;; dired
+(setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince&")))
+
 ;;helm
 (require 'helm)
 (require 'helm-config)
