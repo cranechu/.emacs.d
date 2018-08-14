@@ -225,7 +225,6 @@
     (setq helm-candidate-number-limit 100)
     (setq helm-idle-delay 0.0           ; this actually updates things   
           helm-input-idle-delay 0.01    ; reeeelatively quickly.
-          helm-autoresize-mode                  1
           helm-split-window-in-side-p           t
           helm-move-to-line-cycle-in-source     t
           helm-ff-search-library-in-sexp        t
@@ -239,7 +238,9 @@
           helm-quick-update                     t
           helm-M-x-requires-pattern nil
           helm-ff-skip-boring-files t)
-    (helm-mode 1))
+    (helm-mode 1)
+    (helm-autoresize-mode 1)
+    (define-key helm-find-files-map "\t" 'helm-execute-persistent-action))
   :bind (("C-o" . helm-M-x)
          ("M-y" . helm-show-kill-ring)
          ("C-c h" . helm-command-prefix)
