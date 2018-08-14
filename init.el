@@ -8,14 +8,18 @@
   (setq gc-cons-threshold 800000))
 (setq file-name-handler-alist nil)
 
-;;package
+;; package
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;; benchmark-init
 (require 'benchmark-init)
 ;; To disable collection of benchmark data after init is done.
 (add-hook 'after-init-hook 'benchmark-init/deactivate)
+
+;; use-package
+(require 'use-package)
 
 ;;suspend instead of exit
 (defun my/save-buffer-suspend-terminal ()
@@ -133,11 +137,11 @@
 	     'comint-postoutput-scroll-to-bottom)
 
 ;; yasnippet
-;(add-hook 'term-mode-hook (lambda()
-;			    (yas-minor-mode -1)))
-;(require 'yasnippet)
-;(add-to-list 'yas/snippet-dirs "snippets")
-;(yas/global-mode 1)
+(add-hook 'term-mode-hook (lambda()
+			    (yas-minor-mode -1)))
+(require 'yasnippet)
+(add-to-list 'yas/snippet-dirs "snippets")
+(yas/global-mode 1)
 
 ;; auto complete
 (require 'auto-complete)
@@ -206,32 +210,43 @@
 ;; dired
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince&")))
 
-;;helm
-(require 'helm)
-(require 'helm-config)
-(helm-mode 1)
-(helm-autoresize-mode 1)
-(global-set-key (kbd "C-o") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
-(global-set-key (kbd "C-j") 'helm-semantic)
-(global-set-key (kbd "C-x C-b") 'switch-to-buffer)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
-(define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
-(setq helm-split-window-in-side-p           t
-      helm-move-to-line-cycle-in-source     t
-      helm-ff-search-library-in-sexp        t
-      helm-M-x-fuzzy-match                  t
-      helm-buffers-fuzzy-matching           t
-      helm-locate-fuzzy-match               t
-      helm-recentf-fuzzy-match              t
-      helm-scroll-amount                    8
-      helm-ff-file-name-history-use-recentf t)
-(provide 'init-helm)
+;; helm
+;; 
+;; (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
+;; (setq
 
-;;delete trailing spaces
-;(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;; (provide 'init-helm)
+
+(use-package helm
+  :config
+  (progn
+    (require 'helm-config)
+    (setq helm-candidate-number-limit 100)
+    (setq helm-idle-delay 0.0           ; this actually updates things   
+          helm-input-idle-delay 0.01    ; reeeelatively quickly.
+          helm-autoresize-mode                  1
+          helm-split-window-in-side-p           t
+          helm-move-to-line-cycle-in-source     t
+          helm-ff-search-library-in-sexp        t
+          helm-M-x-fuzzy-match                  t
+          helm-buffers-fuzzy-matching           t
+          helm-locate-fuzzy-match               t
+          helm-recentf-fuzzy-match              t
+          helm-scroll-amount                    8
+          helm-ff-file-name-history-use-recentf t
+          helm-yas-display-key-on-candidate     t
+          helm-quick-update                     t
+          helm-M-x-requires-pattern nil
+          helm-ff-skip-boring-files t)
+    (helm-mode 1))
+  :bind (("C-o" . helm-M-x)
+         ("M-y" . helm-show-kill-ring)
+         ("C-c h" . helm-command-prefix)
+         ("C-j" . helm-semantic)
+         ("C-x C-b" . switch-to-buffer)
+         ("C-x C-f" . helm-find-files)
+         ("C-h SPC" . helm-all-mark-rings)
+         ("C-x o" . helm-occur)))
 
 ;; no startup buffer
 (setq inhibit-startup-message t)
@@ -239,9 +254,9 @@
 ;; no backup file ~
 (setq make-backup-files nil)
 
-;;debug
-;(require 'realgud)
-;(require 'realgud-gdb)
+;; for debug, load-library before using it
+;;(require 'realgud)
+;;(require 'realgud-gdb)
 
 ;; automatically save buffers associated with files on buffer switch
 ;; and on windows switch
@@ -304,7 +319,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; org
-;(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 ;;ace-jump-mode
 (require 'ace-jump-mode)
@@ -328,7 +343,7 @@
 (beacon-mode 1)
 
 ;; start to last buffer
-(desktop-save-mode 1)
+;(desktop-save-mode 1)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)
