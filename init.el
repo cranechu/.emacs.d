@@ -8,6 +8,15 @@
   (setq gc-cons-threshold 800000))
 (setq file-name-handler-alist nil)
 
+;;package
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
+(package-initialize)
+
+(require 'benchmark-init)
+;; To disable collection of benchmark data after init is done.
+(add-hook 'after-init-hook 'benchmark-init/deactivate)
+
 ;;suspend instead of exit
 (defun my/save-buffer-suspend-terminal ()
   (interactive)
@@ -33,11 +42,6 @@
 
 ;;load path
 (add-to-list 'load-path "~/.emacs.d/lisp")
-
-;;package
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
-(package-initialize)
 
 ;; color theme
 ;(load-theme 'manoj-dark t)
@@ -82,7 +86,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -129,11 +133,11 @@
 	     'comint-postoutput-scroll-to-bottom)
 
 ;; yasnippet
-(add-hook 'term-mode-hook (lambda()
-			    (yas-minor-mode -1)))
-(require 'yasnippet)
-(add-to-list 'yas/snippet-dirs "snippets")
-(yas/global-mode 1)
+;(add-hook 'term-mode-hook (lambda()
+;			    (yas-minor-mode -1)))
+;(require 'yasnippet)
+;(add-to-list 'yas/snippet-dirs "snippets")
+;(yas/global-mode 1)
 
 ;; auto complete
 (require 'auto-complete)
@@ -236,8 +240,8 @@
 (setq make-backup-files nil)
 
 ;;debug
-(require 'realgud)
-(require 'realgud-gdb)
+;(require 'realgud)
+;(require 'realgud-gdb)
 
 ;; automatically save buffers associated with files on buffer switch
 ;; and on windows switch
@@ -300,7 +304,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; org
-(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+;(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 ;;ace-jump-mode
 (require 'ace-jump-mode)
