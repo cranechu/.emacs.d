@@ -1,0 +1,55 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Tue Aug 14 10:12:48 2018
+;; Desktop file format version 208
+;; Emacs version 26.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23410 15008 325513 647000) (desktop . "208") "cranechu@localhost.localdomain" nil nil ((((minibuffer . t) (tty-type . "xterm-256color") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (foreground-color . "#f6f3e8") (menu-bar-lines . 0) (fullscreen . fullboth) (background-color . "#242424") (right-fringe . 0) (left-fringe . 0) (font . "tty") (height . 44) (width . 159) (modeline . t) (unsplittable) (frameset--id . "2E46-C852-BBC7-545D") (frameset--mini t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 3) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 159) (pixel-height . 43) (total-width . 159) (total-height . 43) (normal-height . 1.0) (normal-width . 1.0) (buffer ".gitignore<.emacs.d>" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars nil 0 t nil 0 nil) (vscroll . 0) (dedicated) (point . 66) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list '("~/ssdmeter/TAGS"))
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/.gitignore" "~/ssdmeter/.gitignore" "~/ssdmeter/README.md"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/cranechu/.emacs.d/.gitignore"
+  ".gitignore"
+  'fundamental-mode
+  '(override-global-mode yas-minor-mode smooth-scroll-mode beacon-mode helm-mode)
+  66
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 23410 15008 308555 205000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/.gitignore"
+  ".gitignore"
+  'fundamental-mode
+  '(override-global-mode yas-minor-mode smooth-scroll-mode beacon-mode helm-mode)
+  30
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 23410 14965 755536 401000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/README.md"
+  "README.md"
+  'markdown-mode
+  '(eldoc-mode override-global-mode yas-minor-mode smooth-scroll-mode beacon-mode helm-mode)
+  8824
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-display-time 23410 14945 195416 10000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring nil)))
+

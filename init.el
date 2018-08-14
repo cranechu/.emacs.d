@@ -2,6 +2,7 @@
 
 ;; fast startup
 (setq gc-cons-threshold 100000000)
+(setq gc-cons-percentage 0.6)
 (add-hook 'emacs-startup-hook 'my/set-gc-threshold)
 (defun my/set-gc-threshold ()
   "Reset `gc-cons-threshold' to its default value."
@@ -343,7 +344,7 @@
 (beacon-mode 1)
 
 ;; start to last buffer
-;(desktop-save-mode 1)
+(desktop-save-mode 1)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)
