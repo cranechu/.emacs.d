@@ -229,6 +229,7 @@
           helm-move-to-line-cycle-in-source     t
           helm-ff-search-library-in-sexp        t
           helm-M-x-fuzzy-match                  t
+          helm-semantic-fuzzy-match             t
           helm-buffers-fuzzy-matching           t
           helm-locate-fuzzy-match               t
           helm-recentf-fuzzy-match              t
@@ -240,15 +241,15 @@
           helm-ff-skip-boring-files t)
     (helm-mode 1)
     (helm-autoresize-mode 1)
-    (define-key helm-find-files-map "\t" 'helm-execute-persistent-action))
+    (define-key helm-find-files-map "C-j" 'helm-execute-persistent-action))
   :bind (("C-o" . helm-M-x)
          ("M-y" . helm-show-kill-ring)
          ("C-c h" . helm-command-prefix)
-         ("C-j" . helm-semantic)
-         ("C-x C-b" . switch-to-buffer)
+         ("C-j" . helm-occur)
+         ("C-M-j" . helm-locate)
+         ("C-x C-b" . helm-mini)
          ("C-x C-f" . helm-find-files)
-         ("C-h SPC" . helm-all-mark-rings)
-         ("C-x o" . helm-occur)))
+         ("C-h SPC" . helm-all-mark-rings)))
 
 ;; no startup buffer
 (setq inhibit-startup-message t)

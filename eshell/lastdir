@@ -1,5 +1,3 @@
-/home/cranechu/spdk/lib
-/home/cranechu/spdk/build/lib
 /home/cranechu/spdk/build
 /home/cranechu/spdk/examples/nvme/hello_world
 /home/cranechu/spdk/app
@@ -31,3 +29,5 @@
 /home/cranechu/ssdmeter/spdk/examples
 /home/cranechu/ssdmeter/spdk/examples/bdev
 /home/cranechu/ssdmeter/spdk/examples/bdev/hello_world
+/home/cranechu/ssdmeter/driver
+/home/cranechu/ssdmeter
