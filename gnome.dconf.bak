@@ -51,6 +51,7 @@ shortcut-toggles=false
 
 [org/gnome/shell/overrides]
 dynamic-workspaces=false
+workspaces-only-on-primary=true
 
 [org/gnome/baobab/ui]
 window-state=87168
@@ -82,7 +83,7 @@ target-currency=''
 show-zeroes=false
 source-currency=''
 show-thousands=false
-button-mode='programming'
+button-mode='basic'
 target-units='radian'
 word-size=64
 window-position=(26, 23)
@@ -97,6 +98,12 @@ size=(870, 690)
 state=87168
 panel-id='stopwatch'
 
+[org/gnome/gnome-screenshot]
+include-pointer=false
+include-border=true
+border-effect='none'
+last-save-directory='file:///home/cranechu'
+
 [org/gnome/nautilus/preferences]
 search-view='list-view'
 default-folder-viewer='list-view'
@@ -106,20 +113,13 @@ search-filter-time-type='last_modified'
 sidebar-width=351
 geometry='1101x597+26+23'
 maximized=false
-initial-size=(890, 532)
-
-[org/gnome/power-manager]
-info-history-type='charge'
-info-stats-type='charge-data'
-info-last-device='wakeups'
-info-page-number=3
-info-history-time=21600
+initial-size=(890, 530)
 
 [org/gnome/evince]
 document-directory=@ms 'file:///home/cranechu/download'
 
 [org/gnome/evince/default]
-window-ratio=(3.1370370370370368, 1.1583333333333334)
+window-ratio=(3.1372549019607843, 1.2967171717171717)
 
 [org/gnome/file-roller/listing]
 sort-method='name'
@@ -224,6 +224,12 @@ two-finger-scrolling-enabled=true
 tap-to-click=true
 send-events='enabled'
 
+[org/gnome/desktop/peripherals/touchscreens/2386:350e]
+display=['AUO', '0x133d', '0x00000000']
+
+[org/gnome/desktop/peripherals/touchscreens/04f3:20d0]
+display=['SHP', '0x144a', '0x00000000']
+
 [org/gnome/desktop/calendar]
 show-weekdate=true
 
@@ -245,7 +251,7 @@ action-right-click-titlebar='menu'
 button-layout='appmenu:minimize,maximize,close'
 theme='Adwaita'
 action-double-click-titlebar='toggle-maximize'
-num-workspaces=3
+num-workspaces=1
 titlebar-font='Cantarell Bold 15'
 
 [org/gnome/desktop/wm/keybindings]
@@ -267,14 +273,27 @@ automatic-timezone=true
 xkb-options=['ctrl:swapcaps']
 per-window=true
 current=uint32 0
-mru-sources=[('ibus', 'libpinyin'), ('xkb', 'us')]
+mru-sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='network'
 
-[org/gnome/system/location]
-enabled=false
+[org/gnome/gitg/preferences/history]
+reference-sort-order='last-activity'
+
+[org/gnome/gitg/preferences/interface]
+enable-monitoring=true
+
+[org/gnome/gitg/state/history]
+paned-sidebar-position=200
+
+[org/gnome/gitg/state/commit]
+paned-sidebar-position=200
+
+[org/gnome/gitg/state/window]
+size=(702, 605)
+state=43908
 
 [org/gnome/epiphany]
 search-engines=[('Search the Web', 'https://duckduckgo.com/?q=%s&t=epiphany', ''), ('DuckDuckGo', 'https://duckduckgo.com/?q=%s&t=epiphany', '!ddg'), ('Bing', 'https://www.bing.com/search?q=%s', '!b'), ('Google', 'https://www.google.com/search?q=%s', '!g')]
@@ -313,6 +332,13 @@ use-background-color=true
 
 [org/gnome/gnome-session]
 auto-save-session-one-shot=false
+
+[org/gnome/power-manager]
+info-history-type='charge'
+info-stats-type='charge-data'
+info-last-device='wakeups'
+info-page-number=3
+info-history-time=21600
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 foreground-color='rgb(170,170,170)'
@@ -385,8 +411,11 @@ sort-order=0
 first-run=false
 show-nonfree-prompt=false
 upgrade-notification-timestamp=int64 1527728410
-check-timestamp=int64 1533098390
+check-timestamp=int64 7856581528
 install-timestamp=int64 1526447489
+
+[org/gnome/system/location]
+enabled=false
 
 [org/gtk/settings/file-chooser]
 sort-column='name'

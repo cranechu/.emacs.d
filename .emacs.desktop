@@ -2,80 +2,212 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Aug 22 09:30:50 2018
+;; Created Wed Sep  5 01:03:32 2018
 ;; Desktop file format version 208
 ;; Emacs version 26.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (23420 48330 123558 68000) (desktop . "208") "cranechu@localhost.localdomain" nil nil ((((minibuffer . t) (tty-type . "xterm-256color") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (foreground-color . "#f6f3e8") (menu-bar-lines . 0) (fullscreen . fullboth) (background-color . "#242424") (right-fringe . 0) (left-fringe . 0) (font . "tty") (height . 44) (width . 159) (modeline . t) (unsplittable) (frameset--id . "D892-DF6A-F57F-9652") (frameset--mini t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 7) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 3) (min-pixel-width-ignore . 7) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 159) (pixel-height . 43) (total-width . 159) (total-height . 43) (normal-height . 1.0) (normal-width . 1.0) (buffer "driver.c" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 5) (scroll-bars nil 0 t nil 0 nil) (vscroll . 0) (dedicated) (point . 11239) (start . 10230))))])
+(setq desktop-saved-frameset [frameset 1 (23438 47844 73246 915000) (desktop . "208") "cranechu@localhost.localdomain" nil nil ((((minibuffer . t) (tty-type . "xterm-256color") (tty . "/dev/tty") (display-type . color) (background-mode . dark) (foreground-color . "#f6f3e8") (menu-bar-lines . 0) (fullscreen . fullboth) (background-color . "#242424") (right-fringe . 0) (left-fringe . 0) (font . "tty") (height . 44) (width . 159) (modeline . t) (unsplittable) (frameset--id . "1E76-E6F3-1987-9C50") (frameset--mini t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 7) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 3) (min-pixel-width-ignore . 7) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 159) (pixel-height . 43) (total-width . 159) (total-height . 43) (normal-height . 1.0) (normal-width . 1.0) (buffer "driver_test.py" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins 5) (scroll-bars nil 0 t nil 0 nil) (vscroll . 0) (dedicated) (point . 11279) (start . 11201))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name "/home/cranechu/ssdmeter/TAGS")
 (setq tags-table-list '("~/ssdmeter/TAGS"))
-(setq search-ring '("iowork" "ioworker" "logging" "qpair" "C-j" "l" "init" "inititme" "helm"))
+(setq search-ring '("mark.skip" "gctx" "io_flags" "ioworker" "nvme0n1" "iowork" "ctrlr" "ns_cmd_" "_ctrlr" "iow" "iowork" "///////" "iowork" "ioworker" "logging" "qpair"))
 (setq regexp-search-ring nil)
 (setq register-alist (list (list :zoom-window "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk))))
-(setq file-name-history '("~/ssdmeter/driver/driver.c" "~/.emacs.d/init.el" "~/ssdmeter/spdk/dpdk/drivers/net/i40e/base/i40e_register.h" "~/ssdmeter/driver/driver_test.py" "~/ssdmeter/scripts/4_data_structures/06_completion_queue_entry_test.py" "~/ssdmeter/driver/driver_wrap.pyx" "~/ssdmeter/driver/Makefile" "~/ssdmeter/scripts/2_pcie_registers/2_pci_capabilites_test.py" "~/.emacs.d/.gitignore" "~/ssdmeter/.gitignore" "~/ssdmeter/README.md"))
+(setq file-name-history '("~/ssdmeter/scripts/4_data_structures/11_command_arbitration_test.py" "~/.emacs.d/gnome.dconf.bak" "~/ssdmeter/README.md" "~/ssdmeter/driver/driver.c" "~/ssdmeter/driver/debug_test.py" "~/ssdmeter/conftest.py" "~/ssdmeter/Makefile" "~/ssdmeter/scripts/2_pcie_registers/2_pci_capabilites_test.py" "~/ssdmeter/driver/driver_wrap.pyx" "~/ssdmeter/driver/driver.h" "~/ssdmeter/driver/cdriver.pxd" "~/ssdmeter/driver/driver_test.py" "~/ssdmeter/driver/driver_mini_test.py" "~/.emacs.d/init.el" "~/ssdmeter/spdk/dpdk/drivers/net/i40e/base/i40e_register.h" "~/ssdmeter/scripts/4_data_structures/06_completion_queue_entry_test.py" "~/ssdmeter/driver/Makefile" "~/.emacs.d/.gitignore" "~/ssdmeter/.gitignore"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
-(desktop-create-buffer 208
-  "/home/cranechu/ssdmeter/driver/driver.c"
-  "driver.c"
-  'c-mode
-  '(abbrev-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
-  11239
-  '(11239 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-display-time 23420 48330 49145 194000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
-  '((mark-ring (11239 3435 14598 1))))
-
-(desktop-create-buffer 208
-  nil
-  "driver"
-  'dired-mode
-  '(override-global-mode yas-minor-mode smooth-scroll-mode beacon-mode helm-mode)
-  446
-  '(nil nil)
-  t
-  '("/home/cranechu/ssdmeter/driver/")
-  '((buffer-display-time 23420 48264 101621 425000))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/cranechu/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode)
-  9299
-  '(9527 nil)
-  nil
-  nil
-  '((buffer-display-time 23420 48264 71852 410000) (buffer-file-coding-system . prefer-utf-8-unix) (fill-column . 80))
-  '((mark-ring (9411 9411 1894 1894 29))))
-
 (desktop-create-buffer 208
   "/home/cranechu/ssdmeter/driver/driver_test.py"
   "driver_test.py"
   'python-mode
   '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
-  917
-  '(9184 nil)
+  11279
+  '(11275 nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23420 48106 998690 143000) (buffer-file-coding-system . undecided-unix))
-  '((mark-ring (7934 8003 7961 7952 7742 7829 7777 7768 7462 7648 7599 7590 7544 7535 7251 7242))))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 47698 855810 366000) (buffer-file-coding-system . undecided-unix) (fill-column . 88))
+  '((mark-ring (11856 11856 26264 26264 24686 22745 22664 23505 22698 14513 14513 21107 15043 15043 15205 15122))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/driver/driver.c"
+  "driver.c"
+  'c-mode
+  '(abbrev-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  19628
+  '(14887 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 23438 47558 583160 808000) (buffer-file-coding-system . undecided-unix) (fill-column . 80) (truncate-lines . t))
+  '((mark-ring (14887 21392 16151 16151 19953 14914 14914 14887 19574 19574 21981 326 17447 17447 17872 21601))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/driver/debug_test.py"
+  "debug_test.py"
+  'python-mode
+  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  216
+  '(127 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 46859 172298 119000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (127 127))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/driver/driver.h"
+  "driver.h"
+  'c-mode
+  '(abbrev-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  484
+  '(303 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 23438 46189 263526 543000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring (303 1 610 379 379 4311 505 484 460 4294 611 190))))
 
 (desktop-create-buffer 208
   "/home/cranechu/ssdmeter/scripts/4_data_structures/11_command_arbitration_test.py"
   "11_command_arbitration_test.py"
   'python-mode
   '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
-  1
+  575
+  '(579 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 45805 568613 566000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (206 206 206))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/driver/driver_wrap.pyx"
+  "driver_wrap.pyx"
+  'python-mode
+  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  24544
+  '(24665 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 43018 556207 327000) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (24665 23064 17062 24256 24173 24173 17441 17441 20897 3363 25087 24464 16744 15388 5630 5630))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/driver/driver_mini_test.py"
+  "driver_mini_test.py"
+  'python-mode
+  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  316
+  '(194 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 42712 685692 918000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (69))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/driver/cdriver.pxd"
+  "cdriver.pxd"
+  'python-mode
+  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  363
+  '(3624 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 42596 207547 757000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (580 551))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/spdk/lib/nvme/nvme_qpair.c"
+  "nvme_qpair.c"
+  'c-mode
+  '(abbrev-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode)
+  15681
   '(nil nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23420 45611 858714 721000) (buffer-file-coding-system . undecided-unix))
+  '((indent-tabs-mode) (buffer-display-time 23438 29374 600515 349000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
   '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/conftest.py"
+  "conftest.py"
+  'python-mode
+  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode)
+  494
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 22319 82686 539000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/spdk/lib/nvme/nvme_ctrlr_cmd.c"
+  "nvme_ctrlr_cmd.c"
+  'c-mode
+  '(abbrev-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode)
+  2100
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 23438 14513 781012 393000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/scripts/2_pcie_registers/2_pci_capabilites_test.py"
+  "2_pci_capabilites_test.py"
+  'python-mode
+  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  1154
+  '(546 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23438 11591 598626 775000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (1 1))))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/Makefile"
+  "Makefile"
+  'makefile-gmake-mode
+  '(override-global-mode yas-minor-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  655
+  '(135 nil)
+  nil
+  nil
+  '((indent-tabs-mode . t) (buffer-display-time 23438 11180 443281 927000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/spdk/include/spdk/nvme.h"
+  "nvme.h"
+  'c-mode
+  '(abbrev-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode)
+  22339
+  '(22268 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 23437 65437 900678 126000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/ssdmeter/spdk/lib/nvme/nvme_internal.h"
+  "nvme_internal.h"
+  'c-mode
+  '(abbrev-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode)
+  10379
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 23437 63051 959388 84000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/cranechu/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
+  9299
+  '(9527 nil)
+  nil
+  nil
+  '((buffer-display-time 23437 58623 900590 938000) (buffer-file-coding-system . prefer-utf-8-unix) (fill-column . 80))
+  '((mark-ring (9411 9411 1894 1894 29))))
 
 (desktop-create-buffer 208
   nil
@@ -86,7 +218,7 @@
   '(nil nil)
   t
   '("/home/cranechu/ssdmeter/scripts/4_data_structures/")
-  '((buffer-display-time 23420 45364 360172 942000))
+  '((buffer-display-time 23437 55725 265281 740000))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -98,7 +230,7 @@
   '(nil nil)
   t
   '("/home/cranechu/ssdmeter/scripts/")
-  '((buffer-display-time 23420 45361 20041 634000))
+  '((buffer-display-time 23437 55722 39019 766000))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -110,20 +242,8 @@
   '(nil nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-display-time 23420 45094 407557 231000) (buffer-file-coding-system . undecided-unix))
+  '((indent-tabs-mode) (buffer-display-time 23437 55455 693828 115000) (buffer-file-coding-system . undecided-unix))
   '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/cranechu/ssdmeter/driver/driver_wrap.pyx"
-  "driver_wrap.pyx"
-  'python-mode
-  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
-  16828
-  '(16657 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23420 44777 23757 523000) (buffer-file-coding-system . utf-8-unix))
-  '((mark-ring (16657 1))))
 
 (desktop-create-buffer 208
   "/home/cranechu/ssdmeter/scripts/5_admin_command_set/01_abort_command_test.py"
@@ -134,7 +254,7 @@
   '(52 nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23420 44006 468684 934000) (buffer-file-coding-system . undecided-unix))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23437 54368 233741 833000) (buffer-file-coding-system . undecided-unix))
   '((mark-ring (282 52))))
 
 (desktop-create-buffer 208
@@ -146,7 +266,7 @@
   '(nil nil)
   t
   '("/home/cranechu/ssdmeter/scripts/5_admin_command_set/")
-  '((buffer-display-time 23420 43967 644885 11000))
+  '((buffer-display-time 23437 54329 532291 208000))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -158,7 +278,7 @@
   '(nil nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23420 43965 751428 793000) (buffer-file-coding-system . undecided-unix))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23437 54328 189074 159000) (buffer-file-coding-system . undecided-unix))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -170,19 +290,7 @@
   '(nil nil)
   t
   '("/home/cranechu/ssdmeter/scripts/1_introduction/")
-  '((buffer-display-time 23420 43852 25554 363000))
-  '((mark-ring nil)))
-
-(desktop-create-buffer 208
-  "/home/cranechu/ssdmeter/Makefile"
-  "Makefile"
-  'makefile-gmake-mode
-  '(override-global-mode yas-minor-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
-  286
-  '(135 nil)
-  nil
-  nil
-  '((indent-tabs-mode . t) (buffer-display-time 23420 42639 496990 640000) (buffer-file-coding-system . undecided-unix))
+  '((buffer-display-time 23437 54214 574345 693000))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -194,7 +302,7 @@
   '(nil nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-display-time 23420 41968 624411 784000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((indent-tabs-mode) (buffer-display-time 23437 52332 399136 27000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
@@ -206,18 +314,18 @@
   '(1930 nil)
   nil
   nil
-  '((indent-tabs-mode . t) (buffer-display-time 23420 41221 555781 434000) (buffer-file-coding-system . undecided-unix))
+  '((indent-tabs-mode . t) (buffer-display-time 23437 51585 721334 444000) (buffer-file-coding-system . undecided-unix))
   '((mark-ring (1991 1 1))))
 
 (desktop-create-buffer 208
-  "/home/cranechu/ssdmeter/scripts/2_pcie_registers/2_pci_capabilites_test.py"
-  "2_pci_capabilites_test.py"
-  'python-mode
-  '(eldoc-mode override-global-mode yas-minor-mode auto-complete-mode elpy-mode company-mode flymake-mode highlight-indentation-mode smooth-scroll-mode beacon-mode rainbow-delimiters-mode follow-mode linum-mode helm-mode auto-revert-mode)
-  504
-  '(546 nil)
   nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 23420 40765 927376 375000) (buffer-file-coding-system . undecided-unix))
-  '((mark-ring (1 1))))
+  "driver"
+  'dired-mode
+  '(override-global-mode yas-minor-mode smooth-scroll-mode beacon-mode helm-mode)
+  915
+  '(nil nil)
+  t
+  '("/home/cranechu/ssdmeter/driver/")
+  '((buffer-display-time 23438 22240 456407 948000))
+  '((mark-ring nil)))
 

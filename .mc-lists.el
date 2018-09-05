@@ -3,6 +3,9 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        c-electric-delete-forward
+        c-electric-paren
+        c-electric-semi&comma
         c-indent-line-or-region
         electric-newline-and-maybe-indent
         helm-M-x
