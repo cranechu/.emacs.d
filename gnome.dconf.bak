@@ -330,6 +330,9 @@ enable-site-specific-quirks=true
 background-color='rgb(0,0,0)'
 use-background-color=true
 
+[org/gnome/eog/ui]
+image-gallery=true
+
 [org/gnome/gnome-session]
 auto-save-session-one-shot=false
 
@@ -428,3 +431,9 @@ sort-directories-first=false
 date-format='regular'
 sort-order='ascending'
 location-mode='path-bar'
+
+[ca/desrt/dconf-editor]
+saved-view='/org/gnome/login-screen/'
+window-height=600
+window-width=800
+window-is-maximized=false
