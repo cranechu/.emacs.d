@@ -11,6 +11,7 @@ emacs-nox
 fedora-workstation-repositories
 fio
 gcc-c++
+gitg
 gnome-tweaks
 google-chrome-stable
 graphviz
@@ -28,6 +29,7 @@ numactl-devel
 nvme-cli
 openssl-devel
 python2-configshell
+python2-cpuinfo
 python2-pep8
 python2-pexpect
 python3-Cython
