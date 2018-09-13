@@ -23,12 +23,12 @@
 (require 'use-package)
 
 ;;suspend instead of exit
-(defun my/save-buffer-suspend-terminal ()
-  (interactive)
-  (save-buffer)
-  (save-some-buffers)
-  (suspend-frame))
-(global-set-key (kbd "C-x C-c") 'my/save-buffer-suspend-terminal)
+;; (defun my/save-buffer-suspend-terminal ()
+;;   (interactive)
+;;   (save-buffer)
+;;   (save-some-buffers)
+;;   (suspend-frame))
+;; (global-set-key (kbd "C-x C-c") 'my/save-buffer-suspend-terminal)
 
 ;; enable visual feedback on selections
 (setq transient-mark-mode t)

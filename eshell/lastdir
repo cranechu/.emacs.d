@@ -1,5 +1,3 @@
-/home/cranechu/spdk/build
-/home/cranechu/spdk/examples/nvme/hello_world
 /home/cranechu/spdk/app
 /home/cranechu/spdk/app/iscsi_tgt
 /home/cranechu/spdk/examples/nvme/hotplug
@@ -30,4 +28,6 @@
 /home/cranechu/ssdmeter/spdk/examples/bdev
 /home/cranechu/ssdmeter/spdk/examples/bdev/hello_world
 /home/cranechu/ssdmeter/driver
+~/ssdmeter/driver
 /home/cranechu/ssdmeter
+/home/cranechu/ssdmeter/driver
