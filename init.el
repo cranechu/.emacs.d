@@ -154,7 +154,7 @@
 
 ;; multiple-cursors
 (require 'multiple-cursors)
-(global-set-key (kbd "M-S-<up>") 'mc/mark-previous-like-this)
+(global-set-key (kbd "M-S-<up>") 'mc/unmark-next-like-this)
 (global-set-key (kbd "M-S-<down>") 'mc/mark-next-like-this)
 
 ;;all code
@@ -275,6 +275,9 @@
   (when buffer-file-name (save-buffer)))
 (defadvice windmove-right (before other-window-now activate)
   (when buffer-file-name (save-buffer)))
+
+;; save all buffer when emacs lost focus
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
 ;;debug message
 (setq debug-on-error t)

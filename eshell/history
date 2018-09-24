@@ -1,108 +1,3 @@
-make clean
-ls
-make
-ls
-cd 
-cd spdk/
-ls
-make
-ls
-./examples/nvme/test/test 
-./examples/nvme/test/test 
-ls ./examples/nvme/test
-./examples/nvme/test/test 
-make[3]: Nothing to be done for 'all'.
-make
-make
-pwd
-pwd
-make
-make
-./examples/nvme/test/test 
-ls
-cd scripts/
-ls
-./setup.sh 
-su
-ls
-sudo ./setup.sh 
-cd ..
-ls
-sudo ./examples/nvme/test/test 
-make
-sudo ./examples/nvme/test/test 
-sudo ./examples/nvme/test/test 
-sudo ./examples/nvme/test/test 
-sudo ./examples/nvme/test/test 
-make
-sudo ./examples/nvme/test/test 
-sudo nemiver ./examples/nvme/test/test 
-sudo nemiver
-su
-ls
-ls
-make
-sudo ./examples/nvme/test/test 
-make
-make
-sudo ./examples/nvme/hello_world/hello_world
-make
-sudo ./examples/nvme/hello_world/hello_world
-make
-sudo ./examples/nvme/hello_world/hello_world
-make
-sudo ./examples/nvme/hello_world/hello_world
-cd
-cd spdk/
-ls
-make
-sudo examples/nvme/hello_world/hello_world
-make
-sudo examples/nvme/hello_world/hello_world
-sudo examples/nvme/hello_world/hello_world
-sudo examples/nvme/hello_world/hello_world
-make
-sudo examples/nvme/hello_world/hello_world
-make
-sudo examples/nvme/hello_world/hello_world
-make
-sudo examples/nvme/hello_world/hello_world
-cd
-cd spdk/
-make
-sudo ./examples/nvme/test/test
-up
-up
-ipython3
-exit
-cd ..
-cd ..
-cd rocksdb/
-make db_bench SPDK_DIR=/root/spdk
-exit
-ipython
-python
-history | grep vstart
-history
-cd ..
-ls
-cd hello_world/
-ls
-sudo ./hello_world.d
-ls
-make
-ls
-sudo ./hello_world
-make
-sudo ./hello_world
-cd ..
-cd ..
-cd bdev
-cd hello_world/
-ls
-sudo ./hello_bdev
-sudo ./hello_bdev
-ls
 cd ..
 make test
 ls
@@ -126,3 +21,108 @@ sudo ./spdk/scripts/setup.sh  reset
 sudo HUGEMEM=10000 ./spdk/scripts/setup.sh  
 cd driver/
 sudo python3
+cd ..
+sudo ./spdk/scripts/setup.sh 
+sudo pytest
+sudo python3 -m pytest driver/driver_test.py::test_firmware_commit
+sudo python3 -m pytest driver/driver_test.py::test_firmware_commit --pciaddr=01:00.0
+sudo python3 -m pytest driver/driver_test.py::test_format_basic --pciaddr=01:00.0
+sudo python3 -m pytest driver/driver_test.py::test_format_basic --pciaddr=01:00.0
+exit
+ls
+cd ..
+cd ..
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+cd scripts/make
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+ls
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+cd
+cd ssdmeter/
+sudo ./spdk/scripts/setup.sh reset
+sudo HUGEMEM=10000 ./spdk/scripts/setup.sh 
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+cd
+cd ssdmeter/
+sudo python3 -m scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m ./scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m scripts/5_admin_command_set/01_abort_command_test.py --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py  --pciaddr=01:00.0 -s
+make setup
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+cd
+cd ssdmeter/
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+cd
+cd ssdmeter/
+make
+make
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo ./spdk/scripts/setup.sh  reset
+make setup 
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+cd
+cd ssdmeter/
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_io_commands  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py  --pciaddr=01:00.0 -s
+make
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+make
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+make
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+make
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
+sudo python3 -m pytest scripts/5_admin_command_set/01_abort_command_test.py::test_abort_exceed_limit  --pciaddr=01:00.0 -s
