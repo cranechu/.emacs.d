@@ -3,6 +3,13 @@ window-position=[26, 23]
 window-maximized=false
 window-size=[786, 447]
 
+[org/gnome/software]
+first-run=false
+show-nonfree-prompt=false
+upgrade-notification-timestamp=int64 1527728410
+check-timestamp=int64 7856581528
+install-timestamp=int64 1526447489
+
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='nothing'
 idle-dim=false
@@ -20,7 +27,7 @@ antialiasing='rgba'
 hinting='none'
 
 [org/gnome/settings-daemon/peripherals/keyboard]
-numlock-state='on'
+numlock-state='off'
 
 [org/gnome/settings-daemon/peripherals/mouse]
 locate-pointer=true
@@ -40,6 +47,13 @@ switchmethod='xinput'
 autoswitch-touchpad=true
 first-time=false
 touchpad-enabled=true
+
+[org/gnome/shell/extensions/cpufreq]
+max-freq-pstate=100
+turbo-boost=true
+save-settings=true
+governor='performance'
+min-freq-pstate=0
 
 [org/gnome/shell/extensions/hidetopbar]
 mouse-triggers-overview=false
@@ -102,6 +116,7 @@ panel-id='stopwatch'
 include-pointer=false
 include-border=true
 border-effect='none'
+delay=0
 last-save-directory='file:///home/cranechu'
 
 [org/gnome/nautilus/preferences]
@@ -113,7 +128,7 @@ search-filter-time-type='last_modified'
 sidebar-width=351
 geometry='1101x597+26+23'
 maximized=false
-initial-size=(890, 530)
+initial-size=(890, 528)
 
 [org/gnome/evince]
 document-directory=@ms 'file:///home/cranechu/download'
@@ -123,7 +138,7 @@ window-ratio=(3.1372549019607843, 1.2967171717171717)
 
 [org/gnome/file-roller/listing]
 sort-method='name'
-name-column-width=250
+name-column-width=381
 sort-type='ascending'
 list-mode='as-folder'
 show-path=false
@@ -154,13 +169,13 @@ vc-status-filters=['flatten', 'modified']
 text-scaling-factor=1.0
 gtk-key-theme='Emacs'
 cursor-size=48
-font-name='Cantarell 15'
-document-font-name='Sans 15'
+font-name='Cantarell 16'
+document-font-name='Sans 16'
 show-battery-percentage=true
 gtk-im-module='ibus'
 toolkit-accessibility=false
 icon-theme='Adwaita'
-monospace-font-name='Monospace 15'
+monospace-font-name='Monospace 16'
 enable-animations=true
 gtk-theme='Adwaita'
 clock-show-date=true
@@ -178,6 +193,9 @@ application-id='org.gnome.Nautilus.desktop'
 
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/jetbrains-pycharm-ce]
+application-id='jetbrains-pycharm-ce.desktop'
 
 [org/gnome/desktop/notifications/application/abrt-applet]
 application-id='abrt-applet.desktop'
@@ -252,7 +270,7 @@ button-layout='appmenu:minimize,maximize,close'
 theme='Adwaita'
 action-double-click-titlebar='toggle-maximize'
 num-workspaces=1
-titlebar-font='Cantarell Bold 15'
+titlebar-font='Cantarell Bold 16'
 
 [org/gnome/desktop/wm/keybindings]
 show-desktop=['<Super>d']
@@ -360,9 +378,46 @@ scrollbar-policy='never'
 schema-version=uint32 3
 default-show-menubar=false
 
-[org/gnome/nm-applet/eap/9809c2a2-77e6-4317-94d1-1978fc758999]
-ignore-phase2-ca-cert=false
-ignore-ca-cert=false
+[org/gnome/evolution/mail]
+paned-size=1150159
+junk-check-incoming=true
+browser-close-on-reply-policy='ask'
+headers=['<?xml version="1.0"?>\n<header name="From" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="Reply-To" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="To" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="Cc" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="Bcc" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="Subject" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="Date" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="Newsgroups" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="Face" enabled=""/>\n', '<?xml version="1.0"?>\n<header name="x-evolution-mailer"/>\n']
+reply-style-name='quoted'
+forward-style-name='attached'
+image-loading-policy='never'
+search-gravatar-for-photo=false
+
+[org/gnome/evolution/calendar]
+work-day-thursday=true
+work-day-sunday=false
+prefer-new-item=''
+work-day-saturday=false
+work-day-tuesday=true
+week-start-day-name='monday'
+work-day-wednesday=true
+work-day-monday=true
+work-day-friday=true
+
+[org/gnome/evolution/shell]
+menubar-visible=true
+folder-bar-width=293
+sidebar-visible=true
+default-component-id='mail'
+buttons-visible=true
+attachment-view=0
+toolbar-visible=true
+statusbar-visible=true
+
+[org/gnome/evolution/shell/window]
+width=1113
+maximized=false
+height=480
+x=26
+y=23
+
+[org/gnome/evolution]
+version='3.28.5'
 
 [org/gnome/Totem]
 subtitle-encoding='UTF-8'
@@ -410,12 +465,9 @@ col-6-visible=true
 col-5-visible=true
 sort-order=0
 
-[org/gnome/software]
-first-run=false
-show-nonfree-prompt=false
-upgrade-notification-timestamp=int64 1527728410
-check-timestamp=int64 7856581528
-install-timestamp=int64 1526447489
+[org/gnome/nm-applet/eap/9809c2a2-77e6-4317-94d1-1978fc758999]
+ignore-phase2-ca-cert=false
+ignore-ca-cert=false
 
 [org/gnome/system/location]
 enabled=false

@@ -22,13 +22,8 @@
 ;; use-package
 (require 'use-package)
 
-;;suspend instead of exit
-;; (defun my/save-buffer-suspend-terminal ()
-;;   (interactive)
-;;   (save-buffer)
-;;   (save-some-buffers)
-;;   (suspend-frame))
-;; (global-set-key (kbd "C-x C-c") 'my/save-buffer-suspend-terminal)
+;; always save all buffers
+(global-set-key (kbd "C-x C-s") 'save-some-buffers)
 
 ;; enable visual feedback on selections
 (setq transient-mark-mode t)
@@ -349,7 +344,8 @@
 (beacon-mode 1)
 
 ;; start to last buffer
-(desktop-save-mode 1)
+(require 'psession)
+(psession-mode 1)
 
 ;; auto generated
 (setq x-select-enable-clipboard t)
