@@ -129,19 +129,23 @@
 (remove-hook 'comint-output-filter-functions
 	     'comint-postoutput-scroll-to-bottom)
 
+;; auto complete
+(require 'auto-complete-config)
+(ac-config-default)
+;(setq ac-auto-show-menu 0.0)
+;(global-auto-complete-mode t)
+(setq-default ac-sources '(
+                           ac-source-yasnippet
+                           ac-source-abbrev
+                           ac-source-dictionary
+                           ac-source-words-in-same-mode-buffers
+                           ))
+
 ;; yasnippet
 (add-hook 'term-mode-hook (lambda() (yas-minor-mode -1)))
-(require 'yasnippet)
+(require 'yasnippet-snippets)
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
-
-;; auto complete
-(require 'auto-complete)
-(require 'auto-complete-config)
-(setq ac-auto-show-menu 0.0)
-(global-auto-complete-mode t)
-(setq-default ac-sources '(ac-source-dictionary ac-source-words-in-same-mode-buffers))
-(ac-config-default)
 
 ;; multiple-cursors
 (require 'multiple-cursors)
