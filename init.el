@@ -22,9 +22,6 @@
 ;; use-package
 (require 'use-package)
 
-;; always save all buffers
-(global-set-key (kbd "C-x C-s") 'save-some-buffers)
-
 ;; enable visual feedback on selections
 (setq transient-mark-mode t)
 
@@ -86,7 +83,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -133,11 +130,10 @@
 	     'comint-postoutput-scroll-to-bottom)
 
 ;; yasnippet
-(add-hook 'term-mode-hook (lambda()
-			    (yas-minor-mode -1)))
+(add-hook 'term-mode-hook (lambda() (yas-minor-mode -1)))
 (require 'yasnippet)
-(add-to-list 'yas/snippet-dirs "snippets")
-(yas/global-mode 1)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 ;; auto complete
 (require 'auto-complete)
@@ -252,9 +248,9 @@
 ;; no backup file ~
 (setq make-backup-files nil)
 
-;; for debug, load-library before using it
-;;(require 'realgud)
-;;(require 'realgud-gdb)
+;; debugger
+;(require 'realgud)
+;(require 'realgud-gdb)
 
 ;; automatically save buffers associated with files on buffer switch
 ;; and on windows switch
@@ -262,13 +258,7 @@
   (when buffer-file-name (save-buffer)))
 (defadvice other-window (before other-window-now activate)
   (when buffer-file-name (save-buffer)))
-(defadvice windmove-up (before other-window-now activate)
-  (when buffer-file-name (save-buffer)))
-(defadvice windmove-down (before other-window-now activate)
-  (when buffer-file-name (save-buffer)))
-(defadvice windmove-left (before other-window-now activate)
-  (when buffer-file-name (save-buffer)))
-(defadvice windmove-right (before other-window-now activate)
+(defadvice ace-window (before other-window-now activate)
   (when buffer-file-name (save-buffer)))
 
 ;; save all buffer when emacs lost focus
