@@ -83,7 +83,7 @@
  '(fringe-mode 0 nil (fringe))
  '(package-selected-packages
    (quote
-    (yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (hl-todo yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -129,10 +129,28 @@
 (remove-hook 'comint-output-filter-functions
 	     'comint-postoutput-scroll-to-bottom)
 
+;;mark words
+(defun my/mark-word-backward (N)
+  (interactive "p")
+  (if (and
+       (not (eq last-command this-command))
+       (not (eq last-command 'my/mark-word)))
+      (set-mark (point)))
+  (backward-word N))
+(defun my/mark-word (N)
+  (interactive "p")
+  (if (and 
+       (not (eq last-command this-command))
+       (not (eq last-command 'my/mark-word-backward)))
+      (set-mark (point)))
+  (forward-word N))
+(global-set-key (kbd "M-k") 'my/mark-word)
+(global-set-key (kbd "C-M-k") 'my/mark-word-backward)
+
 ;; multiple-cursors
 (require 'multiple-cursors)
-(global-set-key (kbd "M-S-<up>") 'mc/unmark-next-like-this)
-(global-set-key (kbd "M-S-<down>") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
 
 ;;all code
 (add-hook 'prog-mode-hook 'follow-mode)
@@ -254,8 +272,6 @@
 (global-set-key (kbd "M-h") 'backward-kill-word)
 
 ;;window resize
-(global-set-key (kbd "<C-up>") 'shrink-window)
-(global-set-key (kbd "<C-down>") 'enlarge-window)
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 
@@ -313,15 +329,14 @@
               scroll-down-aggressively 0.01)
 (setq auto-window-vscroll nil)
 
-;; highlight cursor
+;; highlight something
 (beacon-mode 1)
+(global-hl-todo-mode 1)
 
 ;; auto complete
 (electric-pair-mode 1)
 (require 'auto-complete-config)
 (ac-config-default)
-;(setq ac-auto-show-menu 0.0)
-;(global-auto-complete-mode t)
 (setq-default ac-sources '(
                            ac-source-yasnippet
                            ac-source-abbrev
