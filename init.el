@@ -129,24 +129,6 @@
 (remove-hook 'comint-output-filter-functions
 	     'comint-postoutput-scroll-to-bottom)
 
-;; auto complete
-(require 'auto-complete-config)
-(ac-config-default)
-;(setq ac-auto-show-menu 0.0)
-;(global-auto-complete-mode t)
-(setq-default ac-sources '(
-                           ac-source-yasnippet
-                           ac-source-abbrev
-                           ac-source-dictionary
-                           ac-source-words-in-same-mode-buffers
-                           ))
-
-;; yasnippet
-(add-hook 'term-mode-hook (lambda() (yas-minor-mode -1)))
-(require 'yasnippet-snippets)
-(yas-reload-all)
-(add-hook 'prog-mode-hook #'yas-minor-mode)
-
 ;; multiple-cursors
 (require 'multiple-cursors)
 (global-set-key (kbd "M-S-<up>") 'mc/unmark-next-like-this)
@@ -158,11 +140,8 @@
 
 ;;python
 (elpy-enable)
-;(require 'cython-mode)
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.pxd\\'" . python-mode))
-;(require 'py-autopep8)
-;(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 (setq python-indent-offset 4)
 (setq python-indent-guess-indent-offset nil)
 
@@ -336,6 +315,23 @@
 
 ;; highlight cursor
 (beacon-mode 1)
+
+;; auto complete
+(electric-pair-mode 1)
+(require 'auto-complete-config)
+(ac-config-default)
+;(setq ac-auto-show-menu 0.0)
+;(global-auto-complete-mode t)
+(setq-default ac-sources '(
+                           ac-source-yasnippet
+                           ac-source-abbrev
+                           ac-source-dictionary
+                           ac-source-words-in-same-mode-buffers
+                           ))
+
+;; yasnippet
+(require 'yasnippet-snippets)
+(yas-global-mode 1)
 
 ;; start to last buffer
 (require 'psession)
