@@ -1,2 +1,1 @@
-Restore System: execute restore.sh
-
+To restore and update system, execute: ./restore.sh
