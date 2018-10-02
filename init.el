@@ -345,6 +345,10 @@
 
 ;; pytest
 (use-package python-pytest
+  :config
+  (magit-define-popup-option 'python-pytest-popup
+    ?p "pci address of DUT" "--pciaddr=")
+  (setq python-pytest-executable "sudo python3 -m pytest")
   ;; add prefix to repeat last test
   :bind (("C-t" . python-pytest-popup)))
 
