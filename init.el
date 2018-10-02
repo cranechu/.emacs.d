@@ -188,28 +188,22 @@
 ;;   '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
 ;; (require 'go-guru)
 
-;; execute commands by hitting two keys simultaneously.
-(require 'key-chord)
-;; reduce delay times s.t. you don't accidentally trigger a key-chord
-;; during normal typing.
-(setq key-chord-two-keys-delay .040
-      key-chord-one-key-delay .050)
-(key-chord-mode 1)
-(key-chord-define-global "j1" 'delete-other-windows)
-(key-chord-define-global "j2" 'split-window-vertically)
-(key-chord-define-global "j3" 'split-window-horizontally)
-(key-chord-define-global "j0" 'delete-windows)
+;; ;; execute commands by hitting two keys simultaneously.
+;; (require 'key-chord)
+;; ;; reduce delay times s.t. you don't accidentally trigger a key-chord
+;; ;; during normal typing.
+;; (setq key-chord-two-keys-delay .040
+;;       key-chord-one-key-delay .050)
+;; (key-chord-mode 1)
+;; (key-chord-define-global "j1" 'delete-other-windows)
+;; (key-chord-define-global "j2" 'split-window-vertically)
+;; (key-chord-define-global "j3" 'split-window-horizontally)
+;; (key-chord-define-global "j0" 'delete-windows)
 
 ;; dired
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince&")))
 
 ;; helm
-;; 
-;; (define-key helm-find-files-map "\t" 'helm-execute-persistent-action)
-;; (setq
-
-;; (provide 'init-helm)
-
 (use-package helm
   :config
   (progn
@@ -274,6 +268,7 @@
 ;;window resize
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "M-i") 'delete-other-windows)
 
 ;;window switch
 (winner-mode 1)
@@ -350,6 +345,7 @@
 
 ;; pytest
 (use-package python-pytest)
+(global-set-key (kbd "C-t") 'python-pytest-repeat)
 
 ;; start to last buffer
 (require 'psession)
