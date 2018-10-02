@@ -58,10 +58,11 @@ min-freq-pstate=0
 [org/gnome/shell/extensions/hidetopbar]
 mouse-triggers-overview=false
 enable-active-window=false
-hot-corner=false
-mouse-sensitive=false
-enable-intellihide=false
 shortcut-toggles=false
+enable-active-windo=true
+hot-corner=false
+enable-intellihide=false
+mouse-sensitive=false
 
 [org/gnome/shell/overrides]
 dynamic-workspaces=false
@@ -218,6 +219,9 @@ application-id='org.gnome.Terminal.desktop'
 [org/gnome/desktop/notifications/application/gnome-tweak-tool]
 application-id='gnome-tweak-tool.desktop'
 
+[org/gnome/desktop/notifications/application/rhythmbox]
+application-id='rhythmbox.desktop'
+
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'Sundry', 'YaST']
 
@@ -277,6 +281,7 @@ titlebar-font='Cantarell Bold 16'
 
 [org/gnome/desktop/wm/keybindings]
 show-desktop=['<Super>d']
+panel-main-menu=['<Shift>space']
 
 [org/gnome/desktop/session]
 idle-delay=uint32 0
@@ -287,15 +292,36 @@ screen-magnifier-enabled=false
 [org/gnome/desktop/a11y/keyboard]
 mousekeys-enable=false
 
+[org/gnome/desktop/sound]
+theme-name='__custom'
+event-sounds=true
+
 [org/gnome/desktop/datetime]
 automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
-xkb-options=@as []
+xkb-options=['ctrl:swapcaps']
 per-window=true
 current=uint32 0
 mru-sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='rgb(170,170,170)'
+rewrap-on-resize=true
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+scroll-on-output=false
+use-system-font=true
+use-theme-colors=true
+use-transparent-background=false
+font='FreeMono 11.5'
+allow-bold=false
+background-color='rgb(0,0,0)'
+scrollbar-policy='never'
+
+[org/gnome/terminal/legacy]
+schema-version=uint32 3
+default-show-menubar=false
 
 [org/gnome/control-center]
 last-panel='power'
@@ -308,6 +334,7 @@ enable-monitoring=true
 
 [org/gnome/gitg/state/history]
 paned-sidebar-position=200
+paned-panels-position=135
 
 [org/gnome/gitg/state/commit]
 paned-sidebar-position=200
@@ -364,22 +391,40 @@ info-last-device='wakeups'
 info-page-number=3
 info-history-time=21600
 
-[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-foreground-color='rgb(170,170,170)'
-rewrap-on-resize=true
-palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
-scroll-on-output=false
-use-system-font=true
-use-theme-colors=true
-use-transparent-background=false
-font='FreeMono 11.5'
-allow-bold=false
-background-color='rgb(0,0,0)'
-scrollbar-policy='never'
+[org/gnome/rhythmbox]
+position=(0, 0)
+size=(1920, 1043)
+paned-position=216
+maximized=true
 
-[org/gnome/terminal/legacy]
-schema-version=uint32 3
-default-show-menubar=false
+[org/gnome/rhythmbox/player]
+volume=1.0
+
+[org/gnome/rhythmbox/podcast/source]
+show-browser=true
+
+[org/gnome/rhythmbox/plugins/audioscrobbler/Last.fm]
+scrobbling-enabled=true
+
+[org/gnome/rhythmbox/plugins/audioscrobbler/Libre.fm]
+scrobbling-enabled=true
+
+[org/gnome/rhythmbox/plugins/iradio]
+initial-stations-loaded=true
+
+[org/gnome/rhythmbox/plugins/iradio/source]
+show-browser=true
+
+[org/gnome/rhythmbox/plugins]
+active-plugins=['iradio', 'generic-player', 'power-manager', 'audioscrobbler', 'rb', 'artsearch', 'dbus-media-server', 'audiocd', 'ipod', 'cd-recorder', 'mtpdevice', 'mpris', 'mmkeys', 'notification', 'android', 'daap']
+seen-plugins=['fmradio', 'audioscrobbler', 'rb', 'artsearch', 'replaygain', 'webremote', 'soundcloud', 'dbus-media-server', 'pythonconsole', 'ipod', 'grilo', 'lyrics', 'cd-recorder', 'mtpdevice', 'mpris', 'magnatune', 'im-status', 'notification', 'daap', 'sendto']
+
+[org/gnome/rhythmbox/library/source]
+sorting=('Track', true)
+show-browser=true
+
+[org/gnome/rhythmbox/rhythmdb]
+locations=['file:///home/cranechu']
 
 [org/gnome/evolution/mail]
 paned-size=1150159
@@ -473,7 +518,7 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
 [org/gnome/mutter]
-overlay-key='Super_R'
+overlay-key='Super_L'
 
 [org/gtk/settings/file-chooser]
 sort-column='name'
