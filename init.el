@@ -344,8 +344,9 @@
 (yas-global-mode 1)
 
 ;; pytest
-(use-package python-pytest)
-(global-set-key (kbd "C-t") 'python-pytest-repeat)
+(use-package python-pytest
+  ;; add prefix to repeat last test
+  :bind (("C-t" . python-pytest-popup)))
 
 ;; start to last buffer
 (require 'psession)
