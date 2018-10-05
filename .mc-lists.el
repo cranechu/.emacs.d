@@ -17,4 +17,5 @@
 (setq mc/cmds-to-run-once
       '(
         dired-do-rename
+        helm-occur
         ))

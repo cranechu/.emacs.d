@@ -260,6 +260,9 @@
 ;; save all buffer when emacs lost focus
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
+;; auto revert/reload modified buffer
+(global-auto-revert-mode t)
+
 ;;debug message
 (setq debug-on-error t)
 
@@ -347,8 +350,10 @@
 ;; pytest
 (use-package python-pytest
   :config
+  (magit-define-popup-switch 'python-pytest-popup
+                             ?z "print debug logging" "--log-cli-level=debug")
   (magit-define-popup-option 'python-pytest-popup
-    ?p "pci address of DUT" "--pciaddr=")
+                             ?p "pci address of DUT" "--pciaddr=")
   (setq python-pytest-executable "sudo python3 -m pytest")
   ;; add prefix to repeat last test
   :bind (("C-t" . python-pytest-popup)))
@@ -357,8 +362,7 @@
 (use-package psession
   :config
   (psession-savehist-mode 1)
-  (psession-mode 1)
-  (psession-autosave-mode 1))
+  (psession-mode 1))
 
 ;; auto generated
 (setq x-select-enable-clipboard t)
