@@ -4,7 +4,7 @@
 
 ;; Author: Jorgen Schaefer <contact@jorgenschaefer.de>
 ;; URL: https://github.com/jorgenschaefer/elpy
-;; Version: 1.24.0
+;; Version: 1.25.0
 ;; Keywords: Python, IDE, Languages, Tools
 ;; Package-Requires: ((company "0.9.2") (emacs "24.4") (find-file-in-project "3.3")  (highlight-indentation "0.5.0") (pyvenv "1.3") (yasnippet "0.8.0") (s "1.11.0"))
 
@@ -53,7 +53,7 @@
 (require 'pyvenv)
 (require 'find-file-in-project)
 
-(defconst elpy-version "1.24.0"
+(defconst elpy-version "1.25.0"
   "The version of the Elpy lisp code.")
 
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -293,6 +293,16 @@ this feature."
                  (function :tag "Other function"))
   :group 'elpy)
 
+(defcustom elpy-company-add-completion-from-shell nil
+  "If t, add completion candidates gathered from the shell.
+
+Normally elpy provides completion using static code analysis (from jedi).
+With this option set to t, elpy will add the completion candidates from the
+associated python shell. This allow to have decent completion candidates when
+the static code analysis fails."
+  :type 'boolean
+  :group 'elpy)
+
 (defcustom elpy-eldoc-show-current-function t
   "If true, show the current function if no calltip is available.
 
@@ -431,42 +441,60 @@ option is `pdb'."
 
     (define-key map (kbd "M-TAB") 'elpy-company-backend)
 
-    ;; key bindings for elpy-shell
-    (define-key map (kbd "C-c C-y e") 'elpy-shell-send-statement)
-    (define-key map (kbd "C-c C-y E") 'elpy-shell-send-statement-and-go)
-    (define-key map (kbd "C-c C-y s") 'elpy-shell-send-top-statement)
-    (define-key map (kbd "C-c C-y S") 'elpy-shell-send-top-statement-and-go)
-    (define-key map (kbd "C-c C-y f") 'elpy-shell-send-defun)
-    (define-key map (kbd "C-c C-y F") 'elpy-shell-send-defun-and-go)
-    (define-key map (kbd "C-c C-y c") 'elpy-shell-send-defclass)
-    (define-key map (kbd "C-c C-y C") 'elpy-shell-send-defclass-and-go)
-    (define-key map (kbd "C-c C-y o") 'elpy-shell-send-group)
-    (define-key map (kbd "C-c C-y O") 'elpy-shell-send-group-and-go)
-    (define-key map (kbd "C-c C-y w") 'elpy-shell-send-codecell)
-    (define-key map (kbd "C-c C-y W") 'elpy-shell-send-codecell-and-go)
-    (define-key map (kbd "C-c C-y r") 'elpy-shell-send-region-or-buffer)
-    (define-key map (kbd "C-c C-y R") 'elpy-shell-send-region-or-buffer-and-go)
-    (define-key map (kbd "C-c C-y b") 'elpy-shell-send-buffer)
-    (define-key map (kbd "C-c C-y B") 'elpy-shell-send-buffer-and-go)
-    (define-key map (kbd "C-c C-y C-e") 'elpy-shell-send-statement-and-step)
-    (define-key map (kbd "C-c C-y C-S-E") 'elpy-shell-send-statement-and-step-and-go)
-    (define-key map (kbd "C-c C-y C-s") 'elpy-shell-send-top-statement-and-step)
-    (define-key map (kbd "C-c C-y C-S-S") 'elpy-shell-send-top-statement-and-step-and-go)
-    (define-key map (kbd "C-c C-y C-f") 'elpy-shell-send-defun-and-step)
-    (define-key map (kbd "C-c C-y C-S-F") 'elpy-shell-send-defun-and-step-and-go)
-    (define-key map (kbd "C-c C-y C-c") 'elpy-shell-send-defclass-and-step)
-    (define-key map (kbd "C-c C-y C-S-C") 'elpy-shell-send-defclass-and-step-and-go)
-    (define-key map (kbd "C-c C-y C-o") 'elpy-shell-send-group-and-step)
-    (define-key map (kbd "C-c C-y C-S-O") 'elpy-shell-send-group-and-step-and-go)
-    (define-key map (kbd "C-c C-y C-w") 'elpy-shell-send-codecell-and-step)
-    (define-key map (kbd "C-c C-y C-S-W") 'elpy-shell-send-codecell-and-step-and-go)
-    (define-key map (kbd "C-c C-y C-r") 'elpy-shell-send-region-or-buffer-and-step)
-    (define-key map (kbd "C-c C-y C-S-R") 'elpy-shell-send-region-or-buffer-and-step-and-go)
-    (define-key map (kbd "C-c C-y C-b") 'elpy-shell-send-buffer-and-step)
-    (define-key map (kbd "C-c C-y C-S-B") 'elpy-shell-send-buffer-and-step-and-go)
-
     map)
   "Key map for the Emacs Lisp Python Environment.")
+
+(defvar elpy-shell-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "e") 'elpy-shell-send-statement)
+    (define-key map (kbd "E") 'elpy-shell-send-statement-and-go)
+    (define-key map (kbd "s") 'elpy-shell-send-top-statement)
+    (define-key map (kbd "S") 'elpy-shell-send-top-statement-and-go)
+    (define-key map (kbd "f") 'elpy-shell-send-defun)
+    (define-key map (kbd "F") 'elpy-shell-send-defun-and-go)
+    (define-key map (kbd "c") 'elpy-shell-send-defclass)
+    (define-key map (kbd "C") 'elpy-shell-send-defclass-and-go)
+    (define-key map (kbd "o") 'elpy-shell-send-group)
+    (define-key map (kbd "O") 'elpy-shell-send-group-and-go)
+    (define-key map (kbd "w") 'elpy-shell-send-codecell)
+    (define-key map (kbd "W") 'elpy-shell-send-codecell-and-go)
+    (define-key map (kbd "r") 'elpy-shell-send-region-or-buffer)
+    (define-key map (kbd "R") 'elpy-shell-send-region-or-buffer-and-go)
+    (define-key map (kbd "b") 'elpy-shell-send-buffer)
+    (define-key map (kbd "B") 'elpy-shell-send-buffer-and-go)
+    (define-key map (kbd "C-e") 'elpy-shell-send-statement-and-step)
+    (define-key map (kbd "C-S-E") 'elpy-shell-send-statement-and-step-and-go)
+    (define-key map (kbd "C-s") 'elpy-shell-send-top-statement-and-step)
+    (define-key map (kbd "C-S-S") 'elpy-shell-send-top-statement-and-step-and-go)
+    (define-key map (kbd "C-f") 'elpy-shell-send-defun-and-step)
+    (define-key map (kbd "C-S-F") 'elpy-shell-send-defun-and-step-and-go)
+    (define-key map (kbd "C-c") 'elpy-shell-send-defclass-and-step)
+    (define-key map (kbd "C-S-C") 'elpy-shell-send-defclass-and-step-and-go)
+    (define-key map (kbd "C-o") 'elpy-shell-send-group-and-step)
+    (define-key map (kbd "C-S-O") 'elpy-shell-send-group-and-step-and-go)
+    (define-key map (kbd "C-w") 'elpy-shell-send-codecell-and-step)
+    (define-key map (kbd "C-S-W") 'elpy-shell-send-codecell-and-step-and-go)
+    (define-key map (kbd "C-r") 'elpy-shell-send-region-or-buffer-and-step)
+    (define-key map (kbd "C-S-R") 'elpy-shell-send-region-or-buffer-and-step-and-go)
+    (define-key map (kbd "C-b") 'elpy-shell-send-buffer-and-step)
+    (define-key map (kbd "C-S-B") 'elpy-shell-send-buffer-and-step-and-go)
+    map)
+  "Key map for the shell related commands")
+(fset 'elpy-shell-map elpy-shell-map)
+
+(defcustom elpy-shell-command-prefix-key "C-c C-y"
+"Prefix key used to call elpy shell related commands.
+
+This option need to bet set through `customize' or `customize-set-variable' to be taken into account."
+:type 'string
+:group 'elpy
+:set
+(lambda (var key)
+  (when (and (boundp var) (symbol-value var))
+    (define-key elpy-mode-map (kbd (symbol-value var)) nil))
+  (when key
+    (define-key elpy-mode-map (kbd key) 'elpy-shell-map)
+  (set var key))))
 
 (easy-menu-define elpy-menu elpy-mode-map
   "Elpy Mode Menu"
@@ -589,13 +617,7 @@ virtualenv.
 (defun elpy-news ()
   "Display Elpy's release notes."
   (interactive)
-  (with-current-buffer (get-buffer-create "*Elpy News*")
-    (let ((inhibit-read-only t))
-      (erase-buffer)
-      (insert-file-contents (concat (file-name-directory (locate-library "elpy"))
-                                    "NEWS.rst"))
-      (help-mode))
-    (pop-to-buffer (current-buffer))))
+  (message "The Elpy News command is deprecated and will be removed in future versions of Elpy"))
 
 ;;;;;;;;;;;;;;;
 ;;; Elpy Config
@@ -2392,7 +2414,7 @@ name."
 Also, switch to that buffer."
   (interactive)
   (let ((list-matching-lines-face nil))
-    (occur "^ *\\(def\\|class\\) "))
+    (occur "^\s*\\(\\(async\s\\|\\)def\\|class\\)\s"))
   (let ((window (get-buffer-window "*Occur*")))
     (if window
         (select-window window)
@@ -3351,12 +3373,17 @@ If you need your modeline, you can set the variable `elpy-remove-modeline-lighte
      (elpy-modules-remove-modeline-lighter 'company-mode)
      (define-key company-active-map (kbd "C-d")
        'company-show-doc-buffer)
-     ;; Workaround for company bug
-     ;; (https://github.com/company-mode/company-mode/issues/759)
      (add-hook 'inferior-python-mode-hook
-               (lambda () (setq-local company-transformers
-                                      (remove 'company-sort-by-occurrence
-                                              company-transformers)))))
+               (lambda ()
+                 ;; Workaround for company bug
+                 ;; (https://github.com/company-mode/company-mode/issues/759)
+                 (setq-local company-transformers
+                             (remove 'company-sort-by-occurrence
+                                     company-transformers))
+                 ;; Be sure to trigger completion for one character variable
+                 ;; (i.e. `a.`)
+                 (setq-local company-minimum-prefix-length 2))))
+
     (`buffer-init
      ;; We want immediate completions from company.
      (set (make-local-variable 'company-idle-delay)
@@ -3534,22 +3561,36 @@ and return the list.
 
   python.el provides completion based on what is currently loaded in the
 python shell interpreter."
-  (let* ((completion-at-point-functions '(python-completion-complete-at-point))
-         (pytel-candidates
-          (condition-case nil
-              ;; Sometimes, python.el completion raise an error...
-              (company-capf 'candidates (company-capf 'prefix))
-            (error '())))
-         (candidates-name (cl-loop
-                           for cand in candidates
-                           collect (cdr (assoc 'name cand)))))
-    (cl-loop
-     for pytel-cand in pytel-candidates
-     for pytel-cand = (replace-regexp-in-string "($" "" pytel-cand)
-     for pytel-cand = (replace-regexp-in-string "^.*\\." "" pytel-cand)
-     if (not (member pytel-cand candidates-name))
-     do (add-to-list 'candidates (list (cons 'name pytel-cand)) t)))
-  candidates)
+  ;; check if prompt available
+  (if (or (not elpy-company-add-completion-from-shell)
+          (not (python-shell-get-process))
+          (with-current-buffer (process-buffer (python-shell-get-process))
+            (save-excursion
+              (goto-char (point-max))
+              (let ((inhibit-field-text-motion t))
+                (beginning-of-line)
+                (not (search-forward-regexp
+                      python-shell--prompt-calculated-input-regexp
+                      nil t))))))
+      candidates
+    (let* ((new-candidates (python-completion-complete-at-point))
+           (start (nth 0 new-candidates))
+           (end (nth 1 new-candidates))
+           (completion-list (nth 2 new-candidates)))
+      (if (not (and start end))
+          candidates
+        (let ((candidate-names (cl-map 'list
+                                       (lambda (el) (cdr (assoc 'name el)))
+                                       candidates))
+              (new-candidate-names (all-completions (buffer-substring start end)
+                                                    completion-list)))
+          (cl-loop
+           for pytel-cand in new-candidate-names
+           for pytel-cand = (replace-regexp-in-string "($" "" pytel-cand)
+           for pytel-cand = (replace-regexp-in-string "^.*\\." "" pytel-cand)
+           if (not (member pytel-cand candidate-names))
+           do (push (list (cons 'name pytel-cand)) candidates)))
+        candidates))))
 
 (defun elpy-company-backend (command &optional arg &rest ignored)
   "A company-mode backend for Elpy."
@@ -3692,10 +3733,9 @@ display the current class and method instead."
               (let ((prefix (propertize name 'face
                                         'font-lock-function-name-face))
                     (args (format "(%s)" (mapconcat #'identity params ", "))))
-                ;; for emacs < 25, eldoc function do not accept string
                 (if (version<= emacs-version "25")
                     (format "%s%s" prefix args)
-                (eldoc-docstring-format-sym-doc prefix args nil)))))))))
+                  (eldoc-docstring-format-sym-doc prefix args nil)))))))))
       ;; Return the last message until we're done
       eldoc-last-message)))
 

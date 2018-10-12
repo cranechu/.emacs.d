@@ -10,8 +10,10 @@
         electric-newline-and-maybe-indent
         helm-M-x
         indent-for-tab-command
+        iy-go-to-char--command
         python-nav-forward-block
         wdired-finish-edit
+        zzz-up-to-char
         ))
 
 (setq mc/cmds-to-run-once
