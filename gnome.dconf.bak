@@ -518,6 +518,7 @@ ignore-phase2-ca-cert=false
 ignore-ca-cert=false
 
 [org/gnome/mutter]
+dynamic-workspaces=false
 overlay-key='Super_L'
 
 [org/gtk/settings/file-chooser]
