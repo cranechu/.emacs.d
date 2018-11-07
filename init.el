@@ -84,9 +84,7 @@
  '(package-selected-packages
    (quote
     (zzz-to-char undo-tree iy-go-to-char super-save python-pytest hl-todo yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
- '(python-pytest-arguments
-   (quote
-    ("--color" "--capture=no" "--log-cli-level=debug" "--pciaddr=03:00.0")))
+ '(python-pytest-arguments (quote ("--color" "--pciaddr=01:00.0")))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -292,9 +290,7 @@
 (winner-mode 1)
 (global-set-key (kbd "C-c C-q") 'winner-undo)
 (global-set-key (kbd "C-c C-c C-q") 'winner-redo)
-(global-set-key (kbd "C-q") 'ace-window)
-(setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-(setq aw-scope 'frame)
+(global-set-key (kbd "C-q") 'other-window)
 
 ;; neotree
 (require 'neotree)
