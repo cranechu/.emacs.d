@@ -17,3 +17,4 @@ redhat-rpm-config
 syslinux
 util-linux-user
 zsh
+python3-tkinter
