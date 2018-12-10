@@ -1,6 +1,4 @@
 make pages file=dryrun.log 
-exit
-make pages file=dryrun.log 
 python3
 python3
 make pages file=dryrun.log 
@@ -126,3 +124,5 @@ make dryrun
 make dryrun 
 make dryrun 
 make dryrun 
+gcc mmap.c 
+./a.out 
