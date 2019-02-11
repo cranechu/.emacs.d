@@ -45,7 +45,7 @@
 (load-theme 'wombat t)
 
 ;;TAGS
-(setq tags-table-list '("~/ssdmeter/TAGS"))
+(setq tags-table-list '("~/pynvme/TAGS"))
 ;;use RTags for C++
 ;; only run this if rtags is installed
 ;; (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
@@ -359,7 +359,7 @@
 
 ;; yasnippet
 (require 'yasnippet-snippets)
-(setq yas-snippet-dirs '("~/ssdmeter/snippets"))
+(setq yas-snippet-dirs '("~/pynvme/snippets"))
 (yas-global-mode 1)
 
 ;; pytest
