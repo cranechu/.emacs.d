@@ -1,6 +1,3 @@
-/home/cranechu/spdk
-/home/cranechu/spdk/examples/nvme/test
-/home/cranechu/spdk
 ~
 /home/cranechu/python/1
 /root/spdk/doc
@@ -22,7 +19,6 @@
 /home/cranechu/ssdmeter/scripts
 /home/cranechu/ssdmeter/scripts/5_admin_command_set
 ~/ssdmeter/scripts/5_admin_command_set
-/home/cranechu
 /home/cranechu/ssdmeter
 /home/cranechu/ssdmeter/webpages/content/posts
 /home/cranechu/ssdmeter/webpages/content
@@ -31,3 +27,7 @@
 /home/cranechu/ssdmeter/webpages
 /home/cranechu/ssdmeter
 /home/cranechu/demo/c
+/home/cranechu
+/home/cranechu/pynvme/spdk
+/home/cranechu/pynvme
+/home/cranechu/pynvme/spdk

@@ -1,35 +1,3 @@
-make pages file=dryrun.log 
-python3
-python3
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-ls
-python3 3d.py 
-python3 3d.py 
-python3 3d.py 
-python3 3d.py 
-python3 3d.py 
-python3
-cd ssdmeter/
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-ls
-ls *.png
 cd webpages/
 ls
 cd content/
@@ -126,3 +94,35 @@ make dryrun
 make dryrun 
 gcc mmap.c 
 ./a.out 
+ls
+git status
+cd ..
+cd pynvme/
+git push
+git status
+cd ..
+rm -rf pynvme
+ls
+git clone https://github.com/cranechu/pynvme 
+git submodule update --init --recursive~
+cd pynvme
+git submodule update --init --recursive
+sudo ./spdk/scripts/pkgdep.sh
+sudo dnf install python3-pip -y
+sudo python3 -m pip install -r requirements.txt
+pip install --upgrade pip
+sudo python3 -m pip install -r requirements.txt
+sudo pip3 install --upgrade pip
+sudo python3 -m pip install -r requirements.txt
+cd spdk; ./configure; cd ..
+make spdk
+make
+make
+make clean
+make
+make spdk
+make
+make clean
+make
+cd spdk/
+exit
