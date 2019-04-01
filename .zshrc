@@ -59,7 +59,8 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+    git,
+    history-search-multi-word
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -110,6 +111,6 @@ alias mv='mv -i'
 alias e='emacs'
 alias j='z'
 
-alias pip_upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
+alias pip_upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U'
 
 disable r
