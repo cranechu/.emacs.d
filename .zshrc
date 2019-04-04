@@ -110,6 +110,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias e='emacs'
 alias j='z'
+alias gs='git status'
 
 alias pip_upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U'
 

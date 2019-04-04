@@ -46,24 +46,6 @@
 
 ;;TAGS
 (setq tags-table-list '("~/pynvme/TAGS"))
-;;use RTags for C++
-;; only run this if rtags is installed
-;; (add-hook 'c-mode-hook 'rtags-start-process-unless-running)
-;; (add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
-;; (add-hook 'objc-mode-hook 'rtags-start-process-unless-running)
-;; (global-set-key (kbd "M-.") 'rtags-find-symbol-at-point)
-;; (global-set-key (kbd "M-,") 'rtags-location-stack-back)
-;; (global-set-key (kbd "M-m") 'rtags-location-stack-forward)
-;; (global-set-key (kbd "M-/") 'rtags-find-all-references-at-point)
-;; (rtags-enable-standard-keybindings)
-;; (setq rtags-use-helm t)
-;; '(rtags-autostart-diagnostics t)
-;; '(rtags-completions-enabled t)
-;; '(rtags-container-timer-interval 2)
-;; '(rtags-display-summary-as-tooltip t)
-;; '(rtags-reparse-timeout 3000)
-;; '(rtags-track-container t)
-;; '(rtags-skippedline ((t (:background "dim gray"))))
 
 ;;zoom window
 (require 'zoom-window)
@@ -87,7 +69,7 @@
     ("find . -type f -exec grep --color -nH --null -e  \\{\\} +" . 49)))
  '(package-selected-packages
    (quote
-    (ack zzz-to-char undo-tree iy-go-to-char super-save python-pytest hl-todo yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode rtags go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+    (helm-swoop ack zzz-to-char undo-tree iy-go-to-char super-save python-pytest hl-todo yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode flycheck yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
  '(python-pytest-arguments (quote ("--color" "--pciaddr=01:00.0")))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
@@ -243,8 +225,7 @@
           helm-M-x-requires-pattern nil
           helm-ff-skip-boring-files t)
     (helm-mode 1)
-    (helm-autoresize-mode 1)
-    (define-key helm-find-files-map "C-j" 'helm-execute-persistent-action))
+    (helm-autoresize-mode 1))
   :bind (("C-o" . helm-M-x)
          ("M-y" . helm-show-kill-ring)
          ("C-c h" . helm-command-prefix)
@@ -253,6 +234,11 @@
          ("C-x C-b" . helm-mini)
          ("C-x C-f" . helm-find-files)
          ("C-h SPC" . helm-all-mark-rings)))
+
+;; helm swoop
+(require 'helm-swoop)
+(global-set-key (kbd "C-j") 'helm-swoop)
+(setq helm-swoop-use-fuzzy-match t)
 
 ;; no startup buffer
 (setq inhibit-startup-message t)
