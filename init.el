@@ -168,37 +168,6 @@
 (setq fill-column 80)
 (add-hook 'c-mode-hook 'fci-mode)
 
-;; golang not use for now
-;; (require 'go-mode)
-;; (setq gofmt-command "goimports")
-;; (setq gofmt-is-goimports t)
-;; (add-hook 'before-save-hook 'gofmt-before-save)
-;; (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")
-;; (add-to-list 'load-path "~/go/src/github.com/benma/go-dlv")
-;; (add-hook 'go-mode-hook 'fci-mode)
-;; (add-hook 'go-mode-hook 'follow-mode)
-;; (require 'go-flycheck)
-;; (require 'go-dlv)
-;; (require 'go-autocomplete)
-;; (require 'auto-complete-config)
-;; (ac-config-default)
-;; (go-guru-hl-identifier-mode)
-;; (eval-after-load 'go-mode
-;;   '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
-;; (require 'go-guru)
-
-;; ;; execute commands by hitting two keys simultaneously.
-;; (require 'key-chord)
-;; ;; reduce delay times s.t. you don't accidentally trigger a key-chord
-;; ;; during normal typing.
-;; (setq key-chord-two-keys-delay .040
-;;       key-chord-one-key-delay .050)
-;; (key-chord-mode 1)
-;; (key-chord-define-global "j1" 'delete-other-windows)
-;; (key-chord-define-global "j2" 'split-window-vertically)
-;; (key-chord-define-global "j3" 'split-window-horizontally)
-;; (key-chord-define-global "j0" 'delete-windows)
-
 ;; dired
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince&")))
 
@@ -238,7 +207,7 @@
 ;; helm swoop
 (require 'helm-swoop)
 (global-set-key (kbd "C-j") 'helm-swoop)
-(setq helm-swoop-use-fuzzy-match t)
+(define-key isearch-mode-map (kbd "C-j") 'helm-swoop-from-isearch)
 
 ;; no startup buffer
 (setq inhibit-startup-message t)
