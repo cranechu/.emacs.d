@@ -59,8 +59,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git,
-    history-search-multi-word
+    git history-search-multi-word
 )
 
 source $ZSH/oh-my-zsh.sh
