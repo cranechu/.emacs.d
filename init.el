@@ -166,7 +166,7 @@
 (require 'fill-column-indicator)
 (setq fci-rule-color "darkblue")
 (setq fill-column 80)
-(add-hook 'c-mode-hook 'fci-mode)
+(add-hook 'prog-mode-hook 'fci-mode)
 
 ;; dired
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince&")))
@@ -324,7 +324,7 @@
                              ?z "print debug logging" "--log-cli-level=debug")
   (magit-define-popup-option 'python-pytest-popup
                              ?p "pci address of DUT" "--pciaddr=")
-  (setq python-pytest-executable "sudo python3 -m pytest")
+  (setq python-pytest-executable "sudo python3 -B -m pytest")
   ;; add prefix to repeat last test
   :bind (("C-t" . python-pytest-popup)))
 
