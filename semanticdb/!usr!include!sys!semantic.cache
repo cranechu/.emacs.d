@@ -56,34 +56,35 @@
             ("__glibc_has_attribute" variable (:constant-flag t) nil [14352 14373])
             ("_Noreturn" variable (:constant-flag t) nil [14609 14618])
             ("__attribute_nonstring__" variable (:constant-flag t) nil [14919 14942])
-            ("bits/wordsize.h" include (:system-flag t) nil [15311 15337])
-            ("bits/long-double.h" include (:system-flag t) nil [15338 15367])
-            ("__LDBL_REDIR1" variable (:constant-flag t) nil [16300 16313])
-            ("__LDBL_REDIR" variable (:constant-flag t) nil [16354 16366])
-            ("__LDBL_REDIR1_NTH" variable (:constant-flag t) nil [16400 16417])
-            ("__LDBL_REDIR_NTH" variable (:constant-flag t) nil [16466 16482])
-            ("__LDBL_REDIR_DECL" variable (:constant-flag t) nil [16524 16541])
-            ("__REDIRECT_LDBL" variable (:constant-flag t) nil [16577 16592])
-            ("__REDIRECT_NTH_LDBL" variable (:constant-flag t) nil [16655 16674])
-            ("__glibc_macro_warning" variable (:constant-flag t) nil [17184 17205])
-            ("__HAVE_GENERIC_SELECTION" variable (:constant-flag t) nil [17948 17972]))          
+            ("__attribute_copy__" variable (:constant-flag t) nil [15218 15236])
+            ("bits/wordsize.h" include (:system-flag t) nil [15610 15636])
+            ("bits/long-double.h" include (:system-flag t) nil [15637 15666])
+            ("__LDBL_REDIR1" variable (:constant-flag t) nil [16599 16612])
+            ("__LDBL_REDIR" variable (:constant-flag t) nil [16653 16665])
+            ("__LDBL_REDIR1_NTH" variable (:constant-flag t) nil [16699 16716])
+            ("__LDBL_REDIR_NTH" variable (:constant-flag t) nil [16765 16781])
+            ("__LDBL_REDIR_DECL" variable (:constant-flag t) nil [16823 16840])
+            ("__REDIRECT_LDBL" variable (:constant-flag t) nil [16876 16891])
+            ("__REDIRECT_NTH_LDBL" variable (:constant-flag t) nil [16954 16973])
+            ("__glibc_macro_warning" variable (:constant-flag t) nil [17483 17504])
+            ("__HAVE_GENERIC_SELECTION" variable (:constant-flag t) nil [18247 18271]))          
       :file "cdefs.h"
-      :pointmax 18009
-      :fsize 18008
-      :lastmodtime '(23538 46563 0 0)
+      :pointmax 18308
+      :fsize 18307
+      :lastmodtime '(23800 65315 0 0)
       :unmatched-syntax '((close-paren 14514 . 14515) (semantic-list 14509 . 14514) (symbol 14495 . 14508) (number 14512 . 14513) (number 14510 . 14511) (punctuation 14494 . 14495) (punctuation 14491 . 14492) (punctuation 14490 . 14491) (number 14476 . 14482) (punctuation 14474 . 14475) (semantic-list 14424 . 14473) (punctuation 14422 . 14423) (punctuation 14421 . 14422))
       :lexical-table 
         '(("__LEAF_ATTR")
           ("__ASMNAME" (spp-arg-list ("cname") 6346 . 6353) . ((symbol "__ASMNAME2" 6355 . 6365) (semantic-list "(__USER_LABEL_PREFIX__, cname)" 6366 . 6396)))
-          ("__LDBL_REDIR_DECL" (spp-arg-list ("name") 16541 . 16547))
-          ("__REDIRECT_LDBL" (spp-arg-list ("name" "proto" "alias") 16592 . 16612) . ((symbol "__REDIRECT" 16613 . 16623) (semantic-list "(name, proto, alias)" 16624 . 16644)))
+          ("__LDBL_REDIR_DECL" (spp-arg-list ("name") 16840 . 16846))
+          ("__REDIRECT_LDBL" (spp-arg-list ("name" "proto" "alias") 16891 . 16911) . ((symbol "__REDIRECT" 16912 . 16922) (semantic-list "(name, proto, alias)" 16923 . 16943)))
           ("__THROWNL")
           ("__warndecl" (spp-arg-list ("name" "msg") 4278 . 4289) . 
               ((EXTERN "extern" 4290 . 4296) (VOID "void" 4297 . 4301) (symbol "name" 4302 . 4306) (semantic-list "(void)" 4307 . 4313)))
           ("__flexarr" . ((semantic-list "[0]" 5111 . 5114)))
           ("__nonnull" (spp-arg-list ("params") 10418 . 10426))
-          ("__LDBL_REDIR_NTH" (spp-arg-list ("name" "proto") 16482 . 16495) . 
-              ((symbol "name" 16496 . 16500) (symbol "proto" 16501 . 16506) (symbol "__THROW" 16507 . 16514)))
+          ("__LDBL_REDIR_NTH" (spp-arg-list ("name" "proto") 16781 . 16794) . 
+              ((symbol "name" 16795 . 16799) (symbol "proto" 16800 . 16805) (symbol "__THROW" 16806 . 16813)))
           ("__NTH" (spp-arg-list ("fct") 2482 . 2487) . ((symbol "fct" 2488 . 2491)))
           ("__errordecl" (spp-arg-list ("name" "msg") 4359 . 4370) . 
               ((EXTERN "extern" 4371 . 4377) (VOID "void" 4378 . 4382) (symbol "name" 4383 . 4387) (semantic-list "(void)" 4388 . 4394)))
@@ -96,8 +97,8 @@
           ("__END_DECLS" . ((close-paren "}" 3773 . 3774)))
           ("__bos0" (spp-arg-list ("ptr") 3944 . 3949) . ((symbol "__builtin_object_size" 3950 . 3971) (semantic-list "(ptr, 0)" 3972 . 3980)))
           ("__attribute_pure__")
-          ("__LDBL_REDIR1_NTH" (spp-arg-list ("name" "proto" "alias") 16417 . 16437) . 
-              ((symbol "name" 16438 . 16442) (symbol "proto" 16443 . 16448) (symbol "__THROW" 16449 . 16456)))
+          ("__LDBL_REDIR1_NTH" (spp-arg-list ("name" "proto" "alias") 16716 . 16736) . 
+              ((symbol "name" 16737 . 16741) (symbol "proto" 16742 . 16747) (symbol "__THROW" 16748 . 16755)))
           ("__STRING" (spp-arg-list ("x") 3525 . 3528) . ((punctuation "#" 3529 . 3530) (symbol "x" 3530 . 3531)))
           ("__attribute_alloc_size__" (spp-arg-list ("params") 7488 . 7496))
           ("__attribute_noinline__")
@@ -108,14 +109,15 @@
           ("__attribute_const__")
           ("__attribute_warn_unused_result__")
           ("__attribute_artificial__")
-          ("__LDBL_REDIR1" (spp-arg-list ("name" "proto" "alias") 16313 . 16333) . ((symbol "name" 16334 . 16338) (symbol "proto" 16339 . 16344)))
+          ("__LDBL_REDIR1" (spp-arg-list ("name" "proto" "alias") 16612 . 16632) . ((symbol "name" 16633 . 16637) (symbol "proto" 16638 . 16643)))
           ("_SYS_CDEFS_H" . ((number "1" 832 . 833)))
           ("__ptr_t" . ((VOID "void" 3619 . 3623) (punctuation "*" 3624 . 3625)))
           ("__warnattr" (spp-arg-list ("msg") 4333 . 4338))
           ("__glibc_c99_flexarr_available" . ((number "1" 5154 . 5155)))
           ("__attribute_used__" . ((symbol "__attribute__" 8466 . 8479) (semantic-list "((__unused__))" 8480 . 8494)))
-          ("__REDIRECT_NTH_LDBL" (spp-arg-list ("name" "proto" "alias") 16674 . 16694) . ((symbol "__REDIRECT_NTH" 16699 . 16713) (semantic-list "(name, proto, alias)" 16714 . 16734)))
-          ("__glibc_macro_warning" (spp-arg-list ("msg") 17205 . 17210))
+          ("__attribute_copy__" (spp-arg-list ("arg") 15236 . 15241))
+          ("__REDIRECT_NTH_LDBL" (spp-arg-list ("name" "proto" "alias") 16973 . 16993) . ((symbol "__REDIRECT_NTH" 16998 . 17012) (semantic-list "(name, proto, alias)" 17013 . 17033)))
+          ("__glibc_macro_warning" (spp-arg-list ("msg") 17504 . 17509))
           ("__LEAF")
           ("__THROW")
           ("__CONCAT" (spp-arg-list ("x" "y") 3496 . 3501) . ((spp-symbol-merge ((symbol "x" 3502 . 3503) (symbol "y" 3507 . 3508)) 3502 . 3508)))
@@ -128,7 +130,7 @@
           ("__attribute_format_strfmon__" (spp-arg-list ("a" "b") 10181 . 10186))
           ("__restrict")
           ("__glibc_unlikely" (spp-arg-list ("cond") 14069 . 14075) . ((symbol "__builtin_expect" 14076 . 14092) (semantic-list "((cond), 0)" 14093 . 14104)))
-          ("__HAVE_GENERIC_SELECTION" . ((number "0" 17973 . 17974)))
+          ("__HAVE_GENERIC_SELECTION" . ((number "0" 18272 . 18273)))
           ("__P" (spp-arg-list ("args") 3337 . 3343) . ((symbol "args" 3344 . 3348)))
           ("__PMT" (spp-arg-list ("args") 3362 . 3368) . ((symbol "args" 3369 . 3373)))
           ("__ASMNAME2" (spp-arg-list ("prefix" "cname") 6416 . 6431) . 
@@ -139,13 +141,13 @@
           ("__REDIRECT_NTH" (spp-arg-list ("name" "proto" "alias") 5929 . 5949) . 
               ((symbol "name" 5957 . 5961) (symbol "proto" 5962 . 5967) (symbol "__THROW" 5968 . 5975) (symbol "__asm__" 5976 . 5983) (semantic-list "(__ASMNAME (#alias))" 5984 . 6004)))
           ("__glibc_likely" (spp-arg-list ("cond") 14128 . 14134) . ((symbol "__builtin_expect" 14135 . 14151) (semantic-list "((cond), 1)" 14152 . 14163)))
-          ("__LDBL_REDIR" (spp-arg-list ("name" "proto") 16366 . 16379) . ((symbol "name" 16380 . 16384) (symbol "proto" 16385 . 16390)))
+          ("__LDBL_REDIR" (spp-arg-list ("name" "proto") 16665 . 16678) . ((symbol "name" 16679 . 16683) (symbol "proto" 16684 . 16689)))
           )
 )
     (semanticdb-table "semanticdb-table"
       :file "queue.h"
       :fsize 19539
-      :lastmodtime '(23538 46563 0 0))
+      :lastmodtime '(23800 65315 0 0))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -492,8 +494,8 @@
                 (reparse-symbol extern-c-contents) [946 969]))          
       :file "types.h"
       :pointmax 6585
-      :fsize 6105
-      :lastmodtime '(23538 46563 0 0)
+      :fsize 5712
+      :lastmodtime '(23800 65314 0 0)
       :unmatched-syntax '((symbol 5110 . 5129) (symbol 5102 . 5109) (punctuation 5101 . 5102) (punctuation 5099 . 5100) (punctuation 5098 . 5099) (LONG 3811 . 3815) (UNSIGNED 3802 . 3810) (TYPEDEF 3794 . 3801) (symbol 2365 . 2379) (symbol 2357 . 2364) (punctuation 2356 . 2357) (punctuation 2354 . 2355) (punctuation 2353 . 2354))
       :lexical-table 
         '(("__pid_t_defined")
@@ -541,7 +543,7 @@
       :file "sysmacros.h"
       :pointmax 4031
       :fsize 2102
-      :lastmodtime '(23538 46563 0 0)
+      :lastmodtime '(23800 65315 0 0)
       :unmatched-syntax '((semantic-list 3034 . 3058) (symbol 3006 . 3033) (semantic-list 2981 . 3005) (symbol 2955 . 2980) (semantic-list 2930 . 2954) (symbol 2904 . 2929))
       :lexical-table 
         '(("_SYS_SYSMACROS_H_OUTER" . ((number "1" 946 . 947)))
@@ -664,7 +666,7 @@
       :file "select.h"
       :pointmax 4141
       :fsize 4140
-      :lastmodtime '(23538 46563 0 0)
+      :lastmodtime '(23800 65315 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("FD_ZERO" (spp-arg-list ("fdsetp") 2790 . 2798) . ((symbol "__FD_ZERO" 2800 . 2809) (semantic-list "(fdsetp)" 2810 . 2818)))
@@ -946,7 +948,7 @@
       :file "time.h"
       :pointmax 6657
       :fsize 6656
-      :lastmodtime '(23538 46562 0 0)
+      :lastmodtime '(23800 65313 0 0)
       :unmatched-syntax '((spp-macro-def 3403 . 3414) (spp-macro-def 3227 . 3241) (spp-macro-def 3113 . 3124))
       :lexical-table 
         '(("TIMEVAL_TO_TIMESPEC" (spp-arg-list ("tv" "ts") 1217 . 1225) . ((semantic-list "{                                   \\
@@ -990,8 +992,8 @@
 )
     (semanticdb-table "semanticdb-table"
       :file "socket.h"
-      :fsize 10203
-      :lastmodtime '(23538 46564 0 0))
+      :fsize 10204
+      :lastmodtime '(23800 65315 0 0))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -1212,7 +1214,7 @@
       :file "mman.h"
       :pointmax 5552
       :fsize 5551
-      :lastmodtime '(23538 46563 0 0)
+      :lastmodtime '(23800 65315 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__off_t_defined")
@@ -1923,7 +1925,7 @@
       :file "stat.h"
       :pointmax 16354
       :fsize 16236
-      :lastmodtime '(23538 46563 0 0)
+      :lastmodtime '(23800 65314 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("S_IWUSR" . ((symbol "__S_IWRITE" 4467 . 4477)))
@@ -1979,7 +1981,7 @@
     (semanticdb-table "semanticdb-table"
       :file "sysinfo.h"
       :fsize 1517
-      :lastmodtime '(23538 46563 0 0)))
+      :lastmodtime '(23800 65315 0 0)))
   :file "!usr!include!sys!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")
