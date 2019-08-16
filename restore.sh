@@ -12,10 +12,6 @@ sudo dnf install -y gnome-tweak-tool fio nvme-cli util-linux-user
 sudo dnf install -y zsh
 sudo dnf update -y
 
-# migrate installed packages
-# sudo dnf repoquery --qf '%{name}' --userinstalled | grep -v -- '-debuginfo$' | grep -v '^\(kernel-modules\|kernel\|kernel-core\|kernel-devel\)$' > installed.lst
-< installed.lst xargs sudo dnf -y install
-
 # migrate gnome setting
 # dconf dump / > gnome.dconf.bak
 dconf load / < gnome.dconf.bak
