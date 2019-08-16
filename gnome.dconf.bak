@@ -49,7 +49,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='datetime'
+last-panel='display'
 
 [org/gnome/desktop/a11y/applications]
 screen-magnifier-enabled=false
@@ -99,7 +99,7 @@ xkb-options=['caps:ctrl_modifier']
 [org/gnome/desktop/interface]
 clock-format='12h'
 clock-show-date=true
-clock-show-seconds=true
+clock-show-seconds=false
 clock-show-weekday=true
 cursor-size=48
 document-font-name='Sans 16'
