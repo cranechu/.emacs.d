@@ -89,15 +89,7 @@
 (setq sml/shorten-modes t)
 (setq rm-blacklist "")
 (display-time-mode 1)
-(display-battery-mode 1)
 (sml/setup)
-
-;; which function in the header line
-(which-function-mode 1)
-(let ((which-func '(which-func-mode ("" which-func-format " "))))
-  (setq-default mode-line-format (remove which-func mode-line-format))
-  (setq-default mode-line-misc-info (remove which-func mode-line-misc-info))
-  (setq-default header-line-format which-func))
 
 ;; sticky function at head
 (require 'stickyfunc-enhance)
@@ -244,6 +236,7 @@
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-i") 'delete-other-windows)
+(global-set-key (kbd "C-x x") 'split-window-right)
 
 ;;window switch
 (winner-mode 1)

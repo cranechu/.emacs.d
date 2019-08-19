@@ -49,7 +49,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='keyboard'
 
 [org/gnome/desktop/a11y/applications]
 screen-magnifier-enabled=false
@@ -115,7 +115,7 @@ text-scaling-factor=0.96999999999999975
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller']
+application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel']
 show-banners=false
 show-in-lock-screen=false
 
@@ -127,6 +127,9 @@ application-id='chromium-browser.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
@@ -199,7 +202,7 @@ enabled=@as []
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 0
+idle-delay=uint32 600
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
@@ -378,7 +381,7 @@ auto-save-session-one-shot=false
 
 [org/gnome/gnome-system-monitor]
 cpu-colors=[(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'), (4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8'), (8, '#f25915e815e8'), (9, '#f25915e815e8'), (10, '#f25915e815e8'), (11, '#f25915e815e8')]
-current-tab='processes'
+current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
@@ -454,7 +457,7 @@ ignore-phase2-ca-cert=false
 [org/gnome/power-manager]
 info-history-time=21600
 info-history-type='charge'
-info-last-device='wakeups'
+info-last-device='/org/freedesktop/UPower/devices/battery_BAT0'
 info-page-number=3
 info-stats-type='charge-data'
 
@@ -506,7 +509,7 @@ locate-pointer=true
 night-light-enabled=true
 
 [org/gnome/settings-daemon/plugins/power]
-idle-dim=false
+idle-dim=true
 power-button-action='nothing'
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'

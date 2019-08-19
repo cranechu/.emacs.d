@@ -8,13 +8,13 @@
       :tags nil
       :file "pci.c"
       :pointmax 201
-      :fsize 13453
-      :lastmodtime '(22815 40186 568514 428000)
+      :fsize 21172
+      :lastmodtime '(23893 461 467683 498000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :file "env_internal.h"
-      :fsize 2627
-      :lastmodtime '(22815 40186 568514 428000))
+      :fsize 3612
+      :lastmodtime '(23893 461 466683 507000))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -102,38 +102,54 @@
                 nil [3236 3373]))          
       :file "pci_nvme.c"
       :pointmax 3374
-      :fsize 2913
-      :lastmodtime '(22762 63405 366082 686000)
+      :fsize 2493
+      :lastmodtime '(23893 461 467683 498000)
       :unmatched-syntax '((punctuation 2614 . 2615)))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags nil
       :file "pci_ioat.c"
       :pointmax 201
-      :fsize 5420
-      :lastmodtime '(22762 63405 366082 686000)
+      :fsize 5065
+      :lastmodtime '(23893 461 467683 498000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags nil
       :file "env.c"
       :pointmax 201
-      :fsize 7184
-      :lastmodtime '(22843 59012 504468 710000)
+      :fsize 9600
+      :lastmodtime '(23893 461 466683 507000)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
         '( ("spdk/stdinc.h" include nil nil [1665 1689])
             ("env_internal.h" include nil nil [1691 1716])
-            ("rte_config.h" include (:system-flag t) nil [1718 1741])
-            ("rte_eal.h" include (:system-flag t) nil [1742 1762])
-            ("SPDK_ENV_DPDK_DEFAULT_NAME" variable (:constant-flag t) nil [1772 1798])
-            ("SPDK_ENV_DPDK_DEFAULT_SHM_ID" variable (:constant-flag t) nil [1815 1843])
-            ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" variable (:constant-flag t) nil [1856 1886])
-            ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" variable (:constant-flag t) nil [1899 1932])
-            ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" variable (:constant-flag t) nil [1944 1977])
-            ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" variable (:constant-flag t) nil [1989 2020])
+            ("spdk/version.h" include nil nil [1718 1743])
+            ("spdk/env_dpdk.h" include nil nil [1744 1770])
+            ("rte_config.h" include (:system-flag t) nil [1772 1795])
+            ("rte_eal.h" include (:system-flag t) nil [1796 1816])
+            ("SPDK_ENV_DPDK_DEFAULT_NAME" variable (:constant-flag t) nil [1826 1852])
+            ("SPDK_ENV_DPDK_DEFAULT_SHM_ID" variable (:constant-flag t) nil [1869 1897])
+            ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" variable (:constant-flag t) nil [1910 1940])
+            ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" variable (:constant-flag t) nil [1953 1986])
+            ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" variable (:constant-flag t) nil [1998 2031])
+            ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" variable (:constant-flag t) nil [2043 2074])
+            ("g_eal_cmdline" variable
+               (:pointer 2
+                :typemodifiers ("static")
+                :type "char")
+                nil [2083 2111])
+            ("g_eal_cmdline_argcount" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [2112 2146])
+            ("g_external_init" variable
+               (:typemodifiers ("static")
+                :default-value "true"
+                :type "bool")
+                nil [2147 2182])
             ("_sprintf_alloc" function
                (:pointer 1
                 :typemodifiers ("static")
@@ -142,10 +158,16 @@
                        (:pointer 1
                         :constant-flag t
                         :type "char")
-                        (reparse-symbol arg-sub-list) [2058 2077])
-                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2078 2082]))                  
+                        (reparse-symbol arg-sub-list) [2213 2232])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2233 2237]))                  
                 :type "char")
-                nil [2029 3142])
+                nil [2184 3297])
+            ("spdk_env_unlink_shared_files" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3340 3345]))                  
+                :type "void")
+                nil [3299 3847])
             ("spdk_env_opts_init" function
                (:arguments 
                   ( ("opts" variable
@@ -154,19 +176,19 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [3168 3195]))                  
+                        (reparse-symbol arg-sub-list) [3873 3900]))                  
                 :type "void")
-                nil [3144 3578])
+                nil [3849 4268])
             ("spdk_free_args" function
                (:typemodifiers ("static")
                 :arguments 
                   ( ("args" variable
                        (:pointer 2
                         :type "char")
-                        (reparse-symbol arg-sub-list) [3607 3619])
-                    ("argcount" variable (:type "int") (reparse-symbol arg-sub-list) [3620 3633]))                  
+                        (reparse-symbol arg-sub-list) [4297 4309])
+                    ("argcount" variable (:type "int") (reparse-symbol arg-sub-list) [4310 4323]))                  
                 :type "void")
-                nil [3580 3765])
+                nil [4270 4425])
             ("spdk_push_arg" function
                (:pointer 2
                 :typemodifiers ("static")
@@ -175,17 +197,17 @@
                        (:pointer 1
                         :dereference 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [3796 3809])
+                        (reparse-symbol arg-sub-list) [4456 4469])
                     ("argcount" variable
                        (:pointer 1
                         :type "int")
-                        (reparse-symbol arg-sub-list) [3810 3824])
+                        (reparse-symbol arg-sub-list) [4470 4484])
                     ("arg" variable
                        (:pointer 1
                         :type "char")
-                        (reparse-symbol arg-sub-list) [3825 3835]))                  
+                        (reparse-symbol arg-sub-list) [4485 4495]))                  
                 :type "char")
-                nil [3767 4075])
+                nil [4427 4839])
             ("spdk_build_eal_cmdline" function
                (:typemodifiers ("static")
                 :arguments 
@@ -196,14 +218,19 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [4111 4144])
-                    ("out" variable
-                       (:pointer 2
-                        :dereference 1
-                        :type "char")
-                        (reparse-symbol arg-sub-list) [4145 4158]))                  
+                        (reparse-symbol arg-sub-list) [4875 4908]))                  
                 :type "int")
-                nil [4077 5857])
+                nil [4841 10735])
+            ("spdk_env_dpdk_post_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10765 10770]))                  
+                :type "int")
+                nil [10737 11005])
+            ("spdk_env_dpdk_post_fini" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [11036 11041]))                  
+                :type "void")
+                nil [11007 11120])
             ("spdk_env_init" function
                (:arguments 
                   ( ("opts" variable
@@ -213,21 +240,31 @@
                              (:prototype t
                               :type "struct")
                               nil nil))
-                        (reparse-symbol arg-sub-list) [5878 5911]))                  
+                        (reparse-symbol arg-sub-list) [11140 11173]))                  
+                :type "int")
+                nil [11122 12713])
+            ("spdk_env_fini" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12734 12739]))                  
                 :type "void")
-                nil [5859 6873]))          
+                nil [12715 12771])
+            ("spdk_env_dpdk_external_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12806 12811]))                  
+                :type "bool")
+                nil [12773 12840]))          
       :file "init.c"
-      :pointmax 6874
-      :fsize 6873
-      :lastmodtime '(22815 40186 568514 428000)
+      :pointmax 12841
+      :fsize 12840
+      :lastmodtime '(23893 461 466683 507000)
       :unmatched-syntax nil
       :lexical-table 
-        '(("SPDK_ENV_DPDK_DEFAULT_SHM_ID" . ((punctuation "-" 1845 . 1846) (number "1" 1846 . 1847)))
-          ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" . ((punctuation "-" 1888 . 1889) (number "1" 1889 . 1890)))
-          ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" . ((punctuation "-" 1933 . 1934) (number "1" 1934 . 1935)))
-          ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" . ((punctuation "-" 1978 . 1979) (number "1" 1979 . 1980)))
-          ("SPDK_ENV_DPDK_DEFAULT_NAME" . ((string "\"spdk\"" 1800 . 1806)))
-          ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" . ((string "\"0x1\"" 2022 . 2027)))
+        '(("SPDK_ENV_DPDK_DEFAULT_SHM_ID" . ((punctuation "-" 1899 . 1900) (number "1" 1900 . 1901)))
+          ("SPDK_ENV_DPDK_DEFAULT_MEM_SIZE" . ((punctuation "-" 1942 . 1943) (number "1" 1943 . 1944)))
+          ("SPDK_ENV_DPDK_DEFAULT_MASTER_CORE" . ((punctuation "-" 1987 . 1988) (number "1" 1988 . 1989)))
+          ("SPDK_ENV_DPDK_DEFAULT_MEM_CHANNEL" . ((punctuation "-" 2032 . 2033) (number "1" 2033 . 2034)))
+          ("SPDK_ENV_DPDK_DEFAULT_NAME" . ((string "\"spdk\"" 1854 . 1860)))
+          ("SPDK_ENV_DPDK_DEFAULT_CORE_MASK" . ((string "\"0x1\"" 2076 . 2081)))
           )
 ))
   :file "!home!cranechu!spdk!lib!env_dpdk!semantic.cache"
