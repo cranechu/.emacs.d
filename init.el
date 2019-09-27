@@ -41,11 +41,10 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; color theme
-;(load-theme 'manoj-dark t)
 (load-theme 'wombat t)
 
 ;;TAGS
-(setq tags-table-list '("~/spdk/TAGS"))
+(setq tags-table-list '("~/pynvme/TAGS"))
 
 ;;zoom window
 (require 'zoom-window)
@@ -338,6 +337,5 @@
  '(sml/battery ((t (:inherit sml/global :foreground "white"))) t)
  '(sml/discharging ((t (:inherit sml/global :foreground "white"))))
  '(sml/filename ((t (:inherit sml/global :foreground "white" :weight bold))))
- '(sml/global ((t (:foreground "white" :inverse-video nil))))
- '(which-func ((t (:foreground "white")))))
+ '(sml/global ((t (:foreground "white" :inverse-video nil)))))
 
