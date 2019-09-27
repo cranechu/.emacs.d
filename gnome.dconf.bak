@@ -32,13 +32,13 @@ window-state=87168
 accuracy=9
 angle-units='degrees'
 base=10
-button-mode='basic'
+button-mode='programming'
 number-format='automatic'
 show-thousands=false
 show-zeroes=false
-source-currency=''
+source-currency='DZD'
 source-units='degree'
-target-currency=''
+target-currency='DZD'
 target-units='radian'
 window-position=(26, 23)
 word-size=64
@@ -49,13 +49,30 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='power'
+
+[org/gnome/desktop/a11y]
+always-show-universal-access-status=false
 
 [org/gnome/desktop/a11y/applications]
 screen-magnifier-enabled=false
 
 [org/gnome/desktop/a11y/keyboard]
 mousekeys-enable=false
+
+[org/gnome/desktop/a11y/magnifier]
+brightness-blue=0.28164556962025333
+brightness-green=0.28164556962025333
+brightness-red=0.28164556962025333
+color-saturation=0.63404255319148939
+contrast-blue=0.28164556962025333
+contrast-green=0.28164556962025333
+contrast-red=0.28164556962025333
+lens-mode=false
+mag-factor=2.0
+mouse-tracking='proportional'
+screen-position='left-half'
+scroll-at-edges=false
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'Sundry', 'YaST']
@@ -78,8 +95,9 @@ name='suse-yast.directory'
 translate=true
 
 [org/gnome/desktop/background]
+color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/lady-musgrave-blue.png'
+picture-uri='file:///usr/share/backgrounds/fedora-workstation/paisaje.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -91,7 +109,7 @@ automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
-mru-sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
+mru-sources=[('ibus', 'libpinyin'), ('xkb', 'us')]
 per-window=true
 sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 xkb-options=['caps:ctrl_modifier']
@@ -109,13 +127,13 @@ gtk-im-module='ibus'
 gtk-key-theme='Emacs'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
-monospace-font-name='Hack 16'
+monospace-font-name='Hack 15'
 show-battery-percentage=true
-text-scaling-factor=0.96999999999999975
+text-scaling-factor=0.89999999999999969
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel']
+application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel', 'org-gnome-evince', 'gnome-printers-panel', 'mediawriter', 'org-gnome-gedit', 'wps-office-pdf']
 show-banners=false
 show-in-lock-screen=false
 
@@ -143,11 +161,20 @@ application-id='google-chrome.desktop'
 [org/gnome/desktop/notifications/application/jetbrains-pycharm-ce]
 application-id='jetbrains-pycharm-ce.desktop'
 
+[org/gnome/desktop/notifications/application/mediawriter]
+application-id='mediawriter.desktop'
+
 [org/gnome/desktop/notifications/application/org-freedesktop-problems-applet]
 application-id='org.freedesktop.problems.applet.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-evince]
+application-id='org.gnome.Evince.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-gedit]
+application-id='org.gnome.gedit.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
@@ -163,6 +190,9 @@ application-id='org.gnome.tweaks.desktop'
 
 [org/gnome/desktop/notifications/application/rhythmbox]
 application-id='rhythmbox.desktop'
+
+[org/gnome/desktop/notifications/application/wps-office-pdf]
+application-id='wps-office-pdf.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 natural-scroll=false
@@ -183,6 +213,7 @@ display=['SHP', '0x144a', '0x00000000']
 display=['AUO', '0x133d', '0x00000000']
 
 [org/gnome/desktop/privacy]
+disable-microphone=false
 old-files-age=uint32 14
 remember-recent-files=false
 remove-old-temp-files=true
@@ -202,7 +233,7 @@ enabled=@as []
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 600
+idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
@@ -268,7 +299,7 @@ user-agent=''
 document-directory=@ms 'file:///home/cranechu/download'
 
 [org/gnome/evince/default]
-window-ratio=(3.1369047619047619, 1.2972972972972974)
+window-ratio=(2.6666666666666665, 1.9092592592592592)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -332,12 +363,12 @@ window-height=480
 window-width=600
 
 [org/gnome/gedit/plugins]
-active-plugins=['modelines', 'time', 'filebrowser', 'spell', 'docinfo']
+active-plugins=['modelines', 'filebrowser', 'docinfo', 'spell', 'time']
 
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu/ssdmeter/driver'
+virtual-root='file:///home/cranechu/Downloads'
 
 [org/gnome/gedit/preferences/encodings]
 candidate-encodings=['UTF-8', 'ISO-8859-15', 'UTF-16', 'BIG5', 'GB18030', 'GB2312', 'GBK', 'BIG5-HKSCS', 'EUC-TW']
@@ -349,8 +380,8 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(913, 622)
-state=87168
+size=(1920, 1031)
+state=43908
 
 [org/gnome/gitg/preferences/history]
 reference-sort-order='last-activity'
@@ -362,7 +393,7 @@ enable-monitoring=true
 paned-sidebar-position=200
 
 [org/gnome/gitg/state/history]
-paned-panels-position=135
+paned-panels-position=470
 paned-sidebar-position=200
 
 [org/gnome/gitg/state/window]
@@ -385,7 +416,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(960, 1031, 26, 23)
+window-state=(960, 1033, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-0-visible=true
@@ -418,7 +449,7 @@ col-8-width=90
 col-9-visible=true
 col-9-width=147
 columns-order=[0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
-sort-col=0
+sort-col=15
 sort-order=0
 
 [org/gnome/login-screen]
@@ -426,8 +457,18 @@ enable-fingerprint-authentication=true
 enable-password-authentication=true
 enable-smartcard-authentication=false
 
+[org/gnome/maps]
+last-viewed-location=[1.5862568987678036, 1.2317122908097347, 103.41249346733093, 104.07167315483093]
+transportation-type='pedestrian'
+window-maximized=true
+
 [org/gnome/meld]
+filename-filters=[('Backups', true, '#*# .#* ~* *~ *.{orig,bak,swp}'), ('OS-specific metadata', true, '.DS_Store ._* .Spotlight-V100 .Trashes Thumbs.db Desktop.ini'), ('Version Control', true, '_MTN .bzr .svn .svn .hg .fslckout _FOSSIL_ .fos CVS _darcs .git .svn .osc'), ('Binaries', true, '*.{pyc,a,obj,o,so,la,lib,dll,exe}'), ('Media', true, '*.{jpg,gif,png,bmp,wav,mp3,ogg,flac,avi,mpg,xcf,xpm}')]
+folder-status-filters=['new', 'modified']
+folder-time-resolution=1
+style-scheme='classic'
 vc-status-filters=['flatten', 'modified']
+wrap-mode='none'
 
 [org/gnome/meld/window-state]
 height=431
@@ -454,11 +495,15 @@ sidebar-width=351
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/photos]
+window-maximized=true
+
 [org/gnome/power-manager]
-info-history-time=21600
-info-history-type='charge'
+info-history-time=86400
+info-history-type='rate'
 info-last-device='/org/freedesktop/UPower/devices/battery_BAT0'
-info-page-number=3
+info-page-number=0
+info-stats-graph-smooth=true
 info-stats-type='charge-data'
 
 [org/gnome/rhythmbox]
@@ -518,7 +563,7 @@ sleep-inactive-battery-type='suspend'
 
 [org/gnome/settings-daemon/plugins/xsettings]
 antialiasing='rgba'
-hinting='none'
+hinting='full'
 overrides={'Gtk/ShellShowsAppMenu': <1>}
 
 [org/gnome/shell]
@@ -526,6 +571,7 @@ app-picker-view=uint32 0
 command-history=['r']
 enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'hidetopbar@mathieu.bidon.ca', 'hide-dash@xenatt.github.com', 'background-logo@fedorahosted.org']
 favorite-apps=@as []
+had-bluetooth-devices-setup=true
 
 [org/gnome/shell/extensions/cpufreq]
 governor='performance'
@@ -584,7 +630,7 @@ rewrap-on-resize=true
 scroll-on-output=false
 scrollbar-policy='never'
 use-system-font=true
-use-theme-colors=true
+use-theme-colors=false
 use-transparent-background=false
 
 [org/gtk/settings/file-chooser]
@@ -596,6 +642,6 @@ show-size-column=true
 sidebar-width=206
 sort-column='name'
 sort-directories-first=false
-sort-order='ascending'
-window-position=(26, 23)
-window-size=(1920, 1027)
+sort-order='descending'
+window-position=(0, 1)
+window-size=(1920, 1031)
