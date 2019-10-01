@@ -148,6 +148,7 @@
 
 ;;python
 (elpy-enable)
+(setq elpy-rpc-python-command "python3")
 (add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.pxd\\'" . python-mode))
 (setq python-indent-offset 4)
