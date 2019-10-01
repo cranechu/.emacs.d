@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 
 . ~/.emacs.d/z.sh
 
-PROMPT=$'\n''%{$fg[green]%}%(5~|%-2~/…/%3~|%~)%{$fg[yellow]%}▶%{$reset_color%} '
+PROMPT=$'\n'"$fg[cyan]%}$USER@%{$fg[blue]%}%m %{$fg[green]%}%(5~|%-2~/…/%3~|%~)%{$fg[yellow]%}▶%{$reset_color%} "
 
 export EDITOR=emacs
 export ALTERNATE_EDITOR=""
