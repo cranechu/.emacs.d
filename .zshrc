@@ -95,13 +95,12 @@ source $ZSH/oh-my-zsh.sh
 
 . ~/.emacs.d/z.sh
 
-PROMPT=$'\n'"$fg[cyan]%}$USER@%{$fg[blue]%}%m %{$fg[green]%}%(5~|%-2~/…/%3~|%~)%{$fg[yellow]%}▶%{$reset_color%} "
-
 export EDITOR=emacs
 export ALTERNATE_EDITOR=""
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export GOPATH=~/go
 export PATH=${PATH}:${GOPATH}/bin
+export PROMPT=$'\n'"%F{cyan}${${(%):-%m}#zoltan-}%f:%{$fg[green]%}%(5~|%-2~/…/%3~|%~)%{$fg[yellow]%}▶%{$reset_color%} "
 
 # User specific aliases and functions
 alias rm='rm -i'
