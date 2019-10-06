@@ -28,6 +28,13 @@ locations=[<(uint32 2, <('Singapore', 'WSAP', true, [(0.023852838928353343, 1.81
 window-size=(960, 600)
 window-state=87168
 
+[org/gnome/boxes]
+first-run=false
+view='icon-view'
+window-maximized=false
+window-position=[26, 23]
+window-size=[1127, 846]
+
 [org/gnome/calculator]
 accuracy=9
 angle-units='degrees'
@@ -49,7 +56,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='power'
+last-panel='keyboard'
 
 [org/gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -97,7 +104,7 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/paisaje.jpg'
+picture-uri='file:///usr/share/backgrounds/fedora-workstation/corn.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -129,7 +136,7 @@ gtk-theme='Adwaita'
 icon-theme='Adwaita'
 monospace-font-name='Hack 15'
 show-battery-percentage=true
-text-scaling-factor=0.89999999999999969
+text-scaling-factor=0.90999999999999992
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
@@ -241,6 +248,7 @@ event-sounds=true
 theme-name='__custom'
 
 [org/gnome/desktop/wm/keybindings]
+activate-window-menu=@as []
 panel-main-menu=['<Shift>space']
 show-desktop=['<Super>d']
 
@@ -416,7 +424,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(960, 1033, 26, 23)
+window-state=(960, 1032, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-0-visible=true
@@ -488,7 +496,7 @@ search-view='list-view'
 [org/gnome/nautilus/window-state]
 geometry='1101x597+26+23'
 initial-size=(890, 528)
-maximized=false
+maximized=true
 sidebar-width=351
 
 [org/gnome/nm-applet/eap/9809c2a2-77e6-4317-94d1-1978fc758999]
@@ -569,7 +577,7 @@ overrides={'Gtk/ShellShowsAppMenu': <1>}
 [org/gnome/shell]
 app-picker-view=uint32 0
 command-history=['r']
-enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'hidetopbar@mathieu.bidon.ca', 'hide-dash@xenatt.github.com', 'background-logo@fedorahosted.org']
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'hidetopbar@mathieu.bidon.ca', 'hide-dash@xenatt.github.com', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net']
 favorite-apps=@as []
 had-bluetooth-devices-setup=true
 
@@ -622,9 +630,10 @@ list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 allow-bold=false
-background-color='rgb(0,0,0)'
+background-color='rgb(46,52,54)'
+cjk-utf8-ambiguous-width='narrow'
 font='FreeMono 11.5'
-foreground-color='rgb(170,170,170)'
+foreground-color='rgb(211,215,207)'
 palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
 rewrap-on-resize=true
 scroll-on-output=false
