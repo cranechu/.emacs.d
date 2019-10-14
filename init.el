@@ -45,6 +45,7 @@
 
 ;;TAGS
 (setq tags-table-list '("~/pynvme/TAGS"))
+(global-set-key (kbd "M-.") 'xref-find-definitions-other-window)
 
 ;;zoom window
 (require 'zoom-window)
@@ -320,6 +321,9 @@
   (setq python-pytest-executable "sudo python3 -B -m pytest")
   ;; add prefix to repeat last test
   :bind (("C-t" . python-pytest-popup)))
+
+;; system clipboard
+(setq x-select-enable-clipboard t)
 
 ;; session management
 (use-package psession
