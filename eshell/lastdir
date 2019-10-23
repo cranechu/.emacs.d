@@ -1,7 +1,3 @@
-~
-/home/cranechu/python/1
-/root/spdk/doc
-/root/spdk
 /root
 /root/rocksdb
 ~
@@ -28,6 +24,10 @@
 /home/cranechu/ssdmeter
 /home/cranechu/demo/c
 /home/cranechu
+/home/cranechu/Downloads
+/home/cranechu/pynvme/spdk/dpdkbuild
+/home/cranechu/pynvme/spdk/dpdk
 /home/cranechu/pynvme/spdk
 /home/cranechu/pynvme
-/home/cranechu/pynvme/spdk
+/home/cranechu/pynvme
+/home/cranechu/pynvme/scripts/performance

@@ -1,33 +1,3 @@
-cd webpages/
-ls
-cd content/
-ls
-mkdir pictures
-ls
-mv pictures/ imgs
-ls
-cd ..
-cd ..
-ls
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-cd webpages/content/
-ls imgs/
-cd posts/
-cat dryrun.md 
-cd ..
-ls
-cd ..
-ls
-cd ..
-make pages file=dryrun.log 
-make pages file=dryrun.log 
-ls
-cd webpages/
-tree
-ls public/
-ls
-ls content/
 cd ..
 make pages file=dryrun.log 
 make pages
@@ -126,3 +96,33 @@ make clean
 make
 cd spdk/
 exit
+ls
+sudo poweroff
+cd spdk/
+gs
+git status
+cp test/bdev/bdevperf/bdev.conf ../
+ls
+git status
+cd ..
+sudo rm -rf spdk
+git submodule update --init --submodule
+git submodule update --init --recursive
+cd spdk/
+git checkout pynvme_1.4
+git submodule update --init --recursive
+cd dpdkbuild/
+cd ..
+cd dpdk
+git status
+git log
+git status
+cd ..
+ls
+git submodule update --init --recursive
+cd ..
+cd spdk/
+./configure --without-isal
+make
+make setup
+python3

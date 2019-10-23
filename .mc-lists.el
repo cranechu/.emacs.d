@@ -8,6 +8,7 @@
         c-electric-semi&comma
         c-indent-line-or-region
         electric-newline-and-maybe-indent
+        follow-end-of-buffer
         helm-M-x
         indent-for-tab-command
         iy-go-to-char--command
