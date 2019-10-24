@@ -7,7 +7,7 @@ sudo dnf remove -y firefox
 
 sudo dnf install -y redhat-rpm-config
 sudo dnf install -y python3-devel
-sudo dnf install -y emacs-nox
+sudo dnf install -y emacs
 sudo dnf install -y gnome-tweak-tool fio nvme-cli util-linux-user
 sudo dnf install -y zsh git
 sudo dnf update -y

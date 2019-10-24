@@ -56,7 +56,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='wifi'
 
 [org/gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -116,7 +116,7 @@ automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
-mru-sources=[('ibus', 'libpinyin'), ('xkb', 'us')]
+mru-sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 per-window=true
 sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 xkb-options=['caps:ctrl_modifier']
@@ -140,7 +140,7 @@ text-scaling-factor=0.90999999999999992
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel', 'org-gnome-evince', 'gnome-printers-panel', 'mediawriter', 'org-gnome-gedit', 'wps-office-pdf']
+application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel', 'org-gnome-evince', 'gnome-printers-panel', 'mediawriter', 'org-gnome-gedit', 'wps-office-pdf', 'wps-office-et', 'code', 'libreoffice-startcenter']
 show-banners=false
 show-in-lock-screen=false
 
@@ -149,6 +149,9 @@ application-id='abrt-applet.desktop'
 
 [org/gnome/desktop/notifications/application/chromium-browser]
 application-id='chromium-browser.desktop'
+
+[org/gnome/desktop/notifications/application/code]
+application-id='code.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
@@ -167,6 +170,9 @@ application-id='google-chrome.desktop'
 
 [org/gnome/desktop/notifications/application/jetbrains-pycharm-ce]
 application-id='jetbrains-pycharm-ce.desktop'
+
+[org/gnome/desktop/notifications/application/libreoffice-startcenter]
+application-id='libreoffice-startcenter.desktop'
 
 [org/gnome/desktop/notifications/application/mediawriter]
 application-id='mediawriter.desktop'
@@ -197,6 +203,9 @@ application-id='org.gnome.tweaks.desktop'
 
 [org/gnome/desktop/notifications/application/rhythmbox]
 application-id='rhythmbox.desktop'
+
+[org/gnome/desktop/notifications/application/wps-office-et]
+application-id='wps-office-et.desktop'
 
 [org/gnome/desktop/notifications/application/wps-office-pdf]
 application-id='wps-office-pdf.desktop'
@@ -307,7 +316,7 @@ user-agent=''
 document-directory=@ms 'file:///home/cranechu/download'
 
 [org/gnome/evince/default]
-window-ratio=(2.6666666666666665, 1.9092592592592592)
+window-ratio=(2.6666666666666665, 1.2815656565656566)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -355,12 +364,12 @@ x=26
 y=23
 
 [org/gnome/file-roller/dialogs/extract]
-recreate-folders=true
+recreate-folders=false
 skip-newer=false
 
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
-name-column-width=381
+name-column-width=472
 show-path=false
 sort-method='name'
 sort-type='ascending'
@@ -376,7 +385,7 @@ active-plugins=['modelines', 'filebrowser', 'docinfo', 'spell', 'time']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu/Downloads'
+virtual-root='file:///home/cranechu/.cache/.fr-V8Pa8K'
 
 [org/gnome/gedit/preferences/encodings]
 candidate-encodings=['UTF-8', 'ISO-8859-15', 'UTF-16', 'BIG5', 'GB18030', 'GB2312', 'GBK', 'BIG5-HKSCS', 'EUC-TW']
@@ -485,6 +494,7 @@ is-maximized=true
 width=702
 
 [org/gnome/mutter]
+center-new-windows=true
 dynamic-workspaces=false
 overlay-key='Super_L'
 
@@ -638,6 +648,8 @@ palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', '
 rewrap-on-resize=true
 scroll-on-output=false
 scrollbar-policy='never'
+title=''
+title-mode='after'
 use-system-font=true
 use-theme-colors=false
 use-transparent-background=false
@@ -652,5 +664,10 @@ sidebar-width=206
 sort-column='name'
 sort-directories-first=false
 sort-order='descending'
-window-position=(0, 1)
-window-size=(1920, 1031)
+window-position=(0, 0)
+window-size=(1868, 979)
+
+[org/onboard]
+schema-version='2.3'
+system-theme-associations={'HighContrast': 'HighContrast', 'HighContrastInverse': 'HighContrastInverse', 'LowContrast': 'LowContrast', 'ContrastHighInverse': 'HighContrastInverse', 'Default': ''}
+use-system-defaults=false
