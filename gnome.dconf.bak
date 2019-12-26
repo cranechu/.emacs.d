@@ -18,7 +18,7 @@ logo-opacity=uint32 206
 temperature-unit='centigrade'
 
 [org/gnome/Totem]
-active-plugins=['skipto', 'variable-rate', 'media_player_keys', 'apple-trailers', 'autoload-subtitles', 'vimeo', 'rotation', 'save-file', 'screensaver', 'movie-properties', 'screenshot', 'recent']
+active-plugins=['screensaver', 'movie-properties', 'vimeo', 'rotation', 'skipto', 'open-directory', 'autoload-subtitles', 'media-player-keys', 'recent', 'variable-rate', 'apple-trailers', 'save-file', 'screenshot']
 subtitle-encoding='UTF-8'
 
 [org/gnome/Weather]
@@ -56,7 +56,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='display'
 
 [org/gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -116,7 +116,7 @@ automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
 current=uint32 0
-mru-sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
+mru-sources=[('ibus', 'libpinyin'), ('xkb', 'us')]
 per-window=true
 sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 xkb-options=['caps:ctrl_modifier']
@@ -377,15 +377,15 @@ sort-type='ascending'
 [org/gnome/file-roller/ui]
 sidebar-width=200
 window-height=480
-window-width=600
+window-width=1037
 
 [org/gnome/gedit/plugins]
-active-plugins=['modelines', 'filebrowser', 'docinfo', 'spell', 'time']
+active-plugins=['spell', 'modelines', 'filebrowser', 'docinfo', 'time']
 
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu/.cache/.fr-V8Pa8K'
+virtual-root='file:///home/cranechu/Downloads'
 
 [org/gnome/gedit/preferences/encodings]
 candidate-encodings=['UTF-8', 'ISO-8859-15', 'UTF-16', 'BIG5', 'GB18030', 'GB2312', 'GBK', 'BIG5-HKSCS', 'EUC-TW']
@@ -397,7 +397,7 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(1920, 1031)
+size=(1024, 719)
 state=43908
 
 [org/gnome/gitg/preferences/history]
@@ -410,7 +410,7 @@ enable-monitoring=true
 paned-sidebar-position=200
 
 [org/gnome/gitg/state/history]
-paned-panels-position=470
+paned-panels-position=350
 paned-sidebar-position=200
 
 [org/gnome/gitg/state/window]
@@ -433,7 +433,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(960, 1032, 26, 23)
+window-state=(908, 563, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-0-visible=true
@@ -498,6 +498,9 @@ center-new-windows=true
 dynamic-workspaces=false
 overlay-key='Super_L'
 
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
+
 [org/gnome/nautilus/preferences]
 default-folder-viewer='list-view'
 search-filter-time-type='last_modified'
@@ -506,7 +509,7 @@ search-view='list-view'
 [org/gnome/nautilus/window-state]
 geometry='1101x597+26+23'
 initial-size=(890, 528)
-maximized=true
+maximized=false
 sidebar-width=351
 
 [org/gnome/nm-applet/eap/9809c2a2-77e6-4317-94d1-1978fc758999]
@@ -589,7 +592,7 @@ app-picker-view=uint32 0
 command-history=['r']
 enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'hidetopbar@mathieu.bidon.ca', 'hide-dash@xenatt.github.com', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net']
 favorite-apps=@as []
-had-bluetooth-devices-setup=true
+had-bluetooth-devices-setup=false
 
 [org/gnome/shell/extensions/cpufreq]
 governor='performance'
@@ -621,10 +624,14 @@ workspaces-only-on-primary=true
 [org/gnome/shell/window-switcher]
 app-icon-mode='both'
 
+[org/gnome/shell/world-clocks]
+locations=@av []
+
 [org/gnome/software]
 check-timestamp=int64 7856581528
 first-run=false
 install-timestamp=int64 1526447489
+online-updates-timestamp=int64 1574679831
 show-nonfree-prompt=false
 upgrade-notification-timestamp=int64 1527728410
 
@@ -660,11 +667,13 @@ date-format='regular'
 location-mode='path-bar'
 show-hidden=false
 show-size-column=true
+show-type-column=true
 sidebar-width=206
 sort-column='name'
 sort-directories-first=false
 sort-order='descending'
-window-position=(0, 0)
+type-format='category'
+window-position=(26, 27)
 window-size=(1868, 979)
 
 [org/onboard]
