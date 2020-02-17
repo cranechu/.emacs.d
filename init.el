@@ -45,7 +45,7 @@
 (load-theme 'wombat t)
 
 ;;TAGS
-(setq tags-table-list '("~/pynvme/TAGS"))
+(setq tags-table-list '("~/palmtree/TAGS"))
 (global-set-key (kbd "M-.") 'xref-find-definitions-other-window)
 
 ;;zoom window
@@ -309,7 +309,7 @@
 
 ;; yasnippet
 (require 'yasnippet-snippets)
-(setq yas-snippet-dirs '("~/pynvme/snippets"))
+(setq yas-snippet-dirs '("~/palmtree/snippets"))
 (yas-global-mode 1)
 
 ;; pytest
