@@ -22,4 +22,6 @@
         ace-window
         dired-do-rename
         helm-occur
+        realgud:cmd-next
+        realgud:cmd-step
         ))
