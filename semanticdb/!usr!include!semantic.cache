@@ -6,96 +6,100 @@
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
-        '( ("_FEATURES_H" variable (:constant-flag t) nil [818 829])
-            ("__KERNEL_STRICT_NAMES" variable (:constant-flag t) nil [6170 6191])
-            ("__GNUC_PREREQ" variable (:constant-flag t) nil [6494 6507])
-            ("__glibc_clang_prereq" variable (:constant-flag t) nil [7087 7107])
-            ("__GLIBC_USE" variable (:constant-flag t) nil [7173 7184])
-            ("_ISOC95_SOURCE" variable (:constant-flag t) nil [7785 7799])
-            ("_ISOC99_SOURCE" variable (:constant-flag t) nil [7835 7849])
-            ("_ISOC11_SOURCE" variable (:constant-flag t) nil [7885 7899])
-            ("_POSIX_SOURCE" variable (:constant-flag t) nil [7934 7947])
-            ("_POSIX_C_SOURCE" variable (:constant-flag t) nil [7984 7999])
-            ("_XOPEN_SOURCE" variable (:constant-flag t) nil [8040 8053])
-            ("_XOPEN_SOURCE_EXTENDED" variable (:constant-flag t) nil [8099 8121])
-            ("_LARGEFILE64_SOURCE" variable (:constant-flag t) nil [8162 8181])
-            ("_DEFAULT_SOURCE" variable (:constant-flag t) nil [8218 8233])
-            ("_ATFILE_SOURCE" variable (:constant-flag t) nil [8269 8283])
-            ("_DEFAULT_SOURCE" variable (:constant-flag t) nil [8650 8665])
-            ("_POSIX_SOURCE" variable (:constant-flag t) nil [9954 9967])
-            ("_POSIX_C_SOURCE" variable (:constant-flag t) nil [10004 10019])
-            ("__USE_POSIX" variable (:constant-flag t) nil [11349 11360])
-            ("__USE_POSIX2" variable (:constant-flag t) nil [11457 11469])
-            ("__USE_XOPEN" variable (:constant-flag t) nil [12051 12062])
-            ("__USE_XOPEN_EXTENDED" variable (:constant-flag t) nil [12107 12127])
-            ("__USE_UNIX98" variable (:constant-flag t) nil [12140 12152])
-            ("_LARGEFILE_SOURCE" variable (:constant-flag t) nil [12192 12209])
-            ("__USE_XOPEN2K8" variable (:constant-flag t) nil [12291 12305])
-            ("__USE_XOPEN2K8XSI" variable (:constant-flag t) nil [12320 12337])
-            ("__USE_XOPEN2K" variable (:constant-flag t) nil [12361 12374])
-            ("__USE_XOPEN2KXSI" variable (:constant-flag t) nil [12388 12404])
-            ("__USE_ISOC95" variable (:constant-flag t) nil [12441 12453])
-            ("__USE_ISOC99" variable (:constant-flag t) nil [12491 12503])
-            ("__USE_LARGEFILE" variable (:constant-flag t) nil [12648 12663])
-            ("__USE_LARGEFILE64" variable (:constant-flag t) nil [12710 12727])
-            ("__USE_MISC" variable (:constant-flag t) nil [12871 12881])
-            ("__USE_ATFILE" variable (:constant-flag t) nil [12923 12935])
-            ("__USE_GNU" variable (:constant-flag t) nil [12974 12983])
-            ("__USE_FORTIFY_LEVEL" variable (:constant-flag t) nil [13394 13413])
-            ("__GLIBC_USE_DEPRECATED_GETS" variable (:constant-flag t) nil [13825 13852])
-            ("__GLIBC_USE_DEPRECATED_SCANF" variable (:constant-flag t) nil [14813 14841])
-            ("stdc-predef.h" include (:system-flag t) nil [14972 14996])
-            ("__GNU_LIBRARY__" variable (:constant-flag t) nil [15429 15444])
-            ("__GLIBC__" variable (:constant-flag t) nil [15588 15597])
-            ("__GLIBC_MINOR__" variable (:constant-flag t) nil [15608 15623])
-            ("__GLIBC_PREREQ" variable (:constant-flag t) nil [15636 15650])
-            ("sys/cdefs.h" include (:system-flag t) nil [15850 15874])
-            ("gnu/stubs.h" include (:system-flag t) nil [16697 16719]))          
+        '( ("_FEATURES_H" variable (:constant-flag t) nil [819 830])
+            ("__KERNEL_STRICT_NAMES" variable (:constant-flag t) nil [6251 6272])
+            ("__GNUC_PREREQ" variable (:constant-flag t) nil [6575 6588])
+            ("__glibc_clang_prereq" variable (:constant-flag t) nil [7168 7188])
+            ("__GLIBC_USE" variable (:constant-flag t) nil [7254 7265])
+            ("_ISOC95_SOURCE" variable (:constant-flag t) nil [7866 7880])
+            ("_ISOC99_SOURCE" variable (:constant-flag t) nil [7916 7930])
+            ("_ISOC11_SOURCE" variable (:constant-flag t) nil [7966 7980])
+            ("_ISOC2X_SOURCE" variable (:constant-flag t) nil [8016 8030])
+            ("_POSIX_SOURCE" variable (:constant-flag t) nil [8065 8078])
+            ("_POSIX_C_SOURCE" variable (:constant-flag t) nil [8115 8130])
+            ("_XOPEN_SOURCE" variable (:constant-flag t) nil [8171 8184])
+            ("_XOPEN_SOURCE_EXTENDED" variable (:constant-flag t) nil [8230 8252])
+            ("_LARGEFILE64_SOURCE" variable (:constant-flag t) nil [8293 8312])
+            ("_DEFAULT_SOURCE" variable (:constant-flag t) nil [8349 8364])
+            ("_ATFILE_SOURCE" variable (:constant-flag t) nil [8400 8414])
+            ("_DEFAULT_SOURCE" variable (:constant-flag t) nil [8815 8830])
+            ("__GLIBC_USE_ISOC2X" variable (:constant-flag t) nil [9030 9048])
+            ("_POSIX_SOURCE" variable (:constant-flag t) nil [10443 10456])
+            ("_POSIX_C_SOURCE" variable (:constant-flag t) nil [10493 10508])
+            ("__USE_POSIX" variable (:constant-flag t) nil [11838 11849])
+            ("__USE_POSIX2" variable (:constant-flag t) nil [11946 11958])
+            ("__USE_XOPEN" variable (:constant-flag t) nil [12540 12551])
+            ("__USE_XOPEN_EXTENDED" variable (:constant-flag t) nil [12596 12616])
+            ("__USE_UNIX98" variable (:constant-flag t) nil [12629 12641])
+            ("_LARGEFILE_SOURCE" variable (:constant-flag t) nil [12681 12698])
+            ("__USE_XOPEN2K8" variable (:constant-flag t) nil [12780 12794])
+            ("__USE_XOPEN2K8XSI" variable (:constant-flag t) nil [12809 12826])
+            ("__USE_XOPEN2K" variable (:constant-flag t) nil [12850 12863])
+            ("__USE_XOPEN2KXSI" variable (:constant-flag t) nil [12877 12893])
+            ("__USE_ISOC95" variable (:constant-flag t) nil [12930 12942])
+            ("__USE_ISOC99" variable (:constant-flag t) nil [12980 12992])
+            ("__USE_LARGEFILE" variable (:constant-flag t) nil [13137 13152])
+            ("__USE_LARGEFILE64" variable (:constant-flag t) nil [13199 13216])
+            ("__USE_MISC" variable (:constant-flag t) nil [13360 13370])
+            ("__USE_ATFILE" variable (:constant-flag t) nil [13412 13424])
+            ("__USE_GNU" variable (:constant-flag t) nil [13463 13472])
+            ("__USE_FORTIFY_LEVEL" variable (:constant-flag t) nil [13883 13902])
+            ("__GLIBC_USE_DEPRECATED_GETS" variable (:constant-flag t) nil [14314 14341])
+            ("__GLIBC_USE_DEPRECATED_SCANF" variable (:constant-flag t) nil [15302 15330])
+            ("stdc-predef.h" include (:system-flag t) nil [15461 15485])
+            ("__GNU_LIBRARY__" variable (:constant-flag t) nil [15918 15933])
+            ("__GLIBC__" variable (:constant-flag t) nil [16077 16086])
+            ("__GLIBC_MINOR__" variable (:constant-flag t) nil [16097 16112])
+            ("__GLIBC_PREREQ" variable (:constant-flag t) nil [16125 16139])
+            ("sys/cdefs.h" include (:system-flag t) nil [16339 16363])
+            ("gnu/stubs.h" include (:system-flag t) nil [17186 17208]))          
       :file "features.h"
-      :pointmax 16747
-      :fsize 16746
-      :lastmodtime '(24039 58457 0 0)
-      :unmatched-syntax '((close-paren 11338 . 11339) (number "700" 11325 . 11338) (symbol 11317 . 11324) (punctuation 11315 . 11316) (punctuation 11314 . 11315) (close-paren 11305 . 11306) (number 11304 . 11305) (punctuation 11302 . 11303) (punctuation 11301 . 11302) (number "200809L" 11285 . 11300) (punctuation 11283 . 11284) (punctuation 11282 . 11283) (number "200809L" 11266 . 11281) (symbol 11258 . 11265) (open-paren 11257 . 11258) (punctuation 11255 . 11256) (punctuation 11254 . 11255) (close-paren 8614 . 8615) (semantic-list 8439 . 8614) (punctuation 8437 . 8438) (punctuation 8436 . 8437))
+      :pointmax 17236
+      :fsize 17235
+      :lastmodtime '(24181 26055 0 0)
+      :unmatched-syntax '((close-paren 11827 . 11828) (number "700" 11814 . 11827) (symbol 11806 . 11813) (punctuation 11804 . 11805) (punctuation 11803 . 11804) (close-paren 11794 . 11795) (number 11793 . 11794) (punctuation 11791 . 11792) (punctuation 11790 . 11791) (number "200809L" 11774 . 11789) (punctuation 11772 . 11773) (punctuation 11771 . 11772) (number "200809L" 11755 . 11770) (symbol 11747 . 11754) (open-paren 11746 . 11747) (punctuation 11744 . 11745) (punctuation 11743 . 11744) (close-paren 8779 . 8780) (semantic-list 8570 . 8779) (punctuation 8568 . 8569) (punctuation 8567 . 8568))
       :lexical-table 
-        '(("__glibc_clang_prereq" (spp-arg-list ("maj" "min") 7107 . 7117) . ((number "0" 7118 . 7119)))
-          ("__USE_XOPEN" . ((number "1" 12063 . 12064)))
-          ("__USE_XOPEN_EXTENDED" . ((number "1" 12128 . 12129)))
-          ("_ISOC99_SOURCE" . ((number "1" 7850 . 7851)))
-          ("__USE_XOPEN2KXSI" . ((number "1" 12405 . 12406)))
-          ("__USE_ATFILE" . ((number "1" 12936 . 12937)))
-          ("_ISOC95_SOURCE" . ((number "1" 7800 . 7801)))
-          ("_LARGEFILE64_SOURCE" . ((number "1" 8182 . 8183)))
-          ("__USE_LARGEFILE64" . ((number "1" 12728 . 12729)))
+        '(("__glibc_clang_prereq" (spp-arg-list ("maj" "min") 7188 . 7198) . ((number "0" 7199 . 7200)))
+          ("__USE_XOPEN" . ((number "1" 12552 . 12553)))
+          ("__USE_XOPEN_EXTENDED" . ((number "1" 12617 . 12618)))
+          ("_ISOC99_SOURCE" . ((number "1" 7931 . 7932)))
+          ("__USE_XOPEN2KXSI" . ((number "1" 12894 . 12895)))
+          ("__USE_ATFILE" . ((number "1" 13425 . 13426)))
+          ("_ISOC95_SOURCE" . ((number "1" 7881 . 7882)))
+          ("_LARGEFILE64_SOURCE" . ((number "1" 8313 . 8314)))
+          ("__USE_LARGEFILE64" . ((number "1" 13217 . 13218)))
           ("__KERNEL_STRICT_NAMES")
-          ("_POSIX_SOURCE" . ((number "1" 9968 . 9969)))
-          ("__USE_XOPEN2K8" . ((number "1" 12306 . 12307)))
-          ("__GLIBC_USE" (spp-arg-list ("F") 7184 . 7187) . ((spp-symbol-merge ((symbol "__GLIBC_USE_" 7188 . 7200) (symbol "F" 7204 . 7205)) 7188 . 7205)))
-          ("__USE_XOPEN2K" . ((number "1" 12375 . 12376)))
-          ("__USE_ISOC95" . ((number "1" 12455 . 12456)))
-          ("__GLIBC__" . ((number "2" 15598 . 15599)))
-          ("_XOPEN_SOURCE_EXTENDED" . ((number "1" 8122 . 8123)))
-          ("__USE_XOPEN2K8XSI" . ((number "1" 12338 . 12339)))
-          ("__GLIBC_USE_DEPRECATED_GETS" . ((number "1" 13853 . 13854)))
-          ("__GLIBC_USE_DEPRECATED_SCANF" . ((number "0" 14842 . 14843)))
-          ("_XOPEN_SOURCE" . ((number "700" 8054 . 8057)))
-          ("_ATFILE_SOURCE" . ((number "1" 8284 . 8285)))
-          ("__USE_FORTIFY_LEVEL" . ((number "0" 13414 . 13415)))
-          ("_FEATURES_H" . ((number "1" 830 . 831)))
-          ("__USE_MISC" . ((number "1" 12882 . 12883)))
-          ("__GNU_LIBRARY__" . ((number "6" 15445 . 15446)))
-          ("__GLIBC_MINOR__" . ((number "30" 15624 . 15626)))
-          ("__GLIBC_PREREQ" (spp-arg-list ("maj" "min") 15650 . 15660) . ((semantic-list "((__GLIBC__ << 16) + __GLIBC_MINOR__ >= ((maj) << 16) + (min))" 15664 . 15726)))
-          ("__GNUC_PREREQ" (spp-arg-list ("maj" "min") 6507 . 6517) . ((semantic-list "((__GNUC__ << 16) + __GNUC_MINOR__ >= ((maj) << 16) + (min))" 6521 . 6581)))
-          ("__USE_POSIX2" . ((number "1" 11470 . 11471)))
-          ("__USE_ISOC99" . ((number "1" 12505 . 12506)))
-          ("__USE_GNU" . ((number "1" 12984 . 12985)))
-          ("_ISOC11_SOURCE" . ((number "1" 7900 . 7901)))
-          ("_POSIX_C_SOURCE" . ((number "200809L" 10020 . 10027)))
-          ("__USE_LARGEFILE" . ((number "1" 12664 . 12665)))
-          ("__USE_UNIX98" . ((number "1" 12153 . 12154)))
-          ("_DEFAULT_SOURCE" . ((number "1" 8666 . 8667)))
-          ("__USE_POSIX" . ((number "1" 11361 . 11362)))
-          ("_LARGEFILE_SOURCE" . ((number "1" 12210 . 12211)))
+          ("_POSIX_SOURCE" . ((number "1" 10457 . 10458)))
+          ("__USE_XOPEN2K8" . ((number "1" 12795 . 12796)))
+          ("__GLIBC_USE" (spp-arg-list ("F") 7265 . 7268) . ((spp-symbol-merge ((symbol "__GLIBC_USE_" 7269 . 7281) (symbol "F" 7285 . 7286)) 7269 . 7286)))
+          ("__USE_XOPEN2K" . ((number "1" 12864 . 12865)))
+          ("__USE_ISOC95" . ((number "1" 12944 . 12945)))
+          ("__GLIBC__" . ((number "2" 16087 . 16088)))
+          ("_ISOC2X_SOURCE" . ((number "1" 8031 . 8032)))
+          ("_XOPEN_SOURCE_EXTENDED" . ((number "1" 8253 . 8254)))
+          ("__USE_XOPEN2K8XSI" . ((number "1" 12827 . 12828)))
+          ("__GLIBC_USE_DEPRECATED_GETS" . ((number "1" 14342 . 14343)))
+          ("__GLIBC_USE_DEPRECATED_SCANF" . ((number "0" 15331 . 15332)))
+          ("_XOPEN_SOURCE" . ((number "700" 8185 . 8188)))
+          ("_ATFILE_SOURCE" . ((number "1" 8415 . 8416)))
+          ("__USE_FORTIFY_LEVEL" . ((number "0" 13903 . 13904)))
+          ("_FEATURES_H" . ((number "1" 831 . 832)))
+          ("__USE_MISC" . ((number "1" 13371 . 13372)))
+          ("__GNU_LIBRARY__" . ((number "6" 15934 . 15935)))
+          ("__GLIBC_MINOR__" . ((number "31" 16113 . 16115)))
+          ("__GLIBC_PREREQ" (spp-arg-list ("maj" "min") 16139 . 16149) . ((semantic-list "((__GLIBC__ << 16) + __GLIBC_MINOR__ >= ((maj) << 16) + (min))" 16153 . 16215)))
+          ("__GNUC_PREREQ" (spp-arg-list ("maj" "min") 6588 . 6598) . ((semantic-list "((__GNUC__ << 16) + __GNUC_MINOR__ >= ((maj) << 16) + (min))" 6602 . 6662)))
+          ("__GLIBC_USE_ISOC2X" . ((number "0" 9049 . 9050)))
+          ("__USE_POSIX2" . ((number "1" 11959 . 11960)))
+          ("__USE_ISOC99" . ((number "1" 12994 . 12995)))
+          ("__USE_GNU" . ((number "1" 13473 . 13474)))
+          ("_ISOC11_SOURCE" . ((number "1" 7981 . 7982)))
+          ("_POSIX_C_SOURCE" . ((number "200809L" 10509 . 10516)))
+          ("__USE_LARGEFILE" . ((number "1" 13153 . 13154)))
+          ("__USE_UNIX98" . ((number "1" 12642 . 12643)))
+          ("_DEFAULT_SOURCE" . ((number "1" 8831 . 8832)))
+          ("__USE_POSIX" . ((number "1" 11850 . 11851)))
+          ("_LARGEFILE_SOURCE" . ((number "1" 12699 . 12700)))
           )
 )
     (semanticdb-table "semanticdb-table"
@@ -103,8 +107,8 @@
       :tags nil
       :file "stdc-predef.h"
       :pointmax 2364
-      :fsize 2289
-      :lastmodtime '(24039 58457 0 0)
+      :fsize 2290
+      :lastmodtime '(24181 26055 0 0)
       :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
@@ -1553,8 +1557,8 @@
                 (reparse-symbol extern-c-contents) [1031 1044]))          
       :file "stdio.h"
       :pointmax 31495
-      :fsize 29949
-      :lastmodtime '(24039 58468 0 0)
+      :fsize 29950
+      :lastmodtime '(24181 26067 0 0)
       :unmatched-syntax '((semantic-list 19800 . 19847) (punctuation 19798 . 19799) (punctuation 19797 . 19798) (number "1" 1586 . 1598) (symbol 1578 . 1585) (punctuation 1576 . 1577) (punctuation 1575 . 1576) (number "1" 1557 . 1568) (symbol 1549 . 1556) (punctuation 1547 . 1548) (punctuation 1546 . 1547) (number "1" 1533 . 1545) (symbol 1525 . 1532) (punctuation 1523 . 1524) (punctuation 1522 . 1523))
       :lexical-table 
         '(("putc" (spp-arg-list ("_ch" "_fp") 19071 . 19081) . ((symbol "_IO_putc" 19082 . 19090) (semantic-list "(_ch, _fp)" 19091 . 19101)))
@@ -1748,8 +1752,8 @@
             ("UINTMAX_C" variable (:constant-flag t) nil [8042 8051]))          
       :file "stdint.h"
       :pointmax 8095
-      :fsize 8469
-      :lastmodtime '(24039 58467 0 0)
+      :fsize 8474
+      :lastmodtime '(24181 26066 0 0)
       :unmatched-syntax '((LONG 3342 . 3346) (UNSIGNED 3333 . 3341) (TYPEDEF 3325 . 3332) (LONG 3286 . 3290) (TYPEDEF 3278 . 3285) (LONG 2779 . 2783) (UNSIGNED 2770 . 2778) (TYPEDEF 2762 . 2769) (LONG 2433 . 2437) (TYPEDEF 2425 . 2432) (LONG 2124 . 2128) (UNSIGNED 2115 . 2123) (TYPEDEF 2107 . 2114) (LONG 1850 . 1854) (TYPEDEF 1842 . 1849) (LONG 1601 . 1605) (UNSIGNED 1592 . 1600) (TYPEDEF 1584 . 1591) (LONG 1287 . 1291) (TYPEDEF 1279 . 1286))
       :lexical-table 
         '(("__int8_t_defined")
@@ -3494,8 +3498,8 @@
                 (reparse-symbol extern-c-contents) [1127 1136]))          
       :file "stdlib.h"
       :pointmax 35654
-      :fsize 35830
-      :lastmodtime '(24039 58467 0 0)
+      :fsize 35835
+      :lastmodtime '(24181 26066 0 0)
       :unmatched-syntax '((number "1" 29530 . 29540) (symbol 29522 . 29529) (punctuation 29520 . 29521) (punctuation 29519 . 29520) (LONG 28841 . 28845) (EXTERN 28834 . 28840) (TYPEDEF 27794 . 27801) (TYPEDEF 27645 . 27652) (semantic-list 22892 . 22949) (punctuation 22890 . 22891) (punctuation 22889 . 22890) (number "1" 19357 . 19367) (symbol 19349 . 19356) (punctuation 19347 . 19348) (punctuation 19346 . 19347) (LONG 16331 . 16335) (UNSIGNED 16322 . 16330) (LONG 9343 . 9347) (UNSIGNED 9334 . 9342) (EXTERN 9327 . 9333) (LONG 9159 . 9163) (EXTERN 9152 . 9158) (LONG 6606 . 6610) (UNSIGNED 6597 . 6605) (EXTERN 6590 . 6596) (LONG 6386 . 6390) (EXTERN 6379 . 6385) (LONG 6138 . 6142) (UNSIGNED 6129 . 6137) (EXTERN 6122 . 6128) (LONG 5920 . 5924) (EXTERN 5913 . 5919) (LONG 3488 . 3492) (EXTERN 3481 . 3487) (LONG 2395 . 2399) (LONG 2353 . 2357))
       :lexical-table 
         '(("RAND_MAX" . ((number "2147483647" 2563 . 2573)))
@@ -4458,8 +4462,8 @@
                 (reparse-symbol extern-c-contents) [980 993]))          
       :file "string.h"
       :pointmax 22618
-      :fsize 17545
-      :lastmodtime '(24039 58470 0 0)
+      :fsize 17660
+      :lastmodtime '(24181 26069 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("strdupa" (spp-arg-list ("s") 6693 . 6696) . ((semantic-list "(__extension__							      \\
@@ -6075,8 +6079,8 @@
                 (reparse-symbol extern-c-contents) [1176 1190]))          
       :file "unistd.h"
       :pointmax 42583
-      :fsize 42803
-      :lastmodtime '(24039 58470 0 0)
+      :fsize 42804
+      :lastmodtime '(24181 26070 0 0)
       :unmatched-syntax '((number "1" 37826 . 37836) (symbol 37818 . 37825) (punctuation 37816 . 37817) (punctuation 37815 . 37816) (number "1" 37241 . 37254) (symbol 37233 . 37240) (punctuation 37231 . 37232) (punctuation 37230 . 37231) (number "1" 37209 . 37229) (symbol 37201 . 37208) (punctuation 37199 . 37200) (punctuation 37198 . 37199) (number "1" 28238 . 28248) (symbol 28230 . 28237) (punctuation 28228 . 28229) (punctuation 28227 . 28228) (number "1" 19247 . 19257) (symbol 19239 . 19246) (punctuation 19237 . 19238) (punctuation 19236 . 19237) (number "1" 16482 . 16492) (symbol 16474 . 16481) (punctuation 16472 . 16473) (punctuation 16471 . 16472))
       :lexical-table 
         '(("_XOPEN_LEGACY" . ((number "1" 3958 . 3959)))
@@ -6155,8 +6159,8 @@
                 (reparse-symbol extern-c-contents) [1041 1085]))          
       :file "alloca.h"
       :pointmax 1204
-      :fsize 1203
-      :lastmodtime '(24039 58467 0 0)
+      :fsize 1204
+      :lastmodtime '(24181 26066 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ALLOCA_H" . ((number "1" 826 . 827)))
@@ -6287,8 +6291,8 @@
                 (reparse-symbol extern-c-contents) [1944 1964]))          
       :file "getopt.h"
       :pointmax 6645
-      :fsize 1468
-      :lastmodtime '(24039 58470 0 0)
+      :fsize 1469
+      :lastmodtime '(24181 26070 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_GETOPT_H" . ((number "1" 878 . 879)))
@@ -6327,8 +6331,8 @@
             ("le64toh" variable (:constant-flag t) nil [3126 3133]))          
       :file "endian.h"
       :pointmax 3190
-      :fsize 3189
-      :lastmodtime '(24039 58470 0 0)
+      :fsize 2299
+      :lastmodtime '(24181 26069 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("BYTE_ORDER" . ((symbol "__BYTE_ORDER" 1830 . 1842)))
@@ -7848,8 +7852,8 @@
                 (reparse-symbol extern-c-contents) [3685 3695]))          
       :file "wchar.h"
       :pointmax 32125
-      :fsize 31039
-      :lastmodtime '(24039 58470 0 0)
+      :fsize 31111
+      :lastmodtime '(24181 26069 0 0)
       :unmatched-syntax '((LONG 19003 . 19007) (UNSIGNED 18994 . 19002) (EXTERN 18987 . 18993) (LONG 18835 . 18839) (EXTERN 18828 . 18834) (LONG 17549 . 17553) (UNSIGNED 17540 . 17548) (EXTERN 17533 . 17539) (LONG 17299 . 17303) (EXTERN 17292 . 17298) (LONG 17008 . 17012) (UNSIGNED 16999 . 17007) (EXTERN 16992 . 16998) (LONG 16756 . 16760) (EXTERN 16749 . 16755))
       :lexical-table 
         '(("__need___FILE")
@@ -8173,8 +8177,8 @@
                 (reparse-symbol extern-c-contents) [1044 1067]))          
       :file "fcntl.h"
       :pointmax 10568
-      :fsize 10958
-      :lastmodtime '(24039 58471 0 0)
+      :fsize 11026
+      :lastmodtime '(24181 26070 0 0)
       :unmatched-syntax '((punctuation 10326 . 10327) (symbol 10320 . 10325) (symbol 10312 . 10319) (punctuation 10310 . 10311) (symbol 10302 . 10310) (symbol 10294 . 10301) (punctuation 10292 . 10293) (symbol 10288 . 10292) (INT 10284 . 10287) (symbol 10265 . 10282) (INT 10261 . 10264) (EXTERN 10254 . 10260) (punctuation 10005 . 10006) (symbol 9999 . 10004) (symbol 9993 . 9998) (punctuation 9991 . 9992) (symbol 9983 . 9991) (symbol 9977 . 9982) (punctuation 9975 . 9976) (symbol 9971 . 9975) (INT 9967 . 9970) (symbol 9950 . 9965) (INT 9946 . 9949) (EXTERN 9939 . 9945) (punctuation 9737 . 9738) (symbol 9720 . 9728) (INT 9716 . 9719) (punctuation 9707 . 9708) (symbol 9702 . 9707) (symbol 9694 . 9701) (punctuation 9692 . 9693) (symbol 9684 . 9692) (symbol 9676 . 9683) (punctuation 9674 . 9675) (symbol 9670 . 9674) (INT 9666 . 9669) (symbol 9649 . 9664) (INT 9645 . 9648) (EXTERN 9638 . 9644) (punctuation 9376 . 9377) (symbol 9359 . 9367) (INT 9355 . 9358) (punctuation 9348 . 9349) (symbol 9343 . 9348) (symbol 9337 . 9342) (punctuation 9335 . 9336) (symbol 9327 . 9335) (symbol 9321 . 9326) (punctuation 9319 . 9320) (symbol 9315 . 9319) (INT 9311 . 9314) (symbol 9296 . 9309) (INT 9292 . 9295) (EXTERN 9285 . 9291) (punctuation 9096 . 9097) (symbol 9090 . 9095) (symbol 9082 . 9089) (punctuation 9080 . 9081) (symbol 9075 . 9080) (INT 9071 . 9074) (punctuation 9069 . 9070) (symbol 9065 . 9069) (INT 9061 . 9064) (symbol 9052 . 9059) (INT 9048 . 9051) (EXTERN 9041 . 9047) (punctuation 8856 . 8857) (symbol 8850 . 8855) (symbol 8844 . 8849) (punctuation 8842 . 8843) (symbol 8837 . 8842) (INT 8833 . 8836) (punctuation 8831 . 8832) (symbol 8827 . 8831) (INT 8823 . 8826) (symbol 8816 . 8821) (INT 8812 . 8815) (EXTERN 8805 . 8811) (number "1" 8100 . 8111) (symbol 8092 . 8099) (punctuation 8091 . 8092) (punctuation 8089 . 8090) (punctuation 8088 . 8089))
       :lexical-table 
         '(("__OPEN_NEEDS_MODE" (spp-arg-list ("oflag") 1453 . 1460) . ((semantic-list "(((oflag) & O_CREAT) != 0)" 1461 . 1487)))
@@ -8226,8 +8230,8 @@
 )
     (semanticdb-table "semanticdb-table"
       :file "netdb.h"
-      :fsize 28099
-      :lastmodtime '(24039 58497 0 0))
+      :fsize 28100
+      :lastmodtime '(24181 26101 0 0))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -8267,8 +8271,8 @@
                 (reparse-symbol extern-c-contents) [1182 1246]))          
       :file "errno.h"
       :pointmax 1833
-      :fsize 1678
-      :lastmodtime '(24039 58467 0 0)
+      :fsize 1679
+      :lastmodtime '(24181 26066 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ERRNO_H" . ((number "1" 874 . 875)))
@@ -10085,8 +10089,8 @@
                 (reparse-symbol extern-c-contents) [6531 6740]))          
       :file "pthread.h"
       :pointmax 41226
-      :fsize 42544
-      :lastmodtime '(24039 58469 0 0)
+      :fsize 41701
+      :lastmodtime '(24181 26068 0 0)
       :unmatched-syntax '((semantic-list 6671 . 6679) (semantic-list 6652 . 6670) (spp-macro-def 5921 . 5948) (spp-macro-def 5835 . 5858) (spp-macro-def 5743 . 5765) (spp-macro-def 5664 . 5685) (spp-macro-def 5097 . 5119) (spp-macro-def 5016 . 5039) (spp-macro-def 4884 . 4905) (spp-macro-def 4807 . 4827) (spp-macro-def 4693 . 4715) (spp-macro-def 4614 . 4635) (spp-macro-def 1141 . 1164) (spp-macro-def 1059 . 1082))
       :lexical-table 
         '(("PTHREAD_ADAPTIVE_MUTEX_INITIALIZER_NP" . ((semantic-list "{ { 0, 0, 0, PTHREAD_MUTEX_ADAPTIVE_NP, 0, { __PTHREAD_SPINS } } }" 3036 . 3102)))
@@ -10598,8 +10602,8 @@
                 (reparse-symbol extern-c-contents) [1091 1104]))          
       :file "time.h"
       :pointmax 13544
-      :fsize 10360
-      :lastmodtime '(24039 58470 0 0)
+      :fsize 10276
+      :lastmodtime '(24181 26069 0 0)
       :unmatched-syntax '((close-paren 955 . 956) (symbol 940 . 955) (symbol 932 . 939) (punctuation 930 . 931))
       :lexical-table 
         '(("__pid_t_defined")
@@ -10613,24 +10617,24 @@
 )
     (semanticdb-table "semanticdb-table"
       :file "signal.h"
-      :fsize 12308
-      :lastmodtime '(24039 58467 0 0))
+      :fsize 12309
+      :lastmodtime '(24181 26066 0 0))
     (semanticdb-table "semanticdb-table"
       :file "assert.h"
-      :fsize 4561
-      :lastmodtime '(24039 58464 0 0))
+      :fsize 4562
+      :lastmodtime '(24181 26062 0 0))
     (semanticdb-table "semanticdb-table"
       :file "strings.h"
-      :fsize 4752
-      :lastmodtime '(24039 58470 0 0))
+      :fsize 4753
+      :lastmodtime '(24181 26069 0 0))
     (semanticdb-table "semanticdb-table"
       :file "syslog.h"
       :fsize 24
-      :lastmodtime '(24039 58471 0 0))
+      :lastmodtime '(24181 26071 0 0))
     (semanticdb-table "semanticdb-table"
       :file "ctype.h"
-      :fsize 10963
-      :lastmodtime '(24039 58464 0 0))
+      :fsize 10969
+      :lastmodtime '(24181 26062 0 0))
     (semanticdb-table "semanticdb-table"
       :major-mode c-mode
       :tags 
@@ -11239,8 +11243,8 @@
                 (reparse-symbol extern-c-contents) [932 955]))          
       :file "dirent.h"
       :pointmax 12485
-      :fsize 12514
-      :lastmodtime '(24039 58470 0 0)
+      :fsize 12515
+      :lastmodtime '(24181 26069 0 0)
       :unmatched-syntax '((spp-macro-def 3488 . 3494) (spp-macro-def 3447 . 3454) (spp-macro-def 3405 . 3411) (spp-macro-def 3364 . 3370) (spp-macro-def 3324 . 3330) (spp-macro-def 3284 . 3290) (spp-macro-def 3244 . 3250) (spp-macro-def 3203 . 3210) (spp-macro-def 3155 . 3165))
       :lexical-table 
         '(("d_ino" . ((symbol "d_fileno" 1895 . 1903)))
@@ -11485,8 +11489,8 @@
                 (reparse-symbol extern-c-contents) [1465 1555]))          
       :file "sched.h"
       :pointmax 4660
-      :fsize 4732
-      :lastmodtime '(24039 58471 0 0)
+      :fsize 4733
+      :lastmodtime '(24181 26070 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__pid_t_defined")
@@ -11776,8 +11780,8 @@
                 (reparse-symbol extern-c-contents) [7157 7300]))          
       :file "inttypes.h"
       :pointmax 11893
-      :fsize 11892
-      :lastmodtime '(24039 58467 0 0)
+      :fsize 11893
+      :lastmodtime '(24181 26066 0 0)
       :unmatched-syntax '((LONG 7249 . 7253) (LONG 7194 . 7198) (punctuation 1199 . 1200) (WCHAR "wchar_t" 1189 . 1199) (INT "int" 1174 . 1188) (TYPEDEF 1166 . 1173))
       :lexical-table 
         '(("PRIdLEAST16" . ((string "\"d\"" 1700 . 1703)))
@@ -11943,20 +11947,20 @@
 )
     (semanticdb-table "semanticdb-table"
       :file "limits.h"
-      :fsize 5412
-      :lastmodtime '(24039 58457 0 0))
+      :fsize 5417
+      :lastmodtime '(24181 26055 0 0))
     (semanticdb-table "semanticdb-table"
       :file "poll.h"
       :fsize 22
-      :lastmodtime '(24039 58471 0 0))
+      :lastmodtime '(24181 26070 0 0))
     (semanticdb-table "semanticdb-table"
       :file "fnmatch.h"
-      :fsize 2295
-      :lastmodtime '(24039 58470 0 0))
+      :fsize 2296
+      :lastmodtime '(24181 26070 0 0))
     (semanticdb-table "semanticdb-table"
       :file "malloc.h"
-      :fsize 6221
-      :lastmodtime '(24039 58469 0 0)))
+      :fsize 6186
+      :lastmodtime '(24181 26068 0 0)))
   :file "!usr!include!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

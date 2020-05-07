@@ -22,6 +22,7 @@
         ace-window
         dired-do-rename
         helm-occur
+        mouse-drag-secondary
         realgud:cmd-next
         realgud:cmd-step
         ))

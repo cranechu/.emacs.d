@@ -1,11 +1,3 @@
-make pages
-make pages
-make pages
-make pages
-make pages
-make pages
-make pages
-ls
 cd webpages/
 ls
 cd content/
@@ -126,3 +118,11 @@ git status
 zsh
 git status
 exit
+sudo python3
+sudo python3
+sudo python3 test_Device.py 
+sudo python3 test_Device.py 
+sudo python3 test_Device.py 
+sudo python3 test_Device.py 
+sudo python3 test_Device.py 
+sudo python3 test_Device.py 
