@@ -10,9 +10,20 @@ fuzzy-pinyin-an-ang=false
 fuzzy-pinyin-f-h=false
 fuzzy-pinyin-l-n=false
 
+[com/github/maoschanz/drawing]
+devel-only=false
+last-active-tool='rectangle'
+last-left-rgba=['0.11764705882352941', '0.11764705882352941', '0.11764705882352941', '1.0']
+last-right-rgba=['0.4470588235294118', '0.6235294117647059', '0.8117647058823529', '1.0']
+last-size=1
+maximized=true
+
 [org/fedorahosted/background-logo-extension]
 logo-always-visible=true
-logo-opacity=uint32 206
+logo-border=uint32 8
+logo-file='/usr/share/fedora-logos/fedora_logo_darkbackground.svg'
+logo-opacity=uint32 199
+logo-size=11.20253164556962
 
 [org/gnome/GWeather]
 temperature-unit='centigrade'
@@ -31,9 +42,9 @@ window-state=87168
 [org/gnome/boxes]
 first-run=false
 view='icon-view'
-window-maximized=false
-window-position=[26, 23]
-window-size=[1127, 846]
+window-maximized=true
+window-position=[247, 76]
+window-size=[1451, 817]
 
 [org/gnome/calculator]
 accuracy=9
@@ -47,8 +58,11 @@ source-currency='DZD'
 source-units='degree'
 target-currency='DZD'
 target-units='radian'
-window-position=(26, 23)
+window-position=(1028, 284)
 word-size=64
+
+[org/gnome/clocks]
+world-clocks=@aa{sv} []
 
 [org/gnome/clocks/state/window]
 panel-id='stopwatch'
@@ -56,7 +70,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='info-overview'
 
 [org/gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -129,6 +143,7 @@ clock-show-weekday=true
 cursor-size=48
 document-font-name='Sans 16'
 enable-animations=true
+enable-hot-corners=false
 font-name='Cantarell 16'
 gtk-im-module='ibus'
 gtk-key-theme='Emacs'
@@ -140,8 +155,8 @@ text-scaling-factor=0.90999999999999992
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel', 'org-gnome-evince', 'gnome-printers-panel', 'mediawriter', 'org-gnome-gedit', 'wps-office-pdf', 'wps-office-et', 'code', 'libreoffice-startcenter']
-show-banners=false
+application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel', 'org-gnome-evince', 'gnome-printers-panel', 'mediawriter', 'org-gnome-gedit', 'wps-office-pdf', 'wps-office-et', 'code', 'libreoffice-startcenter', 'emacs', 'wps-office-wps', 'wps-office-wpp', 'virtualbox', 'libreoffice-calc', 'org-gnome-boxes', 'eog', 'org-gnome-baobab', 'gnome-control-center', 'org-kde-ark', 'org-gnome-screenshot', 'synfigstudio', 'wps-office-prometheus', 'org-gnome-totem', 'org-gnome-chromegnomeshell']
+show-banners=true
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/abrt-applet]
@@ -152,6 +167,15 @@ application-id='chromium-browser.desktop'
 
 [org/gnome/desktop/notifications/application/code]
 application-id='code.desktop'
+
+[org/gnome/desktop/notifications/application/emacs]
+application-id='emacs.desktop'
+
+[org/gnome/desktop/notifications/application/eog]
+application-id='eog.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-control-center]
+application-id='gnome-control-center.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
@@ -171,6 +195,9 @@ application-id='google-chrome.desktop'
 [org/gnome/desktop/notifications/application/jetbrains-pycharm-ce]
 application-id='jetbrains-pycharm-ce.desktop'
 
+[org/gnome/desktop/notifications/application/libreoffice-calc]
+application-id='libreoffice-calc.desktop'
+
 [org/gnome/desktop/notifications/application/libreoffice-startcenter]
 application-id='libreoffice-startcenter.desktop'
 
@@ -179,6 +206,15 @@ application-id='mediawriter.desktop'
 
 [org/gnome/desktop/notifications/application/org-freedesktop-problems-applet]
 application-id='org.freedesktop.problems.applet.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-baobab]
+application-id='org.gnome.baobab.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-boxes]
+application-id='org.gnome.Boxes.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-chromegnomeshell]
+application-id='org.gnome.ChromeGnomeShell.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
@@ -192,23 +228,50 @@ application-id='org.gnome.gedit.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-screenshot]
+application-id='org.gnome.Screenshot.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-terminal]
 application-id='org.gnome.Terminal.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-totem]
+application-id='org.gnome.Totem.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
 
+[org/gnome/desktop/notifications/application/org-kde-ark]
+application-id='org.kde.ark.desktop'
+
 [org/gnome/desktop/notifications/application/rhythmbox]
 application-id='rhythmbox.desktop'
+
+[org/gnome/desktop/notifications/application/synfigstudio]
+application-id='synfigstudio.desktop'
+
+[org/gnome/desktop/notifications/application/virtualbox]
+application-id='virtualbox.desktop'
 
 [org/gnome/desktop/notifications/application/wps-office-et]
 application-id='wps-office-et.desktop'
 
 [org/gnome/desktop/notifications/application/wps-office-pdf]
 application-id='wps-office-pdf.desktop'
+
+[org/gnome/desktop/notifications/application/wps-office-prometheus]
+application-id='wps-office-prometheus.desktop'
+
+[org/gnome/desktop/notifications/application/wps-office-wpp]
+application-id='wps-office-wpp.desktop'
+
+[org/gnome/desktop/notifications/application/wps-office-wps]
+application-id='wps-office-wps.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=false
 
 [org/gnome/desktop/peripherals/mouse]
 natural-scroll=false
@@ -237,6 +300,8 @@ remove-old-trash-files=true
 report-technical-problems=false
 
 [org/gnome/desktop/screensaver]
+lock-delay=uint32 60
+lock-enabled=false
 picture-options='zoom'
 picture-uri='file:///usr/share/backgrounds/fedora-workstation/zen.jpg'
 primary-color='#000000000000'
@@ -249,7 +314,7 @@ enabled=@as []
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 0
+idle-delay=uint32 300
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
@@ -275,7 +340,8 @@ window-position=[26, 23]
 window-size=[786, 447]
 
 [org/gnome/eog/ui]
-image-gallery=true
+image-gallery=false
+sidebar=false
 
 [org/gnome/eog/view]
 background-color='rgb(0,0,0)'
@@ -316,7 +382,7 @@ user-agent=''
 document-directory=@ms 'file:///home/cranechu/download'
 
 [org/gnome/evince/default]
-window-ratio=(2.6666666666666665, 1.2815656565656566)
+window-ratio=(1.6094771241830066, 0.80681818181818177)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -369,7 +435,7 @@ skip-newer=false
 
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
-name-column-width=472
+name-column-width=721
 show-path=false
 sort-method='name'
 sort-type='ascending'
@@ -385,7 +451,7 @@ active-plugins=['spell', 'modelines', 'filebrowser', 'docinfo', 'time']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu/Downloads'
+virtual-root='file:///home/cranechu/NTB-Suite/scripts'
 
 [org/gnome/gedit/preferences/encodings]
 candidate-encodings=['UTF-8', 'ISO-8859-15', 'UTF-16', 'BIG5', 'GB18030', 'GB2312', 'GBK', 'BIG5-HKSCS', 'EUC-TW']
@@ -397,10 +463,11 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(1024, 719)
-state=43908
+size=(903, 740)
+state=87168
 
 [org/gnome/gitg/preferences/history]
+default-selection='current-branch'
 reference-sort-order='last-activity'
 
 [org/gnome/gitg/preferences/interface]
@@ -414,12 +481,12 @@ paned-panels-position=350
 paned-sidebar-position=200
 
 [org/gnome/gitg/state/window]
-size=(702, 605)
+size=(754, 706)
 state=43908
 
 [org/gnome/gnome-screenshot]
 border-effect='none'
-delay=0
+delay=2
 include-border=true
 include-pointer=false
 last-save-directory='file:///home/cranechu'
@@ -428,12 +495,12 @@ last-save-directory='file:///home/cranechu'
 auto-save-session-one-shot=false
 
 [org/gnome/gnome-system-monitor]
-cpu-colors=[(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'), (4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8'), (8, '#f25915e815e8'), (9, '#f25915e815e8'), (10, '#f25915e815e8'), (11, '#f25915e815e8')]
+cpu-colors=[(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'), (4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8'), (8, '#f25915e815e8'), (9, '#f25915e815e8'), (10, '#f25915e815e8'), (11, '#f25915e815e8'), (12, '#f25915e815e8'), (13, '#f25915e815e8'), (14, '#f25915e815e8'), (15, '#f25915e815e8')]
 current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(908, 563, 26, 23)
+window-state=(960, 1032, 855, 121)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-0-visible=true
@@ -517,7 +584,9 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/photos]
-window-maximized=true
+window-maximized=false
+window-position=[364, 277]
+window-size=[960, 600]
 
 [org/gnome/power-manager]
 info-history-time=86400
@@ -590,7 +659,7 @@ overrides={'Gtk/ShellShowsAppMenu': <1>}
 [org/gnome/shell]
 app-picker-view=uint32 0
 command-history=['r']
-enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'nohotcorner@azuri.free.fr', 'hidetopbar@mathieu.bidon.ca', 'hide-dash@xenatt.github.com', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net']
+enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'hidetopbar@mathieu.bidon.ca', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net', 'window-animations@rliang.github.com', 'nohotcorner@azuri.free.fr']
 favorite-apps=@as []
 had-bluetooth-devices-setup=false
 
@@ -607,6 +676,7 @@ enable-active-window=false
 enable-intellihide=false
 hot-corner=false
 mouse-sensitive=false
+mouse-sensitive-fullscreen-window=false
 mouse-triggers-overview=false
 shortcut-toggles=false
 
@@ -628,12 +698,12 @@ app-icon-mode='both'
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 7856581528
+check-timestamp=int64 1589325116
 first-run=false
 install-timestamp=int64 1526447489
-online-updates-timestamp=int64 1574679831
+online-updates-timestamp=int64 1589326599
 show-nonfree-prompt=false
-upgrade-notification-timestamp=int64 1527728410
+upgrade-notification-timestamp=int64 1588123927
 
 [org/gnome/system/location]
 enabled=false
@@ -661,6 +731,10 @@ use-system-font=true
 use-theme-colors=false
 use-transparent-background=false
 
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.11764705882352941, 0.11764705882352941, 0.11764705882352941, 1.0), (1.0, 1.0, 0.0, 0.5)]
+selected-color=(true, 0.11764705882352941, 0.11764705882352941, 0.11764705882352941, 1.0)
+
 [org/gtk/settings/file-chooser]
 clock-format='12h'
 date-format='regular'
@@ -673,10 +747,34 @@ sort-column='name'
 sort-directories-first=false
 sort-order='descending'
 type-format='category'
-window-position=(26, 27)
+window-position=(26, 1)
 window-size=(1868, 979)
 
 [org/onboard]
 schema-version='2.3'
 system-theme-associations={'HighContrast': 'HighContrast', 'HighContrastInverse': 'HighContrastInverse', 'LowContrast': 'LowContrast', 'ContrastHighInverse': 'HighContrastInverse', 'Default': ''}
 use-system-defaults=false
+
+[org/x/reader/default]
+window-ratio=(2.3999999999999999, 1.7383333333333333)
+
+[org/yorba/shotwell/profiles/preferences/ui]
+display-basic-properties=true
+display-extended-properties=false
+display-map-widget=true
+display-photo-comments=false
+display-photo-ratings=true
+display-photo-tags=true
+display-photo-titles=false
+display-search-bar=false
+display-sidebar=true
+events-sort-ascending=false
+library-photos-sort-ascending=false
+library-photos-sort-by=2
+show-welcome-dialog=false
+sidebar-position=214
+
+[org/yorba/shotwell/profiles/preferences/window]
+library-height=768
+library-maximize=false
+library-width=1024
