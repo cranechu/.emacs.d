@@ -70,8 +70,8 @@
     ("find . -type f -exec grep --color -nH --null -e  \\{\\} +" . 49)))
  '(package-selected-packages
    (quote
-    (cnfonts psession ace-jump-mode helm-swoop ack zzz-to-char undo-tree iy-go-to-char super-save python-pytest hl-todo yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
- '(python-pytest-arguments (quote ("--color" "--pciaddr=3d:00.0")))
+    (clang-format cnfonts psession ace-jump-mode helm-swoop ack zzz-to-char undo-tree iy-go-to-char super-save python-pytest hl-todo yasnippet-snippets benchmark-init elpy beacon use-package smooth-scroll py-autopep8 rainbow-delimiters markdown-mode yaml-mode go-guru neotree exec-path-from-shell helm-go-package go-playground multiple-cursors key-chord fill-column-indicator go-autocomplete go-direx go-dlv go-eldoc go-errcheck go-impl go-mode gotest ace-window magit magit-annex magit-filenotify magit-gerrit magit-gh-pulls magit-gitflow magit-imerge vlf async dash deferred epl f find-file-in-project helm-core highlight-indentation ivy js2-mode load-relative loc-changes page-break-lines pkg-info popup powerline pyvenv request request-deferred rich-minority s simple-httpd skewer-mode test-simple websocket function-args ein realgud rust-playground racer cargo eshell-up sublimity projectile smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-etags-plus rust-mode yasnippet helm-c-yasnippet helm-helm-commands zoom-window ac-helm helm helm-anything helm-dash auto-complete column-marker xcscope igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar solarized-theme ##)))
+ '(python-pytest-arguments (quote ("--color" "--pciaddr=0000:3d:00.0")))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -84,6 +84,9 @@
 (setq-default c-basic-offset 2)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+;;clang-format
+(require 'clang-format)
 
 ;;mode line
 (setq sml/name-width 31)
