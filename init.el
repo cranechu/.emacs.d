@@ -85,9 +85,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 
-;;clang-format
-(require 'clang-format)
-
 ;;mode line
 (setq sml/name-width 31)
 (setq sml/shorten-modes t)
