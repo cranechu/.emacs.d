@@ -12,7 +12,9 @@
         helm-M-x
         indent-for-tab-command
         iy-go-to-char--command
+        magit-status
         python-nav-forward-block
+        python-pytest-popup
         wdired-finish-edit
         zzz-up-to-char
         ))
