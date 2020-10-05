@@ -67,8 +67,7 @@
  '(grep-find-command
    '("find . -type f -exec grep --color -nH --null -e  \\{\\} +" . 49))
  '(package-selected-packages
-   '(clang-format cnfonts psession ace-jump-mode ack zzz-to-char undo-tree iy-go-to-char super-save benchmark-init elpy beacon smooth-scroll py-autopep8 go-guru exec-path-from-shell helm-go-package go-playground key-chord fill-column-indicator go-autocomplete go-direx go-eldoc go-errcheck go-impl ace-window magit-filenotify magit-gerrit magit-gitflow deferred epl f find-file-in-project highlight-indentation pkg-info request-deferred rich-minority s function-args ein racer cargo eshell-up smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-helm-commands ac-helm helm-anything helm-dash auto-complete column-marker igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar ##))
- '(python-pytest-arguments '("--color" "--pciaddr=0000:06:00.0"))
+   '(python-pytest clang-format cnfonts psession ace-jump-mode ack zzz-to-char undo-tree iy-go-to-char super-save benchmark-init elpy beacon smooth-scroll py-autopep8 go-guru exec-path-from-shell helm-go-package go-playground key-chord fill-column-indicator go-autocomplete go-direx go-eldoc go-errcheck go-impl ace-window magit-filenotify magit-gerrit magit-gitflow deferred epl f find-file-in-project highlight-indentation pkg-info request-deferred rich-minority s function-args ein racer cargo eshell-up smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-helm-commands ac-helm helm-anything helm-dash auto-complete column-marker igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar ##))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -314,13 +313,13 @@
 
 ;; pytest
 (use-package python-pytest
+  :after python
   :config
-  (magit-define-popup-switch 'python-pytest-popup
-                             ?z "print debug logging" "--log-cli-level=debug")
-  (magit-define-popup-option 'python-pytest-popup
-                             ?p "pci address of DUT" "--pciaddr=")
-  (setq python-pytest-executable "sudo python3 -B -m pytest")
-  ;; add prefix to repeat last test
+  (setq python-pytest-executable "sudo python3 -B -m pytest --pciaddr=0000:3d:00.0")
+  (transient-append-suffix
+    'python-pytest-dispatch
+    "-v"
+    '("-z" "print debug logging" "--log-cli-level=debug"))
   :bind (("C-t" . python-pytest-popup)))
 
 ;; system clipboard
