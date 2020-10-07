@@ -141,17 +141,17 @@ clock-show-date=true
 clock-show-seconds=false
 clock-show-weekday=true
 cursor-size=48
-document-font-name='Sans 16'
+document-font-name='Sans 17'
 enable-animations=true
 enable-hot-corners=false
-font-name='Cantarell 16'
+font-name='Cantarell 17'
 gtk-im-module='ibus'
 gtk-key-theme='Emacs'
 gtk-theme='Adwaita'
 icon-theme='Adwaita'
-monospace-font-name='Hack 15'
+monospace-font-name='Fira Code 15'
 show-battery-percentage=true
-text-scaling-factor=0.90999999999999992
+text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
@@ -332,7 +332,7 @@ action-right-click-titlebar='menu'
 button-layout='appmenu:minimize,maximize,close'
 num-workspaces=1
 theme='Adwaita'
-titlebar-font='Cantarell Bold 16'
+titlebar-font='Cantarell Bold 17'
 
 [org/gnome/documents]
 window-maximized=false
@@ -442,7 +442,7 @@ sort-type='ascending'
 
 [org/gnome/file-roller/ui]
 sidebar-width=200
-window-height=480
+window-height=478
 window-width=1037
 
 [org/gnome/gedit/plugins]
@@ -698,7 +698,7 @@ app-icon-mode='both'
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1589325116
+check-timestamp=int64 1602073408
 first-run=false
 install-timestamp=int64 1526447489
 online-updates-timestamp=int64 1589326599
