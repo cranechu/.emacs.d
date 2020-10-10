@@ -70,7 +70,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='info-overview'
+last-panel='keyboard'
 
 [org/gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -133,7 +133,7 @@ current=uint32 0
 mru-sources=[('ibus', 'libpinyin'), ('xkb', 'us')]
 per-window=true
 sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
-xkb-options=['caps:ctrl_modifier']
+xkb-options=['caps:ctrl_modifier', 'lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
 clock-format='12h'
@@ -155,7 +155,7 @@ text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel', 'org-gnome-evince', 'gnome-printers-panel', 'mediawriter', 'org-gnome-gedit', 'wps-office-pdf', 'wps-office-et', 'code', 'libreoffice-startcenter', 'emacs', 'wps-office-wps', 'wps-office-wpp', 'virtualbox', 'libreoffice-calc', 'org-gnome-boxes', 'eog', 'org-gnome-baobab', 'gnome-control-center', 'org-kde-ark', 'org-gnome-screenshot', 'synfigstudio', 'wps-office-prometheus', 'org-gnome-totem', 'org-gnome-chromegnomeshell']
+application-children=['org-gnome-terminal', 'gnome-tweak-tool', 'abrt-applet', 'org-gnome-software', 'org-gnome-nautilus', 'gnome-network-panel', 'chromium-browser', 'org-gnome-tweaks', 'google-chrome', 'org-freedesktop-problems-applet', 'org-gnome-fileroller', 'gnome-power-panel', 'org-gnome-evince', 'gnome-printers-panel', 'mediawriter', 'org-gnome-gedit', 'wps-office-pdf', 'wps-office-et', 'code', 'libreoffice-startcenter', 'emacs', 'wps-office-wps', 'wps-office-wpp', 'virtualbox', 'libreoffice-calc', 'org-gnome-boxes', 'eog', 'org-gnome-baobab', 'gnome-control-center', 'org-kde-ark', 'org-gnome-screenshot', 'synfigstudio', 'wps-office-prometheus', 'org-gnome-totem', 'org-gnome-chromegnomeshell', 'skypeforlinux']
 show-banners=true
 show-in-lock-screen=false
 
@@ -249,6 +249,9 @@ application-id='org.kde.ark.desktop'
 [org/gnome/desktop/notifications/application/rhythmbox]
 application-id='rhythmbox.desktop'
 
+[org/gnome/desktop/notifications/application/skypeforlinux]
+application-id='skypeforlinux.desktop'
+
 [org/gnome/desktop/notifications/application/synfigstudio]
 application-id='synfigstudio.desktop'
 
@@ -314,7 +317,7 @@ enabled=@as []
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
-idle-delay=uint32 300
+idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
@@ -325,6 +328,10 @@ theme-name='__custom'
 activate-window-menu=@as []
 panel-main-menu=['<Shift>space']
 show-desktop=['<Super>d']
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Shift><Alt>Tab']
 
 [org/gnome/desktop/wm/preferences]
 action-double-click-titlebar='toggle-maximize'
@@ -382,7 +389,7 @@ user-agent=''
 document-directory=@ms 'file:///home/cranechu/download'
 
 [org/gnome/evince/default]
-window-ratio=(1.6094771241830066, 0.80681818181818177)
+window-ratio=(1.7140522875816993, 0.80681818181818177)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -446,12 +453,12 @@ window-height=478
 window-width=1037
 
 [org/gnome/gedit/plugins]
-active-plugins=['spell', 'modelines', 'filebrowser', 'docinfo', 'time']
+active-plugins=['filebrowser', 'time', 'spell', 'modelines', 'docinfo']
 
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu/NTB-Suite/scripts'
+virtual-root='file:///home/cranechu/Downloads/Samsung%20PM9A1%20A00%20FW%20(1TB)'
 
 [org/gnome/gedit/preferences/encodings]
 candidate-encodings=['UTF-8', 'ISO-8859-15', 'UTF-16', 'BIG5', 'GB18030', 'GB2312', 'GBK', 'BIG5-HKSCS', 'EUC-TW']
@@ -463,8 +470,8 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(903, 740)
-state=87168
+size=(1920, 1023)
+state=43908
 
 [org/gnome/gitg/preferences/history]
 default-selection='current-branch'
@@ -659,9 +666,12 @@ overrides={'Gtk/ShellShowsAppMenu': <1>}
 [org/gnome/shell]
 app-picker-view=uint32 0
 command-history=['r']
-enabled-extensions=['alternate-tab@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'hidetopbar@mathieu.bidon.ca', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net', 'window-animations@rliang.github.com', 'nohotcorner@azuri.free.fr']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'hidetopbar@mathieu.bidon.ca', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net', 'window-animations@rliang.github.com', 'nohotcorner@azuri.free.fr', 'alternate-tab-above@gnome-shell-extensions.ae35.de', 'PowerAltTab@devpower.org', 'altalttab@wdzierzan.com']
 favorite-apps=@as []
 had-bluetooth-devices-setup=false
+
+[org/gnome/shell/app-switcher]
+current-workspace-only=false
 
 [org/gnome/shell/extensions/cpufreq]
 governor='performance'
@@ -693,15 +703,16 @@ workspaces-only-on-primary=true
 
 [org/gnome/shell/window-switcher]
 app-icon-mode='both'
+current-workspace-only=true
 
 [org/gnome/shell/world-clocks]
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1602073408
+check-timestamp=int64 1602290876
 first-run=false
 install-timestamp=int64 1526447489
-online-updates-timestamp=int64 1589326599
+online-updates-timestamp=int64 1602290894
 show-nonfree-prompt=false
 upgrade-notification-timestamp=int64 1588123927
 
@@ -742,12 +753,12 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=206
+sidebar-width=216
 sort-column='name'
 sort-directories-first=false
 sort-order='descending'
 type-format='category'
-window-position=(26, 1)
+window-position=(26, 25)
 window-size=(1868, 979)
 
 [org/onboard]
