@@ -311,8 +311,8 @@
 (setq yas-snippet-dirs '("~/pynvme/snippets"))
 (yas-global-mode 1)
 
+;; autopep8
 (require 'py-autopep8)
-(add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 ;; pytest
 (use-package python-pytest

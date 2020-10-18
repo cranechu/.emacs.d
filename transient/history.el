@@ -5,5 +5,5 @@
  (python-pytest-dispatch
   ("--color")
   ("--color" "--capture=no" "--log-cli-level=debug")
-  ("--color" "--log-cli-level=debug")
-  ("--color" "--capture=no")))
+  ("--color" "--capture=no")
+  ("--color" "--log-cli-level=debug")))

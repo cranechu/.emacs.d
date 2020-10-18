@@ -216,6 +216,9 @@ application-id='org.gnome.Boxes.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-chromegnomeshell]
 application-id='org.gnome.ChromeGnomeShell.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-eog]
+application-id='org.gnome.eog.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-evince]
 application-id='org.gnome.Evince.desktop'
 
@@ -666,7 +669,8 @@ overrides={'Gtk/ShellShowsAppMenu': <1>}
 [org/gnome/shell]
 app-picker-view=uint32 0
 command-history=['r']
-enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'hidetopbar@mathieu.bidon.ca', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net', 'window-animations@rliang.github.com', 'nohotcorner@azuri.free.fr', 'alternate-tab-above@gnome-shell-extensions.ae35.de', 'PowerAltTab@devpower.org', 'altalttab@wdzierzan.com']
+disable-user-extensions=false
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'emacsmanager@localvoid.gmail.com', 'search-chromium-bookmarks@bsaleil.org', 'hibernate-status@dromi', 'lwsm@johannes.super-productivity.com', 'hide-dash@zacbarton.com', 'Remove_Dash@localhost.localdomain', 'hidetopbar@mathieu.bidon.ca', 'background-logo@fedorahosted.org', 'grubreboot@desertconsulting.net', 'window-animations@rliang.github.com', 'nohotcorner@azuri.free.fr', 'alternate-tab-above@gnome-shell-extensions.ae35.de', 'PowerAltTab@devpower.org', 'altalttab@wdzierzan.com', 'alternate-tab@gnome-shell-extensions.gcampax.github.com']
 favorite-apps=@as []
 had-bluetooth-devices-setup=false
 
