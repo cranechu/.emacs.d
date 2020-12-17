@@ -14,7 +14,7 @@ sudo dnf update -y
 
 # migrate gnome setting
 # dconf dump / > gnome.dconf.bak
-dconf load -f / < gnome.dconf.bak
+#dconf load -f / < gnome.dconf.bak
 
 # zsh
 rm -rf ~/.oh-my-zsh

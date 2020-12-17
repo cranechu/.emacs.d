@@ -1,3 +1,7 @@
+[apps/update-manager]
+launch-count=1
+launch-time=int64 1608204916
+
 [ca/desrt/dconf-editor]
 saved-view='/org/gnome/login-screen/'
 window-height=600
@@ -17,6 +21,13 @@ last-left-rgba=['0.11764705882352941', '0.11764705882352941', '0.117647058823529
 last-right-rgba=['0.4470588235294118', '0.6235294117647059', '0.8117647058823529', '1.0']
 last-size=1
 maximized=true
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1608225534
+
+[desktop/ibus/general]
+preload-engines=['xkb:us::eng']
+version='1.5.22'
 
 [org/fedorahosted/background-logo-extension]
 logo-always-visible=true
@@ -70,7 +81,7 @@ size=(870, 690)
 state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='applications'
 
 [org/gnome/desktop/a11y]
 always-show-universal-access-status=false
@@ -118,7 +129,7 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/corn.jpg'
+picture-uri='file:///usr/share/backgrounds/contest/focal.xml'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -141,15 +152,16 @@ clock-show-date=true
 clock-show-seconds=false
 clock-show-weekday=true
 cursor-size=48
-document-font-name='Sans 17'
+document-font-name='Ubuntu 16'
 enable-animations=true
 enable-hot-corners=false
-font-name='Cantarell 17'
+font-name='Ubuntu Light 16'
 gtk-im-module='ibus'
 gtk-key-theme='Emacs'
-gtk-theme='Adwaita'
+gtk-theme='Yaru-dark'
 icon-theme='Adwaita'
-monospace-font-name='Fira Code 15'
+locate-pointer=true
+monospace-font-name='Ubuntu Mono 15'
 show-battery-percentage=true
 text-scaling-factor=1.0
 toolkit-accessibility=false
@@ -255,8 +267,14 @@ application-id='rhythmbox.desktop'
 [org/gnome/desktop/notifications/application/skypeforlinux]
 application-id='skypeforlinux.desktop'
 
+[org/gnome/desktop/notifications/application/snap-store-snap-store]
+application-id='snap-store_snap-store.desktop'
+
 [org/gnome/desktop/notifications/application/synfigstudio]
 application-id='synfigstudio.desktop'
+
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
 
 [org/gnome/desktop/notifications/application/virtualbox]
 application-id='virtualbox.desktop'
@@ -306,10 +324,11 @@ remove-old-trash-files=true
 report-technical-problems=false
 
 [org/gnome/desktop/screensaver]
+color-shading-type='solid'
 lock-delay=uint32 60
 lock-enabled=false
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/fedora-workstation/zen.jpg'
+picture-uri='file:///usr/share/backgrounds/contest/focal.xml'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -342,7 +361,7 @@ action-right-click-titlebar='menu'
 button-layout='appmenu:minimize,maximize,close'
 num-workspaces=1
 theme='Adwaita'
-titlebar-font='Cantarell Bold 17'
+titlebar-font='Ubuntu Condensed, Bold 16'
 
 [org/gnome/documents]
 window-maximized=false
@@ -684,6 +703,16 @@ min-freq-pstate=0
 save-settings=true
 turbo-boost=true
 
+[org/gnome/shell/extensions/dash-to-dock]
+dash-max-icon-size=48
+dock-fixed=false
+dock-position='RIGHT'
+preferred-monitor=0
+
+[org/gnome/shell/extensions/desktop-icons]
+show-home=false
+show-trash=false
+
 [org/gnome/shell/extensions/hidetopbar]
 enable-active-windo=true
 enable-active-window=false
@@ -713,7 +742,7 @@ current-workspace-only=true
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1602290876
+check-timestamp=int64 1608209896
 first-run=false
 install-timestamp=int64 1526447489
 online-updates-timestamp=int64 1602290894
@@ -793,3 +822,6 @@ sidebar-position=214
 library-height=768
 library-maximize=false
 library-width=1024
+
+[system/locale]
+region='en_SG.UTF-8'
