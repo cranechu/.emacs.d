@@ -41,7 +41,7 @@ show-weekdate=true
 mru-sources=[('xkb', 'cn'), ('xkb', 'us'), ('xkb', 'cn+altgr-pinyin')]
 show-all-sources=true
 sources=[('xkb', 'us')]
-xkb-options=@as []
+xkb-options=['ctrl:nocaps']
 
 [org/gnome/desktop/interface]
 clock-show-seconds=false
@@ -145,7 +145,7 @@ x=240
 y=135
 
 [org/gnome/mutter]
-overlay-key='Super_R'
+overlay-key='Super_L'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
