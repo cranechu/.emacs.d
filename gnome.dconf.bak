@@ -11,7 +11,7 @@ preload-engines=['xkb:us::eng']
 version='1.5.22'
 
 [org/gnome/control-center]
-last-panel='ubuntu'
+last-panel='mouse'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -155,6 +155,12 @@ search-filter-time-type='last_modified'
 initial-size=(890, 550)
 maximized=false
 
+[org/gnome/power-manager]
+info-history-type='charge'
+info-last-device='/org/freedesktop/UPower/devices/battery_BAT0'
+info-page-number=0
+info-stats-type='discharge-accuracy'
+
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='nothing'
 sleep-inactive-ac-timeout=3600
@@ -164,8 +170,9 @@ sleep-inactive-ac-type='nothing'
 hinting='slight'
 
 [org/gnome/shell]
-disabled-extensions=@as []
-enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hidetopbar@mathieu.bidon.ca', 'desktop-icons@csoriano']
+disabled-extensions=['desktop-icons@csoriano', 'ubuntu-dock@ubuntu.com', 'ubuntu-appindicators@ubuntu.com']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hidetopbar@mathieu.bidon.ca']
+favorite-apps=['org.gnome.Nautilus.desktop', 'snap-store_ubuntu-software.desktop', 'org.gnome.Terminal.desktop']
 
 [org/gnome/shell/extensions/dash-to-dock]
 dash-max-icon-size=64
@@ -183,6 +190,12 @@ enable-active-window=false
 enable-intellihide=false
 mouse-sensitive=false
 mouse-sensitive-fullscreen-window=false
+
+[org/gnome/shell/keybindings]
+toggle-overview=['<Shift>space']
+
+[org/gnome/software]
+check-timestamp=int64 1609539415
 
 [org/gnome/system/location]
 enabled=false
