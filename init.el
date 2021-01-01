@@ -45,7 +45,7 @@
 (load-theme 'wombat t)
 
 ;;TAGS
-(setq tags-table-list '("~/pynvme/TAGS"))
+(setq tags-table-list '("~/pynvme3-driver/TAGS"))
 (global-set-key (kbd "M-.") 'xref-find-definitions-other-window)
 
 ;;zoom window
@@ -305,11 +305,6 @@
                            ac-source-dictionary
                            ac-source-words-in-same-mode-buffers
                            ))
-
-;; yasnippet
-(require 'yasnippet-snippets)
-(setq yas-snippet-dirs '("~/pynvme/snippets"))
-(yas-global-mode 1)
 
 ;; autopep8
 (require 'py-autopep8)
