@@ -1,24 +1,28 @@
 #!/bin/bash
 
-sudo dnf install -y fedora-workstation-repositories
-sudo dnf config-manager --set-enabled google-chrome
-sudo dnf install -y google-chrome-stable
-sudo dnf remove -y firefox
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install exuberant-ctags -y
+sudo apt install chrome-gnome-shell -y
+sudo apt install gnome-shell-extensions -y
+sudo apt install gnome-shell-extension-prefs -y
+sudo apt install gnome-shell-extension-autohidetopbar -y
+sudo apt install gnome-shell-extension-desktop-icons -y
+sudo apt remove gnome-shell-extension-appindicator -y
+sudo apt remove ghostscript -y
 
-sudo dnf install -y redhat-rpm-config
-sudo dnf install -y python3-devel
-sudo dnf install -y emacs
-sudo dnf install -y gnome-tweak-tool fio nvme-cli util-linux-user
-sudo dnf install -y zsh git
-sudo dnf update -y
+sudo apt install -y python3-dev python-is-python3
+sudo apt install -y emacs
+sudo apt install -y gnome-tweak-tool
+sudo apt install -y zsh git
 
 # migrate gnome setting
 # dconf dump / > gnome.dconf.bak
-#dconf load -f / < gnome.dconf.bak
+dconf load -f / < gnome.dconf.bak
 
 # zsh
 rm -rf ~/.oh-my-zsh
-echo "now we are installing oh-my-zsh. exit after completed. press any key to continue..." && read
+echo "now we are installing oh-my-zsh. exit after completion. press any key to continue..." && read
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp .zshrc ~/
 
@@ -27,5 +31,4 @@ cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zdharma/history-search-multi-word.git
 cd 
 
-echo "remember to find gnome extensions in gnome.dconf.back, and install them. "
 echo "done."

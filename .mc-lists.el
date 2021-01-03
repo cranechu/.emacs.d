@@ -27,4 +27,5 @@
         mouse-drag-secondary
         realgud:cmd-next
         realgud:cmd-step
+        sh-end-of-command
         ))
