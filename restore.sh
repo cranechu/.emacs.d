@@ -2,19 +2,23 @@
 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install exuberant-ctags -y
+sudo apt install exuberant-ctags curl -y
 sudo apt install chrome-gnome-shell -y
 sudo apt install gnome-shell-extensions -y
 sudo apt install gnome-shell-extension-prefs -y
 sudo apt install gnome-shell-extension-autohidetopbar -y
 sudo apt install gnome-shell-extension-desktop-icons -y
 sudo apt remove gnome-shell-extension-appindicator -y
-sudo apt remove ghostscript -y
+sudo apt remove ghostscript firefox -y
 
 sudo apt install -y python3-dev python-is-python3
 sudo apt install -y emacs
 sudo apt install -y gnome-tweak-tool
 sudo apt install -y zsh git
+
+# git config
+git config --global user.email "cranechu@gmail.com"
+git config --global user.name "Crane Chu"
 
 # migrate gnome setting
 # dconf dump / > gnome.dconf.bak

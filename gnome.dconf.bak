@@ -1,7 +1,7 @@
 [apps/update-manager]
 first-run=false
-launch-count=2
-launch-time=int64 1609520410
+launch-count=3
+launch-time=int64 1610194542
 
 [com/ubuntu/update-notifier]
 release-check-time=uint32 1609519549
@@ -251,7 +251,8 @@ mouse-sensitive-fullscreen-window=false
 toggle-overview=['<Shift>space']
 
 [org/gnome/software]
-check-timestamp=int64 1610058102
+check-timestamp=int64 1610194664
+online-updates-timestamp=int64 1610194894
 
 [org/gnome/system/location]
 enabled=false
