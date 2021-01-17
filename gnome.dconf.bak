@@ -1,10 +1,21 @@
 [apps/update-manager]
 first-run=false
-launch-count=3
-launch-time=int64 1610194542
+launch-count=4
+launch-time=int64 1610800904
+
+[com/github/libpinyin/ibus-libpinyin/libpinyin]
+fuzzy-pinyin=true
+fuzzy-pinyin-an-ang=false
+fuzzy-pinyin-f-h=false
+fuzzy-pinyin-l-n=false
+init-chinese=true
+init-full=true
+lookup-table-page-size=10
+remember-every-input=true
+sort-candidate-option=0
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1609519549
+release-check-time=uint32 1610729249
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
@@ -18,8 +29,23 @@ maximized=false
 timer-increment=1
 width=700
 
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-position=(50, 50)
+word-size=64
+
 [org/gnome/control-center]
-last-panel='network'
+last-panel='region'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -38,7 +64,7 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/contest/groovy.xml'
+picture-uri='file:///usr/share/backgrounds/contest/focal.xml'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -46,9 +72,9 @@ secondary-color='#000000000000'
 show-weekdate=true
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'cn'), ('xkb', 'us'), ('xkb', 'cn+altgr-pinyin')]
+mru-sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 show-all-sources=true
-sources=[('xkb', 'us')]
+sources=[('xkb', 'us'), ('ibus', 'libpinyin')]
 xkb-options=['ctrl:nocaps']
 
 [org/gnome/desktop/interface]
@@ -58,14 +84,14 @@ document-font-name='Sans 12'
 enable-animations=true
 enable-hot-corners=false
 font-name='Ubuntu 12'
-gtk-im-module='gtk-im-context-simple'
+gtk-im-module='ibus'
 gtk-key-theme='Emacs'
 gtk-theme='Yaru'
 monospace-font-name='Ubuntu Mono 15'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom']
+application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine']
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -73,11 +99,23 @@ application-id='apport-gtk.desktop'
 [org/gnome/desktop/notifications/application/chromium-chromium]
 application-id='chromium_chromium.desktop'
 
+[org/gnome/desktop/notifications/application/emacs]
+application-id='emacs.desktop'
+
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-power-panel]
 application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-eog]
+application-id='org.gnome.eog.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
+application-id='org.gnome.Evolution-alarm-notify.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
@@ -88,6 +126,9 @@ application-id='org.gnome.Screenshot.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
 
+[org/gnome/desktop/notifications/application/q4wine]
+application-id='q4wine.desktop'
+
 [org/gnome/desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
 
@@ -96,6 +137,12 @@ application-id='update-manager.desktop'
 
 [org/gnome/desktop/notifications/application/wps-office-et]
 application-id='wps-office-et.desktop'
+
+[org/gnome/desktop/notifications/application/wps-office-wpp]
+application-id='wps-office-wpp.desktop'
+
+[org/gnome/desktop/notifications/application/wps-office-wps]
+application-id='wps-office-wps.desktop'
 
 [org/gnome/desktop/notifications/application/xdg-desktop-portal-gtk]
 application-id='xdg-desktop-portal-gtk.desktop'
@@ -116,7 +163,7 @@ report-technical-problems=true
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/contest/groovy.xml'
+picture-uri='file:///usr/share/backgrounds/contest/focal.xml'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -137,15 +184,27 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [org/gnome/evince/default]
-window-ratio=(1.038655462184874, 0.75771971496437052)
+window-ratio=(1.6766466898538257, 1.1471127972108373)
 
 [org/gnome/evolution-data-server]
 migrated=true
 network-monitor-gio-name=''
 
+[org/gnome/evolution-data-server/calendar]
+notify-window-height=111
+notify-window-width=550
+notify-window-x=0
+notify-window-y=0
+reminders-past=@as []
+
+[org/gnome/file-roller/dialogs/new]
+default-extension='.tar.gz'
+encrypt-header=false
+volume-size=0
+
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
-name-column-width=250
+name-column-width=372
 show-path=false
 sort-method='name'
 sort-type='ascending'
@@ -156,12 +215,12 @@ window-height=480
 window-width=600
 
 [org/gnome/gedit/plugins]
-active-plugins=['spell', 'docinfo', 'time', 'filebrowser', 'modelines']
+active-plugins=['filebrowser', 'docinfo', 'spell', 'time', 'modelines']
 
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu/.cache/.fr-jURshV'
+virtual-root='file:///home/cranechu/pynvme3'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -174,7 +233,9 @@ size=(900, 700)
 state=87168
 
 [org/gnome/gnome-screenshot]
+border-effect='none'
 delay=1
+include-border=true
 include-pointer=false
 last-save-directory='file:///home/cranechu'
 
@@ -200,16 +261,32 @@ width=1464
 x=240
 y=135
 
+[org/gnome/meld]
+folder-status-filters=['normal', 'normal', 'new', 'modified']
+text-filters=[('CVS/SVN keywords', false, '\\$\\w+(:[^\\n$]+)?\\$'), ('C++ comment', false, '//.*'), ('C comment', false, '/\\*.*?\\*/'), ('All whitespace', true, '[ \\t\\r\\f\\v]*'), ('Leading whitespace', false, '^[ \\t\\r\\f\\v]*'), ('Trailing whitespace', false, '[ \\t\\r\\f\\v]*$'), ('Script comment', false, '#.*')]
+wrap-mode='none'
+
+[org/gnome/meld/window-state]
+height=400
+is-maximized=true
+width=686
+
 [org/gnome/mutter]
+center-new-windows=true
 overlay-key='Super_L'
+
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='list-view'
 search-filter-time-type='last_modified'
+search-view='list-view'
 
 [org/gnome/nautilus/window-state]
 initial-size=(890, 550)
 maximized=false
+sidebar-width=302
 
 [org/gnome/power-manager]
 info-history-type='charge'
@@ -251,7 +328,7 @@ mouse-sensitive-fullscreen-window=false
 toggle-overview=['<Shift>space']
 
 [org/gnome/software]
-check-timestamp=int64 1610194664
+check-timestamp=int64 1610835567
 online-updates-timestamp=int64 1610194894
 
 [org/gnome/system/location]
@@ -271,5 +348,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(371, 0)
+window-position=(295, 0)
 window-size=(1310, 1006)

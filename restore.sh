@@ -2,7 +2,7 @@
 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install exuberant-ctags curl -y
+sudo apt install exuberant-ctags curl zip -y
 sudo apt install chrome-gnome-shell -y
 sudo apt install gnome-shell-extensions -y
 sudo apt install gnome-shell-extension-prefs -y
