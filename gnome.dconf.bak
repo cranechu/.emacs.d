@@ -1,7 +1,10 @@
 [apps/update-manager]
 first-run=false
-launch-count=4
-launch-time=int64 1610800904
+launch-count=10
+launch-time=int64 1613178897
+show-details=true
+window-height=400
+window-width=704
 
 [com/github/libpinyin/ibus-libpinyin/libpinyin]
 fuzzy-pinyin=true
@@ -15,7 +18,7 @@ remember-every-input=true
 sort-candidate-option=0
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1610729249
+release-check-time=uint32 1613178889
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
@@ -33,7 +36,7 @@ width=700
 accuracy=9
 angle-units='degrees'
 base=10
-button-mode='basic'
+button-mode='programming'
 number-format='automatic'
 show-thousands=false
 show-zeroes=false
@@ -45,7 +48,7 @@ window-position=(50, 50)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='region'
+last-panel='sound'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -64,9 +67,9 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/contest/focal.xml'
-primary-color='#000000000000'
-secondary-color='#000000000000'
+picture-uri='file:///usr/share/backgrounds/hardy_wallpaper_uhd.png'
+primary-color='#000000'
+secondary-color='#000000'
 
 [org/gnome/desktop/calendar]
 show-weekdate=true
@@ -91,13 +94,16 @@ monospace-font-name='Ubuntu Mono 15'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine']
+application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code']
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
 
 [org/gnome/desktop/notifications/application/chromium-chromium]
 application-id='chromium_chromium.desktop'
+
+[org/gnome/desktop/notifications/application/code-code]
+application-id='code_code.desktop'
 
 [org/gnome/desktop/notifications/application/emacs]
 application-id='emacs.desktop'
@@ -116,6 +122,12 @@ application-id='org.gnome.eog.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
 application-id='org.gnome.Evolution-alarm-notify.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-fileroller]
+application-id='org.gnome.FileRoller.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-gedit]
+application-id='org.gnome.gedit.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
@@ -151,7 +163,7 @@ application-id='xdg-desktop-portal-gtk.desktop'
 application-id='Zoom.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
-numlock-state=true
+numlock-state=false
 
 [org/gnome/desktop/peripherals/touchpad]
 two-finger-scrolling-enabled=true
@@ -163,9 +175,9 @@ report-technical-problems=true
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/contest/focal.xml'
-primary-color='#000000000000'
-secondary-color='#000000000000'
+picture-uri='file:///usr/share/backgrounds/hardy_wallpaper_uhd.png'
+primary-color='#000000'
+secondary-color='#000000'
 
 [org/gnome/desktop/search-providers]
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
@@ -184,7 +196,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [org/gnome/evince/default]
-window-ratio=(1.6766466898538257, 1.1471127972108373)
+window-ratio=(1.6106425941323197, 1.0213337812867462)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -193,9 +205,13 @@ network-monitor-gio-name=''
 [org/gnome/evolution-data-server/calendar]
 notify-window-height=111
 notify-window-width=550
-notify-window-x=0
+notify-window-x=1370
 notify-window-y=0
 reminders-past=@as []
+
+[org/gnome/file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
 
 [org/gnome/file-roller/dialogs/new]
 default-extension='.tar.gz'
@@ -220,7 +236,7 @@ active-plugins=['filebrowser', 'docinfo', 'spell', 'time', 'modelines']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu/pynvme3'
+virtual-root='file:///media/cranechu/VPESTICK/log'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -231,6 +247,26 @@ side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
 size=(900, 700)
 state=87168
+
+[org/gnome/gitg/preferences/history]
+default-selection='all-branches'
+reference-sort-order='last-activity'
+topological-order=false
+
+[org/gnome/gitg/preferences/interface]
+enable-monitoring=true
+orientation='horizontal'
+
+[org/gnome/gitg/state/commit]
+paned-sidebar-position=200
+
+[org/gnome/gitg/state/history]
+paned-panels-position=796
+paned-sidebar-position=452
+
+[org/gnome/gitg/state/window]
+size=(702, 599)
+state=43908
 
 [org/gnome/gnome-screenshot]
 border-effect='none'
@@ -244,7 +280,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(960, 1033, 0, 0)
+window-state=(960, 1033, 960, 0)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -276,7 +312,7 @@ center-new-windows=true
 overlay-key='Super_L'
 
 [org/gnome/nautilus/compression]
-default-compression-format='zip'
+default-compression-format='7z'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='list-view'
@@ -290,7 +326,7 @@ sidebar-width=302
 
 [org/gnome/power-manager]
 info-history-type='charge'
-info-last-device='/org/freedesktop/UPower/devices/battery_BAT0'
+info-last-device='/org/freedesktop/UPower/devices/line_power_AC'
 info-page-number=0
 info-stats-type='discharge-accuracy'
 
@@ -328,8 +364,8 @@ mouse-sensitive-fullscreen-window=false
 toggle-overview=['<Shift>space']
 
 [org/gnome/software]
-check-timestamp=int64 1610835567
-online-updates-timestamp=int64 1610194894
+check-timestamp=int64 1613432403
+online-updates-timestamp=int64 1612852814
 
 [org/gnome/system/location]
 enabled=false
@@ -348,5 +384,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(295, 0)
+window-position=(305, 14)
 window-size=(1310, 1006)
