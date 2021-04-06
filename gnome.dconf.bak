@@ -1,7 +1,7 @@
 [apps/update-manager]
 first-run=false
-launch-count=10
-launch-time=int64 1613178897
+launch-count=18
+launch-time=int64 1617351936
 show-details=true
 window-height=400
 window-width=704
@@ -18,7 +18,7 @@ remember-every-input=true
 sort-candidate-option=0
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1613178889
+release-check-time=uint32 1616837048
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
@@ -44,11 +44,11 @@ source-currency=''
 source-units='degree'
 target-currency=''
 target-units='radian'
-window-position=(50, 50)
+window-position=(1020, 164)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='printers'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -94,7 +94,7 @@ monospace-font-name='Ubuntu Mono 15'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code']
+application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code', 'xmind-xmind', 'org-gnome-terminal', 'google-chrome', 'teams', 'vlc-vlc']
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -117,6 +117,9 @@ application-id='gnome-power-panel.desktop'
 [org/gnome/desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
 
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-eog]
 application-id='org.gnome.eog.desktop'
 
@@ -135,6 +138,9 @@ application-id='org.gnome.Nautilus.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-screenshot]
 application-id='org.gnome.Screenshot.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-terminal]
+application-id='org.gnome.Terminal.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-tweaks]
 application-id='org.gnome.tweaks.desktop'
 
@@ -144,8 +150,14 @@ application-id='q4wine.desktop'
 [org/gnome/desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
 
+[org/gnome/desktop/notifications/application/teams]
+application-id='teams.desktop'
+
 [org/gnome/desktop/notifications/application/update-manager]
 application-id='update-manager.desktop'
+
+[org/gnome/desktop/notifications/application/vlc-vlc]
+application-id='vlc_vlc.desktop'
 
 [org/gnome/desktop/notifications/application/wps-office-et]
 application-id='wps-office-et.desktop'
@@ -158,6 +170,9 @@ application-id='wps-office-wps.desktop'
 
 [org/gnome/desktop/notifications/application/xdg-desktop-portal-gtk]
 application-id='xdg-desktop-portal-gtk.desktop'
+
+[org/gnome/desktop/notifications/application/xmind-xmind]
+application-id='xmind_xmind.desktop'
 
 [org/gnome/desktop/notifications/application/zoom]
 application-id='Zoom.desktop'
@@ -196,7 +211,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [org/gnome/evince/default]
-window-ratio=(1.6106425941323197, 1.0213337812867462)
+window-ratio=(1.6134453781512605, 1.2256532066508314)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -220,15 +235,15 @@ volume-size=0
 
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
-name-column-width=372
+name-column-width=433
 show-path=false
 sort-method='name'
 sort-type='ascending'
 
 [org/gnome/file-roller/ui]
 sidebar-width=200
-window-height=480
-window-width=600
+window-height=763
+window-width=1440
 
 [org/gnome/gedit/plugins]
 active-plugins=['filebrowser', 'docinfo', 'spell', 'time', 'modelines']
@@ -236,7 +251,7 @@ active-plugins=['filebrowser', 'docinfo', 'spell', 'time', 'modelines']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///media/cranechu/VPESTICK/log'
+virtual-root='file:///home/cranechu'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -246,7 +261,7 @@ bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
 size=(900, 700)
-state=87168
+state=43908
 
 [org/gnome/gitg/preferences/history]
 default-selection='all-branches'
@@ -280,7 +295,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(960, 1033, 960, 0)
+window-state=(960, 1033, 720, 0)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -364,8 +379,8 @@ mouse-sensitive-fullscreen-window=false
 toggle-overview=['<Shift>space']
 
 [org/gnome/software]
-check-timestamp=int64 1613432403
-online-updates-timestamp=int64 1612852814
+check-timestamp=int64 1617662604
+online-updates-timestamp=int64 1617244323
 
 [org/gnome/system/location]
 enabled=false
