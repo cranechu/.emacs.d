@@ -327,10 +327,10 @@
 (setq x-select-enable-clipboard t)
 
 ;; session management
-;(use-package psession
-;  :config
-;  (psession-savehist-mode 1)
-;  (psession-mode 1))
+(use-package psession
+  :config
+  (psession-savehist-mode 1)
+  (psession-mode 1))
 
 ;; auto generated
 (setq x-select-enable-clipboard t)
