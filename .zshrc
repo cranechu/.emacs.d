@@ -95,6 +95,8 @@ source $ZSH/oh-my-zsh.sh
 
 . ~/.emacs.d/z.sh
 
+export TERM=xterm-256color
+export COLORTERM=truecolor
 export EDITOR=emacs
 export ALTERNATE_EDITOR=""
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
