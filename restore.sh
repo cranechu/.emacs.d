@@ -32,7 +32,7 @@ cp .zshrc ~/
 
 # history-search-multi-word
 cd ~/.oh-my-zsh/custom/plugins
-git clone https://github.com/zdharma/history-search-multi-word.git
+git clone https://github.com/robobenklein/zdharma-history-search-multi-word.git history-search-multi-word
 cd 
 
 echo "done."
