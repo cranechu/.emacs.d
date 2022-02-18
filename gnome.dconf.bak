@@ -1,7 +1,7 @@
 [apps/update-manager]
 first-run=false
-launch-count=18
-launch-time=int64 1617351936
+launch-count=22
+launch-time=int64 1644640281
 show-details=true
 window-height=400
 window-width=704
@@ -18,7 +18,7 @@ remember-every-input=true
 sort-candidate-option=0
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1616837048
+release-check-time=uint32 1643948375
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
@@ -31,6 +31,13 @@ last-played-as='white'
 maximized=false
 timer-increment=1
 width=700
+
+[org/gnome/boxes]
+first-run=false
+view='icon-view'
+window-maximized=false
+window-position=[1621, 195]
+window-size=[766, 574]
 
 [org/gnome/calculator]
 accuracy=9
@@ -48,7 +55,14 @@ window-position=(1020, 164)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='printers'
+last-panel='network'
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2022-02-04T04:02:08+00'
+
+[org/gnome/deja-dup/file]
+migrated=true
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -84,17 +98,18 @@ xkb-options=['ctrl:nocaps']
 clock-show-seconds=false
 clock-show-weekday=true
 document-font-name='Sans 12'
-enable-animations=true
+enable-animations=false
 enable-hot-corners=false
 font-name='Ubuntu 12'
 gtk-im-module='ibus'
 gtk-key-theme='Emacs'
 gtk-theme='Yaru'
+locate-pointer=false
 monospace-font-name='Ubuntu Mono 15'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code', 'xmind-xmind', 'org-gnome-terminal', 'google-chrome', 'teams', 'vlc-vlc']
+application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code', 'xmind-xmind', 'org-gnome-terminal', 'google-chrome', 'teams', 'vlc-vlc', 'gnome-language-selector']
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -107,6 +122,9 @@ application-id='code_code.desktop'
 
 [org/gnome/desktop/notifications/application/emacs]
 application-id='emacs.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-language-selector]
+application-id='gnome-language-selector.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
@@ -201,9 +219,11 @@ sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gn
 idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
-allow-volume-above-100-percent=false
+allow-volume-above-100-percent=true
 
 [org/gnome/desktop/wm/preferences]
+button-layout=':close'
+num-workspaces=2
 titlebar-font='Ubuntu Bold 12'
 
 [org/gnome/eog/view]
@@ -211,7 +231,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [org/gnome/evince/default]
-window-ratio=(1.6134453781512605, 1.2256532066508314)
+window-ratio=(1.6127450980392157, 1.226010101010101)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -284,10 +304,10 @@ size=(702, 599)
 state=43908
 
 [org/gnome/gnome-screenshot]
-border-effect='none'
-delay=1
+border-effect='shadow'
+delay=3
 include-border=true
-include-pointer=false
+include-pointer=true
 last-save-directory='file:///home/cranechu'
 
 [org/gnome/gnome-system-monitor]
@@ -295,7 +315,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(960, 1033, 720, 0)
+window-state=(960, 1033, 767, 0)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -324,6 +344,8 @@ width=686
 
 [org/gnome/mutter]
 center-new-windows=true
+dynamic-workspaces=false
+experimental-features=@as []
 overlay-key='Super_L'
 
 [org/gnome/nautilus/compression]
@@ -354,6 +376,7 @@ sleep-inactive-ac-type='nothing'
 hinting='slight'
 
 [org/gnome/shell]
+app-picker-view=uint32 0
 disabled-extensions=['desktop-icons@csoriano', 'ubuntu-dock@ubuntu.com', 'ubuntu-appindicators@ubuntu.com']
 enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hidetopbar@mathieu.bidon.ca']
 favorite-apps=['org.gnome.Nautilus.desktop', 'snap-store_ubuntu-software.desktop', 'org.gnome.Terminal.desktop']
@@ -379,8 +402,8 @@ mouse-sensitive-fullscreen-window=false
 toggle-overview=['<Shift>space']
 
 [org/gnome/software]
-check-timestamp=int64 1617662604
-online-updates-timestamp=int64 1617244323
+check-timestamp=int64 1645141456
+online-updates-timestamp=int64 1643948038
 
 [org/gnome/system/location]
 enabled=false
@@ -399,5 +422,5 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(305, 14)
+window-position=(625, 194)
 window-size=(1310, 1006)

@@ -45,7 +45,7 @@
 (load-theme 'wombat t)
 
 ;;TAGS
-(setq tags-table-list '("~/driver/TAGS"))
+(setq tags-table-list '("~/enterprise/TAGS"))
 (global-set-key (kbd "M-.") 'xref-find-definitions-other-window)
 
 ;;zoom window
@@ -316,7 +316,7 @@
 (use-package python-pytest
   :after python
   :config
-  (setq python-pytest-executable "sudo python3 -B -m pytest --pciaddr=0000:06:00.0")
+  (setq python-pytest-executable "sudo python3 -B -m pytest --pciaddr=0000:01:00.0")
   (transient-append-suffix
     'python-pytest-dispatch
     "-v"
