@@ -1,4 +1,3 @@
-/root/spdk/examples/nvme/hello_world
 /home/cranechu/ssdmeter/spdk/examples/nvme/hotplug
 /home/cranechu/ssdmeter/spdk/examples/nvme
 /home/cranechu/ssdmeter/spdk/examples/nvme/hello_world
@@ -28,5 +27,7 @@
 /home/cranechu/pynvme
 /home/cranechu/pynvme/scripts/performance
 /home/cranechu/pynvme/spdk/test/bdev/bdevperf
-/home/cranechu
 /home/cranechu/pynvme
+/home/cranechu/enterprise
+/home/cranechu
+/home/cranechu

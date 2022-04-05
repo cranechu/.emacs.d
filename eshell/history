@@ -1,6 +1,3 @@
-cd webpages/
-ls
-cd content/
 ls
 cd posts/
 ls
@@ -126,3 +123,6 @@ sudo python3 test_Device.py
 sudo python3 test_Device.py 
 sudo python3 test_Device.py 
 sudo python3 test_Device.py 
+cd
+cd py
+exit
