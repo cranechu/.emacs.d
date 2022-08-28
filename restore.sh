@@ -14,7 +14,7 @@ sudo apt remove ghostscript firefox -y
 sudo apt install -y python3-dev python-is-python3 python3-pip
 sudo apt install -y emacs
 sudo apt install -y gnome-tweak-tool
-sudo apt install -y zsh git openssh-server
+sudo apt install -y zsh git openssh-server nvme-cli
 
 # enable SSH
 sudo systemctl enable ssh
