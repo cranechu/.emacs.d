@@ -29,7 +29,7 @@
 ;; UI
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
+;;(scroll-bar-mode -1)
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; default to unified diffs
