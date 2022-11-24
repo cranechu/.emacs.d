@@ -316,7 +316,7 @@
 (use-package python-pytest
   :after python
   :config
-  (setq python-pytest-executable "sudo python3 -B -m pytest --pciaddr=0000:01:00.0")
+  (setq python-pytest-executable "sudo python3 -B -m pytest --pciaddr=0000:01:00.0 --show-capture=no")
   (transient-append-suffix
     'python-pytest-dispatch
     "-v"
