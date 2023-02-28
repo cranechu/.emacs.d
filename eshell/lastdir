@@ -1,8 +1,3 @@
-/home/cranechu/ssdmeter/spdk/examples/nvme/hotplug
-/home/cranechu/ssdmeter/spdk/examples/nvme
-/home/cranechu/ssdmeter/spdk/examples/nvme/hello_world
-/home/cranechu/ssdmeter/spdk/examples/blob/hello_world
-/home/cranechu/ssdmeter/spdk/examples/blob
 /home/cranechu/ssdmeter/spdk/examples
 /home/cranechu/ssdmeter/spdk/examples/bdev
 /home/cranechu/ssdmeter/spdk/examples/bdev/hello_world
@@ -31,3 +26,8 @@
 /home/cranechu/enterprise
 /home/cranechu
 /home/cranechu
+/home/cranechu/PyNVMe3
+/home/cranechu
+/home/cranechu/thread_test
+/home/cranechu/PyNVMe3/scripts
+/home/cranechu/PyNVMe3

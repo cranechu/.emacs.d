@@ -17,6 +17,7 @@
         magit-status
         python-nav-forward-block
         python-pytest-popup
+        python-pytest-repeat
         wdired-finish-edit
         zzz-up-to-char
         ))
