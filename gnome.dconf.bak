@@ -1,7 +1,8 @@
 [apps/update-manager]
+check-new-release-ignore='jammy'
 first-run=false
-launch-count=22
-launch-time=int64 1644640281
+launch-count=50
+launch-time=int64 1678405889
 show-details=true
 window-height=400
 window-width=704
@@ -18,7 +19,7 @@ remember-every-input=true
 sort-candidate-option=0
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1643948375
+release-check-time=uint32 1678236374
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
@@ -32,6 +33,10 @@ maximized=false
 timer-increment=1
 width=700
 
+[org/gnome/baobab/ui]
+window-size=(960, 600)
+window-state=87168
+
 [org/gnome/boxes]
 first-run=false
 view='icon-view'
@@ -43,7 +48,7 @@ window-size=[766, 574]
 accuracy=9
 angle-units='degrees'
 base=10
-button-mode='programming'
+button-mode='basic'
 number-format='automatic'
 show-thousands=false
 show-zeroes=false
@@ -51,15 +56,15 @@ source-currency=''
 source-units='degree'
 target-currency=''
 target-units='radian'
-window-position=(1020, 164)
+window-position=(594, 106)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='network'
+last-panel='usage'
 
 [org/gnome/deja-dup]
 backend='google'
-prompt-check='2022-02-04T04:02:08+00'
+prompt-check='2023-02-24T02:20:28+00'
 
 [org/gnome/deja-dup/file]
 migrated=true
@@ -109,7 +114,7 @@ monospace-font-name='Ubuntu Mono 15'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code', 'xmind-xmind', 'org-gnome-terminal', 'google-chrome', 'teams', 'vlc-vlc', 'gnome-language-selector']
+application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code', 'xmind-xmind', 'org-gnome-terminal', 'google-chrome', 'teams', 'vlc-vlc', 'gnome-language-selector', 'org-gnome-dejadup', 'snap-store-ubuntu-software-local-file', 'io-snapcraft-sessionagent', 'gnome-system-monitor', 'org-gnome-baobab', 'snap-store-snap-store']
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -135,8 +140,20 @@ application-id='gnome-power-panel.desktop'
 [org/gnome/desktop/notifications/application/gnome-printers-panel]
 application-id='gnome-printers-panel.desktop'
 
+[org/gnome/desktop/notifications/application/gnome-system-monitor]
+application-id='gnome-system-monitor.desktop'
+
 [org/gnome/desktop/notifications/application/google-chrome]
 application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/io-snapcraft-sessionagent]
+application-id='io.snapcraft.SessionAgent.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-baobab]
+application-id='org.gnome.baobab.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-dejadup]
+application-id='org.gnome.DejaDup.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-eog]
 application-id='org.gnome.eog.desktop'
@@ -164,6 +181,12 @@ application-id='org.gnome.tweaks.desktop'
 
 [org/gnome/desktop/notifications/application/q4wine]
 application-id='q4wine.desktop'
+
+[org/gnome/desktop/notifications/application/snap-store-snap-store]
+application-id='snap-store_snap-store.desktop'
+
+[org/gnome/desktop/notifications/application/snap-store-ubuntu-software-local-file]
+application-id='snap-store_ubuntu-software-local-file.desktop'
 
 [org/gnome/desktop/notifications/application/snap-store-ubuntu-software]
 application-id='snap-store_ubuntu-software.desktop'
@@ -203,6 +226,10 @@ two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/privacy]
 disable-microphone=false
+old-files-age=uint32 3
+remember-recent-files=false
+remove-old-temp-files=true
+remove-old-trash-files=true
 report-technical-problems=true
 
 [org/gnome/desktop/screensaver]
@@ -231,7 +258,7 @@ background-color='rgb(0,0,0)'
 use-background-color=true
 
 [org/gnome/evince/default]
-window-ratio=(1.6127450980392157, 1.226010101010101)
+window-ratio=(1.6126322862422309, 0.85520845706140869)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -262,16 +289,16 @@ sort-type='ascending'
 
 [org/gnome/file-roller/ui]
 sidebar-width=200
-window-height=763
-window-width=1440
+window-height=721
+window-width=1366
 
 [org/gnome/gedit/plugins]
-active-plugins=['filebrowser', 'docinfo', 'spell', 'time', 'modelines']
+active-plugins=['spell', 'time', 'docinfo', 'modelines', 'filebrowser']
 
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/cranechu'
+virtual-root='file:///home/cranechu/PyNVMe3/log/solidigm_p41plus_512GB/saw_diagram'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -280,7 +307,7 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(900, 700)
+size=(683, 721)
 state=43908
 
 [org/gnome/gitg/preferences/history]
@@ -296,8 +323,8 @@ orientation='horizontal'
 paned-sidebar-position=200
 
 [org/gnome/gitg/state/history]
-paned-panels-position=796
-paned-sidebar-position=452
+paned-panels-position=574
+paned-sidebar-position=178
 
 [org/gnome/gitg/state/window]
 size=(702, 599)
@@ -315,7 +342,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(960, 1033, 767, 0)
+window-state=(683, 721, 683, 0)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -344,7 +371,7 @@ width=686
 
 [org/gnome/mutter]
 center-new-windows=true
-dynamic-workspaces=false
+dynamic-workspaces=true
 experimental-features=@as []
 overlay-key='Super_L'
 
@@ -357,15 +384,18 @@ search-filter-time-type='last_modified'
 search-view='list-view'
 
 [org/gnome/nautilus/window-state]
-initial-size=(890, 550)
+initial-size=(683, 529)
 maximized=false
-sidebar-width=302
+sidebar-width=167
 
 [org/gnome/power-manager]
 info-history-type='charge'
 info-last-device='/org/freedesktop/UPower/devices/line_power_AC'
 info-page-number=0
 info-stats-type='discharge-accuracy'
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-last-coordinates=(1.2946007199424048, 103.8554)
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='nothing'
@@ -402,8 +432,9 @@ mouse-sensitive-fullscreen-window=false
 toggle-overview=['<Shift>space']
 
 [org/gnome/software]
-check-timestamp=int64 1645141456
-online-updates-timestamp=int64 1643948038
+check-timestamp=int64 1678921527
+online-updates-timestamp=int64 1678690685
+update-notification-timestamp=int64 1678690685
 
 [org/gnome/system/location]
 enabled=false
@@ -422,5 +453,8 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(625, 194)
-window-size=(1310, 1006)
+window-position=(39, 0)
+window-size=(1288, 721)
+
+[system/locale]
+region='en_SG.UTF-8'

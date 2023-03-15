@@ -1,5 +1,3 @@
-/home/cranechu/ssdmeter/spdk/examples
-/home/cranechu/ssdmeter/spdk/examples/bdev
 /home/cranechu/ssdmeter/spdk/examples/bdev/hello_world
 ~/ssdmeter/driver
 /home/cranechu/ssdmeter/driver
@@ -24,10 +22,11 @@
 /home/cranechu/pynvme/spdk/test/bdev/bdevperf
 /home/cranechu/pynvme
 /home/cranechu/enterprise
-/home/cranechu
-/home/cranechu
 /home/cranechu/PyNVMe3
-/home/cranechu
 /home/cranechu/thread_test
 /home/cranechu/PyNVMe3/scripts
 /home/cranechu/PyNVMe3
+/home/cranechu/enterprise/spdk/lib/nvme
+/home/cranechu
+/home/cranechu/enterprise
+/home/cranechu/PyNVMe3/scripts

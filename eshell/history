@@ -1,15 +1,3 @@
-make pages
-make dryrun 
-make dryrun 
-make dryrun 
-make dryrun 
-cd ..
-make dryrun 
-make dryrun 
-make dryrun 
-make dryrun 
-make dryrun 
-cd ..
 make dryrun 
 make dryrun 
 make dryrun 
@@ -126,3 +114,15 @@ sudo python3 scripts/test_interrupt_0010_ch_script.py
 sudo python3 scripts/test_interrupt_0010_ch_script.py
 sudo python3 scripts/test_interrupt_0010_ch_script.py
 sudo python3 scripts/test_interrupt_0010_ch_script.py
+cd
+cd enterprise/
+./install.sh 
+cp nvme.so ../PyNVMe3/
+./install.sh 
+cp nvme.so ../PyNVMe3/
+./install.sh 
+./install.sh 
+cp nvme.so ../PyNVMe3/
+sudo pip3 install pyaardvark
+xit
+exit
