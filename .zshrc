@@ -112,6 +112,6 @@ alias e='emacsclient .'
 alias j='z'
 alias gs='git status'
 
-alias pip_upgrade='pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U'
+alias pip_upgrade='pip3 list --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip3 install -U'
 
 disable r
