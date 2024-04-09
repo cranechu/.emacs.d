@@ -99,9 +99,13 @@
 (global-set-key (kbd "C-c s") 'semantic-ia-show-summary)
 
 ;;line number
-(setq linum-format "%4d ")
-(add-hook 'prog-mode-hook 'linum-mode)
-(global-set-key "\M-g" 'goto-line)
+;;(setq linum-format "%4d ")
+;;(add-hook 'prog-mode-hook 'linum-mode)
+;;(global-set-key "\M-g" 'goto-line)
+(if (version<= "26.0.50" emacs-version)
+    (global-display-line-numbers-mode)
+  (global-linum-mode))
+
 
 ;;shell
 (ansi-color-for-comint-mode-on)
@@ -166,9 +170,11 @@
 
 ;; helm
 (use-package helm
+;;  :straight t
   :config
   (progn
     (require 'helm-config)
+    (require 'helm-swoop)
     (setq helm-candidate-number-limit 100)
     (setq helm-idle-delay 0.0           ; this actually updates things   
           helm-input-idle-delay 0.01    ; reeeelatively quickly.
@@ -196,11 +202,6 @@
          ("C-x C-b" . helm-mini)
          ("C-x C-f" . helm-find-files)
          ("C-h SPC" . helm-all-mark-rings)))
-
-;; helm swoop
-(require 'helm-swoop)
-(global-set-key (kbd "C-j") 'helm-swoop)
-(define-key isearch-mode-map (kbd "C-j") 'helm-swoop-from-isearch)
 
 ;; no startup buffer
 (setq inhibit-startup-message t)
