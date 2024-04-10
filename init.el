@@ -190,7 +190,7 @@
     :config (setq helm-buffer-max-length nil))
 
 (use-package helm-occur
-    :bind (("C-j" . helm-occur)))
+    :bind (("C-j" . helm-swoop)))
 
 (use-package helm-imenu
     :bind (("M-s i" . helm-imenu))
