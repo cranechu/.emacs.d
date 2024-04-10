@@ -152,12 +152,12 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;;python
-(elpy-enable)
-(setq elpy-rpc-python-command "python3")
-(add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
-(add-to-list 'auto-mode-alist '("\\.pxd\\'" . python-mode))
-(setq python-indent-offset 4)
-(setq python-indent-guess-indent-offset nil)
+;;(elpy-enable)
+;;(setq elpy-rpc-python-command "python3")
+;;(add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
+;;(add-to-list 'auto-mode-alist '("\\.pxd\\'" . python-mode))
+;;(setq python-indent-offset 4)
+;;(setq python-indent-guess-indent-offset nil)
 
 ;;column bondary
 (require 'fill-column-indicator)
@@ -168,40 +168,37 @@
 ;; dired
 (setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince&")))
 
-;; helm
 (use-package helm
-;;  :straight t
+  :ensure t
   :config
-  (progn
-    (require 'helm-config)
-    (require 'helm-swoop)
-    (setq helm-candidate-number-limit 100)
-    (setq helm-idle-delay 0.0           ; this actually updates things   
-          helm-input-idle-delay 0.01    ; reeeelatively quickly.
-          helm-split-window-in-side-p           t
-          helm-move-to-line-cycle-in-source     t
-          helm-ff-search-library-in-sexp        t
-          helm-M-x-fuzzy-match                  t
-          helm-semantic-fuzzy-match             t
-          helm-buffers-fuzzy-matching           t
-          helm-locate-fuzzy-match               t
-          helm-recentf-fuzzy-match              t
-          helm-scroll-amount                    8
-          helm-ff-file-name-history-use-recentf t
-          helm-yas-display-key-on-candidate     t
-          helm-quick-update                     t
-          helm-M-x-requires-pattern nil
-          helm-ff-skip-boring-files t)
-    (helm-mode 1)
-    (helm-autoresize-mode 1))
-  :bind (("C-o" . helm-M-x)
-         ("M-y" . helm-show-kill-ring)
-         ("C-c h" . helm-command-prefix)
-         ("C-j" . helm-occur)
-         ("C-M-j" . helm-locate)
-         ("C-x C-b" . helm-mini)
-         ("C-x C-f" . helm-find-files)
-         ("C-h SPC" . helm-all-mark-rings)))
+  (setq helm-split-window-inside-p t)
+  (setq helm-use-frame-when-more-than-two-windows nil)
+  (helm-autoresize-mode 1))
+
+(use-package helm-mode
+    :config (helm-mode 1))
+
+(use-package helm-command
+    :bind (("C-o" . helm-M-x)))
+
+(use-package helm-files
+    :bind (("C-x C-f" . helm-find-files)))
+
+(use-package helm-buffers
+    :bind (("C-x C-b" . helm-buffers-list)
+           ("M-s m" . helm-mini))
+    :config (setq helm-buffer-max-length nil))
+
+(use-package helm-occur
+    :bind (("C-j" . helm-occur)))
+
+(use-package helm-imenu
+    :bind (("M-s i" . helm-imenu))
+    :config (setq imenu-max-item-length 120))
+
+(use-package helm-bookmarks
+    :bind (("M-s b" . helm-bookmarks)))
+
 
 ;; no startup buffer
 (setq inhibit-startup-message t)
