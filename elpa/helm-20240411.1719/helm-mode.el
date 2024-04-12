@@ -32,6 +32,7 @@
 (defvar package--builtins)
 (defvar helm--locate-library-doc-cache)
 (defvar helm--locate-library-cache)
+(defvar completion-lazy-hilit) ; Emacs-30 only.
 
 ;; No warnings in Emacs built --without-x
 (declare-function x-file-dialog "xfns.c")
@@ -1064,9 +1065,7 @@ like this:
 FLAGS is a list of variables to renitialize to nil when exiting or quitting.
 
 It is used to add `affixation-function' or `annotation-function' if original
-metadata doesn't have some and `completions-detailed' is non nil.
-When using emacs as `helm-completion-style', this has no effect, keeping same
-behavior as emacs vanilla.")
+metadata doesn't have some and `completions-detailed' is non nil.")
 
 (defvar helm-completing-read-command-categories
   '(("customize-variable" . symbol-help)
@@ -1192,7 +1191,7 @@ is used."
            (max-len (and (memq helm-completion-style '(helm helm-fuzzy))
                          (helm-in-buffer-get-longest-candidate)))
            (sep (if (or (null max-len) (zerop max-len))
-                    " --"               ; Default separator.
+                    " -- "               ; Default separator.
                   (helm-make-separator comp max-len)))
            (doc (ignore-errors
                   (helm-get-first-line-documentation sym)))
@@ -1471,7 +1470,8 @@ dynamically otherwise use `helm-completing-read-default-2'."
 Call `helm-comp-read' with same args as `completing-read'.
 For the meaning of optional args see `helm-completing-read-default-1'.
 This handler uses dynamic matching which allows honouring `completion-styles'."
-  (let* ((history (or (car-safe hist) hist))
+  (let* ((completion-lazy-hilit t)
+         (history (or (car-safe hist) hist))
          (input (helm-acase init
                   ((guard (stringp it)) it)
                   ((guard (consp it)) (car it))))
@@ -1527,16 +1527,9 @@ This handler uses dynamic matching which allows honouring `completion-styles'."
                      (append (and default
                                   (memq helm-completion-style '(helm helm-fuzzy))
                                   (list default))
-                             (helm-completion--initial-filter
-                              (let ((lst (if (and sort-fn (> (length str) 0))
-                                             (funcall sort-fn all)
-                                           all)))
-                                (if (and default afix)
-                                    (prog1 (append (list default)
-                                                   (delete default lst))
-                                      (setq default nil))
-                                  lst))
-                              afun afix category)))))
+                             (if (and sort-fn (> (length str) 0))
+                                 (funcall sort-fn all)
+                               all)))))
          (data (if (memq helm-completion-style '(helm helm-fuzzy))
                    (funcall compfn (or input "") nil nil)
                  compfn))
@@ -1545,7 +1538,20 @@ This handler uses dynamic matching which allows honouring `completion-styles'."
             (if (or helm-completion--sorting-done
                     (string= helm-pattern ""))
                 candidates
-              (sort candidates 'helm-generic-sort-fn)))))
+              (sort candidates 'helm-generic-sort-fn))))
+         flags)
+    (helm-aif (and (null category)
+                   (assoc-default name helm-completing-read-command-categories))
+        (setq metadata `(metadata (category . ,it))
+              category it))
+    (helm-aif (and (or (and (boundp 'completions-detailed) completions-detailed)
+                       helm-completions-detailed)
+                   (assoc-default category helm-completing-read-extra-metadata))
+        (progn
+          (setq metadata it)
+          (setq afun (completion-metadata-get metadata 'annotation-function)
+                afix (completion-metadata-get metadata 'affixation-function)
+                flags (completion-metadata-get metadata 'flags))))
     (unwind-protect
         (helm-comp-read
          ;; Completion-at-point and friends have no prompt.
@@ -1557,21 +1563,29 @@ This handler uses dynamic matching which allows honouring `completion-styles'."
          :history history
          :nomark (null helm-comp-read-use-marked)
          :reverse-history helm-mode-reverse-history
-         ;; In helm h-c-styles default is passed directly in
-         ;; candidates.
-         :default (and (eq helm-completion-style 'emacs) (null afix) default)
+         ;; If DEF is not provided, fallback to empty string
+         ;; to avoid `thing-at-point' to be appended on top of list.
+         ;; FIXME: default is added first in the collection fn, and then it is
+         ;; added here and appended to candidates with the get candidates fn of
+         ;; helm-comp-read, later when sorting default may move somewhere
+         ;; whereas it has to stay on top.
+         :default (or default "")
          :fc-transformer
-         ;; Ensure sort fn is at the end.
-         (append '(helm-cr-default-transformer)
-                 (and helm-completion-in-region-default-sort-fn
-                      (list helm-completion-in-region-default-sort-fn)))
+         (append (and (or afix afun (memq category '(file library)))
+                      (list (lambda (candidates source)
+                              (helm-completion--initial-filter
+                               (funcall helm-completion-in-region-default-sort-fn
+                                        candidates source)
+                               afun afix category))))
+                 '(helm-cr-default-transformer))
          :match-dynamic (eq helm-completion-style 'emacs)
          :diacritics helm-mode-ignore-diacritics
          :fuzzy (eq helm-completion-style 'helm-fuzzy)
          :exec-when-only-one exec-when-only-one
          :quit-when-no-cand (eq require-match t)
          :must-match require-match)
-      (setq helm-completion--sorting-done nil))))
+      (setq helm-completion--sorting-done nil)
+      (dolist (f flags) (set f nil)))))
 
 (defun helm-mode-all-the-icons-handler (prompt collection test require-match
                                         init hist default inherit-input-method
@@ -2563,7 +2577,8 @@ Can be used for `completion-in-region-function' by advicing it with an
                  ;; so data looks like this: '(a b c d . 0) and (last data) == (d . 0).
                  base-size
                  (compfn (lambda (str _predicate _action)
-                           (let* ((completion-ignore-case (helm-set-case-fold-search))
+                           (let* ((completion-lazy-hilit t)
+                                  (completion-ignore-case (helm-set-case-fold-search))
                                   (comps
                                    (completion-all-completions
                                     str ; This is helm-pattern
@@ -2608,11 +2623,9 @@ Can be used for `completion-in-region-function' by advicing it with an
                              (unless base-size (setq base-size bs))
                              (setq helm-completion--sorting-done (and sort-fn t))
                              (setq all (copy-sequence comps))
-                             (helm-completion--initial-filter
-                              (if (and sort-fn (> (length str) 0))
-                                  (funcall sort-fn all)
-                                all)
-                              afun afix category))))
+                             (if (and sort-fn (> (length str) 0))
+                                 (funcall sort-fn all)
+                               all))))
                  (data (if (memq helm-completion-style '(helm helm-fuzzy))
                            (funcall compfn input nil nil)
                          compfn))
@@ -2642,10 +2655,13 @@ Can be used for `completion-in-region-function' by advicing it with an
                                              init-space-suffix)))
                             :buffer buf-name
                             :fc-transformer
-                            ;; Ensure sort fn is at the end.
-                            (append '(helm-cr-default-transformer)
-                                    (and helm-completion-in-region-default-sort-fn
-                                         (list helm-completion-in-region-default-sort-fn)))
+                            (append (and (or afix afun (memq category '(file library)))
+                                         (list (lambda (candidates source)
+                                                 (helm-completion--initial-filter
+                                                  (funcall helm-completion-in-region-default-sort-fn
+                                                           candidates source)
+                                                  afun afix category))))
+                                    '(helm-cr-default-transformer))
                             :match-dynamic (eq helm-completion-style 'emacs)
                             :fuzzy (eq helm-completion-style 'helm-fuzzy)
                             :exec-when-only-one t

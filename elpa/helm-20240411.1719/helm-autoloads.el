@@ -828,7 +828,9 @@ When installing or upgrading ensure to refresh the package list
 to avoid errors with outdated packages no more availables.
 
 (fn &optional ARG)" t)
-(register-definition-prefixes "helm-packages" '("helm-packages-"))
+(autoload 'helm-finder "helm-packages" "\
+Helm interface to find packages by keywords with `finder'." t)
+(register-definition-prefixes "helm-packages" '("helm-"))
 
 
 ;;; Generated autoloads from helm-regexp.el

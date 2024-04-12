@@ -1,6 +1,6 @@
-(define-package "flycheck" "20240410.1206" "On-the-fly syntax checking"
+(define-package "flycheck" "20240411.449" "On-the-fly syntax checking"
   '((emacs "26.1"))
-  :commit "1cc041503deb31e16819a1bdda342820c38ef5f8" :authors
+  :commit "900b8e79754d21853a6e5b5a2802f317a7112a1e" :authors
   '(("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
   :maintainers
   '(("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))

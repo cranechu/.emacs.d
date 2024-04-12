@@ -1,7 +1,6 @@
-(define-package "exec-path-from-shell" "20240216.1606" "Get environment variables such as $PATH from the shell"
-  '((emacs "24.1")
-    (cl-lib "0.6"))
-  :commit "d95677ad608c214647b87bc20df1642763e3b400" :authors
+(define-package "exec-path-from-shell" "20240411.859" "Get environment variables such as $PATH from the shell"
+  '((emacs "24.4"))
+  :commit "72ede29a0e0467b3b433e8edbee3c79bab005884" :authors
   '(("Steve Purcell" . "steve@sanityinc.com"))
   :maintainers
   '(("Steve Purcell" . "steve@sanityinc.com"))
