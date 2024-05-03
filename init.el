@@ -60,17 +60,14 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(custom-safe-themes
-   (quote
-    ("b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default)))
- '(ede-project-directories (quote ("~/work")))
+   '("b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" default))
+ '(ede-project-directories '("~/work"))
  '(fringe-mode 0 nil (fringe))
  '(grep-command "grep --color -nH --null -Ir -e ")
  '(grep-find-command
-   (quote
-    ("find . -type f -exec grep --color -nH --null -e  \\{\\} +" . 49)))
+   '("find . -type f -exec grep --color -nH --null -e  \\{\\} +" . 49))
  '(package-selected-packages
-   (quote
-    (csharp-mode python-pytest clang-format cnfonts psession ace-jump-mode ack zzz-to-char undo-tree iy-go-to-char super-save benchmark-init elpy beacon smooth-scroll py-autopep8 go-guru exec-path-from-shell helm-go-package go-playground key-chord fill-column-indicator go-autocomplete go-direx go-eldoc go-errcheck go-impl ace-window magit-filenotify magit-gerrit magit-gitflow deferred epl f find-file-in-project highlight-indentation pkg-info request-deferred rich-minority s function-args ein racer cargo eshell-up smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-helm-commands ac-helm helm-anything helm-dash auto-complete column-marker igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar ##)))
+   '(cython-mode csharp-mode python-pytest clang-format cnfonts psession ace-jump-mode ack zzz-to-char undo-tree iy-go-to-char super-save benchmark-init elpy beacon smooth-scroll py-autopep8 go-guru exec-path-from-shell helm-go-package go-playground key-chord fill-column-indicator go-autocomplete go-direx go-eldoc go-errcheck go-impl ace-window magit-filenotify magit-gerrit magit-gitflow deferred epl f find-file-in-project highlight-indentation pkg-info request-deferred rich-minority s function-args ein racer cargo eshell-up smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-helm-commands ac-helm helm-anything helm-dash auto-complete column-marker igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar ##))
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -99,13 +96,8 @@
 (global-set-key (kbd "C-c s") 'semantic-ia-show-summary)
 
 ;;line number
-;;(setq linum-format "%4d ")
-;;(add-hook 'prog-mode-hook 'linum-mode)
-;;(global-set-key "\M-g" 'goto-line)
-(if (version<= "26.0.50" emacs-version)
-    (global-display-line-numbers-mode)
-  (global-linum-mode))
-
+(global-set-key "\M-g" 'goto-line)
+(global-display-line-numbers-mode)
 
 ;;shell
 (ansi-color-for-comint-mode-on)
@@ -309,6 +301,9 @@
 
 ;; autopep8
 (require 'py-autopep8)
+
+;; cython
+(require 'cython-mode)
 
 ;; pytest
 (use-package python-pytest
