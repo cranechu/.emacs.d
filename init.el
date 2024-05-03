@@ -135,9 +135,9 @@
 (require 'zzz-to-char)
 (global-set-key (kbd "M-z") #'zzz-up-to-char)
 
-;; undo tree
-(global-undo-tree-mode)
-(setq undo-tree-visualizer-diff t)
+;;;; undo tree
+;;(global-undo-tree-mode)
+;;(setq undo-tree-visualizer-diff t)
 
 ;;all code
 (add-hook 'prog-mode-hook 'follow-mode)
@@ -235,15 +235,15 @@
 (global-set-key (kbd "C-c C-c C-q") 'winner-redo)
 (global-set-key (kbd "C-q") 'other-window)
 
-;; neotree
-(require 'neotree)
-(setq neo-autorefresh nil)
-(setq neo-toggle-window-keep-p t)
-(setq neo-click-changes-root nil)
-(setq neo-window-fixed-size t)
-(setq neo-buffer--start-node "~/")
-(setq neo-global--do-autorefresh nil)
-(global-set-key (kbd "C-x n") 'neotree-toggle)
+;;;; neotree
+;;(require 'neotree)
+;;(setq neo-autorefresh nil)
+;;(setq neo-toggle-window-keep-p t)
+;;(setq neo-click-changes-root nil)
+;;(setq neo-window-fixed-size t)
+;;(setq neo-buffer--start-node "~/")
+;;(setq neo-global--do-autorefresh nil)
+;;(global-set-key (kbd "C-x n") 'neotree-toggle)
 
 ;;google c style
 (require 'cc-mode)
