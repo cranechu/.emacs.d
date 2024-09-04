@@ -19,7 +19,7 @@ remember-every-input=true
 sort-candidate-option=0
 
 [com/ubuntu/update-notifier]
-release-check-time=uint32 1678236374
+release-check-time=uint32 1725421857
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
@@ -60,7 +60,8 @@ window-position=(594, 106)
 word-size=64
 
 [org/gnome/control-center]
-last-panel='usage'
+last-panel='background'
+window-state=(980, 640, false)
 
 [org/gnome/deja-dup]
 backend='google'
@@ -71,6 +72,11 @@ migrated=true
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
 
 [org/gnome/desktop/app-folders/folders/Utilities]
 apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gucharmap.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Screenshot.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'simple-scan.desktop', 'vinagre.desktop', 'yelp.desktop']
@@ -86,9 +92,10 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/hardy_wallpaper_uhd.png'
-primary-color='#000000'
-secondary-color='#000000'
+picture-uri='file:///usr/share/backgrounds/contest/noble.xml'
+picture-uri-dark='file:///usr/share/backgrounds/contest/noble.xml'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/calendar]
 show-weekdate=true
@@ -105,16 +112,18 @@ clock-show-weekday=true
 document-font-name='Sans 12'
 enable-animations=false
 enable-hot-corners=false
+font-hinting='slight'
 font-name='Ubuntu 12'
 gtk-im-module='ibus'
 gtk-key-theme='Emacs'
 gtk-theme='Yaru'
+icon-theme='Yaru'
 locate-pointer=false
 monospace-font-name='Ubuntu Mono 15'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code', 'xmind-xmind', 'org-gnome-terminal', 'google-chrome', 'teams', 'vlc-vlc', 'gnome-language-selector', 'org-gnome-dejadup', 'snap-store-ubuntu-software-local-file', 'io-snapcraft-sessionagent', 'gnome-system-monitor', 'org-gnome-baobab', 'snap-store-snap-store']
+application-children=['update-manager', 'chromium-chromium', 'org-gnome-nautilus', 'org-gnome-tweaks', 'apport-gtk', 'xdg-desktop-portal-gtk', 'snap-store-ubuntu-software', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-screenshot', 'wps-office-et', 'zoom', 'emacs', 'org-gnome-evolution-alarm-notify', 'wps-office-wpp', 'org-gnome-eog', 'gnome-printers-panel', 'wps-office-wps', 'q4wine', 'org-gnome-gedit', 'org-gnome-fileroller', 'code-code', 'xmind-xmind', 'org-gnome-terminal', 'google-chrome', 'teams', 'vlc-vlc', 'gnome-language-selector', 'org-gnome-dejadup', 'snap-store-ubuntu-software-local-file', 'io-snapcraft-sessionagent', 'gnome-system-monitor', 'org-gnome-baobab', 'snap-store-snap-store', 'emacsclient']
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -127,6 +136,12 @@ application-id='code_code.desktop'
 
 [org/gnome/desktop/notifications/application/emacs]
 application-id='emacs.desktop'
+
+[org/gnome/desktop/notifications/application/emacsclient]
+application-id='emacsclient.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-initial-setup]
+application-id='gnome-initial-setup.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-language-selector]
 application-id='gnome-language-selector.desktop'
@@ -235,9 +250,9 @@ report-technical-problems=true
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/hardy_wallpaper_uhd.png'
-primary-color='#000000'
-secondary-color='#000000'
+picture-uri='file:///usr/share/backgrounds/contest/noble.xml'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/search-providers]
 sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
@@ -372,14 +387,20 @@ width=686
 [org/gnome/mutter]
 center-new-windows=true
 dynamic-workspaces=true
+edge-tiling=false
 experimental-features=@as []
 overlay-key='Super_L'
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
 
 [org/gnome/nautilus/compression]
 default-compression-format='7z'
 
 [org/gnome/nautilus/preferences]
 default-folder-viewer='list-view'
+migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 search-view='list-view'
 
@@ -402,25 +423,30 @@ power-button-action='nothing'
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
 
-[org/gnome/settings-daemon/plugins/xsettings]
-hinting='slight'
-
 [org/gnome/shell]
+app-picker-layout=[{'software-properties-drivers.desktop': <{'position': <0>}>, 'firmware-updater_firmware-updater.desktop': <{'position': <1>}>, 'gnome-language-selector.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.PowerStats.desktop': <{'position': <4>}>, 'software-properties-gtk.desktop': <{'position': <5>}>, 'update-manager.desktop': <{'position': <6>}>, 'gnome-session-properties.desktop': <{'position': <7>}>, 'org.gnome.TextEditor.desktop': <{'position': <8>}>, 'org.gnome.Extensions.desktop': <{'position': <9>}>, 'org.gnome.Settings.desktop': <{'position': <10>}>, 'emacsclient.desktop': <{'position': <11>}>, 'org.gnome.SystemMonitor.desktop': <{'position': <12>}>, 'emacs.desktop': <{'position': <13>}>, 'emacs-term.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'snap-store_snap-store.desktop': <{'position': <16>}>, 'firefox_firefox.desktop': <{'position': <17>}>}]
 app-picker-view=uint32 0
 disabled-extensions=['desktop-icons@csoriano', 'ubuntu-dock@ubuntu.com', 'ubuntu-appindicators@ubuntu.com']
-enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hidetopbar@mathieu.bidon.ca']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'hidetopbar@mathieu.bidon.ca', 'ding@rastersoft.com', 'tiling-assistant@ubuntu.com']
 favorite-apps=['org.gnome.Nautilus.desktop', 'snap-store_ubuntu-software.desktop', 'org.gnome.Terminal.desktop']
+last-selected-power-profile='performance'
+welcome-dialog-last-shown-version='46.0'
 
 [org/gnome/shell/extensions/dash-to-dock]
 dash-max-icon-size=64
 dock-fixed=false
 dock-position='RIGHT'
-preferred-monitor=0
+preferred-monitor=-2
+preferred-monitor-by-connector='DP-2'
 
 [org/gnome/shell/extensions/desktop-icons]
 icon-size='large'
 show-home=false
 show-trash=false
+
+[org/gnome/shell/extensions/ding]
+check-x11wayland=true
+show-home=false
 
 [org/gnome/shell/extensions/hidetopbar]
 enable-active-window=false
@@ -428,8 +454,16 @@ enable-intellihide=false
 mouse-sensitive=false
 mouse-sensitive-fullscreen-window=false
 
+[org/gnome/shell/extensions/tiling-assistant]
+active-window-hint-color='rgb(211,70,21)'
+last-version-installed=46
+overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-left': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-right': <@mb nothing>}
+
 [org/gnome/shell/keybindings]
 toggle-overview=['<Shift>space']
+
+[org/gnome/shell/world-clocks]
+locations=@av []
 
 [org/gnome/software]
 check-timestamp=int64 1678921527
@@ -441,6 +475,10 @@ enabled=false
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 scrollbar-policy='never'
+
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=false
+sort-directories-first=true
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
