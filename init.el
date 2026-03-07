@@ -89,7 +89,7 @@
 (load-theme 'wombat t)
 
 ;; TAGS.
-(setq tags-table-list '("~/nxp/usb-i3c/TAGS"))
+(setq tags-table-list '("~/enterprise/TAGS"))
 (global-set-key (kbd "M-.") #'xref-find-definitions-other-window)
 
 (use-package zoom-window
