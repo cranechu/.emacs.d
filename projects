@@ -1,0 +1,6 @@
+;;; -*- lisp-data -*-
+(("/Users/cranechu/PyNVMe3/") ("/Users/cranechu/enterprise/")
+ ("/Users/cranechu/nxp/usb-i3c/") ("/Users/cranechu/enterprise/i3c/")
+ ("/Users/cranechu/enterprise/spdm-emu/")
+ ("/Users/cranechu/enterprise/spdk_master/")
+ ("/Users/cranechu/enterprise/libspdm/"))

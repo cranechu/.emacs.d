@@ -1,58 +1,349 @@
-;; init.el
+;; init.el -*- lexical-binding: t; -*-
 
-;; fast startup
-(setq gc-cons-threshold 100000000)
-(setq gc-cons-percentage 0.6)
-(add-hook 'emacs-startup-hook 'my/set-gc-threshold)
-(defun my/set-gc-threshold ()
-  "Reset `gc-cons-threshold' to its default value."
-  (setq gc-cons-threshold 800000))
-(setq file-name-handler-alist nil)
+(defconst my/emacs-dir
+  (file-name-directory
+   (or load-file-name user-init-file buffer-file-name default-directory))
+  "Directory that contains this init file.")
 
-;; package
+(defconst my/lisp-dir (expand-file-name "lisp" my/emacs-dir)
+  "Directory for local Lisp files.")
+
+(defconst my/elpa-dir (expand-file-name "elpa" my/emacs-dir)
+  "Directory for local ELPA packages.")
+
+;; Fast startup: relax GC and file handlers during init, then restore them.
+(defconst my/default-gc-cons-threshold gc-cons-threshold)
+(defconst my/default-gc-cons-percentage gc-cons-percentage)
+(defvar my/default-file-name-handler-alist file-name-handler-alist)
+
+(setq gc-cons-threshold 100000000
+      gc-cons-percentage 0.6
+      file-name-handler-alist nil)
+
+(defun my/restore-startup-defaults ()
+  "Restore startup settings that were relaxed for faster initialization."
+  (setq gc-cons-threshold my/default-gc-cons-threshold
+        gc-cons-percentage my/default-gc-cons-percentage
+        file-name-handler-alist my/default-file-name-handler-alist))
+
+(add-hook 'emacs-startup-hook #'my/restore-startup-defaults)
+
+;; Package bootstrap.
+(setq package-user-dir my/elpa-dir)
+
 (require 'package)
-(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
+(require 'cc-mode)
+(require 'comint)
+(require 'dired-x)
+(require 'imenu)
+(require 'winner)
 
-;; benchmark-init
-(require 'benchmark-init)
-;; To disable collection of benchmark data after init is done.
-(add-hook 'after-init-hook 'benchmark-init/deactivate)
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")))
 
-;; use-package
+(unless package--initialized
+  (package-initialize))
+
+(add-to-list 'load-path my/lisp-dir)
+
 (require 'use-package)
 
-;; enable visual feedback on selections
-(setq transient-mark-mode t)
+(use-package benchmark-init
+  :if (locate-library "benchmark-init")
+  :functions (benchmark-init/deactivate)
+  :config
+  (add-hook 'after-init-hook #'benchmark-init/deactivate))
 
-;; UI
+;; General behavior.
+(transient-mark-mode 1)
+
+(setq diff-switches "-u"
+      require-final-newline 'query
+      inhibit-startup-message t
+      make-backup-files nil
+      select-enable-clipboard t
+      debug-on-error t
+      scroll-margin 1
+      scroll-conservatively 0
+      scroll-up-aggressively 0.01
+      scroll-down-aggressively 0.01
+      auto-window-vscroll nil
+      fill-column 80
+      c-default-style "linux")
+
+(setq-default c-basic-offset 2
+              indent-tabs-mode nil
+              tab-width 2
+              scroll-up-aggressively 0.01
+              scroll-down-aggressively 0.01)
+
+;; UI.
 (menu-bar-mode -1)
-(tool-bar-mode -1)
-;;(scroll-bar-mode -1)
-(set-frame-parameter nil 'fullscreen 'fullboth)
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
+(add-to-list 'default-frame-alist '(fullscreen . fullboth))
 
-;; default to unified diffs
-(setq diff-switches "-u")
-
-;; always end a file with a newline
-(setq require-final-newline 'query)
-
-;;load path
-(add-to-list 'load-path "~/.emacs.d/lisp")
-
-;; color theme
 (load-theme 'wombat t)
 
-;;TAGS
-(setq tags-table-list '("~/enterprise/TAGS"))
-(global-set-key (kbd "M-.") 'xref-find-definitions-other-window)
+;; TAGS.
+(setq tags-table-list '("~/nxp/usb-i3c/TAGS"))
+(global-set-key (kbd "M-.") #'xref-find-definitions-other-window)
 
-;;zoom window
-(require 'zoom-window)
-(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+(use-package zoom-window
+  :if (locate-library "zoom-window")
+  :bind (("C-x C-z" . zoom-window-zoom)))
 
-;;custom set variables
+;; Mode line.
+(use-package smart-mode-line
+  :if (locate-library "smart-mode-line")
+  :config
+  (setq sml/name-width 31
+        sml/shorten-modes t
+        rm-blacklist ""
+        sml/theme nil
+        sml/no-confirm-load-theme t)
+  (display-time-mode 1)
+  (sml/setup))
+
+;; Sticky function at head.
+(use-package stickyfunc-enhance
+  :ensure nil
+  :if (locate-library "stickyfunc-enhance")
+  :functions (semantic-ia-show-summary)
+  :config
+  (add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
+  (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
+  (semantic-mode 1)
+  (global-set-key (kbd "C-c s") #'semantic-ia-show-summary))
+
+;; Line numbers.
+(global-set-key (kbd "M-g") #'goto-line)
+(global-display-line-numbers-mode 1)
+
+;; Shell.
+(ansi-color-for-comint-mode-on)
+(remove-hook 'comint-output-filter-functions
+             #'comint-postoutput-scroll-to-bottom)
+
+;; Mark words.
+(defun my/mark-word-backward (n)
+  (interactive "p")
+  (unless (or (eq last-command this-command)
+              (eq last-command 'my/mark-word))
+    (set-mark (point)))
+  (backward-word n))
+
+(defun my/mark-word (n)
+  (interactive "p")
+  (unless (or (eq last-command this-command)
+              (eq last-command 'my/mark-word-backward))
+    (set-mark (point)))
+  (forward-word n))
+
+(global-set-key (kbd "M-k") #'my/mark-word)
+(global-set-key (kbd "C-M-k") #'my/mark-word-backward)
+
+(use-package multiple-cursors
+  :if (locate-library "multiple-cursors")
+  :bind (("M-n" . mc/mark-next-like-this)
+         ("M-p" . mc/mark-previous-like-this)))
+
+(use-package iy-go-to-char
+  :if (locate-library "iy-go-to-char")
+  :config
+  (with-eval-after-load 'multiple-cursors
+    (add-to-list 'mc/cursor-specific-vars 'iy-go-to-char-start-pos)))
+
+(use-package zzz-to-char
+  :if (locate-library "zzz-to-char")
+  :bind (("M-z" . zzz-up-to-char)))
+
+;; All code.
+(add-hook 'prog-mode-hook #'follow-mode)
+
+(use-package rainbow-delimiters
+  :if (locate-library "rainbow-delimiters")
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+;; Fill column indicator.
+(setq-default display-fill-column-indicator-column 80)
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+
+;; Dired.
+(setq dired-guess-shell-alist-user
+      `(( "\\.pdf\\'" ,(if (eq system-type 'darwin) "open" "xdg-open"))))
+
+;; Helm.
+(defvar helm-buffer-max-length)
+
+(use-package helm
+  :if (locate-library "helm")
+  :functions (helm-autoresize-mode)
+  :bind (("C-o" . helm-M-x)
+         ("C-x C-f" . helm-find-files)
+         ("C-x C-b" . helm-buffers-list)
+         ("M-s m" . helm-mini)
+         ("M-s i" . helm-imenu)
+         ("M-s b" . helm-bookmarks))
+  :config
+  (setq helm-split-window-inside-p t
+        helm-use-frame-when-more-than-two-windows nil
+        helm-buffer-max-length nil
+        imenu-max-item-length 120)
+  (helm-mode 1)
+  (helm-autoresize-mode 1))
+
+(use-package helm-swoop
+  :if (locate-library "helm-swoop")
+  :bind (("C-j" . helm-swoop)))
+
+;; Save buffers when switching context.
+(defun my/save-current-buffer-if-file (&rest _)
+  "Save the current buffer if it is visiting a file."
+  (when buffer-file-name
+    (save-buffer)))
+
+(advice-add 'switch-to-buffer :before #'my/save-current-buffer-if-file)
+(advice-add 'other-window :before #'my/save-current-buffer-if-file)
+
+(with-eval-after-load 'ace-window
+  (advice-add 'ace-window :before #'my/save-current-buffer-if-file))
+
+;; Save all buffers when Emacs loses focus.
+(defvar my/frame-focused-p t
+  "Track the last known frame focus state.")
+
+(defun my/save-buffers-on-focus-loss ()
+  "Save file-visiting buffers when the selected frame loses focus."
+  (let ((focused (frame-focus-state)))
+    (when (and my/frame-focused-p (not focused))
+      (save-some-buffers t))
+    (setq my/frame-focused-p focused)))
+
+(add-function :after after-focus-change-function
+              #'my/save-buffers-on-focus-loss)
+
+;; Auto revert/reload modified buffer.
+(global-auto-revert-mode 1)
+
+;; Editing/window helpers.
+(global-set-key (kbd "M-h") #'backward-kill-word)
+(global-set-key (kbd "<C-left>") #'shrink-window-horizontally)
+(global-set-key (kbd "<C-right>") #'enlarge-window-horizontally)
+(global-set-key (kbd "M-i") #'delete-other-windows)
+(global-set-key (kbd "C-x x") #'split-window-right)
+
+;; Window switch.
+(winner-mode 1)
+(global-set-key (kbd "C-c C-q") #'winner-undo)
+(global-set-key (kbd "C-c C-c C-q") #'winner-redo)
+(global-set-key (kbd "C-q") #'other-window)
+
+;; Google C style.
+(use-package google-c-style
+  :ensure nil
+  :if (locate-library "google-c-style")
+  :hook ((c-mode-common . google-set-c-style)
+         (c-mode-common . google-make-newline-indent)
+         (c-mode-common . follow-mode)))
+
+(defun cpplint ()
+  "Check source format with cpplint and expose errors through Compilation mode."
+  (interactive)
+  (unless buffer-file-name
+    (user-error "Current buffer is not visiting a file"))
+  (compilation-start
+   (format "cpplint %s" (shell-quote-argument buffer-file-name))))
+
+;; Magit.
+(use-package magit
+  :if (locate-library "magit")
+  :bind (("C-x g" . magit-status))
+  :config
+  (setq magit-refresh-status-buffer nil))
+
+;; Org.
+(add-hook 'org-mode-hook
+          (lambda ()
+            (setq truncate-lines nil)))
+
+;; Jump to visible text.
+(use-package avy
+  :if (locate-library "avy")
+  :bind (("M-j" . avy-goto-char-timer))
+  :config
+  (setq avy-all-windows t))
+
+;; Smooth scroll.
+(when (fboundp 'pixel-scroll-precision-mode)
+  (pixel-scroll-precision-mode 1))
+(global-set-key (kbd "<C-down>") #'scroll-up-line)
+(global-set-key (kbd "<C-up>") #'scroll-down-line)
+
+;; Highlight.
+(use-package beacon
+  :if (locate-library "beacon")
+  :config
+  (beacon-mode 1))
+
+(use-package hl-todo
+  :if (locate-library "hl-todo")
+  :config
+  (global-hl-todo-mode 1))
+
+;; Chinese font.
+(use-package cnfonts
+  :if (locate-library "cnfonts"))
+
+;; Auto complete.
+(electric-pair-mode 1)
+
+(use-package auto-complete
+  :if (locate-library "auto-complete-config")
+  :config
+  (require 'auto-complete-config)
+  (ac-config-default)
+  (setq-default ac-sources
+                '(ac-source-yasnippet
+                  ac-source-abbrev
+                  ac-source-dictionary
+                  ac-source-words-in-same-mode-buffers)))
+
+;; Python helpers.
+(use-package py-autopep8
+  :if (locate-library "py-autopep8"))
+
+(use-package cython-mode
+  :if (locate-library "cython-mode"))
+
+(use-package python-pytest
+  :if (locate-library "python-pytest")
+  :after python
+  :bind (("C-t" . python-pytest-dispatch))
+  :config
+  (setq python-pytest-executable
+        "python3 -B -m pytest --pciaddr=0000:01:00.0 --show-capture=no")
+  (when (fboundp 'transient-append-suffix)
+    (transient-append-suffix
+     'python-pytest-dispatch
+     "-v"
+     '("-z" "print debug logging" "--log-cli-level=debug"))))
+
+;; Session management.
+(use-package psession
+  :if (locate-library "psession")
+  :init
+  (setq psession-elisp-objects-default-directory
+        (expand-file-name "elisp-objects/" my/emacs-dir))
+  :config
+  (psession-savehist-mode 1)
+  (psession-mode 1))
+
+(put 'upcase-region 'disabled nil)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -69,265 +360,10 @@
  '(package-selected-packages
    '(cython-mode csharp-mode python-pytest clang-format cnfonts psession ace-jump-mode ack zzz-to-char undo-tree iy-go-to-char super-save benchmark-init elpy beacon smooth-scroll py-autopep8 go-guru exec-path-from-shell helm-go-package go-playground key-chord fill-column-indicator go-autocomplete go-direx go-eldoc go-errcheck go-impl ace-window magit-filenotify magit-gerrit magit-gitflow deferred epl f find-file-in-project highlight-indentation pkg-info request-deferred rich-minority s function-args ein racer cargo eshell-up smart-mode-line smart-mode-line-powerline-theme company helm-cscope helm-helm-commands ac-helm helm-anything helm-dash auto-complete column-marker igrep anything anything-exuberant-ctags ppd-sr-speedbar sr-speedbar ##))
  '(save-place-mode t nil (saveplace))
- '(scroll-bar-mode nil)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(zoom-window-mode-line-color "Blue"))
 
-;;indent
-(setq c-default-style "linux")
-(setq c-basic-indent 2)
-(setq-default c-basic-offset 2)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
-
-;;mode line
-(setq sml/name-width 31)
-(setq sml/shorten-modes t)
-(setq rm-blacklist "")
-(display-time-mode 1)
-(sml/setup)
-
-;; sticky function at head
-(require 'stickyfunc-enhance)
-(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
-(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
-(semantic-mode 1)
-(global-set-key (kbd "C-c s") 'semantic-ia-show-summary)
-
-;;line number
-(global-set-key "\M-g" 'goto-line)
-(global-display-line-numbers-mode)
-
-;;shell
-(ansi-color-for-comint-mode-on)
-(remove-hook 'comint-output-filter-functions
-	     'comint-postoutput-scroll-to-bottom)
-
-;;mark words
-(defun my/mark-word-backward (N)
-  (interactive "p")
-  (if (and
-       (not (eq last-command this-command))
-       (not (eq last-command 'my/mark-word)))
-      (set-mark (point)))
-  (backward-word N))
-(defun my/mark-word (N)
-  (interactive "p")
-  (if (and 
-       (not (eq last-command this-command))
-       (not (eq last-command 'my/mark-word-backward)))
-      (set-mark (point)))
-  (forward-word N))
-(global-set-key (kbd "M-k") 'my/mark-word)
-(global-set-key (kbd "C-M-k") 'my/mark-word-backward)
-
-;; multiple-cursors
-(require 'multiple-cursors)
-(global-set-key (kbd "M-n") 'mc/mark-next-like-this)
-(global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
-
-;; go to char for mc
-(require 'iy-go-to-char)
-(add-to-list 'mc/cursor-specific-vars 'iy-go-to-char-start-pos)
-
-;; zap up to char
-(require 'zzz-to-char)
-(global-set-key (kbd "M-z") #'zzz-up-to-char)
-
-;;;; undo tree
-;;(global-undo-tree-mode)
-;;(setq undo-tree-visualizer-diff t)
-
-;;all code
-(add-hook 'prog-mode-hook 'follow-mode)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-
-;;python
-;;(elpy-enable)
-;;(setq elpy-rpc-python-command "python3")
-;;(add-to-list 'auto-mode-alist '("\\.pyx\\'" . python-mode))
-;;(add-to-list 'auto-mode-alist '("\\.pxd\\'" . python-mode))
-;;(setq python-indent-offset 4)
-;;(setq python-indent-guess-indent-offset nil)
-
-;;column bondary
-(require 'fill-column-indicator)
-(setq fci-rule-color "darkblue")
-(setq fill-column 80)
-(add-hook 'prog-mode-hook 'fci-mode)
-
-;; dired
-(setq dired-guess-shell-alist-user '(("\\.pdf\\'" "evince&")))
-
-(use-package helm
-  :ensure t
-  :config
-  (setq helm-split-window-inside-p t)
-  (setq helm-use-frame-when-more-than-two-windows nil)
-  (helm-autoresize-mode 1))
-
-(use-package helm-mode
-    :config (helm-mode 1))
-
-(use-package helm-command
-    :bind (("C-o" . helm-M-x)))
-
-(use-package helm-files
-    :bind (("C-x C-f" . helm-find-files)))
-
-(use-package helm-buffers
-    :bind (("C-x C-b" . helm-buffers-list)
-           ("M-s m" . helm-mini))
-    :config (setq helm-buffer-max-length nil))
-
-(use-package helm-occur
-    :bind (("C-j" . helm-swoop)))
-
-(use-package helm-imenu
-    :bind (("M-s i" . helm-imenu))
-    :config (setq imenu-max-item-length 120))
-
-(use-package helm-bookmarks
-    :bind (("M-s b" . helm-bookmarks)))
-
-
-;; no startup buffer
-(setq inhibit-startup-message t)
-
-;; no backup file ~
-(setq make-backup-files nil)
-
-;; debugger
-;(require 'realgud)
-;(require 'realgud-gdb)
-
-;; automatically save buffers associated with files on buffer switch
-;; and on windows switch
-(defadvice switch-to-buffer (before save-buffer-now activate)
-  (when buffer-file-name (save-buffer)))
-(defadvice other-window (before other-window-now activate)
-  (when buffer-file-name (save-buffer)))
-(defadvice ace-window (before other-window-now activate)
-  (when buffer-file-name (save-buffer)))
-
-;; save all buffer when emacs lost focus
-(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
-
-;; auto revert/reload modified buffer
-(global-auto-revert-mode t)
-
-;;debug message
-(setq debug-on-error t)
-
-;;backspace
-(global-set-key (kbd "M-h") 'backward-kill-word)
-
-;;window resize
-(global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
-(global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "M-i") 'delete-other-windows)
-(global-set-key (kbd "C-x x") 'split-window-right)
-
-;;window switch
-(winner-mode 1)
-(global-set-key (kbd "C-c C-q") 'winner-undo)
-(global-set-key (kbd "C-c C-c C-q") 'winner-redo)
-(global-set-key (kbd "C-q") 'other-window)
-
-;;;; neotree
-;;(require 'neotree)
-;;(setq neo-autorefresh nil)
-;;(setq neo-toggle-window-keep-p t)
-;;(setq neo-click-changes-root nil)
-;;(setq neo-window-fixed-size t)
-;;(setq neo-buffer--start-node "~/")
-;;(setq neo-global--do-autorefresh nil)
-;;(global-set-key (kbd "C-x n") 'neotree-toggle)
-
-;;google c style
-(require 'cc-mode)
-(require 'google-c-style)
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(add-hook 'c-mode-common-hook 'google-make-newline-indent)
-(add-hook 'c-mode-common-hook 'follow-mode)
-(defun cpplint ()
-  "check source code format according to Google Style Guide, command: next-error, previous-error"
-  (interactive)
-  (compilation-start (concat "cpplint " (buffer-file-name))))
-
-;; magit
-(setq magit-refresh-status-buffer nil)
-(global-set-key (kbd "C-x g") 'magit-status)
-
-;; org
-(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-
-;;ace-jump-mode
-(require 'ace-jump-mode)
-(setq ace-jump-mode-scope 'frame)
-(bind-key* "M-j" 'ace-jump-mode)
-
-;; smooth scroll
-(require 'smooth-scroll)
-(smooth-scroll-mode 1)
-(global-set-key (kbd "<C-down>") 'scroll-up-1)
-(global-set-key (kbd "<C-up>") 'scroll-down-1)
-(setq scroll-margin 1
-      scroll-conservatively 0
-      scroll-up-aggressively 0.01
-      scroll-down-aggressively 0.01)
-(setq-default scroll-up-aggressively 0.01
-              scroll-down-aggressively 0.01)
-(setq auto-window-vscroll nil)
-
-;; highlight something
-(beacon-mode 1)
-(global-hl-todo-mode 1)
-
-;; chinese font
-(require 'cnfonts)
-
-;; auto complete
-(electric-pair-mode 1)
-(require 'auto-complete-config)
-(ac-config-default)
-(setq-default ac-sources '(
-                           ac-source-yasnippet
-                           ac-source-abbrev
-                           ac-source-dictionary
-                           ac-source-words-in-same-mode-buffers
-                           ))
-
-;; autopep8
-(require 'py-autopep8)
-
-;; cython
-(require 'cython-mode)
-
-;; pytest
-(use-package python-pytest
-  :after python
-  :config
-  (setq python-pytest-executable "sudo python3 -B -m pytest --pciaddr=0000:01:00.0 --show-capture=no")
-  (transient-append-suffix
-    'python-pytest-dispatch
-    "-v"
-    '("-z" "print debug logging" "--log-cli-level=debug"))
-  :bind (("C-t" . python-pytest-popup)))
-
-;; system clipboard
-(setq x-select-enable-clipboard t)
-
-;; session management
-(use-package psession
-  :config
-  (psession-savehist-mode 1)
-  (psession-mode 1))
-
-;; auto generated
-(setq x-select-enable-clipboard t)
-(put 'upcase-region 'disabled nil)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -337,4 +373,3 @@
  '(sml/discharging ((t (:inherit sml/global :foreground "white"))))
  '(sml/filename ((t (:inherit sml/global :foreground "white" :weight bold))))
  '(sml/global ((t (:foreground "white" :inverse-video nil)))))
-

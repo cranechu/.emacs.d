@@ -11,11 +11,6 @@ make dryrun
 make dryrun 
 make dryrun 
 make dryrun 
-make dryrun 
-make dryrun 
-make dryrun 
-make dryrun 
-make dryrun 
 gcc mmap.c 
 ./a.out 
 ls
@@ -125,4 +120,9 @@ cp nvme.so ../PyNVMe3/
 cp nvme.so ../PyNVMe3/
 sudo pip3 install pyaardvark
 xit
+exit
+cd ..
+cd ..
+codex
+exit
 exit

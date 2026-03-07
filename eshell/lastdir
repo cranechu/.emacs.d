@@ -1,6 +1,3 @@
-/home/cranechu/ssdmeter/spdk/examples/bdev/hello_world
-~/ssdmeter/driver
-/home/cranechu/ssdmeter/driver
 /home/cranechu/ssdmeter/scripts
 /home/cranechu/ssdmeter/scripts/5_admin_command_set
 ~/ssdmeter/scripts/5_admin_command_set
@@ -30,3 +27,7 @@
 /home/cranechu
 /home/cranechu/enterprise
 /home/cranechu/PyNVMe3/scripts
+/Users/cranechu/PyNVMe3/scripts/management
+/Users/cranechu/PyNVMe3/scripts
+/Users/cranechu/PyNVMe3
+/Users/cranechu/PyNVMe3
