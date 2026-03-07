@@ -325,7 +325,7 @@
   :bind (("C-t" . python-pytest-dispatch))
   :config
   (setq python-pytest-executable
-        "python3 -B -m pytest --pciaddr=0000:01:00.0 --show-capture=no")
+        "sudo python3 -B -m pytest --pciaddr=0000:01:00.0 --show-capture=no")
   (when (fboundp 'transient-append-suffix)
     (transient-append-suffix
      'python-pytest-dispatch
