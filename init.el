@@ -12,21 +12,40 @@
   "Directory for local ELPA packages.")
 
 ;; Fast startup: relax GC and file handlers during init, then restore them.
-(defconst my/default-gc-cons-threshold gc-cons-threshold)
-(defconst my/default-gc-cons-percentage gc-cons-percentage)
-(defvar my/default-file-name-handler-alist file-name-handler-alist)
 
-(setq gc-cons-threshold 100000000
+(defconst my/default-gc-cons-threshold
+  (if (boundp 'my/initial-gc-cons-threshold)
+      my/initial-gc-cons-threshold
+    gc-cons-threshold))
+
+(defconst my/default-gc-cons-percentage
+  (if (boundp 'my/initial-gc-cons-percentage)
+      my/initial-gc-cons-percentage
+    gc-cons-percentage))
+
+(defvar my/default-file-name-handler-alist
+  (if (boundp 'my/initial-file-name-handler-alist)
+      my/initial-file-name-handler-alist
+    file-name-handler-alist))
+
+(setq gc-cons-threshold most-positive-fixnum
       gc-cons-percentage 0.6
       file-name-handler-alist nil)
 
 (defun my/restore-startup-defaults ()
   "Restore startup settings that were relaxed for faster initialization."
-  (setq gc-cons-threshold my/default-gc-cons-threshold
-        gc-cons-percentage my/default-gc-cons-percentage
+  (setq gc-cons-threshold (* 32 1024 1024)
+        gc-cons-percentage 0.1
         file-name-handler-alist my/default-file-name-handler-alist))
 
 (add-hook 'emacs-startup-hook #'my/restore-startup-defaults)
+
+(defun my/gc-on-focus-out ()
+  "Run garbage collection when Emacs loses focus."
+  (unless (frame-focus-state)
+    (garbage-collect)))
+
+(add-function :after after-focus-change-function #'my/gc-on-focus-out)
 
 ;; Package bootstrap.
 (setq package-user-dir my/elpa-dir)
@@ -41,6 +60,8 @@
 (setq package-archives
       '(("gnu" . "https://elpa.gnu.org/packages/")
         ("melpa" . "https://melpa.org/packages/")))
+
+(setq package-native-compile t)
 
 (unless package--initialized
   (package-initialize))
@@ -61,22 +82,59 @@
 (setq diff-switches "-u"
       require-final-newline 'query
       inhibit-startup-message t
-      make-backup-files nil
+      ring-bell-function #'ignore
+      use-short-answers t
+      make-backup-files t
+      version-control t
+      delete-old-versions t
+      kept-new-versions 10
+      kept-old-versions 3
+      backup-by-copying t
+      create-lockfiles nil
       select-enable-clipboard t
-      debug-on-error t
+      debug-on-error nil
+      delete-by-moving-to-trash t
+      frame-resize-pixelwise t
+      fast-but-imprecise-scrolling t
+      redisplay-skip-fontification-on-input t
+      read-process-output-max (* 1024 1024)
+      process-adaptive-read-buffering nil
+      idle-update-delay 1.0
       scroll-margin 1
       scroll-conservatively 0
       scroll-up-aggressively 0.01
       scroll-down-aggressively 0.01
       auto-window-vscroll nil
+      auto-revert-verbose nil
+      global-auto-revert-non-file-buffers t
+      recentf-max-saved-items 300
+      recentf-auto-cleanup 'never
+      history-length 200
+      history-delete-duplicates t
+      savehist-autosave-interval 300
+      completion-ignore-case t
+      read-buffer-completion-ignore-case t
+      read-file-name-completion-ignore-case t
+      enable-recursive-minibuffers t
+      help-window-select t
+      show-paren-context-when-offscreen 'child-frame
       fill-column 80
       c-default-style "linux")
 
 (setq-default c-basic-offset 2
               indent-tabs-mode nil
               tab-width 2
+              truncate-lines t
               scroll-up-aggressively 0.01
               scroll-down-aggressively 0.01)
+
+(let ((backup-dir (expand-file-name "backups/" my/emacs-dir))
+      (autosave-dir (expand-file-name "auto-saves/" my/emacs-dir)))
+  (make-directory backup-dir t)
+  (make-directory autosave-dir t)
+  (setq backup-directory-alist `(("." . ,backup-dir))
+        auto-save-file-name-transforms `((".*" ,autosave-dir t))
+        auto-save-list-file-prefix (expand-file-name ".saves-" autosave-dir)))
 
 ;; UI.
 (menu-bar-mode -1)
@@ -87,6 +145,13 @@
 (add-to-list 'default-frame-alist '(fullscreen . fullboth))
 
 (load-theme 'wombat t)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+(minibuffer-depth-indicate-mode 1)
+(recentf-mode 1)
+(savehist-mode 1)
+(repeat-mode 1)
+(global-so-long-mode 1)
 
 ;; TAGS.
 (setq tags-table-list '("~/enterprise/TAGS"))
@@ -123,10 +188,23 @@
 (global-set-key (kbd "M-g") #'goto-line)
 (global-display-line-numbers-mode 1)
 
+(dolist (hook '(term-mode-hook
+                eshell-mode-hook
+                shell-mode-hook
+                vterm-mode-hook
+                compilation-mode-hook
+                help-mode-hook
+                helpful-mode-hook
+                dired-mode-hook
+                org-mode-hook))
+  (add-hook hook (lambda () (display-line-numbers-mode 0))))
+
 ;; Shell.
 (ansi-color-for-comint-mode-on)
 (remove-hook 'comint-output-filter-functions
              #'comint-postoutput-scroll-to-bottom)
+
+(add-hook 'comint-mode-hook #'ansi-color-for-comint-mode-on)
 
 ;; Mark words.
 (defun my/mark-word-backward (n)
@@ -163,6 +241,8 @@
 
 ;; All code.
 (add-hook 'prog-mode-hook #'follow-mode)
+(add-hook 'prog-mode-hook #'subword-mode)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
 
 (use-package rainbow-delimiters
   :if (locate-library "rainbow-delimiters")
@@ -174,7 +254,12 @@
 
 ;; Dired.
 (setq dired-guess-shell-alist-user
-      `(( "\\.pdf\\'" ,(if (eq system-type 'darwin) "open" "xdg-open"))))
+      `(( "\\.pdf\\'" ,(if (eq system-type 'darwin) "open" "xdg-open")))
+      dired-recursive-copies 'always
+      dired-recursive-deletes 'top
+      dired-dwim-target t)
+
+(add-hook 'dired-mode-hook #'dired-hide-details-mode)
 
 ;; Helm.
 (defvar helm-buffer-max-length)
@@ -191,6 +276,9 @@
   :config
   (setq helm-split-window-inside-p t
         helm-use-frame-when-more-than-two-windows nil
+        helm-ff-file-name-history-use-recentf t
+        helm-move-to-line-cycle-in-source t
+        helm-scroll-amount 8
         helm-buffer-max-length nil
         imenu-max-item-length 120)
   (helm-mode 1)
@@ -263,7 +351,8 @@
   :if (locate-library "magit")
   :bind (("C-x g" . magit-status))
   :config
-  (setq magit-refresh-status-buffer nil))
+  (setq magit-refresh-status-buffer nil
+        magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
 ;; Org.
 (add-hook 'org-mode-hook
@@ -300,12 +389,17 @@
 
 ;; Auto complete.
 (electric-pair-mode 1)
+(delete-selection-mode 1)
 
 (use-package auto-complete
   :if (locate-library "auto-complete-config")
   :config
   (require 'auto-complete-config)
   (ac-config-default)
+  (setq ac-auto-start 2
+        ac-delay 0.08
+        ac-use-menu-map t
+        ac-quick-help-delay 0.5)
   (setq-default ac-sources
                 '(ac-source-yasnippet
                   ac-source-abbrev
