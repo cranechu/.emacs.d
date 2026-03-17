@@ -362,7 +362,7 @@
 ;; Jump to visible text.
 (use-package avy
   :if (locate-library "avy")
-  :bind (("M-j" . avy-goto-char-timer))
+  :bind (("M-j" . avy-goto-word-1))
   :config
   (setq avy-all-windows t))
 
