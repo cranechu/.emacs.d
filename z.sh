@@ -60,7 +60,8 @@ _z() {
         done
 
         # maintain the data file
-        local tempfile="$datafile.$RANDOM"
+        local tempfile
+        tempfile="$(mktemp "${datafile}.XXXXXX")" || return
         _z_dirs | awk -v path="$*" -v now="$(date +%s)" -F"|" '
             BEGIN {
                 rank[path] = 1
