@@ -47,6 +47,11 @@
 
 (add-function :after after-focus-change-function #'my/gc-on-focus-out)
 
+;; `anything' still references these browser variables, removed in Emacs 30.
+(defvar browse-url-galeon-program "galeon")
+(defvar browse-url-netscape-program "netscape")
+(defvar browse-url-mosaic-program "xmosaic")
+
 ;; Package bootstrap.  The quickstart cache replaces hundreds of individual
 ;; package descriptor/autoload reads with one precomputed file.
 (declare-function package-quickstart-refresh "package")
@@ -374,6 +379,19 @@
    (format "cpplint %s" (shell-quote-argument buffer-file-name))))
 
 ;; Magit.
+(defun my/transient-append-magit-gerrit-suffix (original prefix loc suffix
+                                                         &rest args)
+  "Map magit-gerrit's removed Magit dispatch anchor to its replacement."
+  (when (and (eq prefix 'magit-dispatch)
+             (equal loc "%")
+             (eq (car (last suffix)) 'magit-gerrit-popup))
+    (setq loc "!"))
+  (apply original prefix loc suffix args))
+
+(with-eval-after-load 'transient
+  (advice-add 'transient-append-suffix :around
+              #'my/transient-append-magit-gerrit-suffix))
+
 (use-package magit
   :if (locate-library "magit")
   :functions (magit-display-buffer-same-window-except-diff-v1)
