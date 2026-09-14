@@ -47,24 +47,36 @@
 
 (add-function :after after-focus-change-function #'my/gc-on-focus-out)
 
-;; Package bootstrap.
-(setq package-user-dir my/elpa-dir)
+;; Package bootstrap.  The quickstart cache replaces hundreds of individual
+;; package descriptor/autoload reads with one precomputed file.
+(declare-function package-quickstart-refresh "package")
 
-(require 'package)
-(require 'cc-mode)
-(require 'comint)
-(require 'dired-x)
-(require 'imenu)
-(require 'winner)
-
-(setq package-archives
+(setq package-user-dir my/elpa-dir
+      package-quickstart t
+      package-quickstart-file (expand-file-name "package-quickstart.el"
+                                                my/emacs-dir)
+      package-archives
       '(("gnu" . "https://elpa.gnu.org/packages/")
-        ("melpa" . "https://melpa.org/packages/")))
+        ("melpa" . "https://melpa.org/packages/"))
+      package-native-compile t)
 
-(setq package-native-compile t)
+(unless (bound-and-true-p package--activated)
+  (package-activate-all))
 
-(unless package--initialized
-  (package-initialize))
+(defun my/package-quickstart-refresh-if-needed ()
+  "Build the package quickstart cache after the first uncached startup."
+  (when (and package-quickstart
+             (not (file-readable-p package-quickstart-file)))
+    (require 'package)
+    (package-quickstart-refresh)))
+
+(defun my/schedule-package-quickstart-refresh ()
+  "Schedule creation of a missing package quickstart cache."
+  (when (and package-quickstart
+             (not (file-readable-p package-quickstart-file)))
+    (run-with-idle-timer 1 nil #'my/package-quickstart-refresh-if-needed)))
+
+(add-hook 'emacs-startup-hook #'my/schedule-package-quickstart-refresh)
 
 (add-to-list 'load-path my/lisp-dir)
 
@@ -72,9 +84,10 @@
 
 (use-package benchmark-init
   :if (locate-library "benchmark-init")
-  :functions (benchmark-init/deactivate)
-  :config
-  (add-hook 'after-init-hook #'benchmark-init/deactivate))
+  :commands (benchmark-init/activate
+             benchmark-init/deactivate
+             benchmark-init/show-durations-tabulated
+             benchmark-init/show-durations-tree))
 
 ;; General behavior.
 (transient-mark-mode 1)
@@ -99,7 +112,7 @@
       redisplay-skip-fontification-on-input t
       read-process-output-max (* 1024 1024)
       process-adaptive-read-buffering nil
-      idle-update-delay 1.0
+      which-func-update-delay 1.0
       scroll-margin 1
       scroll-conservatively 0
       scroll-up-aggressively 0.01
@@ -164,6 +177,7 @@
 ;; Mode line.
 (use-package smart-mode-line
   :if (locate-library "smart-mode-line")
+  :defer 0.05
   :config
   (setq sml/name-width 31
         sml/shorten-modes t
@@ -174,15 +188,22 @@
   (sml/setup))
 
 ;; Sticky function at head.
+(defun my/semantic-inhibit-makefile-p ()
+  "Keep Semantic from synchronously parsing Makefiles."
+  (derived-mode-p 'makefile-mode))
+
 (use-package stickyfunc-enhance
   :ensure nil
   :if (locate-library "stickyfunc-enhance")
-  :functions (semantic-ia-show-summary)
+  :defer 0.5
   :config
+  (add-hook 'semantic-inhibit-functions #'my/semantic-inhibit-makefile-p)
   (add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode)
   (add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode)
-  (semantic-mode 1)
-  (global-set-key (kbd "C-c s") #'semantic-ia-show-summary))
+  (semantic-mode 1))
+
+(autoload 'semantic-ia-show-summary "semantic/ia" nil t)
+(global-set-key (kbd "C-c s") #'semantic-ia-show-summary)
 
 ;; Line numbers.
 (global-set-key (kbd "M-g") #'goto-line)
@@ -200,11 +221,11 @@
   (add-hook hook (lambda () (display-line-numbers-mode 0))))
 
 ;; Shell.
-(ansi-color-for-comint-mode-on)
-(remove-hook 'comint-output-filter-functions
-             #'comint-postoutput-scroll-to-bottom)
-
 (add-hook 'comint-mode-hook #'ansi-color-for-comint-mode-on)
+
+(with-eval-after-load 'comint
+  (remove-hook 'comint-output-filter-functions
+               #'comint-postoutput-scroll-to-bottom))
 
 ;; Mark words.
 (defun my/mark-word-backward (n)
@@ -231,6 +252,7 @@
 
 (use-package iy-go-to-char
   :if (locate-library "iy-go-to-char")
+  :defer t
   :config
   (with-eval-after-load 'multiple-cursors
     (add-to-list 'mc/cursor-specific-vars 'iy-go-to-char-start-pos)))
@@ -253,6 +275,8 @@
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
 ;; Dired.
+(declare-function dired-hide-details-mode "dired-x")
+
 (setq dired-guess-shell-alist-user
       `(( "\\.pdf\\'" ,(if (eq system-type 'darwin) "open" "xdg-open")))
       dired-recursive-copies 'always
@@ -260,6 +284,9 @@
       dired-dwim-target t)
 
 (add-hook 'dired-mode-hook #'dired-hide-details-mode)
+
+(with-eval-after-load 'dired
+  (require 'dired-x))
 
 ;; Helm.
 (defvar helm-buffer-max-length)
@@ -349,6 +376,7 @@
 ;; Magit.
 (use-package magit
   :if (locate-library "magit")
+  :functions (magit-display-buffer-same-window-except-diff-v1)
   :bind (("C-x g" . magit-status))
   :config
   (setq magit-refresh-status-buffer nil
@@ -375,17 +403,20 @@
 ;; Highlight.
 (use-package beacon
   :if (locate-library "beacon")
+  :defer 0.3
   :config
   (beacon-mode 1))
 
 (use-package hl-todo
   :if (locate-library "hl-todo")
+  :defer 0.4
   :config
   (global-hl-todo-mode 1))
 
 ;; Chinese font.
 (use-package cnfonts
-  :if (locate-library "cnfonts"))
+  :if (locate-library "cnfonts")
+  :defer t)
 
 ;; Auto complete.
 (electric-pair-mode 1)
@@ -393,6 +424,7 @@
 
 (use-package auto-complete
   :if (locate-library "auto-complete-config")
+  :defer 0.2
   :config
   (require 'auto-complete-config)
   (ac-config-default)
@@ -408,10 +440,12 @@
 
 ;; Python helpers.
 (use-package py-autopep8
-  :if (locate-library "py-autopep8"))
+  :if (locate-library "py-autopep8")
+  :defer t)
 
 (use-package cython-mode
-  :if (locate-library "cython-mode"))
+  :if (locate-library "cython-mode")
+  :defer t)
 
 (use-package python-pytest
   :if (locate-library "python-pytest")
@@ -427,6 +461,228 @@
      '("-z" "print debug logging" "--log-cli-level=debug"))))
 
 ;; Session management.
+(defvar psession--save-buffers-alist)
+(defvar psession--winconf-alist)
+(defvar psession--last-winconf)
+(defvar my/psession-command-line-file-p nil
+  "Non-nil when startup already displayed a file from the command line.")
+(defvar my/psession-command-line-buffers nil
+  "File buffers created while processing startup command-line arguments.")
+(defvar my/psession-requested-buffer nil
+  "File buffer that command-line processing selected for display.")
+(defvar my/psession-pending-buffers nil
+  "Restored buffers whose normal major mode has not been initialized yet.")
+(defvar my/psession-initialize-timer nil
+  "Obsolete timer from an older restore implementation.")
+(defvar my/psession-window-restore-timer nil)
+(defvar my/psession-window-layout-handled-p nil)
+(defvar my/psession-restoring-p nil)
+(defvar my/psession-initializing-p nil)
+(defvar-local my/psession-buffer-needs-initialization nil)
+
+(declare-function psession--restore-some-buffers "psession")
+(declare-function psession--restore-winconf-1 "psession")
+
+(defun my/record-command-line-file-buffers (original args-left)
+  "Call ORIGINAL with ARGS-LEFT and remember file buffers it creates."
+  (let ((buffers-before (buffer-list)))
+    (prog1 (funcall original args-left)
+      (setq my/psession-command-line-buffers nil)
+      (dolist (buffer (buffer-list))
+        (when (and (not (memq buffer buffers-before))
+                   (buffer-file-name buffer))
+          (push buffer my/psession-command-line-buffers)))
+      (when (buffer-file-name (current-buffer))
+        (push (current-buffer) my/psession-command-line-buffers))
+      (setq my/psession-requested-buffer
+            (let ((displayed (window-buffer (selected-window))))
+              (cond
+               ((buffer-file-name displayed) displayed)
+               ((buffer-file-name (current-buffer)) (current-buffer))
+               (t (car my/psession-command-line-buffers)))))
+      (setq my/psession-command-line-file-p
+            (and my/psession-command-line-buffers t)))))
+
+(unless after-init-time
+  (advice-add 'command-line-1 :around #'my/record-command-line-file-buffers))
+
+(defun my/startup-window-displays-file-p ()
+  "Return non-nil when an initial window already displays a file."
+  (catch 'found
+    (dolist (window (window-list))
+      (when (buffer-file-name (window-buffer window))
+        (throw 'found t)))))
+
+(defun my/psession-find-file-lazily (file)
+  "Visit FILE with a lightweight mode, deferring its normal mode setup."
+  (or (find-buffer-visiting file)
+      (if (file-directory-p file)
+          (find-file-noselect file 'nowarn)
+        (let ((auto-mode-alist '((".*" . fundamental-mode)))
+              (interpreter-mode-alist nil)
+              (magic-mode-alist nil)
+              (magic-fallback-mode-alist nil)
+              (major-mode-remap-alist nil)
+              (enable-local-variables nil)
+              (enable-local-eval nil)
+              (inhibit-local-variables-regexps '(".*"))
+              (find-file-hook nil)
+              (change-major-mode-after-body-hook nil)
+              (after-change-major-mode-hook nil))
+          (let ((buffer (find-file-noselect file 'nowarn)))
+            (with-current-buffer buffer
+              (setq my/psession-buffer-needs-initialization t))
+            buffer)))))
+
+(defun my/psession-initialize-buffer (buffer)
+  "Finish normal mode and file-hook setup for restored BUFFER."
+  (when (buffer-live-p buffer)
+    (setq my/psession-pending-buffers
+          (delq buffer my/psession-pending-buffers))
+    (with-current-buffer buffer
+      (when my/psession-buffer-needs-initialization
+        (let ((point-position (point))
+              (mark-position (and (mark t) (marker-position (mark-marker))))
+              (modified-p (buffer-modified-p))
+              (inhibit-redisplay t)
+              (inhibit-message t)
+              (my/psession-initializing-p t))
+          (setq my/psession-buffer-needs-initialization nil)
+          (normal-mode t)
+          (run-hooks 'find-file-hook)
+          (goto-char (min point-position (point-max)))
+          (when mark-position
+            (set-mark (min mark-position (point-max))))
+          (set-buffer-modified-p modified-p))))))
+
+(defun my/psession-initialize-current-buffer ()
+  "Initialize a lazily restored buffer as soon as it is selected."
+  (unless (or my/psession-restoring-p my/psession-initializing-p)
+    (my/psession-initialize-buffer (current-buffer))))
+
+(defun my/psession-initialize-visible-buffers (frame-or-window)
+  "Initialize restored buffers visible in FRAME-OR-WINDOW."
+  (unless (or my/psession-restoring-p my/psession-initializing-p)
+    (let ((windows (if (windowp frame-or-window)
+                       (list frame-or-window)
+                     (window-list frame-or-window 'no-minibuffer))))
+      (dolist (window windows)
+        (my/psession-initialize-buffer (window-buffer window))))))
+
+(when (timerp my/psession-initialize-timer)
+  (cancel-timer my/psession-initialize-timer)
+  (setq my/psession-initialize-timer nil))
+
+(defun my/psession-show-requested-buffer ()
+  "Keep the command-line requested buffer selected and visible."
+  (when (buffer-live-p my/psession-requested-buffer)
+    (let ((window (or (get-buffer-window my/psession-requested-buffer
+                                          (selected-frame))
+                      (selected-window))))
+      (select-window window)
+      (unless (eq (window-buffer window) my/psession-requested-buffer)
+        (set-window-buffer window my/psession-requested-buffer))
+      (set-buffer my/psession-requested-buffer))))
+
+(defun my/psession-restore-buffers-fast ()
+  "Restore saved buffers quickly and defer their expensive mode setup."
+  (setq my/psession-command-line-file-p
+        (or my/psession-command-line-file-p
+            (my/startup-window-displays-file-p)))
+  (when psession--save-buffers-alist
+    (let ((start (current-time))
+          (gc-cons-threshold most-positive-fixnum)
+          (gc-cons-percentage 0.6)
+          (inhibit-redisplay t)
+          (inhibit-message t)
+          (message-log-max nil)
+          (large-file-warning-threshold nil)
+          (my/psession-restoring-p t)
+          (restored 0)
+          pending
+          failed)
+      (dolist (entry (delete-dups (copy-sequence
+                                   psession--save-buffers-alist)))
+        (condition-case err
+            (let ((file (car entry))
+                  (position (cdr entry)))
+              (when (file-exists-p file)
+                (with-current-buffer (my/psession-find-file-lazily file)
+                  (goto-char (min position (point-max)))
+                  (push-mark (point) 'nomsg)
+                  (when my/psession-buffer-needs-initialization
+                    (push (current-buffer) pending)))
+                (setq restored (1+ restored))))
+          (error
+           (push (format "%s: %s" (car entry) (error-message-string err))
+                 failed))))
+      (setq my/psession-pending-buffers (delete-dups (nreverse pending)))
+      (let ((inhibit-message nil)
+            (message-log-max t))
+        (message "Psession restored %d buffers in %.2f seconds; %d modes deferred%s"
+                 restored
+                 (float-time (time-subtract (current-time) start))
+                 (length my/psession-pending-buffers)
+                 (if failed
+                     (format "; %d failed (see *Messages*)" (length failed))
+                   ""))
+        (dolist (failure (nreverse failed))
+          (message "Psession restore failed: %s" failure)))
+      (run-with-idle-timer 1 nil #'garbage-collect))))
+
+(defun my/psession-restore-window-layout-now ()
+  "Restore the saved window layout if no requested file superseded it."
+  (setq my/psession-window-restore-timer nil
+        my/psession-window-layout-handled-p t)
+  (when (and (not my/psession-command-line-file-p)
+             (assoc-default psession--last-winconf psession--winconf-alist))
+    (psession--restore-winconf-1 psession--last-winconf nil 'safe)
+    (my/psession-initialize-visible-buffers (selected-frame))))
+
+(defun my/psession-schedule-window-layout-restore ()
+  "Schedule saved window layout restoration after command-line processing."
+  (unless (or my/psession-command-line-file-p
+              my/psession-window-layout-handled-p
+              (timerp my/psession-window-restore-timer))
+    (setq my/psession-window-restore-timer
+          (run-with-idle-timer 0.05 nil
+                               #'my/psession-restore-window-layout-now))))
+
+(defun my/psession-restore-window-layout ()
+  "Restore saved layout, while keeping requested files in front."
+  (if my/psession-command-line-file-p
+      (progn
+        (setq my/psession-window-layout-handled-p t)
+        (when (timerp my/psession-window-restore-timer)
+          (cancel-timer my/psession-window-restore-timer)
+          (setq my/psession-window-restore-timer nil))
+        (my/psession-show-requested-buffer))
+    (unless (daemonp)
+      (my/psession-schedule-window-layout-restore))))
+
+(defun my/psession-preserve-server-file ()
+  "Prevent a pending saved layout from replacing a server-requested file."
+  (when buffer-file-name
+    (setq my/psession-command-line-file-p t
+          my/psession-requested-buffer (current-buffer)
+          my/psession-window-layout-handled-p t)
+    (when (timerp my/psession-window-restore-timer)
+      (cancel-timer my/psession-window-restore-timer)
+      (setq my/psession-window-restore-timer nil))
+    (my/psession-show-requested-buffer)))
+
+(defun my/psession-server-frame-ready ()
+  "Restore session layout in the first server frame without requested files."
+  (my/psession-schedule-window-layout-restore))
+
+(add-hook 'buffer-list-update-hook #'my/psession-initialize-current-buffer)
+(add-hook 'window-buffer-change-functions
+          #'my/psession-initialize-visible-buffers)
+
+(with-eval-after-load 'server
+  (add-hook 'server-visit-hook #'my/psession-preserve-server-file)
+  (add-hook 'server-after-make-frame-hook #'my/psession-server-frame-ready))
+
 (use-package psession
   :if (locate-library "psession")
   :init
@@ -434,7 +690,11 @@
         (expand-file-name "elisp-objects/" my/emacs-dir))
   :config
   (psession-savehist-mode 1)
-  (psession-mode 1))
+  (psession-mode 1)
+  (remove-hook 'emacs-startup-hook #'psession--restore-some-buffers)
+  (remove-hook 'emacs-startup-hook #'psession-restore-last-winconf)
+  (add-hook 'emacs-startup-hook #'my/psession-restore-buffers-fast 'append)
+  (add-hook 'emacs-startup-hook #'my/psession-restore-window-layout 'append))
 
 (put 'upcase-region 'disabled nil)
 

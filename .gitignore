@@ -4,5 +4,6 @@ ac-comphist.dat
 *.cache
 places
 recentf
+package-quickstart.el*
 auto-save-list/*
 .emacs.desktop.lock
