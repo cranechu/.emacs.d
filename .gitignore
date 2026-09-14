@@ -7,3 +7,5 @@ recentf
 package-quickstart.el*
 auto-save-list/*
 .emacs.desktop.lock
+/elisp-objects/
+/tramp
